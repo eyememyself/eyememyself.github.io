@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-25 Mon 11:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Saurabh Mittal" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org78c19c4">1. General</a></li>
+<li><a href="#org9867ee2">2. Space Time</a>
+<ul>
+<li><a href="#org172f8e4">2.1. History</a></li>
+<li><a href="#orgd1e1826">2.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#org49e66d2">3. STEMM</a>
+<ul>
+<li><a href="#orgeeb8064">3.1. Environment</a></li>
+<li><a href="#org27e2e92">3.2. CSE</a></li>
+<li><a href="#org34026d2">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6e1d10b">4. World</a>
+<ul>
+<li><a href="#orgdd42775">4.1. Economics</a></li>
+<li><a href="#orga84c02e">4.2. SocioPol</a></li>
+</ul>
+</li>
+<li><a href="#org48ce878">5. Arts</a>
+<ul>
+<li><a href="#org7271eec">5.1. Music</a></li>
+<li><a href="#orga601cad">5.2. Literature</a>
+<ul>
+<li><a href="#org1dc051e">5.2.1. Controversial Literature</a></li>
+<li><a href="#org733bd9c">5.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge32e961">5.3. Films</a></li>
+</ul>
+</li>
+<li><a href="#orgfadd551">6. Core</a>
+<ul>
+<li><a href="#orgb317a04">6.1. Philosophy</a></li>
+<li><a href="#orgc8b1002">6.2. Principles</a>
+<ul>
+<li><a href="#org1b6b7bf">6.2.1. Canonical Texts</a></li>
+</ul>
+</li>
+<li><a href="#org2d691a0">6.3. Practice</a>
+<ul>
+<li><a href="#org71378c5">6.3.1. Events</a></li>
+</ul>
+</li>
+<li><a href="#org96bf608">6.4. Variants</a>
+<ul>
+<li><a href="#org391d576">6.4.1. Mormonism</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org332f986">7. Critical Studies</a></li>
+<li><a href="#orgcfddacc">8. Special Topics</a>
+<ul>
+<li><a href="#orgd7cc940">8.1. India</a>
+<ul>
+<li><a href="#org607dfe0">8.1.1. General</a></li>
+<li><a href="#orgda4d1e0">8.1.2. History</a></li>
+<li><a href="#org36536a1">8.1.3. Regional</a></li>
+<li><a href="#org6873499">8.1.4. Special Topics</a></li>
+<li><a href="#org3604fc0">8.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org79889d2">8.2. Violence</a></li>
+<li><a href="#org6a934c7">8.3. Women</a></li>
+<li><a href="#orga820f63">8.4. Men</a></li>
+<li><a href="#org747473c">8.5. Classics</a></li>
+<li><a href="#org30b5582">8.6. Common Prayer</a></li>
+<li><a href="#org7160f6c">8.7. Other religions</a>
+<ul>
+<li><a href="#org4eb6231">8.7.1. Hinduism</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org16f19ce">9. Misc</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org78c19c4" class="outline-2">
+<h2 id="org78c19c4"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>L. Woodhead, <i>Christianity: A Very Short Introduction.</i> Oxford University Press, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9867ee2" class="outline-2">
+<h2 id="org9867ee2"><span class="section-number-2">2.</span> Space Time</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org172f8e4" class="outline-3">
+<h3 id="org172f8e4"><span class="section-number-3">2.1.</span> History</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>D. MacCulloch, A History of Christianity: The First Three Thousand Years [Paperback] MacCulloch, Diarmaid. London: Penguin Books Ltd, 2010.</li>
+<li>T. Holland, <b>Dominion: The Making of the Western Mind.</b> Little, Brown Book Group Limited, 2020.
+<ul class="org-ul">
+<li>T. Eagleton, “Dominion by Tom Holland review – the legacy of Christianity,” The Guardian, Nov. 21, 2019. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://www.theguardian.com/books/2019/nov/21/dominion-making-western-mind-tom-holland-review">https://www.theguardian.com/books/2019/nov/21/dominion-making-western-mind-tom-holland-review</a></li>
+<li>N. N. Taleb, <b>“On Christianity,”</b> INCERTO, Aug. 25, 2022. <a href="https://medium.com/incerto/on-christianity-b7fecde866ec">https://medium.com/incerto/on-christianity-b7fecde866ec</a> (accessed Mar. 21, 2023).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd1e1826" class="outline-3">
+<h3 id="orgd1e1826"><span class="section-number-3">2.2.</span> Geography</h3>
+</div>
+</div>
+
+<div id="outline-container-org49e66d2" class="outline-2">
+<h2 id="org49e66d2"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgeeb8064" class="outline-3">
+<h3 id="orgeeb8064"><span class="section-number-3">3.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Christianity | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Christianity">https://fore.yale.edu/World-Religions/Christianity</a> (accessed May 26, 2023).</li>
+
+<li>“Christianity &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0DwnvpQcSNysAk2v_Y22op">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0DwnvpQcSNysAk2v_Y22op</a> (accessed May 26, 2023).</li>
+
+<li>D. T. Hessel and R. R. Ruether, Christianity and Ecology: Seeking the Well-being of Earth and Humans. Harvard University Press, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. E. Tucker and J. Grim, <b>Living Cosmology: Christian Responses to Journey of the Universe.</b> ORBIS, 2016.</li>
+<li>Living Cosmology: The Influence of Teilhard de Chardin, (Feb. 09, 2015). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=XCJgB7-jXmg">https://www.youtube.com/watch?v=XCJgB7-jXmg</a></li>
+<li>“Living Cosmology: Christian Responses to Journey of the Universe (2014 Conference) - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM37wwys3gHQ-XUdEp75PyYg">https://www.youtube.com/playlist?list=PLfoNnUIQBvM37wwys3gHQ-XUdEp75PyYg</a> (accessed Jun. 15, 2023).</li>
+
+<li>J. Williams, <b>Time to Act: A Resource Book by the Christians in Extinction Rebellion.</b> SPCK Publishing, 2020.</li>
+<li>“Christian Climate Action,” Christian Climate Action. <a href="https://christianclimateaction.org/">https://christianclimateaction.org/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. Francis and N. Oreskes, <b>Encyclical on Climate Change and Inequality: On Care for Our Common Home.</b> Melville House, 2015.</li>
+<li>“Pope Francis and the Environment: Why His New Climate Encyclical Matters | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/event/Pope-Francis-and-Environment-Why-His-New-Climate-Encyclical-Matters">https://fore.yale.edu/event/Pope-Francis-and-Environment-Why-His-New-Climate-Encyclical-Matters</a> (accessed May 14, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Letter: A Message for our Earth,” Wikipedia. Oct. 27, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Letter:_A_Message_for_our_Earth&amp;oldid=1118541585">https://en.wikipedia.org/w/index.php?title=The_Letter:_A_Message_for_our_Earth&amp;oldid=1118541585</a></li>
+<li>“Home,” The Letter. <a href="https://www.theletterfilm.org/">https://www.theletterfilm.org/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Laudato Si’ Movement,” Wikipedia. Dec. 04, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Laudato_Si%27_Movement&amp;oldid=1125483052">https://en.wikipedia.org/w/index.php?title=Laudato_Si%27_Movement&amp;oldid=1125483052</a></li>
+<li>“Laudato Si’ - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM3qfyTt8eXAL5HPwxCaE1hN">https://www.youtube.com/playlist?list=PLfoNnUIQBvM3qfyTt8eXAL5HPwxCaE1hN</a> (accessed Jun. 15, 2023).</li>
+<li>“Laudato Si’ Movement,” Laudato Si’ Movement. <a href="https://laudatosimovement.org/">https://laudatosimovement.org/</a> (accessed Dec. 20, 2022).</li>
+<li>“Laudato si’,” Wikipedia. Nov. 30, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Laudato_si%27&amp;oldid=1124796841">https://en.wikipedia.org/w/index.php?title=Laudato_si%27&amp;oldid=1124796841</a></li>
+<li>“Laudato si’ (24 May 2015) | Francis.” <a href="https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html">https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html</a> (accessed May 14, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pope Benedict XVI, who has passed away, was dubbed ‘Green Pontiff’; here is why.” <a href="https://www.downtoearth.org.in/news/world/pope-benedict-xvi-who-has-passed-away-was-dubbed-green-pontiff-here-is-why-86867">https://www.downtoearth.org.in/news/world/pope-benedict-xvi-who-has-passed-away-was-dubbed-green-pontiff-here-is-why-86867</a> (accessed Jan. 02, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27e2e92" class="outline-3">
+<h3 id="org27e2e92"><span class="section-number-3">3.2.</span> CSE</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Christianity - Research and data from Pew Research Center,” Pew Research Center. <a href="https://www.pewresearch.org/topic/religion/religions/christianity/">https://www.pewresearch.org/topic/religion/religions/christianity/</a> (accessed Apr. 11, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34026d2" class="outline-3">
+<h3 id="org34026d2"><span class="section-number-3">3.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org6e1d10b" class="outline-2">
+<h2 id="org6e1d10b"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgdd42775" class="outline-3">
+<h3 id="orgdd42775"><span class="section-number-3">4.1.</span> Economics</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>P. Oslington, <i>The Oxford Handbook of Christianity and Economics.</i> OUP USA, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga84c02e" class="outline-3">
+<h3 id="orga84c02e"><span class="section-number-3">4.2.</span> SocioPol</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>“Christianity by country,” Wikipedia. Dec. 15, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christianity_by_country&amp;oldid=1127655913">https://en.wikipedia.org/w/index.php?title=Christianity_by_country&amp;oldid=1127655913</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Christianity in Japan,” Wikipedia. Dec. 10, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christianity_in_Japan&amp;oldid=1126586390">https://en.wikipedia.org/w/index.php?title=Christianity_in_Japan&amp;oldid=1126586390</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org48ce878" class="outline-2">
+<h2 id="org48ce878"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org7271eec" class="outline-3">
+<h3 id="org7271eec"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Carol (music),” Wikipedia. Dec. 15, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Carol_(music)&amp;oldid=1127488446">https://en.wikipedia.org/w/index.php?title=Carol_(music)&amp;oldid=1127488446</a></li>
+
+<li>The Church of Jesus Christ of Latter-day Saints, Silent Night, (Dec. 04, 2012). Accessed: Jan. 24, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=8ri2thaAIyA">https://www.youtube.com/watch?v=8ri2thaAIyA</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga601cad" class="outline-3">
+<h3 id="orga601cad"><span class="section-number-3">5.2.</span> Literature</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org1dc051e" class="outline-4">
+<h4 id="org1dc051e"><span class="section-number-4">5.2.1.</span> Controversial Literature</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>N. Kazantzakis, The Last Temptation of Christ. Simon and Schuster, 2012.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org733bd9c" class="outline-4">
+<h4 id="org733bd9c"><span class="section-number-4">5.2.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>C. Dickens, <i>A Christmas Carol and Other Christmas Writings.</i> Penguin UK, 2003.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge32e961" class="outline-3">
+<h3 id="orge32e961"><span class="section-number-3">5.3.</span> Films</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“Christian film industry,” Wikipedia. May 27, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christian_film_industry&amp;oldid=1090152055">https://en.wikipedia.org/w/index.php?title=Christian_film_industry&amp;oldid=1090152055</a></li>
+
+<li>“List of Christian films,” Wikipedia. Nov. 28, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=List_of_Christian_films&amp;oldid=1124391933">https://en.wikipedia.org/w/index.php?title=List_of_Christian_films&amp;oldid=1124391933</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Nun (1966 film),” Wikipedia. Jul. 02, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Nun_(1966_film)&amp;oldid=1096125100">https://en.wikipedia.org/w/index.php?title=The_Nun_(1966_film)&amp;oldid=1096125100</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Passion of the Christ,” Wikipedia. Jul. 08, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Passion_of_the_Christ&amp;oldid=1097133363">https://en.wikipedia.org/w/index.php?title=The_Passion_of_the_Christ&amp;oldid=1097133363</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>X. Brooks, “Benedetta review – Paul Verhoeven’s shockingly wholesome Tuscan nunnery tale,” The Observer, Apr. 16, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://www.theguardian.com/film/2022/apr/16/benedetta-review-paul-verhoeven-charlotte-rampling">https://www.theguardian.com/film/2022/apr/16/benedetta-review-paul-verhoeven-charlotte-rampling</a></li>
+<li>“Benedetta (film),” Wikipedia. Jul. 01, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Benedetta_(film)&amp;oldid=1096040848">https://en.wikipedia.org/w/index.php?title=Benedetta_(film)&amp;oldid=1096040848</a></li>
+<li>“Benedetta Carlini,” Wikipedia. Jul. 05, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Benedetta_Carlini&amp;oldid=1096611778">https://en.wikipedia.org/w/index.php?title=Benedetta_Carlini&amp;oldid=1096611778</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Silence (2016 film),” Wikipedia. Dec. 08, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Silence_(2016_film)&amp;oldid=1126314556#Critical_response">https://en.wikipedia.org/w/index.php?title=Silence_(2016_film)&amp;oldid=1126314556#Critical_response</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Holy Office (film),” Wikipedia. Sep. 19, 2022. Accessed: Jan. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Holy_Office_(film)&amp;oldid=1111058668">https://en.wikipedia.org/w/index.php?title=The_Holy_Office_(film)&amp;oldid=1111058668</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfadd551" class="outline-2">
+<h2 id="orgfadd551"><span class="section-number-2">6.</span> Core</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgb317a04" class="outline-3">
+<h3 id="orgb317a04"><span class="section-number-3">6.1.</span> Philosophy</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>S. Žižek, Slavoj Žižek and Christianity, 1st edition. London ; New York: Routledge, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc8b1002" class="outline-3">
+<h3 id="orgc8b1002"><span class="section-number-3">6.2.</span> Principles</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org1b6b7bf" class="outline-4">
+<h4 id="org1b6b7bf"><span class="section-number-4">6.2.1.</span> Canonical Texts</h4>
+<div class="outline-text-4" id="text-6-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6a71a1b"></a>Bible<br />
+<div class="outline-text-5" id="text-6-2-1-1">
+<ul class="org-ul">
+<li>J. Riches, <i>The Bible: A Very Short Introduction.</i> OUP Oxford, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. D. Gravely and P. Link, Bible 101: From Genesis and Psalms to the Gospels and Revelation, Your Guide to the Old and New Testaments. Adams Media, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>DK, <i>The Bible Book: Big Ideas Simply Explained.</i> Dorling Kindersley Ltd, 2018.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>M. D. Coogan, M. Z. Brettler, C. A. Newsom, and P. Perkins, <i>The New Oxford Annotated Bible with Apocrypha: New Revised Standard Version.</i> Oxford University Press, 2018.</li>
+<li>R. Carroll and S. Prickett, <i>The Bible: Authorized King James Version.</i> OUP Oxford, 2008.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Norton, <i>The Bible.</i> Penguin, 2006.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. W. Rogerson and J. M. Lieu, <i>The Oxford Handbook of Biblical Studies.</i> OUP Oxford, 2006.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“Visual Commentary on Scripture | VCS.”</i> <a href="https://thevcs.org/home">https://thevcs.org/home</a> (accessed Apr. 18, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgaece011"></a>Gospels<br />
+<div class="outline-text-5" id="text-6-2-1-2">
+<ul class="org-ul">
+<li>“Gospel,” Wikipedia. Mar. 08, 2022. Accessed: Mar. 15, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gospel&amp;oldid=1075893430">https://en.wikipedia.org/w/index.php?title=Gospel&amp;oldid=1075893430</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2d691a0" class="outline-3">
+<h3 id="org2d691a0"><span class="section-number-3">6.3.</span> Practice</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org71378c5" class="outline-4">
+<h4 id="org71378c5"><span class="section-number-4">6.3.1.</span> Events</h4>
+<div class="outline-text-4" id="text-6-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3288b1f"></a>Valentine's Day<br />
+<ol class="org-ol">
+<li><a id="org2308598"></a>General<br />
+<div class="outline-text-6" id="text-6-3-1-1-1">
+<ul class="org-ul">
+<li>“Valentine’s Day,” Wikipedia. Feb. 14, 2023. Accessed: Feb. 14, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Valentine%27s_Day&amp;oldid=1139242179">https://en.wikipedia.org/w/index.php?title=Valentine%27s_Day&amp;oldid=1139242179</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfcfbd14"></a>SnT<br />
+<ol class="org-ol">
+<li><a id="orgcbe159c"></a>History<br />
+<div class="outline-text-7" id="text-6-3-1-1-2-1">
+<ul class="org-ul">
+<li>“Valentine’s Day’s connection with love was probably invented by Chaucer and other 14th-century poets.” <a href="https://www.downtoearth.org.in/blog/environment/valentine-s-day-s-connection-with-love-was-probably-invented-by-chaucer-and-other-14th-century-poets-87693">https://www.downtoearth.org.in/blog/environment/valentine-s-day-s-connection-with-love-was-probably-invented-by-chaucer-and-other-14th-century-poets-87693</a> (accessed Feb. 15, 2023).</li>
+<li>T. Milligan, “Valentine’s Day: a brief history of the soulmate – and why it’s a limited concept,” The Conversation, Feb. 13, 2023. <a href="http://theconversation.com/valentines-day-a-brief-history-of-the-soulmate-and-why-its-a-limited-concept-198841">http://theconversation.com/valentines-day-a-brief-history-of-the-soulmate-and-why-its-a-limited-concept-198841</a> (accessed Feb. 14, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgbe1240c"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orga946637"></a>Math<br />
+<div class="outline-text-7" id="text-6-3-1-1-3-1">
+<ul class="org-ul">
+<li>E. Kidwell, “Editorial, February 2017,” IMA, Feb. 01, 2017. <a href="https://ima.org.uk/4057/editorial-february-2017/">https://ima.org.uk/4057/editorial-february-2017/</a> (accessed Feb. 15, 2023).</li>
+<li>Joanna, “Valentine’s Day Maths – Linked Möbius Hearts,” Maths Careers, Feb. 08, 2017. <a href="https://www.mathscareers.org.uk/valentines-maths-mobius-hearts/">https://www.mathscareers.org.uk/valentines-maths-mobius-hearts/</a> (accessed Feb. 15, 2023).</li>
+<li>Valentine’s Day Math with Dr. Pam Brittain, (Feb. 14, 2022). Accessed: Feb. 15, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=oQHhV-ZFkUE">https://www.youtube.com/watch?v=oQHhV-ZFkUE</a></li>
+<li>S. Roberts, “The Perfect Valentine? A Math Formula,” The New York Times, Feb. 14, 2019. Accessed: Feb. 15, 2023. [Online]. Available: <a href="https://www.nytimes.com/2019/02/14/science/math-algorithm-valentine.html">https://www.nytimes.com/2019/02/14/science/math-algorithm-valentine.html</a></li>
+<li>“Heart shaped Polyomino Puzzle - Online Technical Discussion Groups—Wolfram Community.” <a href="https://community.wolfram.com/groups/-/m/t/2828759">https://community.wolfram.com/groups/-/m/t/2828759</a> (accessed Feb. 15, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1a62c6b"></a>CSE<br />
+<div class="outline-text-7" id="text-6-3-1-1-3-2">
+<ul class="org-ul">
+<li>R. A. Katz, “Valentine’s Day: research-backed tips for dating app success,” The Conversation, Feb. 13, 2023. <a href="http://theconversation.com/valentines-day-research-backed-tips-for-dating-app-success-199059">http://theconversation.com/valentines-day-research-backed-tips-for-dating-app-success-199059</a> (accessed Feb. 14, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org8290af5"></a>Environment<br />
+<div class="outline-text-7" id="text-6-3-1-1-3-3">
+<ul class="org-ul">
+<li>“Happy Planetine’s Day! Here are five ways to say ‘I love you’ to our planet today and everyday,” Greenpeace Australia Pacific, Feb. 14, 2023. <a href="https://www.greenpeace.org.au/blog/five-ways-to-say-i-love-you-to-our-planet-this-valentines-day/">https://www.greenpeace.org.au/blog/five-ways-to-say-i-love-you-to-our-planet-this-valentines-day/</a> (accessed Feb. 14, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgeedbe70"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org72e90ea"></a>Music<br />
+<div class="outline-text-7" id="text-6-3-1-1-4-1">
+<ul class="org-ul">
+<li>Romeo And Juliet, Fantasy Overture - TH.42 (Live) by Israel Philharmonic Orchestra &amp; Leonard Bernstein. 1979. Accessed: Feb. 14, 2023. [Online]. Available: <a href="https://music.apple.com/us/album/romeo-and-juliet-fantasy-overture-th-42-live/1452611953?i=1452612162">https://music.apple.com/us/album/romeo-and-juliet-fantasy-overture-th-42-live/1452611953?i=1452612162</a></li>
+
+<li>“Valentine’s Day,” Spotify. <a href="https://open.spotify.com/playlist/5dkFwiGEIosVrp1MsEMzJ3">https://open.spotify.com/playlist/5dkFwiGEIosVrp1MsEMzJ3</a> (accessed Feb. 15, 2023).</li>
+
+<li>“SpiritualityChristianityVDay | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/9bb7c2597694495a832ee302385e4544i8n0">https://music.amazon.in/user-playlists/9bb7c2597694495a832ee302385e4544i8n0</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbf136b5"></a>Literature<br />
+<div class="outline-text-7" id="text-6-3-1-1-4-2">
+<ul class="org-ul">
+<li>Jayadeva, Gita Govinda: Love Songs of Radha and Krishna. NYU Press, 2009.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Kandasamy, “Top 10 love poems,” The Guardian, Feb. 08, 2023. Accessed: Feb. 14, 2023. [Online]. Available: <a href="https://www.theguardian.com/books/2023/feb/08/top-10-love-poems-valentines-day-meena-kandasamy-the-book-of-desire">https://www.theguardian.com/books/2023/feb/08/top-10-love-poems-valentines-day-meena-kandasamy-the-book-of-desire</a></li>
+<li>T. &amp; M. Kandasamy, “‘Give up desire or give up shame’: Meena Kandasamy translates parts of ‘Tirukkural’ afresh,” Scroll.in, Feb. 13, 2023. <a href="https://scroll.in/article/1043479/give-up-desire-or-give-up-shame-meena-kandasamy-translates-parts-of-tirukkural-afresh">https://scroll.in/article/1043479/give-up-desire-or-give-up-shame-meena-kandasamy-translates-parts-of-tirukkural-afresh</a> (accessed Feb. 14, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org416c81a"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org2846e0a"></a>India<br />
+<div class="outline-text-7" id="text-6-3-1-1-5-1">
+<ul class="org-ul">
+<li>N. Haksar, “Valentine’s Day: Love in the time of strife, dissent and authoritarianism, over the ages,” Scroll.in, Feb. 14, 2023. <a href="https://scroll.in/article/1043433/valentines-day-love-in-the-time-of-strife-dissent-and-authoritarianism-over-the-ages">https://scroll.in/article/1043433/valentines-day-love-in-the-time-of-strife-dissent-and-authoritarianism-over-the-ages</a> (accessed Feb. 15, 2023).</li>
+<li>J. D. Long, “Why the love story of Radha and Krishna has been told in Hinduism for centuries,” The Conversation, Feb. 13, 2023. <a href="http://theconversation.com/why-the-love-story-of-radha-and-krishna-has-been-told-in-hinduism-for-centuries-198716">http://theconversation.com/why-the-love-story-of-radha-and-krishna-has-been-told-in-hinduism-for-centuries-198716</a> (accessed Feb. 14, 2023).</li>
+<li>PTI, “Uddhav Sena mocks Valentine’s Day ‘cow hug’ move, slams PM on silence on ‘holy cow’ Adani,” Feb. 10, 2023. <a href="https://www.thehindubusinessline.com/news/national/uddhav-sena-mocks-valentines-day-cow-hug-move-slams-pm-on-silence-on-holy-cow-adani/article66492848.ece">https://www.thehindubusinessline.com/news/national/uddhav-sena-mocks-valentines-day-cow-hug-move-slams-pm-on-silence-on-holy-cow-adani/article66492848.ece</a> (accessed Feb. 14, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org9ca3dce"></a>Gifts<br />
+<div class="outline-text-7" id="text-6-3-1-1-5-2">
+<ul class="org-ul">
+<li>“The best last-minute Valentine’s Day gifts to spread the love,” Popular Science, Feb. 07, 2023. <a href="https://www.popsci.com/gear/valentines-gifts/">https://www.popsci.com/gear/valentines-gifts/</a> (accessed Feb. 14, 2023).
+<ul class="org-ul">
+<li>“Klipsch R-51PM Powered Bluetooth Speaker.” <a href="https://www.amazon.com/Klipsch-R-51PM-Powered-Bluetooth-Speaker/dp/B07FKCP7PZ?asc_source=browser&amp;asc_refurl=https%3A%2F%2Fwww.popsci.com%2Fgear%2Fvalentines-gifts">https://www.amazon.com/Klipsch-R-51PM-Powered-Bluetooth-Speaker/dp/B07FKCP7PZ?asc_source=browser&amp;asc_refurl=https%3A%2F%2Fwww.popsci.com%2Fgear%2Fvalentines-gifts</a> (accessed Feb. 14, 2023).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgf3e42f8"></a>Misc<br />
+<div class="outline-text-6" id="text-6-3-1-1-6">
+<ul class="org-ul">
+<li>S. Sherry and T. Conversation, “Marry or mingle: The risks and rewards of being single.” <a href="https://phys.org/news/2023-02-mingle-rewards.html">https://phys.org/news/2023-02-mingle-rewards.html</a> (accessed Feb. 15, 2023).</li>
+
+<li>“Love and Medicine,” Feb. 01, 2023. <a href="https://hms.harvard.edu/news/love-medicine">https://hms.harvard.edu/news/love-medicine</a> (accessed Feb. 15, 2023).</li>
+<li>C. S. H. Correspondent, “If loving you is wrong – let’s explore the ethics,” Harvard Gazette, Feb. 10, 2023. <a href="https://news.harvard.edu/gazette/story/2023/02/if-loving-you-is-wrong-lets-explore-the-ethics/">https://news.harvard.edu/gazette/story/2023/02/if-loving-you-is-wrong-lets-explore-the-ethics/</a> (accessed Feb. 15, 2023).</li>
+<li>S. University, “Love means sharing the champagne,” Stanford Report, Feb. 14, 2022. <a href="https://news.stanford.edu/report/2022/02/14/love-means-sharing-champagne/">https://news.stanford.edu/report/2022/02/14/love-means-sharing-champagne/</a> (accessed Feb. 15, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. University, “Celebrating Love,” Harvard University. <a href="https://www.harvard.edu/in-focus/love/">https://www.harvard.edu/in-focus/love/</a> (accessed Feb. 14, 2023).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>D. Felton, “Don’t underestimate Cupid – he’s not the chubby cherub you associate with Valentine’s Day,” The Conversation, Feb. 08, 2023. <a href="http://theconversation.com/dont-underestimate-cupid-hes-not-the-chubby-cherub-you-associate-with-valentines-day-197735">http://theconversation.com/dont-underestimate-cupid-hes-not-the-chubby-cherub-you-associate-with-valentines-day-197735</a> (accessed Feb. 14, 2023).</li>
+<li>C. Davidson, “From Chaucer to chocolates: how Valentine’s Day gifts have changed over the centuries,” The Conversation, Feb. 12, 2023. <a href="http://theconversation.com/from-chaucer-to-chocolates-how-valentines-day-gifts-have-changed-over-the-centuries-198512">http://theconversation.com/from-chaucer-to-chocolates-how-valentines-day-gifts-have-changed-over-the-centuries-198512</a> (accessed Feb. 14, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>G. Kell and M. relations|, “It’s Valentine’s Day: Let’s name Annie the falcon’s new mate,” Berkeley News, Feb. 14, 2023. <a href="https://news.berkeley.edu/2023/02/14/its-valentines-day-lets-name-annie-the-falcons-new-mate/">https://news.berkeley.edu/2023/02/14/its-valentines-day-lets-name-annie-the-falcons-new-mate/</a> (accessed Feb. 15, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb566421"></a>Christmas<br />
+<ol class="org-ol">
+<li><a id="orge661406"></a>General<br />
+<div class="outline-text-6" id="text-6-3-1-2-1">
+<ul class="org-ul">
+<li>“Christmas,” Wikipedia. Dec. 13, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas&amp;oldid=1127118853">https://en.wikipedia.org/w/index.php?title=Christmas&amp;oldid=1127118853</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1cfbdf1"></a>SnT<br />
+<ol class="org-ol">
+<li><a id="org57a8435"></a>Origins<br />
+<div class="outline-text-7" id="text-6-3-1-2-2-1">
+<ul class="org-ul">
+<li>A. Raza and U. of Toronto, “Tracing the origins of Christmas traditions: From Santa to KFC.” <a href="https://phys.org/news/2022-12-christmas-traditions-santa-kfc.html">https://phys.org/news/2022-12-christmas-traditions-santa-kfc.html</a> (accessed Dec. 21, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org21afc48"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org2c2ff05"></a>Environment<br />
+<div class="outline-text-7" id="text-6-3-1-2-3-1">
+<ul class="org-ul">
+<li>“Christmas Birds | The 12 birds of Christmas,” The RSPB. <a href="https://www.rspb.org.uk/our-work/rspb-news/rspb-news-stories/the-12-birds-of-christmas/">https://www.rspb.org.uk/our-work/rspb-news/rspb-news-stories/the-12-birds-of-christmas/</a> (accessed Dec. 16, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org9382f3f"></a>Space<br />
+<div class="outline-text-7" id="text-6-3-1-2-3-2">
+<ul class="org-ul">
+<li>L. Baisas, “‘Christmas tree’ galaxy shines in new image from Hubble and JWST,” Popular Science. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://www.popsci.com/science/christmas-tree-jwst/">https://www.popsci.com/science/christmas-tree-jwst/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb412d1d"></a>Math<br />
+<div class="outline-text-7" id="text-6-3-1-2-3-3">
+<ul class="org-ul">
+<li>K. Steckles, “A Mathematical Exchange of Gifts,” Heidelberg Laureate Forum. Accessed: Dec. 21, 2023. [Online]. Available: <a href="https://scilogs.spektrum.de/hlf/a-mathematical-exchange-of-gifts/">https://scilogs.spektrum.de/hlf/a-mathematical-exchange-of-gifts/</a></li>
+
+<li>H. Fry and T. O. Evans, The Indisputable Existence of Santa Claus: The Mathematics of Christmas. Black Swan., 2017.</li>
+
+<li>K. Steckles, “The Twelve Facts of Christmas: Pascal’s Triangle - Heidelberg Laureate Forum - SciLogs - Wissenschaftsblogs,” Heidelberg Laureate Forum, Dec. 20, 2018. <a href="https://scilogs.spektrum.de/hlf/the-twelve-facts-of-christmas-pascals-triangle/">https://scilogs.spektrum.de/hlf/the-twelve-facts-of-christmas-pascals-triangle/</a> (accessed Dec. 16, 2022).</li>
+<li>K. Steckles, “The Twelve Days of Christ-maths - Heidelberg Laureate Forum - SciLogs - Wissenschaftsblogs,” Heidelberg Laureate Forum, Dec. 14, 2022. <a href="https://scilogs.spektrum.de/hlf/the-twelve-days-of-christ-maths/">https://scilogs.spektrum.de/hlf/the-twelve-days-of-christ-maths/</a> (accessed Dec. 16, 2022).</li>
+
+<li>Joanna, “The Maths Inside the Twelve Days of Christmas,” Maths Careers, Dec. 10, 2015. <a href="https://www.mathscareers.org.uk/the-maths-inside-the-twelve-days-of-christmas/">https://www.mathscareers.org.uk/the-maths-inside-the-twelve-days-of-christmas/</a> (accessed Dec. 21, 2022).</li>
+
+<li>J. Gilmore, “How to win the gift-stealing game Bad Santa, according to a mathematician,” The Conversation. <a href="http://theconversation.com/how-to-win-the-gift-stealing-game-bad-santa-according-to-a-mathematician-196483">http://theconversation.com/how-to-win-the-gift-stealing-game-bad-santa-according-to-a-mathematician-196483</a> (accessed Dec. 20, 2022).</li>
+</ul>
+</div>
+</li>
+
+
+<li><a id="orgd52c1b1"></a>Misc<br />
+<div class="outline-text-7" id="text-6-3-1-2-3-4">
+<ul class="org-ul">
+<li>“The GCHQ Christmas Challenge 2022.” <a href="https://www.gchq.gov.uk/news/xmaschallenge2022">https://www.gchq.gov.uk/news/xmaschallenge2022</a> (accessed Dec. 16, 2022).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>D. Drollette, “The Christmas carol and the Cuban Missile Crisis,” Bulletin of the Atomic Scientists, Dec. 19, 2022. <a href="https://thebulletin.org/2022/12/do-you-hear-what-i-hear-was-actually-about-the-cuban-missile-crisis/">https://thebulletin.org/2022/12/do-you-hear-what-i-hear-was-actually-about-the-cuban-missile-crisis/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1e1f9aa"></a>India<br />
+<div class="outline-text-6" id="text-6-3-1-2-4">
+<ul class="org-ul">
+<li>“Indian Christmas An Anthology By Jerry Pinto | Goodreads.” <a href="https://www.goodreads.com/book/show/63947086-indian-christmas-an-anthology?from_search=true&amp;from_srp=true&amp;qid=Y814XRvW6J&amp;rank=1">https://www.goodreads.com/book/show/63947086-indian-christmas-an-anthology?from_search=true&amp;from_srp=true&amp;qid=Y814XRvW6J&amp;rank=1</a> (accessed Dec. 17, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Andrews, Christmas in Calcutta: Anglo-Indian Stories and Essays. Sage, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3396d10"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org3369640"></a>Films<br />
+<div class="outline-text-7" id="text-6-3-1-2-5-1">
+<ul class="org-ul">
+<li>V. Swami, “Christmas films: there might be some truth to stories about hometown romances, according to research,” The Conversation. <a href="http://theconversation.com/christmas-films-there-might-be-some-truth-to-stories-about-hometown-romances-according-to-research-196607">http://theconversation.com/christmas-films-there-might-be-some-truth-to-stories-about-hometown-romances-according-to-research-196607</a> (accessed Dec. 21, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org221a8df"></a>Music<br />
+<ol class="org-ol">
+<li><a id="orgbdb675b"></a>General<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-1">
+<ul class="org-ul">
+<li>“Christmas music,” Wikipedia. Dec. 13, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas_music&amp;oldid=1127266001">https://en.wikipedia.org/w/index.php?title=Christmas_music&amp;oldid=1127266001</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8afecbd"></a>Info<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-2">
+<ul class="org-ul">
+<li>D. Broomfield-McHugh, “The enduring wartime spirit that powers classic Christmas songs,” The Conversation. Accessed: Dec. 20, 2023. [Online]. Available: <a href="http://theconversation.com/the-enduring-wartime-spirit-that-powers-classic-christmas-songs-219252">http://theconversation.com/the-enduring-wartime-spirit-that-powers-classic-christmas-songs-219252</a></li>
+
+<li>“The Twelve Days of Christmas (song),” Wikipedia. Dec. 16, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Twelve_Days_of_Christmas_(song)&amp;oldid=1127680880">https://en.wikipedia.org/w/index.php?title=The_Twelve_Days_of_Christmas_(song)&amp;oldid=1127680880</a></li>
+
+<li>“Christmas Price Index,” Wikipedia. Oct. 14, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas_Price_Index&amp;oldid=1116072489">https://en.wikipedia.org/w/index.php?title=Christmas_Price_Index&amp;oldid=1116072489</a></li>
+
+<li>“Christmas carol,” Wikipedia. Dec. 16, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas_carol&amp;oldid=1127700561">https://en.wikipedia.org/w/index.php?title=Christmas_carol&amp;oldid=1127700561</a></li>
+
+<li>D. Drollette, “The Christmas carol and the Cuban Missile Crisis,” Bulletin of the Atomic Scientists, Dec. 19, 2022. <a href="https://thebulletin.org/2022/12/do-you-hear-what-i-hear-was-actually-about-the-cuban-missile-crisis/">https://thebulletin.org/2022/12/do-you-hear-what-i-hear-was-actually-about-the-cuban-missile-crisis/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org698bd69"></a>WCM<br />
+<ol class="org-ol">
+<li><a id="org7992849"></a>Solo<br />
+<div class="outline-text-9" id="text-6-3-1-2-5-2-3-1">
+<ul class="org-ul">
+<li>“ChristmasBernstein | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/1c1d596c5fee43a7aea605ed300e1e69i8n0">https://music.amazon.in/user-playlists/1c1d596c5fee43a7aea605ed300e1e69i8n0</a></li>
+
+<li>“ChristmasBachOratorio | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/0dbf3b025ff64bb394adbd1b3d85f486i8n0">https://music.amazon.in/user-playlists/0dbf3b025ff64bb394adbd1b3d85f486i8n0</a></li>
+
+<li>Yo-Yo Ma, Alison Krauss - The Wexford Carol (Video), (Oct. 26, 2009). Accessed: Dec. 26, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yxDZjg_Igoc">https://www.youtube.com/watch?v=yxDZjg_Igoc</a></li>
+
+<li>Tchaikovsky - The Nutcracker, Ballet in two acts | Mariinsky Theatre (HD 1080p), (Nov. 30, 2014). Accessed: Dec. 26, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=xtLoaMfinbU">https://www.youtube.com/watch?v=xtLoaMfinbU</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3579adf"></a>Collections<br />
+<div class="outline-text-9" id="text-6-3-1-2-5-2-3-2">
+<ul class="org-ul">
+<li>“‎Classical Christmas by Deutsche Grammophon (DG) on Apple Music.” <a href="https://music.apple.com/in/playlist/classical-christmas/pl.6fe9cb1132904156927b579931d13349">https://music.apple.com/in/playlist/classical-christmas/pl.6fe9cb1132904156927b579931d13349</a> (accessed Jan. 02, 2023).</li>
+
+<li>“The Classic Christmas Album - YouTube.” Accessed: Dec. 22, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=OLAK5uy_kyp6R_LjHWWMprY614xQdmG06s6bicQnc">https://www.youtube.com/playlist?list=OLAK5uy_kyp6R_LjHWWMprY614xQdmG06s6bicQnc</a></li>
+
+<li>“Classical Christmas - YouTube.” Accessed: Dec. 22, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLcSkPXginhQe__IcO9ehHzsliR5DOHgNi">https://www.youtube.com/playlist?list=PLcSkPXginhQe__IcO9ehHzsliR5DOHgNi</a></li>
+
+<li>“ChristmasMasterWorks | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/150a927a969b47d1965810f9e4f76637i8n0">https://music.amazon.in/user-playlists/150a927a969b47d1965810f9e4f76637i8n0</a>
+<ul class="org-ul">
+<li>Various Artists, <b>100 Christmas Masterworks.</b> Deutsche Grammophon, 2018.</li>
+</ul></li>
+
+<li>“‎Classical Christmas by Deutsche Grammophon (DG) on Apple Music.” <a href="https://music.apple.com/in/playlist/classical-christmas/pl.6fe9cb1132904156927b579931d13349">https://music.apple.com/in/playlist/classical-christmas/pl.6fe9cb1132904156927b579931d13349</a> (accessed Jan. 02, 2023).</li>
+
+<li>“SpiritualityChristianityChristmasWCM | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/2c15eed68e2f44258aad74b5c812a4a3i8n0">https://music.amazon.in/user-playlists/2c15eed68e2f44258aad74b5c812a4a3i8n0</a></li>
+
+<li>“ChristmasCompleteCelebrations | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/e10de4a03be44e9684a714c297ea6658i8n0">https://music.amazon.in/user-playlists/e10de4a03be44e9684a714c297ea6658i8n0</a></li>
+
+<li>“ChristmasOriginalMasters | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/e8e810a8335a4de99d34a20e0b1379c3i8n0">https://music.amazon.in/user-playlists/e8e810a8335a4de99d34a20e0b1379c3i8n0</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org02adf31"></a>Misc<br />
+<div class="outline-text-9" id="text-6-3-1-2-5-2-3-3">
+<ul class="org-ul">
+<li>“ChristmasCarols | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/05b30f0bfbf54c3c9337a7bf70c11df0i8n0">https://music.amazon.in/user-playlists/05b30f0bfbf54c3c9337a7bf70c11df0i8n0</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgab604f6"></a>Jazz<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-4">
+<ul class="org-ul">
+<li>My Favorite Things (Stereo) (2022 Remaster), (May 19, 2022). Accessed: Dec. 26, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JQvc-Gkwhow">https://www.youtube.com/watch?v=JQvc-Gkwhow</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9c0e1bf"></a>Sarod<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-5">
+<ul class="org-ul">
+<li>“SpiritualityChristianityChristmasSarod | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/b37555d9dae14929a5de11b6fe76a606i8n0">https://music.amazon.in/user-playlists/b37555d9dae14929a5de11b6fe76a606i8n0</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge2367b9"></a>Vocals<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-6">
+<ul class="org-ul">
+<li><i><a href="https://www.youtube.com/playlist?list=OLAK5uy_nUVXnP4DE7FleyMCgNthHJIbpFC4XP2SQ">Christmas Songs</a></i>, Frank Sinatra.</li>
+
+<li>“Elvis’ Christmas Album,” Wikipedia. Dec. 02, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Elvis%27_Christmas_Album&amp;oldid=1125187759">https://en.wikipedia.org/w/index.php?title=Elvis%27_Christmas_Album&amp;oldid=1125187759</a></li>
+
+<li>Sting – “Christmas at Sea” from A Winter’s Night (Live at Durham Cathedral), (Dec. 20, 2019). Accessed: Dec. 22, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LrdJuDPB1Rk">https://www.youtube.com/watch?v=LrdJuDPB1Rk</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3bd3ca2"></a>Misc<br />
+<div class="outline-text-8" id="text-6-3-1-2-5-2-7">
+<ul class="org-ul">
+<li>“SpiritualityChristmas | Community Playlist on Prime Music.” <a href="https://music.amazon.in/user-playlists/2c15eed68e2f44258aad74b5c812a4a3i8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN">https://music.amazon.in/user-playlists/2c15eed68e2f44258aad74b5c812a4a3i8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN</a> (accessed Jun. 18, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org9e809a9"></a>Literature<br />
+<div class="outline-text-7" id="text-6-3-1-2-5-3">
+<ul class="org-ul">
+<li>M. Wood, “How Charles Dickens’s A Christmas Carol anticipated the psychology of Freud in its tale of childhood trauma,” The Conversation. Accessed: Dec. 22, 2023. [Online]. Available: <a href="http://theconversation.com/how-charles-dickenss-a-christmas-carol-anticipated-the-psychology-of-freud-in-its-tale-of-childhood-trauma-220175">http://theconversation.com/how-charles-dickenss-a-christmas-carol-anticipated-the-psychology-of-freud-in-its-tale-of-childhood-trauma-220175</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org91e7ebe"></a>Art<br />
+<div class="outline-text-7" id="text-6-3-1-2-5-4">
+<ul class="org-ul">
+<li>Anonymous, “The Adoration of the Magi, from a Mirror of Holiness (Mir’at al-quds) of Father Jerome Xavier,” Cleveland Museum of Art, Oct. 30, 2018. <a href="https://www.clevelandart.org/art/2005.145.36.b">https://www.clevelandart.org/art/2005.145.36.b</a> (accessed Dec. 26, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org20b8845"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org61c2f86"></a>Santa Claus<br />
+<div class="outline-text-7" id="text-6-3-1-2-6-1">
+<ul class="org-ul">
+<li>“Who is Santa Claus? Can he endure in a warming world?” <a href="https://www.downtoearth.org.in/news/climate-change/who-is-santa-claus-can-he-endure-in-a-warming-world--86771">https://www.downtoearth.org.in/news/climate-change/who-is-santa-claus-can-he-endure-in-a-warming-world--86771</a> (accessed Dec. 26, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org372b55a"></a>Christmas Tree<br />
+<div class="outline-text-7" id="text-6-3-1-2-6-2">
+<ul class="org-ul">
+<li>P. W. December 2023, “Five of our favourite Christmas chemistrees from 2023,” Chemistry World. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/news/five-of-our-favourite-christmas-chemistrees-from-2023/4018682.article">https://www.chemistryworld.com/news/five-of-our-favourite-christmas-chemistrees-from-2023/4018682.article</a></li>
+
+<li>T. C. James A T Lancaster, “The Christmas tree is a modern invention, popularised by the American businessmen,” Scroll.in. <a href="https://scroll.in/article/1040192/the-christmas-tree-is-a-modern-invention-popularised-by-the-american-businessmen">https://scroll.in/article/1040192/the-christmas-tree-is-a-modern-invention-popularised-by-the-american-businessmen</a> (accessed Dec. 27, 2022).</li>
+
+<li>R. B. December 2022, “Mass spectrometry to catch Christmas tree thieves and timber traffickers,” Chemistry World. <a href="https://www.chemistryworld.com/opinion/mass-spectrometry-to-catch-christmas-tree-thieves-and-timber-traffickers/4016586.article">https://www.chemistryworld.com/opinion/mass-spectrometry-to-catch-christmas-tree-thieves-and-timber-traffickers/4016586.article</a> (accessed Dec. 16, 2022).</li>
+
+<li>“The Christmas tree is a tradition older than Christmas.” <a href="https://www.downtoearth.org.in/blog/wildlife-biodiversity/the-christmas-tree-is-a-tradition-older-than-christmas-86611">https://www.downtoearth.org.in/blog/wildlife-biodiversity/the-christmas-tree-is-a-tradition-older-than-christmas-86611</a> (accessed Dec. 19, 2022).</li>
+
+<li>D. U. of Technology, “Physics student makes world’s smallest Christmas tree.” <a href="https://phys.org/news/2020-12-physics-student-world-smallest-christmas.html">https://phys.org/news/2020-12-physics-student-world-smallest-christmas.html</a> (accessed Dec. 21, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. VanderSchaaf, “Real or artificial? A forestry scientist explains how to choose the most sustainable Christmas tree, no matter what it’s made of,” The Conversation. Accessed: Dec. 20, 2023. [Online]. Available: <a href="http://theconversation.com/real-or-artificial-a-forestry-scientist-explains-how-to-choose-the-most-sustainable-christmas-tree-no-matter-what-its-made-of-219082">http://theconversation.com/real-or-artificial-a-forestry-scientist-explains-how-to-choose-the-most-sustainable-christmas-tree-no-matter-what-its-made-of-219082</a></li>
+<li>C. V. US The Conversation, “How to Choose an Environmentally Friendly Christmas Tree,” Scientific American. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-to-choose-an-environmentally-friendly-christmas-tree/">https://www.scientificamerican.com/article/how-to-choose-an-environmentally-friendly-christmas-tree/</a></li>
+
+<li>L. Baisas, “‘Christmas tree’ galaxy shines in new image from Hubble and JWST,” Popular Science. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://www.popsci.com/science/christmas-tree-jwst/">https://www.popsci.com/science/christmas-tree-jwst/</a></li>
+
+<li>J. L. Z. US Patrick Abouchalache, The Conversation, “Christmas Tree Economics, Explained,” Scientific American. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://www.scientificamerican.com/article/christmas-tree-economics-explained/">https://www.scientificamerican.com/article/christmas-tree-economics-explained/</a></li>
+
+<li>K. MacPherson and R. University, “Q&amp;A: How to choose the perfect Christmas tree.” Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://phys.org/news/2023-12-qa-christmas-tree.html">https://phys.org/news/2023-12-qa-christmas-tree.html</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgdd7affa"></a>Stockings<br />
+<div class="outline-text-7" id="text-6-3-1-2-6-3">
+<ul class="org-ul">
+<li>B. M. Journal, “Santa should phase out coal as punishment in Christmas stockings.” <a href="https://phys.org/news/2022-12-santa-phase-coal-christmas-stockings.html">https://phys.org/news/2022-12-santa-phase-coal-christmas-stockings.html</a> (accessed Dec. 21, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd6c80dd"></a>Beetles<br />
+<div class="outline-text-7" id="text-6-3-1-2-6-4">
+<ul class="org-ul">
+<li>U. of Sydney, “Where have all the Christmas beetles gone?” <a href="https://phys.org/news/2022-11-christmas-beetles.html">https://phys.org/news/2022-11-christmas-beetles.html</a> (accessed Dec. 21, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc43ae4f"></a>Food<br />
+<div class="outline-text-7" id="text-6-3-1-2-6-5">
+<ul class="org-ul">
+<li>“Christmas dinner,” Wikipedia. Dec. 15, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas_dinner&amp;oldid=1127591339">https://en.wikipedia.org/w/index.php?title=Christmas_dinner&amp;oldid=1127591339</a></li>
+
+<li>“List of Christmas dishes,” Wikipedia. Dec. 15, 2022. Accessed: Dec. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=List_of_Christmas_dishes&amp;oldid=1127511525#India">https://en.wikipedia.org/w/index.php?title=List_of_Christmas_dishes&amp;oldid=1127511525#India</a></li>
+
+<li>“Anyone for a mince pi? Mathematical modelling of festive foods - Helen Wilson | Mathematical Institute.” <a href="https://www.maths.ox.ac.uk/node/61780">https://www.maths.ox.ac.uk/node/61780</a> (accessed Dec. 20, 2022).</li>
+
+<li>C. L. December 2016, “Why science says you should brine your Christmas turkey,” Chemistry World. <a href="https://www.chemistryworld.com/opinion/why-science-says-you-should-brine-your-christmas-turkey/2500128.article">https://www.chemistryworld.com/opinion/why-science-says-you-should-brine-your-christmas-turkey/2500128.article</a> (accessed Dec. 26, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgde81578"></a>Misc<br />
+<div class="outline-text-6" id="text-6-3-1-2-7">
+<ul class="org-ul">
+<li>S. Fox, “Christmas at Kew: what the royal household of King George III ate for their festive dinner in 1788,” The Conversation. Accessed: Dec. 22, 2023. [Online]. Available: <a href="http://theconversation.com/christmas-at-kew-what-the-royal-household-of-king-george-iii-ate-for-their-festive-dinner-in-1788-219209">http://theconversation.com/christmas-at-kew-what-the-royal-household-of-king-george-iii-ate-for-their-festive-dinner-in-1788-219209</a></li>
+
+<li>N. Martyn, “Give the gift of presence and love during the holidays,” The Conversation. <a href="http://theconversation.com/give-the-gift-of-presence-and-love-during-the-holidays-196273">http://theconversation.com/give-the-gift-of-presence-and-love-during-the-holidays-196273</a> (accessed Dec. 21, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Christmas traditions don’t need religion | Alexis Papazoglou,” IAI TV - Changing how the world thinks, Dec. 21, 2021. <a href="https://iai.tv/articles/christmas-traditions-dont-need-religion-auid-2010">https://iai.tv/articles/christmas-traditions-dont-need-religion-auid-2010</a> (accessed Dec. 26, 2021).</li>
+
+<li>“Older than the Church,” Aug. 2003, Accessed: Dec. 26, 2022. [Online]. Available: <a href="https://www.epw.in/journal/2003/33/commentary/older-church.html">https://www.epw.in/journal/2003/33/commentary/older-church.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Macdonald and R. Watson, “From rented Christmas jumpers to ‘shwopping’, the secrets of successful business-charity collaborations,” The Conversation. Accessed: Dec. 20, 2023. [Online]. Available: <a href="http://theconversation.com/from-rented-christmas-jumpers-to-shwopping-the-secrets-of-successful-business-charity-collaborations-218569">http://theconversation.com/from-rented-christmas-jumpers-to-shwopping-the-secrets-of-successful-business-charity-collaborations-218569</a></li>
+
+<li>“All I Want for Christmas Is a Ceasefire,” YES! Magazine. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://www.yesmagazine.org/opinion/2023/12/12/christmas-israel-gaza-ceasefire">https://www.yesmagazine.org/opinion/2023/12/12/christmas-israel-gaza-ceasefire</a></li>
+
+<li>S. Oldham, L. Spence, and T. Conversation, “Seven tips for ethical shopping this Christmas.” Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://phys.org/news/2023-12-ethical-christmas.html">https://phys.org/news/2023-12-ethical-christmas.html</a></li>
+
+<li>C. Gupta, C. Irwin, G. Vincent, M. Sprajcer, and S. Khalesi, “Christmas drinks anyone? Why alcohol before bedtime leaves you awake at 3am, desperate for sleep,” The Conversation. Accessed: Dec. 20, 2023. [Online]. Available: <a href="http://theconversation.com/christmas-drinks-anyone-why-alcohol-before-bedtime-leaves-you-awake-at-3am-desperate-for-sleep-216834">http://theconversation.com/christmas-drinks-anyone-why-alcohol-before-bedtime-leaves-you-awake-at-3am-desperate-for-sleep-216834</a></li>
+
+<li>L. Hartigan, “An austere Christmas is on the cards – but don’t say recession,” The Conversation. Accessed: Dec. 20, 2023. [Online]. Available: <a href="http://theconversation.com/an-austere-christmas-is-on-the-cards-but-dont-say-recession-218718">http://theconversation.com/an-austere-christmas-is-on-the-cards-but-dont-say-recession-218718</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>M. Cox and L. University, “Ballerinas are stepping into sensor suits so one Christmas you may be able to understand the nuances of The Nutcracker.” Accessed: Dec. 21, 2023. [Online]. Available: <a href="https://phys.org/news/2023-12-ballerinas-sensor-christmas-nuances-nutcracker.html">https://phys.org/news/2023-12-ballerinas-sensor-christmas-nuances-nutcracker.html</a></li>
+
+<li>“An Apollo 8 Christmas Dinner Surprise: Turkey and Gravy Make Space History - NASA.” Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.nasa.gov/history/apollo-8-christmas-dinner/">https://www.nasa.gov/history/apollo-8-christmas-dinner/</a></li>
+
+<li>“Christmas Canceled as Churches Mourn 20,000+ Palestinians Killed in Gaza,” Democracy Now! Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.democracynow.org/2023/12/22/christmas_cancelled_in_palestine_mitri_raheb">https://www.democracynow.org/2023/12/22/christmas_cancelled_in_palestine_mitri_raheb</a></li>
+
+<li>P. W. December 2023, “Five of our favourite Christmas chemistrees from 2023,” Chemistry World. Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/news/five-of-our-favourite-christmas-chemistrees-from-2023/4018682.article">https://www.chemistryworld.com/news/five-of-our-favourite-christmas-chemistrees-from-2023/4018682.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Christmas Canceled as Churches Mourn 20,000+ Palestinians Killed in Gaza,” Democracy Now! Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.democracynow.org/2023/12/22/christmas_cancelled_in_palestine_mitri_raheb">https://www.democracynow.org/2023/12/22/christmas_cancelled_in_palestine_mitri_raheb</a></li>
+
+<li>Joanna, “The Maths Inside the Twelve Days of Christmas,” Maths Careers. Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.mathscareers.org.uk/the-maths-inside-the-twelve-days-of-christmas/">https://www.mathscareers.org.uk/the-maths-inside-the-twelve-days-of-christmas/</a></li>
+
+<li>“BUND Christmas tree test 2023: Over two thirds of trees contaminated with pesticides.” Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.chemeurope.com/en/news/1182340/bund-christmas-tree-test-2023-over-two-thirds-of-trees-contaminated-with-pesticides.html">https://www.chemeurope.com/en/news/1182340/bund-christmas-tree-test-2023-over-two-thirds-of-trees-contaminated-with-pesticides.html</a></li>
+
+<li>“France split over environmental effects of Christmas trees,” BBC News, Dec. 22, 2023. Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.bbc.com/news/world-europe-67781387">https://www.bbc.com/news/world-europe-67781387</a></li>
+
+<li>“Who is Santa Claus? Can he endure in a warming world?” Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/who-is-santa-claus-can-he-endure-in-a-warming-world--86771">https://www.downtoearth.org.in/news/climate-change/who-is-santa-claus-can-he-endure-in-a-warming-world--86771</a></li>
+<li>Reuters, “On Christmas eve, Pope Francis laments ‘futile’ war in Holy Land,” The Hindu, Dec. 24, 2023. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/international/on-christmas-eve-pope-francis-laments-futile-war-in-holy-land/article67672651.ece">https://www.thehindu.com/news/international/on-christmas-eve-pope-francis-laments-futile-war-in-holy-land/article67672651.ece</a></li>
+<li>“Christmas Amidst Genocide,” The Wire. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://thewire.in/religion/palestine-genocide-christmas-israel">https://thewire.in/religion/palestine-genocide-christmas-israel</a></li>
+<li>E. Kidwell, “Twelve days of Christmas,” IMA. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://ima.org.uk/8394/twelve-days-christmas/">https://ima.org.uk/8394/twelve-days-christmas/</a></li>
+<li>J. S. Swain Elise, “Merry Christmas! We All Belong in Prison at The Hague.,” The Intercept. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://theintercept.com/2023/12/24/merry-christmas-war-crimes/">https://theintercept.com/2023/12/24/merry-christmas-war-crimes/</a></li>
+<li>“Under A Shadow Of Fear, Christians Celebrate Christmas, But Not Like Before.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://www.article-14.com/post/under-a-shadow-of-fear-christians-celebrate-christmas-but-not-like-before-65879fca3f588">https://www.article-14.com/post/under-a-shadow-of-fear-christians-celebrate-christmas-but-not-like-before-65879fca3f588</a></li>
+<li>“Christmas,” Wikipedia. Mar. 29, 2023. Accessed: Apr. 10, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christmas&amp;oldid=1147259278">https://en.wikipedia.org/w/index.php?title=Christmas&amp;oldid=1147259278</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1952584"></a>Easter<br />
+<div class="outline-text-5" id="text-6-3-1-3">
+<ul class="org-ul">
+<li>“Easter,” Wikipedia. Apr. 10, 2023. Accessed: Apr. 10, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Easter&amp;oldid=1149109959">https://en.wikipedia.org/w/index.php?title=Easter&amp;oldid=1149109959</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orga41a165"></a>Lent<br />
+<div class="outline-text-5" id="text-6-3-1-4">
+<ul class="org-ul">
+<li>“Lent,” Wikipedia. Apr. 06, 2023. Accessed: Apr. 10, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Lent&amp;oldid=1148549363">https://en.wikipedia.org/w/index.php?title=Lent&amp;oldid=1148549363</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgd10c0ae"></a>Good Friday<br />
+<div class="outline-text-5" id="text-6-3-1-5">
+<ul class="org-ul">
+<li>“Good Friday,” Wikipedia. Apr. 10, 2023. Accessed: Apr. 10, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Good_Friday&amp;oldid=1149091471">https://en.wikipedia.org/w/index.php?title=Good_Friday&amp;oldid=1149091471</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org96bf608" class="outline-3">
+<h3 id="org96bf608"><span class="section-number-3">6.4.</span> Variants</h3>
+<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-org391d576" class="outline-4">
+<h4 id="org391d576"><span class="section-number-4">6.4.1.</span> Mormonism</h4>
+<div class="outline-text-4" id="text-6-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org427d6da"></a>g<br />
+<div class="outline-text-5" id="text-6-4-1-1">
+<ul class="org-ul">
+<li>“Mormonism,” Wikipedia. Jun. 09, 2023. Accessed: Jun. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mormonism&amp;oldid=1159349094">https://en.wikipedia.org/w/index.php?title=Mormonism&amp;oldid=1159349094</a></li>
+
+<li>“BBC - Religion: Mormonism.” <a href="https://www.bbc.co.uk/religion/religions/mormon/index.shtml">https://www.bbc.co.uk/religion/religions/mormon/index.shtml</a> (accessed Jun. 13, 2023).</li>
+<li>“The Mormons | American Experience | PBS.” <a href="https://www.pbs.org/wgbh/americanexperience/films/mormons/">https://www.pbs.org/wgbh/americanexperience/films/mormons/</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6b45fde"></a>Orgs<br />
+<div class="outline-text-5" id="text-6-4-1-2">
+<ul class="org-ul">
+<li>“Latter Day Saint movement,” Wikipedia. Jun. 01, 2023. Accessed: Jun. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Latter_Day_Saint_movement&amp;oldid=1158020039">https://en.wikipedia.org/w/index.php?title=Latter_Day_Saint_movement&amp;oldid=1158020039</a></li>
+<li>“The Church of Jesus Christ of Latter-day Saints.” <a href="https://www.churchofjesuschrist.org/?lang=eng">https://www.churchofjesuschrist.org/?lang=eng</a> (accessed Jun. 13, 2023).</li>
+
+<li>“Home,” BYU Studies. <a href="https://byustudies.byu.edu/">https://byustudies.byu.edu/</a> (accessed Jun. 13, 2023).</li>
+
+<li>“Elijah Message -Church of Christ with the Elijah Message Home Page.” <a href="https://www.elijahmessage.net/">https://www.elijahmessage.net/</a> (accessed Jun. 13, 2023).</li>
+
+<li>“Home,” The Church of Jesus Christ. <a href="https://thechurchofjesuschrist.org/">https://thechurchofjesuschrist.org/</a> (accessed Jun. 13, 2023).</li>
+
+<li>“Community of Christ International Headquarters,” Community of Christ International Headquarters. <a href="https://cofchrist.org/">https://cofchrist.org/</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7fb954a"></a>people<br />
+<div class="outline-text-5" id="text-6-4-1-3">
+<ul class="org-ul">
+<li>“Joseph Smith,” Wikipedia. Jun. 12, 2023. Accessed: Jun. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Joseph_Smith&amp;oldid=1159827859">https://en.wikipedia.org/w/index.php?title=Joseph_Smith&amp;oldid=1159827859</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbeb372b"></a>stemm<br />
+<ol class="org-ol">
+<li><a id="org703f36f"></a>ecology<br />
+<div class="outline-text-6" id="text-6-4-1-4-1">
+<ul class="org-ul">
+<li>“Mormon environmentalist conveys ecological message through fiction | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/news/Mormon-environmentalist-conveys-ecological-message-through-fiction">https://fore.yale.edu/news/Mormon-environmentalist-conveys-ecological-message-through-fiction</a> (accessed Jun. 13, 2023).</li>
+<li>“Mormon Environmental Stewardship Alliance (MESA) | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/project/Mormon-Environmental-Stewardship-Alliance-MESA">https://fore.yale.edu/project/Mormon-Environmental-Stewardship-Alliance-MESA</a> (accessed Jun. 13, 2023).</li>
+<li>“The Environmental Ethics of Mormon Belief,” BYU Studies. <a href="https://byustudies.byu.edu/article/the-environmental-ethics-of-mormon-belief/">https://byustudies.byu.edu/article/the-environmental-ethics-of-mormon-belief/</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb097216"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org18da772"></a>In<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org332f986" class="outline-2">
+<h2 id="org332f986"><span class="section-number-2">7.</span> Critical Studies</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>B. Russell, Why I Am Not a Christian: And Other Essays on Religion and Related Subjects. Routledge, 2004.</li>
+
+<li>F. Nietzsche, Twilight of Idols and Anti-Christ. Penguin UK, 1990.</li>
+
+<li>“Christian fundamentalism,” Wikipedia. Dec. 13, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christian_fundamentalism&amp;oldid=1127155394">https://en.wikipedia.org/w/index.php?title=Christian_fundamentalism&amp;oldid=1127155394</a></li>
+
+<li><del>“Ku Klux Klan,”</del> Wikipedia. Dec. 19, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ku_Klux_Klan&amp;oldid=1128371991">https://en.wikipedia.org/w/index.php?title=Ku_Klux_Klan&amp;oldid=1128371991</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcfddacc" class="outline-2">
+<h2 id="orgcfddacc"><span class="section-number-2">8.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgd7cc940" class="outline-3">
+<h3 id="orgd7cc940"><span class="section-number-3">8.1.</span> India</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org607dfe0" class="outline-4">
+<h4 id="org607dfe0"><span class="section-number-4">8.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<ul class="org-ul">
+<li>“Christianity in India,” Wikipedia. Nov. 26, 2022. Accessed: Dec. 01, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christianity_in_India&amp;oldid=1123949355">https://en.wikipedia.org/w/index.php?title=Christianity_in_India&amp;oldid=1123949355</a></li>
+
+<li>S. Sarma, Carpenters and Kings: Western Christianity and the Idea of India. Gurgaon, Haryana, India: Penguin Hamish Hamilton, 2019.</li>
+
+<li>D. Pattanaik, <b>Eden: An Indian Retelling of Jewish, Christian and Islamic Lore.</b> Penguin Random House India Private Limited, 2021.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgda4d1e0" class="outline-4">
+<h4 id="orgda4d1e0"><span class="section-number-4">8.1.2.</span> History</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<ul class="org-ul">
+<li>P. Malekandathil, J. Pachuau, and T. Sarkar, Christianity in Indian History: Issues of Culture, Power and Knowledge. Primus Books, 2016.</li>
+
+<li>C. A. B. Joseph, Christianity in India: The Anti-Colonial Turn. Routledge, 2019.</li>
+
+<li>R. E. Frykenberg, Christianity in India: From Beginnings to the Present. OUP Oxford, 2008.</li>
+
+<li>L. Fernando and G. Gispert-Sauch, Christianity in India: Two Thousand Years of Faith. Penguin Books India, 2004.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36536a1" class="outline-4">
+<h4 id="org36536a1"><span class="section-number-4">8.1.3.</span> Regional</h4>
+<div class="outline-text-4" id="text-8-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org03bf8a7"></a>North West India<br />
+<div class="outline-text-5" id="text-8-1-3-1">
+<ul class="org-ul">
+<li>J. C. B. Webster, A Social History of Christianity: North-west India since 1800. Oxford University Press, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge43ca1c"></a>Nagaland<br />
+<div class="outline-text-5" id="text-8-1-3-2">
+<ul class="org-ul">
+<li>G. K. Chophy, Christianity and Politics in Tribal India: Baptist Missionaries and Naga Nationalism. SUNY Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org923c9c1"></a>North East India<br />
+<div class="outline-text-5" id="text-8-1-3-3">
+<ul class="org-ul">
+<li>C. Jamir, Christianity in Northeast India: A Cultural History of Nagaland from 1947. Routledge, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Longkumer, <b>The Greater India Experiment: Hindutva and the Northeast.</b> Stanford University Press, 2020.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org5f1515d"></a>South India<br />
+<div class="outline-text-5" id="text-8-1-3-4">
+<ul class="org-ul">
+<li>A. K. Mocherla, Dalit Christians in South India: Caste, Ideology and Lived Religion. Taylor &amp; Francis, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6873499" class="outline-4">
+<h4 id="org6873499"><span class="section-number-4">8.1.4.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-8-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org9f4bcb9"></a>Mother Teresa<br />
+<ol class="org-ol">
+<li><a id="orgafb05d3"></a>General<br />
+<div class="outline-text-6" id="text-8-1-4-1-1">
+<ul class="org-ul">
+<li><i>“Mother Teresa,”</i> Wikipedia. Sep. 24, 2021. Accessed: Oct. 04, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mother_Teresa&amp;oldid=1046112957">https://en.wikipedia.org/w/index.php?title=Mother_Teresa&amp;oldid=1046112957</a></li>
+
+<li>N. Chawla and Navin, <i>Mother Teresa (The Centenary Edition).</i> Penguin Books India, 2003.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org9765c2c"></a>Music<br />
+<div class="outline-text-6" id="text-8-1-4-1-2">
+<ul class="org-ul">
+<li>“SpiritualityChristianityMTeresaSarod | Community Playlist on Prime Music.” Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://music.amazon.in/user-playlists/16a2f7d51405438ea84710089d522739i8n0">https://music.amazon.in/user-playlists/16a2f7d51405438ea84710089d522739i8n0</a></li>
+<li><i>“Amjad Ali Khan - Homage To Mother Teresa,”</i> Discogs. <a href="https://www.discogs.com/master/1826677-Amjad-Ali-Khan-Homage-To-Mother-Teresa">https://www.discogs.com/master/1826677-Amjad-Ali-Khan-Homage-To-Mother-Teresa</a> (accessed Oct. 23, 2021).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgb39adb9"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-8-1-4-1-3">
+<ul class="org-ul">
+<li>C. Hitchens, <i>The Missionary Position: Mother Teresa in Theory and Practice.</i> Atlantic Books Ltd, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge12f658"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgd0e9922"></a>Bad Stuff<br />
+<div class="outline-text-5" id="text-8-1-4-2">
+<ul class="org-ul">
+<li>S. L. Kalapura, “Sister Lucy Kalapura tells the story of her protest against a bishop for sexual assault in this book,” Scroll.in. <a href="https://scroll.in/article/1028434/sister-lucy-kalapura-tells-the-story-of-her-protest-against-a-bishop-for-sexual-assault-in-this-book">https://scroll.in/article/1028434/sister-lucy-kalapura-tells-the-story-of-her-protest-against-a-bishop-for-sexual-assault-in-this-book</a> (accessed Jul. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1af4d1a"></a>Caste<br />
+<div class="outline-text-5" id="text-8-1-4-3">
+<ul class="org-ul">
+<li>R. E. Frykenberg and A. Low, Eds., Christians and Missionaries in India: Cross-Cultural Communication Since 1500 : with Special Reference to Caste, Conversion, and Colonialism. Grand Rapids, Mich: William B Eerdmans Publishing Co, 2003.</li>
+<li>A. K. Mocherla, Dalit Christians in South India: Caste, Ideology and Lives Religion, First edition. Abingdon, Oxon ; New York, NY: Routledge, 2020.</li>
+<li>D. Mosse, The Saint in the Banyan Tree: Christianity and Caste Society in India: 14. Berkeley: University of California Press, 2012.</li>
+<li>C. M. Bauman and R. F. Young, Eds., Constructing Indian Christianities: Culture, Conversion and Caste, 1st edition. New Delhi: Routledge India, 2014.</li>
+<li>D. B. Forrester, Caste and Christianity: Attitudes and Policies on Caste of Anglo-Saxon Protestant Missions in India, 1st edition. Routledge, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org3604fc0" class="outline-4">
+<h4 id="org3604fc0"><span class="section-number-4">8.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-8-1-5">
+<ul class="org-ul">
+<li>Z. Štipl, The Christian Ashram Movement in India. Taylor &amp; Francis, 2020.</li>
+
+<li>P. M. Collins, Christian Inculturation in India. Routledge, 2016.</li>
+
+<li>S. J. Raj and C. G. Dempsey, Popular Christianity in India: Riting between the Lines. SUNY Press, 2012.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org79889d2" class="outline-3">
+<h3 id="org79889d2"><span class="section-number-3">8.2.</span> Violence</h3>
+<div class="outline-text-3" id="text-8-2">
+<ul class="org-ul">
+<li>“Christianity and violence,” Wikipedia. Jun. 21, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christianity_and_violence&amp;oldid=1094187568">https://en.wikipedia.org/w/index.php?title=Christianity_and_violence&amp;oldid=1094187568</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6a934c7" class="outline-3">
+<h3 id="org6a934c7"><span class="section-number-3">8.3.</span> Women</h3>
+<div class="outline-text-3" id="text-8-3">
+<ul class="org-ul">
+<li>J. C. Brown, Immodest Acts: The Life of a Lesbian Nun in Renaissance Italy. Replica Books, 2000.</li>
+
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga820f63" class="outline-3">
+<h3 id="orga820f63"><span class="section-number-3">8.4.</span> Men</h3>
+<div class="outline-text-3" id="text-8-4">
+<ul class="org-ul">
+<li>“Christian manliness,” Wikipedia. Nov. 11, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christian_manliness&amp;oldid=1121262971">https://en.wikipedia.org/w/index.php?title=Christian_manliness&amp;oldid=1121262971</a></li>
+
+<li>N. Vance, The Sinews of the Spirit: The Ideal of Christian Manliness in Victorian Literature and Religious Thought. Cambridge University Press, 1985.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. McKay and K. McKay, Muscular Christianity: The Relationship Between Men and Faith, 1st edition. Semper Virilis Publishing, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. and K. McKay, “When Christianity Was Muscular,” The Art of Manliness, Sep. 13, 2016. <a href="https://www.artofmanliness.com/character/knowledge-of-men/when-christianity-was-muscular/">https://www.artofmanliness.com/character/knowledge-of-men/when-christianity-was-muscular/</a> (accessed Dec. 20, 2022).</li>
+<li>B. &amp; K. McKay, “The Feminization of Christianity,” The Art of Manliness, Aug. 22, 2016. <a href="https://www.artofmanliness.com/character/knowledge-of-men/the-feminization-of-christianity/">https://www.artofmanliness.com/character/knowledge-of-men/the-feminization-of-christianity/</a> (accessed Dec. 20, 2022).</li>
+<li>B. and K. McKay, “Is Christianity an Inherently Feminine Religion?,” The Art of Manliness, Aug. 08, 2016. <a href="https://www.artofmanliness.com/character/knowledge-of-men/is-christianity-an-inherently-feminine-religion/">https://www.artofmanliness.com/character/knowledge-of-men/is-christianity-an-inherently-feminine-religion/</a> (accessed Dec. 20, 2022).</li>
+<li>B. and K. McKay, “Christianity’s Manhood Problem: An Introduction,” The Art of Manliness, Aug. 02, 2016. <a href="https://www.artofmanliness.com/character/knowledge-of-men/christianitys-manhood-problem-an-introduction/">https://www.artofmanliness.com/character/knowledge-of-men/christianitys-manhood-problem-an-introduction/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org747473c" class="outline-3">
+<h3 id="org747473c"><span class="section-number-3">8.5.</span> Classics</h3>
+<div class="outline-text-3" id="text-8-5">
+<ul class="org-ul">
+<li>S. B. (Abbot of M. Cassino.), <i>The Rule of Benedict.</i> Penguin Books, Limited, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30b5582" class="outline-3">
+<h3 id="org30b5582"><span class="section-number-3">8.6.</span> Common Prayer</h3>
+<div class="outline-text-3" id="text-8-6">
+<ul class="org-ul">
+<li><i>The Book of Common Prayer: (Penguin Classics Deluxe Edition).</i> Penguin Publishing Group, 2012.</li>
+<li>C. Hefling and C. Shattuck, <i>The Oxford Guide to The Book of Common Prayer: A Worldwide Survey.</i> Oxford University Press, 2006.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7160f6c" class="outline-3">
+<h3 id="org7160f6c"><span class="section-number-3">8.7.</span> Other religions</h3>
+<div class="outline-text-3" id="text-8-7">
+</div>
+<div id="outline-container-org4eb6231" class="outline-4">
+<h4 id="org4eb6231"><span class="section-number-4">8.7.1.</span> Hinduism</h4>
+<div class="outline-text-4" id="text-8-7-1">
+<ul class="org-ul">
+<li>H. Hillgardner, Longing and Letting Go: Christian and Hindu Practices of Passionate Non-attachment. Oxford University Press, 2017.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16f19ce" class="outline-2">
+<h2 id="org16f19ce"><span class="section-number-2">9.</span> Misc</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>J. Rivette, La religieuse, (Jul. 08, 1971).</li>
+
+<li>B. Levack, The Devil Within: Possession and Exorcism in the Christian West. Yale University Press, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Saurabh Mittal</p>
+<p class="date">Created: 2023-12-25 Mon 11:12</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
