@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-26 Tue 13:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AyurVeda</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AyurVeda</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org08c6b43">1. General</a></li>
+<li><a href="#orgd1233eb">2. Orgs</a>
+<ul>
+<li><a href="#org8fd3282">2.1. <b>Organic India</b></a>
+<ul>
+<li><a href="#org9d7ddad">2.1.1. Kids</a></li>
+<li><a href="#org2b1ae7b">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga3d69cd">2.2. Forest Essentials</a></li>
+<li><a href="#orge476483">2.3. Himalaya</a></li>
+<li><a href="#org9ea732c">2.4. Dabur</a></li>
+<li><a href="#org167dd37">2.5. Baidnath</a></li>
+<li><a href="#org2c8c592">2.6. Patanjali</a>
+<ul>
+<li><a href="#orgdb0eb72">2.6.1. Misc</a></li>
+<li><a href="#org1a722c6">2.6.2. Critical Studies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9e6c3c6">3. Critical Studies</a></li>
+<li><a href="#org7e2b31f">4. ST</a>
+<ul>
+<li><a href="#orgbc8ead4">4.1. Immunity</a></li>
+<li><a href="#org6ec9f85">4.2. Mental Health</a></li>
+<li><a href="#orgb702b9d">4.3. Classics</a></li>
+</ul>
+</li>
+<li><a href="#org1237b0d">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org08c6b43" class="outline-2">
+<h2 id="org08c6b43"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Ayurveda,” Wikipedia. Jun. 08, 2022. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ayurveda&amp;oldid=1092114101">https://en.wikipedia.org/w/index.php?title=Ayurveda&amp;oldid=1092114101</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. V. Shiva and D. G. G. Gangadharan, <b>The Two Futures of Food, Health and Humanity: A Civilisational Dialogue.</b> Centre for Innovation in Science and Social Action, 2020.</li>
+<li>D. G. G. Gangadharan, <b>Ayurveda: The True Way to Restore Your Health and Happiness.</b> Penguin eBury Press, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>V. M.S, Introduction To Ayurveda, An. Hyderabad: Orient Blackswan Private Limited - New Delhi, 2013.</li>
+<li>M. S. Valiathan, Ayurvedic Inheritance: A Reader’s Companion, 1st edition. Routledge, 2023.</li>
+<li>K. Joshi, “Insights into Ayurvedic biology—sA conversation with Professor M.S. Valiathan,” Journal of Ayurveda and Integrative Medicine, vol. 3, no. 4, p. 226, Dec. 2012, doi: 10.4103/0975-9476.104450.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd1233eb" class="outline-2">
+<h2 id="orgd1233eb"><span class="section-number-2">2.</span> Orgs</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8fd3282" class="outline-3">
+<h3 id="org8fd3282"><span class="section-number-3">2.1.</span> <b>Organic India</b></h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org9d7ddad" class="outline-4">
+<h4 id="org9d7ddad"><span class="section-number-4">2.1.1.</span> Kids</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“The power of 3,” Organic India. <a href="https://organicindia.com/blogs/recent/the-power-of-3">https://organicindia.com/blogs/recent/the-power-of-3</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b1ae7b" class="outline-4">
+<h4 id="org2b1ae7b"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Towards a More Conscious Life Celebrating The Spirit of Gandhi Jayanti,” Organic India. <a href="https://organicindia.com/blogs/recent/towards-a-more-conscious-life-celebrating-the-spirit-of-gandhi-jayanti">https://organicindia.com/blogs/recent/towards-a-more-conscious-life-celebrating-the-spirit-of-gandhi-jayanti</a> (accessed Jun. 27, 2023).</li>
+
+<li>“ORGANIC INDIA 7-day Clean Kit: Taking the stress out of detoxification,” Organic India. <a href="https://organicindia.com/blogs/recent/organic-india-7-day-clean-kit-taking-the-stress-out-of-detoxification">https://organicindia.com/blogs/recent/organic-india-7-day-clean-kit-taking-the-stress-out-of-detoxification</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrating the festival of colours, the ‘organic way’ #OrganicWaliHoli,” Organic India. <a href="https://organicindia.com/blogs/recent/celebrating-the-festival-of-colours-the-organic-way-organicwaliholi">https://organicindia.com/blogs/recent/celebrating-the-festival-of-colours-the-organic-way-organicwaliholi</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Easy and Natural Ayurveda Herbal Tips for Women’s Wellbeing,” Organic India. <a href="https://organicindia.com/blogs/recent/easy-and-natural-ayurveda-herbal-tips-for-women-s-wellbeing">https://organicindia.com/blogs/recent/easy-and-natural-ayurveda-herbal-tips-for-women-s-wellbeing</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Beauty done right with KURE!,” Organic India. <a href="https://organicindia.com/blogs/recent/beauty-done-right-with-kure">https://organicindia.com/blogs/recent/beauty-done-right-with-kure</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrating World Health Day with healthy conscious living.,” Organic India. <a href="https://organicindia.com/blogs/recent/celebrating-world-health-day-with-healthy-conscious-living">https://organicindia.com/blogs/recent/celebrating-world-health-day-with-healthy-conscious-living</a> (accessed Jun. 27, 2023).</li>
+
+<li>“You reap what you sow.,” Organic India. <a href="https://organicindia.com/blogs/recent/you-reap-what-you-sow">https://organicindia.com/blogs/recent/you-reap-what-you-sow</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Let’s give 15 mins for Maa!,” Organic India. <a href="https://organicindia.com/blogs/recent/lets-give-15-mins-for-maa">https://organicindia.com/blogs/recent/lets-give-15-mins-for-maa</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrate Father’s Day with the Gift of Stress Relief: ORGANIC INDIA Tulsi Green Tea Honey Lemon,” Organic India. <a href="https://organicindia.com/blogs/recent/celebrate-fathers-day-with-the-gift-of-stress-relief-organic-india-tulsi-green-tea-honey-lemon">https://organicindia.com/blogs/recent/celebrate-fathers-day-with-the-gift-of-stress-relief-organic-india-tulsi-green-tea-honey-lemon</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrating Diwali with Conscious Gifting,” Organic India. <a href="https://organicindia.com/blogs/lifestyle/celebrating-diwali-with-conscious-gifting">https://organicindia.com/blogs/lifestyle/celebrating-diwali-with-conscious-gifting</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Embracing Our Shakti this Navaratri with Organic India,” Organic India. <a href="https://organicindia.com/blogs/lifestyle/embracing-our-shakti-this-navaratri">https://organicindia.com/blogs/lifestyle/embracing-our-shakti-this-navaratri</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrating Teachers: Our Inspiration,” Organic India. <a href="https://organicindia.com/blogs/lifestyle/celebrating-teachers-the-inspiration-for-us-all">https://organicindia.com/blogs/lifestyle/celebrating-teachers-the-inspiration-for-us-all</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Celebrating the Incomparable One: Tulsi vivah,” Organic India. <a href="https://organicindia.com/blogs/lifestyle/celebrating-the-incomparable-one-tulsi-vivah">https://organicindia.com/blogs/lifestyle/celebrating-the-incomparable-one-tulsi-vivah</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga3d69cd" class="outline-3">
+<h3 id="orga3d69cd"><span class="section-number-3">2.2.</span> Forest Essentials</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>M. Kulkarni, Essentially Mira: The Extraordinary Journey Behind Forest Essentials. HarperCollins, 2022.</li>
+<li>“Forest Essentials,” Wikipedia. Apr. 05, 2022. Accessed: Jul. 08, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Forest_Essentials&amp;oldid=1081078666">https://en.wikipedia.org/w/index.php?title=Forest_Essentials&amp;oldid=1081078666</a></li>
+<li>“Luxury Ayurveda Beauty Store - Authentic Ayurvedic Products Online,” Forest Essentials. <a href="https://www.forestessentialsindia.com/">https://www.forestessentialsindia.com/</a> (accessed Jul. 08, 2022).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge476483" class="outline-3">
+<h3 id="orge476483"><span class="section-number-3">2.3.</span> Himalaya</h3>
+</div>
+<div id="outline-container-org9ea732c" class="outline-3">
+<h3 id="org9ea732c"><span class="section-number-3">2.4.</span> Dabur</h3>
+</div>
+<div id="outline-container-org167dd37" class="outline-3">
+<h3 id="org167dd37"><span class="section-number-3">2.5.</span> Baidnath</h3>
+</div>
+<div id="outline-container-org2c8c592" class="outline-3">
+<h3 id="org2c8c592"><span class="section-number-3">2.6.</span> Patanjali</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-orgdb0eb72" class="outline-4">
+<h4 id="orgdb0eb72"><span class="section-number-4">2.6.1.</span> Misc</h4>
+</div>
+<div id="outline-container-org1a722c6" class="outline-4">
+<h4 id="org1a722c6"><span class="section-number-4">2.6.2.</span> Critical Studies</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<ul class="org-ul">
+<li>Livemint, “Ramdev under fire again? SC warns Patanjali to ‘stop misleading advertisements…’,” mint. Accessed: Nov. 22, 2023. [Online]. Available: <a href="https://www.livemint.com/news/india/ramdev-under-fire-again-supreme-court-warns-patanjali-to-stop-misleading-advertisements-claiming-false-cure-or-else-11700570940300.html">https://www.livemint.com/news/india/ramdev-under-fire-again-supreme-court-warns-patanjali-to-stop-misleading-advertisements-claiming-false-cure-or-else-11700570940300.html</a></li>
+<li>V. Mukunth, “Patanjali Anti-Allopathy Ad, a Window Into All That’s Wrong With Our Healthcare – The Wire Science.” Accessed: Jul. 12, 2022. [Online]. Available: <a href="https://science.thewire.in/health/patanjali-advertisement-evidence-based-medicine/">https://science.thewire.in/health/patanjali-advertisement-evidence-based-medicine/</a></li>
+<li>“Stop Misleading Advertisements or Face Rs 1 Crore Cost for False Cure Claims: SC to Patanjali,” The Wire. Accessed: Nov. 22, 2023. [Online]. Available: <a href="https://thewire.in/law/misleading-advertisements-fine-false-cure-claims-supreme-court-patanjali">https://thewire.in/law/misleading-advertisements-fine-false-cure-claims-supreme-court-patanjali</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Patanjali Group spawned dubious shell companies for lucrative real estate business.” Accessed: Nov. 22, 2023. [Online]. Available: <a href="https://www.reporters-collective.in/trc/baba-ramdevs-real-estate">https://www.reporters-collective.in/trc/baba-ramdevs-real-estate</a></li>
+<li>“As Haryana kept Aravallis unprotected, Patanjali quietly traded forestland.” Accessed: Nov. 23, 2023. [Online]. Available: <a href="https://www.reporters-collective.in/trc/as-haryana-kept-aravallis-unprotected-patanjali-quietly-traded-forestland">https://www.reporters-collective.in/trc/as-haryana-kept-aravallis-unprotected-patanjali-quietly-traded-forestland</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e6c3c6" class="outline-2">
+<h2 id="org9e6c3c6"><span class="section-number-2">3.</span> Critical Studies</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>K. Patwardhan, “Confessions of an Ayurveda Professor – The Wire Science.” <a href="https://science.thewire.in/the-sciences/confessions-professor-ayurveda-outdated/">https://science.thewire.in/the-sciences/confessions-professor-ayurveda-outdated/</a> (accessed Jul. 07, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e2b31f" class="outline-2">
+<h2 id="org7e2b31f"><span class="section-number-2">4.</span> ST</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbc8ead4" class="outline-3">
+<h3 id="orgbc8ead4"><span class="section-number-3">4.1.</span> Immunity</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Immunity 180 Cap,” Organic India. <a href="https://organicindia.com/products/immunity-180-cap">https://organicindia.com/products/immunity-180-cap</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Giloy 60 Capsule Bottle,” Organic India. <a href="https://organicindia.com/products/giloy-60-cap">https://organicindia.com/products/giloy-60-cap</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Kalmegh 60 Cap,” Organic India. <a href="https://organicindia.com/products/kalmegh-60-cap">https://organicindia.com/products/kalmegh-60-cap</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ec9f85" class="outline-3">
+<h3 id="org6ec9f85"><span class="section-number-3">4.2.</span> Mental Health</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>D. Frawley, <i>Ayurveda and the Mind: The Healing of Consciousness.</i> Motilal Banarsidass Publ., 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb702b9d" class="outline-3">
+<h3 id="orgb702b9d"><span class="section-number-3">4.3.</span> Classics</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“Charaka Samhita,” Wikipedia. May 23, 2022. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Charaka_Samhita&amp;oldid=1089418499">https://en.wikipedia.org/w/index.php?title=Charaka_Samhita&amp;oldid=1089418499</a></li>
+<li>P. P. Sharma, Caraka Samhita. Chaukhambha Orientalia, 2018.</li>
+<li>P. P. Sharma, Caraka Samhita. Chaukhambha Orientalia, 2018.</li>
+<li>P. P. Sharma, Caraka Samhita. Chaukhambha Orientalia, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>V. M.S, Legacy Of Charaka, The. Universities Press, 2003.</li>
+
+<li>M. S. Valiathan, Legacy Of Susruta, The. Universities Press, 2003.</li>
+
+<li>V. M.S, The Legacy of Vagbhata. Hyderabad: Universities Press, 2009.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1237b0d" class="outline-2">
+<h2 id="org1237b0d"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“M. S. Valiathan,” Wikipedia. Sep. 07, 2023. Accessed: Oct. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=M._S._Valiathan&amp;oldid=1174346535">https://en.wikipedia.org/w/index.php?title=M._S._Valiathan&amp;oldid=1174346535</a></li>
+
+<li>A. Judith, <i>Eastern Body, Western Mind.</i> Jaico Publishing House, 2017.</li>
+
+<li>D. Frawley and S. Ranade, <i>Ayurveda, Nature's Medicine.</i> Lotus Press, 2001.</li>
+
+<li>D. Frawley and V. Lad, <i>The Yoga of Herbs: An Ayurvedic Guide to Herbal Medicine.</i> Motilal Banarsidass Publ., 1994.</li>
+
+<li>V. L. M.A.Sc, <i>The Complete Book of Ayurvedic Home Remedies: Based on the Timeless Wisdom of India's 5,000-Year-Old Medical System.</i> Potter/Ten Speed/Harmony/Rodale, 2012.</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-26 Tue 13:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

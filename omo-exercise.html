@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-26 Tue 13:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Exercise</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Exercise</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org17ebe8e">1. General</a></li>
+<li><a href="#orgb3c043d">2. Resistance Training</a>
+<ul>
+<li><a href="#org262ccd8">2.1. General</a></li>
+<li><a href="#org2add7e7">2.2. Safety</a></li>
+<li><a href="#orgeb9ffad">2.3. Light</a></li>
+<li><a href="#orgcd1828d">2.4. Diet</a></li>
+<li><a href="#org4ee8461">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga338a4c">3. Stretching</a>
+<ul>
+<li><a href="#orgc16ae55">3.1. Dynamic Stretching</a>
+<ul>
+<li><a href="#org219a1c7">3.1.1. Pilates</a></li>
+</ul>
+</li>
+<li><a href="#org9c6b5f9">3.2. Seated Stretching</a></li>
+<li><a href="#org361364c">3.3. Yoga, Static Stretching</a>
+<ul>
+<li><a href="#orgff1eb51">3.3.1. General</a></li>
+<li><a href="#org1cddd91">3.3.2. WWW</a></li>
+<li><a href="#org87a50eb">3.3.3. Magazines</a></li>
+<li><a href="#orgdfe5a5d">3.3.4. HandBooks</a></li>
+<li><a href="#org5cb0826">3.3.5. Official GOI</a></li>
+<li><a href="#org38cf076">3.3.6. Events</a></li>
+<li><a href="#org4d54e92">3.3.7. STEMM</a></li>
+<li><a href="#org68673f5">3.3.8. Core</a></li>
+<li><a href="#org43723d0">3.3.9. Critical Studies</a></li>
+<li><a href="#org4bf6264">3.3.10. Special Topics</a></li>
+<li><a href="#org592050f">3.3.11. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2608e51">3.4. Miscellaneous</a></li>
+</ul>
+</li>
+<li><a href="#org3e2f570">4. Cardio</a>
+<ul>
+<li><a href="#orgf58dc53">4.1. Rope Jumping</a></li>
+<li><a href="#orge18cb2c">4.2. Running</a></li>
+<li><a href="#orgb334d92">4.3. Cycling</a></li>
+<li><a href="#orgc3f6a06">4.4. Swimming</a></li>
+</ul>
+</li>
+<li><a href="#orgf66513e">5. Walking</a></li>
+<li><a href="#org9413d3a">6. Massage</a></li>
+<li><a href="#orgc8e640c">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org17ebe8e" class="outline-2">
+<h2 id="org17ebe8e"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>E. L. Corre, <b>The Practice of Natural Movement: Reclaim Power, Health, and Freedom.</b> Victory Belt Publishing, 2019.</li>
+
+<li>D. Lieberman, <b>Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding.</b> Knopf Doubleday Publishing Group, 2021.</li>
+
+<li>D. Young, <i>How to Think About Exercise: The School Of Life.</i> Pan Macmillan UK, 2014.</li>
+
+<li>T. Buzan, <i>The Power of Physical Intelligence: 10 Ways to Tap Into Your Physical Genius.</i> Thorsons, 2003.</li>
+
+<li>A. K. A. McKay et al., “Defining Training and Performance Caliber: A Participant Classification Framework,” International Journal of Sports Physiology and Performance, vol. 17, no. 2, pp. 317–331, Dec. 2022, doi: 10.1123/ijspp.2021-0451.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3c043d" class="outline-2">
+<h2 id="orgb3c043d"><span class="section-number-2">2.</span> Resistance Training</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org262ccd8" class="outline-3">
+<h3 id="org262ccd8"><span class="section-number-3">2.1.</span> General</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>M. Rippetoe, <b>Starting Strength: Basic Barbell Training.</b> Aasgaard Company, 2012.</li>
+
+<li>M. Rippetoe and A. Baker (Powerlifter), <b>Practical Programming for Strength Training.</b> Aasgaard Company, 2013.</li>
+
+<li>F. Delavier, <b>Strength Training Anatomy.</b> Human Kinetics, 2010.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2add7e7" class="outline-3">
+<h3 id="org2add7e7"><span class="section-number-3">2.2.</span> Safety</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>K. Starrett and G. Cordoza, <b>Becoming a Supple Leopard 2nd Edition: The Ultimate Guide to Resolving Pain, Preventing Injury, and Optimizing Athletic Performance.</b> Victory Belt Publishing, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb9ffad" class="outline-3">
+<h3 id="orgeb9ffad"><span class="section-number-3">2.3.</span> Light</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>E. McNeely and D. Sandler, <b>The Resistance Band Workout Book.</b> Burford Books, 2006.
+<ul class="org-ul">
+<li>Cool light workouts: easier than weight training, more intense than plain stretching.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcd1828d" class="outline-3">
+<h3 id="orgcd1828d"><span class="section-number-3">2.4.</span> Diet</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>“A Simple Guide to Eating for New Trainees | Ray Gillenwater,” Starting Strength. <a href="https://startingstrength.com/training/a-simple-guide-to-eating-for-new-trainees">https://startingstrength.com/training/a-simple-guide-to-eating-for-new-trainees</a> (accessed Jul. 25, 2022).</li>
+
+<li>“Protein and Barbell Training | Robert Santana,” Starting Strength. <a href="https://startingstrength.com/article/protein-and-barbell-training">https://startingstrength.com/article/protein-and-barbell-training</a> (accessed Jul. 25, 2022).</li>
+
+<li>P. J. Atherton and K. Smith, “Muscle protein synthesis in response to nutrition and exercise,” J Physiol, vol. 590, no. Pt 5, pp. 1049–1057, Mar. 2012, doi: 10.1113/jphysiol.2011.225003.</li>
+
+<li>“Protein | Mark Rippetoe,” Starting Strength. <a href="https://startingstrength.com/article/protein">https://startingstrength.com/article/protein</a> (accessed Jul. 25, 2022).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4ee8461" class="outline-3">
+<h3 id="org4ee8461"><span class="section-number-3">2.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orga338a4c" class="outline-2">
+<h2 id="orga338a4c"><span class="section-number-2">3.</span> Stretching</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc16ae55" class="outline-3">
+<h3 id="orgc16ae55"><span class="section-number-3">3.1.</span> Dynamic Stretching</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org219a1c7" class="outline-4">
+<h4 id="org219a1c7"><span class="section-number-4">3.1.1.</span> Pilates</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>B. Siler, <b>The Pilates Body: The Ultimate At-home Guide to Strengthening, Lengthening, and Toning Your Body, Without Machines.</b> Michael Joseph, 2000.</li>
+<li>R. Isacowitz and K. S. Clippinger, <b>Pilates Anatomy.</b> Human Kinetics, 2019.</li>
+<li>B. Siler and E. of W. Health, <b>The Women’s Health Big Book of Pilates: The Essential Guide to Total-Body Fitness.</b> Rodale, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c6b5f9" class="outline-3">
+<h3 id="org9c6b5f9"><span class="section-number-3">3.2.</span> Seated Stretching</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>C. Torkelson, <i>Get Fit While You Sit: Easy Workouts from Your Chair.</i> Hunter House, 1999.</li>
+
+<li>G. Tomalin, <i>Stay Fit While You Sit.</i> Tangle Town Media Corporation, 2006.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org361364c" class="outline-3">
+<h3 id="org361364c"><span class="section-number-3">3.3.</span> Yoga, Static Stretching</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgff1eb51" class="outline-4">
+<h4 id="orgff1eb51"><span class="section-number-4">3.3.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“Yoga,” Wikipedia. Jun. 17, 2023. Accessed: Jun. 21, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Yoga&amp;oldid=1160589604">https://en.wikipedia.org/w/index.php?title=Yoga&amp;oldid=1160589604</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1cddd91" class="outline-4">
+<h4 id="org1cddd91"><span class="section-number-4">3.3.2.</span> WWW</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>“Yogapedia - Yoga, Meditation and Life.” <a href="https://www.yogapedia.com/">https://www.yogapedia.com/</a> (accessed Jun. 22, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org87a50eb" class="outline-4">
+<h4 id="org87a50eb"><span class="section-number-4">3.3.3.</span> Magazines</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>“Home,” Yoga Journal, Jun. 20, 2023. <a href="https://www.yogajournal.com/">https://www.yogajournal.com/</a> (accessed Jun. 21, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Yoga Journal,” Wikipedia. Jan. 28, 2023. Accessed: Jun. 21, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Yoga_Journal&amp;oldid=1136108565">https://en.wikipedia.org/w/index.php?title=Yoga_Journal&amp;oldid=1136108565</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdfe5a5d" class="outline-4">
+<h4 id="orgdfe5a5d"><span class="section-number-4">3.3.4.</span> HandBooks</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>S. Newcombe and K. O’Brien-Kop, <i>Routledge Handbook of Yoga and Meditation Studies.</i> Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5cb0826" class="outline-4">
+<h4 id="org5cb0826"><span class="section-number-4">3.3.5.</span> Official GOI</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<ul class="org-ul">
+<li>“Yoga.” <a href="https://yoga.ayush.gov.in/">https://yoga.ayush.gov.in/</a> (accessed Jun. 21, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“YOGA - YouTube.”, NCERT,  <a href="https://www.youtube.com/playlist?list=PLUgLcpnv1YieFNJTTn_mIcyPTKT4eHTvf">https://www.youtube.com/playlist?list=PLUgLcpnv1YieFNJTTn_mIcyPTKT4eHTvf</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org38cf076" class="outline-4">
+<h4 id="org38cf076"><span class="section-number-4">3.3.6.</span> Events</h4>
+<div class="outline-text-4" id="text-3-3-6">
+</div>
+<ol class="org-ol">
+<li><a id="org78bbd8a"></a>Yoga Day<br />
+<div class="outline-text-5" id="text-3-3-6-1">
+<ul class="org-ul">
+<li>“International Day of Yoga - Wikipedia.” <a href="https://en.wikipedia.org/wiki/International_Day_of_Yoga">https://en.wikipedia.org/wiki/International_Day_of_Yoga</a> (accessed Jun. 21, 2023).
+<ul class="org-ul">
+<li>U. Nations, “International Day of Yoga,” United Nations. <a href="https://www.un.org/en/observances/yoga-day">https://www.un.org/en/observances/yoga-day</a> (accessed Jun. 21, 2023).</li>
+<li>“अंतर्राष्ट्रीय योग दिवस” की आप सभी को बहुत-बहुत बधाई एवं शुभकामनाएं || Swami Ramdev. Accessed: Jun. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=1hKVsnXjaRg&amp;list=PLUpkve4ZZMbtm6fCUhGRfVeQoMl0LGnYZ">https://www.youtube.com/watch?v=1hKVsnXjaRg&amp;list=PLUpkve4ZZMbtm6fCUhGRfVeQoMl0LGnYZ</a></li>
+<li>Yog Aarambh Ho | International Yoga Day 2021 Song | Shankar Mahadevan, (Jun. 22, 2021). Accessed: Jun. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=K9lIRQexMQY">https://www.youtube.com/watch?v=K9lIRQexMQY</a></li>
+<li>Theme song for 7th International Day Of Yoga!, (Jun. 21, 2021). Accessed: Jun. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=5hR7hk8YJts">https://www.youtube.com/watch?v=5hR7hk8YJts</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4d54e92" class="outline-4">
+<h4 id="org4d54e92"><span class="section-number-4">3.3.7.</span> STEMM</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<ul class="org-ul">
+<li>A. Swanson, <b>Science of Yoga: Understand the Anatomy and Physiology to Perfect your Practice.</b> Dorling Kindersley Ltd, 2019.</li>
+
+<li>A. Matthews and L. Kaminoff, <b>Yoga Anatomy, Third edition.</b> Champaign: Human Kinetics, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Finding yoga-poses constellations in the night sky - Online Technical Discussion Groups—Wolfram Community.” <a href="https://community.wolfram.com/groups/-/m/t/1207400">https://community.wolfram.com/groups/-/m/t/1207400</a> (accessed Jun. 22, 2023).</li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>S. Maclean, “Yoga for Mathematicians,” Heidelberg Laureate Forum, Oct. 22, 2022. <a href="https://scilogs.spektrum.de/hlf/yoga-for-mathematicians/">https://scilogs.spektrum.de/hlf/yoga-for-mathematicians/</a> (accessed Oct. 23, 2022).</li>
+<li>S. Maclean, “Yoga for Mathematicians - Heidelberg Laureate Forum - SciLogs - Wissenschaftsblogs,” Heidelberg Laureate Forum, Oct. 22, 2022. <a href="https://scilogs.spektrum.de/hlf/yoga-for-mathematicians/">https://scilogs.spektrum.de/hlf/yoga-for-mathematicians/</a> (accessed Nov. 01, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sri M Course 4 at IIT Delhi: The Science of Yoga - YouTube.” <a href="https://www.youtube.com/playlist?list=PLFmQ3Upk_iK4x4cvPz34L8RFxhvdMyAEV">https://www.youtube.com/playlist?list=PLFmQ3Upk_iK4x4cvPz34L8RFxhvdMyAEV</a> (accessed May 26, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org68673f5" class="outline-4">
+<h4 id="org68673f5"><span class="section-number-4">3.3.8.</span> Core</h4>
+<div class="outline-text-4" id="text-3-3-8">
+</div>
+<ol class="org-ol">
+<li><a id="org56f9a98"></a>Variants<br />
+<ol class="org-ol">
+<li><a id="org9f9369b"></a>Traditional<br />
+<ul class="org-ul">
+<li><a id="orgc01a20e"></a>Hatha Yoga<br />
+<div class="outline-text-7" id="text-orgc01a20e">
+<ul class="org-ul">
+<li>D. Coulter, <b>Anatomy of Hatha Yoga: A Manual for Students, Teachers, and Practitioners.</b> Motilal Banarsidass Publ., 2004.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga5e6f6c"></a>Kundalini Yoga<br />
+<div class="outline-text-7" id="text-orga5e6f6c">
+<ul class="org-ul">
+<li>Music Today, Indian Meditation Music | Audio Jukebox | Easy Listening | Instrumental | Vanraj Bhatia, (Sep. 01, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=In39n8hcK4Y">https://www.youtube.com/watch?v=In39n8hcK4Y</a></li>
+
+<li>G. Krishna, Living with Kundalini: The Autobiography of Gopi Krishna. Shambhala Publications, 2017.</li>
+
+<li>S. S. Radha, Kundalini Yoga. Motilal Banarsidass Publishe, 1999.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgec1adc5"></a>Ashtanga Yoga<br />
+<div class="outline-text-7" id="text-orgec1adc5">
+<ul class="org-ul">
+<li>G. Maehle, Ashtanga Yoga - The Intermediate Series: Mythology, Anatomy, and Practice, 1st edition. New World Library, 2012.</li>
+
+<li>G. Maehle, Ashtanga Yoga: Practice &amp; Philosophy, Illustrated edition. New World Library, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5d68af8"></a>B K S Iyengar<br />
+<div class="outline-text-7" id="text-org5d68af8">
+<ul class="org-ul">
+<li>S. Mehta, M. Mehta, and S. Mehta, <b>Yoga: The Iyengar Way.</b> A. A. Knopf, 1990.</li>
+<li>B. K. S. Iyengar, <i>Light on Prāṇāyāma.</i> Aquarian/Thorsons, 1992.</li>
+<li>B. K. S. Iyengar, <i>The Illustrated Light on Yoga: Yoga Dipika.</i> Aquarian/Thorsons, 1993.</li>
+<li>B. K. S. Iyengar, <i>Light on Yoga: The Classic Guide to Yoga by the World's Foremost Authority.</i> HarperCollins India, 2006. 
+<ul class="org-ul">
+<li>BKSI's books have too much detail, and are quite (dangerously) outdated; best used only for reference.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orge0338a0"></a>Bihar School<br />
+<div class="outline-text-7" id="text-orge0338a0">
+<ul class="org-ul">
+<li>“Welcome to Bihar Yoga.” <a href="https://www.biharyoga.net/">https://www.biharyoga.net/</a> (accessed Nov. 10, 2021).</li>
+<li>“Bihar School of Yoga,” Wikipedia. Jun. 18, 2021. Accessed: Nov. 10, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bihar_School_of_Yoga&amp;oldid=1029227203">https://en.wikipedia.org/w/index.php?title=Bihar_School_of_Yoga&amp;oldid=1029227203</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Satyananda Saraswati,” Wikipedia. Jul. 04, 2021. Accessed: Nov. 10, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Satyananda_Saraswati&amp;oldid=1031906392">https://en.wikipedia.org/w/index.php?title=Satyananda_Saraswati&amp;oldid=1031906392</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sivananda Saraswati,” Wikipedia. Oct. 05, 2021. Accessed: Nov. 10, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sivananda_Saraswati&amp;oldid=1048338813">https://en.wikipedia.org/w/index.php?title=Sivananda_Saraswati&amp;oldid=1048338813</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. S. Saraswati, <b>Asana Pranayama Mudra Bandha</b>, Yoga Publications Trust, 2002: Asana Pranayama Mudra Bandha. Yoga Publications Trust, 2002.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. S. Saraswati, Asana, Pranayama, Mudra, Bandha: Compiled from Lectures Given During the Nine-month Teacher Training Course, 1967-68, and the Three Year Sannyas Course, 1970-73, at the Bihar School of Yoga. Bihar School of Yoga, 1973.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. S. Saraswati, A Systematic Course in the Ancient Tantric Techniques of Yoga and Kriya. Yoga Publications Trust, 2004.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5033d8b"></a>Ramdev<br />
+<div class="outline-text-7" id="text-org5033d8b">
+<ul class="org-ul">
+<li>“Yoga Poses &amp; Asanas - YouTube.” <a href="https://www.youtube.com/playlist?list=PLUpkve4ZZMbtESGxOfIjKk1VQZ1BvJZGj">https://www.youtube.com/playlist?list=PLUpkve4ZZMbtESGxOfIjKk1VQZ1BvJZGj</a> (accessed Jun. 21, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org8a358d0"></a>New Variants<br />
+<ul class="org-ul">
+<li><a id="org3177090"></a>Kokoro Yoga<br />
+<div class="outline-text-7" id="text-org3177090">
+<ul class="org-ul">
+<li>M. Divine and C. Divine, <b>Kokoro Yoga: Maximize Your Human Potential and Develop the Spirit of a Warrior&#x2013;the SEALfit Way.</b> St. Martin's Press, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc84234"></a>Women's Yoga<br />
+<div class="outline-text-7" id="text-orgfc84234">
+<ul class="org-ul">
+<li>T. Stiles, Slim Calm Sexy Yoga: 210 Proven Yoga Moves for Mind/Body Bliss, Illustrated edition. Emmaus, Pa: Rodale Books, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Yoga With Tara, (Apr. 03, 2020). Accessed: Jun. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=NkQ1QZebMNQ">https://www.youtube.com/watch?v=NkQ1QZebMNQ</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Muktananda, Nawa Yogini Tantra: Yoga for Women, 3rd Revised edition. Munger, Bihar: Bihar School of Yoga, 1996.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org61d1f7f"></a>Controversial Variants<br />
+<ul class="org-ul">
+<li><a id="org54dff89"></a>Nude Yoga<br />
+<div class="outline-text-7" id="text-org54dff89">
+<ul class="org-ul">
+<li>“True Naked Yoga - Online naked yoga videos. Instructional nude yoga classes,” True Naked Yoga. <a href="https://www.truenakedyoga.com">https://www.truenakedyoga.com</a> (accessed Dec. 20, 2022).</li>
+
+<li>P. Collings, “No Nudity Allowed: Censoring Naked Yoga,” Electronic Frontier Foundation, Dec. 19, 2022. <a href="https://www.eff.org/deeplinks/2022/12/no-nudity-allowed-censoring-naked-yoga">https://www.eff.org/deeplinks/2022/12/no-nudity-allowed-censoring-naked-yoga</a> (accessed Dec. 20, 2022).</li>
+
+<li>R. Schettler, “I Tried Nude Yoga&#x2026;And It Was Nothing Like What I Expected,” Yoga Journal, Oct. 07, 2022. <a href="https://www.yogajournal.com/practice/nude-yoga/">https://www.yogajournal.com/practice/nude-yoga/</a> (accessed Oct. 08, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org81553cb"></a>Practice<br />
+<div class="outline-text-5" id="text-3-3-8-2">
+<ul class="org-ul">
+<li>D. G. White, Yoga in Practice. Princeton University Press, 2012.</li>
+
+<li>T. K. V. Desikachar, <b>The Heart of Yoga: Developing a Personal Practice.</b> Simon and Schuster, 1999.</li>
+
+<li>C. Turlington, Living Yoga: Creating a Life Practice. Penguin, 2005.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Stephens, Yoga Adjustments: Philosophy, Principles, and Techniques, Illustrated edition. Berkeley, California: North Atlantic Books,U.S., 2014.</li>
+<li>M. Stephens, Yoga Therapy: Foundations, Methods, and Practices for Common Ailments. Berkeley, California: North Atlantic Books, 2017.</li>
+<li>M. Stephens, Yoga Sequencing: Designing Transformative Yoga Classes, 1st edition. Berkeley, Calif: North Atlantic Books,U.S., 2012.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org43723d0" class="outline-4">
+<h4 id="org43723d0"><span class="section-number-4">3.3.9.</span> Critical Studies</h4>
+<div class="outline-text-4" id="text-3-3-9">
+<ul class="org-ul">
+<li>B. Clegg, Science for Life: A manual for better living. Icon Books Ltd, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“As Modi Dreams of Becoming World’s Yoga Guru, Where Are India’s Yoga Dolls?,” The Wire. <a href="https://thewire.in/society/as-modi-dreams-of-becoming-worlds-yoga-guru-where-are-indias-yoga-dolls">https://thewire.in/society/as-modi-dreams-of-becoming-worlds-yoga-guru-where-are-indias-yoga-dolls</a> (accessed Mar. 14, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4bf6264" class="outline-4">
+<h4 id="org4bf6264"><span class="section-number-4">3.3.10.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-3-10">
+</div>
+<ol class="org-ol">
+<li><a id="org4749fdf"></a>Classics<br />
+<ol class="org-ol">
+<li><a id="org7806ea8"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="orgd42dc21"></a>Yoga Sutra<br />
+<ul class="org-ul">
+<li><a id="org77d317f"></a>English<br />
+<div class="outline-text-8" id="text-org77d317f">
+<ul class="org-ul">
+<li>P. P. Gokhale, The Yogasūtra of Patañjali: A New Introduction to the Buddhist Roots of the Yoga System, 1st edition. Routledge India, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. K. S. Iyengar, Core Of The Yoga Sutras, 2013th edition. Element, 2012.</li>
+<li>B. K. S. Iyengar, Light on the Yoga Sutras of Patanjali. New Delhi: Element, 2005.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. S. Miller, Yoga: Discipline of Freedom: The Yoga Sutra Attributed to Patanjali, Reprint edition. New York: Bantam Books Inc, 1998.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Chapple and Y. A. Viraj, Yoga Sutras of Patanjali: An Analysis of the Sanskrit with Accompanying English Translation, First Edition. Delhi, India: South Asia Books, 1990.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Hartranft, The Yoga-Sutra of Patanjali : A New Translation with Commentary. Shambhala, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. G. White, The Yoga Sutra of Patanjali: A Biography. Princeton University Press, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. F. Bryant, The Yoga Sutras of Patañjali: A New Edition, Translation, and Commentary. Farrar, Straus and Giroux, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. PhD Feuerstein, Yoga-Sutra Of Patañjali: A New Translation and Commentary, Original ed. edition. Rochester, Vt. : New York: Inner Traditions Bear and Company, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Sutton, The Yoga Sutras: A New Translation and Study Guide. Mandala Publishing, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Patanjali, Patanjanli’s Yoga Sutra. New Delhi, India: Penguin India, 2008.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orge51b8e4"></a>Hindi<br />
+<div class="outline-text-8" id="text-orge51b8e4">
+<ul class="org-ul">
+<li>M. Patanjali, Yog Darshan, Hindi Vyakhya Sahit, 2022nd Edition. Gita Press Gorakhpur, 2022.</li>
+<li>M. Patanjali, Patanjali Yog Pradip, 2022nd edition. Gita Press Gorakhpur, 2022.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4643c46"></a>Misc<br />
+<div class="outline-text-8" id="text-org4643c46">
+<ul class="org-ul">
+<li>A. Finger, Tantra of the Yoga Sutras. Shambhala, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org39ec015"></a>Karma Yoga<br />
+<div class="outline-text-5" id="text-3-3-10-2">
+<ul class="org-ul">
+<li>“Introduction to Karma Yoga: Art of Effective Leadership - YouTube.” <a href="https://www.youtube.com/playlist?list=PLFmQ3Upk_iK55JLEWyzFagPLbDAv_bpDY">https://www.youtube.com/playlist?list=PLFmQ3Upk_iK55JLEWyzFagPLbDAv_bpDY</a> (accessed May 26, 2023).</li>
+<li>S. Vivekananda, Karma Yoga: The Yoga of Action. Advaita Ashrama, 1928.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc65e342"></a>Sufism<br />
+<div class="outline-text-5" id="text-3-3-10-3">
+<ul class="org-ul">
+<li>C. W. Ernst, Refractions of Islam in India: Situating Sufism and Yoga. SAGE Publications India, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org30bf347"></a>Politics<br />
+<div class="outline-text-5" id="text-3-3-10-4">
+<ul class="org-ul">
+<li>D. Udupa and R. H. Naik, “The Hindu Nationalist Campaign to Promote Yoga,” Apr. 06, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://www.thenation.com/article/culture/yogathon-hindu-nationalism/">https://www.thenation.com/article/culture/yogathon-hindu-nationalism/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9211fe6"></a>Harvard<br />
+<div class="outline-text-5" id="text-3-3-10-5">
+<ul class="org-ul">
+<li>S. B. S. K. PhD, L. E. E. MD, and M. Stanten, An Introduction to Yoga: Improve your strength, balance, flexibility, and well-being. Harvard Health Publishing, 2016.</li>
+
+<li>M. Wei and J. E. Groves, The Harvard Medical School Guide to Yoga: 8 Weeks to Strength, Awareness, and Flexibility, Illustrated edition. Philadelphia, PA: Da Capo Lifelong Books, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3dc5dfa"></a>Psychology<br />
+<div class="outline-text-5" id="text-3-3-10-6">
+<ul class="org-ul">
+<li>“How to use yoga for emotional wellbeing | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-use-yoga-to-improve-your-emotional-wellbeing">https://psyche.co/guides/how-to-use-yoga-to-improve-your-emotional-wellbeing</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga5ae473"></a>Modern India<br />
+<div class="outline-text-5" id="text-3-3-10-7">
+<ul class="org-ul">
+<li>J. S. Alter, Yoga in Modern India: The Body between Science and Philosophy. Princeton University Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcb2a2e3"></a>Tibet<br />
+<div class="outline-text-5" id="text-3-3-10-8">
+<ul class="org-ul">
+<li>“In Your Dreams: One Mind &amp; Life Grantee Has Big Hopes for Exploring the Past and Future of Tibetan Dream Yoga,” Mind &amp; Life Institute. <a href="https://www.mindandlife.org/media/in-your-dreams-one-mind-life-grantee-has-big-hopes-for-exploring-the-past-and-future-of-tibetan-dream-yoga/">https://www.mindandlife.org/media/in-your-dreams-one-mind-life-grantee-has-big-hopes-for-exploring-the-past-and-future-of-tibetan-dream-yoga/</a> (accessed Jun. 22, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb6ec3a8"></a>Adani<br />
+<div class="outline-text-5" id="text-3-3-10-9">
+<ul class="org-ul">
+<li>“#IndiaRahegaFit - Experience Gujarat through the lens of yoga. | International Yoga Day, 2022 - An Adani Foundation Initiative - YouTube.” <a href="https://www.youtube.com/playlist?list=PLKGZaJjKGY-ytrk8GIbPFO1KmIu_-5qes">https://www.youtube.com/playlist?list=PLKGZaJjKGY-ytrk8GIbPFO1KmIu_-5qes</a> (accessed Jul. 03, 2023).</li>
+<li>Yog Ho — Official Anthem, #IndiaRahegaFit | Adani Foundation, (Jun. 17, 2022). Accessed: Jul. 02, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=KNnJDEp148I">https://www.youtube.com/watch?v=KNnJDEp148I</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga1b4034"></a>Film Stars<br />
+<div class="outline-text-5" id="text-3-3-10-10">
+<ul class="org-ul">
+<li>“International Yoga Day: Malaika, Kareena से Alia तक Bollywood Actress करती हैं Yoga |वनइंडिया हिंदी - YouTube.” <a href="https://www.youtube.com/watch?v=orZjGyl4A7Q">https://www.youtube.com/watch?v=orZjGyl4A7Q</a> (accessed Jul. 03, 2023).</li>
+<li>“हेमा मालिनी और अमृता फडणवीस ने किया योग | सोलापूर, महाराष्ट्र - YouTube.” <a href="https://www.youtube.com/watch?v=NnTGk5PKA1U">https://www.youtube.com/watch?v=NnTGk5PKA1U</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd8c18dd"></a>Dance<br />
+<div class="outline-text-5" id="text-3-3-10-11">
+<ul class="org-ul">
+<li>M. Sarabhai, “From the memoir: Mallika Sarabhai opens up about how dance and yoga gave her a new lease of life,” Scroll.in. <a href="https://scroll.in/article/1032348/from-the-memoir-mallika-sarabhai-opens-up-about-how-dance-and-yoga-gave-her-a-new-lease-of-life">https://scroll.in/article/1032348/from-the-memoir-mallika-sarabhai-opens-up-about-how-dance-and-yoga-gave-her-a-new-lease-of-life</a> (accessed Sep. 12, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org592050f" class="outline-4">
+<h4 id="org592050f"><span class="section-number-4">3.3.11.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-3-11">
+<ul class="org-ul">
+<li>D. Pattanaik and M. Rulli, Yoga Mythology: 64 Asanas and Their Stories, 1st edition. Noida, Uttar Pradesh, India: HarperCollins India, 2019.
+<ul class="org-ul">
+<li>D. Pattanaik and M. Rulli, Yog Puran : 64 Aasan aur Unki Kahaniyaan. HarperHindi, 2022.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bringing Harmony between Healthy Growing and Consuming,” Vikalp Sangam, Jun. 17, 2022. <a href="https://www.travellersuniversity.org/post/ahaara-yoga-bringing-harmony-between-healthy-growing-and-consuming">https://www.travellersuniversity.org/post/ahaara-yoga-bringing-harmony-between-healthy-growing-and-consuming</a> (accessed Jun. 27, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What is Hari Om? - Definition from Yogapedia,” Yogapedia.com. <a href="http://www.yogapedia.com/definition/7560/hari-om">http://www.yogapedia.com/definition/7560/hari-om</a> (accessed Oct. 04, 2022).</li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>T. R. F. Beatrice Tridimas, “In Britain, yoga teachers and nannies look to sex workers in their fight for rights,” Scroll.in, Apr. 08, 2023. <a href="https://scroll.in/article/1046953/in-britain-yoga-teachers-and-nannies-look-to-sex-workers-in-their-fight-for-rights">https://scroll.in/article/1046953/in-britain-yoga-teachers-and-nannies-look-to-sex-workers-in-their-fight-for-rights</a> (accessed Apr. 09, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>K. Rose, <b>Yoga, Meditation, and Mysticism: Contemplative Universals and Meditative Landmarks.</b> Bloomsbury Publishing, 2016.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2608e51" class="outline-3">
+<h3 id="org2608e51"><span class="section-number-3">3.4.</span> Miscellaneous</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>M. J. Alter, <i>Sport Stretch.</i> Human Kinetics, 1998.</li>
+
+<li>P. Egoscue and R. Gittines, <b>Pain Free: A Revolutionary Method for Stopping Chronic Pain.</b> Random House Publishing Group, 2014.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3e2f570" class="outline-2">
+<h2 id="org3e2f570"><span class="section-number-2">4.</span> Cardio</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgf58dc53" class="outline-3">
+<h3 id="orgf58dc53"><span class="section-number-3">4.1.</span> Rope Jumping</h3>
+</div>
+<div id="outline-container-orge18cb2c" class="outline-3">
+<h3 id="orge18cb2c"><span class="section-number-3">4.2.</span> Running</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>K. Starrett and T. J. Murphy, Ready to Run: Unlocking Your Potential to Run Naturally. Victory Belt Publishing, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb334d92" class="outline-3">
+<h3 id="orgb334d92"><span class="section-number-3">4.3.</span> Cycling</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>L. Armstrong, <i>It's Not About The Bike: My Journey Back to Life.</i> Random House, 2012.
+<ul class="org-ul">
+<li>Lies! But, still inspirational, at least until you know them to be so.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc3f6a06" class="outline-3">
+<h3 id="orgc3f6a06"><span class="section-number-3">4.4.</span> Swimming</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“Swimming (sport),” Wikipedia. Oct. 27, 2021. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Swimming_(sport)&amp;oldid=1052036145">https://en.wikipedia.org/w/index.php?title=Swimming_(sport)&amp;oldid=1052036145</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf66513e" class="outline-2">
+<h2 id="orgf66513e"><span class="section-number-2">5.</span> Walking</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>P. Zurn, “A Critical Phenomenology of Walking: Footpaths and Flightways,” Journal of Critical Phenomenology, vol. 4, no. 1, Art. no. 1, Dec. 2021, Accessed: Apr. 04, 2022. [Online]. Available: <a href="https://journals.oregondigital.org/index.php/pjcp/article/view/4878">https://journals.oregondigital.org/index.php/pjcp/article/view/4878</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9413d3a" class="outline-2">
+<h2 id="org9413d3a"><span class="section-number-2">6.</span> Massage</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>D. J. Linden, <b>Touch: The Science of the Sense that Makes Us Human.</b> Penguin UK, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. G. S. D. E. L. N. C. BCTMB, <i>Massage Therapy: Principles and Practice, 5th edition.</i> St. Louis, Missouri: Saunders, 2015.</li>
+
+<li>M. Hollis, <i>Massage for Therapists: A Guide to Soft Tissue Therapy, 3rd edition.</i> Chichester, U.K. ; Ames, Iowa: Wiley-Blackwell, 2009.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc8e640c" class="outline-2">
+<h2 id="orgc8e640c"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>C. L.-E. David R Clark, “Fitness watch: You don’t necessarily need to feel sore in the hours or days after exercise,” Scroll.in. <a href="https://scroll.in/field/1020883/fitness-watch-you-dont-necessarily-need-to-feel-sore-in-the-hours-or-days-after-exercise">https://scroll.in/field/1020883/fitness-watch-you-dont-necessarily-need-to-feel-sore-in-the-hours-or-days-after-exercise</a> (accessed Apr. 03, 2022).</li>
+
+<li>K. Starrett, J. Starrett, and G. Cordoza, Deskbound: Standing Up to a Sitting World. Simon and Schuster, 2016.</li>
+
+<li>Brett, “Podcast #213: Undoing the Damage of Chronic Sitting,” The Art of Manliness, Jun. 28, 2016. <a href="https://www.artofmanliness.com/health-fitness/health/podcast-213-undoing-the-damage-of-chronic-sitting/">https://www.artofmanliness.com/health-fitness/health/podcast-213-undoing-the-damage-of-chronic-sitting/</a> (accessed Aug. 07, 2022).</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-26 Tue 13:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

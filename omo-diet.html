@@ -1,0 +1,2224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-26 Tue 13:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diet</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Diet</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org60e0781">1. Diet: The Least Everyone Needs To Know</a></li>
+<li><a href="#org853187e">2. Philosophy</a>
+<ul>
+<li><a href="#org0f5560e">2.1. Ethics</a></li>
+</ul>
+</li>
+<li><a href="#org14ccd05">3. STEMM</a>
+<ul>
+<li><a href="#org993f5d8">3.1. Systems Sciences</a>
+<ul>
+<li><a href="#orgabc2931">3.1.1. Complexity Science</a></li>
+<li><a href="#org0664154">3.1.2. Network Science</a></li>
+</ul>
+</li>
+<li><a href="#org669e29b">3.2. Bio</a>
+<ul>
+<li><a href="#org9f98de1">3.2.1. Environment</a></li>
+<li><a href="#orgb13f283">3.2.2. Genetics</a></li>
+<li><a href="#org795ab03">3.2.3. Evolution</a></li>
+</ul>
+</li>
+<li><a href="#orgb221d65">3.3. CSE</a></li>
+</ul>
+</li>
+<li><a href="#org37131d6">4. World</a>
+<ul>
+<li><a href="#org859a115">4.1. SS</a>
+<ul>
+<li><a href="#org4267c4f">4.1.1. Culture</a></li>
+<li><a href="#orgd530cd7">4.1.2. Politics</a></li>
+</ul>
+</li>
+<li><a href="#org93a4e2e">4.2. HS</a>
+<ul>
+<li><a href="#org024bba0">4.2.1. Psychology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org842fee0">5. Core</a>
+<ul>
+<li><a href="#org4642c1e">5.1. Practice</a>
+<ul>
+<li><a href="#org416035d">5.1.1. Cooking</a></li>
+</ul>
+</li>
+<li><a href="#orgd71d5e3">5.2. Food Classes</a>
+<ul>
+<li><a href="#orga084aa8">5.2.1. Drugs Plus</a></li>
+<li><a href="#org086b991">5.2.2. Ready To Eat</a></li>
+<li><a href="#org15eafc0">5.2.3. Herbs, Spices</a></li>
+<li><a href="#orgd7c93dc">5.2.4. Fermented Food</a></li>
+<li><a href="#orge37e41d">5.2.5. Vinegar</a></li>
+<li><a href="#org7908101">5.2.6. Animal Foods</a></li>
+<li><a href="#orgcf67cc6">5.2.7. Cereals</a></li>
+<li><a href="#orgebdae27">5.2.8. Staples</a></li>
+<li><a href="#org6b13b16">5.2.9. Lentils</a></li>
+<li><a href="#org15bccbf">5.2.10. Soya Bean</a></li>
+<li><a href="#org4ae0dcb">5.2.11. Vegggies</a></li>
+<li><a href="#org4eae981">5.2.12. Fats</a></li>
+<li><a href="#org583384c">5.2.13. Beverages</a></li>
+<li><a href="#org301ca16">5.2.14. Sweets</a></li>
+<li><a href="#orga4e58fa">5.2.15. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9294302">6. Arts</a>
+<ul>
+<li><a href="#org243245e">6.1. Music</a>
+<ul>
+<li><a href="#orgbf6814e">6.1.1. General</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org95aaaad">7. Special Topics</a>
+<ul>
+<li><a href="#orgabb59c0">7.1. Our Preferences</a>
+<ul>
+<li><a href="#orgf6e02ef">7.1.1. <b>Our</b> General Preferences</a></li>
+<li><a href="#orgf489be0">7.1.2. Stores, Brands, Products (with aforementioned preferences, or trying to get there or beyond):</a></li>
+<li><a href="#orge988026">7.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgaa69c0f">7.2. Flavor</a></li>
+<li><a href="#org9ef6460">7.3. Fasting</a></li>
+<li><a href="#org2011dce">7.4. Food Safety</a>
+<ul>
+<li><a href="#org1a83813">7.4.1. Misc</a></li>
+<li><a href="#org4782e8f">7.4.2. Food Posioning</a></li>
+</ul>
+</li>
+<li><a href="#orgfb46a3c">7.5. Industrial Food</a>
+<ul>
+<li><a href="#org39ef6ae">7.5.1. Processed Food</a></li>
+<li><a href="#orga2af2ff">7.5.2. Synthetic Food</a></li>
+<li><a href="#orga19e0e7">7.5.3. Packaging</a></li>
+</ul>
+</li>
+<li><a href="#orgba404fb">7.6. Special Diets</a>
+<ul>
+<li><a href="#orgd209930">7.6.1. Fat Loss Diet</a></li>
+<li><a href="#org88df17b">7.6.2. Sports Diet</a></li>
+<li><a href="#orgedaa902">7.6.3. Strength Training Diet</a></li>
+<li><a href="#orgc06d18b">7.6.4. Vegan Diet</a></li>
+</ul>
+</li>
+<li><a href="#orga96a573">7.7. Food Crisis</a>
+<ul>
+<li><a href="#orge78a3ae">7.7.1. General</a></li>
+<li><a href="#org62b76cf">7.7.2. Famine</a></li>
+</ul>
+</li>
+<li><a href="#org460e963">7.8. Sludge</a></li>
+</ul>
+</li>
+<li><a href="#org191ce79">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org60e0781" class="outline-2">
+<h2 id="org60e0781"><span class="section-number-2">1.</span> Diet: The Least Everyone Needs To Know</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>V. Hari, <b>Feeding You Lies: How to Unravel the Food Industry's Playbook and Reclaim Your Health.</b> Hay House, Inc, 2019.</li>
+<li>V. Hari, <b>The Food Babe Way: Break Free from the Hidden Toxins in Your Food and Lose Weight, Look Years Younger, and Get Healthy in Just 21 Days!</b> Hachette UK, 2015.</li>
+<li>V. Hari, <b>Food Babe Kitchen: More than 100 Delicious, Real Food Recipes to Change Your Body and Your Life: THE NEW YORK TIMES BESTSELLER.</b> Hay House, Inc, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Pollan, <b>Food Rules: An Eater's Manual.</b> Penguin UK, 2010.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org853187e" class="outline-2">
+<h2 id="org853187e"><span class="section-number-2">2.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0f5560e" class="outline-3">
+<h3 id="org0f5560e"><span class="section-number-3">2.1.</span> Ethics</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>A. Barnhill and T. Doggett, <i>Food, Ethics, and Society: An Introductory Text with Readings.</i> Oxford University Press, 2016.</li>
+<li>“Food Ethics Council | Fair and resilient food systems.” <a href="https://www.foodethicscouncil.org/">https://www.foodethicscouncil.org/</a> (accessed Feb. 04, 2022).</li>
+<li>T. says, “Weak regulations harm nature,” Food Ethics Council, Mar. 17, 2021. <a href="https://www.foodethicscouncil.org/weak-regulations-harm-nature/">https://www.foodethicscouncil.org/weak-regulations-harm-nature/</a> (accessed Feb. 04, 2022).</li>
+<li>“How big business gets control over our food,” Friends of the Earth Europe. <a href="https://friendsoftheearth.eu/press-release/how-big-business-gets-control-over-our-food/">https://friendsoftheearth.eu/press-release/how-big-business-gets-control-over-our-food/</a> (accessed Jan. 11, 2022).</li>
+<li>M. Mialon, P. Serodio, E. Crosbie, N. Teicholz, A. Naik, and A. Carriedo, <b>“Conflicts of interest for members of the U.S. 2020 Dietary Guidelines Advisory Committee,”</b> Public Health Nutrition, pp. 1–28, Mar. 2022, doi: 10.1017/S1368980022000672.</li>
+<li>“Big Food Archives,” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender_category/big-food/">https://childrenshealthdefense.org/defender_category/big-food/</a> (accessed Jul. 24, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org14ccd05" class="outline-2">
+<h2 id="org14ccd05"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org993f5d8" class="outline-3">
+<h3 id="org993f5d8"><span class="section-number-3">3.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgabc2931" class="outline-4">
+<h4 id="orgabc2931"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li><b>How Much Sodium Should We Eat?</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/how-much-sodium-should-we-eat">https://necsi.edu/how-much-sodium-should-we-eat</a>. [Accessed: 21-Feb-2020].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0664154" class="outline-4">
+<h4 id="org0664154"><span class="section-number-4">3.1.2.</span> Network Science</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>A. L. Barabási, G. Menichetti, And J. Loscalzo, <b>“The Unmapped Chemical Complexity Of Our Diet,”</b> Nature Food, Vol. 1, No. 1, Art. No. 1, Jan. 2020, doi: 10.1038/s43016-019-0005-1.</li>
+<li>G. Menichetti and A.-L. Barabási, <b>“Nutrient concentrations in food display universal behaviour,”</b> Nat Food, vol. 3, no. 5, Art. no. 5, May 2022, doi: 10.1038/s43016-022-00511-0.</li>
+<li>Ahn, Yong-Yeol, Sebastian E. Ahnert, James P. Bagrow, and Albert-László Barabási. <b>“Flavor Network and the Principles of Food Pairing.”</b> Scientific Reports 1, no. 1 (December 15, 2011): 196. <a href="https://doi.org/10.1038/srep00196">https://doi.org/10.1038/srep00196</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org669e29b" class="outline-3">
+<h3 id="org669e29b"><span class="section-number-3">3.2.</span> Bio</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org9f98de1" class="outline-4">
+<h4 id="org9f98de1"><span class="section-number-4">3.2.1.</span> Environment</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>“Routledge Handbook of Sustainable Diets,” Routledge &amp; CRC Press. <a href="https://www.routledge.com/Routledge-Handbook-of-Sustainable-Diets/Kevany-Prosperi/p/book/9781032004860">https://www.routledge.com/Routledge-Handbook-of-Sustainable-Diets/Kevany-Prosperi/p/book/9781032004860</a> (accessed May 29, 2023).</li>
+
+<li>F. M. Lappé, <i>Diet for a Small Planet: The Book That Started a Revolution in the Way Americans Eat.</i> Random House Publishing Group, 2010.</li>
+
+<li>“Food in the Anthropocene: the EAT–Lancet Commission on healthy diets from sustainable food systems - The Lancet.” <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31788-4/fulltext">https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(18)31788-4/fulltext</a> (accessed Feb. 13, 2023).</li>
+
+<li>W. Willett et al., “Food in the Anthropocene: the EAT–Lancet Commission on healthy diets from sustainable food systems,” The Lancet, vol. 393, no. 10170, pp. 447–492, Feb. 2019, doi: 10.1016/S0140-6736(18)31788-4.</li>
+
+<li>“The EAT-Lancet Commission on Food, Planet, Health - EAT Knowledge,” EAT. <a href="https://eatforum.org/eat-lancet-commission/">https://eatforum.org/eat-lancet-commission/</a> (accessed Feb. 13, 2023).</li>
+
+<li>“The Planetary Health Diet,” EAT. <a href="https://eatforum.org/eat-lancet-commission/the-planetary-health-diet-and-you/">https://eatforum.org/eat-lancet-commission/the-planetary-health-diet-and-you/</a> (accessed Feb. 13, 2023).</li>
+<li>D. V. Shiva and D. G. G. Gangadharan, <b>The Two Futures of Food, Health and Humanity: A Civilisational Dialogue.</b> Centre for Innovation in Science and Social Action, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb13f283" class="outline-4">
+<h4 id="orgb13f283"><span class="section-number-4">3.2.2.</span> Genetics</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>C. S. M.D, <b>Deep Nutrition: Why Your Genes Need Traditional Food.</b> Flatiron Books, 2017.</li>
+<li>C. R. Mphil, J. F. PhD, and M. A. PhD, <b>GMO Myths &amp; Truths: A Citizen’s Guide to the Evidence on the Safety and Efficacy of Genetically Modified Crops and Foods</b>, 4th Edition, 4th edition. Earth Open Source, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org795ab03" class="outline-4">
+<h4 id="org795ab03"><span class="section-number-4">3.2.3.</span> Evolution</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>A. D. Vany, <b>The New Evolution Diet: What Our Paleolithic Ancestors Can Teach Us about Weight Loss, Fitness, and Aging.</b> Rodale, 2010.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb221d65" class="outline-3">
+<h3 id="orgb221d65"><span class="section-number-3">3.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“What share of people are vegetarian, vegan, or flexitarian?,” Our World in Data. <a href="https://ourworldindata.org/vegetarian-vegan">https://ourworldindata.org/vegetarian-vegan</a> (accessed May 14, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org37131d6" class="outline-2">
+<h2 id="org37131d6"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org859a115" class="outline-3">
+<h3 id="org859a115"><span class="section-number-3">4.1.</span> SS</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org4267c4f" class="outline-4">
+<h4 id="org4267c4f"><span class="section-number-4">4.1.1.</span> Culture</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>W. Hoving, <b>Tiffany's Table Manners for Teenagers.</b> Random House Children's Books, 2011.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd530cd7" class="outline-4">
+<h4 id="orgd530cd7"><span class="section-number-4">4.1.2.</span> Politics</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Genetically Modified Democracy | Yale University Press.” <a href="https://yalebooks.yale.edu/book/9780300245905/genetically-modified-democracy">https://yalebooks.yale.edu/book/9780300245905/genetically-modified-democracy</a> (accessed Jan. 22, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org93a4e2e" class="outline-3">
+<h3 id="org93a4e2e"><span class="section-number-3">4.2.</span> HS</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org024bba0" class="outline-4">
+<h4 id="org024bba0"><span class="section-number-4">4.2.1.</span> Psychology</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li><i>“How to stop emotional eating | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/psychoanalysis-can-help-address-the-cause-of-emotional-eating">https://psyche.co/guides/psychoanalysis-can-help-address-the-cause-of-emotional-eating</a> (accessed Dec. 02, 2020).</li>
+<li>B. Wansink, <i>Mindless Eating: Why We Eat More Than We Think.</i> Bantam Books, 2010.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org842fee0" class="outline-2">
+<h2 id="org842fee0"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4642c1e" class="outline-3">
+<h3 id="org4642c1e"><span class="section-number-3">5.1.</span> Practice</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org416035d" class="outline-4">
+<h4 id="org416035d"><span class="section-number-4">5.1.1.</span> Cooking</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd4c0897"></a>General<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<ul class="org-ul">
+<li>I. S. Rombauer, M. R. Becker, E. Becker, J. Becker, and M. Scott, <b>Joy of Cooking: 2019 Edition Fully Revised and Updated.</b> Simon and Schuster, 2019.</li>
+
+<li>S. Nosrat, <b>Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking.</b> Canongate Books, 2017.</li>
+
+<li>V. Hari, <b>Food Babe Kitchen: More than 100 Delicious, Real Food Recipes to Change Your Body and Your Life: THE NEW YORK TIMES BESTSELLER.</b> Hay House, Inc, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6e003ea"></a>STEMM<br />
+<div class="outline-text-5" id="text-5-1-1-2">
+<ul class="org-ul">
+<li><i>“Science &amp; Cooking: From Haute Cuisine to Soft Matter Science (chemistry),”</i> Harvard Online Courses, Aug. 04, 2015. <a href="https://online-learning.harvard.edu/course/science-and-cooking">https://online-learning.harvard.edu/course/science-and-cooking</a> (accessed Apr. 23, 2021).</li>
+
+<li>D. R. author Aut, <i>“Q&amp;A: Pia Sörensen and David Weitz on physics in the kitchen,”</i> Apr. 2021, doi: 10.1063/PT.6.4.20210414a.</li>
+
+<li>R. Bansil, <i>“A taste of soft-matter physics,”</i> Physics Today, vol. 74, no. 4, pp. 53–54, Apr. 2021, doi: 10.1063/PT.3.4726.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd88de85"></a>Cookware<br />
+<div class="outline-text-5" id="text-5-1-1-3">
+<ul class="org-ul">
+<li><b>“Tips on safe cookware,”</b> EWG. <a href="https://www.ewg.org/research/canaries-kitchen/tips-safe-cookware">https://www.ewg.org/research/canaries-kitchen/tips-safe-cookware</a> (accessed Aug. 14, 2020).</li>
+
+<li>“Why you should throw away your Teflon pan the second it cracks,” Popular Science, Nov. 14, 2022. <a href="https://www.popsci.com/environment/non-stick-pan-plastic-pollution/">https://www.popsci.com/environment/non-stick-pan-plastic-pollution/</a> (accessed Nov. 16, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc6fd183"></a>Cooking Appliances<br />
+<div class="outline-text-5" id="text-5-1-1-4">
+<ul class="org-ul">
+<li><b>“Kicking the Gas Habit: How Gas is Harming our Health,”</b> Climate Council. <a href="https://www.climatecouncil.org.au/resources/gas-habit-how-gas-harming-health/">https://www.climatecouncil.org.au/resources/gas-habit-how-gas-harming-health/</a> (accessed May 07, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd571806"></a>Disposable Utensils<br />
+<div class="outline-text-5" id="text-5-1-1-5">
+<ul class="org-ul">
+<li><i>“Ecoware - Eco Friendly Tableware and Compostable Packaging,”</i> Ecoware. <a href="https://ecoware.in/">https://ecoware.in/</a> (accessed Aug. 14, 2020).
+<ul class="org-ul">
+<li>FabCafe uses it.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org59a5530"></a>India<br />
+<ol class="org-ol">
+<li><a id="org5e3a312"></a>General<br />
+<div class="outline-text-6" id="text-5-1-1-6-1">
+<ul class="org-ul">
+<li>P. Pant, <b>India: The Cookbook.</b> London ; New York: Phaidon Press, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9500930"></a>History<br />
+<div class="outline-text-6" id="text-5-1-1-6-2">
+<ul class="org-ul">
+<li>C. T. Sen, <i>Feast and Fasts: A History of Food in India, Latest edition.</i> Speaking Tiger, 2016.</li>
+<li>K. T. Achaya, <i>A Historical Dictionary of Indian Food.</i> Oxford University Press, 2002.</li>
+<li>A. K. T, <i>Indian Food: A Historical Companion, Edition.</i> Delhi: Oxford, 1998.</li>
+<li>S. Ved, <i>Whose Samosa is it anyway?: The Story of where “Indian” food really came from.</i> Penguin Random House India Private Limited, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8a6997f"></a>STEM<br />
+<div class="outline-text-6" id="text-5-1-1-6-3">
+<ul class="org-ul">
+<li>K. Ashok, <b>Masala Lab: The Science of Indian Cooking: The Science of Indian Cooking - the bestseller on food, the definitive book for every Indian kitchen, illustrated.</b> Gurgaon: Penguin, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1eb3171"></a>Spiritual<br />
+<div class="outline-text-6" id="text-5-1-1-6-4">
+<ul class="org-ul">
+<li>D. Singh and V. Gupta, <i>Bhagwaan Ke Pakwaan: Winner of two Gourmand Cookbook Awards India for “Peace” &amp; 'First Cookbook’.</i> Gurgaon: Penguin, 2019.</li>
+<li>R. Das, <b>Yogiplate: The Fundamentals of Sattvic Food.</b> Penguin Random House India Private Limited, 2021.</li>
+<li>A. Dasa, <b>Hare Krishna Book of Vegetarian Cooking.</b> Mumbai: Bhaktivedanta Book Trust, 2014.</li>
+<li>E. David, Bene Appetit: The Cuisine of Indian Jews. Harper Collins, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6a0dca0"></a>Regional<br />
+<div class="outline-text-6" id="text-5-1-1-6-5">
+<ul class="org-ul">
+<li>A. Dewan, <i>Tiffin: 500 Authentic Recipes Celebrating India’s Regional Cuisine.</i> Running Press Book Publishers, 2018.</li>
+
+<li>E. E. Kelly, <i>Tibetan Cooking: Recipes for Daily Living, Celebration, and Ceremony.</i> Snow Lion Publications, 2007.</li>
+<li>H. Hauzel, <i>Essential North-East Cookbook.</i> Penguin UK, 2014.</li>
+
+<li>J. Kalra and P. Pant, <i>Classic Cooking Of Punjab.</i> Allied Publishers, 2004.</li>
+
+<li>S. Husain, <i>The Emperor’s Table: The Art of Mughal Cuisine.</i> Lustre Press, 2008.</li>
+
+<li>S. Razdan, <i>Kashmiri Cuisine: Through the Ages.</i> Roli Books Private, Limited, 2020.</li>
+
+<li>C. Sur and S. Kohli, <i>The Lucknow Cookbook.</i> Aleph, 2017.</li>
+
+<li>B. I. Latif, <i>The Essential Andhra Cookbook with Hyderabadi Specialities.</i> Penguin Books India, 1999.</li>
+
+<li>M. Dasgupta, <i>Calcutta Cookbook: A Treasury of Recipes From Pavement to Place.</i> Penguin UK, 2000.</li>
+
+<li>M. T. Nenezes, <i>Essential Goa Cookbook.</i> Penguin UK, 2000.</li>
+
+<li>V. Kannampilly, <i>Essential Kerala Cook Book.</i> Penguin UK, 2003.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org391c6a6"></a>Misc<br />
+<div class="outline-text-6" id="text-5-1-1-6-6">
+<ul class="org-ul">
+<li>G. Goela, Baniya Legacy Of Old Delhi. Gunjan Goela, 2022.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org2e66785"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-1-7">
+<ul class="org-ul">
+<li>J. Potter, Cooking for Geeks: Real Science, Great Hacks, and Good Food. O’Reilly Media, Inc., 2010.</li>
+
+<li><i>“68 warming vegetarian recipes for cooler nights,”</i> delicious.com.au. <a href="https://www.delicious.com.au/recipes/collections/gallery/68-warming-vegetarian-recipes-for-cooler-nights/8y4aw3xv">https://www.delicious.com.au/recipes/collections/gallery/68-warming-vegetarian-recipes-for-cooler-nights/8y4aw3xv</a> (accessed Dec. 16, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd71d5e3" class="outline-3">
+<h3 id="orgd71d5e3"><span class="section-number-3">5.2.</span> Food Classes</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orga084aa8" class="outline-4">
+<h4 id="orga084aa8"><span class="section-number-4">5.2.1.</span> Drugs Plus</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3664c5a"></a>Drugs<br />
+<ol class="org-ol">
+<li><a id="org9fb1891"></a>Illicit Drugs<br />
+<div class="outline-text-6" id="text-5-2-1-1-1">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Opioids, cocaine, cannabis and illicit drugs,” Our World in Data, Mar. 2018, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/illicit-drug-use">https://ourworldindata.org/illicit-drug-use</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Illicit drug markets expanding, compounding global crises: UN.” <a href="https://www.downtoearth.org.in/news/health/illicit-drug-markets-expanding-compounding-global-crises-un-90243">https://www.downtoearth.org.in/news/health/illicit-drug-markets-expanding-compounding-global-crises-un-90243</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Eric Clapton, <i>Cocaine</i>, (Oct. 30, 2018). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=8QYdIswhbY4">https://www.youtube.com/watch?v=8QYdIswhbY4</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8f04591"></a>Misc<br />
+<div class="outline-text-6" id="text-5-2-1-1-2">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Drug Use,” Our World in Data, Dec. 2019, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/drug-use">https://ourworldindata.org/drug-use</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgda36363"></a>Intoxicants<br />
+<ol class="org-ol">
+<li><a id="org1ac43ec"></a>Alcohol<br />
+<ul class="org-ul">
+<li><a id="orga285e9d"></a>General<br /></li>
+<li><a id="orga76f5da"></a>CSE<br />
+<div class="outline-text-7" id="text-orga76f5da">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Alcohol Consumption,” Our World in Data, Apr. 2018, Accessed: Nov. 04, 2021. [Online]. Available: <a href="https://ourworldindata.org/alcohol-consumption">https://ourworldindata.org/alcohol-consumption</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7a44e84"></a>Types<br />
+<ul class="org-ul">
+<li><a id="org89cfcaf"></a>Organic<br />
+<ul class="org-ul">
+<li><a id="orgf09b2be"></a>General<br />
+<div class="outline-text-9" id="text-orgf09b2be">
+<ul class="org-ul">
+<li>S. Farrell, <b>A Good Drink: In Pursuit of Sustainable Spirits.</b> Island Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org708f3ae"></a>Organic Wine<br />
+<div class="outline-text-9" id="text-org708f3ae">
+<ul class="org-ul">
+<li>“Why you should be drinking organic wine and where to find it,” the Guardian, Feb. 07, 2015. <a href="http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it">http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it</a> (accessed Aug. 14, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Shapley and A. Garrity, <b>“12 Best Organic Wines for Every Occassion,”</b> Good Housekeeping, Oct. 10, 2017. <a href="https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines">https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines</a> (accessed Mar. 14, 2022).
+<ul class="org-ul">
+<li>Badger Mountain Riesling</li>
+<li>Nativa Terra Reserva Carmenère</li>
+<li>Paul Dolan Vineyards Chardonnay</li>
+<li>Parducci Sustainable Red Wine</li>
+<li>The Vegan Vine Red Wine</li>
+<li>Lapostolle Casa Merlot</li>
+<li>Bonterra Vineyards Cabernet Sauvignon</li>
+<li>Tikal Natural Organic Red Blend</li>
+<li>CalNaturale Cabernet Sauvignon</li>
+<li>CalNaturale Chardonnay</li>
+<li>Domaine Carneros Pinot Noir</li>
+<li>Hall Wines Cabernet Sauvignon</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgff04c30"></a>Organic Beer<br />
+<div class="outline-text-9" id="text-orgff04c30">
+<ul class="org-ul">
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).
+<ul class="org-ul">
+<li>The beers on this list below are clean of additives (including
+processing aids like carrageenan and isinglass) and transparent
+about their ingredients. They either list the complete ingredients
+on their website, on the bottle label, or emailed us the ingredient
+list.  We have not been compensated in any way for these
+recommendations and we are in no way affiliated with these
+brands. We know there are many more brands out there, if your
+favorite beer is not on this list, contact them to find out the
+truth. We will be constantly updating this list as we get more
+information.
+<ul class="org-ul">
+<li>Wolaver’s 100% Organic, IPA: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Brown Ale: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Oatmeal Stout: Water, Malts, Hops, Yeast</li>
+<li>Samuel Smith, Organic Pale Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Samuel Smith, Nut Brown Ale:  Water, Barley Malt, Yeast, Cane Sugar, Hops, Roasted Barley</li>
+<li>Samuel Smith Taddy Porter:  Water, Malted Barley, Yeast, Hops, Roasted Malt, Cane Sugar</li>
+<li>Samuel Smith Oatmeal Stout:  Water, Malted Barley, Cane Sugar, Roasted Malt, Yeast, Hops, Oatmeal</li>
+<li>Samuel Smith India Ale:  Water, Malted Barley, Yeast, Hops</li>
+<li>Samuel Smith Imperial Stout:  Water, Malted Barley, Roasted Malt, Cane Sugar, Yeast, Hops.</li>
+<li>Pinkus, Organic Ur Pils:  Water, Barley Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Hefe-Weizen:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Münster Alt:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic Summer Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Winter Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Fresh Cut:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Hop Blanc:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Weiss Principal: Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Nut Brown Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Amber Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pilsner:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Porter:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic India Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Steam Whistle: Water, Malted Barley, Hops Yeast</li>
+<li>Heineken:  Water, Barley Malt, Hops Yeast</li>
+<li>Leavenworth, Whistling Pig Hefeweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Leavenworth, Boulder Bend Dunkelweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Dogfish Head, 90 Minute IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Amarcord, Gradisca:  Water, Barley Malt, Hops, Yeast</li>
+<li>Green’s Dry-Hopped Lager (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Dubbel Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Amber Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Tripel Blonde Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Bison Organic Hop Cuvee:   Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Chocolate Stout:  Water, Organic Malt, Organic Hops, Yeast, Organic Cocoa</li>
+<li>Bison Organic Honey Basil:  Water, Organic Malt, Organic Hops, Yeast, Organic Honey, Organic Basil</li>
+<li>Bison Organic Saison de Wench:  Water, Organic Malt, Organic Hops, Organic Hibiscus, Organic Roses, Organic Lemongrass, Yeast</li>
+<li>Bison Organic Kermit the Hop: Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Gingerbread: Water, Organic Malt, Organic Hops, Organic Spices, Yeast</li>
+</ul></li>
+<li>Please Note: Most German beers are brewed in accordance with German
+Purity Law – Reinheitsgebot – and only can contain a core ingredient
+list of water, hops, yeast, malted barley or wheat.  Although most
+German beers are not listed here, a reference to “Reinheitsgebot’
+will typically be noted on the label.</li>
+</ul></li>
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc78f69e"></a>Wine<br />
+<ul class="org-ul">
+<li><a id="org12f8a44"></a>Organic Wine<br />
+<div class="outline-text-9" id="text-org12f8a44">
+<ul class="org-ul">
+<li>“Why you should be drinking organic wine and where to find it,” the Guardian, Feb. 07, 2015. <a href="http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it">http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it</a> (accessed Aug. 14, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Shapley and A. Garrity, <b>“12 Best Organic Wines for Every Occassion,”</b> Good Housekeeping, Oct. 10, 2017. <a href="https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines">https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines</a> (accessed Mar. 14, 2022).
+<ul class="org-ul">
+<li>Badger Mountain Riesling</li>
+<li>Nativa Terra Reserva Carmenère</li>
+<li>Paul Dolan Vineyards Chardonnay</li>
+<li>Parducci Sustainable Red Wine</li>
+<li>The Vegan Vine Red Wine</li>
+<li>Lapostolle Casa Merlot</li>
+<li>Bonterra Vineyards Cabernet Sauvignon</li>
+<li>Tikal Natural Organic Red Blend</li>
+<li>CalNaturale Cabernet Sauvignon</li>
+<li>CalNaturale Chardonnay</li>
+<li>Domaine Carneros Pinot Noir</li>
+<li>Hall Wines Cabernet Sauvignon</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf5601d"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org801ca98"></a>Chemsitry<br />
+<div class="outline-text-10" id="text-org801ca98">
+<ul class="org-ul">
+<li>N. N. November 2018, “A taste of wine chemistry,” Chemistry World. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/features/a-taste-of-wine-chemistry/3009718.article">https://www.chemistryworld.com/features/a-taste-of-wine-chemistry/3009718.article</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7157a96"></a>Ecology<br />
+<div class="outline-text-10" id="text-org7157a96">
+<ul class="org-ul">
+<li>“Wines tainted with ‘pesticide cocktail.’” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://theecologist.org/2023/dec/14/wines-tainted-pesticide-cocktail">https://theecologist.org/2023/dec/14/wines-tainted-pesticide-cocktail</a></li>
+
+<li>J. McKenzie, “A glass of wine with your climate crisis?,” Bulletin of the Atomic Scientists. Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://thebulletin.org/2023/09/a-glass-of-wine-with-your-climate-crisis/">https://thebulletin.org/2023/09/a-glass-of-wine-with-your-climate-crisis/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org14f26df"></a>Misc<br />
+<div class="outline-text-9" id="text-org14f26df">
+<ul class="org-ul">
+<li><i>“How to choose a bottle of wine | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/how-do-you-select-a-bottle-of-wine-that-youll-enjoy">https://psyche.co/guides/how-do-you-select-a-bottle-of-wine-that-youll-enjoy</a> (accessed Mar. 28, 2021).</li>
+
+<li>“Feeling wine: The science behind our perception of tannins.” <a href="https://caltechletters.org/science/feeling-wine">https://caltechletters.org/science/feeling-wine</a> (accessed Jan. 26, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org961c1ef"></a>Beer<br />
+<ul class="org-ul">
+<li><a id="orgcc88ecc"></a>General<br />
+<div class="outline-text-9" id="text-orgcc88ecc">
+<ul class="org-ul">
+<li>“Portal:Beer,” Wikipedia. Feb. 28, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Portal:Beer&amp;oldid=1142158908">https://en.wikipedia.org/w/index.php?title=Portal:Beer&amp;oldid=1142158908</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgccd0270"></a>Organic Beer<br />
+<div class="outline-text-9" id="text-orgccd0270">
+<ul class="org-ul">
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).
+<ul class="org-ul">
+<li>The beers on this list below are clean of additives (including
+processing aids like carrageenan and isinglass) and transparent
+about their ingredients. They either list the complete ingredients
+on their website, on the bottle label, or emailed us the ingredient
+list.  We have not been compensated in any way for these
+recommendations and we are in no way affiliated with these
+brands. We know there are many more brands out there, if your
+favorite beer is not on this list, contact them to find out the
+truth. We will be constantly updating this list as we get more
+information.
+<ul class="org-ul">
+<li>Wolaver’s 100% Organic, IPA: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Brown Ale: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Oatmeal Stout: Water, Malts, Hops, Yeast</li>
+<li>Samuel Smith, Organic Pale Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Samuel Smith, Nut Brown Ale:  Water, Barley Malt, Yeast, Cane Sugar, Hops, Roasted Barley</li>
+<li>Samuel Smith Taddy Porter:  Water, Malted Barley, Yeast, Hops, Roasted Malt, Cane Sugar</li>
+<li>Samuel Smith Oatmeal Stout:  Water, Malted Barley, Cane Sugar, Roasted Malt, Yeast, Hops, Oatmeal</li>
+<li>Samuel Smith India Ale:  Water, Malted Barley, Yeast, Hops</li>
+<li>Samuel Smith Imperial Stout:  Water, Malted Barley, Roasted Malt, Cane Sugar, Yeast, Hops.</li>
+<li>Pinkus, Organic Ur Pils:  Water, Barley Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Hefe-Weizen:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Münster Alt:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic Summer Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Winter Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Fresh Cut:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Hop Blanc:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Weiss Principal: Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Nut Brown Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Amber Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pilsner:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Porter:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic India Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Steam Whistle: Water, Malted Barley, Hops Yeast</li>
+<li>Heineken:  Water, Barley Malt, Hops Yeast</li>
+<li>Leavenworth, Whistling Pig Hefeweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Leavenworth, Boulder Bend Dunkelweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Dogfish Head, 90 Minute IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Amarcord, Gradisca:  Water, Barley Malt, Hops, Yeast</li>
+<li>Green’s Dry-Hopped Lager (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Dubbel Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Amber Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Tripel Blonde Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Bison Organic Hop Cuvee:   Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Chocolate Stout:  Water, Organic Malt, Organic Hops, Yeast, Organic Cocoa</li>
+<li>Bison Organic Honey Basil:  Water, Organic Malt, Organic Hops, Yeast, Organic Honey, Organic Basil</li>
+<li>Bison Organic Saison de Wench:  Water, Organic Malt, Organic Hops, Organic Hibiscus, Organic Roses, Organic Lemongrass, Yeast</li>
+<li>Bison Organic Kermit the Hop: Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Gingerbread: Water, Organic Malt, Organic Hops, Organic Spices, Yeast</li>
+</ul></li>
+<li>Please Note: Most German beers are brewed in accordance with German
+Purity Law – Reinheitsgebot – and only can contain a core ingredient
+list of water, hops, yeast, malted barley or wheat.  Although most
+German beers are not listed here, a reference to “Reinheitsgebot’
+will typically be noted on the label.</li>
+</ul></li>
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org95dbbd4"></a>Misc<br />
+<div class="outline-text-9" id="text-org95dbbd4">
+<ul class="org-ul">
+<li>“National Beer Day (United States),” Wikipedia. Apr. 07, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=National_Beer_Day_(United_States)&amp;oldid=1148588018">https://en.wikipedia.org/w/index.php?title=National_Beer_Day_(United_States)&amp;oldid=1148588018</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org66eee6f"></a>Rum<br />
+<div class="outline-text-8" id="text-org66eee6f">
+<ul class="org-ul">
+<li>“On the case of fake rum,” Chemistry World. Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/on-the-case-of-fake-rum/4012764.article">https://www.chemistryworld.com/opinion/on-the-case-of-fake-rum/4012764.article</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org16c4949"></a>Products<br /></li>
+<li><a id="orgf12d51d"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgf7980a1"></a>Music<br />
+<div class="outline-text-8" id="text-orgf7980a1">
+<ul class="org-ul">
+<li>Thikana Sharab Ka, Log Kehte Hain Main Sharabi Hoon Sharabi ||Amitabh Bachchan||Full vedio  Song HD|| 90’s Hit’s Songs, (Jun. 23, 2021). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=jogORrj2pGk">https://www.youtube.com/watch?v=jogORrj2pGk</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb87452d"></a>ST<br />
+<ul class="org-ul">
+<li><a id="org6acdc05"></a>Bad Stuff<br />
+<ul class="org-ul">
+<li><a id="orgbaae1bf"></a>Hangover<br />
+<div class="outline-text-9" id="text-orgbaae1bf">
+<ul class="org-ul">
+<li>A. Dhanda, “Myrkl: new anti-hangover pill said to break down up to 70% of alcohol in an hour – what you need to know,” The Conversation. <a href="http://theconversation.com/myrkl-new-anti-hangover-pill-said-to-break-down-up-to-70-of-alcohol-in-an-hour-what-you-need-to-know-186357">http://theconversation.com/myrkl-new-anti-hangover-pill-said-to-break-down-up-to-70-of-alcohol-in-an-hour-what-you-need-to-know-186357</a> (accessed Jul. 06, 2022).</li>
+<li>S. Watson, “Hangover Cure: Home Remedies &amp; More,” WebMD. <a href="https://www.webmd.com/balance/hangover-cure">https://www.webmd.com/balance/hangover-cure</a> (accessed Feb. 03, 2023).</li>
+<li>“7 steps to cure your hangover,” Harvard Health, Dec. 20, 2006. <a href="https://www.health.harvard.edu/staying-healthy/7-steps-to-cure-your-hangover-and-ginkgo-biloba-whats-the-verdict">https://www.health.harvard.edu/staying-healthy/7-steps-to-cure-your-hangover-and-ginkgo-biloba-whats-the-verdict</a> (accessed Feb. 03, 2023).</li>
+<li>“Hangover,” Wikipedia. Jan. 23, 2023. Accessed: Feb. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hangover&amp;oldid=1135225065">https://en.wikipedia.org/w/index.php?title=Hangover&amp;oldid=1135225065</a></li>
+<li>“Hangover: Symptoms, Remedies, Cure, Prevention,” Cleveland Clinic. <a href="https://my.clevelandclinic.org/health/diseases/16627-hangover">https://my.clevelandclinic.org/health/diseases/16627-hangover</a> (accessed Feb. 03, 2023).</li>
+<li>“Hangovers - Symptoms and causes,” Mayo Clinic. <a href="https://www.mayoclinic.org/diseases-conditions/hangovers/symptoms-causes/syc-20373012">https://www.mayoclinic.org/diseases-conditions/hangovers/symptoms-causes/syc-20373012</a> (accessed Feb. 03, 2023).</li>
+<li>L. Gravvat, “How long does alcohol stay in your system? That depends on several factors.,” USA TODAY. <a href="https://www.usatoday.com/story/life/health-wellness/2022/06/29/how-long-alcohol-stay-in-system/7718705001/">https://www.usatoday.com/story/life/health-wellness/2022/06/29/how-long-alcohol-stay-in-system/7718705001/</a> (accessed Feb. 03, 2023).</li>
+<li>“Blood alcohol content,” Wikipedia. Jan. 31, 2023. Accessed: Feb. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Blood_alcohol_content&amp;oldid=1136624693">https://en.wikipedia.org/w/index.php?title=Blood_alcohol_content&amp;oldid=1136624693</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7f0beb4"></a>Abuse<br />
+<div class="outline-text-9" id="text-org7f0beb4">
+<ul class="org-ul">
+<li>“Alcohol abuse,” Wikipedia. Mar. 04, 2022. Accessed: Mar. 14, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Alcohol_abuse&amp;oldid=1075271834">https://en.wikipedia.org/w/index.php?title=Alcohol_abuse&amp;oldid=1075271834</a></li>
+<li>“National Institute on Alcohol Abuse and Alcoholism (NIAAA) | National Institute on Alcohol Abuse and Alcoholism (NIAAA).” <a href="https://www.niaaa.nih.gov/">https://www.niaaa.nih.gov/</a> (accessed Mar. 14, 2022).</li>
+<li>“Alcohol Use Disorder,” WebMD. <a href="https://www.webmd.com/mental-health/addiction/what-is-alcohol-abuse">https://www.webmd.com/mental-health/addiction/what-is-alcohol-abuse</a> (accessed Mar. 14, 2022).</li>
+<li>“How to ask if they’re getting addicted | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-talk-to-someone-about-their-drug-or-alcohol-use">https://psyche.co/guides/how-to-talk-to-someone-about-their-drug-or-alcohol-use</a> (accessed Apr. 07, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org9531ae7"></a>Binge<br />
+<div class="outline-text-9" id="text-org9531ae7">
+<ul class="org-ul">
+<li>M. Ventura-Cots, A. E. Watts, and R. Bataller, “Binge drinking as a risk factor for advanced alcoholic liver disease,” Liver International, vol. 37, no. 9, pp. 1281–1283, 2017, doi: 10.1111/liv.13482.</li>
+</ul>
+</div>
+</li>
+<li><a id="org770e72b"></a>Misc<br />
+<div class="outline-text-9" id="text-org770e72b">
+<ul class="org-ul">
+<li>T. Requarth, <b>“The Great Alcohol Health Flip-Flop Isn’t That Hard to Understand—if You Know Who Was Behind It,”</b> Slate, Apr. 23, 2023. Accessed: Apr. 25, 2023. [Online]. Available: <a href="https://slate.com/technology/2023/04/alcohol-wine-drinking-healthy-dangerous-study.html">https://slate.com/technology/2023/04/alcohol-wine-drinking-healthy-dangerous-study.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6a5dc88"></a>Sulfites<br />
+<div class="outline-text-8" id="text-org6a5dc88">
+<ul class="org-ul">
+<li>W. E. Contributors, “What to Know About Sulfites in Wine,” WebMD. <a href="https://www.webmd.com/diet/what-to-know-sulfites-in-wine">https://www.webmd.com/diet/what-to-know-sulfites-in-wine</a> (accessed Jun. 03, 2022).</li>
+<li>S. V. Irwin, P. Fisher, E. Graham, A. Malek, and A. Robidoux, “Sulfites inhibit the growth of four species of beneficial gut bacteria at concentrations regarded as safe for food,” PLoS One, vol. 12, no. 10, p. e0186629, Oct. 2017, doi: 10.1371/journal.pone.0186629.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf0750e1"></a>Military<br />
+<div class="outline-text-8" id="text-orgf0750e1">
+<ul class="org-ul">
+<li>“Alcohol and Stress in the Military | Alcohol Research: Current Reviews.” <a href="https://arcr.niaaa.nih.gov/volume/34/4/alcohol-and-stress-military">https://arcr.niaaa.nih.gov/volume/34/4/alcohol-and-stress-military</a> (accessed Jan. 16, 2023).</li>
+<li>A. K. Osborne, G. Wilson-Menzfeld, G. McGill, and M. D. Kiernan, “Military service and alcohol use: a systematic narrative review,” Occupational Medicine, vol. 72, no. 5, pp. 313–323, Jun. 2022, doi: 10.1093/occmed/kqac045.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. O. Meadows, R. Beckman, C. C. Engel, and D. D. Jeffery, “The Culture of Alcohol in the U.S. Military: Correlations With Problematic Drinking Behaviors and Negative Consequences of Alcohol Use,” Armed Forces &amp; Society, vol. 49, no. 2, pp. 531–555, Apr. 2023, doi: 10.1177/0095327X211069162.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. C. London, “Researchers identify the reasons for drinking in UK military personnel,” King’s College London. Accessed: Nov. 11, 2023. [Online]. Available: <a href="https://www.kcl.ac.uk/news/researchers-identify-the-reasons-for-drinking-in-uk-military-personnel">https://www.kcl.ac.uk/news/researchers-identify-the-reasons-for-drinking-in-uk-military-personnel</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org56c054a"></a>India<br />
+<ul class="org-ul">
+<li><a id="org19a89ab"></a>History<br />
+<div class="outline-text-9" id="text-org19a89ab">
+<ul class="org-ul">
+<li>J. McHugh, An Unholy Brew: Alcohol in Indian History and Religions. Oxford University Press, 2021.</li>
+
+<li>D. N. Jha, Drink of Immortality: Essays on Distillation and Alcohol Use in Ancient India. New Delhi: Manohar, 2020.</li>
+
+<li>M. Pande, “From the Vedic age to the Mughals and the Raj: The colourful history of alcohol consumption in India,” Scroll.in. <a href="https://scroll.in/article/834765/from-the-vedic-age-to-the-mughals-and-the-raj-the-colourful-history-of-alcohol-consumption-in-india">https://scroll.in/article/834765/from-the-vedic-age-to-the-mughals-and-the-raj-the-colourful-history-of-alcohol-consumption-in-india</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgded3497"></a>Military<br />
+<div class="outline-text-9" id="text-orgded3497">
+<ul class="org-ul">
+<li>“Military canteens turn to Indian spirits, stop foreign liquor orders,” Hindustan Times, Jun. 18, 2020. <a href="https://www.hindustantimes.com/india-news/military-canteens-stop-foreign-liquor-orders/story-tELUnDbs9MXKSUNW2Fpw2H.html">https://www.hindustantimes.com/india-news/military-canteens-stop-foreign-liquor-orders/story-tELUnDbs9MXKSUNW2Fpw2H.html</a> (accessed Jan. 16, 2023).</li>
+<li>“Indian military stores orders for Pernod, Diageo dry up-sources,” Reuters, Jun. 17, 2020. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://www.reuters.com/article/india-alcohol-defence-idUSL4N2DT1TM">https://www.reuters.com/article/india-alcohol-defence-idUSL4N2DT1TM</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org11197af"></a>Misc<br />
+<div class="outline-text-9" id="text-org11197af">
+<ul class="org-ul">
+<li>H. K. Sharma, B. M. Tripathi, and P. J. Pelto, “The evolution of alcohol use in India,” AIDS Behav, vol. 14 Suppl 1, pp. S8-17, Aug. 2010, doi: 10.1007/s10461-010-9727-7.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><a id="orgefab16e"></a>Misc<br />
+<div class="outline-text-7" id="text-orgefab16e">
+<ul class="org-ul">
+<li>M. Naddaf, “Largest-ever analysis finds genetic links to smoking and drinking,” Nature, Dec. 2022, doi: 10.1038/d41586-022-04378-w.</li>
+
+<li>E. Slingerland, <i>Drunk: How We Sipped, Danced, and Stumbled Our Way to Civilization.</i> Little Brown, 2021.</li>
+
+<li>“How Long Does Alcohol Stay in Your System?,” Healthline, May 18, 2022. <a href="https://www.healthline.com/health/how-long-does-alcohol-stay-in-your-system">https://www.healthline.com/health/how-long-does-alcohol-stay-in-your-system</a> (accessed Jul. 27, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Alcohol Consumption,” Our World in Data, Apr. 2018, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/alcohol-consumption">https://ourworldindata.org/alcohol-consumption</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org4060082"></a>Bhang<br />
+<div class="outline-text-6" id="text-5-2-1-2-2">
+<ul class="org-ul">
+<li>“Bhang,” Wikipedia. Feb. 17, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376">https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Staelens, “The Bhang Lassi Is How Hindus Drink Themselves High for Shiva,” Vice, Mar. 10, 2015. <a href="https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva">https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva</a> (accessed Feb. 18, 2023).</li>
+<li>Z. M. Khan, “Here’s the Deal With Bhang Gola,” Vice, Jul. 17, 2018. <a href="https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola">https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4c5ec83"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org11e9106"></a>Stimulants<br />
+<ol class="org-ol">
+<li><a id="org864a5a9"></a>Caffeine<br />
+<ul class="org-ul">
+<li><a id="org35204d9"></a>Coffee<br />
+<div class="outline-text-7" id="text-org35204d9">
+<ul class="org-ul">
+<li><i>“How to enjoy coffee | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/good-coffee-is-like-a-fine-wine-start-with-high-quality-beans">https://psyche.co/guides/good-coffee-is-like-a-fine-wine-start-with-high-quality-beans</a> (accessed Nov. 27, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Bob Dylan, Bob Dylan - One More Cup of Coffee (Official Audio), (Mar. 12, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=95cufW4h-gA">https://www.youtube.com/watch?v=95cufW4h-gA</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge31eb64"></a>Tea<br />
+<div class="outline-text-7" id="text-orge31eb64">
+<ul class="org-ul">
+<li>C. World, “Steeped: The chemistry of tea – with author Michelle Francl,” Chemistry World. Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/webinars/steeped-the-chemistry-of-tea-with-author-michelle-francl/4018610.article">https://www.chemistryworld.com/webinars/steeped-the-chemistry-of-tea-with-author-michelle-francl/4018610.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Police, <i>Tea In The Sahara</i>, (Apr. 15, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=iQJaVILgl2M">https://www.youtube.com/watch?v=iQJaVILgl2M</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgdbc3a4b"></a>Cocoa<br /></li>
+</ul>
+</li>
+<li><a id="org7ca3c2a"></a>Nicotine<br />
+<ul class="org-ul">
+<li><a id="org376dca4"></a>General<br />
+<div class="outline-text-7" id="text-org376dca4">
+<ul class="org-ul">
+<li>N. Oreskes and E. M. Conway, <b>Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming.</b> A&amp;C Black, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org73c6709"></a>Data<br />
+<div class="outline-text-7" id="text-org73c6709">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Smoking,” Our World in Data, May 2013, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/smoking">https://ourworldindata.org/smoking</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5f30ceb"></a>Music<br />
+<div class="outline-text-7" id="text-org5f30ceb">
+<ul class="org-ul">
+<li>Eros Now Music, <i>Kash Laga</i> (Video Song) | No Smoking | John Abraham &amp; Ayesha Takia, (Jul. 20, 2010). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=amU3dJ4Tk3U">https://www.youtube.com/watch?v=amU3dJ4Tk3U</a></li>
+<li>YRF, Kajra Re | Full Song | Bunty Aur Babli | Aishwarya, Abhishek, Amitabh Bachchan | Shankar-Ehsaan-Loy, (Feb. 02, 2015). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4dsFQFCvVGU">https://www.youtube.com/watch?v=4dsFQFCvVGU</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgc80d101"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org364d6c6"></a>Opioids<br />
+<ul class="org-ul">
+<li><a id="org9a21826"></a>CSE<br />
+<ul class="org-ul">
+<li><a id="orgfafcd25"></a>DS<br />
+<div class="outline-text-8" id="text-orgfafcd25">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Opioids, cocaine, cannabis and illicit drugs,” Our World in Data, Mar. 2018, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/illicit-drug-use">https://ourworldindata.org/illicit-drug-use</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org1bf520b"></a>USA<br />
+<div class="outline-text-7" id="text-org1bf520b">
+<ul class="org-ul">
+<li>S. Quinones, Dreamland: The True Tale of America’s Opiate Epidemic. Bloomsbury Publishing USA, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Supreme Court Hears Challenge to Bankruptcy Plan Shielding Sacklers from Opioid Liability,” Democracy Now! Accessed: Dec. 06, 2023. [Online]. Available: <a href="https://www.democracynow.org/2023/12/5/headlines/supreme_court_hears_challenge_to_bankruptcy_plan_shielding_sacklers_from_opioid_liability">https://www.democracynow.org/2023/12/5/headlines/supreme_court_hears_challenge_to_bankruptcy_plan_shielding_sacklers_from_opioid_liability</a></li>
+<li>“Pluralistic: Pedophiles for Purdue Pharma (05 Dec 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 06, 2023. [Online]. Available: <a href="https://pluralistic.net/2023/12/05/third-party-nonconsensual-releases/">https://pluralistic.net/2023/12/05/third-party-nonconsensual-releases/</a></li>
+<li>K. Taylor, “Sackler Family Members Fight Removal of Name at Tufts, Calling It a ‘Breach,’” The New York Times, Dec. 19, 2019. Accessed: Sep. 05, 2023. [Online]. Available: <a href="https://www.nytimes.com/2019/12/19/us/sackler-opioids-tufts.html">https://www.nytimes.com/2019/12/19/us/sackler-opioids-tufts.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd32c38"></a>India<br />
+<div class="outline-text-7" id="text-orgdd32c38">
+<ul class="org-ul">
+<li>S. Zargar, “Opioid addiction is ravaging Kashmir’s young,” Scroll.in. Accessed: Jul. 26, 2023. [Online]. Available: <a href="https://scroll.in/article/1052716/opioid-addiction-is-ravaging-kashmirs-young">https://scroll.in/article/1052716/opioid-addiction-is-ravaging-kashmirs-young</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Ghosh, <b>Smoke and Ashes: A Writer’s Journey through Opium’s Hidden Histories.</b> Gurugram: Fourth Estate India, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6886060"></a>Films<br />
+<div class="outline-text-7" id="text-org6886060">
+<ul class="org-ul">
+<li>“Netflix’s ‘Painkiller’ Series Reminds Us: Sidelining Science Can Be Deadly,” The Equation. Accessed: Aug. 21, 2023. [Online]. Available: <a href="https://blog.ucsusa.org/jacob-carter/netflixs-painkiller-series-reminds-us-sidelining-science-can-be-deadly/">https://blog.ucsusa.org/jacob-carter/netflixs-painkiller-series-reminds-us-sidelining-science-can-be-deadly/</a></li>
+<li>“Laura Poitras’s Documentary on Opioid Crisis Wins Top Prize at Venice Film Festival,” Democracy Now! Accessed: Sep. 13, 2022. [Online]. Available: <a href="https://www.democracynow.org/2022/9/12/headlines/laura_poitrass_documentary_on_opioid_crisis_wins_top_prize_at_venice_film_festival">https://www.democracynow.org/2022/9/12/headlines/laura_poitrass_documentary_on_opioid_crisis_wins_top_prize_at_venice_film_festival</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org23111ed"></a>Misc<br />
+<div class="outline-text-7" id="text-org23111ed">
+<ul class="org-ul">
+<li>A. Ghosh, <b>Smoke and Ashes: A Writer’s Journey through Opium’s Hidden Histories.</b> Gurugram: Fourth Estate India, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org05b4940"></a>Supplements<br />
+<ol class="org-ol">
+<li><a id="org1acd748"></a>General<br />
+<div class="outline-text-6" id="text-5-2-1-5-1">
+<ul class="org-ul">
+<li><i>Organic India Wheat Grass Powder</i></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcfcccfb"></a>Protein Supplements<br />
+<ul class="org-ul">
+<li><a id="org9abcb31"></a>Organic<br />
+<div class="outline-text-7" id="text-org9abcb31">
+<ul class="org-ul">
+<li><i>“Orgain, Organic Protein Plant Based Powder, Sweet Vanilla Bean, 2.03 lbs (920 g) : Amazon.in: Health &amp; Personal Care.”</i> <a href="https://www.amazon.in/Orgain-Organic-Protein-Powder-Vanilla/dp/B00J074W7Q/">https://www.amazon.in/Orgain-Organic-Protein-Powder-Vanilla/dp/B00J074W7Q/</a> (accessed Sep. 07, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Unived Pea Protein Isolate with Natural Digestive Enzymes, 100% Vegan &amp; Plant-Based, BCAAs, Amino Acid, Lean Muscle Development, Non-GMO &amp; Sugar-Free, Natural (Raw 30 Servings) : Amazon.in: Health &amp; Personal Care.</i> <a href="https://www.amazon.in/Unived-Digestive-Plant-Based-Development-Sugar-Free/dp/B07N7LDH51/">https://www.amazon.in/Unived-Digestive-Plant-Based-Development-Sugar-Free/dp/B07N7LDH51/</a> (accessed Sep. 07, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Sunwarrior: Classic Plus 375 g, Vanilla, Vegan Protein Powder with Peas &amp; Brown Rice, Raw Organic Plant Based Protein.</i></li>
+<li>“Sunwarrior - Classic Plus 375 g, Vanilla, Gluten Free, Vegan, Plant-based, Protein Powder with Pea and Brown Rice : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/Sunwarrior-Classic-Vanilla-Protein-Organic/dp/B07HWNSCXH/ref=sr_1_7?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-7">https://www.amazon.in/Sunwarrior-Classic-Vanilla-Protein-Organic/dp/B07HWNSCXH/ref=sr_1_7?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-7</a> (accessed Jan. 29, 2023).</li>
+<li>“Sunwarrior - Classic Plus 375 g, Unflavoured, Unsweetened, Gluten Free, Vegan, Plant-based, Protein Powder with Pea and Brown Rice : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/Sunwarrior-Classic-Natural-Protein-Organic/dp/B07HWMLHMW/ref=sr_1_6?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-6">https://www.amazon.in/Sunwarrior-Classic-Natural-Protein-Organic/dp/B07HWMLHMW/ref=sr_1_6?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-6</a> (accessed Jan. 29, 2023).</li>
+<li>“Sunwarrior - Classic Plus 375 g, Chocolate, Gluten Free, Vegan, Plant-based, Protein Powder with Pea and Brown Rice : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/Sunwarrior-Classic-Chocolate-Protein-Organic/dp/B07HWLM9DY/ref=sr_1_5?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-5">https://www.amazon.in/Sunwarrior-Classic-Chocolate-Protein-Organic/dp/B07HWLM9DY/ref=sr_1_5?keywords=Sunwarrior&amp;qid=1674965989&amp;sr=8-5</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sunwarrior - Ormus Greens, Mint, Plant-based Greens Powder with Trace Minerals, Gluten Free, Non-GMO, Perfect for Any Lifestyle - 450 Gram : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/Sunwarrior-Plant-based-Minerals-Non-GMO-Lifestyle/dp/B09BBFVG68/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=Sunwarrior&amp;keywords=Sunwarrior&amp;pd_rd_i=B09BBFVG68&amp;pd_rd_r=28ce43ed-e910-4ae1-bff4-cd5aa46bea62&amp;pd_rd_w=Po9OR&amp;pd_rd_wg=YDFzJ&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=HNK2ZGPK703DM3AQ08MQ&amp;qid=1674965989&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a">https://www.amazon.in/Sunwarrior-Plant-based-Minerals-Non-GMO-Lifestyle/dp/B09BBFVG68/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=Sunwarrior&amp;keywords=Sunwarrior&amp;pd_rd_i=B09BBFVG68&amp;pd_rd_r=28ce43ed-e910-4ae1-bff4-cd5aa46bea62&amp;pd_rd_w=Po9OR&amp;pd_rd_wg=YDFzJ&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=HNK2ZGPK703DM3AQ08MQ&amp;qid=1674965989&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org1a4b80f"></a>Misc<br /></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org086b991" class="outline-4">
+<h4 id="org086b991"><span class="section-number-4">5.2.2.</span> Ready To Eat</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgf482273"></a>Meals<br />
+<div class="outline-text-5" id="text-5-2-2-1">
+<ul class="org-ul">
+<li>24 Mantra Whole Moong Khichdi</li>
+</ul>
+</div>
+</li>
+<li><a id="orga9f06de"></a>Savory Items<br />
+<div class="outline-text-5" id="text-5-2-2-2">
+<ul class="org-ul">
+<li>Nourish Organics Poha</li>
+<li>24 Mantra Roasted Bengal Gram</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org15eafc0" class="outline-4">
+<h4 id="org15eafc0"><span class="section-number-4">5.2.3.</span> Herbs, Spices</h4>
+<div class="outline-text-4" id="text-5-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgce23827"></a>Complexity Science<br />
+<div class="outline-text-5" id="text-5-2-3-1">
+<ul class="org-ul">
+<li><b>How Much Sodium Should We Eat?</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/how-much-sodium-should-we-eat">https://necsi.edu/how-much-sodium-should-we-eat</a>. [Accessed: 21-Feb-2020].</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1590bc"></a>Handbooks<br />
+<div class="outline-text-5" id="text-5-2-3-2">
+<ul class="org-ul">
+<li>K. V. P. Professor, Ed., Handbook of Herbs and Spices: 1, 2nd edition. Oxford ; Philadelphia: Woodhead Publishing, 2012.</li>
+<li>K. V. Peter, Ed., Handbook of Herbs and Spices: Volume 2, 1st edition. Woodhead Publishing, 2004.</li>
+<li>K. V. P. Professor, Ed., Handbook of Herbs and Spices: Volume 3, 1st edition. Boca Raton, Fla.: Woodhead Publishing, 2006.</li>
+
+<li>P. Lakshmi, <i>The Encyclopedia of Spices and Herbs: An Essential Guide to the Flavors of the World.</i> HarperCollins, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbfec42b"></a>Health<br />
+<div class="outline-text-5" id="text-5-2-3-3">
+<ul class="org-ul">
+<li><b>How Much Sodium Should We Eat?</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/how-much-sodium-should-we-eat">https://necsi.edu/how-much-sodium-should-we-eat</a>. [Accessed: 21-Feb-2020].</li>
+<li>D. J. DiNicolantonio, <b>The Salt Fix: Why the Experts Got It All Wrong&#x2013;and How Eating More Might Save Your Life.</b> Harmony/Rodale, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“This herb tastes and smells like fish; it has recognised health benefits.” Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/video/food/this-herb-tastes-and-smells-like-fish-it-has-recognised-health-benefits-91996">https://www.downtoearth.org.in/video/food/this-herb-tastes-and-smells-like-fish-it-has-recognised-health-benefits-91996</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8430cd3"></a>Basic<br />
+<div class="outline-text-5" id="text-5-2-3-4">
+<ul class="org-ul">
+<li>Organic India Pink Rock Salt</li>
+</ul>
+</div>
+</li>
+<li><a id="org7a6934e"></a>Mixes<br />
+<div class="outline-text-5" id="text-5-2-3-5">
+<ul class="org-ul">
+<li>Organic India Saambhar Powder</li>
+<li>Organic India Rasam Powder</li>
+<li>Organic India Chat Masala</li>
+</ul>
+</div>
+</li>
+<li><a id="org9c32788"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgd7c93dc" class="outline-4">
+<h4 id="orgd7c93dc"><span class="section-number-4">5.2.4.</span> Fermented Food</h4>
+<div class="outline-text-4" id="text-5-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org2422b0d"></a>Misc<br />
+<div class="outline-text-5" id="text-5-2-4-1">
+<ul class="org-ul">
+<li><b>“See the wonderful world of fermented foods on one delicious chart,”</b> Popular Science. <a href="https://www.popsci.com/story/science/different-fermented-foods-chart/">https://www.popsci.com/story/science/different-fermented-foods-chart/</a> (accessed Mar. 14, 2021).</li>
+
+<li>Urban Platter Kimchi</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfeadca1"></a>Pickles<br />
+<div class="outline-text-5" id="text-5-2-4-2">
+<ul class="org-ul">
+<li>FabIndia Ginger Pickle</li>
+<li>FabIndia Garlic Pickle</li>
+<li>FabIndia Ginger, Garlic Pickle</li>
+<li>FabIndia Heeng Ka Aam Pickle</li>
+<li>FabIndia Heeng Ka Neembu Pickle</li>
+<li>FabIndia Green Chilli Pickle</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge37e41d" class="outline-4">
+<h4 id="orge37e41d"><span class="section-number-4">5.2.5.</span> Vinegar</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<ul class="org-ul">
+<li><i>Bragg Apple Cider Vinegar</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7908101" class="outline-4">
+<h4 id="org7908101"><span class="section-number-4">5.2.6.</span> Animal Foods</h4>
+<div class="outline-text-4" id="text-5-2-6">
+</div>
+<ol class="org-ol">
+<li><a id="org3f4491b"></a>Meats<br />
+<div class="outline-text-5" id="text-5-2-6-1">
+<ul class="org-ul">
+<li>“Home | Good Fish Guide.” <a href="https://www.mcsuk.org/goodfishguide/">https://www.mcsuk.org/goodfishguide/</a> (accessed Sep. 26, 2021).</li>
+
+<li>“If you care about animals, it is your moral duty to eat them | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them">https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them</a> (accessed Feb. 17, 2022).</li>
+
+<li><a href="https://www.licious.in/">Licious</a></li>
+
+<li>T. C. &amp; M. Z. Sarah Gradidge, “How animal lovers get around the moral dilemma of eating meat,” Scroll.in. <a href="https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat">https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4a177ab"></a>Dairy<br />
+<ol class="org-ol">
+<li><a id="org573ea6e"></a>Camel Milk<br />
+<div class="outline-text-6" id="text-5-2-6-2-1">
+<ul class="org-ul">
+<li>“Camel milk,” Wikipedia. Nov. 01, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187">https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187</a></li>
+
+<li>J. Narzary, “The Last Cheesemakers of the Eastern Himalayas,” Atlas Obscura, 00:00 400AD. <a href="http://www.atlasobscura.com/articles/yak-cheese-india-bhutan">http://www.atlasobscura.com/articles/yak-cheese-india-bhutan</a> (accessed Nov. 18, 2022).</li>
+
+<li>R. Lebeter, “‘Happy milk’: the dairy family that sustains a fair shake of the bottle,” The Guardian, Oct. 28, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle">https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle</a></li>
+
+<li>“Godwar Camel Cheese Fest,” League for Pastoral Peoples, Nov. 06, 2022. <a href="http://www.pastoralpeoples.org/godwar-camel-cheese-fest/">http://www.pastoralpeoples.org/godwar-camel-cheese-fest/</a> (accessed Nov. 18, 2022).</li>
+
+<li>“Would you drink camel milk?,” BBC News, Jul. 10, 2019. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.bbc.com/news/business-48935371">https://www.bbc.com/news/business-48935371</a></li>
+
+<li>S. Zibaee, S. M. al-reza Hosseini, M. Yousefi, A. Taghipour, M. A. Kiani, and M. R. Noras, “Nutritional and Therapeutic Characteristics of Camel Milk in Children: A Systematic Review,” Electron Physician, vol. 7, no. 7, pp. 1523–1528, Nov. 2015, doi: 10.19082/1523.</li>
+
+<li>“Camel Milk: Are There Health Benefits?,” WebMD. <a href="https://www.webmd.com/diet/health-benefits-camel-milk">https://www.webmd.com/diet/health-benefits-camel-milk</a> (accessed Nov. 18, 2022).</li>
+
+<li>“Amazon.com: Organic Fresh Frozen Camel Milk - Fresh Flavor with Health Benefits - Raw &amp; Natural Grade A -Allergen Free Milk from Healthy Camels in Midwest - Made In The USA [6 Pack] : Grocery &amp; Gourmet Food.” <a href="https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU">https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3fa383d"></a>Cream<br /></li>
+<li><a id="org8b3db7e"></a>Cheese<br />
+<div class="outline-text-6" id="text-5-2-6-2-3">
+<ul class="org-ul">
+<li><i>ISayOrganic</i></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>arathimenon, “Say cheese! Traditional pastoralists embrace innovation with artisanal cheese,” Mongabay-India. Accessed: Dec. 26, 2023. [Online]. Available: <a href="https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/">https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0e90e73"></a>Milk Powder<br />
+<div class="outline-text-6" id="text-5-2-6-2-4">
+<ul class="org-ul">
+<li>“Powdered milk,” Wikipedia. Jan. 06, 2023. Accessed: Feb. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463">https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463</a></li>
+<li>“Nestle Everyday Milk Powder - 400g Pouch : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010">https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010</a> (accessed Feb. 13, 2023).</li>
+<li>“Pros and Cons of Powdered Milk,” LIVESTRONG.COM. <a href="https://www.livestrong.com/article/68702-pros-cons-powdered-milk/">https://www.livestrong.com/article/68702-pros-cons-powdered-milk/</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7f47703"></a>Misc<br />
+<div class="outline-text-6" id="text-5-2-6-2-5">
+<ul class="org-ul">
+<li>“Opinion: There is no longer any justification for drinking cow’s milk,” The Independent, Feb. 15, 2022. <a href="https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html">https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html</a> (accessed Feb. 17, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mad Max: Fury Road,” Wikipedia. Mar. 13, 2023. Accessed: Mar. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014">https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014</a></li>
+<li>J. G. Sperling, Roman Charity: Queer Lactations in Early Modern Visual Culture. transcript publishing, 2016, p. 430 Pages.</li>
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org2299394"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org54dcd87"></a>Free Range<br />
+<div class="outline-text-6" id="text-5-2-6-3-1">
+<ul class="org-ul">
+<li>“Animals Used for Free-Range and Organic Meat,” PETA, Jun. 22, 2010. <a href="https://www.peta.org/issues/animals-used-for-food/organic-free-range-meat/">https://www.peta.org/issues/animals-used-for-food/organic-free-range-meat/</a> (accessed Nov. 06, 2022).</li>
+
+<li>“Free range,” Wikipedia. Nov. 02, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Free_range&amp;oldid=1119622285">https://en.wikipedia.org/w/index.php?title=Free_range&amp;oldid=1119622285</a></li>
+
+<li>“Free-Range Eggs Aren’t All They’re Cracked Up to Be,” PETA, Oct. 15, 2010. <a href="https://www.peta.org/living/food/free-range-eggs/">https://www.peta.org/living/food/free-range-eggs/</a> (accessed Nov. 06, 2022).</li>
+
+<li>“The Organic and ‘Free-Range’ Myths,” PETA, Jun. 22, 2010. <a href="https://www.peta.org/issues/animals-used-for-food/free-range-organic-meat-myths/">https://www.peta.org/issues/animals-used-for-food/free-range-organic-meat-myths/</a> (accessed Nov. 06, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orge5765d1"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgcf67cc6" class="outline-4">
+<h4 id="orgcf67cc6"><span class="section-number-4">5.2.7.</span> Cereals</h4>
+<div class="outline-text-4" id="text-5-2-7">
+<ul class="org-ul">
+<li>“Cereal,” Wikipedia. Apr. 07, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cereal&amp;oldid=1081508995">https://en.wikipedia.org/w/index.php?title=Cereal&amp;oldid=1081508995</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Amaranth,” Wikipedia. Mar. 10, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Amaranth&amp;oldid=1076253823">https://en.wikipedia.org/w/index.php?title=Amaranth&amp;oldid=1076253823</a></li>
+<li>“Buckwheat,” Wikipedia. Apr. 16, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Buckwheat&amp;oldid=1082977631">https://en.wikipedia.org/w/index.php?title=Buckwheat&amp;oldid=1082977631</a></li>
+<li>“Teff,” Wikipedia. Mar. 18, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Teff&amp;oldid=1077914530">https://en.wikipedia.org/w/index.php?title=Teff&amp;oldid=1077914530</a></li>
+<li>“Durum,” Wikipedia. Mar. 23, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Durum&amp;oldid=1078883390">https://en.wikipedia.org/w/index.php?title=Durum&amp;oldid=1078883390</a></li>
+<li>“Porteresia,” Wikipedia. Jan. 25, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Porteresia&amp;oldid=1067805980">https://en.wikipedia.org/w/index.php?title=Porteresia&amp;oldid=1067805980</a></li>
+<li>“Wild rice,” Wikipedia. Mar. 24, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wild_rice&amp;oldid=1079008582">https://en.wikipedia.org/w/index.php?title=Wild_rice&amp;oldid=1079008582</a></li>
+<li>“Rye,” Wikipedia. Apr. 17, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rye&amp;oldid=1083245464">https://en.wikipedia.org/w/index.php?title=Rye&amp;oldid=1083245464</a></li>
+<li>“Triticale,” Wikipedia. Mar. 08, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Triticale&amp;oldid=1075946781">https://en.wikipedia.org/w/index.php?title=Triticale&amp;oldid=1075946781</a></li>
+<li>“Oat,” Wikipedia. Apr. 19, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Oat&amp;oldid=1083610834">https://en.wikipedia.org/w/index.php?title=Oat&amp;oldid=1083610834</a></li>
+<li><b>“Millet,”</b> Wikipedia. Apr. 19, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Millet&amp;oldid=1083471004">https://en.wikipedia.org/w/index.php?title=Millet&amp;oldid=1083471004</a></li>
+<li>“Commercial sorghum,” Wikipedia. Feb. 26, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Commercial_sorghum&amp;oldid=1074185014">https://en.wikipedia.org/w/index.php?title=Commercial_sorghum&amp;oldid=1074185014</a></li>
+<li>“Barley,” Wikipedia. Mar. 24, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Barley&amp;oldid=1078927476">https://en.wikipedia.org/w/index.php?title=Barley&amp;oldid=1078927476</a></li>
+<li>“Wheat,” Wikipedia. Apr. 16, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wheat&amp;oldid=1083073535">https://en.wikipedia.org/w/index.php?title=Wheat&amp;oldid=1083073535</a></li>
+<li>“Rice,” Wikipedia. Apr. 15, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rice&amp;oldid=1082772273">https://en.wikipedia.org/w/index.php?title=Rice&amp;oldid=1082772273</a></li>
+<li>“Maize,” Wikipedia. Apr. 17, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Maize&amp;oldid=1083242188">https://en.wikipedia.org/w/index.php?title=Maize&amp;oldid=1083242188</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Nourish Organics Muesli</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgebdae27" class="outline-4">
+<h4 id="orgebdae27"><span class="section-number-4">5.2.8.</span> Staples</h4>
+<div class="outline-text-4" id="text-5-2-8">
+<ul class="org-ul">
+<li>Red Dragon Whole Wheat Noodles</li>
+<li>Nature Land Organics Organic Pasta</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6b13b16" class="outline-4">
+<h4 id="org6b13b16"><span class="section-number-4">5.2.9.</span> Lentils</h4>
+</div>
+<div id="outline-container-org15bccbf" class="outline-4">
+<h4 id="org15bccbf"><span class="section-number-4">5.2.10.</span> Soya Bean</h4>
+<div class="outline-text-4" id="text-5-2-10">
+</div>
+<ol class="org-ol">
+<li><a id="org1dd8923"></a>Natto<br />
+<div class="outline-text-5" id="text-5-2-10-1">
+<ul class="org-ul">
+<li>“ORIGINS NUTRA Nattokinase 2000Fu/100Mg, Complete Cardiovascular Support, Healthy Heart And Blood Vessels, 30 Capsules-Pack of 1 : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/gp/product/B08L14WM8T/ref=ox_sc_act_title_2?smid=A1SWZ3U8TAWH3U&amp;th=1">https://www.amazon.in/gp/product/B08L14WM8T/ref=ox_sc_act_title_2?smid=A1SWZ3U8TAWH3U&amp;th=1</a> (accessed May 04, 2023).</li>
+<li>“Buy Doctor’s Best Nattokinase 2,000 Fus - 90 Veggie Caps Online at Low Prices in India - Amazon.in.” <a href="https://www.amazon.in/gp/product/B000BD0RRM/ref=ox_sc_act_title_1?smid=A3RL3HXV6LVMPN&amp;psc=1">https://www.amazon.in/gp/product/B000BD0RRM/ref=ox_sc_act_title_1?smid=A3RL3HXV6LVMPN&amp;psc=1</a> (accessed May 04, 2023).</li>
+<li>“How to Make Natto (with Pictures),” wikiHow. <a href="https://www.wikihow.com/Make-Natto">https://www.wikihow.com/Make-Natto</a> (accessed May 04, 2023).</li>
+<li>“3 Ways to Eat Natto,” wikiHow. <a href="https://www.wikihow.com/Eat-Natto">https://www.wikihow.com/Eat-Natto</a> (accessed May 04, 2023).</li>
+<li><a href="https://www.facebook.com/WebMD">https://www.facebook.com/WebMD</a>, “Health Benefits of Nattokinase,” WebMD. <a href="https://www.webmd.com/diet/health-benefits-nattokinase">https://www.webmd.com/diet/health-benefits-nattokinase</a> (accessed May 04, 2023).</li>
+<li>“Nattō,” Wikipedia. Apr. 11, 2023. Accessed: May 04, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Natt%C5%8D&amp;oldid=1149340882">https://en.wikipedia.org/w/index.php?title=Natt%C5%8D&amp;oldid=1149340882</a></li>
+<li>“How to Make Natto (with Pictures),” wikiHow. <a href="https://www.wikihow.com/Make-Natto">https://www.wikihow.com/Make-Natto</a> (accessed May 04, 2023).</li>
+<li>P. A. M. MPH™ MD, “Antiviral Effects of Nattokinase,” Courageous Discourse™ with Dr. Peter McCullough &amp; John Leake, May 03, 2023. <a href="https://petermcculloughmd.substack.com/p/antiviral-effects-of-nattokinase">https://petermcculloughmd.substack.com/p/antiviral-effects-of-nattokinase</a> (accessed May 04, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4ae0dcb" class="outline-4">
+<h4 id="org4ae0dcb"><span class="section-number-4">5.2.11.</span> Vegggies</h4>
+<div class="outline-text-4" id="text-5-2-11">
+</div>
+<ol class="org-ol">
+<li><a id="orgfb0bc80"></a>Pepper<br />
+<div class="outline-text-5" id="text-5-2-11-1">
+<ul class="org-ul">
+<li>“Scoville scale,” Wikipedia. Jul. 20, 2022. Accessed: Jul. 25, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Scoville_scale&amp;oldid=1099442622">https://en.wikipedia.org/w/index.php?title=Scoville_scale&amp;oldid=1099442622</a></li>
+<li>“Ghost pepper - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Ghost_pepper">https://en.wikipedia.org/wiki/Ghost_pepper</a> (accessed Jul. 25, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgabd08ef"></a>Leafy Veggies<br />
+<div class="outline-text-5" id="text-5-2-11-2">
+<ul class="org-ul">
+<li>“Coriander,” Wikipedia. Apr. 13, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Coriander&amp;oldid=1082545011">https://en.wikipedia.org/w/index.php?title=Coriander&amp;oldid=1082545011</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org0fb8b40"></a>Misc<br />
+<div class="outline-text-5" id="text-5-2-11-3">
+<ul class="org-ul">
+<li><i>ISayOrganic</i></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4eae981" class="outline-4">
+<h4 id="org4eae981"><span class="section-number-4">5.2.12.</span> Fats</h4>
+<div class="outline-text-4" id="text-5-2-12">
+</div>
+<ol class="org-ol">
+<li><a id="orgb26b7a1"></a>Oils, Butter<br />
+<div class="outline-text-5" id="text-5-2-12-1">
+<ul class="org-ul">
+<li><i>Extra Virgin Olive Oil</i>
+<ul class="org-ul">
+<li>Eco Natura</li>
+<li><i>Bragg</i></li>
+</ul></li>
+<li><i>Organic India Cow Ghee</i></li>
+<li><i>Organic India Virgin Coconut Oil</i></li>
+</ul>
+</div>
+</li>
+<li><a id="org60f371b"></a>Seeds<br />
+<div class="outline-text-5" id="text-5-2-12-2">
+<ul class="org-ul">
+<li>Organic India Flax Seeds</li>
+</ul>
+</div>
+</li>
+<li><a id="orga19896c"></a>Nuts<br />
+<div class="outline-text-5" id="text-5-2-12-3">
+<ul class="org-ul">
+<li>Pro Nature Almonds</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org583384c" class="outline-4">
+<h4 id="org583384c"><span class="section-number-4">5.2.13.</span> Beverages</h4>
+<div class="outline-text-4" id="text-5-2-13">
+</div>
+<ol class="org-ol">
+<li><a id="org61bfec1"></a>General<br />
+<div class="outline-text-5" id="text-5-2-13-1">
+<ul class="org-ul">
+<li>“Portal:Drink,” Wikipedia. Apr. 08, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Portal:Drink&amp;oldid=1081554434">https://en.wikipedia.org/w/index.php?title=Portal:Drink&amp;oldid=1081554434</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org53b40a6"></a>Water<br />
+<ol class="org-ol">
+<li><a id="org63cd6f3"></a>Bottled<br />
+<div class="outline-text-6" id="text-5-2-13-2-1">
+<ul class="org-ul">
+<li>P. H. Gleick and H. S. Cooley, “Energy implications of bottled water,” Environ. Res. Lett., vol. 4, no. 1, p. 014009, Jan. 2009, doi: 10.1088/1748-9326/4/1/014009.</li>
+
+<li>P. H. Gleick, Bottled and Sold: The Story Behind Our Obsession with Bottled Water. Island Press, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="org31b513c"></a>Brands<br />
+<div class="outline-text-6" id="text-5-2-13-2-2">
+<ul class="org-ul">
+<li>“S.Pellegrino,” Wikipedia. Jun. 05, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=S.Pellegrino&amp;oldid=1091691603">https://en.wikipedia.org/w/index.php?title=S.Pellegrino&amp;oldid=1091691603</a></li>
+<li>“Perrier,” Wikipedia. Jun. 02, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Perrier&amp;oldid=1091137995">https://en.wikipedia.org/w/index.php?title=Perrier&amp;oldid=1091137995</a></li>
+<li>“Evian,” Wikipedia. Jun. 30, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Evian&amp;oldid=1095836261">https://en.wikipedia.org/w/index.php?title=Evian&amp;oldid=1095836261</a></li>
+<li>“Dasani,” Wikipedia. May 26, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Dasani&amp;oldid=1089998673">https://en.wikipedia.org/w/index.php?title=Dasani&amp;oldid=1089998673</a></li>
+<li>“Bisleri,” Wikipedia. Jun. 22, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bisleri&amp;oldid=1094443817">https://en.wikipedia.org/w/index.php?title=Bisleri&amp;oldid=1094443817</a></li>
+
+<li>“List of bottled water brands,” Wikipedia. Jun. 27, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=List_of_bottled_water_brands&amp;oldid=1095362610">https://en.wikipedia.org/w/index.php?title=List_of_bottled_water_brands&amp;oldid=1095362610</a></li>
+<li>“Carbonated water - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Carbonated_water">https://en.wikipedia.org/wiki/Carbonated_water</a> (accessed Jul. 04, 2022).</li>
+<li>“Mineral water,” Wikipedia. Apr. 27, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mineral_water&amp;oldid=1084853827">https://en.wikipedia.org/w/index.php?title=Mineral_water&amp;oldid=1084853827</a></li>
+<li>“Bottled water,” Wikipedia. Jul. 04, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bottled_water&amp;oldid=1096364792">https://en.wikipedia.org/w/index.php?title=Bottled_water&amp;oldid=1096364792</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org33878c9"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org3176c6c"></a>Tisanes<br />
+<div class="outline-text-5" id="text-5-2-13-3">
+<ul class="org-ul">
+<li>Organic India Tulsi Teas</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf8ec544"></a>Caffeine<br />
+<ol class="org-ol">
+<li><a id="org9882b53"></a>Tea<br />
+<ul class="org-ul">
+<li><a id="org40de278"></a>Iced Tea<br />
+<div class="outline-text-7" id="text-org40de278">
+<ul class="org-ul">
+<li>“Nestea © NESTEA Ready-to-Drink Iced Tea, Lemon Flavour - 200 mL Tetra Pack : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Nestl%C3%A9-NESTEA-Ready-Drink-Flavour/dp/B07W444WNC">https://www.amazon.in/Nestl%C3%A9-NESTEA-Ready-Drink-Flavour/dp/B07W444WNC</a> (accessed Feb. 13, 2023).</li>
+<li>“NESTEA Instant Iced Tea, Green Tea Mint Flavour – 400g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/NESTEA-Instant-Iced-Green-Flavour/dp/B09SHXD9JH">https://www.amazon.in/NESTEA-Instant-Iced-Green-Flavour/dp/B09SHXD9JH</a> (accessed Feb. 13, 2023).</li>
+<li>“NESTEA Instant Iced Tea, Lemon Flavour - 400g Pouch : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/NESTEA-Instant-Lemon-Iced-Pouch/dp/B00ZCKE8WY">https://www.amazon.in/NESTEA-Instant-Lemon-Iced-Pouch/dp/B00ZCKE8WY</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3d3455f"></a>Coffee<br />
+<div class="outline-text-6" id="text-5-2-13-4-2">
+<ul class="org-ul">
+<li>Koinonia</li>
+<li>“Blue Tokai Coffee Roasters,” Blue Tokai Coffee Roasters. <a href="https://bluetokaicoffee.com/">https://bluetokaicoffee.com/</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8fd187b"></a>Sweetened<br />
+<ol class="org-ol">
+<li><a id="org780a045"></a>Juices<br />
+<div class="outline-text-6" id="text-5-2-13-5-1">
+<ul class="org-ul">
+<li>“Raw Pressery Pomegranate Juice, 1000 ml : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Raw-Pressery-Juice-Pomegranate-1L/dp/B0794YKWLW">https://www.amazon.in/Raw-Pressery-Juice-Pomegranate-1L/dp/B0794YKWLW</a> (accessed Feb. 13, 2023).</li>
+<li>“Tropicana Apple 100% Juice, 1L : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Tropicana-Apple-100-Juice-1L/dp/B00SY0AX46">https://www.amazon.in/Tropicana-Apple-100-Juice-1L/dp/B00SY0AX46</a> (accessed Feb. 13, 2023).</li>
+<li>“Tropicana Litchi Delight Fruit Juice , 1000ml : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Tropicana-Litchi-Delight-Fruit-1000ml/dp/B00ST9P72U">https://www.amazon.in/Tropicana-Litchi-Delight-Fruit-1000ml/dp/B00ST9P72U</a> (accessed Feb. 13, 2023).</li>
+<li>“Tropicana Orange 100% Juice - Tetra, 1 L : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Tropicana-Orange-100-Juice-1000ml/dp/B00QPS8KW6">https://www.amazon.in/Tropicana-Orange-100-Juice-1000ml/dp/B00QPS8KW6</a> (accessed Feb. 13, 2023).</li>
+<li>“Tropicana Orange 100% Juice - Tetra, 1 L : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Tropicana-Orange-100-Juice-1000ml/dp/B00QPS8KW6">https://www.amazon.in/Tropicana-Orange-100-Juice-1000ml/dp/B00QPS8KW6</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0eb3dad"></a>Tang<br />
+<div class="outline-text-6" id="text-5-2-13-5-2">
+<ul class="org-ul">
+<li>“Tang Instant Drink Mix, Orange, 500g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Tang-Vitamin-C-Enriched-Instant-Orange/dp/B06XJJWSTH">https://www.amazon.in/Tang-Vitamin-C-Enriched-Instant-Orange/dp/B06XJJWSTH</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org6ea797e"></a>Kombucha<br />
+<div class="outline-text-6" id="text-5-2-13-5-3">
+<ul class="org-ul">
+<li>M. Smith, “Kombucha - Health Benefits and Risks,” WebMD. <a href="https://www.webmd.com/diet/the-truth-about-kombucha">https://www.webmd.com/diet/the-truth-about-kombucha</a> (accessed Feb. 13, 2023).</li>
+<li>“Yogi Teas Organic Green Tea Kombucha (16 Tea Bags) : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Yogi-Teas-Organic-Green-Kombucha/dp/B01ANU9HNM">https://www.amazon.in/Yogi-Teas-Organic-Green-Kombucha/dp/B01ANU9HNM</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf729d11"></a>Alcoholic Beverages<br /></li>
+<li><a id="org555ffb5"></a>Misc<br />
+<div class="outline-text-5" id="text-5-2-13-7">
+<ul class="org-ul">
+<li>“List of Indian drinks,” Wikipedia. Jun. 21, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=List_of_Indian_drinks&amp;oldid=1094283879">https://en.wikipedia.org/w/index.php?title=List_of_Indian_drinks&amp;oldid=1094283879</a></li>
+<li>“Tonic water,” Wikipedia. Jun. 16, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tonic_water&amp;oldid=1093398565">https://en.wikipedia.org/w/index.php?title=Tonic_water&amp;oldid=1093398565</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org301ca16" class="outline-4">
+<h4 id="org301ca16"><span class="section-number-4">5.2.14.</span> Sweets</h4>
+<div class="outline-text-4" id="text-5-2-14">
+</div>
+<ol class="org-ol">
+<li><a id="org453a191"></a>Energy Bars<br />
+<div class="outline-text-5" id="text-5-2-14-1">
+<ul class="org-ul">
+<li>“Nourish Organics – Nutrition That Fits Your Lifestyle.” <a href="https://www.nourishorganics.in/">https://www.nourishorganics.in/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Nourish Organics Bars</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org72234cc"></a>Chocolates<br />
+<div class="outline-text-5" id="text-5-2-14-2">
+<ul class="org-ul">
+<li>“Mason Chocolate – Craftsmen of chocolate.” <a href="https://www.masonchocolate.com/">https://www.masonchocolate.com/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Mason &amp; Co. Chocolates</li>
+<li>Mason &amp; Co. Cacao Nibs</li>
+<li>Mason &amp; Co. Cacao Butter</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>FabCafe Chocolates</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd3d7f85"></a>Sugars<br />
+<ol class="org-ol">
+<li><a id="org37038f9"></a>Fruity<br />
+<div class="outline-text-6" id="text-5-2-14-3-1">
+<ul class="org-ul">
+<li>Phalada Pure And Sure Cocunut Palm Sugar</li>
+<li>Organic India Jaggery</li>
+</ul>
+</div>
+</li>
+<li><a id="org19184ed"></a>Table Sugar<br />
+<div class="outline-text-6" id="text-5-2-14-3-2">
+<ul class="org-ul">
+<li>Organic India Brown Sugar</li>
+</ul>
+</div>
+</li>
+<li><a id="org48a250f"></a>Artificial Sugars<br />
+<div class="outline-text-6" id="text-5-2-14-3-3">
+<ul class="org-ul">
+<li>“Aspartame ‘possibly carcinogenic to humans’, labels WHO expert panel.” <a href="https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623">https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623</a> (accessed Jul. 16, 2023).</li>
+<li>C. Russell, C. Grimes, M. Lawrence, P. Baker, and R. Lindberg, “Too Much Sugar Is a Problem. Non-Nutritive Sweeteners Are Not the Solution. – The Wire Science.” <a href="https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/">https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/</a> (accessed Aug. 02, 2022).</li>
+<li>B. Wilson, “The price of ‘sugar free’: are sweeteners as harmless as we thought?,” The Guardian, Dec. 08, 2022. Accessed: Dec. 09, 2022. [Online]. Available: <a href="https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought">https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought</a></li>
+<li>A. O’Connor, A. Steckelberg, and L. Reiley, “How fake sugars sneak into foods and disrupt metabolic health,” Washington Post. <a href="https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/">https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/</a> (accessed Mar. 10, 2023).</li>
+<li>“WHO advises not to use non-sugar sweeteners for weight control in newly released guideline.” <a href="https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline">https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline</a> (accessed May 16, 2023).</li>
+<li>“Using sugar substitutes to lose weight could cause harm long-term, warns WHO.” <a href="https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353">https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353</a> (accessed May 17, 2023).</li>
+<li>C. Diaz et al., “Artificially sweetened beverages and health outcomes: an umbrella review,” Advances in Nutrition, May 2023, doi: 10.1016/j.advnut.2023.05.010.</li>
+<li>S. Malkan, “Aspartame: Decades of Science Point to Serious Health Risks,” U.S. Right to Know, Jul. 13, 2023. <a href="https://usrtk.org/sweeteners/aspartame_health_risks/">https://usrtk.org/sweeteners/aspartame_health_risks/</a> (accessed Jul. 17, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Organic India Stevia</li>
+</ul>
+</div>
+</li>
+<li><a id="org2f27558"></a>Misc<br />
+<div class="outline-text-6" id="text-5-2-14-3-4">
+<ul class="org-ul">
+<li>Y. Huang et al., “Dietary sugar consumption and health: umbrella review,” BMJ, vol. 381, p. e071609, Apr. 2023, doi: 10.1136/bmj-2022-071609.</li>
+
+<li>Def Leppard, Def Leppard - <i>“Pour Some Sugar On Me”</i> (Official Music Video), (Aug. 27, 2012). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0UIB9Y4OFPs">https://www.youtube.com/watch?v=0UIB9Y4OFPs</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org552c838"></a>Honey<br />
+<div class="outline-text-5" id="text-5-2-14-4">
+<ul class="org-ul">
+<li>Eric Clapton, Honey in Your Hips, (Sep. 06, 2018). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-Lqj1a-Kd4Y">https://www.youtube.com/watch?v=-Lqj1a-Kd4Y</a></li>
+
+<li>Bob Dylan, Bob Dylan - <i>I Want You</i> (Official Audio), (Mar. 12, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-iIS6ZZ9RVA">https://www.youtube.com/watch?v=-iIS6ZZ9RVA</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga4e58fa" class="outline-4">
+<h4 id="orga4e58fa"><span class="section-number-4">5.2.15.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-15">
+<ul class="org-ul">
+<li>“I Say Organic Assorted Sweet Combo of Shakarpara Meetha (100 grams) | Peanut Chikki 150gm | Sesame Chikki 150gm | Indian Snacks | Organic | Homemade and Ready to Eat | Homemade Sweets (Pack of 3) : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1">https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“I Say Organic Shakarpara Meetha, 100 G | Indian Snacks | Homemade &amp; Ready to Eat, | Chini Ke Shakarpare | Sugar Shakarpara | Homemade Shakarpare : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1">https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Organic India Apple Cider Vinegar 500 Ml : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-India-Apple-Cider-Vinegar/dp/B0772N33LP/ref=rvi_sccl_33/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B0772N33LP&amp;psc=1">https://www.amazon.in/Organic-India-Apple-Cider-Vinegar/dp/B0772N33LP/ref=rvi_sccl_33/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B0772N33LP&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Nippattu Snack | Delicious South Indian Namkeen | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Nippat-200g/dp/B00M8TENTU/ref=sr_1_55?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-55&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Nippat-200g/dp/B00M8TENTU/ref=sr_1_55?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-55&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Chiwda Namkeen | Organic Snacks | Pure &amp; Sure Sweet and Salt Chiwda | 200gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chiwda-Namkeen/dp/B09DPFLD3B/ref=sr_1_39?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-39">https://www.amazon.in/Pure-Sure-Organic-Chiwda-Namkeen/dp/B09DPFLD3B/ref=sr_1_39?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-39</a> (accessed Jan. 29, 2023).</li>
+<li>“Organic Peanut Masala-200Gms : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Masala-Peanut/dp/B07SD16MJM/ref=sr_1_38?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-38">https://www.amazon.in/Pure-Sure-Organic-Masala-Peanut/dp/B07SD16MJM/ref=sr_1_38?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-38</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Kara Sev | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Khara-200gm/dp/B07SBW5M2P/ref=sr_1_31?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-31&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Khara-200gm/dp/B07SBW5M2P/ref=sr_1_31?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-31&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“Phalada Pure &amp; Sure Organic Masala Boondi | Organic Snacks | Pure &amp; Sure Thyme Masala Boondi for Raita | 200gms. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Masala-200gms/dp/B09DNX5PGR/ref=sr_1_30?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-30">https://www.amazon.in/Pure-Sure-Organic-Masala-200gms/dp/B09DNX5PGR/ref=sr_1_30?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-30</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Peri Peri Chakli Snack, Delicious Chrunchy Namkeen and Snacks, Ready to Eat Snacks Cholesterol Free No Trans Fats No Preservatives, Pack Of 1 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Delicious-Cholesterol-Preservatives/dp/B09NKSWB58/ref=sr_1_32?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-32">https://www.amazon.in/Pure-Sure-Delicious-Cholesterol-Preservatives/dp/B09NKSWB58/ref=sr_1_32?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-32</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Dark Chocolate | Almond Blueberry Chocolate | Tasty &amp; Healthy Dark Chocolate, 30gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pure &amp; Sure Organic Palak Chakli Snack | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives | Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Palak-Chakli/dp/B07SCZ7TTB/ref=sr_1_15?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-15&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Palak-Chakli/dp/B07SCZ7TTB/ref=sr_1_15?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-15&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Kodubale | South Indian Snacks | Healthy &amp; Delicious Rice Kodubale Snack | Pack Of 1, 200g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Kodbale-200g/dp/B00M8TEKZW/ref=sr_1_11?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-11&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Kodbale-200g/dp/B00M8TEKZW/ref=sr_1_11?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-11&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Methi Sticks 200 Gms | Healthy Snacks, No Preservative or Artificial Flavours : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Preservative-Artificial-Flavours/dp/B09DP9TQQD/ref=sr_1_10?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-10">https://www.amazon.in/Pure-Sure-Preservative-Artificial-Flavours/dp/B09DP9TQQD/ref=sr_1_10?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-10</a> (accessed Jan. 29, 2023).</li>
+<li>“Phalada Pure &amp; Sure Organic Chakli, 200g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chakli-200g/dp/B00M8TEHLO/ref=sr_1_8?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-8&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Chakli-200g/dp/B00M8TEHLO/ref=sr_1_8?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-8&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure and Sure Organic Cocoa Powder | Natural Unsweetened Cocoa Powder | Dark Cocoa Powder for Cake | 200 gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a">https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“StBotanica USDA Apple Cider Vinegar with Mother Vinegar 500 ml Glass Bottle with Natural &amp; Organic Himalayan Apple | Raw, Unfiltered &amp; Non-Pasturized | Boosts Overall Health | No Chemicals : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/StBotanica-Organic-Apple-Vinegar-Mother/dp/B07CL1Y77H/ref=rvi_sccl_34/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07CL1Y77H&amp;th=1">https://www.amazon.in/StBotanica-Organic-Apple-Vinegar-Mother/dp/B07CL1Y77H/ref=rvi_sccl_34/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07CL1Y77H&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Aloo Bhujia | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Aloo-Bhujiya/dp/B07SBW1333/ref=rvi_sccl_31/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07SBW1333&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Aloo-Bhujiya/dp/B07SBW1333/ref=rvi_sccl_31/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07SBW1333&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Beco Organic Toilet Tissue Paper Roll | 220 Pulls Each | Pack of 8 | Eco Friendly, Biodegradable, Chemical Free | Made Tree-Free from Organic Bamboo Pulp | 1760 Tissues : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/gp/product/B07PGP9H8L/ref=ox_sc_saved_title_8?smid=&amp;psc=1">https://www.amazon.in/gp/product/B07PGP9H8L/ref=ox_sc_saved_title_8?smid=&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pintola Organic Wholegrain Brown Rice Cakes (All Natural, Unsalted), 125 g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/gp/product/B083RXY8T3/ref=ox_sc_saved_title_2?smid=ARENK22K2PQRH&amp;th=1">https://www.amazon.in/gp/product/B083RXY8T3/ref=ox_sc_saved_title_2?smid=ARENK22K2PQRH&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“24Mantra Organic Peanut Chikki, (33g*30N). : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1">https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Rustic Art Organic Tea Tree Shaving Soap - 50 Gm : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/gp/product/B07P98XN95/ref=ox_sc_act_title_1?smid=A1R2N8LRMU31FU&amp;th=1">https://www.amazon.in/gp/product/B07P98XN95/ref=ox_sc_act_title_1?smid=A1R2N8LRMU31FU&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9294302" class="outline-2">
+<h2 id="org9294302"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org243245e" class="outline-3">
+<h3 id="org243245e"><span class="section-number-3">6.1.</span> Music</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgbf6814e" class="outline-4">
+<h4 id="orgbf6814e"><span class="section-number-4">6.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>Dire Straits, Dire Straits - <i>Heavy Fuel</i>, (Feb. 23, 2010). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=EExahMsBoWM">https://www.youtube.com/watch?v=EExahMsBoWM</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org95aaaad" class="outline-2">
+<h2 id="org95aaaad"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgabb59c0" class="outline-3">
+<h3 id="orgabb59c0"><span class="section-number-3">7.1.</span> Our Preferences</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgf6e02ef" class="outline-4">
+<h4 id="orgf6e02ef"><span class="section-number-4">7.1.1.</span> <b>Our</b> General Preferences</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<ul class="org-ul">
+<li>Certified 100% Organic
+<ul class="org-ul">
+<li>Certifications
+<ul class="org-ul">
+<li><i>“Organic and Quality Certification, Earthseer, GMP, HACCP | Organic India,”</i> <a href="https://www.organicindia.com">https://www.organicindia.com</a>. <a href="https://www.organicindia.com/organic-and-quality-certification">https://www.organicindia.com/organic-and-quality-certification</a> (accessed Aug. 14, 2020).</li>
+<li>International
+<ul class="org-ul">
+<li>USDA Organic</li>
+<li>IN BIO 149 NON EU Agriculture</li>
+<li>ES-ECO-019-CT EU Agriculture</li>
+</ul></li>
+<li>Indian
+<ul class="org-ul">
+<li>Jaivik Bharat</li>
+<li>India Organic</li>
+<li>IMO Control India</li>
+<li>FSSAI</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Animal products (like dairy, mutton, chicken, etc.) from grass fed, farm raised animals</li>
+<li>Local, indigenous/tradional cuisines</li>
+<li>No Plastic Packaging</li>
+<li>Yum</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf489be0" class="outline-4">
+<h4 id="orgf489be0"><span class="section-number-4">7.1.2.</span> Stores, Brands, Products (with aforementioned preferences, or trying to get there or beyond):</h4>
+<div class="outline-text-4" id="text-7-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8fe03b2"></a>Stores<br />
+<div class="outline-text-5" id="text-7-1-2-1">
+<ul class="org-ul">
+<li><i>Fab India</i>
+<ul class="org-ul">
+<li>“Fabindia | Shop for Handwoven Garments &amp; Home Furnishings.” <a href="https://www.fabindia.com/">https://www.fabindia.com/</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>ISayOrganic</i>
+<ul class="org-ul">
+<li>“I Say Organic,” I Say Organic. <a href="https://www.isayorganic.com/">https://www.isayorganic.com/</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>The Goodness Store</i>, Courtyard Market, Nirvana Country, Sector 50, Gurgaon.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6d0aa2f"></a>Brands<br />
+<div class="outline-text-5" id="text-7-1-2-2">
+<ul class="org-ul">
+<li>Phalada Pure and Sure
+<ul class="org-ul">
+<li>“Buy Organic Products Online in India,” Phalada Pure &amp; Sure. <a href="https://pureandsure.in/">https://pureandsure.in/</a> (accessed Mar. 18, 2022).</li>
+</ul></li>
+<li>Organic India</li>
+<li>24 Mantra</li>
+<li>Pro Nature</li>
+<li>Navdayna</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Nourish Organics
+<ul class="org-ul">
+<li>“Nourish Organics – Nutrition That Fits Your Lifestyle.” <a href="https://www.nourishorganics.in/">https://www.nourishorganics.in/</a> (accessed Mar. 18, 2022).</li>
+</ul></li>
+<li>“Mason Chocolate – Craftsmen of chocolate.” <a href="https://www.masonchocolate.com/">https://www.masonchocolate.com/</a> (accessed Mar. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org6112b3d"></a>Cafes<br />
+<div class="outline-text-5" id="text-7-1-2-3">
+<ul class="org-ul">
+<li><b>FabCafe</b>
+<ul class="org-ul">
+<li>“Fabcafe,” Fabcafe. <a href="https://www.fabcafe.menu">https://www.fabcafe.menu</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>Organic Express</i>, Baani Square, Gurgaon.</li>
+<li><i>C'est La Vie</i>, Worldmark Mall, Gurgaon.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge988026" class="outline-4">
+<h4 id="orge988026"><span class="section-number-4">7.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-7-1-3">
+<ul class="org-ul">
+<li>“Propagate Scotland Re Thinking Local Food.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.propagate.org.uk/">https://www.propagate.org.uk/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa69c0f" class="outline-3">
+<h3 id="orgaa69c0f"><span class="section-number-3">7.2.</span> Flavor</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>Ahn, Yong-Yeol, Sebastian E. Ahnert, James P. Bagrow, and Albert-László Barabási. <b>“Flavor Network and the Principles of Food Pairing.”</b> Scientific Reports 1, no. 1 (December 15, 2011): 196. <a href="https://doi.org/10.1038/srep00196">https://doi.org/10.1038/srep00196</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ef6460" class="outline-3">
+<h3 id="org9ef6460"><span class="section-number-3">7.3.</span> Fasting</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>T. Cottrell and D. Zigmond, <b>Buddha’s Diet: The Ancient Art of Losing Weight Without Losing Your Mind.</b> Hachette UK, 2016.</li>
+<li>J. Moore and D. J. Fung, <b>The Complete Guide to Fasting: Heal Your Body Through Intermittent, Alternate-Day, and Extended Fasting.</b> Victory Belt Publishing, 2016.</li>
+<li>D. J. Fung, E. Mayer, and M. Ramos, <b>Life in the Fasting Lane: How to Make Intermittent Fasting a Lifestyle - and Reap the Benefits of Weight Loss and Better Health.</b> Hay House, Inc, 2020.</li>
+<li>S. P. PhD, <b>The Circadian Diabetes Code: Discover the Right Time to Eat, Sleep, and Exercise to Prevent and Reverse Prediabetes and Diabetes.</b> Harmony/Rodale, 2021.</li>
+<li>“Hunger Strikes,” Visualizing Impact. <a href="https://visualizingimpact.org/visuals/hunger-strikes">https://visualizingimpact.org/visuals/hunger-strikes</a> (accessed Jan. 28, 2022).</li>
+
+<li>S. Cienfuegos et al., “Effects of 4- and 6-h Time-Restricted Feeding on Weight and Cardiometabolic Health: A Randomized Controlled Trial in Adults with Obesity,” Cell Metabolism, vol. 32, no. 3, pp. 366-378.e3, Sep. 2020, doi: 10.1016/j.cmet.2020.06.018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2011dce" class="outline-3">
+<h3 id="org2011dce"><span class="section-number-3">7.4.</span> Food Safety</h3>
+<div class="outline-text-3" id="text-7-4">
+</div>
+<div id="outline-container-org1a83813" class="outline-4">
+<h4 id="org1a83813"><span class="section-number-4">7.4.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<ul class="org-ul">
+<li>“Center for Food Safety | Home,” Center for Food Safety. <a href="https://www.centerforfoodsafety.org/">https://www.centerforfoodsafety.org/</a> (accessed Aug. 11, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. W. Group, “Dirty Dozen™ Fruits and Vegetables with the Most Pesticides.” Accessed: Nov. 16, 2023. [Online]. Available: <a href="https://www.ewg.org/foodnews/dirty-dozen.php">https://www.ewg.org/foodnews/dirty-dozen.php</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4782e8f" class="outline-4">
+<h4 id="org4782e8f"><span class="section-number-4">7.4.2.</span> Food Posioning</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<ul class="org-ul">
+<li>“This is how much watermelon it’d take to kill you,” Popular Science, Mar. 23, 2019. <a href="https://www.popsci.com/how-many-avocados-it-would-take-to-kill-you/">https://www.popsci.com/how-many-avocados-it-would-take-to-kill-you/</a> (accessed Aug. 02, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb46a3c" class="outline-3">
+<h3 id="orgfb46a3c"><span class="section-number-3">7.5.</span> Industrial Food</h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-org39ef6ae" class="outline-4">
+<h4 id="org39ef6ae"><span class="section-number-4">7.5.1.</span> Processed Food</h4>
+<div class="outline-text-4" id="text-7-5-1">
+<ul class="org-ul">
+<li>“Sickeningly Sweet,” U.S. Right to Know. <a href="https://usrtk.org/sweeteners/">https://usrtk.org/sweeteners/</a> (accessed Mar. 25, 2022).
+<ul class="org-ul">
+<li>S. Malkan, “Aspartame: Decades of Science Point to Serious Health Risks,” U.S. Right to Know, Nov. 15, 2020. <a href="https://usrtk.org/sweeteners/aspartame_health_risks/">https://usrtk.org/sweeteners/aspartame_health_risks/</a> (accessed Mar. 25, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Moss, <b>Hooked: How Processed Food Became Addictive.</b> WH Allen, 2021.
+<ul class="org-ul">
+<li>M. Moss, “Op-Ed: The processed food industry makes us desperate to lose weight — and then profits from it,” Los Angeles Times, Mar. 09, 2022. <a href="https://www.latimes.com/opinion/story/2022-03-09/op-ed-processed-food-profits-lose-weight-noom">https://www.latimes.com/opinion/story/2022-03-09/op-ed-processed-food-profits-lose-weight-noom</a> (accessed Mar. 13, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“You Can Identify Whether Your Food Is Ultra-Processed on This New Database,” Verywell Health. <a href="https://www.verywellhealth.com/a-new-tool-compares-the-processing-levels-of-food-5324869">https://www.verywellhealth.com/a-new-tool-compares-the-processing-levels-of-food-5324869</a> (accessed Jun. 14, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga2af2ff" class="outline-4">
+<h4 id="orga2af2ff"><span class="section-number-4">7.5.2.</span> Synthetic Food</h4>
+<div class="outline-text-4" id="text-7-5-2">
+<ul class="org-ul">
+<li><b>“The Corporate Push for Synthetic Foods: False solutions that endanger our health and damage the planet,”</b> Navdanya international, Mar. 31, 2022. <a href="https://navdanyainternational.org/publications/the-corporate-push-for-synthetic-foods/">https://navdanyainternational.org/publications/the-corporate-push-for-synthetic-foods/</a> (accessed Apr. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga19e0e7" class="outline-4">
+<h4 id="orga19e0e7"><span class="section-number-4">7.5.3.</span> Packaging</h4>
+<div class="outline-text-4" id="text-7-5-3">
+<ul class="org-ul">
+<li>“Revealed: the dangerous chemicals in your food wrappers,” The Guardian, Mar. 24, 2022. Accessed: Mar. 25, 2022. [Online]. Available: <a href="https://www.theguardian.com/environment/2022/mar/24/revealed-pfas-dangerous-chemicals-food-wrappers">https://www.theguardian.com/environment/2022/mar/24/revealed-pfas-dangerous-chemicals-food-wrappers</a></li>
+
+<li>E. S. Gruber et al., “To Waste or Not to Waste: Questioning Potential Health Risks of Micro- and Nanoplastics with a Focus on Their Ingestion and Potential Carcinogenicity,” Expo Health, Mar. 2022, doi: 10.1007/s12403-022-00470-8.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba404fb" class="outline-3">
+<h3 id="orgba404fb"><span class="section-number-3">7.6.</span> Special Diets</h3>
+<div class="outline-text-3" id="text-7-6">
+</div>
+<div id="outline-container-orgd209930" class="outline-4">
+<h4 id="orgd209930"><span class="section-number-4">7.6.1.</span> Fat Loss Diet</h4>
+<div class="outline-text-4" id="text-7-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4d9b8e8"></a>Unconventional Resources<br />
+<div class="outline-text-5" id="text-7-6-1-1">
+<ul class="org-ul">
+<li>J. Fung, <b>The Obesity Code Cookbook: recipes to help you manage your insulin, lose weight, and improve your health.</b> Scribe Publications, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd22b046"></a>Misc<br />
+<div class="outline-text-5" id="text-7-6-1-2">
+<ul class="org-ul">
+<li>J. Volek and A. Campbell, <i>Men’s Health TNT Diet: The Explosive New Plan to Blast Fat, Build Muscle, and Get Healthy in 12 Weeks.</i> Potter/Ten Speed/Harmony/Rodale, 2008.</li>
+
+<li>D. P. Dukan and P. Dukan, <i>The Dukan Diet.</i> Hachette UK, 2010.</li>
+
+<li>L. Vaccariello and D. M. Stokes, <i>Flat Belly Diet! for Men.</i> Potter/Ten Speed/Harmony/Rodale, 2010.</li>
+
+<li>P. Holford and K. Staples, <i>Burn Fat Fast: The alternate-day low-GL diet plan.</i> Hachette UK, 2013.</li>
+
+<li>P. Makhija, <i>Eat Delete : The Anti-Quick Fix Approach.</i> Harper Collins, 2012.</li>
+
+<li>R. Diwekar, <i>Don't Lose Your Mind, Lose Your Weight.</i> Random House India, 2011.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org88df17b" class="outline-4">
+<h4 id="org88df17b"><span class="section-number-4">7.6.2.</span> Sports Diet</h4>
+<div class="outline-text-4" id="text-7-6-2">
+<ul class="org-ul">
+<li>N. Clark, <i>Nancy Clark's Sports Nutrition Guidebook.</i> 4th Edition. Human Kinetics, 2008.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgedaa902" class="outline-4">
+<h4 id="orgedaa902"><span class="section-number-4">7.6.3.</span> Strength Training Diet</h4>
+<div class="outline-text-4" id="text-7-6-3">
+<ul class="org-ul">
+<li>“A Simple Guide to Eating for New Trainees | Ray Gillenwater,” Starting Strength. <a href="https://startingstrength.com/training/a-simple-guide-to-eating-for-new-trainees">https://startingstrength.com/training/a-simple-guide-to-eating-for-new-trainees</a> (accessed Jul. 25, 2022).</li>
+
+<li>“Protein and Barbell Training | Robert Santana,” Starting Strength. <a href="https://startingstrength.com/article/protein-and-barbell-training">https://startingstrength.com/article/protein-and-barbell-training</a> (accessed Jul. 25, 2022).</li>
+
+<li>P. J. Atherton and K. Smith, “Muscle protein synthesis in response to nutrition and exercise,” J Physiol, vol. 590, no. Pt 5, pp. 1049–1057, Mar. 2012, doi: 10.1113/jphysiol.2011.225003.</li>
+
+<li>“Protein | Mark Rippetoe,” Starting Strength. <a href="https://startingstrength.com/article/protein">https://startingstrength.com/article/protein</a> (accessed Jul. 25, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc06d18b" class="outline-4">
+<h4 id="orgc06d18b"><span class="section-number-4">7.6.4.</span> Vegan Diet</h4>
+<div class="outline-text-4" id="text-7-6-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgde36e78"></a>General<br />
+<div class="outline-text-5" id="text-7-6-4-1">
+<ul class="org-ul">
+<li>P. Singer, Why Vegan? UK ; USA: Penguin Classics, 2020.</li>
+
+<li>L. Wright, The Routledge Handbook of Vegan Studies. Routledge, 2021.</li>
+
+<li>A. L. Barabási, G. Menichetti, And J. Loscalzo, <b>“The Unmapped Chemical Complexity Of Our Diet,”</b> Nature Food, Vol. 1, No. 1, Art. No. 1, Jan. 2020, doi: 10.1038/s43016-019-0005-1.</li>
+
+<li>A. Trauger, <b>“The vegan industrial complex: the political ecology of not eating animals,”</b> Journal of Political Ecology, vol. 29, no. 1, Art. no. 1, Oct. 2022, doi: 10.2458/jpe.3052.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org7e96514"></a>Cookbooks<br />
+<div class="outline-text-5" id="text-7-6-4-2">
+<ul class="org-ul">
+<li>P. for the E. T. of Animals, The PETA Celebrity Cookbook. Lantern Books, 2002.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Order PETA India’s FREE Vegan Starter Kit.” <a href="https://secure.petaindia.com/page/30570/data/1?locale=en-GB">https://secure.petaindia.com/page/30570/data/1?locale=en-GB</a> (accessed Nov. 06, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Order Your FREE Vegan Starter Kit With Recipes and Tips,” PETA, Jun. 28, 2010. <a href="https://www.peta.org/living/food/free-vegan-starter-kit/">https://www.peta.org/living/food/free-vegan-starter-kit/</a> (accessed Nov. 06, 2022).</li>
+
+<li>B. Watson, Vegan Fast Food: Copycat Burgers, Tacos, Fried Chicken, Pizza, Milkshakes, and More! Harvard Common Press, 2022.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga96a573" class="outline-3">
+<h3 id="orga96a573"><span class="section-number-3">7.7.</span> Food Crisis</h3>
+<div class="outline-text-3" id="text-7-7">
+</div>
+<div id="outline-container-orge78a3ae" class="outline-4">
+<h4 id="orge78a3ae"><span class="section-number-4">7.7.1.</span> General</h4>
+<div class="outline-text-4" id="text-7-7-1">
+<ul class="org-ul">
+<li>“New Report: Sowing Hunger, Reaping Profits – A Food Crisis by Design,” Navdanya international, Jul. 14, 2022. <a href="https://navdanyainternational.org/new-report-sowing-hunger-reaping-profits-a-food-crisis-by-design/">https://navdanyainternational.org/new-report-sowing-hunger-reaping-profits-a-food-crisis-by-design/</a> (accessed Aug. 29, 2022).</li>
+<li>“OCA and Vandana Shiva on the ‘Food Crisis.’” <a href="https://www.organicconsumers.org/blog/oca-and-vandana-shiva-food-crisis">https://www.organicconsumers.org/blog/oca-and-vandana-shiva-food-crisis</a> (accessed Jul. 28, 2022).</li>
+<li>“Food Crisis,” New England Complex Systems Institute. <a href="https://necsi.edu/food-crisis">https://necsi.edu/food-crisis</a> (accessed Jul. 31, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org62b76cf" class="outline-4">
+<h4 id="org62b76cf"><span class="section-number-4">7.7.2.</span> Famine</h4>
+<div class="outline-text-4" id="text-7-7-2">
+<ul class="org-ul">
+<li>“How we could end child hunger by making different choices | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/how-we-could-end-child-hunger-by-making-different-choices">https://aeon.co/essays/how-we-could-end-child-hunger-by-making-different-choices</a> (accessed May 03, 2022).</li>
+
+<li>M. Mukerjee, Churchill’s Secret War: The British Empire and the Ravaging of India during World War II. Penguin Random House India Private Limited, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org460e963" class="outline-3">
+<h3 id="org460e963"><span class="section-number-3">7.8.</span> Sludge</h3>
+<div class="outline-text-3" id="text-7-8">
+<ul class="org-ul">
+<li>“Sewage sludge,” Wikipedia. Jul. 06, 2022. Accessed: Aug. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sewage_sludge&amp;oldid=1096683844">https://en.wikipedia.org/w/index.php?title=Sewage_sludge&amp;oldid=1096683844</a></li>
+
+<li>“Sewage Sludge - an overview | ScienceDirect Topics.” <a href="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/sewage-sludge">https://www.sciencedirect.com/topics/earth-and-planetary-sciences/sewage-sludge</a> (accessed Aug. 11, 2022).</li>
+<li>“Center for Food Safety | Issues | | Sewage Sludge,” Center for Food Safety. <a href="https://www.centerforfoodsafety.org/issues/1050/sewage-sludge">https://www.centerforfoodsafety.org/issues/1050/sewage-sludge</a> (accessed Aug. 11, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org191ce79" class="outline-2">
+<h2 id="org191ce79"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>R. Hobson and M. Hobson, “We Spoke to Vandana Shiva About the Future of Food,” Vice, Oct. 07, 2016. <a href="https://www.vice.com/en/article/xymgkj/we-spoke-to-vandana-shiva-about-the-future-of-food">https://www.vice.com/en/article/xymgkj/we-spoke-to-vandana-shiva-about-the-future-of-food</a> (accessed Nov. 19, 2022).</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-26 Tue 13:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
