@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-27 Wed 14:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Feminism</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Feminism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6beae87">1. General</a></li>
+<li><a href="#org0daa5df">2. SnT</a>
+<ul>
+<li><a href="#orgda97ad2">2.1. Facts</a>
+<ul>
+<li><a href="#org618efc1">2.1.1. History</a></li>
+<li><a href="#org3ccc3c7">2.1.2. News</a></li>
+</ul>
+</li>
+<li><a href="#org0047d6d">2.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#orgd291e8a">3. Orgs</a></li>
+<li><a href="#org6d9e160">4. STEMM</a>
+<ul>
+<li><a href="#orgee77b68">4.1. Ecology</a></li>
+<li><a href="#orgd8f7b64">4.2. CSE</a>
+<ul>
+<li><a href="#org1ecb001">4.2.1. Data Science</a></li>
+</ul>
+</li>
+<li><a href="#org5e1e9c9">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga87db7d">5. World</a>
+<ul>
+<li><a href="#org10536ad">5.1. Mgmt</a></li>
+<li><a href="#orgd041b49">5.2. Economics</a>
+<ul>
+<li><a href="#org293c61c">5.2.1. History</a></li>
+<li><a href="#orgd8cb625">5.2.2. Orgs</a></li>
+<li><a href="#org8ff44b2">5.2.3. Handbooks</a></li>
+<li><a href="#orgace951c">5.2.4. ST</a></li>
+<li><a href="#orgced3707">5.2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8720136">5.3. Law</a></li>
+<li><a href="#org23a0602">5.4. Politics</a></li>
+</ul>
+</li>
+<li><a href="#orgbd9b18e">6. Arts</a>
+<ul>
+<li><a href="#orgb3f4c1a">6.1. Music</a></li>
+<li><a href="#orgb0b80f3">6.2. Visuals</a></li>
+<li><a href="#org903d483">6.3. Literature</a></li>
+<li><a href="#org80e4a1d">6.4. Humor</a></li>
+</ul>
+</li>
+<li><a href="#org18e09fe">7. Critical Studies</a></li>
+<li><a href="#orgf83b0bb">8. Special Topics</a>
+<ul>
+<li><a href="#org34e23ff">8.1. Militant Feminism</a>
+<ul>
+<li><a href="#org0ec0a75">8.1.1. General</a></li>
+<li><a href="#org633115e">8.1.2. Kurdish Women</a></li>
+<li><a href="#orgd685373">8.1.3. India</a></li>
+</ul>
+</li>
+<li><a href="#orge3d5257">8.2. Radical Feminism</a></li>
+<li><a href="#org6d901b2">8.3. PeaceWomen</a></li>
+<li><a href="#org6307c9a">8.4. Partiarchy</a>
+<ul>
+<li><a href="#orgb9a982f">8.4.1. General</a></li>
+<li><a href="#org4d22461">8.4.2. Special Topics</a></li>
+<li><a href="#org14c711e">8.4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8098e2b">8.5. Nudity</a></li>
+<li><a href="#org25605d3">8.6. Sexuality</a></li>
+<li><a href="#org45b7009">8.7. India</a>
+<ul>
+<li><a href="#org5f61ebd">8.7.1. General</a></li>
+<li><a href="#org57a3097">8.7.2. SnT</a></li>
+<li><a href="#orgbf49eb5">8.7.3. Publishers</a></li>
+<li><a href="#org0c1cdd6">8.7.4. Orgs</a></li>
+<li><a href="#org7275a29">8.7.5. World</a></li>
+<li><a href="#org35ec4e1">8.7.6. Special Topics</a></li>
+<li><a href="#org5f41230">8.7.7. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcc5a086">9. Miscellaneous</a></li>
+<li><a href="#orge7f06d8">10. Notes</a></li>
+<li><a href="#org5d5de2e">11. Projects</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org6beae87" class="outline-2">
+<h2 id="org6beae87"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>M. Walters, <i>Feminism: A Very Short Introduction.</i> OUP Oxford, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0daa5df" class="outline-2">
+<h2 id="org0daa5df"><span class="section-number-2">2.</span> SnT</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgda97ad2" class="outline-3">
+<h3 id="orgda97ad2"><span class="section-number-3">2.1.</span> Facts</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org618efc1" class="outline-4">
+<h4 id="org618efc1"><span class="section-number-4">2.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgcb6d400"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<ul class="org-ul">
+<li>L. Delap, Feminisms: A Global History. Penguin UK, 2020.</li>
+
+<li>Sabloff, Paula L. W. <b>“The Political Agency of Royal Women: A Comparative Analysis of Eight Premodern States According to Societal Rules and Roles.”</b> Journal of Archaeological Research 28, no. 1 (March 1, 2020): 53–97. <a href="https://doi.org/10.1007/s10814-019-09131-y">https://doi.org/10.1007/s10814-019-09131-y</a>.
+<ul class="org-ul">
+<li><b>“What big history says about how royal women exercise power – Laura Spinney | Aeon Ideas,"</b> Aeon. <a href="https://aeon.co/ideas/what-big-history-says-about-how-royal-women-exercise-power">https://aeon.co/ideas/what-big-history-says-about-how-royal-women-exercise-power</a> (accessed Dec. 03, 2020).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org9f336bf"></a>Biography<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>“Silvia Federici,” Wikipedia. May 04, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Silvia_Federici&amp;oldid=1086159432">https://en.wikipedia.org/w/index.php?title=Silvia_Federici&amp;oldid=1086159432</a></li>
+
+<li>“Angela Davis,” Wikipedia. Jul. 30, 2022. Accessed: Aug. 05, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Angela_Davis&amp;oldid=1101404968">https://en.wikipedia.org/w/index.php?title=Angela_Davis&amp;oldid=1101404968</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org3ccc3c7" class="outline-4">
+<h4 id="org3ccc3c7"><span class="section-number-4">2.1.2.</span> News</h4>
+</div>
+</div>
+<div id="outline-container-org0047d6d" class="outline-3">
+<h3 id="org0047d6d"><span class="section-number-3">2.2.</span> Geography</h3>
+</div>
+</div>
+<div id="outline-container-orgd291e8a" class="outline-2">
+<h2 id="orgd291e8a"><span class="section-number-2">3.</span> Orgs</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>“Home,” Women’s &amp; Gender Studies at MIT. <a href="http://wgs.mit.edu/home">http://wgs.mit.edu/home</a> (accessed Apr. 17, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d9e160" class="outline-2">
+<h2 id="org6d9e160"><span class="section-number-2">4.</span> STEMM</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgee77b68" class="outline-3">
+<h3 id="orgee77b68"><span class="section-number-3">4.1.</span> Ecology</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>V. Shiva and M. Mies, <b>Ecofeminism.</b> Zed Books Ltd., 2014.
+<ul class="org-ul">
+<li>Dated, radical, impractical for some, but maybe, THE right stance on feminism. Indian women cannot not read it.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Salleh, Ecofeminism as Politics: Nature, Marx and the Postmodern. Bloomsbury Academic, 1997.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Making Peace with the Earth – Through Diversity, Mutuality, Non-Violence &amp; Care – An Ecofeminist Manifesto,” Navdanya international, Jun. 04, 2023. <a href="https://navdanyainternational.org/publications/making-peace-with-the-earth-an-ecofeminist-manifesto/">https://navdanyainternational.org/publications/making-peace-with-the-earth-an-ecofeminist-manifesto/</a> (accessed Jun. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Ecofeminism &amp; Ecowomanism - YouTube.”</b> <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM1daXDFpR5egW5gSrMsurR">https://www.youtube.com/playlist?list=PLfoNnUIQBvM1daXDFpR5egW5gSrMsurR</a>- (accessed Jun. 15, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8f7b64" class="outline-3">
+<h3 id="orgd8f7b64"><span class="section-number-3">4.2.</span> CSE</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org1ecb001" class="outline-4">
+<h4 id="org1ecb001"><span class="section-number-4">4.2.1.</span> Data Science</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>C. D’Ignazio and L. F. Klein, <b>Data Feminism.</b> MIT Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. C. Perez, <b>Invisible Women: Data Bias in a World Designed for Men.</b> Abrams, Incorporated, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Herre, P. Arriagada, E. Ortiz-Ospina, H. Ritchie, J. Hasell, and M. Roser, “Women’s Rights,” Our World in Data, May 2023, Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://ourworldindata.org/women-rights">https://ourworldindata.org/women-rights</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e1e9c9" class="outline-3">
+<h3 id="org5e1e9c9"><span class="section-number-3">4.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>C. Napp and T. Breda, “The stereotype that girls lack talent: A worldwide investigation,” Science Advances, vol. 8, no. 10, p. eabm3689, doi: 10.1126/sciadv.abm3689.</li>
+
+<li>“When will economists embrace the quantum revolution? | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution">https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution</a> (accessed Feb. 25, 2022).</li>
+
+<li>C. Fine, <b>Testosterone Rex: Unmaking the Myths of Our Gendered Minds.</b> London: Icon Books Ltd, 2017.</li>
+
+<li>A. Saini, Inferior: The True Power of Women and the Science that Shows it. HarperCollins Publishers Australia, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga87db7d" class="outline-2">
+<h2 id="orga87db7d"><span class="section-number-2">5.</span> World</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org10536ad" class="outline-3">
+<h3 id="org10536ad"><span class="section-number-3">5.1.</span> Mgmt</h3>
+</div>
+<div id="outline-container-orgd041b49" class="outline-3">
+<h3 id="orgd041b49"><span class="section-number-3">5.2.</span> Economics</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org293c61c" class="outline-4">
+<h4 id="org293c61c"><span class="section-number-4">5.2.1.</span> History</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>G. Becchio, A History of Feminist and Gender Economics. Routledge, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8cb625" class="outline-4">
+<h4 id="orgd8cb625"><span class="section-number-4">5.2.2.</span> Orgs</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>“Home.” Accessed: Nov. 15, 2023. [Online]. Available: <a href="https://www.iaffe.org/">https://www.iaffe.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ff44b2" class="outline-4">
+<h4 id="org8ff44b2"><span class="section-number-4">5.2.3.</span> Handbooks</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<ul class="org-ul">
+<li>G. Berik and E. Kongar, The Routledge Handbook of Feminist Economics. Routledge, 2021.</li>
+
+<li>“Routledge IAFFE Advances in Feminist Economics.” <a href="http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share</a> (accessed Dec. 05, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgace951c" class="outline-4">
+<h4 id="orgace951c"><span class="section-number-4">5.2.4.</span> ST</h4>
+<div class="outline-text-4" id="text-5-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org3e5751f"></a>Jobs<br />
+<div class="outline-text-5" id="text-5-2-4-1">
+<ul class="org-ul">
+<li>The Onion’s Tips For Succeeding As A Woman In The Workplace, (Nov. 18, 2013). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GXZ6oDG9mnY">https://www.youtube.com/watch?v=GXZ6oDG9mnY</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Frankel, Nice Girls Don’t Get the Corner Office: 101 Unconscious Mistakes Women Make That Sabotage Their Careers. Grand Central Publishing, 2004.</li>
+<li>L. P. Frankel, Nice Girls Don’t Get the Corner Office: Unconscious Mistakes Women Make That Sabotage Their Careers. Hachette UK, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4e37dd9"></a>India<br />
+<div class="outline-text-5" id="text-5-2-4-2">
+<ul class="org-ul">
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+<li>S. Nigam, “Economic Abuse and Legal Remedies in India: A Qualitative Review.” Rochester, NY, Jan. 20, 2023. doi: 10.2139/ssrn.4350642.</li>
+<li>S. Singh, “Economic Abuse and Family Violence Across Cultures: Gendering Money and Assets Through Coercive Control,” in Criminalising Coercive Control : Family Violence and the Criminal Law, M. McMahon and P. McGorrery, Eds., Singapore: Springer, 2020, pp. 51–72. doi: 10.1007/978-981-15-0653-6<sub>3</sub>.</li>
+<li>P. Chowbey, “Women’s narratives of economic abuse and financial strategies in Britain and South Asia,” Psychology of Violence, vol. 7, no. 3, pp. 459–468, 2017, doi: 10.1037/vio0000110.</li>
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgced3707" class="outline-4">
+<h4 id="orgced3707"><span class="section-number-4">5.2.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<ul class="org-ul">
+<li>T. C. Collective, A. Chatzidakis, J. Hakim, J. Litter, and C. Rottenberg, The Care Manifesto: The Politics of Interdependence. Verso Books, 2020.</li>
+
+<li>C. Beasley, Sexual Economyths: Conceiving a Feminist Economics. St. Martin’s Press, 1994.</li>
+
+<li>C. Bauhardt and W. Harcourt, Feminist Political Ecology and the Economics of Care: In Search of Economic Alternatives. Routledge, 2018.</li>
+
+<li>J. Ghosh, Ed., Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies, 1st edition. Routledge, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8720136" class="outline-3">
+<h3 id="org8720136"><span class="section-number-3">5.3.</span> Law</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>B. Herre, P. Arriagada, E. Ortiz-Ospina, H. Ritchie, J. Hasell, and M. Roser, “Women’s Rights,” Our World in Data, May 2023, Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://ourworldindata.org/women-rights">https://ourworldindata.org/women-rights</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23a0602" class="outline-3">
+<h3 id="org23a0602"><span class="section-number-3">5.4.</span> Politics</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>M. Shamshiri and S. Thomson, Eds., She Who Struggles: Revolutionary Women Who Shaped the World. Pluto Press, 2023.
+<ul class="org-ul">
+<li>“She Who Struggles,” Pluto Press. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.plutobooks.com/9780745348247/she-who-struggles">https://www.plutobooks.com/9780745348247/she-who-struggles</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd9b18e" class="outline-2">
+<h2 id="orgbd9b18e"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgb3f4c1a" class="outline-3">
+<h3 id="orgb3f4c1a"><span class="section-number-3">6.1.</span> Music</h3>
+</div>
+<div id="outline-container-orgb0b80f3" class="outline-3">
+<h3 id="orgb0b80f3"><span class="section-number-3">6.2.</span> Visuals</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>M. Noroc, The Atlas of Beauty: Women of the World in 500 Portraits. Penguin UK, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org903d483" class="outline-3">
+<h3 id="org903d483"><span class="section-number-3">6.3.</span> Literature</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li><b>“Can you enjoy romance fiction and be a feminist? – Batya Ungar-Sargon | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/can-you-enjoy-romance-fiction-and-be-a-feminist">https://aeon.co/essays/can-you-enjoy-romance-fiction-and-be-a-feminist</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org80e4a1d" class="outline-3">
+<h3 id="org80e4a1d"><span class="section-number-3">6.4.</span> Humor</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>The Onion’s Tips For Succeeding As A Woman In The Workplace, (Nov. 18, 2013). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GXZ6oDG9mnY">https://www.youtube.com/watch?v=GXZ6oDG9mnY</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org18e09fe" class="outline-2">
+<h2 id="org18e09fe"><span class="section-number-2">7.</span> Critical Studies</h2>
+</div>
+<div id="outline-container-orgf83b0bb" class="outline-2">
+<h2 id="orgf83b0bb"><span class="section-number-2">8.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org34e23ff" class="outline-3">
+<h3 id="org34e23ff"><span class="section-number-3">8.1.</span> Militant Feminism</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-org0ec0a75" class="outline-4">
+<h4 id="org0ec0a75"><span class="section-number-4">8.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org633115e" class="outline-4">
+<h4 id="org633115e"><span class="section-number-4">8.1.2.</span> Kurdish Women</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<ul class="org-ul">
+<li>M. Knapp (Historian), A. Flach, E. Ayboga, and A. Abdullah, Revolution in Rojava: Democratic Autonomy and Women’s Liberation in Syrian Kurdistan. Pluto Press, 2016.</li>
+
+<li>D. Dirik, The Kurdish Women’s Movement: History, Theory, Practice. Pluto Press, 2022.</li>
+
+<li>“Jineology,” Wikipedia. Sep. 07, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jineology&amp;oldid=1109031722">https://en.wikipedia.org/w/index.php?title=Jineology&amp;oldid=1109031722</a></li>
+
+<li>“Democratic confederalism,” Wikipedia. Aug. 10, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Democratic_confederalism&amp;oldid=1103559708">https://en.wikipedia.org/w/index.php?title=Democratic_confederalism&amp;oldid=1103559708</a></li>
+
+<li>“Abdullah Öcalan,” Wikipedia. Aug. 15, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Abdullah_%C3%96calan&amp;oldid=1104529702">https://en.wikipedia.org/w/index.php?title=Abdullah_%C3%96calan&amp;oldid=1104529702</a></li>
+
+<li>“Kurdistan Workers’ Party,” Wikipedia. Aug. 29, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kurdistan_Workers%27_Party&amp;oldid=1107367039">https://en.wikipedia.org/w/index.php?title=Kurdistan_Workers%27_Party&amp;oldid=1107367039</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd685373" class="outline-4">
+<h4 id="orgd685373"><span class="section-number-4">8.1.3.</span> India</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<ul class="org-ul">
+<li>A. Loomba, Revolutionary Desires: Women, Communism, and Feminism in India. Routledge, 2018.</li>
+
+<li>M. Kandasamy, The Orders Were to Rape You: Tigresses in the Tamil Eelam Struggle. Navayana Publishing Pvt. Limited, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3d5257" class="outline-3">
+<h3 id="orge3d5257"><span class="section-number-3">8.2.</span> Radical Feminism</h3>
+<div class="outline-text-3" id="text-8-2">
+<ul class="org-ul">
+<li>“Radical feminism,” Wikipedia. Jul. 12, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radical_feminism&amp;oldid=1097704275">https://en.wikipedia.org/w/index.php?title=Radical_feminism&amp;oldid=1097704275</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d901b2" class="outline-3">
+<h3 id="org6d901b2"><span class="section-number-3">8.3.</span> PeaceWomen</h3>
+<div class="outline-text-3" id="text-8-3">
+<ul class="org-ul">
+<li>“PeaceWomen Across the Globe,” Wikipedia. May 17, 2022. Accessed: May 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=PeaceWomen_Across_the_Globe&amp;oldid=1088283349">https://en.wikipedia.org/w/index.php?title=PeaceWomen_Across_the_Globe&amp;oldid=1088283349</a></li>
+<li>“For peace and gender justice,” PeaceWomen Across the Globe. <a href="https://www.1000peacewomen.org/en/who-we-are-1.html">https://www.1000peacewomen.org/en/who-we-are-1.html</a> (accessed May 24, 2022).</li>
+<li>“PeaceWomen,” PeaceWomen. <a href="http://www.peacewomen.org/">http://www.peacewomen.org/</a> (accessed May 24, 2022).</li>
+<li>A. 1000 W. for the N. P. Prize 2005, 1000 Peacewomen Across the Globe. Scalo, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6307c9a" class="outline-3">
+<h3 id="org6307c9a"><span class="section-number-3">8.4.</span> Partiarchy</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+<div id="outline-container-orgb9a982f" class="outline-4">
+<h4 id="orgb9a982f"><span class="section-number-4">8.4.1.</span> General</h4>
+<div class="outline-text-4" id="text-8-4-1">
+<ul class="org-ul">
+<li>“Patriarchy,” Wikipedia. Nov. 12, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Patriarchy&amp;oldid=1121436632">https://en.wikipedia.org/w/index.php?title=Patriarchy&amp;oldid=1121436632</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d22461" class="outline-4">
+<h4 id="org4d22461"><span class="section-number-4">8.4.2.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-8-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org54bca3b"></a>India<br />
+<div class="outline-text-5" id="text-8-4-2-1">
+<ul class="org-ul">
+<li>S. Rajasekaran, Smashing The Patriarchy: A Guide For The 21st-Century Indian Woman. Aleph Book Company, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Agrawal, Chaste Wives and Prostitute Sisters: Patriarchy and Prostitution among the Bedias of India. Taylor &amp; Francis, 2020.</li>
+
+<li>P. Chowdhry, Contentious Marriages, Eloping Couples: Gender, Caste, and Patriarchy in Northern India. Oxford University Press, 2007.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Mies, Indian Women and Patriarchy. Brill Academic Pub, 1980.</li>
+
+<li>B. R. Ambedkar, Against the Madness of Manu: B.R. Ambedkar’s Writings on Brahmanical Patriarchy. Navayana Pub., 2013.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org8c275a3"></a>Origins<br />
+<div class="outline-text-5" id="text-8-4-2-2">
+<ul class="org-ul">
+<li>R. Mace, “How Did the Patriarchy Start – and Will Evolution Get Rid of It? – The Wire Science.” <a href="https://science.thewire.in/society/patriarchy-origins-evolution/">https://science.thewire.in/society/patriarchy-origins-evolution/</a> (accessed Oct. 15, 2022).</li>
+<li>“The Origin of Patriarchy,” vol. 22, no. 44, Oct. 1987, Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://www.epw.in/journal/1987/44/reviews-uncategorised/origin-patriarchy.html">https://www.epw.in/journal/1987/44/reviews-uncategorised/origin-patriarchy.html</a></li>
+<li>“The sexual origins of patriarchy and the radical power of love – Paul A Kottman | Aeon Ideas,” Aeon. <a href="https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love">https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org14c711e" class="outline-4">
+<h4 id="org14c711e"><span class="section-number-4">8.4.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-8-4-3">
+<ul class="org-ul">
+<li>C. von Werlhof, The Failure of Modern Civilization and the Struggle for a “deep” Alternative: On “critical Theory of Patriarchy” as a New Paradigm. P. Lang, 2011.</li>
+<li>M. Mies, Patriarchy and Accumulation on a World Scale: Women in the International Division of Labour. Bloomsbury Publishing, 2014.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“The sexual origins of patriarchy and the radical power of love – Paul A Kottman | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love">https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love</a> (accessed Dec. 15, 2020).</li>
+
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8098e2b" class="outline-3">
+<h3 id="org8098e2b"><span class="section-number-3">8.5.</span> Nudity</h3>
+<div class="outline-text-3" id="text-8-5">
+<ul class="org-ul">
+<li>“Topless Cellist,” MIT Press. <a href="https://mitpress.mit.edu/9780262533584/topless-cellist/">https://mitpress.mit.edu/9780262533584/topless-cellist/</a> (accessed May 27, 2023).</li>
+
+<li>T. M. P. Reader, “'It’s very likely you won’t be electrocuted’: On Charlotte Moorman and Nam June Paik’s ‘TV Bra,’” The MIT Press Reader, May 22, 2023. <a href="https://thereader.mitpress.mit.edu/its-very-likely-you-wont-be-electrocuted-on-charlotte-moorman-and-nam-june-paiks-tv-bra/">https://thereader.mitpress.mit.edu/its-very-likely-you-wont-be-electrocuted-on-charlotte-moorman-and-nam-june-paiks-tv-bra/</a> (accessed May 27, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org25605d3" class="outline-3">
+<h3 id="org25605d3"><span class="section-number-3">8.6.</span> Sexuality</h3>
+<div class="outline-text-3" id="text-8-6">
+<ul class="org-ul">
+<li>“Sexuality Policy Watch,” Sexuality Policy Watch. <a href="https://sxpolitics.org/">https://sxpolitics.org/</a> (accessed May 24, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45b7009" class="outline-3">
+<h3 id="org45b7009"><span class="section-number-3">8.7.</span> India</h3>
+<div class="outline-text-3" id="text-8-7">
+</div>
+<div id="outline-container-org5f61ebd" class="outline-4">
+<h4 id="org5f61ebd"><span class="section-number-4">8.7.1.</span> General</h4>
+<div class="outline-text-4" id="text-8-7-1">
+<ul class="org-ul">
+<li>“Feminism in India,” Wikipedia. Mar. 30, 2022. Accessed: Apr. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Feminism_in_India&amp;oldid=1080111814">https://en.wikipedia.org/w/index.php?title=Feminism_in_India&amp;oldid=1080111814</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org57a3097" class="outline-4">
+<h4 id="org57a3097"><span class="section-number-4">8.7.2.</span> SnT</h4>
+<div class="outline-text-4" id="text-8-7-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga862014"></a>Facts<br />
+<ol class="org-ol">
+<li><a id="orge037ec1"></a>History<br />
+<div class="outline-text-6" id="text-8-7-2-1-1">
+<ul class="org-ul">
+<li>S. W. Jamison and P. of A. L. and C. I.-E. S. S. W. Jamison, Sacrificed Wife/sacrificer’s Wife: Women, Ritual, and Hospitality in Ancient India. Oxford University Press, 1996.</li>
+
+<li><i>“Recasting Women: Essays in Colonial History,”</i> Wikipedia. Jul. 02, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Recasting_Women:_Essays_in_Colonial_History&amp;oldid=1031526930">https://en.wikipedia.org/w/index.php?title=Recasting_Women:_Essays_in_Colonial_History&amp;oldid=1031526930</a></li>
+
+<li><i>“The History of Doing,”</i> Wikipedia. Jul. 11, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_History_of_Doing&amp;oldid=1033128325">https://en.wikipedia.org/w/index.php?title=The_History_of_Doing&amp;oldid=1033128325</a></li>
+
+<li>W. Doniger, M. E. D. S. P. of the H. of R. W. Doniger, and W. D. O’Flaherty, Splitting the Difference: Gender and Myth in Ancient Greece and India. University of Chicago Press, 1999.</li>
+
+<li>S. Debnath, “‘There is a great hunger to see ourselves reflected in history, to hear our stories’: Ira Mukhoty,” Scroll.in. <a href="https://scroll.in/article/1020183/there-is-a-great-hunger-to-see-ourselves-reflected-in-history-to-hear-our-stories-ira-mukhoty">https://scroll.in/article/1020183/there-is-a-great-hunger-to-see-ourselves-reflected-in-history-to-hear-our-stories-ira-mukhoty</a> (accessed Apr. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf8552cf"></a>Biographies<br />
+<div class="outline-text-6" id="text-8-7-2-1-2">
+<ul class="org-ul">
+<li><b>“Ela Bhatt, Self-Employed Women’s Association,”</b> Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/ela-bhatt-self-employed-womens-association/">https://rightlivelihood.org/the-change-makers/find-a-laureate/ela-bhatt-self-employed-womens-association/</a> (accessed Sep. 18, 2021).</li>
+
+<li>M. Sen, <i>India’s Bandit Queen: The True Story of Phoolan Devi.</i> Harvill, 1991.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfedbfee"></a>News<br /></li>
+</ol>
+</li>
+<li><a id="org465c3a9"></a>Geography<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgbf49eb5" class="outline-4">
+<h4 id="orgbf49eb5"><span class="section-number-4">8.7.3.</span> Publishers</h4>
+<div class="outline-text-4" id="text-8-7-3">
+<ul class="org-ul">
+<li>“Women Unlimited Homepage.” <a href="https://womenunlimited.in/">https://womenunlimited.in/</a> (accessed Jun. 24, 2023).</li>
+
+<li><i>“Zubaan Books,”</i> Wikipedia. Aug. 09, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Zubaan_Books&amp;oldid=1037859028">https://en.wikipedia.org/w/index.php?title=Zubaan_Books&amp;oldid=1037859028</a></li>
+
+<li><i>“Tulika Books,”</i> Wikipedia. Aug. 19, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tulika_Books&amp;oldid=1039640446">https://en.wikipedia.org/w/index.php?title=Tulika_Books&amp;oldid=1039640446</a></li>
+
+<li><i>“Kali for Women,”</i> Wikipedia. Jun. 20, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kali_for_Women&amp;oldid=1029594138">https://en.wikipedia.org/w/index.php?title=Kali_for_Women&amp;oldid=1029594138</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c1cdd6" class="outline-4">
+<h4 id="org0c1cdd6"><span class="section-number-4">8.7.4.</span> Orgs</h4>
+<div class="outline-text-4" id="text-8-7-4">
+<ul class="org-ul">
+<li><i>“Feminism In India | Intersectional Feminism – Desi Style!,”</i> Feminism In India. <a href="https://feminisminindia.com/">https://feminisminindia.com/</a> (accessed Aug. 26, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Gender Advancement for Transforming Institutions, “GATI – Centre for Society and Policy.” <a href="https://csp.iisc.ac.in/gati/">https://csp.iisc.ac.in/gati/</a> (accessed Apr. 12, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7275a29" class="outline-4">
+<h4 id="org7275a29"><span class="section-number-4">8.7.5.</span> World</h4>
+<div class="outline-text-4" id="text-8-7-5">
+</div>
+<ol class="org-ol">
+<li><a id="org885db9c"></a>Religion<br />
+<ol class="org-ol">
+<li><a id="org6224b8e"></a>Hinduism<br />
+<ul class="org-ul">
+<li><a id="orge7f07d1"></a>Misc<br />
+<div class="outline-text-7" id="text-orge7f07d1">
+<ul class="org-ul">
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+
+<li>A. Mukul, “How the Gita Press opposed birth control to shore up the Hindu population,” Scroll.in. <a href="http://scroll.in/article/750775/how-the-gita-press-opposed-birth-control-to-shore-up-the-hindu-population">http://scroll.in/article/750775/how-the-gita-press-opposed-birth-control-to-shore-up-the-hindu-population</a> (accessed Feb. 16, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Hiltebeitel, When the Goddess was a Woman: Mah?bh?rata Ethnographies - Essays by Alf Hiltebeitel. BRILL, 2011.</li>
+<li>A. Hiltebeitel, The Cult of Draupadi, Volume 2: On Hindu Ritual and the Goddess. University of Chicago Press, 1988.</li>
+<li>A. Hiltebeitel, The cult of Draupadī: Mythologies : from Gingee to Kurukserta. Motilal Banarsidass Publishe, 1991.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. R. Ambedkar, <i>Against the Madness of Manu: B.R. Ambedkar’s Writings on Brahmanical Patriarchy.</i> Navayana Pub., 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbe34fd3"></a>Sati<br />
+<div class="outline-text-7" id="text-orgbe34fd3">
+<ul class="org-ul">
+<li>M. Sen, <i>Death by Fire: Sati, Dowry, Death, and Female Infanticide in Modern India.</i> Penguin Books India, 2001.</li>
+
+<li>J. S. Hawley, Ed., Sati, the Blessing and the Curse: The Burning of Wives in India, 1st edition. New York: Oxford University Press, 1994.</li>
+
+<li>V. N. Datta, Sati: A Historical, Social, and Philosophical Enquiry Into the Hindu Rite of Widow Burning. Manohar, 1988.</li>
+
+<li>“Prime Video: Sati.” <a href="https://www.primevideo.com/detail/Sati/0FQOTZ7YXMUU4L12BFIL71NX26">https://www.primevideo.com/detail/Sati/0FQOTZ7YXMUU4L12BFIL71NX26</a> (accessed Apr. 01, 2023).</li>
+<li>“Sati (film),” Wikipedia. Jun. 22, 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sati_(film)&amp;oldid=1094471880">https://en.wikipedia.org/w/index.php?title=Sati_(film)&amp;oldid=1094471880</a></li>
+
+<li>“Prime Video: Devi Ahilyabai.” <a href="https://www.primevideo.com/detail/Devi-Ahilyabai/0QX182JBOW3NX0O9X66NK6UJ9D">https://www.primevideo.com/detail/Devi-Ahilyabai/0QX182JBOW3NX0O9X66NK6UJ9D</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf7467f1"></a>Gita<br />
+<div class="outline-text-7" id="text-orgf7467f1">
+<ul class="org-ul">
+<li>Gita:9.32, “श्रीमद् भगवद्गीता | Gita Supersite.” <a href="https://www.gitasupersite.iitk.ac.in/srimad?language=dv&amp;field_chapter_value=9&amp;field_nsutra_value=32&amp;show_mool=1&amp;etsiva=1&amp;etpurohit=1&amp;etgb=1&amp;setgb=1&amp;etssa=1&amp;etassa=1&amp;etradi=1&amp;etadi=1">https://www.gitasupersite.iitk.ac.in/srimad?language=dv&amp;field_chapter_value=9&amp;field_nsutra_value=32&amp;show_mool=1&amp;etsiva=1&amp;etpurohit=1&amp;etgb=1&amp;setgb=1&amp;etssa=1&amp;etassa=1&amp;etradi=1&amp;etadi=1</a> (accessed May 29, 2023).</li>
+</ul>
+<ul class="org-ul">
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org5be6d13"></a>Patriarchy<br />
+<div class="outline-text-6" id="text-8-7-5-1-2">
+<ul class="org-ul">
+<li>M. Mies, Indian Women and Patriarchy. Brill Academic Pub, 1980.</li>
+
+<li>S. Rajasekaran, <i>Smashing The Patriarchy: A Guide For The 21st-Century Indian Woman.</i> Aleph Book Company, 2021.</li>
+
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9ce27b6"></a>Dowry<br />
+<div class="outline-text-6" id="text-8-7-5-1-3">
+<ul class="org-ul">
+<li>M. Sen, <i>Death by Fire: Sati, Dowry, Death, and Female Infanticide in Modern India.</i> Penguin Books India, 2001.</li>
+</ul>
+</div>
+</li>
+<li><a id="org528e654"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgb108c31"></a>SocioPol<br />
+<ol class="org-ol">
+<li><a id="org0cbc0ad"></a>Law<br /></li>
+</ol>
+</li>
+<li><a id="org4db8abd"></a>Mgmt, Self Help<br />
+<div class="outline-text-5" id="text-8-7-5-3">
+<ul class="org-ul">
+<li>N. Subramanian, Powerful: The Indian Woman’s Guide to Unlocking Her Full Potential. HarperCollins, 2021.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org35ec4e1" class="outline-4">
+<h4 id="org35ec4e1"><span class="section-number-4">8.7.6.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-8-7-6">
+</div>
+<ol class="org-ol">
+<li><a id="orgce13e5c"></a>Widow<br />
+<div class="outline-text-5" id="text-8-7-6-1">
+<ul class="org-ul">
+<li>M. A. Chen, Perpetual Mourning: Widowhood in Rural India. Oxford University Press, 2000.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgee60438"></a>Female Infanticide<br />
+<div class="outline-text-5" id="text-8-7-6-2">
+<ul class="org-ul">
+<li>Kajarya, (Dec. 04, 2015).</li>
+<li>“Female infanticide in India,” Wikipedia. Apr. 30, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Female_infanticide_in_India&amp;oldid=1152420227">https://en.wikipedia.org/w/index.php?title=Female_infanticide_in_India&amp;oldid=1152420227</a></li>
+<li>“Kajarya,” Wikipedia. Apr. 08, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kajarya&amp;oldid=1148876539">https://en.wikipedia.org/w/index.php?title=Kajarya&amp;oldid=1148876539</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge6ea322"></a>Global South<br />
+<div class="outline-text-5" id="text-8-7-6-3">
+<ul class="org-ul">
+<li>J. Ghosh, Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies. Routledge, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org313c5c5"></a>Economy<br />
+<div class="outline-text-5" id="text-8-7-6-4">
+<ul class="org-ul">
+<li>J. Ghosh, Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies. Routledge, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8ae91a3"></a>Kashmir<br />
+<div class="outline-text-5" id="text-8-7-6-5">
+<ul class="org-ul">
+<li>E. Batool, I. Butt, S. Mushtaq, M. Rashid, and N. Rather, <i>Do You Remember Kunan Poshpora?</i> Zubaan, 2016.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5f41230" class="outline-4">
+<h4 id="org5f41230"><span class="section-number-4">8.7.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-8-7-7">
+<ul class="org-ul">
+<li>“The Cult Of The Femcel | Feminism in India.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://feminisminindia.com/2023/10/03/the-cult-of-the-femcel-inside-the-nooks-and-corners-of-the-femcel-revolution/">https://feminisminindia.com/2023/10/03/the-cult-of-the-femcel-inside-the-nooks-and-corners-of-the-femcel-revolution/</a></li>
+
+<li>M. Chaudhuri, Ed., <i>Feminism in India.</i> London: Zed Books Ltd, 2005.</li>
+
+<li>N. Menon, <i>Seeing Like a Feminist, Latest edition.</i> New Delhi: Penguin India, 2012.</li>
+
+<li>K. Krishnan, <i>Fearless Freedom.</i> Gurgaon, Haryana, India: Penguin, 2020.</li>
+
+<li>A. Loomba, <i>Revolutionary Desires: Women, Communism, and Feminism in India.</i> Routledge, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcc5a086" class="outline-2">
+<h2 id="orgcc5a086"><span class="section-number-2">9.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>A. Kothari, “Mohandas Gandhi speaks to Abdullah Öcalan,” Meer. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan">https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan</a></li>
+<li>A. Salleh, Eco-Sufficiency and Global Justice: Women Write Political Ecology. Pluto Press, 2009.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. D. O’Flaherty, Women, Androgynes, and Other Mythical Beasts. University of Chicago Press, 1982.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. T. Mohanty, Feminism Without Borders: Decolonizing Theory, Practicing Solidarity. Zubaan, 2005.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. Harcourt, Body Politics in Development: Critical Debates in Gender and Development. Zed Books Ltd., 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>ʼAtu Emberson-Bain, Sustainable Development Or Malignant Growth?: Perspectives of Pacific Island Women. Marama Publications, 1994.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Federici, Re-enchanting the World: Feminism and the Politics of the Commons. PM Press, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Federici, Revolution at Point Zero: Housework, Reproduction, and Feminist Struggle. PM Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hayden, The Grand Domestic Revolution: A History of Feminist Designs For American Homes, Neighborhoods, and Cities. MIT Press, 1982.</li>
+
+<li><i>“Feminists never bought the idea of a mind set free from its body – Sally Davies | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/feminists-never-bought-the-idea-of-a-mind-set-free-from-its-body">https://aeon.co/essays/feminists-never-bought-the-idea-of-a-mind-set-free-from-its-body</a> (accessed Jan. 01, 2021).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge7f06d8" class="outline-2">
+<h2 id="orge7f06d8"><span class="section-number-2">10.</span> Notes</h2>
+</div>
+<div id="outline-container-org5d5de2e" class="outline-2">
+<h2 id="org5d5de2e"><span class="section-number-2">11.</span> Projects</h2>
+<div class="outline-text-2" id="text-11">
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-27 Wed 14:25</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
