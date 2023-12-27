@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-27 Wed 11:44 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vrindavan</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Vrindavan</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8f1e54a">1. General</a></li>
+<li><a href="#org42e1ff5">2. SnT</a>
+<ul>
+<li><a href="#org1908e50">2.1. Facts</a>
+<ul>
+<li><a href="#orgc59c13e">2.1.1. News</a></li>
+<li><a href="#orgcb40fd6">2.1.2. History</a></li>
+</ul>
+</li>
+<li><a href="#orgad711a7">2.2. Geo</a>
+<ul>
+<li><a href="#org83f0c6c">2.2.1. Travel</a></li>
+<li><a href="#org0e916b2">2.2.2. Pilgrimage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org923d698">3. STEMM</a>
+<ul>
+<li><a href="#org74dcbb8">3.1. CSE</a></li>
+</ul>
+</li>
+<li><a href="#orgb0d9ac2">4. World</a>
+<ul>
+<li><a href="#org6daa1d3">4.1. Environment</a>
+<ul>
+<li><a href="#org264103c">4.1.1. Forests</a></li>
+<li><a href="#org65e97bd">4.1.2. Monkeys</a></li>
+<li><a href="#org0faa9f4">4.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc1aeab9">4.2. Religion</a>
+<ul>
+<li><a href="#orga93eb82">4.2.1. Temples</a></li>
+<li><a href="#orgc01c202">4.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1d42f57">4.3. SocioPolitical</a>
+<ul>
+<li><a href="#orgd049001">4.3.1. Politics</a></li>
+<li><a href="#orgb519817">4.3.2. Women</a></li>
+<li><a href="#org37e4c35">4.3.3. Caste</a></li>
+<li><a href="#org0145380">4.3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcc818e6">4.4. Corporate</a>
+<ul>
+<li><a href="#org7bde58a">4.4.1. Finance</a></li>
+</ul>
+</li>
+<li><a href="#orgdc7fa80">4.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9feb390">5. Core</a>
+<ul>
+<li><a href="#orgdec292d">5.1. Media</a>
+<ul>
+<li><a href="#orgacac7d6">5.1.1. Texts</a></li>
+</ul>
+</li>
+<li><a href="#org52ab438">5.2. Orgs</a>
+<ul>
+<li><a href="#org1b620e3">5.2.1. FOV</a></li>
+<li><a href="#org9211097">5.2.2. Gita Press</a></li>
+</ul>
+</li>
+<li><a href="#org6e839ef">5.3. People</a>
+<ul>
+<li><a href="#org2b3d760">5.3.1. Sripaad Baba</a></li>
+<li><a href="#orge53109d">5.3.2. Radha Baba</a></li>
+<li><a href="#org95fe240">5.3.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgee9ccfc">6. Arts</a>
+<ul>
+<li><a href="#org6da3fbb">6.1. Music</a>
+<ul>
+<li><a href="#org56e3b8a">6.1.1. Orgs</a></li>
+<li><a href="#org7f2256f">6.1.2. Recordings</a></li>
+</ul>
+</li>
+<li><a href="#org9aa6e06">6.2. Theatre</a></li>
+</ul>
+</li>
+<li><a href="#orgb8b13a9">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org8f1e54a" class="outline-2">
+<h2 id="org8f1e54a"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Vrindavan,” Wikipedia. Mar. 22, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Vrindavan&amp;oldid=1146056665">https://en.wikipedia.org/w/index.php?title=Vrindavan&amp;oldid=1146056665</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org42e1ff5" class="outline-2">
+<h2 id="org42e1ff5"><span class="section-number-2">2.</span> SnT</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1908e50" class="outline-3">
+<h3 id="org1908e50"><span class="section-number-3">2.1.</span> Facts</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgc59c13e" class="outline-4">
+<h4 id="orgc59c13e"><span class="section-number-4">2.1.1.</span> News</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Vrindavan Today,” Vrindavan Today, Mar. 29, 2023. <a href="https://vrindavantoday.in/">https://vrindavantoday.in/</a> (accessed Apr. 04, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Latest news, opinion, analysis on vrindavan, Videos, photos, magazine stories | Down To Earth.” <a href="https://www.downtoearth.org.in/search?keyword=vrindavan&amp;amp;author=&amp;amp;content_type=&amp;amp;sort=desc">https://www.downtoearth.org.in/search?keyword=vrindavan&amp;amp;author=&amp;amp;content_type=&amp;amp;sort=desc</a> (accessed Apr. 07, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb40fd6" class="outline-4">
+<h4 id="orgcb40fd6"><span class="section-number-4">2.1.2.</span> History</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>I. Habib and T. Mukhopādhyāẏa, Braj Bhūm in Mughal Times: The State, Peasants and Gosā’ins. Primus Books, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad711a7" class="outline-3">
+<h3 id="orgad711a7"><span class="section-number-3">2.2.</span> Geo</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org83f0c6c" class="outline-4">
+<h4 id="org83f0c6c"><span class="section-number-4">2.2.1.</span> Travel</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Vrindavan – Travel guide at Wikivoyage.” <a href="https://en.wikivoyage.org/wiki/Vrindavan">https://en.wikivoyage.org/wiki/Vrindavan</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e916b2" class="outline-4">
+<h4 id="org0e916b2"><span class="section-number-4">2.2.2.</span> Pilgrimage</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>J. S. Hawley, At Play with Krishna: Pilgrimage Dramas from Brindavan. Princeton University Press, 2014.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org923d698" class="outline-2">
+<h2 id="org923d698"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org74dcbb8" class="outline-3">
+<h3 id="org74dcbb8"><span class="section-number-3">3.1.</span> CSE</h3>
+</div>
+</div>
+<div id="outline-container-orgb0d9ac2" class="outline-2">
+<h2 id="orgb0d9ac2"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6daa1d3" class="outline-3">
+<h3 id="org6daa1d3"><span class="section-number-3">4.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org264103c" class="outline-4">
+<h4 id="org264103c"><span class="section-number-4">4.1.1.</span> Forests</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Nidhivan, Vrindavan,” Wikipedia. Mar. 21, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nidhivan,_Vrindavan&amp;oldid=1145897838">https://en.wikipedia.org/w/index.php?title=Nidhivan,_Vrindavan&amp;oldid=1145897838</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org65e97bd" class="outline-4">
+<h4 id="org65e97bd"><span class="section-number-4">4.1.2.</span> Monkeys</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Macaques in the midst.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://theecologist.org/2023/dec/09/macaques-midst">https://theecologist.org/2023/dec/09/macaques-midst</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0faa9f4" class="outline-4">
+<h4 id="org0faa9f4"><span class="section-number-4">4.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>S. Ray, <b>Climate Change and the Art of Devotion: Geoaesthetics in the Land of Krishna, 1550-1850.</b> University of Washington Press, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1aeab9" class="outline-3">
+<h3 id="orgc1aeab9"><span class="section-number-3">4.2.</span> Religion</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orga93eb82" class="outline-4">
+<h4 id="orga93eb82"><span class="section-number-4">4.2.1.</span> Temples</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5fc4b84"></a>Banke Bihari<br />
+<div class="outline-text-5" id="text-4-2-1-1">
+<ul class="org-ul">
+<li>“Bankey Bihari Temple - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Bankey_Bihari_Temple">https://en.wikipedia.org/wiki/Bankey_Bihari_Temple</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org49071e8"></a>ISKCON<br />
+<div class="outline-text-5" id="text-4-2-1-2">
+<ul class="org-ul">
+<li>“ISKCON Vrindavan - YouTube.” <a href="https://www.youtube.com/@ISKCONVrndavan">https://www.youtube.com/@ISKCONVrndavan</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2925b7c"></a>Misc<br />
+<div class="outline-text-5" id="text-4-2-1-3">
+<ul class="org-ul">
+<li>“Vrindavan Chandrodaya Mandir,” Wikipedia. Mar. 28, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Vrindavan_Chandrodaya_Mandir&amp;oldid=1146993515">https://en.wikipedia.org/w/index.php?title=Vrindavan_Chandrodaya_Mandir&amp;oldid=1146993515</a></li>
+<li>“Prem Mandir, Vrindavan - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Prem_Mandir,_Vrindavan">https://en.wikipedia.org/wiki/Prem_Mandir,_Vrindavan</a> (accessed Apr. 01, 2023).</li>
+<li>“Krishna Balaram Mandir,” Wikipedia. Mar. 28, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Krishna_Balaram_Mandir&amp;oldid=1147019025">https://en.wikipedia.org/w/index.php?title=Krishna_Balaram_Mandir&amp;oldid=1147019025</a></li>
+<li>“Radha Damodar Temple, Vrindavan,” Wikipedia. Nov. 09, 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radha_Damodar_Temple,_Vrindavan&amp;oldid=1120948913">https://en.wikipedia.org/w/index.php?title=Radha_Damodar_Temple,_Vrindavan&amp;oldid=1120948913</a></li>
+<li>“Radha Vallabh Temple, Vrindavan,” Wikipedia. Feb. 20, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radha_Vallabh_Temple,_Vrindavan&amp;oldid=1140543950">https://en.wikipedia.org/w/index.php?title=Radha_Vallabh_Temple,_Vrindavan&amp;oldid=1140543950</a></li>
+<li>“Radha Raman Temple,” Wikipedia. Oct. 16, 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radha_Raman_Temple&amp;oldid=1116453299">https://en.wikipedia.org/w/index.php?title=Radha_Raman_Temple&amp;oldid=1116453299</a></li>
+<li>“Radha Madan Mohan Temple, Vrindavan,” Wikipedia. Oct. 29, 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radha_Madan_Mohan_Temple,_Vrindavan&amp;oldid=1118832525">https://en.wikipedia.org/w/index.php?title=Radha_Madan_Mohan_Temple,_Vrindavan&amp;oldid=1118832525</a></li>
+
+<li>V. Today, <b>“Tatiya Sthan: Devotion in harmony with nature,”</b> Vrindavan Today, Nov. 05, 2021. <a href="https://vrindavantoday.in/tatiya-sthan-devotion-in-harmony-with-nature/">https://vrindavantoday.in/tatiya-sthan-devotion-in-harmony-with-nature/</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc01c202" class="outline-4">
+<h4 id="orgc01c202"><span class="section-number-4">4.2.2.</span> Misc</h4>
+</div>
+</div>
+
+<div id="outline-container-org1d42f57" class="outline-3">
+<h3 id="org1d42f57"><span class="section-number-3">4.3.</span> SocioPolitical</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgd049001" class="outline-4">
+<h4 id="orgd049001"><span class="section-number-4">4.3.1.</span> Politics</h4>
+</div>
+<div id="outline-container-orgb519817" class="outline-4">
+<h4 id="orgb519817"><span class="section-number-4">4.3.2.</span> Women</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org54b2b2d"></a>Widows<br /></li>
+</ol>
+</div>
+<div id="outline-container-org37e4c35" class="outline-4">
+<h4 id="org37e4c35"><span class="section-number-4">4.3.3.</span> Caste</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>M. Sharma, <b>Environmentalism and Revivalism: The Vrindavan Forest Revival and Conservation Project in Mathura, Green and Saffron: Hindu Nationalism and Indian Environmental Politics.</b> Permanent Black, 2012.</li>
+
+<li>M. H. Case, Seeing Krishna: The Religious World of a Brahman Family in Vrindaban. Oxford University Press, 2000.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0145380" class="outline-4">
+<h4 id="org0145380"><span class="section-number-4">4.3.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgcc818e6" class="outline-3">
+<h3 id="orgcc818e6"><span class="section-number-3">4.4.</span> Corporate</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org7bde58a" class="outline-4">
+<h4 id="org7bde58a"><span class="section-number-4">4.4.1.</span> Finance</h4>
+</div>
+</div>
+<div id="outline-container-orgdc7fa80" class="outline-3">
+<h3 id="orgdc7fa80"><span class="section-number-3">4.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li>“Bhakti divide in Brajbhoomi.” <a href="https://www.downtoearth.org.in/coverage/bhakti-divide-in-brajbhoomi-46654">https://www.downtoearth.org.in/coverage/bhakti-divide-in-brajbhoomi-46654</a> (accessed Apr. 07, 2023).</li>
+<li>“‘Save Yamuna’ activists call off protest.” <a href="https://www.downtoearth.org.in/news/water/religious-group-joins-protest-against-pollution-of-yamuna-49108">https://www.downtoearth.org.in/news/water/religious-group-joins-protest-against-pollution-of-yamuna-49108</a> (accessed Apr. 07, 2023).</li>
+<li>“Religious group joins protest against pollution of Yamuna.” <a href="https://www.downtoearth.org.in/news/water/religious-group-joins-protest-against-pollution-of-yamuna-49108">https://www.downtoearth.org.in/news/water/religious-group-joins-protest-against-pollution-of-yamuna-49108</a> (accessed Apr. 07, 2023).</li>
+<li>“Saving Krishna’s forests.” <a href="https://www.downtoearth.org.in/coverage/saving-krishnas-forests-21430">https://www.downtoearth.org.in/coverage/saving-krishnas-forests-21430</a> (accessed Apr. 07, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9feb390" class="outline-2">
+<h2 id="org9feb390"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgdec292d" class="outline-3">
+<h3 id="orgdec292d"><span class="section-number-3">5.1.</span> Media</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgacac7d6" class="outline-4">
+<h4 id="orgacac7d6"><span class="section-number-4">5.1.1.</span> Texts</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga1e8139"></a>Krishna's Playground<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<ul class="org-ul">
+<li>J. S. Hawley, <b>Krishna’s Playground: Vrindavan in the 21st Century.</b> Oxford University Press, 2019.
+<ul class="org-ul">
+<li>M. Sivaramakrishnan, “Murali Sivaramakrishnan reviews Krishna’s Playground: Vrindavan in the 21st Century, by John Stratton Hawley,” The Hindu, Oct. 03, 2020. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.thehindu.com/books/books-reviews/krishnas-playground-vrindavan-in-the-21st-century-review-at-play-with-krishna-in-a-changing-vrindavan/article32750201.ece">https://www.thehindu.com/books/books-reviews/krishnas-playground-vrindavan-in-the-21st-century-review-at-play-with-krishna-in-a-changing-vrindavan/article32750201.ece</a></li>
+<li>“Watch | John Stratton Hawley on His Latest Book on ‘Krishna’s Playground,’” The Wire. <a href="https://thewire.in/urban/watch-john-stratton-hawley-book">https://thewire.in/urban/watch-john-stratton-hawley-book</a> (accessed Apr. 01, 2023).</li>
+
+<li>J. S. Hawley and A. Kumar, Krishna Ki Leelabhumi : 21vin Sadi Mein Vrindavan, First edition. Rajkamal Prakashan, 2023.</li>
+<li>V. Today, “Hindi version of the book ‘Krishna’s Playground in 21st Century’ released,” Vrindavan Today, Feb. 26, 2023. <a href="https://vrindavantoday.in/hindi-version-of-the-book-krishnas-playground-in-21st-century-released/">https://vrindavantoday.in/hindi-version-of-the-book-krishnas-playground-in-21st-century-released/</a> (accessed Apr. 01, 2023).</li>
+
+<li>“Krishna’s Playground: Vrindavan in the 21st Century | Department of Religion.” <a href="https://religion.columbia.edu/events/krishnas-playground-vrindavan-21st-century">https://religion.columbia.edu/events/krishnas-playground-vrindavan-21st-century</a> (accessed Apr. 01, 2023).</li>
+
+<li>Book launch of “Krishna’s Playground” by John Stratton Hawley on January 8, 2020 at New Delhi, (Jan. 16, 2020). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pq-_K9bRGnI">https://www.youtube.com/watch?v=pq-_K9bRGnI</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org52ab438" class="outline-3">
+<h3 id="org52ab438"><span class="section-number-3">5.2.</span> Orgs</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org1b620e3" class="outline-4">
+<h4 id="org1b620e3"><span class="section-number-4">5.2.1.</span> FOV</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>“Friend Of Vrindavan.” <a href="https://friendsofvrindavan.in/">https://friendsofvrindavan.in/</a> (accessed Apr. 01, 2023).</li>
+
+<li>“ART-0702 Charity,Friends of Vrindavan – Heart Of Hinduism.” <a href="https://iskconeducationalservices.org/HoH/further-information-and-teaching-resources-secondary/articles/art-0702-charityfriends-of-vrindavan/">https://iskconeducationalservices.org/HoH/further-information-and-teaching-resources-secondary/articles/art-0702-charityfriends-of-vrindavan/</a> (accessed Apr. 01, 2023).</li>
+
+<li>“Charities - Practices in Hinduism - GCSE Religious Studies Revision - AQA,” BBC Bitesize. <a href="https://www.bbc.co.uk/bitesize/guides/zvrsv9q/revision/9">https://www.bbc.co.uk/bitesize/guides/zvrsv9q/revision/9</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9211097" class="outline-4">
+<h4 id="org9211097"><span class="section-number-4">5.2.2.</span> Gita Press</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8de0e81"></a>General<br />
+<div class="outline-text-5" id="text-5-2-2-1">
+<ul class="org-ul">
+<li>“Gita Press,” Wikipedia. Jan. 13, 2022. Accessed: Feb. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gita_Press&amp;oldid=1065388381">https://en.wikipedia.org/w/index.php?title=Gita_Press&amp;oldid=1065388381</a></li>
+
+<li>“Gita Press | Hindu publishing organization | Britannica.” <a href="https://www.britannica.com/topic/Gita-Press">https://www.britannica.com/topic/Gita-Press</a> (accessed Feb. 04, 2022).</li>
+
+<li>“Gita Press, Gorakhpur – Serving Humanity for Truth and Peace Since 1923.” <a href="https://www.gitapress.org/">https://www.gitapress.org/</a> (accessed Feb. 04, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc566b44"></a>Magazines<br />
+<div class="outline-text-5" id="text-5-2-2-2">
+<ul class="org-ul">
+<li>“Kalyana – Gita Press, Gorakhpur.” <a href="https://www.gitapress.org/overview/">https://www.gitapress.org/overview/</a> (accessed Feb. 04, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1ee2306"></a>Critical Studies<br />
+<ol class="org-ol">
+<li><a id="orgade9e8a"></a>Misc<br />
+<div class="outline-text-6" id="text-5-2-2-3-1">
+<ul class="org-ul">
+<li>A. Mukul, <b>Gita Press and the Making of Hindu India.</b> HarperCollins, 2017.
+<ul class="org-ul">
+<li>A very critical work (including some sleazy Mid Day News,
+Saandhya Times type material) on the Gita Press Parivar.</li>
+</ul></li>
+
+<li>A. Mukul, “How Gita Press shaped the orthodox challenge to the Hindu Code,” The Caravan. <a href="https://caravanmagazine.in/religion/print-tradition-gita-press-challenge-hindu-code">https://caravanmagazine.in/religion/print-tradition-gita-press-challenge-hindu-code</a> (accessed Jun. 20, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. M. Parakh, “Gita Press’s agenda may not have been communal – but it undoubtedly helped shape sectarian mindsets,” Scroll.in, Jul. 01, 2023. <a href="https://scroll.in/article/1051735/gita-presss-agenda-may-not-have-been-communal-but-it-undoubtedly-helped-shape-sectarian-mindsets">https://scroll.in/article/1051735/gita-presss-agenda-may-not-have-been-communal-but-it-undoubtedly-helped-shape-sectarian-mindsets</a> (accessed Jul. 01, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org6fe272b"></a>G P Prize<br />
+<div class="outline-text-6" id="text-5-2-2-3-2">
+<ul class="org-ul">
+<li>“After Gandhi’s Assassination, Why No Mention of Him in February, March 1948 Issues of Kalyan?,” The Wire. <a href="https://thewire.in/history/mahatma-gandhi-gita-press">https://thewire.in/history/mahatma-gandhi-gita-press</a> (accessed Jun. 20, 2023).</li>
+
+<li>A. Mukul, “Gandhi Peace Prize winner Gita Press: What was the relationship of its founder with Gandhi like?,” Scroll.in, Jun. 20, 2023. <a href="https://scroll.in/article/1051160/gandhi-peace-prize-winner-gita-press-what-was-the-relationship-of-its-founder-with-gandhi-like">https://scroll.in/article/1051160/gandhi-peace-prize-winner-gita-press-what-was-the-relationship-of-its-founder-with-gandhi-like</a> (accessed Jun. 20, 2023).</li>
+
+<li>Gita Press Always Served RSS, Now Being Rewarded- Akshaya Mukul | NewsClick, (Jun. 20, 2023). Accessed: Jun. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=wOQKbwO5o04">https://www.youtube.com/watch?v=wOQKbwO5o04</a></li>
+
+<li>“Gita Press, Gorakhpur, awarded Gandhi Peace Prize for 2021,” The Hindu, Jun. 18, 2023. Accessed: Jun. 19, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/gandhi-peace-prize-2021-to-be-conferred-on-gita-press/article66982769.ece">https://www.thehindu.com/news/national/gandhi-peace-prize-2021-to-be-conferred-on-gita-press/article66982769.ece</a></li>
+
+<li>“Gita Press Awarded Gandhi Peace Prize. Congress Says ‘Like Rewarding&#x2026;,’” NDTV.com. <a href="https://www.ndtv.com/india-news/gita-press-awarded-gandhi-peace-prize-congress-says-like-rewarding-4133040">https://www.ndtv.com/india-news/gita-press-awarded-gandhi-peace-prize-congress-says-like-rewarding-4133040</a> (accessed Jun. 20, 2023).</li>
+
+<li>“Does Gita Press Deserve Gandhi Prize?,” NewsClick, Jun. 26, 2023. <a href="https://www.newsclick.in/does-gita-press-deserve-gandhi-prize">https://www.newsclick.in/does-gita-press-deserve-gandhi-prize</a> (accessed Jun. 30, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org6b79213"></a>Misc<br />
+<div class="outline-text-5" id="text-5-2-2-4">
+<ul class="org-ul">
+<li>“Gita Press | God’s own publisher,” The Hindu, Jun. 24, 2023. Accessed: Jun. 25, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/gita-press-gods-own-publisher/article67006286.ece">https://www.thehindu.com/news/national/gita-press-gods-own-publisher/article67006286.ece</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6e839ef" class="outline-3">
+<h3 id="org6e839ef"><span class="section-number-3">5.3.</span> People</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org2b3d760" class="outline-4">
+<h4 id="org2b3d760"><span class="section-number-4">5.3.1.</span> Sripaad Baba</h4>
+</div>
+<div id="outline-container-orge53109d" class="outline-4">
+<h4 id="orge53109d"><span class="section-number-4">5.3.2.</span> Radha Baba</h4>
+</div>
+<div id="outline-container-org95fe240" class="outline-4">
+<h4 id="org95fe240"><span class="section-number-4">5.3.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<ul class="org-ul">
+<li>“Satyanarayana Dasa,” Wikipedia. Feb. 15, 2022. Accessed: Jun. 03, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Satyanarayana_Dasa&amp;oldid=1071982585">https://en.wikipedia.org/w/index.php?title=Satyanarayana_Dasa&amp;oldid=1071982585</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Jagadguru Shri Kripalu Ji Maharaj,” Wikipedia. Dec. 10, 2022. Accessed: Dec. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jagadguru_Shri_Kripalu_Ji_Maharaj&amp;oldid=1126571309">https://en.wikipedia.org/w/index.php?title=Jagadguru_Shri_Kripalu_Ji_Maharaj&amp;oldid=1126571309</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgee9ccfc" class="outline-2">
+<h2 id="orgee9ccfc"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org6da3fbb" class="outline-3">
+<h3 id="org6da3fbb"><span class="section-number-3">6.1.</span> Music</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org56e3b8a" class="outline-4">
+<h4 id="org56e3b8a"><span class="section-number-4">6.1.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>“Vrindaban Gurukul by Pandit Hariprasad Chaurasia - YouTube.” <a href="https://www.youtube.com/channel/UCp2lnEeo8hcZArechvSns9g">https://www.youtube.com/channel/UCp2lnEeo8hcZArechvSns9g</a> (accessed Apr. 01, 2023).</li>
+<li>“Vrindaban Gurukul | Pandit Hariprasad Chaurasia.” <a href="http://www.hariprasadchaurasia.com/vrindaban-gurukul">http://www.hariprasadchaurasia.com/vrindaban-gurukul</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7f2256f" class="outline-4">
+<h4 id="org7f2256f"><span class="section-number-4">6.1.2.</span> Recordings</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org7ce01c0"></a>Playlists<br />
+<div class="outline-text-5" id="text-6-1-2-1">
+<ul class="org-ul">
+<li>“SpiritualityVrindavan | Community Playlist on Prime Music.” <a href="https://music.amazon.in/user-playlists/68aa289aba364c0695af5f963ca503abi8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN">https://music.amazon.in/user-playlists/68aa289aba364c0695af5f963ca503abi8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN</a> (accessed Jun. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org8d4cbb3"></a>Solo<br />
+<ol class="org-ol">
+<li><a id="orgb222e5d"></a>HCMD<br />
+<div class="outline-text-6" id="text-6-1-2-2-1">
+<ul class="org-ul">
+<li><b>Chalo Sakhi Braj</b>, <i>Raga Ahir Bhairav</i>, Ustad Faiyaz Wasifuddin Dagar, Music Today.
+<ul class="org-ul">
+<li>A wonderful, unusually mysterious rendition of Ahir Bhairav.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd4064b4"></a>Jasraj<br />
+<div class="outline-text-6" id="text-6-1-2-2-2">
+<ul class="org-ul">
+<li>Jasraj - Om Namo Bhagawate Vasudevaya. 2003. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/20619181-Pt-Jasraj-Om-Namo-Bhagawate-Vasudevaya">https://www.discogs.com/release/20619181-Pt-Jasraj-Om-Namo-Bhagawate-Vasudevaya</a></li>
+<li>Jasraj - Vrindavan. 1997. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/24402980-Pt-Jasraj-Vrindavan">https://www.discogs.com/release/24402980-Pt-Jasraj-Vrindavan</a></li>
+<li>Jasraj - Haveli Sangeet Volume Two. 2006. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5837255-Pandit-Jasraj-Haveli-Sangeet-Volume-Two">https://www.discogs.com/release/5837255-Pandit-Jasraj-Haveli-Sangeet-Volume-Two</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8aeeace"></a>L. Subramaniam<br />
+<div class="outline-text-6" id="text-6-1-2-2-3">
+<ul class="org-ul">
+<li>Dr. L.Subramaniam - Subramaniam. 1982. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5520937-Dr-LSubramaniam-Subramaniam">https://www.discogs.com/release/5520937-Dr-LSubramaniam-Subramaniam</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1578aff"></a>Ronu Majumdar<br />
+<div class="outline-text-6" id="text-6-1-2-2-4">
+<ul class="org-ul">
+<li>Ronu Majumdar - Vrindavan. 2010. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/3517927-Ronu-Majumdar-Vrindavan">https://www.discogs.com/release/3517927-Ronu-Majumdar-Vrindavan</a></li>
+<li>Ronu Majumdar - Krishna’s Journey. 2003. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/18202675-Pt-Ronu-Majumdar-Krishnas-Journey">https://www.discogs.com/release/18202675-Pt-Ronu-Majumdar-Krishnas-Journey</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1cf21ef"></a>Misc<br />
+<div class="outline-text-5" id="text-6-1-2-3">
+<ul class="org-ul">
+<li>M. Shivputra, Jamuna Kinaare Mora Gaon.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Adam Bauer - Shyam Lila. 2014. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5869547-Adam-Bauer-Shyam-Lila">https://www.discogs.com/release/5869547-Adam-Bauer-Shyam-Lila</a></li>
+
+<li>Alice Coltrane, Turiyasangitananda - The Ecstatic Music Of Alice Coltrane Turiyasangitananda. 2017. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/master/1174091-Alice-Coltrane-Turiyasangitananda-The-Ecstatic-Music-Of-Alice-Coltrane-Turiyasangitananda">https://www.discogs.com/master/1174091-Alice-Coltrane-Turiyasangitananda-The-Ecstatic-Music-Of-Alice-Coltrane-Turiyasangitananda</a></li>
+
+<li>Ananda Bazaar - Songs Of The Holy Vrindavana. 1998. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/3469409-Ananda-Bazaar-Songs-Of-The-Holy-Vrindavana">https://www.discogs.com/release/3469409-Ananda-Bazaar-Songs-Of-The-Holy-Vrindavana</a></li>
+
+<li>Ananta - Night And Daydream. 1978. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5616129-Ananta-Night-And-Daydream">https://www.discogs.com/release/5616129-Ananta-Night-And-Daydream</a></li>
+<li>Ananta - Wheels Of Time. 1978. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/998261-Ananta-Wheels-Of-Time">https://www.discogs.com/release/998261-Ananta-Wheels-Of-Time</a></li>
+
+<li>Anuradha Paudwal - Krishna (Bhajans). 1990. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/master/1283727-Anuradha-Paudwal-Krishna-Bhajans">https://www.discogs.com/master/1283727-Anuradha-Paudwal-Krishna-Bhajans</a></li>
+
+<li>Deben Bhattacharya - Krishna In Spring. 2017. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/12867331-Deben-Bhattacharya-Krishna-In-Spring">https://www.discogs.com/release/12867331-Deben-Bhattacharya-Krishna-In-Spring</a></li>
+
+<li>Deepak Ram - Flute For Thought. 2009. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/3407433-Deepak-Ram-Flute-For-Thought">https://www.discogs.com/release/3407433-Deepak-Ram-Flute-For-Thought</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Dhira - Dhira. 2006. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/14675002-Dhira-Dhira">https://www.discogs.com/release/14675002-Dhira-Dhira</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Dubnotic And Mystical Voyager - Sacred Rhythms. 2018. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/13210863-Dubnotic-And-Mystical-Voyager-Sacred-Rhythms">https://www.discogs.com/release/13210863-Dubnotic-And-Mystical-Voyager-Sacred-Rhythms</a></li>
+
+<li>Five Elements Music - Rishikesh. 2012. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/3627053-Five-Elements-Music-Rishikesh">https://www.discogs.com/release/3627053-Five-Elements-Music-Rishikesh</a></li>
+
+<li>Giorgioraiban - Vrindavana. 2003. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/11835301-Giorgioraiban-Vrindavana">https://www.discogs.com/release/11835301-Giorgioraiban-Vrindavana</a></li>
+
+<li>Govind-Naresh - Meera Shyam. 1976. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/10805313-Govind-Naresh-Meera-Shyam">https://www.discogs.com/release/10805313-Govind-Naresh-Meera-Shyam</a></li>
+
+<li>Homem De Bem - Perto De Você. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/24089243-Homem-De-Bem-Perto-De-Voc%C3%AA">https://www.discogs.com/release/24089243-Homem-De-Bem-Perto-De-Voc%C3%AA</a></li>
+
+<li>I Bambini Della Gurukula Di Villa Vrindavana - La Canzone Di Krishna / Jagannath. 2021. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/4564598-I-Bambini-Della-Gurukula-Di-Villa-Vrindavana-La-Canzone-Di-Krishna-Jagannath">https://www.discogs.com/release/4564598-I-Bambini-Della-Gurukula-Di-Villa-Vrindavana-La-Canzone-Di-Krishna-Jagannath</a></li>
+
+<li>Jagannath - Live In Hungary 1991. 1991. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/15040765-Jagannath-Live-In-Hungary-1991">https://www.discogs.com/release/15040765-Jagannath-Live-In-Hungary-1991</a></li>
+
+<li>Jayshree, Tilak Raj, Shobha,  Khalili - Krishna Leela. 1981. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/15521354-Jayshree-Tilak-Raj-Shobha-Pt-Khalili-Krishna-Leela">https://www.discogs.com/release/15521354-Jayshree-Tilak-Raj-Shobha-Pt-Khalili-Krishna-Leela</a></li>
+
+<li>John Mayer / James Galway - Galway Plays Mayer: Sri Krishna / Flute Concerto: Mandala Ki Raga Sangeet. 1982. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/7911143-John-Mayer-2-James-Galway-Galway-Plays-Mayer-Sri-Krishna-Flute-Concerto-Mandala-Ki-Raga-Sangeet">https://www.discogs.com/release/7911143-John-Mayer-2-James-Galway-Galway-Plays-Mayer-Sri-Krishna-Flute-Concerto-Mandala-Ki-Raga-Sangeet</a></li>
+
+<li>Kaido Kirikmäe - Epic. 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/master/2939638-Kaido-Kirikm%C3%A4e-Epic">https://www.discogs.com/master/2939638-Kaido-Kirikm%C3%A4e-Epic</a></li>
+
+<li>Krishnautix - Mayapur. 1997. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5388128-Krishnautix-Mayapur">https://www.discogs.com/release/5388128-Krishnautix-Mayapur</a></li>
+
+<li>Les musiciens Bauls - Bengale / Bengal: Les Fous De Dieu / The Mad Mystics. 1998. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/2147132-Les-musiciens-Bauls-Bengale-Bengal-Les-Fous-De-Dieu-The-Mad-Mystics">https://www.discogs.com/release/2147132-Les-musiciens-Bauls-Bengale-Bengal-Les-Fous-De-Dieu-The-Mad-Mystics</a></li>
+
+<li>“Mehbub Jan Of Sholapur,” Discogs. <a href="https://www.discogs.com/artist/6317203-Mehbub-Jan-Of-Sholapur">https://www.discogs.com/artist/6317203-Mehbub-Jan-Of-Sholapur</a> (accessed Apr. 01, 2023).</li>
+
+<li>Pale - Lo-fi2001. 2001. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/6257236-Pale-Lo-fi2001">https://www.discogs.com/release/6257236-Pale-Lo-fi2001</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Platypus Ensemble, Proton String Quartet - Rite Of Passage. 2008. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/4182788-Platypus-Ensemble-Proton-String-Quartet-Rite-Of-Passage">https://www.discogs.com/release/4182788-Platypus-Ensemble-Proton-String-Quartet-Rite-Of-Passage</a></li>
+
+<li>PREMABHUMI - Premabhumi. 2009. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/3008252-PREMABHUMI-Premabhumi">https://www.discogs.com/release/3008252-PREMABHUMI-Premabhumi</a></li>
+
+<li>Prema Hara - Ocean Of Grace. 2014. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5869438-Prema-Hara-Ocean-Of-Grace">https://www.discogs.com/release/5869438-Prema-Hara-Ocean-Of-Grace</a></li>
+
+<li>Prema Shakti - Shekinashram Live Bhajans. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/26331746-Prema-Shakti-Shekinashram-Live-Bhajans">https://www.discogs.com/release/26331746-Prema-Shakti-Shekinashram-Live-Bhajans</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Rajan Sajan Misra - Kripao Karo Shri Krishna Shri Ram. 1996. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/18832042-Pt-Rajan-Sajan-Misra-Kripao-Karo-Shri-Krishna-Shri-Ram">https://www.discogs.com/release/18832042-Pt-Rajan-Sajan-Misra-Kripao-Karo-Shri-Krishna-Shri-Ram</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Rashik Priya - Getting Connected. 2008. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/26204813-Rashik-Priya-Getting-Connected">https://www.discogs.com/release/26204813-Rashik-Priya-Getting-Connected</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Sergey Gabbasov - India. 2010. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/2286925-Sergey-Gabbasov-India">https://www.discogs.com/release/2286925-Sergey-Gabbasov-India</a></li>
+
+<li>Shelter - Eternal. 2006. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/master/36365-Shelter-Eternal">https://www.discogs.com/master/36365-Shelter-Eternal</a></li>
+
+<li>Shilpi Mathur &amp; Mohd. Niaz, Deepak, Rajesh Lohia &amp; Rakesh Kala - Jai Shree Krishan (Bhajan) Vol: 1-2. 2003. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/15999884-Shilpi-Mathur-Mohd-Niaz-Deepak-5-Rajesh-Lohia-Rakesh-Kala-Jai-Shree-Krishan-Bhajan-Vol-1-2">https://www.discogs.com/release/15999884-Shilpi-Mathur-Mohd-Niaz-Deepak-5-Rajesh-Lohia-Rakesh-Kala-Jai-Shree-Krishan-Bhajan-Vol-1-2</a></li>
+
+<li>Sripad Aindra Dasa - Krishna Balaram Mandir 24 hour Kirtan mandali All Albums. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/14998063-Sripad-Aindra-Dasa-Krishna-Balaram-Mandir-24-hour-Kirtan-mandali-All-Albums">https://www.discogs.com/release/14998063-Sripad-Aindra-Dasa-Krishna-Balaram-Mandir-24-hour-Kirtan-mandali-All-Albums</a></li>
+
+<li>Stu Goldberg with Larry Coryell &amp; L. Subramaniam - Solos-Duos-Trio. 1978. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/4556642-Stu-Goldberg-with-Larry-Coryell-L-Subramaniam-Solos-Duos-Trio">https://www.discogs.com/release/4556642-Stu-Goldberg-with-Larry-Coryell-L-Subramaniam-Solos-Duos-Trio</a></li>
+
+<li>The Gouranga Powered Band - Opulence Of The Absolute. 2004. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/2408430-The-Gouranga-Powered-Band-Opulence-Of-The-Absolute">https://www.discogs.com/release/2408430-The-Gouranga-Powered-Band-Opulence-Of-The-Absolute</a></li>
+
+<li>Various - Future East. 2004. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/877598-Various-Future-East">https://www.discogs.com/release/877598-Various-Future-East</a></li>
+<li>Various - Hindú De Oro (The Millenium Collection). 2002. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/13802308-Various-Hind%C3%BA-De-Oro-The-Millenium-Collection">https://www.discogs.com/release/13802308-Various-Hind%C3%BA-De-Oro-The-Millenium-Collection</a></li>
+<li>Various - Kirtan! Live From Brooklyn Yoga School. 2021. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/14947843-Various-Kirtan-Live-From-Brooklyn-Yoga-School">https://www.discogs.com/release/14947843-Various-Kirtan-Live-From-Brooklyn-Yoga-School</a></li>
+
+<li>“Villa Vrindavana Studios,” Discogs. <a href="https://www.discogs.com/label/762642-Villa-Vrindavana-Studios">https://www.discogs.com/label/762642-Villa-Vrindavana-Studios</a> (accessed Apr. 01, 2023).</li>
+
+<li>Vimana - In Search Of The Miraculous. 1999. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/17994391-Vimana-In-Search-Of-The-Miraculous">https://www.discogs.com/release/17994391-Vimana-In-Search-Of-The-Miraculous</a></li>
+
+<li>Vrindavana - Vrindavana. 1975. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/1094262-Vrindavana-Vrindavana">https://www.discogs.com/release/1094262-Vrindavana-Vrindavana</a></li>
+
+<li>Vrindavan - Mantras. 2007. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/13173282-Vrindavan-Mantras">https://www.discogs.com/release/13173282-Vrindavan-Mantras</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Vrindavan - Sing-along Mantras &amp; Bhajans I. 1999. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/20782726-Vrindavan-Sing-along-Mantras-Bhajans-I">https://www.discogs.com/release/20782726-Vrindavan-Sing-along-Mantras-Bhajans-I</a></li>
+
+<li>Zollsound 4 feat. Lee Konitz - Open Hearts. 2000. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/8781923-Zollsound-4-feat-Lee-Konitz-Open-Hearts">https://www.discogs.com/release/8781923-Zollsound-4-feat-Lee-Konitz-Open-Hearts</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9aa6e06" class="outline-3">
+<h3 id="org9aa6e06"><span class="section-number-3">6.2.</span> Theatre</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>N. Hein, Miracle Plays of Mathura. New Haven: Yale University Press, 1972.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb8b13a9" class="outline-2">
+<h2 id="orgb8b13a9"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>M. H. Case, Seeing Krishna: The Religious World of a Brahman Family in Vrindaban. Oxford University Press, 2000.</li>
+
+<li>S. Ray, <b>Climate Change and the Art of Devotion: Geoaesthetics in the Land of Krishna, 1550-1850.</b> University of Washington Press, 2019.</li>
+
+<li>M. Sharma, <b>Environmentalism and Revivalism: The Vrindavan Forest Revival and Conservation Project in Mathura, Green and Saffron: Hindu Nationalism and Indian Environmental Politics.</b> Permanent Black, 2012.</li>
+
+<li>V. Today, “Kunds on Govardhan foothill to get a facelift,” Vrindavan Today, May 20, 2023. <a href="https://vrindavantoday.in/kunds-on-govardhan-foothill-to-get-a-facelift/">https://vrindavantoday.in/kunds-on-govardhan-foothill-to-get-a-facelift/</a> (accessed Aug. 21, 2023).</li>
+
+<li>V. Today, “Sur Sarovar bird sanctuary area to be expanded,” Vrindavan Today, Apr. 13, 2022. <a href="https://vrindavantoday.in/sur-sarovar-bird-sanctuary-area-to-be-expanded/">https://vrindavantoday.in/sur-sarovar-bird-sanctuary-area-to-be-expanded/</a> (accessed Aug. 21, 2023).</li>
+
+<li>V. Today, “Why no tears?,” Vrindavan Today, Apr. 29, 2022. <a href="https://vrindavantoday.in/why-no-tears/">https://vrindavantoday.in/why-no-tears/</a> (accessed Aug. 21, 2023).</li>
+
+<li>V. Today, “TEN UNIQUE POWERS OF VRINDAVAN,” Vrindavan Today, Dec. 03, 2021. <a href="https://vrindavantoday.in/ten-unique-powers-of-vrindavan/">https://vrindavantoday.in/ten-unique-powers-of-vrindavan/</a> (accessed Aug. 21, 2023).</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-27 Wed 11:44</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
