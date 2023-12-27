@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-27 Wed 14:39 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Films</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Films</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga6b426f">1. General</a></li>
+<li><a href="#org69948c2">2. Philosophy</a></li>
+<li><a href="#org45b3585">3. STEMM</a>
+<ul>
+<li><a href="#orgc60edc9">3.1. Environment</a></li>
+<li><a href="#orgc7ade3d">3.2. CSE</a></li>
+</ul>
+</li>
+<li><a href="#orgd31090a">4. People</a>
+<ul>
+<li><a href="#org4b13ec3">4.1. Directors</a></li>
+<li><a href="#org6402fd6">4.2. Actors</a></li>
+</ul>
+</li>
+<li><a href="#org2728da1">5. Film Making</a></li>
+<li><a href="#orge81fc03">6. Film Appreciation</a></li>
+<li><a href="#org97720a1">7. Genres</a>
+<ul>
+<li><a href="#org652a440">7.1. Physical</a></li>
+<li><a href="#org316bb26">7.2. SciFi</a></li>
+<li><a href="#org6f54075">7.3. Musicals</a></li>
+<li><a href="#orge7d46e7">7.4. Westerns</a></li>
+<li><a href="#orgf7dee18">7.5. Crime</a></li>
+<li><a href="#org79bf45b">7.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org39fc655">8. Festivals</a></li>
+<li><a href="#orgcc43eae">9. Arts</a>
+<ul>
+<li><a href="#org9c33377">9.1. Music</a></li>
+</ul>
+</li>
+<li><a href="#org3859638">10. Special Topics</a>
+<ul>
+<li><a href="#org6c360e0">10.1. India</a>
+<ul>
+<li><a href="#org978e70d">10.1.1. General</a></li>
+<li><a href="#org17a427b">10.1.2. Orgs</a></li>
+<li><a href="#org4dffc5d">10.1.3. Filmography</a></li>
+<li><a href="#orgf64edbe">10.1.4. Artsy Films</a></li>
+<li><a href="#org02a221a">10.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9c04fe9">10.2. Mexico</a></li>
+<li><a href="#org9e5c23e">10.3. Info on some specifc films</a></li>
+</ul>
+</li>
+<li><a href="#org9af9c03">11. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orga6b426f" class="outline-2">
+<h2 id="orga6b426f"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><i>“Film,”</i> Wikipedia. Mar. 01, 2021, Accessed: Mar. 26, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Film&amp;oldid=1009657662">https://en.wikipedia.org/w/index.php?title=Film&amp;oldid=1009657662</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org69948c2" class="outline-2">
+<h2 id="org69948c2"><span class="section-number-2">2.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>R. Read, <b>A Film-philosophy of Ecology and Enlightenment.</b> Taylor &amp; Francis Group, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45b3585" class="outline-2">
+<h2 id="org45b3585"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc60edc9" class="outline-3">
+<h3 id="orgc60edc9"><span class="section-number-3">3.1.</span> Environment</h3>
+</div>
+<div id="outline-container-orgc7ade3d" class="outline-3">
+<h3 id="orgc7ade3d"><span class="section-number-3">3.2.</span> CSE</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><i>“Footage Security,”</i> Field of Vision. <a href="https://digitalsecurity.film/protecting-your-footage">https://digitalsecurity.film/protecting-your-footage</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd31090a" class="outline-2">
+<h2 id="orgd31090a"><span class="section-number-2">4.</span> People</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4b13ec3" class="outline-3">
+<h3 id="org4b13ec3"><span class="section-number-3">4.1.</span> Directors</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Hayao Miyazaki,” Wikipedia. Jun. 18, 2023. Accessed: Jun. 19, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hayao_Miyazaki&amp;oldid=1160663323">https://en.wikipedia.org/w/index.php?title=Hayao_Miyazaki&amp;oldid=1160663323</a></li>
+<li>“Akira Kurosawa,” Wikipedia. Jun. 13, 2023. Accessed: Jun. 19, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Akira_Kurosawa&amp;oldid=1160002281">https://en.wikipedia.org/w/index.php?title=Akira_Kurosawa&amp;oldid=1160002281</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6402fd6" class="outline-3">
+<h3 id="org6402fd6"><span class="section-number-3">4.2.</span> Actors</h3>
+</div>
+</div>
+<div id="outline-container-org2728da1" class="outline-2">
+<h2 id="org2728da1"><span class="section-number-2">5.</span> Film Making</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“How to write a Hollywood blockbuster, with Aristotle’s Poetics | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/how-to-write-a-hollywood-blockbuster-with-aristotles-poetics">https://aeon.co/essays/how-to-write-a-hollywood-blockbuster-with-aristotles-poetics</a> (accessed Jun. 11, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge81fc03" class="outline-2">
+<h2 id="orge81fc03"><span class="section-number-2">6.</span> Film Appreciation</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“How to find great films to watch | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-find-great-films-to-watch-and-have-fun-along-the-way">https://psyche.co/guides/how-to-find-great-films-to-watch-and-have-fun-along-the-way</a> (accessed Nov. 12, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org97720a1" class="outline-2">
+<h2 id="org97720a1"><span class="section-number-2">7.</span> Genres</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org652a440" class="outline-3">
+<h3 id="org652a440"><span class="section-number-3">7.1.</span> Physical</h3>
+</div>
+<div id="outline-container-org316bb26" class="outline-3">
+<h3 id="org316bb26"><span class="section-number-3">7.2.</span> SciFi</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>“Virus (2019 film),” Wikipedia. Jul. 14, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Virus_(2019_film)&amp;oldid=1098240702">https://en.wikipedia.org/w/index.php?title=Virus_(2019_film)&amp;oldid=1098240702</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Contagion (2011 film),” Wikipedia. Jul. 17, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Contagion_(2011_film)&amp;oldid=1098720090">https://en.wikipedia.org/w/index.php?title=Contagion_(2011_film)&amp;oldid=1098720090</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Theory of Everything: how accurate is the new Stephen Hawking movie starring Eddie Redymane?” <a href="https://slate.com/culture/2014/11/the-theory-of-everything-how-accurate-is-the-new-stephen-hawking-movie-starring-eddie-redymane.html">https://slate.com/culture/2014/11/the-theory-of-everything-how-accurate-is-the-new-stephen-hawking-movie-starring-eddie-redymane.html</a> (accessed Jan. 26, 2022).</li>
+
+<li>L. V. Anderson, “How Accurate Is The Imitation Game?,” Slate, Dec. 03, 2014. Accessed: Jan. 25, 2022. [Online]. Available: <a href="https://slate.com/culture/2014/12/the-imitation-game-fact-vs-fiction-how-true-the-new-movie-is-to-alan-turings-real-life-story.html">https://slate.com/culture/2014/12/the-imitation-game-fact-vs-fiction-how-true-the-new-movie-is-to-alan-turings-real-life-story.html</a></li>
+
+<li>A Beautiful Mind</li>
+
+<li>Big Bang Theory</li>
+
+<li>W. Irwin, The Matrix and Philosophy: Welcome to the Desert of the Real. Open Court Publishing, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6f54075" class="outline-3">
+<h3 id="org6f54075"><span class="section-number-3">7.3.</span> Musicals</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>sound of music</li>
+
+<li>discipline, nf</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7d46e7" class="outline-3">
+<h3 id="orge7d46e7"><span class="section-number-3">7.4.</span> Westerns</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>L. M. Hall, “Research Guides: Film Genres: Westerns.” <a href="https://researchguides.dartmouth.edu/filmgenres/westerns">https://researchguides.dartmouth.edu/filmgenres/westerns</a> (accessed Dec. 10, 2022).</li>
+<li>“Western (genre),” Wikipedia. Dec. 09, 2022. Accessed: Dec. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Western_(genre)&amp;oldid=1126552263#Film">https://en.wikipedia.org/w/index.php?title=Western_(genre)&amp;oldid=1126552263#Film</a></li>
+<li>“A New Frontier: The 12 Best Modern Western Films,” HowStuffWorks, Jun. 13, 2018. <a href="https://entertainment.howstuffworks.com/the-12-best-modern-western-films.htm">https://entertainment.howstuffworks.com/the-12-best-modern-western-films.htm</a> (accessed Dec. 10, 2022).</li>
+<li>“Regulation of nicotine marketing,” Wikipedia. Nov. 23, 2022. Accessed: Dec. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Regulation_of_nicotine_marketing&amp;oldid=1123440192">https://en.wikipedia.org/w/index.php?title=Regulation_of_nicotine_marketing&amp;oldid=1123440192</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf7dee18" class="outline-3">
+<h3 id="orgf7dee18"><span class="section-number-3">7.5.</span> Crime</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>“The Godfather at 50: Celebrating the Mob Saga That Raised the Bar for Gangster Films,” The Wire. <a href="https://thewire.in/film/the-godfather-at-50-francis-ford-coppola">https://thewire.in/film/the-godfather-at-50-francis-ford-coppola</a> (accessed Mar. 14, 2022).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>D. Polan, Pulp Fiction. Bloomsbury Publishing, 2019.</li>
+<li>J. Bailey, Pulp Fiction: The Complete Story of Quentin Tarantino’s Masterpiece. Voyageur Press, 2013.</li>
+<li>P. Bradshaw, “Pulp Fiction review – Tarantino’s mesmeric thriller still breathtaking 20 years on,” The Guardian, May 15, 2014. Accessed: Dec. 10, 2022. [Online]. Available: <a href="https://www.theguardian.com/film/2014/may/15/pulp-fiction-review">https://www.theguardian.com/film/2014/may/15/pulp-fiction-review</a></li>
+<li>Pulp Fiction. Accessed: Dec. 10, 2022. [Online Video]. Available: <a href="https://www.rottentomatoes.com/m/pulp_fiction">https://www.rottentomatoes.com/m/pulp_fiction</a></li>
+<li>Pulp Fiction, (Oct. 14, 1994).</li>
+<li>“Pulp Fiction,” Wikipedia. Dec. 08, 2022. Accessed: Dec. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pulp_Fiction&amp;oldid=1126324840">https://en.wikipedia.org/w/index.php?title=Pulp_Fiction&amp;oldid=1126324840</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org79bf45b" class="outline-3">
+<h3 id="org79bf45b"><span class="section-number-3">7.6.</span> Misc</h3>
+<div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li>“Hollywood disaster movies: what they signal about science,” Physics World, Mar. 09, 2022. <a href="https://physicsworld.com/a/disaster-signalling/">https://physicsworld.com/a/disaster-signalling/</a> (accessed Mar. 10, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org39fc655" class="outline-2">
+<h2 id="org39fc655"><span class="section-number-2">8.</span> Festivals</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>“Sundance Film Festival,” Wikipedia. Aug. 17, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sundance_Film_Festival&amp;oldid=1104901345">https://en.wikipedia.org/w/index.php?title=Sundance_Film_Festival&amp;oldid=1104901345</a></li>
+
+<li>“Toronto International Film Festival,” Wikipedia. Sep. 18, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Toronto_International_Film_Festival&amp;oldid=1110866888">https://en.wikipedia.org/w/index.php?title=Toronto_International_Film_Festival&amp;oldid=1110866888</a></li>
+
+<li>“Berlin International Film Festival,” Wikipedia. Oct. 03, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Berlin_International_Film_Festival&amp;oldid=1113846652">https://en.wikipedia.org/w/index.php?title=Berlin_International_Film_Festival&amp;oldid=1113846652</a></li>
+
+<li>“Venice Film Festival,” Wikipedia. Sep. 30, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Venice_Film_Festival&amp;oldid=1113266718">https://en.wikipedia.org/w/index.php?title=Venice_Film_Festival&amp;oldid=1113266718</a></li>
+
+<li>“Cannes Film Festival,” Wikipedia. Oct. 04, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cannes_Film_Festival&amp;oldid=1113983744">https://en.wikipedia.org/w/index.php?title=Cannes_Film_Festival&amp;oldid=1113983744</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcc43eae" class="outline-2">
+<h2 id="orgcc43eae"><span class="section-number-2">9.</span> Arts</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org9c33377" class="outline-3">
+<h3 id="org9c33377"><span class="section-number-3">9.1.</span> Music</h3>
+</div>
+</div>
+<div id="outline-container-org3859638" class="outline-2">
+<h2 id="org3859638"><span class="section-number-2">10.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org6c360e0" class="outline-3">
+<h3 id="org6c360e0"><span class="section-number-3">10.1.</span> India</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-org978e70d" class="outline-4">
+<h4 id="org978e70d"><span class="section-number-4">10.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<ul class="org-ul">
+<li>S. Ray, <i>Speaking of Films.</i> Penguin Books India, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17a427b" class="outline-4">
+<h4 id="org17a427b"><span class="section-number-4">10.1.2.</span> Orgs</h4>
+<div class="outline-text-4" id="text-10-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgd547f8f"></a>GoI<br />
+<div class="outline-text-5" id="text-10-1-2-1">
+<ul class="org-ul">
+<li>“Films Division - Ministry of Information and Broadcasting | Documentaries | Short Films | Animation Films.” <a href="https://filmsdivision.org/">https://filmsdivision.org/</a> (accessed Jan. 18, 2022).</li>
+
+<li>“National Film Development Corporation” <a href="https://www.nfdcindia.com/">https://www.nfdcindia.com/</a> (accessed Mar. 24, 2021).
+<ul class="org-ul">
+<li><i><a href="https://www.cinemasofindia.com/">NFDC: Cinemas Of India</a></i></li>
+</ul></li>
+
+<li>Directorate of Film Festivals (DFF)</li>
+
+<li>National Film Archive of India (NFAI)</li>
+
+<li>Children’s Film Society of India (CFSI)</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org4dffc5d" class="outline-4">
+<h4 id="org4dffc5d"><span class="section-number-4">10.1.3.</span> Filmography</h4>
+</div>
+<div id="outline-container-orgf64edbe" class="outline-4">
+<h4 id="orgf64edbe"><span class="section-number-4">10.1.4.</span> Artsy Films</h4>
+<div class="outline-text-4" id="text-10-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgdb8c01d"></a>Actors<br />
+<div class="outline-text-5" id="text-10-1-4-1">
+<ul class="org-ul">
+<li>“Om Puri,” Wikipedia. Mar. 06, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Om_Puri&amp;oldid=1143187612">https://en.wikipedia.org/w/index.php?title=Om_Puri&amp;oldid=1143187612</a></li>
+<li>“Nawazuddin Siddiqui,” Wikipedia. Mar. 22, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nawazuddin_Siddiqui&amp;oldid=1146070896">https://en.wikipedia.org/w/index.php?title=Nawazuddin_Siddiqui&amp;oldid=1146070896</a></li>
+<li>“Pankaj Kapur,” Wikipedia. Mar. 26, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pankaj_Kapur&amp;oldid=1146685000">https://en.wikipedia.org/w/index.php?title=Pankaj_Kapur&amp;oldid=1146685000</a></li>
+<li>“Irrfan Khan,” Wikipedia. Mar. 27, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Irrfan_Khan&amp;oldid=1146877360">https://en.wikipedia.org/w/index.php?title=Irrfan_Khan&amp;oldid=1146877360</a></li>
+<li>N. Shah, And Then One Day: A Memoir. Penguin UK, 2015.</li>
+<li>“Naseeruddin Shah,” Wikipedia. Mar. 21, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Naseeruddin_Shah&amp;oldid=1145923765">https://en.wikipedia.org/w/index.php?title=Naseeruddin_Shah&amp;oldid=1145923765</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0ae3b7b"></a>Actresses<br />
+<div class="outline-text-5" id="text-10-1-4-2">
+<ul class="org-ul">
+<li>“Mita Vashisht | Actress, Music Department, Soundtrack,” IMDb. <a href="https://www.imdb.com/name/nm0890622/">https://www.imdb.com/name/nm0890622/</a> (accessed Sep. 25, 2023).</li>
+<li>“Mita Vashisht,” Wikipedia. Sep. 19, 2023. Accessed: Sep. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mita_Vashisht&amp;oldid=1176086488">https://en.wikipedia.org/w/index.php?title=Mita_Vashisht&amp;oldid=1176086488</a></li>
+<li>“Kalki Koechlin,” Wikipedia. Apr. 02, 2023. Accessed: Apr. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kalki_Koechlin&amp;oldid=1147849242">https://en.wikipedia.org/w/index.php?title=Kalki_Koechlin&amp;oldid=1147849242</a></li>
+<li>“Tabu (actress),” Wikipedia. Mar. 16, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tabu_(actress)&amp;oldid=1144923651">https://en.wikipedia.org/w/index.php?title=Tabu_(actress)&amp;oldid=1144923651</a></li>
+<li>“Shabana Azmi,” Wikipedia. Mar. 05, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Shabana_Azmi&amp;oldid=1142958435">https://en.wikipedia.org/w/index.php?title=Shabana_Azmi&amp;oldid=1142958435</a></li>
+<li>“Smita Patil,” Wikipedia. Jan. 25, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Smita_Patil&amp;oldid=1135550568">https://en.wikipedia.org/w/index.php?title=Smita_Patil&amp;oldid=1135550568</a></li>
+<li>“Indira Varma,” Wikipedia. Mar. 26, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Indira_Varma&amp;oldid=1146766904">https://en.wikipedia.org/w/index.php?title=Indira_Varma&amp;oldid=1146766904</a></li>
+<li>“Nandita Das,” Wikipedia. Mar. 23, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nandita_Das&amp;oldid=1146275731">https://en.wikipedia.org/w/index.php?title=Nandita_Das&amp;oldid=1146275731</a></li>
+<li>“Konkona Sen Sharma,” Wikipedia. Mar. 23, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Konkona_Sen_Sharma&amp;oldid=1146265118">https://en.wikipedia.org/w/index.php?title=Konkona_Sen_Sharma&amp;oldid=1146265118</a></li>
+<li>M. Rao, Smita Patil: A Brief Incandescence. Harper Collins, 2015.</li>
+<li>G. Jain, Shabana Azmi: (Penguin Petit). Penguin Random House India Private Limited, 2018.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org34287b9"></a>Directors<br />
+<div class="outline-text-5" id="text-10-1-4-3">
+<ul class="org-ul">
+<li>“Deepa Mehta,” Wikipedia. Mar. 20, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Deepa_Mehta&amp;oldid=1145623366">https://en.wikipedia.org/w/index.php?title=Deepa_Mehta&amp;oldid=1145623366</a></li>
+<li>“Mira Nair,” Wikipedia. Mar. 20, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mira_Nair&amp;oldid=1145622380">https://en.wikipedia.org/w/index.php?title=Mira_Nair&amp;oldid=1145622380</a></li>
+<li>“Anurag Kashyap,” Wikipedia. Mar. 21, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Anurag_Kashyap&amp;oldid=1145837621">https://en.wikipedia.org/w/index.php?title=Anurag_Kashyap&amp;oldid=1145837621</a></li>
+<li>“Aparna Sen,” Wikipedia. Mar. 12, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Aparna_Sen&amp;oldid=1144176667">https://en.wikipedia.org/w/index.php?title=Aparna_Sen&amp;oldid=1144176667</a></li>
+<li>M. Mukim, “Mani Kaul and the cinema to come,” The Caravan. <a href="https://caravanmagazine.in/reviews-essays/mani-kaul-cinema-come">https://caravanmagazine.in/reviews-essays/mani-kaul-cinema-come</a> (accessed Mar. 07, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc35e461"></a>Misc<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org02a221a" class="outline-4">
+<h4 id="org02a221a"><span class="section-number-4">10.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-10-1-5">
+<ul class="org-ul">
+<li>“2006 Noida serial murders,” Wikipedia. Oct. 01, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2006_Noida_serial_murders&amp;oldid=1178075131">https://en.wikipedia.org/w/index.php?title=2006_Noida_serial_murders&amp;oldid=1178075131</a></li>
+<li>“Baishe Srabon,” Wikipedia. Oct. 05, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Baishe_Srabon&amp;oldid=1178687664">https://en.wikipedia.org/w/index.php?title=Baishe_Srabon&amp;oldid=1178687664</a></li>
+<li>“Hostel (2011 film),” Wikipedia. Apr. 28, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hostel_(2011_film)&amp;oldid=1152070606">https://en.wikipedia.org/w/index.php?title=Hostel_(2011_film)&amp;oldid=1152070606</a></li>
+<li>“Manish Gupta (director),” Wikipedia. Aug. 28, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Manish_Gupta_(director)&amp;oldid=1172692501">https://en.wikipedia.org/w/index.php?title=Manish_Gupta_(director)&amp;oldid=1172692501</a></li>
+
+<li>“Rukhsar Rehman - Wikipedia.” Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Rukhsar_Rehman">https://en.wikipedia.org/wiki/Rukhsar_Rehman</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Stoneman Murders,” Wikipedia. Aug. 29, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Stoneman_Murders&amp;oldid=1172880770">https://en.wikipedia.org/w/index.php?title=The_Stoneman_Murders&amp;oldid=1172880770</a></li>
+<li>“Stoneman,” Wikipedia. Sep. 24, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Stoneman&amp;oldid=1176907570">https://en.wikipedia.org/w/index.php?title=Stoneman&amp;oldid=1176907570</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Prime Video: Manorama: Six Feet Under.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Manorama-Six-Feet-Under/0MJXH0D9R3T6ZGBNH065CSWUYZ">https://www.primevideo.com/detail/Manorama-Six-Feet-Under/0MJXH0D9R3T6ZGBNH065CSWUYZ</a></li>
+<li>“Prime Video: Godam.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Godam/0L33U8LYKDGALNNXQ22KN3K9HY">https://www.primevideo.com/detail/Godam/0L33U8LYKDGALNNXQ22KN3K9HY</a></li>
+<li>“Prime Video: My Mother’s Girlfriend.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/My-Mother%E2%80%99s-Girlfriend/0FF6MNBE19K8M7DU5MND3Y7QED">https://www.primevideo.com/detail/My-Mother%E2%80%99s-Girlfriend/0FF6MNBE19K8M7DU5MND3Y7QED</a></li>
+<li>“Prime Video: The Township.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/The-Township/0NSR99DL8I013OG4QAUL8WFSNJ">https://www.primevideo.com/detail/The-Township/0NSR99DL8I013OG4QAUL8WFSNJ</a></li>
+<li>“Prime Video: Char Adhyay.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Char-Adhyay/0N86T787K46197LNHBNO3J2FR9">https://www.primevideo.com/detail/Char-Adhyay/0N86T787K46197LNHBNO3J2FR9</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Caravan, “Editor’s Pick,” The Caravan. <a href="https://caravanmagazine.in/editors-corner/24011">https://caravanmagazine.in/editors-corner/24011</a> (accessed Mar. 07, 2022).</li>
+
+<li>A. Patwardhan, “Why the merger of the National Film Archives and Films Division is an assault on the Constitution,” Scroll.in. <a href="https://scroll.in/reel/1020454/why-the-merger-of-the-national-film-archives-and-films-division-is-an-assault-on-the-constitution">https://scroll.in/reel/1020454/why-the-merger-of-the-national-film-archives-and-films-division-is-an-assault-on-the-constitution</a> (accessed Apr. 01, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c04fe9" class="outline-3">
+<h3 id="org9c04fe9"><span class="section-number-3">10.2.</span> Mexico</h3>
+<div class="outline-text-3" id="text-10-2">
+<ul class="org-ul">
+<li>“Ariel Award,” Wikipedia. Dec. 25, 2022. Accessed: Jan. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ariel_Award&amp;oldid=1129414293">https://en.wikipedia.org/w/index.php?title=Ariel_Award&amp;oldid=1129414293</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Arturo Ripstein,” Wikipedia. Sep. 06, 2022. Accessed: Jan. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Arturo_Ripstein&amp;oldid=1108862091">https://en.wikipedia.org/w/index.php?title=Arturo_Ripstein&amp;oldid=1108862091</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9e5c23e" class="outline-3">
+<h3 id="org9e5c23e"><span class="section-number-3">10.3.</span> Info on some specifc films</h3>
+<div class="outline-text-3" id="text-10-3">
+<ul class="org-ul">
+<li>“The Castle of Purity,” Wikipedia. Sep. 19, 2022. Accessed: Jan. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Castle_of_Purity&amp;oldid=1111042185">https://en.wikipedia.org/w/index.php?title=The_Castle_of_Purity&amp;oldid=1111042185</a></li>
+
+<li>“Lawless (film),” Wikipedia. Oct. 02, 2022. Accessed: Oct. 03, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Lawless_(film)&amp;oldid=1113676787">https://en.wikipedia.org/w/index.php?title=Lawless_(film)&amp;oldid=1113676787</a></li>
+
+<li>“A Hidden Life (2019 film),” Wikipedia. Aug. 21, 2022. Accessed: Aug. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=A_Hidden_Life_(2019_film)&amp;oldid=1105692728">https://en.wikipedia.org/w/index.php?title=A_Hidden_Life_(2019_film)&amp;oldid=1105692728</a></li>
+
+<li>“Aakrosh (1980 film),” Wikipedia. Jul. 12, 2022. Accessed: Aug. 21, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Aakrosh_(1980_film)&amp;oldid=1097786776">https://en.wikipedia.org/w/index.php?title=Aakrosh_(1980_film)&amp;oldid=1097786776</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Nun (1966 film),” Wikipedia. Jul. 02, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Nun_(1966_film)&amp;oldid=1096125100">https://en.wikipedia.org/w/index.php?title=The_Nun_(1966_film)&amp;oldid=1096125100</a></li>
+<li>“Christian film industry,” Wikipedia. May 27, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Christian_film_industry&amp;oldid=1090152055">https://en.wikipedia.org/w/index.php?title=Christian_film_industry&amp;oldid=1090152055</a></li>
+<li>“Benedetta (film),” Wikipedia. Jul. 01, 2022. Accessed: Jul. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Benedetta_(film)&amp;oldid=1096040848">https://en.wikipedia.org/w/index.php?title=Benedetta_(film)&amp;oldid=1096040848</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Johnny Got His Gun (film),” Wikipedia. Mar. 20, 2022. Accessed: Mar. 27, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Johnny_Got_His_Gun_(film)&amp;oldid=1078151151">https://en.wikipedia.org/w/index.php?title=Johnny_Got_His_Gun_(film)&amp;oldid=1078151151</a></li>
+
+<li>“War and Peace (2002 film),” Wikipedia. May 10, 2021. Accessed: Oct. 24, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=War_and_Peace_(2002_film)&amp;oldid=1022419579">https://en.wikipedia.org/w/index.php?title=War_and_Peace_(2002_film)&amp;oldid=1022419579</a></li>
+
+<li>“Chupke Chupke (film),” Wikipedia. May 14, 2022. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Chupke_Chupke_(film)&amp;oldid=1087755626">https://en.wikipedia.org/w/index.php?title=Chupke_Chupke_(film)&amp;oldid=1087755626</a></li>
+
+<li>W. Irwin, G. A. Dunn, and R. Housel, True Blood and Philosophy: We Wanna Think Bad Things with You. John Wiley &amp; Sons, 2010.</li>
+
+<li>W. Irwin, Seinfeld and Philosophy: A Book about Everything and Nothing. ReadHowYouWant.com, 2010.</li>
+
+<li>W. Irwin and M. Conard, The Simpsons and Philosophy: The D’oh! of Homer. Open Court, 2001.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9af9c03" class="outline-2">
+<h2 id="org9af9c03"><span class="section-number-2">11.</span> Misc</h2>
+<div class="outline-text-2" id="text-11">
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-27 Wed 14:39</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
