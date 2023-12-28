@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-28 Thu 04:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Buddhism</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Buddhism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaafc919">1. General</a></li>
+<li><a href="#org53011b8">2. Not Core</a>
+<ul>
+<li><a href="#org226a7cc">2.1. SnT</a>
+<ul>
+<li><a href="#orgc699d14">2.1.1. Facts</a></li>
+<li><a href="#org7287668">2.1.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#orgccdd3aa">2.2. STEMM</a>
+<ul>
+<li><a href="#orgf61d41e">2.2.1. Ecology</a></li>
+<li><a href="#org1ee19e3">2.2.2. CSE</a></li>
+<li><a href="#org3ab66b0">2.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgeb62b98">2.3. Humanities</a>
+<ul>
+<li><a href="#org8c0d4fd">2.3.1. Psychology</a></li>
+</ul>
+</li>
+<li><a href="#orgdf819d2">2.4. Arts</a>
+<ul>
+<li><a href="#org6f25592">2.4.1. General</a></li>
+<li><a href="#orgad35163">2.4.2. Art</a></li>
+<li><a href="#org03cdaca">2.4.3. Music</a></li>
+<li><a href="#org34b78d2">2.4.4. Myths</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3c16fdf">3. Core</a>
+<ul>
+<li><a href="#org02ddf32">3.1. Philosophy</a>
+<ul>
+<li><a href="#org9d07c2e">3.1.1. Popular Works</a></li>
+<li><a href="#org0a7e041">3.1.2. Undergraduate Texts</a></li>
+<li><a href="#orgb58d1f9">3.1.3. Ethics</a></li>
+<li><a href="#orge45bfd8">3.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4cc0419">3.2. Variants</a>
+<ul>
+<li><a href="#org4644023">3.2.1. Zen Buddhism</a></li>
+<li><a href="#orgc6e707f">3.2.2. Tibetan Buddhism</a></li>
+<li><a href="#orgbf4ee02">3.2.3. Tantric Buddhism</a></li>
+<li><a href="#orga9d16cb">3.2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcc2ce39">3.3. Practice</a></li>
+</ul>
+</li>
+<li><a href="#org75ccb93">4. ST</a>
+<ul>
+<li><a href="#orga618052">4.1. Orgs</a></li>
+<li><a href="#org8767f9a">4.2. People</a>
+<ul>
+<li><a href="#orgf5c72ce">4.2.1. M R</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3c98a49">5. Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgaafc919" class="outline-2">
+<h2 id="orgaafc919"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org53011b8" class="outline-2">
+<h2 id="org53011b8"><span class="section-number-2">2.</span> Not Core</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org226a7cc" class="outline-3">
+<h3 id="org226a7cc"><span class="section-number-3">2.1.</span> SnT</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgc699d14" class="outline-4">
+<h4 id="orgc699d14"><span class="section-number-4">2.1.1.</span> Facts</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org94f96f2"></a>News<br /></li>
+<li><a id="orgaed7892"></a>History<br />
+<ol class="org-ol">
+<li><a id="org6df1672"></a>Biographies<br />
+<div class="outline-text-6" id="text-2-1-1-2-1">
+<ul class="org-ul">
+<li>O. Tezuka, <b>The Buddha Box Set, Latest Edition.</b> Harper Collins, 2014.</li>
+<li>J. Hope And B. V. Loon, <i>Introducing Buddha: A Graphic Guide.</i> Icon Books Ltd, 2014.</li>
+<li>S. E. Arnold, <b>The Light of Asia.</b> Penguin Books India, 2005.
+<ul class="org-ul">
+<li>E. Arnold, The Light of Asia. 2005. Accessed: May 14, 2023. [Online]. Available: <a href="https://www.gutenberg.org/ebooks/8920">https://www.gutenberg.org/ebooks/8920</a></li>
+<li>J. Ramesh, <i>The Light of Asia: The Poem that Defined the Buddha.</i> Penguin Random House India Private Limited, 2021.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org7287668" class="outline-4">
+<h4 id="org7287668"><span class="section-number-4">2.1.2.</span> Geography</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org594bd7a"></a>Sacred Places<br /></li>
+<li><a id="org04700a4"></a>India<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<ul class="org-ul">
+<li>D. Ober, Dust on the Throne: The Search for Buddhism in Modern India. Navayana, 2023.
+<ul class="org-ul">
+<li>“Dust on the Throne,” Navayana Publishing. <a href="https://navayana.org/products/dust-on-the-throne/">https://navayana.org/products/dust-on-the-throne/</a> (accessed Apr. 09, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“Dharamshala,”</i> Wikipedia. Jun. 22, 2021. Accessed: Jul. 03, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Dharamshala&amp;oldid=1029881269">https://en.wikipedia.org/w/index.php?title=Dharamshala&amp;oldid=1029881269</a></li>
+<li>S. Chopra, <i>Dharamsala Diaries.</i> Penguin Books, 2007.</li>
+<li><i>“McLeod Ganj - Wikipedia.”</i> <a href="https://en.wikipedia.org/wiki/McLeod_Ganj">https://en.wikipedia.org/wiki/McLeod_Ganj</a> (accessed Jul. 03, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“HIAL – Himalayan Institute of Alternative – Learning Via Practical Application Of Knowledge.”</b> <a href="https://www.hial.edu.in/">https://www.hial.edu.in/</a> (accessed Dec. 13, 2021).
+<ul class="org-ul">
+<li>P. Donthi, <i>“Ladakh should be a sanctuary of peace with nature, it needs safeguards: Sonam Wangchuk,”</i> The Caravan. <a href="https://caravanmagazine.in/politics/ladakh-kashmir-union-territory-kargil-sixth-schedule">https://caravanmagazine.in/politics/ladakh-kashmir-union-territory-kargil-sixth-schedule</a> (accessed Dec. 13, 2021).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why Indian Buddhism has gardens, not monasteries | Psyche Ideas,” Psyche. Accessed: Dec. 05, 2023. [Online]. Available: <a href="https://psyche.co/ideas/why-indian-buddhism-has-gardens-not-monasteries">https://psyche.co/ideas/why-indian-buddhism-has-gardens-not-monasteries</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgeaae584"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-2-3">
+<ul class="org-ul">
+<li>N. Lahiri and U. Singh, Buddhism in Asia: Revival and Reinvention. Manohar, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgccdd3aa" class="outline-3">
+<h3 id="orgccdd3aa"><span class="section-number-3">2.2.</span> STEMM</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgf61d41e" class="outline-4">
+<h4 id="orgf61d41e"><span class="section-number-4">2.2.1.</span> Ecology</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Buddhism | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Buddhism">https://fore.yale.edu/World-Religions/Buddhism</a> (accessed May 29, 2023).</li>
+<li>M. E. Tucker, D. R. Williams, and W. D. Ryuken, Buddhism and Ecology: The Interconnection of Dharma and Deeds. Harvard University Center for the Study of World Religions, 1997.</li>
+<li>“Buddhism &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0oQLsHJ3xw01A3TEeBc-k3">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0oQLsHJ3xw01A3TEeBc-k3</a> (accessed Jun. 15, 2023).</li>
+
+<li>M. Batchelor and K. Brown, Buddhism and Ecology. Motilal Banarsidass Publishe, 1994.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. C. for R. Affairs Peace and World, “Sulak Sivaraksa.” <a href="https://berkleycenter.georgetown.edu/people/sulak-sivaraksa">https://berkleycenter.georgetown.edu/people/sulak-sivaraksa</a> (accessed Jun. 04, 2022).</li>
+<li>“Sulak Sivaraksa,” Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/sulak-sivaraksa/">https://rightlivelihood.org/the-change-makers/find-a-laureate/sulak-sivaraksa/</a> (accessed Jun. 04, 2022).</li>
+<li>“Sulak Sivaraksa,” Wikipedia. Oct. 31, 2021. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sulak_Sivaraksa&amp;oldid=1052806306">https://en.wikipedia.org/w/index.php?title=Sulak_Sivaraksa&amp;oldid=1052806306</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Preah Maha Ghosananda,” Wikipedia. Jan. 07, 2022. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Preah_Maha_Ghosananda&amp;oldid=1064247866">https://en.wikipedia.org/w/index.php?title=Preah_Maha_Ghosananda&amp;oldid=1064247866</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“International Network of Engaged Buddhists,” Wikipedia. May 23, 2021. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Network_of_Engaged_Buddhists&amp;oldid=1024722533">https://en.wikipedia.org/w/index.php?title=International_Network_of_Engaged_Buddhists&amp;oldid=1024722533</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kaza, Green Buddhism: Practice and Compassionate Action in Uncertain Times. Shambhala Publications, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. D. Lama and F. Alt, Our Only Home: A Climate Appeal to the World. Bloomsbury Publishing, 2020.</li>
+<li>D. L. X. Bstan-ʼdzin-rgya-mtsho, The Sheltering Tree of Interdependence: A Buddhist Monk’s Reflections on Ecological Responsibility. Tibet House, 2007.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1ee19e3" class="outline-4">
+<h4 id="org1ee19e3"><span class="section-number-4">2.2.2.</span> CSE</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Buddhism - Research and data from Pew Research Center,” Pew Research Center. <a href="https://www.pewresearch.org/topic/religion/religions/buddhism/">https://www.pewresearch.org/topic/religion/religions/buddhism/</a> (accessed Apr. 11, 2023).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ab66b0" class="outline-4">
+<h4 id="org3ab66b0"><span class="section-number-4">2.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>T. Jinpa, Science and Philosophy in the Indian Buddhist Classics, Vol. 1: The Physical World. Simon and Schuster, 2017.</li>
+<li>T. Jinpa, Science and Philosophy in the Indian Buddhist Classics, Vol. 2: The Mind. Simon and Schuster, 2020.</li>
+<li>T. Jinpa, Science and Philosophy in the Indian Buddhist Classics, Vol. 3: Philosophical Schools. Wisdom Publications, 2022.</li>
+<li>H. H. the D. Lama, Science &amp; Philosophy in the Indian Buddhist Classics: Vol. 4 Philosophical Topics. Simon &amp; Schuster India, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb62b98" class="outline-3">
+<h3 id="orgeb62b98"><span class="section-number-3">2.3.</span> Humanities</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org8c0d4fd" class="outline-4">
+<h4 id="org8c0d4fd"><span class="section-number-4">2.3.1.</span> Psychology</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>R. Wright, <b>Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment.</b> Simon and Schuster, 2017.</li>
+
+<li>D. Goleman and T. D. Lama, <b>Healing Emotions: Conversations with the Dalai Lama on Mindfulness, Emotions, and Health.</b> Shambhala Publications, 2003.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdf819d2" class="outline-3">
+<h3 id="orgdf819d2"><span class="section-number-3">2.4.</span> Arts</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org6f25592" class="outline-4">
+<h4 id="org6f25592"><span class="section-number-4">2.4.1.</span> General</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li><b>“Norbulingka Institute - Preserving Tibetan Arts and Culture,”</b> Norbulingka Institute of Tibetan Culture (India). <a href="https://india.norbulingka.org/">https://india.norbulingka.org/</a> (accessed May 23, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad35163" class="outline-4">
+<h4 id="orgad35163"><span class="section-number-4">2.4.2.</span> Art</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li>“Standing Shaka Buddha,” Google Arts &amp; Culture. <a href="https://artsandculture.google.com/story/standing-shaka-buddha/rAXxv68NnEaFIg">https://artsandculture.google.com/story/standing-shaka-buddha/rAXxv68NnEaFIg</a> (accessed Aug. 20, 2023).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org03cdaca" class="outline-4">
+<h4 id="org03cdaca"><span class="section-number-4">2.4.3.</span> Music</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<ul class="org-ul">
+<li><i>“Buddhist Music,”</i> obo. <a href="https://www.oxfordbibliographies.com/view/document/obo-9780199757824/obo-9780199757824-0158.xml">https://www.oxfordbibliographies.com/view/document/obo-9780199757824/obo-9780199757824-0158.xml</a> (accessed May 23, 2021).</li>
+<li>K. Diehl, <i>Echoes from Dharamsala: Music in the Life of a Tibetan Refugee Community.</i> University of California Press, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34b78d2" class="outline-4">
+<h4 id="org34b78d2"><span class="section-number-4">2.4.4.</span> Myths</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<ul class="org-ul">
+<li>S. Shaw, <i>The Jatakas: Birth Stories of Bodhisatta.</i> Penguin UK, 2006.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c16fdf" class="outline-2">
+<h2 id="org3c16fdf"><span class="section-number-2">3.</span> Core</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org02ddf32" class="outline-3">
+<h3 id="org02ddf32"><span class="section-number-3">3.1.</span> Philosophy</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org9d07c2e" class="outline-4">
+<h4 id="org9d07c2e"><span class="section-number-4">3.1.1.</span> Popular Works</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>R. M. Smullyan, <b>The Tao Is Silent</b>. Harper Collins, 2013.</li>
+<li>A. W. Watts, <b>Become What You Are.</b> Shambhala Publications, 2003.</li>
+<li>A. W. Watts, <b>This Is It: And Other Essays On Zen And Spiritual Experience</b>. Knopf Doubleday Publishing Group, 2011.</li>
+<li>C. Trungpa, <i>Crazy Wisdom.</i> Shambhala Publications, 2001.</li>
+<li>C. Trungpa, <b>Cutting Through Spiritual Materialism</b>. Shambhala Publications, 2010.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a7e041" class="outline-4">
+<h4 id="org0a7e041"><span class="section-number-4">3.1.2.</span> Undergraduate Texts</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>C. Gowans, <b>Philosophy of the Buddha: An Introduction</b>. Routledge, 2004.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb58d1f9" class="outline-4">
+<h4 id="orgb58d1f9"><span class="section-number-4">3.1.3.</span> Ethics</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>D. Keown, Buddhist Ethics: A Very Short Introduction. Oxford University Press, 2020.</li>
+<li>M. Heim, Buddhist Ethics. Cambridge University Press, 2020.</li>
+<li>D. Cozort and J. M. Shields, The Oxford Handbook of Buddhist Ethics. Oxford University Press, 2018.</li>
+<li>V. J. Roebuck, <b>The Dhammapada.</b> London; New York: Penguin Books, 2010.
+<ul class="org-ul">
+<li>Even a quick, superficial read could bring one back to value conventional, common sense morality.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge45bfd8" class="outline-4">
+<h4 id="orge45bfd8"><span class="section-number-4">3.1.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>C. Gowans, Philosophy of the Buddha: An Introduction. Routledge, 2004.</li>
+<li>S. J. Laumakis, An Introduction to Buddhist Philosophy. Cambridge University Press, 2008.</li>
+<li>M. Siderits, Buddhism as Philosophy: An Introduction. Ashgate Publishing, Ltd., 2007.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4cc0419" class="outline-3">
+<h3 id="org4cc0419"><span class="section-number-3">3.2.</span> Variants</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org4644023" class="outline-4">
+<h4 id="org4644023"><span class="section-number-4">3.2.1.</span> Zen Buddhism</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org90bd9d3"></a>General<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>E. Herrigel, <b>Zen in the Art of Archery</b>. Penguin Books, Limited, 1985.</li>
+<li>P. Reps and N. Senzaki, <b>Zen Flesh, Zen Bones: A Collection of Zen and Pre-Zen Writings</b>. Tuttle Publishing, 1998.</li>
+<li>S. Schuhmacher, <i>Zen in Plain English: Experience the Essence of Zen.</i> Watkins Media Limited, 2009.</li>
+<li>S. Suzuki, <b>Zen Mind, Beginner's Mind: Informal Talks on Zen Meditation and Practice</b>. Shambhala Publications, 2010.</li>
+<li>Various, <b>Writings From The Zen Masters</b>. Penguin UK, 2009.</li>
+<li>D. T. Suzuki, <b>Essays in Zen Buddhism.</b> Souvenir Press, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org0200a34"></a>Thich Nhat Hanh<br />
+<ol class="org-ol">
+<li><a id="org802fc26"></a>General<br />
+<div class="outline-text-6" id="text-3-2-1-2-1">
+<ul class="org-ul">
+<li>“Thích Nhất Hạnh,” Wikipedia. Jan. 22, 2022. Accessed: Jan. 22, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Th%C3%ADch_Nh%E1%BA%A5t_H%E1%BA%A1nh&amp;oldid=1067151132">https://en.wikipedia.org/w/index.php?title=Th%C3%ADch_Nh%E1%BA%A5t_H%E1%BA%A1nh&amp;oldid=1067151132</a></li>
+<li>“Plum Village,” Wikipedia. Dec. 17, 2018. Accessed: Jan. 22, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Plum_Village&amp;oldid=874166524">https://en.wikipedia.org/w/index.php?title=Plum_Village&amp;oldid=874166524</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga4457f7"></a>Works<br />
+<div class="outline-text-6" id="text-3-2-1-2-2">
+<ul class="org-ul">
+<li>T. N. Hanh, <i>How To Eat.</i> Random House, 2016.</li>
+<li>T. N. Hanh, <i>How To Love.</i> Random House, 2016.</li>
+<li>T. N. Hanh, <i>How To Relax.</i> Random House, 2016.</li>
+<li>T. N. Hanh, <i>How To Sit.</i> Random House, 2016.</li>
+<li>T. N. Hanh, <i>How To Walk.</i> Random House, 2016.</li>
+<li>Nhá̂t Hạnh, <b>Planting seeds: practicing mindfulness with children.</b> Berkeley, CA: Parallax Press, 2011.</li>
+<li>T. N. Hanh, <i>Zen and the Art of Saving the Planet.</i> Random House, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org459fb13"></a>Misc<br />
+<div class="outline-text-6" id="text-3-2-1-2-3">
+<ul class="org-ul">
+<li>“Thich Nhat Hanh: live blog,” Plum Village. <a href="https://plumvillage.org/about/thich-nhat-hanh/thich-nhat-hanhs-health/">https://plumvillage.org/about/thich-nhat-hanh/thich-nhat-hanhs-health/</a> (accessed Jan. 22, 2022).</li>
+<li>“Lion’s Roar: Buddhist Wisdom for Our Time - Lion’s Roar.” <a href="https://www.lionsroar.com/">https://www.lionsroar.com/</a> (accessed Jan. 22, 2022).</li>
+<li>AP, “Thich Nhat Hanh, influential Zen Buddhist monk, dies at 95,” The Hindu, Hanoi, Jan. 22, 2022. Accessed: Jan. 22, 2022. [Online]. Available: <a href="https://www.thehindu.com/news/international/thich-nhat-hanh-influential-zen-buddhist-monk-dies-at-95/article38306996.ece">https://www.thehindu.com/news/international/thich-nhat-hanh-influential-zen-buddhist-monk-dies-at-95/article38306996.ece</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org67f38b1"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-3">
+<ul class="org-ul">
+<li>K. Sekida, Zen Training: Methods and Philosophy. Shambhala, 2005.</li>
+<li>B. J. Ramm, “The Technology of Awakening: Experiments in Zen Phenomenology,” Religions, vol. 12, no. 3, Art. no. 3, Mar. 2021, doi: 10.3390/rel12030192.</li>
+<li>“To experience Zen-like awakening, try going the headless way | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/to-experience-zen-like-awakening-try-going-the-headless-way">https://psyche.co/ideas/to-experience-zen-like-awakening-try-going-the-headless-way</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc6e707f" class="outline-4">
+<h4 id="orgc6e707f"><span class="section-number-4">3.2.2.</span> Tibetan Buddhism</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>D. Lama, <i>The World of Tibetan Buddhism: An Overview of Its Philosophy and Practice.</i> Simon and Schuster, 2005.</li>
+<li>S. Rinpoche, <b>The Tibetan Book Of Living And Dying: A Spiritual Classic From One Of The Foremost Interpreters Of Tibetan Buddhism To The West.</b> Random House, 2012.</li>
+<li>Karma-Gliṅ-Pa And F. Fremantle, <b>The Tibetan Book Of The Dead: The Great Liberation Through Hearing In The Bardo.</b> Shambhala Publications, 2000.</li>
+<li>T. Blau, <i>Tibetan Mandalas.</i> Sterling Publishing Company, Inc., 2008.</li>
+<li>“Losar,” Wikipedia. Mar. 04, 2022. Accessed: Mar. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Losar&amp;oldid=1075117792">https://en.wikipedia.org/w/index.php?title=Losar&amp;oldid=1075117792</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbf4ee02" class="outline-4">
+<h4 id="orgbf4ee02"><span class="section-number-4">3.2.3.</span> Tantric Buddhism</h4>
+<div class="outline-text-4" id="text-3-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orga6f1170"></a>General<br />
+<div class="outline-text-5" id="text-3-2-3-1">
+<ul class="org-ul">
+<li>“Tantras (Buddhism),” Wikipedia. Dec. 06, 2021. Accessed: Feb. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tantras_(Buddhism)&amp;oldid=1059006718">https://en.wikipedia.org/w/index.php?title=Tantras_(Buddhism)&amp;oldid=1059006718</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org567f474"></a>Psychology<br />
+<div class="outline-text-5" id="text-3-2-3-2">
+<ul class="org-ul">
+<li>T. &amp; F. Group, Tantric Buddhism and Altered States of Consciousness. Taylor &amp; Francis Group, 2016</li>
+</ul>
+</div>
+</li>
+<li><a id="org65c7a68"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org1f726b2"></a>Tibetan<br />
+<div class="outline-text-6" id="text-3-2-3-3-1">
+<ul class="org-ul">
+<li>Tsong-ka-pa, Tantra in Tibet: The Great Exposition of Secret Mantra - Vol. 1, 1st edition. 1st edition.Delhi: Motilal Banarsidass, 1987.</li>
+
+<li>G. C. C. Chang, Teachings and Practice of Tibetan Tantra. Courier Corporation, 2013.</li>
+
+<li>R. A. Ray, Secret of the Vajra World: The Tantric Buddhism of Tibet, New edition. Boston: Random House India, 2002.</li>
+
+<li>A. Wayman, The Buddhist Tantras: Light on Indo-Tibetan Esotericism, 5th edition. 5th edition.Delhi: Motilal Banarsidass Publishers, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga2576c7"></a>Sex<br />
+<div class="outline-text-6" id="text-3-2-3-3-2">
+<ul class="org-ul">
+<li>S. Young, Courtesans and Tantric Consorts: Sexualities in Buddhist Narrative, Iconography, and Ritual, 1st edition. New York: Routledge, 2004.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org19d9c9c"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-3-4">
+<ul class="org-ul">
+<li>H. V. Guenther and C. Trungpa, The Dawn of Tantra, Revised ed. edition. Revised ed. edition.Shambhala, 2001.</li>
+<li>C. Trungpa, The Tantric Path of Indestructible Wakefulness: The Profound Treasury of the Ocean of Dharma, Volume Three. Shambhala, 2013.</li>
+<li>C. Trungpa, Journey Without Goal: The Tantric Wisdom of the Buddha. Shambhala, 2000.</li>
+<li>C. Trungpa, The Lion’s Roar: An Introduction to Tantra, Revised ed. edition. Shambhala, 2001.</li>
+
+<li>J. P. Dalton, Conjuring the Buddha: Ritual Manuals in Early Tantric Buddhism. New York: Columbia University Press, 2023.</li>
+
+<li>C. Wedemeyer, Making Sense of Tantric Buddhism: History, Semiology, and Transgression in the Indian Traditions, Reprint edition. New York: Columbia University Press, 2014.</li>
+
+<li>E. English, Vajrayogini: Her Visualization, Rituals, and Forms. Boston: Wisdom Publications, 2002.</li>
+
+<li>T. Cleary, The Secrets Of Tantric Buddhism: Understanding The Ecstasy Of Enlightenment, 1. publ. San Francisco, CA: Weiser Books, 2014</li>
+
+<li>G. K. Gyatso, Guide to Dakini Land: The Highest Yoga Tantra Practice of Buddha Vajrayogini. Delhi: Motilal Banarsidass Publishers, 2000.</li>
+
+<li>S. Dharmakirti, Mahayana Tantra. New Delhi ; New York, NY: Penguin India, 2002.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga9d16cb" class="outline-4">
+<h4 id="orga9d16cb"><span class="section-number-4">3.2.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>“Navayana,” Wikipedia. Mar. 31, 2023. Accessed: Apr. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Navayana&amp;oldid=1147471161">https://en.wikipedia.org/w/index.php?title=Navayana&amp;oldid=1147471161</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc2ce39" class="outline-3">
+<h3 id="orgcc2ce39"><span class="section-number-3">3.3.</span> Practice</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>D. Lama, <i>Widening The Circle Of Love.</i> Random House, 2012.</li>
+<li>T. Chodron, <i>Taming The Monkey Mind.</i> Heian International, 1999.</li>
+<li>D. S. Lopez, Buddhism in Practice. Princeton University Press, 1995.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org75ccb93" class="outline-2">
+<h2 id="org75ccb93"><span class="section-number-2">4.</span> ST</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orga618052" class="outline-3">
+<h3 id="orga618052"><span class="section-number-3">4.1.</span> Orgs</h3>
+</div>
+<div id="outline-container-org8767f9a" class="outline-3">
+<h3 id="org8767f9a"><span class="section-number-3">4.2.</span> People</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgf5c72ce" class="outline-4">
+<h4 id="orgf5c72ce"><span class="section-number-4">4.2.1.</span> M R</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>M. Ricard, A Plea for the Animals: The Moral, Philosophical, and Evolutionary Imperative to Treat All Beings with Compassion, Translation edition. Shambhala, 2017.</li>
+<li>M. Ricard, Journey to Enlightenment: The Life of Dilgo Khyentse Rinpoche. Shambhala, 2016.</li>
+<li>M. Ricard, Motionless Journey: From A Hermitage In The Himalayas. London: Thames and Hudson, 2008.</li>
+<li>M. Ricard, Enlightened Vagabond: The Life and Teachings of Patrul Rinpoche. Shambhala, 2017.</li>
+<li>J. F. Revel and M. Ricard, The Monk and the Philosopher: A Father and Son Discuss the Meaning of Life, Reprint edition. Schocken, 1900.</li>
+<li>M. Ricard, On the Path to Enlightenment: Heart Advice from the Great Tibetan Masters, 1st edition. Boston: Shambhala Publications Inc, 2013.</li>
+<li>M. Ricard and O. Föllmi, Buddhist Himalayas: People, Faith and Nature. Thames &amp; Hudson, 2008.</li>
+<li>M. Ricard and D. Lama, The Life of Shabkar: Autobiography of a Tibetan Yogin. Snow Lion, 2001.</li>
+<li>M. Ricard and T. X. Thuan, The Quantum and the Lotus: A Journey to the Frontiers Where Science and Buddhism Meet, Reprint edition. Crown, 2004.</li>
+<li>M. Ricard, C. André, and A. Jollien, In Search of Wisdom. Boulder, Colorado: Sounds True, 2018.</li>
+<li>M. Ricard and W. Singer, Beyond the Self: Conversations between Buddhism and Neuroscience, Reprint edition. Cambridge, Massachusetts: The MIT Press, 2018.</li>
+<li>M. Ricard, Notebooks of a Wandering Monk. The MIT Press, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3c98a49" class="outline-2">
+<h2 id="org3c98a49"><span class="section-number-2">5.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>V. Tikhonov and T. Brekke, Eds., Buddhism and Violence: Militarism and Buddhism in Modern Asia: 19, 1st edition. New York: Routledge, 2012.</li>
+<li>M. K. Jerryson and M. Juergensmeyer, Buddhist Warfare, Illustrated edition. Oxford ; New York: Oxford Universit Press, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Hallisey, Tran., Therigatha - Poems of the First Buddhist Women (Murty Classical Library of India): 3. Harvard University Press, 2015.</li>
+
+<li>J. Khyentse, The Guru Drinks Bourbon? Shambhala, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Swaris, The Buddha’s Way to Human Liberation: A Socio-Historical Approach. New Delhi: Navayana, 2011.
+<ul class="org-ul">
+<li>“The Buddha’s Way to Human Liberation,” Navayana Publishing. <a href="https://navayana.org/products/the-buddhas-way-to-human-liberation/">https://navayana.org/products/the-buddhas-way-to-human-liberation/</a> (accessed Apr. 09, 2023).</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2023-12-28 Thu 04:24</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
