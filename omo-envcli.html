@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-13 Sat 12:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Climate</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Climate</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbdabdf7">1. General</a>
+<ul>
+<li><a href="#orgbf99bd1">1.1. Non Tech</a></li>
+<li><a href="#org23c79fb">1.2. Tech</a></li>
+</ul>
+</li>
+<li><a href="#orgb41e00a">2. Kiddos (Playing Granny)</a>
+<ul>
+<li><a href="#orgab8b8f8">2.1. The Climate Book, Greta T.</a></li>
+<li><a href="#org83f8cf4">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org67efc94">3. Space and Time</a>
+<ul>
+<li><a href="#orgc36fcd3">3.1. Facts</a>
+<ul>
+<li><a href="#org3bd4670">3.1.1. History</a></li>
+<li><a href="#org53ea86b">3.1.2. News</a></li>
+</ul>
+</li>
+<li><a href="#org88c518c">3.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#orgc84950c">4. Philosophy</a></li>
+<li><a href="#org323e498">5. Orgs</a>
+<ul>
+<li><a href="#orge172f2f">5.1. IPCC</a>
+<ul>
+<li><a href="#orgd1b2bc0">5.1.1. IPCC Reports</a></li>
+</ul>
+</li>
+<li><a href="#org3db071e">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org037a532">6. STEMM</a>
+<ul>
+<li><a href="#org898a879">6.1. Complexity Science</a></li>
+<li><a href="#org82485bd">6.2. Physics</a></li>
+<li><a href="#orgb6a8358">6.3. CSE</a>
+<ul>
+<li><a href="#org64012e8">6.3.1. Tools</a></li>
+<li><a href="#org83179e0">6.3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfef27a1">6.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgce3553f">7. World</a>
+<ul>
+<li><a href="#orgf74fe76">7.1. Social Studies</a></li>
+<li><a href="#org15f58dc">7.2. Law</a></li>
+<li><a href="#orgac341fd">7.3. Humanities</a>
+<ul>
+<li><a href="#orgb67fd44">7.3.1. Psychology</a></li>
+</ul>
+</li>
+<li><a href="#org7276c65">7.4. Education</a></li>
+<li><a href="#orgb8c2818">7.5. RnD</a></li>
+</ul>
+</li>
+<li><a href="#org9724d26">8. Arts</a></li>
+<li><a href="#org4c0538d">9. Special Topics</a>
+<ul>
+<li><a href="#org3185234">9.1. India</a>
+<ul>
+<li><a href="#org8995568">9.1.1. Orgs</a></li>
+<li><a href="#org4b73b24">9.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfeabb94">9.2. What Not To Do</a>
+<ul>
+<li><a href="#org35664a4">9.2.1. Pseudo Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgaa2f25c">10. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgbdabdf7" class="outline-2">
+<h2 id="orgbdabdf7"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgbf99bd1" class="outline-3">
+<h3 id="orgbf99bd1"><span class="section-number-3">1.1.</span> Non Tech</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>M. Maslin, <b>Climate: A Very Short Introduction.</b> OUP Oxford, 2013.</li>
+
+<li>J. J. Romm, <b>Climate Change: What Everyone Needs to Know.</b> Oxford University Press, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23c79fb" class="outline-3">
+<h3 id="org23c79fb"><span class="section-number-3">1.2.</span> Tech</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><b>Climate Models and Precautionary Measures</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/climate-models-and-precautionary-measures">https://necsi.edu/climate-models-and-precautionary-measures</a>. [Accessed: 16-Feb-2020].</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb41e00a" class="outline-2">
+<h2 id="orgb41e00a"><span class="section-number-2">2.</span> Kiddos (Playing Granny)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgab8b8f8" class="outline-3">
+<h3 id="orgab8b8f8"><span class="section-number-3">2.1.</span> The Climate Book, Greta T.</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>G. Thunberg, <b>The Climate Book.</b> Penguin Books, Limited, 2022.
+<ul class="org-ul">
+<li>“The Climate Book - The End Notes.” <a href="https://theclimatebook.org">https://theclimatebook.org</a> (accessed Nov. 16, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Part 1: How Climate Works
+<ul class="org-ul">
+<li>Contributors: Peter Brannen, Beth Shapiro, Elizabeth Kolbert,
+Michael Oppenheimer, Naomi Oreskes and Johan Rockström.</li>
+</ul></li>
+<li>Part 2: How Our Planet Is Changing
+<ul class="org-ul">
+<li>Contributors: Katharine Hayhoe, Zeke Hausfather, Bjørn Samset,
+Paulo Ceppi, Jennifer Francis, Friederike Otto, Kate Marvel,
+Ricarda Winkelmann, Stefan Rahmstorf, Hans-Otto Pörtner, Karin
+Kvale, Peter Gleik, Joëlle Gergis, Carlos Nobre, Julia Arireira,
+Nathália Nascimento, Beverly Law, Andy Purvis, Adriana De Palma,
+Dave Goulson, Keith Larson, Jennifer Soong, Örjan Gustafsson and
+Tamsin Edwards</li>
+</ul></li>
+<li>Part 3: How It Affects Us
+<ul class="org-ul">
+<li>Contributors: Tedros Adhanom Ghebreyesus, Ana Vicedo-Cabrera, Drew
+Shindell, Felipe Colón-Gonzalez, John Browstein, Dereck MacFadden,
+Sarah McGough, Mauricio Santilla, Samuel Myers, Saleemul Huq,
+Jacqueline Patterson, Abraham Lustgarten, Michael Taylor, Hindou
+Oumarou Ibrahim, Elin Anna Labba, Sônia Guajajara, Solomon Hsiang,
+Taikan Oki, Marshall Burke and Eugene Linden</li>
+</ul></li>
+<li>Part 4: What We've Done About It
+<ul class="org-ul">
+<li>Contributors: Kevin Anderson, Alexandra Urisman Otto, Bill
+McKibben, Glen Peters, Karl-Heinz Erb, Simone Gingrich, Niclas
+Hällström, Jennie Stephens, Isak Stoddard, Rob Jackson, Alexander
+Popp, Michael Clark, Sonja Vermeulen, John Barett, Alice Garvey,
+Ketan Joshi, Alice Larkin, Jilian Anable, Christian Brand, Annie
+Lowry, Mike Berners-Lee, Silpa Kaza, Nina Schrank, Nicholas Stern,
+Sunita Narain, Jason Hickel and Amitav Ghosh</li>
+</ul></li>
+<li>Part 5: What We Must Do Now
+<ul class="org-ul">
+<li>Contributors: Stuart Capstick, Lorraine Whitmarsh, Kate Raworth,
+Per Espen Stoknes, Gison Eshel, Ayana Elizabeth Jahnson, George
+Monbiot, Rebecca Wrigley, Margaret Atwood, Erica Chenoweth,
+Michael Mann, Seth Klein, David Wallace-Wells, Naomi Klein, Nicole
+Becker, Disha Ravi, Hilda Flavia Nakabuye, Laura Verónica Muñoz,
+Ina Maria Shikongo, Ayisha Siddiqa, Mitzi Jonelle Tan, Wanjira
+Mathai, Lucas Chancel, Thomas Piketty, Olúfẹ́mi Táíwò and Robin
+Wall Kimmerer</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org83f8cf4" class="outline-3">
+<h3 id="org83f8cf4"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>V. Nakate, A Bigger Picture: My Fight to Bring a New African Voice to the Climate Crisis. Houghton Mifflin Harcourt, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org67efc94" class="outline-2">
+<h2 id="org67efc94"><span class="section-number-2">3.</span> Space and Time</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc36fcd3" class="outline-3">
+<h3 id="orgc36fcd3"><span class="section-number-3">3.1.</span> Facts</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org3bd4670" class="outline-4">
+<h4 id="org3bd4670"><span class="section-number-4">3.1.1.</span> History</h4>
+</div>
+<div id="outline-container-org53ea86b" class="outline-4">
+<h4 id="org53ea86b"><span class="section-number-4">3.1.2.</span> News</h4>
+</div>
+</div>
+<div id="outline-container-org88c518c" class="outline-3">
+<h3 id="org88c518c"><span class="section-number-3">3.2.</span> Geography</h3>
+</div>
+</div>
+<div id="outline-container-orgc84950c" class="outline-2">
+<h2 id="orgc84950c"><span class="section-number-2">4.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>R. Read , “Why Climate Breakdown Matters,” Bloomsbury. <a href="https://www.bloomsbury.com/uk/why-climate-breakdown-matters-9781350212046/">https://www.bloomsbury.com/uk/why-climate-breakdown-matters-9781350212046/</a> (accessed Apr. 04, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org323e498" class="outline-2">
+<h2 id="org323e498"><span class="section-number-2">5.</span> Orgs</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orge172f2f" class="outline-3">
+<h3 id="orge172f2f"><span class="section-number-3">5.1.</span> IPCC</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgd1b2bc0" class="outline-4">
+<h4 id="orgd1b2bc0"><span class="section-number-4">5.1.1.</span> IPCC Reports</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li><i>“AR6 Synthesis Report: Climate Change 2022 — IPCC.”</i> <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">https://www.ipcc.ch/report/sixth-assessment-report-cycle/</a> (accessed Aug. 10, 2021).</li>
+
+<li><i>“AR5 Synthesis Report: Climate Change 2014 — IPCC.”</i> <a href="https://www.ipcc.ch/report/ar5/syr/">https://www.ipcc.ch/report/ar5/syr/</a> (accessed Aug. 10, 2021).</li>
+
+<li><i>“IPCC Warns that Capitalism is Unsustainable,”</i> Progressive International. <a href="https://progressive.international/wire/2021-11-04-ipcc-warns-that-capitalism-is-unsustainable/en">https://progressive.international/wire/2021-11-04-ipcc-warns-that-capitalism-is-unsustainable/en</a> (accessed Nov. 09, 2021).</li>
+
+<li>“6 things to know about the IPCC climate solutions science report,” Greenpeace International. <a href="https://www.greenpeace.org/international/story/53021/6-things-ipcc-climate-solutions-report">https://www.greenpeace.org/international/story/53021/6-things-ipcc-climate-solutions-report</a> (accessed Apr. 06, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3db071e" class="outline-3">
+<h3 id="org3db071e"><span class="section-number-3">5.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“Home,” Carbon Brief. Accessed: Sep. 26, 2023. [Online]. Available: <a href="https://www.carbonbrief.org/">https://www.carbonbrief.org/</a></li>
+
+<li>“Home,” Scientist Rebellion. Accessed: Dec. 17, 2023. [Online]. Available: <a href="http://scientistrebellion.org/">http://scientistrebellion.org/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org037a532" class="outline-2">
+<h2 id="org037a532"><span class="section-number-2">6.</span> STEMM</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org898a879" class="outline-3">
+<h3 id="org898a879"><span class="section-number-3">6.1.</span> Complexity Science</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li><b>Climate Models and Precautionary Measures</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/climate-models-and-precautionary-measures">https://necsi.edu/climate-models-and-precautionary-measures</a>. [Accessed: 16-Feb-2020].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org82485bd" class="outline-3">
+<h3 id="org82485bd"><span class="section-number-3">6.2.</span> Physics</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Krauss, Lawrence M. <b>The Physics of Climate Change.</b> Head of Zeus Ltd, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb6a8358" class="outline-3">
+<h3 id="orgb6a8358"><span class="section-number-3">6.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org64012e8" class="outline-4">
+<h4 id="org64012e8"><span class="section-number-4">6.3.1.</span> Tools</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<ul class="org-ul">
+<li><i>“IPCC AR6-WGI Atlas.”</i> <a href="https://interactive-atlas.ipcc.ch/atlas">https://interactive-atlas.ipcc.ch/atlas</a> (accessed Aug. 10, 2021).</li>
+
+<li><b>“En-ROADS.”</b> Accessed April 9, 2021. <a href="https://www.climateinteractive.org/tools/en-roads/">https://www.climateinteractive.org/tools/en-roads/</a>.</li>
+
+<li>MIT Sloan. <b>“See the Future of Global Warming in Less than One Second.”</b> Accessed April 9, 2021. <a href="https://mitsloan.mit.edu/ideas-made-to-matter/see-future-global-warming-less-one-second">https://mitsloan.mit.edu/ideas-made-to-matter/see-future-global-warming-less-one-second</a>.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org83179e0" class="outline-4">
+<h4 id="org83179e0"><span class="section-number-4">6.3.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<ul class="org-ul">
+<li>“How Engineers Can Help Protect Earth From Worsening Climate Change,” IEEE Spectrum, Apr. 21, 2022. <a href="https://spectrum.ieee.org/engineers-combatting-climate-change">https://spectrum.ieee.org/engineers-combatting-climate-change</a> (accessed Apr. 22, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfef27a1" class="outline-3">
+<h3 id="orgfef27a1"><span class="section-number-3">6.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>“Climate Change Archives,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/climate-change/">https://thebulletin.org/climate-change/</a> (accessed May 11, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce3553f" class="outline-2">
+<h2 id="orgce3553f"><span class="section-number-2">7.</span> World</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgf74fe76" class="outline-3">
+<h3 id="orgf74fe76"><span class="section-number-3">7.1.</span> Social Studies</h3>
+</div>
+<div id="outline-container-org15f58dc" class="outline-3">
+<h3 id="org15f58dc"><span class="section-number-3">7.2.</span> Law</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>“How Scientists Can Participate in Government Rulemaking - Climate Science Legal Defense Fund,” Nov. 09, 2022. <a href="https://www.csldf.org/resource/participating-in-govt-rulemaking/">https://www.csldf.org/resource/participating-in-govt-rulemaking/</a> (accessed Nov. 17, 2022).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgac341fd" class="outline-3">
+<h3 id="orgac341fd"><span class="section-number-3">7.3.</span> Humanities</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-orgb67fd44" class="outline-4">
+<h4 id="orgb67fd44"><span class="section-number-4">7.3.1.</span> Psychology</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<ul class="org-ul">
+<li>“Climate Psychiatry Alliance,” Climate Psychiatry Alliance. <a href="https://www.climatepsychiatry.org">https://www.climatepsychiatry.org</a> (accessed Nov. 22, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7276c65" class="outline-3">
+<h3 id="org7276c65"><span class="section-number-3">7.4.</span> Education</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>C. J. Gardner, A. Thierry, W. Rowlandson, and J. K. Steinberger, “From Publications to Public Actions: The Role of Universities in Facilitating Academic Advocacy and Activism in the Climate and Ecological Emergency,” Frontiers in Sustainability, vol. 2, p. 42, 2021, doi: 10.3389/frsus.2021.679019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb8c2818" class="outline-3">
+<h3 id="orgb8c2818"><span class="section-number-3">7.5.</span> RnD</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>B. Glavovic, I. White, and T. Smith, “Scientists call for a moratorium on climate change research until governments take real action,” The Conversation. <a href="http://theconversation.com/scientists-call-for-a-moratorium-on-climate-change-research-until-governments-take-real-action-172690">http://theconversation.com/scientists-call-for-a-moratorium-on-climate-change-research-until-governments-take-real-action-172690</a> (accessed Jan. 12, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9724d26" class="outline-2">
+<h2 id="org9724d26"><span class="section-number-2">8.</span> Arts</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>M. Johnson 03.31.2022, “Facts Haven’t Spurred Us to Climate Action. Can Fiction?,” Undark Magazine, Mar. 31, 2022. <a href="https://undark.org/2022/03/31/opinion-facts-havent-spurred-us-to-climate-action-can-fiction/">https://undark.org/2022/03/31/opinion-facts-havent-spurred-us-to-climate-action-can-fiction/</a> (accessed Apr. 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4c0538d" class="outline-2">
+<h2 id="org4c0538d"><span class="section-number-2">9.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org3185234" class="outline-3">
+<h3 id="org3185234"><span class="section-number-3">9.1.</span> India</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org8995568" class="outline-4">
+<h4 id="org8995568"><span class="section-number-4">9.1.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-9-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgfe99cac"></a>GoI<br />
+<div class="outline-text-5" id="text-9-1-1-1">
+<ul class="org-ul">
+<li>“Climate Studies |.” <a href="https://www.climate.iitb.ac.in/">https://www.climate.iitb.ac.in/</a> (accessed Mar. 04, 2022).</li>
+
+<li><i>“Divecha Centre for Climate Change.”</i> <a href="http://dccc.iisc.ac.in/">http://dccc.iisc.ac.in/</a> (accessed Oct. 10, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4b73b24" class="outline-4">
+<h4 id="org4b73b24"><span class="section-number-4">9.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<ul class="org-ul">
+<li><i>“Climate Change in South Asia: A Book of Activities 2.”</i> <a href="https://www.cseindia.org/climate-change-in-south-asia-a-book-of-activities-2-5195">https://www.cseindia.org/climate-change-in-south-asia-a-book-of-activities-2-5195</a> (accessed Jan. 07, 2021).</li>
+
+<li>M. Ramesh, <i>The Climate Solution: India’s Climate-Change Crisis and What We Can Do about It.</i> Hachette UK, 2018.</li>
+
+<li>N. K. Dubash, Handbook of Climate Change and India: Development, Politics and Governance. Routledge, 2015.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfeabb94" class="outline-3">
+<h3 id="orgfeabb94"><span class="section-number-3">9.2.</span> What Not To Do</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-org35664a4" class="outline-4">
+<h4 id="org35664a4"><span class="section-number-4">9.2.1.</span> Pseudo Solutions</h4>
+<div class="outline-text-4" id="text-9-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org31cac2c"></a>Carbon Offsets<br />
+<div class="outline-text-5" id="text-9-2-1-1">
+<ul class="org-ul">
+<li>“Carbon offsets are a scam,” Greenpeace International. <a href="https://www.greenpeace.org/international/story/50689/carbon-offsets-net-zero-greenwashing-scam">https://www.greenpeace.org/international/story/50689/carbon-offsets-net-zero-greenwashing-scam</a> (accessed Jan. 26, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. G. Tom Prater Daisy Dunne, Aruna Chandrasekhar, Orla Dwyer, Molly Lempriere, Yanine Quiroz, Ayesha Tandon, Dr Giuliana Viglione, Joe Goodman, Tom Pearson, “In-depth Q&amp;A: Can ‘carbon offsets’ help to tackle climate change?,” Carbon Brief. Accessed: Sep. 26, 2023. [Online]. Available: <a href="https://interactive.carbonbrief.org/carbon-offsets-2023">https://interactive.carbonbrief.org/carbon-offsets-2023</a></li>
+<li>K. Aronoff et al., “How This Popular Climate ‘Solution’ Could Tank Our Progress,” The New Republic, Sep. 27, 2023. Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://newrepublic.com/article/175773/popular-climate-solution-tank-progress">https://newrepublic.com/article/175773/popular-climate-solution-tank-progress</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa2f25c" class="outline-2">
+<h2 id="orgaa2f25c"><span class="section-number-2">10.</span> Misc</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>A. Niranjan and A. N. E. environment correspondent, “Earth on verge of five catastrophic climate tipping points, scientists warn,” The Guardian, Dec. 06, 2023. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://www.theguardian.com/environment/2023/dec/06/earth-on-verge-of-five-catastrophic-tipping-points-scientists-warn">https://www.theguardian.com/environment/2023/dec/06/earth-on-verge-of-five-catastrophic-tipping-points-scientists-warn</a></li>
+<li>“500+ pages, 200+ researchers: Global Tipping Points Report delivers comprehensive assessment of tipping point risks and societal opportunities,” Potsdam Institute for Climate Impact Research. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://www.pik-potsdam.de/en/news/latest-news/500-pages-200-researchers-global-tipping-points-report-delivers-comprehensive-assessment-of-tipping-point-risks-and-societal-opportunities">https://www.pik-potsdam.de/en/news/latest-news/500-pages-200-researchers-global-tipping-points-report-delivers-comprehensive-assessment-of-tipping-point-risks-and-societal-opportunities</a></li>
+<li>dvdmckay, “Exceeding 1.5°C global warming could trigger multiple climate tipping points – paper explainer,” climatetippingpoints.info. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://climatetippingpoints.info/2022/09/09/climate-tipping-points-reassessment-explainer/">https://climatetippingpoints.info/2022/09/09/climate-tipping-points-reassessment-explainer/</a></li>
+<li>D. I. Armstrong McKay et al., “Exceeding 1.5°C global warming could trigger multiple climate tipping points,” Science, vol. 377, no. 6611, p. eabn7950, Sep. 2022, doi: 10.1126/science.abn7950.</li>
+<li>D. A. McKay and J. Dyke, “Climate tipping points are nearer than you think – our new report warns of catastrophic risk,” The Conversation. Accessed: Dec. 07, 2023. [Online]. Available: <a href="http://theconversation.com/climate-tipping-points-are-nearer-than-you-think-our-new-report-warns-of-catastrophic-risk-219243">http://theconversation.com/climate-tipping-points-are-nearer-than-you-think-our-new-report-warns-of-catastrophic-risk-219243</a></li>
+<li>L. Paddison, “Nearly 30 dangerous feedback loops could permanently shift the Earth’s climate, scientists say,” CNN. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://www.cnn.com/2023/02/17/world/climate-feedback-loops-tipping-points-arctic-ice-intl/index.html">https://www.cnn.com/2023/02/17/world/climate-feedback-loops-tipping-points-arctic-ice-intl/index.html</a></li>
+<li>A. Morrison, “Pivotal moment for humanity as tipping point threats and opportunities accelerate,” News. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/pivotal-moment-for-humanity-as-tipping-point-threats-and-opportunities-accelerate/">https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/pivotal-moment-for-humanity-as-tipping-point-threats-and-opportunities-accelerate/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. J. Ripple et al., “The 2023 state of the climate report: Entering uncharted territory,” BioScience, p. biad080, Oct. 2023, doi: 10.1093/biosci/biad080.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>J. Steinberger, “An Audacious Toolkit: Actions Against Climate Breakdown (Part 1: A is for Advocacy),” Medium, Nov. 26, 2018. <a href="https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-1-a-is-for-advocacy-7baa108f00e9">https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-1-a-is-for-advocacy-7baa108f00e9</a> (accessed Sep. 17, 2022).</li>
+<li>J. Steinberger, “An Audacious Toolkit: Actions Against Climate Breakdown (Part 2: D is for Divest),” Medium, Nov. 26, 2018. <a href="https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-2-d-is-for-divest-9bbcbc694348">https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-2-d-is-for-divest-9bbcbc694348</a> (accessed Sep. 17, 2022).</li>
+<li>J. Steinberger, “An Audacious Toolkit: Actions Against Climate Breakdown (Part 3: I is for Individual),” Medium, Nov. 26, 2018. <a href="https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-3-i-is-for-individual-f510ee035e13">https://jksteinberger.medium.com/an-audacious-toolkit-actions-against-climate-breakdown-part-3-i-is-for-individual-f510ee035e13</a> (accessed Sep. 17, 2022).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>L. Kemp et al., “Climate Endgame: Exploring catastrophic climate change scenarios,” Proceedings of the National Academy of Sciences, vol. 119, no. 34, p. e2108146119, Aug. 2022, doi: 10.1073/pnas.2108146119.</li>
+<li>W. J. Ripple et al., “World Scientists’ Warning of a Climate Emergency 2022,” BioScience, p. biac083, Oct. 2022, doi: 10.1093/biosci/biac083.</li>
+<li>I. Stoddard et al., “Three Decades of Climate Mitigation: Why Haven’t We Bent the Global Emissions Curve?,” Annual Review of Environment and Resources, vol. 46, no. 1, pp. 653–689, 2021, doi: 10.1146/annurev-environ-012220-011104.</li>
+
+<li>A. K. Bhowmik and N. Grant, “Relying on carbon capture to solve the climate crisis risks pushing our problems into the next generation’s path,” The Conversation. <a href="http://theconversation.com/relying-on-carbon-capture-to-solve-the-climate-crisis-risks-pushing-our-problems-into-the-next-generations-path-175269">http://theconversation.com/relying-on-carbon-capture-to-solve-the-climate-crisis-risks-pushing-our-problems-into-the-next-generations-path-175269</a> (accessed May 09, 2022).</li>
+
+<li>S. Lewandowsky, “Climate Change Disinformation and How to Combat It,” Annual Review of Public Health, vol. 42, no. 1, pp. 1–21, 2021, doi: 10.1146/annurev-publhealth-090419-102409.</li>
+
+<li>P. Kalmus, Being the Change: Live Well and Spark a Climate Revolution. New Society Publishers, 2017.</li>
+
+<li>“Investigations and advocacy for climate justice &amp; civic freedoms,” Global Witness. <a href="https:///en/">https:///en/</a> (accessed Mar. 31, 2022).</li>
+
+<li>R. Read, “Climate crisis and the dangers of tech-obsessed ‘long-termism,’” The Conversation. <a href="http://theconversation.com/climate-crisis-and-the-dangers-of-tech-obsessed-long-termism-176951">http://theconversation.com/climate-crisis-and-the-dangers-of-tech-obsessed-long-termism-176951</a> (accessed Mar. 22, 2022).</li>
+
+<li>I. Weissbecker, Climate Change and Human Well-Being: Global Challenges and Opportunities. Springer Science &amp; Business Media, 2011.</li>
+
+<li>E. Cripps, What Climate Justice Means And Why We Should Care. Bloomsbury Publishing, 2022.</li>
+
+<li>I. Stoddard et al., “Three Decades of Climate Mitigation: Why Haven’t We Bent the Global Emissions Curve?,” Annual Review of Environment and Resources, vol. 46, no. 1, pp. 653–689, 2021, doi: 10.1146/annurev-environ-012220-011104.</li>
+
+<li>J. Steinberger, “A Postmortem for Survival: on science, failure and action on climate change,” Age of Awareness, May 08, 2019. <a href="https://medium.com/age-of-awareness/a-postmortem-for-survival-on-science-failure-and-action-on-climate-change-35636c79971e">https://medium.com/age-of-awareness/a-postmortem-for-survival-on-science-failure-and-action-on-climate-change-35636c79971e</a> (accessed Jan. 12, 2022).</li>
+
+<li>B. C. Glavovic, T. F. Smith, and I. White, “The tragedy of climate change science,” Climate and Development, vol. 0, no. 0, pp. 1–5, Dec. 2021, doi: 10.1080/17565529.2021.2008855.</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-01-13 Sat 12:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
