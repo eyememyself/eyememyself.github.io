@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-17 Wed 10:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tantra</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Tantra</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgac35694">1. General</a></li>
+<li><a href="#org72b5bc8">2. Space and Time</a>
+<ul>
+<li><a href="#orge988aca">2.1. Origins</a></li>
+</ul>
+</li>
+<li><a href="#org23245b7">3. STEMM</a>
+<ul>
+<li><a href="#org3af9ce6">3.1. Medicine</a></li>
+<li><a href="#orgb3e6e51">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfefbaaf">4. Core</a>
+<ul>
+<li><a href="#org6cde424">4.1. Encyclopedias</a></li>
+<li><a href="#org4740ae9">4.2. Practice</a></li>
+<li><a href="#orgb2b14f4">4.3. Variants</a>
+<ul>
+<li><a href="#orgd23a843">4.3.1. Tantric Buddhism</a></li>
+<li><a href="#org91cb4f7">4.3.2. Bihar School</a></li>
+<li><a href="#org683d96e">4.3.3. Kashmir Shaivism</a></li>
+<li><a href="#org2dda178">4.3.4. Hevajra</a></li>
+<li><a href="#orgc357270">4.3.5. Lakshmi</a></li>
+</ul>
+</li>
+<li><a href="#org38b20dd">4.4. People</a>
+<ul>
+<li><a href="#org0bf15dd">4.4.1. Avalon</a></li>
+<li><a href="#orge37b41e">4.4.2. Urban</a></li>
+<li><a href="#orgce995c6">4.4.3. Odier</a></li>
+<li><a href="#orga6f6968">4.4.4. White</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3eff052">5. Special Topics</a>
+<ul>
+<li><a href="#org167db48">5.1. Sex</a></li>
+</ul>
+</li>
+<li><a href="#orgb63ecf0">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgac35694" class="outline-2">
+<h2 id="orgac35694"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Tantra,” Wikipedia. Dec. 05, 2022. Accessed: Dec. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tantra&amp;oldid=1125797272">https://en.wikipedia.org/w/index.php?title=Tantra&amp;oldid=1125797272</a></li>
+
+<li>J. Strube, Global Tantra. Oxford University Press, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org72b5bc8" class="outline-2">
+<h2 id="org72b5bc8"><span class="section-number-2">2.</span> Space and Time</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge988aca" class="outline-3">
+<h3 id="orge988aca"><span class="section-number-3">2.1.</span> Origins</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Samuel, The Origins Of Yoga And Tantra. Cambridge University Press, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org23245b7" class="outline-2">
+<h2 id="org23245b7"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3af9ce6" class="outline-3">
+<h3 id="org3af9ce6"><span class="section-number-3">3.1.</span> Medicine</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>M. Slouber, Early Tantric Medicine: Snakebite, Mantras, and Healing in the Garuda Tantras, 1st edition. 1st edition.Oxford University Press, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3e6e51" class="outline-3">
+<h3 id="orgb3e6e51"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><b>“Tantric sex promises healthy bliss; what does the science say? – Peter von Ziegesar | Aeon Essays,”</b> Aeon. Accessed: Mar. 09, 2020. [Online]. Available: <a href="https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say">https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfefbaaf" class="outline-2">
+<h2 id="orgfefbaaf"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6cde424" class="outline-3">
+<h3 id="org6cde424"><span class="section-number-3">4.1.</span> Encyclopedias</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>G. Feuerstein, The Encyclopedia of Yoga and Tantra: Over 2,500 Entries on the History, Philosophy, and Practice, Expanded edition. Expanded edition.Boston: Shambhala, 2011.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4740ae9" class="outline-3">
+<h3 id="org4740ae9"><span class="section-number-3">4.2.</span> Practice</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>D. G. White, <b>Tantra in Practice.</b> Princeton University Press, 2000.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb2b14f4" class="outline-3">
+<h3 id="orgb2b14f4"><span class="section-number-3">4.3.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgd23a843" class="outline-4">
+<h4 id="orgd23a843"><span class="section-number-4">4.3.1.</span> Tantric Buddhism</h4>
+<div class="outline-text-4" id="text-4-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org033faba"></a>General<br />
+<div class="outline-text-5" id="text-4-3-1-1">
+<ul class="org-ul">
+<li>“Tantras (Buddhism),” Wikipedia. Dec. 06, 2021. Accessed: Feb. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tantras_(Buddhism)&amp;oldid=1059006718">https://en.wikipedia.org/w/index.php?title=Tantras_(Buddhism)&amp;oldid=1059006718</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5de2133"></a>Psychology<br />
+<div class="outline-text-5" id="text-4-3-1-2">
+<ul class="org-ul">
+<li>T. &amp; F. Group, Tantric Buddhism and Altered States of Consciousness. Taylor &amp; Francis Group, 2016</li>
+</ul>
+</div>
+</li>
+<li><a id="org0288a68"></a>Variants<br />
+<ol class="org-ol">
+<li><a id="org30e38a0"></a>Tibetan<br />
+<div class="outline-text-6" id="text-4-3-1-3-1">
+<ul class="org-ul">
+<li>Tsong-ka-pa, Tantra in Tibet: The Great Exposition of Secret Mantra - Vol. 1, 1st edition. 1st edition.Delhi: Motilal Banarsidass, 1987.</li>
+
+<li>G. C. C. Chang, Teachings and Practice of Tibetan Tantra. Courier Corporation, 2013.</li>
+
+<li>R. A. Ray, Secret of the Vajra World: The Tantric Buddhism of Tibet, New edition. Boston: Random House India, 2002.</li>
+
+<li>A. Wayman, The Buddhist Tantras: Light on Indo-Tibetan Esotericism, 5th edition. 5th edition.Delhi: Motilal Banarsidass Publishers, 2014.</li>
+
+<li>R. A. Ray, Secret of the Vajra World: The Tantric Buddhism of Tibet, New edition. Boston: Random House India, 2002.</li>
+
+<li>G. Chopel, Tibetan Arts of Love: Sex, Orgasm, and Spiritual Healing. Ithaca, N.Y., USA: Snow Lion Publications, 2000.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgc7b5798"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org382f12f"></a>Sex<br />
+<div class="outline-text-6" id="text-4-3-1-4-1">
+<ul class="org-ul">
+<li>S. Young, Courtesans and Tantric Consorts: Sexualities in Buddhist Narrative, Iconography, and Ritual, 1st edition. New York: Routledge, 2004.</li>
+</ul>
+</div>
+</li>
+<li><a id="org37f1f31"></a>Women<br />
+<div class="outline-text-6" id="text-4-3-1-4-2">
+<ul class="org-ul">
+<li>M. Shaw, Passionate Enlightenment – Women in Tantric Buddhism, Revised ed. edition. Princeton, NJ: Princeton University Press, 1995.</li>
+</ul>
+</div>
+</li>
+<li><a id="org946ae96"></a>Trungpa<br />
+<div class="outline-text-6" id="text-4-3-1-4-3">
+<ul class="org-ul">
+<li>H. V. Guenther and C. Trungpa, The Dawn of Tantra, Revised ed. edition. Revised ed. edition.Shambhala, 2001.</li>
+<li>C. Trungpa, The Tantric Path of Indestructible Wakefulness: The Profound Treasury of the Ocean of Dharma, Volume Three. Shambhala, 2013.</li>
+<li>C. Trungpa, Journey Without Goal: The Tantric Wisdom of the Buddha. Shambhala, 2000.</li>
+<li>C. Trungpa, The Lion’s Roar: An Introduction to Tantra, Revised ed. edition. Shambhala, 2001.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org214280b"></a>Misc<br />
+<div class="outline-text-5" id="text-4-3-1-5">
+<ul class="org-ul">
+<li>J. P. Dalton, Conjuring the Buddha: Ritual Manuals in Early Tantric Buddhism. New York: Columbia University Press, 2023.</li>
+
+<li>C. Wedemeyer, Making Sense of Tantric Buddhism: History, Semiology, and Transgression in the Indian Traditions, Reprint edition. New York: Columbia University Press, 2014.</li>
+
+<li>T. Cleary, The Secrets Of Tantric Buddhism: Understanding The Ecstasy Of Enlightenment, 1. publ. San Francisco, CA: Weiser Books, 2014</li>
+
+<li>K. T. Rinpoche, Principles of Buddhist Tantra: A Commentary on Choje Ngawang Palden’s Illumination of the Tantric Tradition: The Principles of the Grounds and Paths of the Four Great Secret Classes of Tantra. Somerville, MA: Wisdom Publications, 2011.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>E. English, Vajrayogini: Her Visualization, Rituals, and Forms. Boston: Wisdom Publications, 2002.</li>
+<li>G. K. Gyatso, Guide to Dakini Land: The Highest Yoga Tantra Practice of Buddha Vajrayogini. Delhi: Motilal Banarsidass Publishers, 2000.</li>
+
+<li>S. Dharmakirti, Mahayana Tantra. New Delhi ; New York, NY: Penguin India, 2002.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org91cb4f7" class="outline-4">
+<h4 id="org91cb4f7"><span class="section-number-4">4.3.2.</span> Bihar School</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>S. Saraswati, Nawa Yogini Tantra: Yoga for Women, 3rd edition. 3rd edition.Munger, Bihar: Bihar School of Yoga, 1996.</li>
+
+<li>S. S. S. S. Saraswati, Kundalini Tantra: 1, Second edition. Second edition.Munger: Yoga Publications Trust, 2002.</li>
+
+<li>S. S. Satyasangananda, Sri Saundarya Lahari: The Descent, Reprint edition. Reprint edition.Yoga Publications Trust, 2010.</li>
+
+<li>S. S. Saraswati, Meditations from the Tantras: 1. Prakash Pubns &amp; Exports, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org683d96e" class="outline-4">
+<h4 id="org683d96e"><span class="section-number-4">4.3.3.</span> Kashmir Shaivism</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>M. S. G. Dyczkowski, <b>The Doctrine of Vibration: An Analysis of the Doctrines and Practices of Kashmir Shaivism.</b> Motilal Banarsidass Publ., 1989.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2dda178" class="outline-4">
+<h4 id="org2dda178"><span class="section-number-4">4.3.4.</span> Hevajra</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<ul class="org-ul">
+<li>G. W. Farrow and I. Menon, Eds., The Concealed Essence of the Hevajra Tantra. Delhi: Motilal Banarsidass, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc357270" class="outline-4">
+<h4 id="orgc357270"><span class="section-number-4">4.3.5.</span> Lakshmi</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ul class="org-ul">
+<li>S. Gupta, Laksmi Tantra: A Pancaratra Text, 8th edition. 8th edition.Delhi: Motilal Banarsidass, 2017.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org38b20dd" class="outline-3">
+<h3 id="org38b20dd"><span class="section-number-3">4.4.</span> People</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org0bf15dd" class="outline-4">
+<h4 id="org0bf15dd"><span class="section-number-4">4.4.1.</span> Avalon</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>S. J. G. Woodroffe, <b>Introduction to Tantra Shastra.</b> Ganesh, 1952.</li>
+
+<li>S. J. G. Woodroffe, <b>The Serpent Power.</b> Courier Corporation, 1974.</li>
+
+<li>A. Avalon, The Serpent Power: The Secrets Of Tantric And Shaktic Yoga. New York: Dover Publications, 1974.</li>
+
+<li>S. J. Woodroffe, Hymns to the Goddess and Hymn to Kali, Edition. Edition.Ganesh &amp; Co, 2001.</li>
+
+<li>A. Avalon and M. P. Pandit, Kularnava Tantra. Motilal Banarsidass, 2007.</li>
+
+<li>S. J. W. Avalon, Principles of Tantra. Ganesh, 2003.</li>
+
+<li>A. Avalon, The Garland of Letters. Manohar Publishers &amp; Distributors, 2019.</li>
+
+<li>A. Avalon, Sakti and Sakta. Manohar Publishers &amp; Distributors, 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge37b41e" class="outline-4">
+<h4 id="orge37b41e"><span class="section-number-4">4.4.2.</span> Urban</h4>
+<div class="outline-text-4" id="text-4-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc30aeb7"></a>Sex<br />
+<div class="outline-text-5" id="text-4-4-2-1">
+<ul class="org-ul">
+<li>H. B. Urban, Tantra: Sex, Secrecy, Politics, and Power in the Study of Religion. Motilal Banarsidass Publishe, 2012.</li>
+
+<li>H. B. Urban and A. P. of R. S. D. of C. S. H. B. Urban, Magia Sexualis: Sex, Magic, and Liberation in Modern Western Esotericism. University of California Press, 2006.</li>
+
+<li>H. B. Urban, The Power of Tantra: Religion, Sexuality and the Politics of South Asian Studies. Bloomsbury Publishing, 2009.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf1a0f2e"></a>Misc<br />
+<div class="outline-text-5" id="text-4-4-2-2">
+<ul class="org-ul">
+<li>H. B. Urban and A. P. of R. S. D. of C. S. H. B. Urban, The Economics of Ecstasy: Tantra, Secrecy, and Power in Colonial Bengal. Oxford University Press, 2001.</li>
+
+<li>H. B. Urban, Songs of Ecstasy: Tantric and Devotional Songs from Colonial Bengal. Oxford University Press, 2001.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgce995c6" class="outline-4">
+<h4 id="orgce995c6"><span class="section-number-4">4.4.3.</span> Odier</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li>D. Odier, Desire: The Tantric Path to Awakening, Original ed. edition. Original ed. edition.Inner Traditions, 2001.</li>
+<li>D. Odier, Crazy Wisdom of the Yogini: Teachings of the Kashmiri Mahamudra Tradition. Inner Traditions, 2021.</li>
+<li>D. Odier, Tantric Kali: Secret Practices and Rituals, Illustrated edition. Illustrated edition.Inner Traditions, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga6f6968" class="outline-4">
+<h4 id="orga6f6968"><span class="section-number-4">4.4.4.</span> White</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ul class="org-ul">
+<li>D. G. White, Kiss of the Yogini. Chicago, Ill.: University Of Chicago Press, 2006.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3eff052" class="outline-2">
+<h2 id="org3eff052"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org167db48" class="outline-3">
+<h3 id="org167db48"><span class="section-number-3">5.1.</span> Sex</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>D. G. White, Kiss of the Yogini: “Tantric Sex” in its South Asian Contexts. University of Chicago Press, 2006</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Tantric sex promises healthy bliss; what does the science say? – Peter von Ziegesar | Aeon Essays,”</b> Aeon. Accessed: Mar. 09, 2020. [Online]. Available: <a href="https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say">https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb63ecf0" class="outline-2">
+<h2 id="orgb63ecf0"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>L. Vail and B. Pandit, The Isvarapratyabhijnakarika of Utpaladeva: Critical Edition and Annoted Translation, 1st Editoin edition. Motilal Banarsidass Publishing House, 2004.</li>
+
+<li>L. T. Kamalesha Datta Bansat-Boudon, An Introduction to Tantric Philosophy, 1st edition. Taylor &amp; Francis Books India Pvt. Ltd, 2013.</li>
+
+<li>R. (Swami Sivananda) and S. S. Radha, Kundalini Yoga. Motilal Banarsidass Publ., 1992.</li>
+
+<li>A. V. Lysebeth, Tantra: The Cult of the Feminine, 3rd edition. 3rd edition.Delhi: Motilal Banarsidass, 2016.</li>
+
+<li>S. Chattopadhyaya, Reflections on the Tantras, Reprint edition. Reprint edition.Delhi: Motilal Banarsidass Publishers, 1990.</li>
+
+<li>T. Olsson, Yoga and Tantra: History, Philosophy and Mythology. Motilal Banarsidass, 2023.</li>
+
+<li>F. B. B. Ray, In Praise of Annada, Volume 2, 1st edition. Harvard University Press, 2020.</li>
+<li>B. Ray, In Praise of Annada - Vol. 1. Harvard University Press, 2017.</li>
+
+<li>A. Finger, Tantra of the Yoga Sutras. Shambhala, 2019.</li>
+
+<li>A. Judith, <b>Eastern Body, Western Mind: Psychology and the Chakra System As a Path to the Self.</b> Potter/Ten Speed/Harmony/Rodale, 2011.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Padoux, The Hindu Tantric World: An Overview. University of Chicago Press, 2017.</li>
+<li>A. Padoux and R.-O. Jeanty, The Heart of the Yogini: The Yoginihrdaya, a Sanskrit Tantric Treatise, Illustrated edition. Illustrated edition. Oxford University Press, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Frawley, <b>Tantric Yoga and the Wisdom Goddesses: Spiritual Secrets of Ayurveda.</b> Lotus Press, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. R. Kinsley, <b>Tantric Visions of the Divine Feminine: The Ten Mahavidyas.</b> University of California Press, 1997.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. F. Ph.D, <b>Tantra: Path of Ecstasy.</b> Shambhala Publications, 1998.</li>
+
+<li>L. Dĕd, <b>I, Lalla: The Poems of Lal Dĕd.</b> Penguin UK, 2013.</li>
+
+<li>H. Johari, Tools for Tantra. Destiny Books, 1988.</li>
+
+<li>S. Timalsina, Tantric Visual Culture: A Cognitive Approach. Routledge, 2015.</li>
+
+<li>W. D. O’Flaherty, <b>Siva: The Erotic Ascetic.</b> Oxford University Press, 1981.</li>
+
+<li>A. Roy, Sixty-Four Yoginis: Cult, Icons and Goddesses. Primus Books, 2015.</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-01-17 Wed 10:28</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
