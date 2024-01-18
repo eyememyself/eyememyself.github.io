@@ -1,0 +1,3121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-18 Thu 11:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Relationships, Gender, Feminism</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Relationships, Gender, Feminism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgae58cea">1. Relationships</a>
+<ul>
+<li><a href="#orgcf434cc">1.1. General</a></li>
+<li><a href="#org3ef0e56">1.2. Relational Classes</a>
+<ul>
+<li><a href="#orgd4f8182">1.2.1. Home</a></li>
+<li><a href="#orgac456e7">1.2.2. Work</a></li>
+<li><a href="#orgbd8a84c">1.2.3. Lover</a></li>
+<li><a href="#orgda2f97f">1.2.4. Neighbour</a></li>
+<li><a href="#org26b454c">1.2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbe28059">1.3. Sex</a>
+<ul>
+<li><a href="#org1181017">1.3.1. General</a></li>
+<li><a href="#orgf006bf7">1.3.2. Space and Time</a></li>
+<li><a href="#org12e01f9">1.3.3. STEMM</a></li>
+<li><a href="#orgec93b2e">1.3.4. World</a></li>
+<li><a href="#orgea1bee4">1.3.5. Core</a></li>
+<li><a href="#org9776968">1.3.6. Arts</a></li>
+<li><a href="#orgcb46cb9">1.3.7. Special Topics</a></li>
+<li><a href="#org79e1b32">1.3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0f6af40">1.4. Love</a></li>
+<li><a href="#org957a777">1.5. Marriage</a></li>
+<li><a href="#org4d5a8cd">1.6. Special Topics</a>
+<ul>
+<li><a href="#org89b622c">1.6.1. India</a></li>
+<li><a href="#org1273e9c">1.6.2. Parenting</a></li>
+</ul>
+</li>
+<li><a href="#org0162d82">1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4b7c2e7">2. Gender</a>
+<ul>
+<li><a href="#org6b3a26d">2.1. General</a></li>
+<li><a href="#orgde08037">2.2. STEMM</a></li>
+<li><a href="#org0ce093e">2.3. Women</a></li>
+<li><a href="#org7a88b8a">2.4. Men</a></li>
+<li><a href="#org3af952f">2.5. Special Topics</a>
+<ul>
+<li><a href="#orgd6d29a8">2.5.1. India</a></li>
+<li><a href="#org7cb758e">2.5.2. Non Binary Gender</a></li>
+</ul>
+</li>
+<li><a href="#org7f453d6">2.6. Miscellaneous</a></li>
+</ul>
+</li>
+<li><a href="#org53c0611">3. Feminism</a>
+<ul>
+<li><a href="#org957130d">3.1. General</a></li>
+<li><a href="#org44c7c48">3.2. SnT</a>
+<ul>
+<li><a href="#org27ef68e">3.2.1. Facts</a></li>
+<li><a href="#org3571d93">3.2.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#org3ec77d4">3.3. Orgs</a></li>
+<li><a href="#org0fa423f">3.4. STEMM</a>
+<ul>
+<li><a href="#org92a1751">3.4.1. Systems Sciences</a></li>
+<li><a href="#org7fad692">3.4.2. Ecology</a></li>
+<li><a href="#orgd56af42">3.4.3. CSE</a></li>
+<li><a href="#org6098e1b">3.4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf1ffe77">3.5. World</a>
+<ul>
+<li><a href="#orgfd5b3b3">3.5.1. Mgmt</a></li>
+<li><a href="#orgba70673">3.5.2. Economics</a></li>
+<li><a href="#orgd2c3c9a">3.5.3. Law</a></li>
+<li><a href="#org5940d33">3.5.4. Politics</a></li>
+</ul>
+</li>
+<li><a href="#org941add8">3.6. Arts</a>
+<ul>
+<li><a href="#org473769c">3.6.1. Music</a></li>
+<li><a href="#orgd9fb102">3.6.2. Visuals</a></li>
+<li><a href="#org7c6963e">3.6.3. Literature</a></li>
+<li><a href="#org22b1942">3.6.4. Humor</a></li>
+</ul>
+</li>
+<li><a href="#org5869e63">3.7. Critical Studies</a></li>
+<li><a href="#org9fdb2c1">3.8. Special Topics</a>
+<ul>
+<li><a href="#org80573f9">3.8.1. Militant Feminism</a></li>
+<li><a href="#orgfecc25e">3.8.2. Radical Feminism</a></li>
+<li><a href="#orgf69d013">3.8.3. PeaceWomen</a></li>
+<li><a href="#org4b56628">3.8.4. Partiarchy</a></li>
+<li><a href="#org639d0fa">3.8.5. Nudity</a></li>
+<li><a href="#org688f502">3.8.6. Sexuality</a></li>
+<li><a href="#org7adbb57">3.8.7. India</a></li>
+</ul>
+</li>
+<li><a href="#org50f5c6a">3.9. Miscellaneous</a></li>
+<li><a href="#org3ff53fa">3.10. Notes</a></li>
+<li><a href="#orgf5c9855">3.11. Projects</a></li>
+</ul>
+</li>
+<li><a href="#orgbad5b08">4. Philosophy</a></li>
+<li><a href="#org9ceb8f5">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgae58cea" class="outline-2">
+<h2 id="orgae58cea"><span class="section-number-2">1.</span> Relationships</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgcf434cc" class="outline-3">
+<h3 id="orgcf434cc"><span class="section-number-3">1.1.</span> General</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>E. Berne, <i>Games People Play: The Psychology of Human Relationships.</i> Penguin Books, Limited, 2016.</li>
+<li>M. Gladwell, <i>David and Goliath: Underdogs, Misfits and the Art of Battling Giants.</i> Penguin UK, 2013.</li>
+<li>S. Quilliam and T. S. of Life, <i>How to Choose a Partner: The School of Life.</i> Pan Macmillan UK, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ef0e56" class="outline-3">
+<h3 id="org3ef0e56"><span class="section-number-3">1.2.</span> Relational Classes</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgd4f8182" class="outline-4">
+<h4 id="orgd4f8182"><span class="section-number-4">1.2.1.</span> Home</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org24fa00f"></a>Spouse<br />
+<ol class="org-ol">
+<li><a id="org6246cdb"></a>Husband<br /></li>
+<li><a id="org8c3c708"></a>Wife<br /></li>
+<li><a id="org66039e5"></a>Widow<br />
+<div class="outline-text-6" id="text-1-2-1-1-3">
+<ul class="org-ul">
+<li>“Widow,” Wikipedia. Nov. 09, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Widow&amp;oldid=1120914708">https://en.wikipedia.org/w/index.php?title=Widow&amp;oldid=1120914708</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8573bb5"></a>Spinster<br />
+<div class="outline-text-6" id="text-1-2-1-1-4">
+<ul class="org-ul">
+<li>“Spinster,” Wikipedia. Nov. 07, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Spinster&amp;oldid=1120544121">https://en.wikipedia.org/w/index.php?title=Spinster&amp;oldid=1120544121</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org6c079b2"></a>Child<br />
+<ol class="org-ol">
+<li><a id="orga9cd552"></a>Son<br /></li>
+<li><a id="org2ae30fd"></a>Daughter<br /></li>
+<li><a id="orgb18d0eb"></a>Orphan<br />
+<div class="outline-text-6" id="text-1-2-1-2-3">
+<ul class="org-ul">
+<li>“Orphan,” Wikipedia. Oct. 28, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Orphan&amp;oldid=1118700986">https://en.wikipedia.org/w/index.php?title=Orphan&amp;oldid=1118700986</a></li>
+<li>“Orphans in Need | Global Charity | Donate | Sponsor an Orphan,” Orphans in Need. <a href="https://www.orphansinneed.org.uk/">https://www.orphansinneed.org.uk/</a> (accessed Nov. 20, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org59dc777"></a>Parent<br />
+<ol class="org-ol">
+<li><a id="org164f46c"></a>Mom<br />
+<div class="outline-text-6" id="text-1-2-1-3-1">
+<ul class="org-ul">
+<li>“Mother’s Day,” Wikipedia. Aug. 15, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mother%27s_Day&amp;oldid=1104464222">https://en.wikipedia.org/w/index.php?title=Mother%27s_Day&amp;oldid=1104464222</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org61a64c7"></a>Dad<br />
+<div class="outline-text-6" id="text-1-2-1-3-2">
+<ul class="org-ul">
+<li>“Father’s Day,” Wikipedia. Nov. 06, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Father%27s_Day&amp;oldid=1120276623">https://en.wikipedia.org/w/index.php?title=Father%27s_Day&amp;oldid=1120276623</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org89eab56"></a>Misc<br />
+<div class="outline-text-6" id="text-1-2-1-3-3">
+<ul class="org-ul">
+<li>“Parents’ Day,” Wikipedia. Nov. 13, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Parents%27_Day&amp;oldid=1121598194">https://en.wikipedia.org/w/index.php?title=Parents%27_Day&amp;oldid=1121598194</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgafd4bcf"></a>Ext Fam<br />
+<ol class="org-ol">
+<li><a id="org67ae333"></a>Parent<br />
+<ul class="org-ul">
+<li><a id="orge468359"></a>Mom<br /></li>
+<li><a id="org7fe4e52"></a>Dad<br /></li>
+<li><a id="org3d5873b"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org861425f"></a>Siblings<br />
+<ul class="org-ul">
+<li><a id="org2400e98"></a>Sister<br /></li>
+<li><a id="org3145d4d"></a>Brother<br />
+<ul class="org-ul">
+<li><a id="org2f0f9bb"></a>Aunt<br /></li>
+<li><a id="org153b5aa"></a>Uncle<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org1d7ee09"></a>GrandParent<br /></li>
+<li><a id="org41e1229"></a>Grand Mom<br /></li>
+<li><a id="org34cc6f3"></a>Grand Dad<br /></li>
+</ol>
+</li>
+<li><a id="org5170519"></a>Employee<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgac456e7" class="outline-4">
+<h4 id="orgac456e7"><span class="section-number-4">1.2.2.</span> Work</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge90ce2b"></a>Boss<br /></li>
+<li><a id="orgc1d2fc7"></a>Colleague<br /></li>
+<li><a id="orgf17bcce"></a>Employee<br /></li>
+<li><a id="orgad1a7ee"></a>Friends<br />
+<div class="outline-text-5" id="text-1-2-2-4">
+<ul class="org-ul">
+<li>D. Carnegie, <i>How to Win Friends and Influence People.</i> Random House, 2010.</li>
+<li>M. Vernon, The Philosophy of Friendship. Palgrave Macmillan UK, 2005.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgbd8a84c" class="outline-4">
+<h4 id="orgbd8a84c"><span class="section-number-4">1.2.3.</span> Lover</h4>
+</div>
+<div id="outline-container-orgda2f97f" class="outline-4">
+<h4 id="orgda2f97f"><span class="section-number-4">1.2.4.</span> Neighbour</h4>
+</div>
+<div id="outline-container-org26b454c" class="outline-4">
+<h4 id="org26b454c"><span class="section-number-4">1.2.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<ul class="org-ul">
+<li>“Children’s Day,” Wikipedia. Nov. 18, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Children%27s_Day&amp;oldid=1122624665">https://en.wikipedia.org/w/index.php?title=Children%27s_Day&amp;oldid=1122624665</a></li>
+
+<li>“Grandparents’ Day,” Wikipedia. Oct. 18, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Grandparents%27_Day&amp;oldid=1116805807">https://en.wikipedia.org/w/index.php?title=Grandparents%27_Day&amp;oldid=1116805807</a></li>
+
+<li>“Siblings Day,” Wikipedia. Jul. 05, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Siblings_Day&amp;oldid=1096578337">https://en.wikipedia.org/w/index.php?title=Siblings_Day&amp;oldid=1096578337</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe28059" class="outline-3">
+<h3 id="orgbe28059"><span class="section-number-3">1.3.</span> Sex</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org1181017" class="outline-4">
+<h4 id="org1181017"><span class="section-number-4">1.3.1.</span> General</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<ul class="org-ul">
+<li>V. Mottier, <i>Sexuality: A Very Short Introduction.</i> OUP Oxford, 2008.</li>
+
+<li>A. D. Botton and T. S. of Life, <b>How To Think More About Sex.</b> Pan Macmillan, 2012.</li>
+
+<li>R. A. Nye, <i>Sexuality.</i> Oxford University Press, 1999.</li>
+
+<li>P. J. Kleinplatz and A. D. Ménard, Magnificent Sex: Lessons from Extraordinary Lovers, 1st edition. New York ; London: Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf006bf7" class="outline-4">
+<h4 id="orgf006bf7"><span class="section-number-4">1.3.2.</span> Space and Time</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org4f109b9"></a>History<br />
+<div class="outline-text-5" id="text-1-3-2-1">
+<ul class="org-ul">
+<li>K. Lister, A Curious History of Sex. Unbound, 2021.</li>
+
+<li><i>“What Ottoman erotica teaches us about sexual pluralism – İrvin Cemil Schick | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/what-ottoman-erotica-teaches-us-about-sexual-pluralism">https://aeon.co/ideas/what-ottoman-erotica-teaches-us-about-sexual-pluralism</a> (accessed Dec. 18, 2020).</li>
+<li><i>“What rude jibes about Caesar tell us about sex in ancient Rome | Psyche Ideas,”</i> Psyche. <a href="https://psyche.co/ideas/what-jibes-about-caesar-tell-us-about-sex-in-ancient-rome">https://psyche.co/ideas/what-jibes-about-caesar-tell-us-about-sex-in-ancient-rome</a> (accessed Dec. 16, 2020).</li>
+<li><i>“The shining moment when Russian revolutionary women reinvented sex – Paula Erizanu | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/the-shining-moment-when-russian-revolutionary-women-reinvented-sex">https://aeon.co/essays/the-shining-moment-when-russian-revolutionary-women-reinvented-sex</a> (accessed Dec. 15, 2020).</li>
+<li><i>“Getting down and medieval: the sex lives of the Middle Ages – Katherine Harvey | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/getting-down-and-medieval-the-sex-lives-of-the-middle-ages">https://aeon.co/essays/getting-down-and-medieval-the-sex-lives-of-the-middle-ages</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org12e01f9" class="outline-4">
+<h4 id="org12e01f9"><span class="section-number-4">1.3.3.</span> STEMM</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org8d00051"></a>Biology<br />
+<div class="outline-text-5" id="text-1-3-3-1">
+<ul class="org-ul">
+<li>J. M. Diamond, <b>Why Is Sex Fun?: The Evolution of Human Sexuality.</b> Hachette UK, 1998.</li>
+
+<li>D. M. Buss, <b>The Evolution of Desire: Strategies of Human Mating.</b> Hachette UK, 2016.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbfca8f7"></a>Applied Math<br />
+<div class="outline-text-5" id="text-1-3-3-2">
+<ul class="org-ul">
+<li>D. Spiegelhalter, <b>Sex by Numbers: What Statistics Can Tell Us About Sexual Behaviour.</b> Profile Books, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd5fcd72"></a>CSE<br />
+<ol class="org-ol">
+<li><a id="org764ac8f"></a>Social Media<br />
+<div class="outline-text-6" id="text-1-3-3-3-1">
+<ul class="org-ul">
+<li><i>“Teenagers are going to sext, let’s teach them to do it safely | Psyche Ideas,”</i> Psyche. <a href="https://psyche.co/ideas/teenagers-are-going-to-sext-lets-teach-them-to-do-it-safely">https://psyche.co/ideas/teenagers-are-going-to-sext-lets-teach-them-to-do-it-safely</a> (accessed Nov. 26, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf76226b"></a>Tech<br />
+<div class="outline-text-5" id="text-1-3-3-4">
+<ul class="org-ul">
+<li>R. Brooks, Artificial Intimacy: Virtual Friends, Digital Lovers, and Algorithmic Matchmakers. Columbia University Press, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The sex tech to come could offer more than ‘the real thing’ | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/the-sex-tech-to-come-could-offer-more-than-the-real-thing">https://psyche.co/ideas/the-sex-tech-to-come-could-offer-more-than-the-real-thing</a> (accessed Feb. 17, 2022).</li>
+
+<li><i>“How will sexbots change the way we relate to one another? – Leah Reich | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/how-will-sexbots-change-the-way-we-relate-to-one-another">https://aeon.co/essays/how-will-sexbots-change-the-way-we-relate-to-one-another</a> (accessed Dec. 18, 2020).</li>
+
+<li><i>“Programmed to love: is a human-robot relationship wrong? – John Danaher | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/programmed-to-love-is-a-human-robot-relationship-wrong">https://aeon.co/essays/programmed-to-love-is-a-human-robot-relationship-wrong</a> (accessed Dec. 18, 2020).</li>
+
+<li>A. Reed, “The best sex toys of 2023,” Popular Science, Jun. 23, 2023. <a href="https://www.popsci.com/gear/best-sex-toys/">https://www.popsci.com/gear/best-sex-toys/</a> (accessed Jun. 24, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org19ee5e2"></a>Misc<br />
+<div class="outline-text-5" id="text-1-3-3-5">
+<ul class="org-ul">
+<li>K. Wilber, Sex, Ecology, Spirituality: The Spirit of Evolution, Second Edition, Revised edition. Shambhala, 2001.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgec93b2e" class="outline-4">
+<h4 id="orgec93b2e"><span class="section-number-4">1.3.4.</span> World</h4>
+<div class="outline-text-4" id="text-1-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org9f1c279"></a>Social Studies<br />
+<ol class="org-ol">
+<li><a id="orge913a4a"></a>Religion<br />
+<ul class="org-ul">
+<li><a id="org8134a12"></a>E<br />
+<ul class="org-ul">
+<li><a id="org5db18c0"></a>Hinduism<br />
+<div class="outline-text-8" id="text-org5db18c0">
+<ul class="org-ul">
+<li>“Lovemaking for longevity: a recipe from Tokyo’s imperial archives | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/lovemaking-for-longevity-a-recipe-from-tokyos-imperial-archives">https://aeon.co/essays/lovemaking-for-longevity-a-recipe-from-tokyos-imperial-archives</a> (accessed Feb. 17, 2022).</li>
+
+<li><i>Tantric sex promises healthy bliss; what does the science say? &#x2013; Peter von Ziegesar | Aeon Essays,</i> Aeon. [Online]. Available: <a href="https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say">https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say</a>. [Accessed: 09-Mar-2020].</li>
+</ul>
+</div>
+</li>
+<li><a id="org317a4de"></a>Tantra<br />
+<div class="outline-text-8" id="text-org317a4de">
+<ul class="org-ul">
+<li>D. G. White, Kiss of the Yogini: “Tantric Sex” in its South Asian Contexts. University of Chicago Press, 2006</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Tantric sex promises healthy bliss; what does the science say? – Peter von Ziegesar | Aeon Essays,”</b> Aeon. Accessed: Mar. 09, 2020. [Online]. Available: <a href="https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say">https://aeon.co/essays/tantric-sex-promises-healthy-bliss-what-does-the-science-say</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org32305cc"></a>Buddhism<br />
+<div class="outline-text-8" id="text-org32305cc">
+<ul class="org-ul">
+<li><i>“The Buddhist monk who became an apostle for sexual freedom – Donald S Lopez Jr | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/the-buddhist-monk-who-became-an-apostle-for-sexual-freedom">https://aeon.co/ideas/the-buddhist-monk-who-became-an-apostle-for-sexual-freedom</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgaf94a32"></a>Buddhist Tantra<br />
+<div class="outline-text-8" id="text-orgaf94a32">
+<ul class="org-ul">
+<li>S. Young, Courtesans and Tantric Consorts: Sexualities in Buddhist Narrative, Iconography, and Ritual, 1st edition. New York: Routledge, 2004.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Shaw, Passionate Enlightenment – Women in Tantric Buddhism, Revised ed. edition. Princeton, NJ: Princeton University Press, 1995.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd27e955"></a>Taoism<br />
+<div class="outline-text-8" id="text-orgd27e955">
+<ul class="org-ul">
+<li>T. Cleary, Sex, Health, and Long Life: Manuals of Taoist Practice. Shambhala, 1999.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org9893828"></a>W<br />
+<ul class="org-ul">
+<li><a id="orgafa189b"></a>Christianity<br />
+<div class="outline-text-8" id="text-orgafa189b">
+<ul class="org-ul">
+<li>W. Cole, Sex in Christianity and Psychoanalysis, 1st edition. Routledge, 2017.</li>
+
+<li>L. Isherwood and D. von der Horst, Eds., Contemporary Theological Approaches to Sexuality, 1st edition. London New York (N.Y.): Routledge, 2020.</li>
+
+<li>D. MacCulloch, Lower than the Angels: A History of Sex and Christianity. Penguin, 2024.</li>
+
+<li>A. Ipsen, Sex Working and the Bible, 1st edition. London ; Oakville, CT: Routledge, 2009.</li>
+
+<li><i>“Can religious submission in marriage foster a new divinity? – Tara Isabella Burton | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/can-religious-submission-in-marriage-foster-a-new-divinity">https://aeon.co/essays/can-religious-submission-in-marriage-foster-a-new-divinity</a> (accessed Dec. 03, 2020).</li>
+
+<li><i>“Italy’s erotic revolution in art joined the lusty to the divine – James Grantham Turner | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/italys-erotic-revolution-in-art-joined-the-lusty-to-the-divine">https://aeon.co/ideas/italys-erotic-revolution-in-art-joined-the-lusty-to-the-divine</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f78912"></a>Islam<br />
+<div class="outline-text-8" id="text-org3f78912">
+<ul class="org-ul">
+<li><a id="orgb383754"></a> M. O. Jackson, <b>The Human Network: How We're Connected and Why It Matters.</b> Atlantic Books, 2019.
+<ul class="org-ul">
+<li>"Unprotected sexual intercourse with multiple partners increases personal, societal risk of STDs."</li>
+</ul></li>
+<li><i>“Islam has a long tradition of explicit sexual discussion – Mark Hay | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/islam-has-a-long-tradition-of-explicit-sexual-discussion">https://aeon.co/essays/islam-has-a-long-tradition-of-explicit-sexual-discussion</a> (accessed Dec. 03, 2020).</li>
+<li>“How to explore ethical non-monogamy | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-explore-ethical-non-monogamy-with-care-and-kindness">https://psyche.co/guides/how-to-explore-ethical-non-monogamy-with-care-and-kindness</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org3fe3f50"></a>Judaism<br />
+<div class="outline-text-8" id="text-org3fe3f50">
+<ul class="org-ul">
+<li>“Judaism and sexuality,” Wikipedia. Dec. 02, 2023. Accessed: Jan. 18, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Judaism_and_sexuality&amp;oldid=1187954360">https://en.wikipedia.org/w/index.php?title=Judaism_and_sexuality&amp;oldid=1187954360</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Ruttenberg, Ed., The Passionate Torah: Sex and Judaism. NYU Press, 2009.
+<ul class="org-ul">
+<li>“The Passionate Torah: Sex and Judaism on JSTOR.” Accessed: Jan. 18, 2024. [Online]. Available: <a href="https://www.jstor.org/stable/j.ctt9qgfbf">https://www.jstor.org/stable/j.ctt9qgfbf</a></li>
+</ul></li>
+
+<li>Y. Kiel, Sexuality in the Babylonian Talmud: Christian and Sasanian Contexts in Late Antiquity. Cambridge University Press, 2016.</li>
+
+<li>J. Magonet, Ed., Jewish Explorations of Sexuality: 001. Providence: Berghahn Books, Incorporated, 1995.</li>
+
+<li>D. Biale, Eros and the Jews: From Biblical Israel to Contemporary America, 1st edition. University of California Press, 2023.</li>
+
+<li>D. Boyarin, Carnal Israel – Reading Sex in Talmudic Culture, Reprint edition. Berkeley: University of California Press, 1995.</li>
+
+<li>D. R. K. Westheimer and J. Mark, Heavenly Sex: Sexuality and the Jewish Tradition. NYU Press, 2020.</li>
+
+<li>M. Segol, Kabbalah and Sex Magic: A Mythical-Ritual Genealogy: 23. University Park, Pennsylvania: Pennsylvania State University Press, 2021.</li>
+
+<li>M. S. Berger, D. Blumenthal, E. Dorff, D. Novak, A. Riccett, and J. Wertheimer, Marriage, Sex and Family in Judaism. Rowman &amp; Littlefield Publishers, 2005.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgb470849"></a>Politics<br />
+<div class="outline-text-6" id="text-1-3-4-1-2">
+<ul class="org-ul">
+<li>R. Banerji, <b>Sex and Power.</b> Penguin UK, 2008.</li>
+<li>W. Doniger, <b>Against Dharma: Dissent in the Ancient Indian Sciences of Sex and Politics</b> Yale University Press, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc038df9"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-4-1-3">
+<ul class="org-ul">
+<li>A. Srinivasan, <b>The Right to Sex: The Sunday Times Bestseller.</b> Bloomsbury Publishing Plc, 2022.
+<ul class="org-ul">
+<li>R. Kalita, “Amia Srinivasan’s ‘Right to Sex’ asks the critical questions that needed to be asked,” Scroll.in. <a href="https://scroll.in/article/1006808/amia-srinivasans-right-to-sex-asks-the-critical-questions-that-needed-to-be-asked">https://scroll.in/article/1006808/amia-srinivasans-right-to-sex-asks-the-critical-questions-that-needed-to-be-asked</a> (accessed Jan. 11, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org01ad427"></a>Business<br />
+<ol class="org-ol">
+<li><a id="orgc3f0afb"></a>Sex Work<br />
+<ul class="org-ul">
+<li><a id="orgc7c9922"></a>General<br /></li>
+<li><a id="orgf28b8ed"></a>Complexity Science<br />
+<div class="outline-text-7" id="text-orgf28b8ed">
+<ul class="org-ul">
+<li>A. Mergenthaler and T. Yasseri, <b>“Selling sex: what determines rates and popularity? An analysis of 11,500 online profiles,”</b> Culture, Health &amp; Sexuality, vol. 0, no. 0, pp. 1–15, Apr. 2021, doi: 10.1080/13691058.2021.1901145.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7d82f4f"></a>World<br />
+<ul class="org-ul">
+<li><a id="org84c790f"></a>Law<br />
+<div class="outline-text-8" id="text-org84c790f">
+<ul class="org-ul">
+<li><i>“Decriminalising sex work is better for everyone – Maria Laura Di Tommaso &amp; Marina Della Giusta | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/why-decriminalising-sex-work-is-better-for-everyone">https://aeon.co/ideas/why-decriminalising-sex-work-is-better-for-everyone</a> (accessed Dec. 15, 2020).</li>
+
+<li><i>“The sex trade can never be legalised without hurting women | Aeon Essays.”</i> <a href="https://aeon.co/essays/the-sex-trade-can-never-be-legalised-without-hurting-women">https://aeon.co/essays/the-sex-trade-can-never-be-legalised-without-hurting-women</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge4cfa9e"></a>Economics<br />
+<div class="outline-text-8" id="text-orge4cfa9e">
+<ul class="org-ul">
+<li>S. Cunningham and M. Shah, The Oxford Handbook of the Economics of Prostitution. Oxford University Press, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbfcaa78"></a>Formal Education<br />
+<div class="outline-text-8" id="text-orgbfcaa78">
+<ul class="org-ul">
+<li>T. J. Stewart and T. J. (Iowa S. U. S. USA), Sex Work on Campus. Taylor &amp; Francis Limited, 2022.</li>
+
+<li>J. S. Hirsch and S. Khan, Sexual Citizens: A Landmark Study of Sex, Power, and Assault on Campus. W. W. Norton &amp; Company, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgee03d20"></a>Spirituality<br />
+<ul class="org-ul">
+<li><a id="org7975f7b"></a>Christianity<br />
+<div class="outline-text-10" id="text-org7975f7b">
+<ul class="org-ul">
+<li>A. Ipsen, Sex Working and the Bible, 1st edition. London ; Oakville, CT: Routledge, 2009.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org8a0a32e"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org81ea533"></a>CSE<br />
+<div class="outline-text-8" id="text-org81ea533">
+<ul class="org-ul">
+<li>“About,” Hacking//Hustling. <a href="https://hackinghustling.org/">https://hackinghustling.org/</a> (accessed Sep. 18, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8cc3270"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgaae632c"></a>India<br />
+<ul class="org-ul">
+<li><a id="org3ceb01c"></a>General<br />
+<div class="outline-text-9" id="text-org3ceb01c">
+<ul class="org-ul">
+<li>R. Sahni, V. K. Shankar, and H. Apte, Prostitution and Beyond: An Analysis of Sex Workers in India. SAGE Publications India, 2008.</li>
+</ul>
+</div>
+</li>
+<li><a id="org989fe1b"></a>World<br />
+<ul class="org-ul">
+<li><a id="orgdba747e"></a>Law<br />
+<div class="outline-text-10" id="text-orgdba747e">
+<ul class="org-ul">
+<li>P. Kotiswaran, Dangerous Sex, Invisible Labor: Sex Work and the Law in India. Princeton University Press, 2011.</li>
+
+<li>K. Rajagopal, “Supreme Court recognises sex work as a ‘profession,’” The Hindu, New Delhi, May 25, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://www.thehindu.com/news/national/supreme-court-recognises-sex-work-as-a-profession/article65461331.ece">https://www.thehindu.com/news/national/supreme-court-recognises-sex-work-as-a-profession/article65461331.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgd8a8bff"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org757664f"></a>CSE<br />
+<div class="outline-text-10" id="text-org757664f">
+<ul class="org-ul">
+<li>O. Snow, “Are You Ready to Be Surveilled Like a Sex Worker?,” Wired. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://www.wired.com/story/roe-abortion-sex-worker-policy/">https://www.wired.com/story/roe-abortion-sex-worker-policy/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="orge60ef39"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org1e5b162"></a>Films<br />
+<div class="outline-text-10" id="text-org1e5b162">
+<ul class="org-ul">
+<li>“Tawaif (film),” Wikipedia. Nov. 16, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tawaif_(film)&amp;oldid=1122241997">https://en.wikipedia.org/w/index.php?title=Tawaif_(film)&amp;oldid=1122241997</a></li>
+
+<li>“Pakeezah,” Wikipedia. Nov. 09, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pakeezah&amp;oldid=1120822761">https://en.wikipedia.org/w/index.php?title=Pakeezah&amp;oldid=1120822761</a></li>
+
+<li>N. Ramnath, “What brothel set design tells us about films that explore sex work,” Scroll.in. <a href="https://scroll.in/reel/1018901/what-brothel-set-design-tells-us-about-films-that-explore-sex-work">https://scroll.in/reel/1018901/what-brothel-set-design-tells-us-about-films-that-explore-sex-work</a> (accessed Mar. 09, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org98ca291"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org1e1175a"></a>Bedia<br />
+<div class="outline-text-10" id="text-org1e1175a">
+<ul class="org-ul">
+<li>“Bedia (Muslim clan) - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Bedia_(Muslim_clan)">https://en.wikipedia.org/wiki/Bedia_(Muslim_clan)</a> (accessed Aug. 11, 2022).</li>
+
+<li>“Bedia (caste),” Wikipedia. Oct. 14, 2021. Accessed: Aug. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bedia_(caste)&amp;oldid=1049932537">https://en.wikipedia.org/w/index.php?title=Bedia_(caste)&amp;oldid=1049932537</a></li>
+
+<li>A. Agrawal, Chaste Wives and Prostitute Sisters: Patriarchy and Prostitution among the Bedias of India. Taylor &amp; Francis, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgae16913"></a>Misc<br />
+<div class="outline-text-9" id="text-orgae16913">
+<ul class="org-ul">
+<li>M. Jeelani, “Life in the capital’s expanding market for high-end sexual commerce,” The Caravan. <a href="https://caravanmagazine.in/reportage/supply-demand">https://caravanmagazine.in/reportage/supply-demand</a> (accessed Mar. 07, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0f270fe"></a>Moms<br />
+<div class="outline-text-8" id="text-org0f270fe">
+<ul class="org-ul">
+<li>“Abused and denied help: Sex worker mums lose access to kids,” openDemocracy. <a href="https://www.opendemocracy.net/en/5050/sex-work-social-services-mothers-children/">https://www.opendemocracy.net/en/5050/sex-work-social-services-mothers-children/</a> (accessed Jul. 30, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="orgee2a208"></a>Misc<br />
+<div class="outline-text-7" id="text-orgee2a208">
+<ul class="org-ul">
+<li>“The reality of prostitution is not complex. It is simple | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/the-reality-of-prostitution-is-not-complex-it-is-simple">https://psyche.co/ideas/the-reality-of-prostitution-is-not-complex-it-is-simple</a> (accessed Jun. 08, 2022).</li>
+
+<li><i>“In an unstable economy, I found freedom and security in sex work | Psyche Ideas,”</i> Psyche. <a href="https://psyche.co/ideas/in-an-unstable-economy-i-found-freedom-and-security-in-sex-work">https://psyche.co/ideas/in-an-unstable-economy-i-found-freedom-and-security-in-sex-work</a> (accessed Dec. 16, 2020).</li>
+
+<li><i>“What the sex trade has in common with the slave trade | Aeon Essays.”</i> <a href="https://aeon.co/essays/what-the-sex-trade-has-in-common-with-the-slave-trade">https://aeon.co/essays/what-the-sex-trade-has-in-common-with-the-slave-trade</a> (accessed Dec. 03, 2020).</li>
+
+<li><i>“Lolita understood that some sex is transactional. So did I | Aeon Ideas.”</i> <a href="https://aeon.co/ideas/lolita-understood-that-some-sex-is-transactional-so-did-i">https://aeon.co/ideas/lolita-understood-that-some-sex-is-transactional-so-did-i</a> (accessed Dec. 03, 2020).</li>
+
+<li><i>“Why do young rural women in China become mistresses? – James Palmer | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/why-do-young-rural-women-in-china-become-mistresses">https://aeon.co/essays/why-do-young-rural-women-in-china-become-mistresses</a> (accessed Dec. 15, 2020).</li>
+
+<li><i>“When it comes to buying sex, are women any different from men? | Aeon Essays.”</i> <a href="https://aeon.co/essays/when-it-comes-to-buying-sex-are-women-any-different-from-men">https://aeon.co/essays/when-it-comes-to-buying-sex-are-women-any-different-from-men</a> (accessed Dec. 03, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The reality of prostitution is not complex. It is simple | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/the-reality-of-prostitution-is-not-complex-it-is-simple">https://psyche.co/ideas/the-reality-of-prostitution-is-not-complex-it-is-simple</a> (accessed Jun. 09, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga4f1741"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-4-2-2">
+<ul class="org-ul">
+<li>N. J. Smith, Capitalism’s Sexual History, 1st edition. Oxford University Press, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org527058c"></a>Economics<br />
+<div class="outline-text-5" id="text-1-3-4-3">
+<ul class="org-ul">
+<li>“Sexual economics,” Wikipedia. Sep. 28, 2023. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_economics&amp;oldid=1177579055">https://en.wikipedia.org/w/index.php?title=Sexual_economics&amp;oldid=1177579055</a></li>
+
+<li>K. Parker and L. Leghorn, Woman’s Worth: Sexual Economics and the World of Women: 10, 1st edition. London: Taylor &amp; Francis Ltd, 2022.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orga786b4e"></a>Management<br />
+<div class="outline-text-5" id="text-1-3-4-4">
+<ul class="org-ul">
+<li>R. Sen and U. Chatterjee, Power, Sexuality and Gender Dynamics at Work, 1st edition. Thousand Oaks: SAGE Publications India Pvt Ltd, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org36995f7"></a>Jewelry<br />
+<div class="outline-text-5" id="text-1-3-4-5">
+<ul class="org-ul">
+<li>W. Doniger, The Ring of Truth: And Other Myths of Sex and Jewelry. Oxford University Press, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb6b9bcb"></a>Architecture<br />
+<div class="outline-text-5" id="text-1-3-4-6">
+<ul class="org-ul">
+<li><i>“Can architecture improve our sex lives? – Richard J Williams | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/can-architecture-improve-our-sex-lives">https://aeon.co/essays/can-architecture-improve-our-sex-lives</a> (accessed Dec. 18, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb69e54b"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgea1bee4" class="outline-4">
+<h4 id="orgea1bee4"><span class="section-number-4">1.3.5.</span> Core</h4>
+<div class="outline-text-4" id="text-1-3-5">
+</div>
+<ol class="org-ol">
+<li><a id="org4eb519e"></a>Philosophy<br />
+<ol class="org-ol">
+<li><a id="orge79bdc9"></a>General<br />
+<div class="outline-text-6" id="text-1-3-5-1-1">
+<ul class="org-ul">
+<li>R. Halwani, “Sex and Sexuality,” in The Stanford Encyclopedia of Philosophy, E. N. Zalta, Ed., Spring 2020.Metaphysics Research Lab, Stanford University, 2020. Accessed: Apr. 06, 2023. [Online]. Available: <a href="https://plato.stanford.edu/archives/spr2020/entries/sex-sexuality/">https://plato.stanford.edu/archives/spr2020/entries/sex-sexuality/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org82cd4a3"></a>Ethics<br />
+<ul class="org-ul">
+<li><a id="orgc7f6f03"></a>Bad Sex<br />
+<ul class="org-ul">
+<li><a id="org7a7339a"></a>General<br />
+<div class="outline-text-8" id="text-org7a7339a">
+<ul class="org-ul">
+<li>“Sexual abuse,” Wikipedia. Jan. 05, 2023. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_abuse&amp;oldid=1131724266">https://en.wikipedia.org/w/index.php?title=Sexual_abuse&amp;oldid=1131724266</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sexual harassment,” Wikipedia. Dec. 30, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_harassment&amp;oldid=1130546676#Asia">https://en.wikipedia.org/w/index.php?title=Sexual_harassment&amp;oldid=1130546676#Asia</a></li>
+
+<li>L. M. Cortina, M. P. Koss, and S. L. Cook, “What’s the difference between sexual abuse, sexual assault, sexual harassment and rape?,” The Conversation. <a href="http://theconversation.com/whats-the-difference-between-sexual-abuse-sexual-assault-sexual-harassment-and-rape-88218">http://theconversation.com/whats-the-difference-between-sexual-abuse-sexual-assault-sexual-harassment-and-rape-88218</a> (accessed Jan. 16, 2023).</li>
+
+<li>Martha Farrell Foundation, <b>Prevention of Sexual Harassment at the Workplace.</b> Hachette India, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Kasana, A Practical Guide to Prevention of Sexual Harassment of Women at Workplace.  <a href="https://www.amazon.in/Practical-Prevention-Sexual-Harassment-Workplace/dp/9390513243">https://www.amazon.in/Practical-Prevention-Sexual-Harassment-Workplace/dp/9390513243</a></li>
+
+<li>“Preventing and responding to Sexual Exploitation, Abuse and Harassment.” <a href="https://www.who.int/initiatives/preventing-and-responding-to-sexual-exploitation-abuse-and-harassment">https://www.who.int/initiatives/preventing-and-responding-to-sexual-exploitation-abuse-and-harassment</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgff48ae0"></a>STDs<br /></li>
+<li><a id="orgefbbc7d"></a>Paedophilia<br />
+<div class="outline-text-8" id="text-orgefbbc7d">
+<ul class="org-ul">
+<li><i>“If paedophilia is a compulsion, is imprisonment the solution? – Caren Chesler | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/if-paedophilia-is-a-compulsion-is-imprisonment-the-solution">https://aeon.co/essays/if-paedophilia-is-a-compulsion-is-imprisonment-the-solution</a> (accessed Dec. 03, 2020).</li>
+<li>X. Mallett, “Psychology of a paedophile: why are some people attracted to children?,” The Conversation, May 26, 2016. <a href="http://theconversation.com/psychology-of-a-paedophile-why-are-some-people-attracted-to-children-59991">http://theconversation.com/psychology-of-a-paedophile-why-are-some-people-attracted-to-children-59991</a> (accessed Jan. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org951cebf"></a>Sexual Violence<br />
+<div class="outline-text-8" id="text-org951cebf">
+<ul class="org-ul">
+<li>“Sexual violence,” Wikipedia. Feb. 17, 2022. Accessed: Feb. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_violence&amp;oldid=1072354588">https://en.wikipedia.org/w/index.php?title=Sexual_violence&amp;oldid=1072354588</a></li>
+<li>A. Powell and N. Henry, Sexual Violence in a Digital Age. Springer, 2017.</li>
+
+<li>“RAINN | The nation’s largest anti-sexual violence organization.” <a href="https://www.rainn.org/">https://www.rainn.org/</a> (accessed Jan. 16, 2023).</li>
+
+<li>“Wartime sexual violence,” Wikipedia. Jun. 14, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wartime_sexual_violence&amp;oldid=1160040506">https://en.wikipedia.org/w/index.php?title=Wartime_sexual_violence&amp;oldid=1160040506</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>H. Stephen, “Book Review: The Orders Were To Rape You By Dr Meena Kandasamy,” Feminism in India, Mar. 25, 2021. <a href="https://feminisminindia.com/2021/03/26/book-review-the-orders-were-to-rape-you-dr-meena-kandasamy/">https://feminisminindia.com/2021/03/26/book-review-the-orders-were-to-rape-you-dr-meena-kandasamy/</a> (accessed Jul. 01, 2023).</li>
+<li>N. Bhat, “Meena Kandasamy’s documentary on Sri Lanka’s women Tamil warriors is now her latest book,” Scroll.in, Apr. 03, 2021. <a href="https://scroll.in/article/991219/meena-kandasamys-documentary-on-sri-lankas-women-tamil-warriors-is-now-her-latest-book">https://scroll.in/article/991219/meena-kandasamys-documentary-on-sri-lankas-women-tamil-warriors-is-now-her-latest-book</a> (accessed Jul. 01, 2023).</li>
+<li>“Sexual violence against Tamils in Sri Lanka,” Wikipedia. Jun. 26, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_violence_against_Tamils_in_Sri_Lanka&amp;oldid=1161955217">https://en.wikipedia.org/w/index.php?title=Sexual_violence_against_Tamils_in_Sri_Lanka&amp;oldid=1161955217</a></li>
+<li>“Meera Srinivasan reviews The Orders Were to Rape You: Tigresses in the Tamil Eelam Struggle, by Meena Kandasamy,” The Hindu, Apr. 24, 2021. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://www.thehindu.com/books/books-reviews/the-orders-were-to-rape-you-tigresses-in-the-tamil-eelam-struggle-review-surviving-war/article34390900.ece">https://www.thehindu.com/books/books-reviews/the-orders-were-to-rape-you-tigresses-in-the-tamil-eelam-struggle-review-surviving-war/article34390900.ece</a></li>
+<li>E. Munnelly, “‘Rape Nation’: Meena Kandasamy Poem on the Hathras Case,” Oct. 02, 2020. <a href="https://www.thegendvproject.sociology.cam.ac.uk/rape-nation-meena-kandasamy-poem-hathras-case">https://www.thegendvproject.sociology.cam.ac.uk/rape-nation-meena-kandasamy-poem-hathras-case</a> (accessed Jul. 01, 2023).</li>
+<li>“Sexual violence against Tamils in Sri Lanka,” Wikipedia. Jun. 26, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_violence_against_Tamils_in_Sri_Lanka&amp;oldid=1161955217">https://en.wikipedia.org/w/index.php?title=Sexual_violence_against_Tamils_in_Sri_Lanka&amp;oldid=1161955217</a></li>
+</ul>
+</div>
+</li>
+
+
+<li><a id="org4db6470"></a>Rape<br />
+<ul class="org-ul">
+<li><a id="org9c8cc88"></a>General<br />
+<div class="outline-text-9" id="text-org9c8cc88">
+<ul class="org-ul">
+<li>“Rape Culture Syllabus,” Public Books, Oct. 15, 2016. <a href="https://www.publicbooks.org/rape-culture-syllabus/">https://www.publicbooks.org/rape-culture-syllabus/</a> (accessed Jan. 11, 2022).</li>
+<li>S. Abdulali, <b>What We Talk about When We Talk about Rape.</b> Penguin Random House India Private Limited, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9fd635d"></a>STEMM<br />
+<div class="outline-text-9" id="text-org9fd635d">
+<ul class="org-ul">
+<li>R. Thornhill and C. T. Palmer, A Natural History of Rape: Biological Bases of Sexual Coercion. MIT Press, 2001.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8e7bca1"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgcd7e6a8"></a>Rape Songs<br />
+<div class="outline-text-10" id="text-orgcd7e6a8">
+<ul class="org-ul">
+<li>Nirvana, Nirvana - <i>Polly</i> (Live On MTV Unplugged, 1993 / Unedited), (Nov. 29, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3H0NHHKBemg">https://www.youtube.com/watch?v=3H0NHHKBemg</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org73c3929"></a>Films<br />
+<div class="outline-text-10" id="text-org73c3929">
+<ul class="org-ul">
+<li>Purush. Accessed: Jan. 27, 2023. [Online Video]. Available: <a href="https://www.rottentomatoes.com/m/purush">https://www.rottentomatoes.com/m/purush</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org41e5789"></a>ST<br />
+<ul class="org-ul">
+<li><a id="org60fa0cd"></a>India<br />
+<div class="outline-text-10" id="text-org60fa0cd">
+<ul class="org-ul">
+<li>T. Kaushal, Why Men Rape: An Indian Undercover Investigation. Harper Collins, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga5130e6"></a>Castration<br />
+<div class="outline-text-10" id="text-orga5130e6">
+<ul class="org-ul">
+<li>“Drug treatments for sexual offenders or those at risk of offending.” <a href="https://www.cochrane.org/CD007989/BEHAV_drug-treatments-for-sexual-offenders-or-those-at-risk-of-offending">https://www.cochrane.org/CD007989/BEHAV_drug-treatments-for-sexual-offenders-or-those-at-risk-of-offending</a> (accessed Jan. 27, 2023).</li>
+<li>“New hope for sex offender treatment,” <a href="https://www.apa.org">https://www.apa.org</a>. <a href="https://www.apa.org/monitor/julaug03/newhope">https://www.apa.org/monitor/julaug03/newhope</a> (accessed Jan. 27, 2023).</li>
+<li>A. Islam, “Castration is no response to rape,” The Guardian, May 14, 2011. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://www.theguardian.com/commentisfree/2011/may/14/castration-rape-indian-court">https://www.theguardian.com/commentisfree/2011/may/14/castration-rape-indian-court</a></li>
+<li>A. Gawande, “The Unkindest Cut,” Slate, Jul. 12, 1997. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://slate.com/technology/1997/07/the-unkindest-cut.html">https://slate.com/technology/1997/07/the-unkindest-cut.html</a></li>
+<li>“Castration,” Wikipedia. Jan. 15, 2023. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Castration&amp;oldid=1133821562">https://en.wikipedia.org/w/index.php?title=Castration&amp;oldid=1133821562</a></li>
+<li>“Chemical castration,” Wikipedia. Dec. 24, 2022. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Chemical_castration&amp;oldid=1129288973">https://en.wikipedia.org/w/index.php?title=Chemical_castration&amp;oldid=1129288973</a></li>
+<li>“Should We Be Castrating Sex Offenders? | Psychology Today.” <a href="https://www.psychologytoday.com/us/blog/wiring-the-mind/201410/should-we-be-castrating-sex-offenders">https://www.psychologytoday.com/us/blog/wiring-the-mind/201410/should-we-be-castrating-sex-offenders</a> (accessed Jan. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org99df5bb"></a>Marital Rape<br /></li>
+</ul>
+</li>
+<li><a id="orgde782a5"></a>Misc<br />
+<div class="outline-text-9" id="text-orgde782a5">
+<ul class="org-ul">
+<li><i>“Fantasies of forced sex are common. Do they enable rape culture? – Mark Hay | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/fantasies-of-forced-sex-are-common-do-they-enable-rape-culture">https://aeon.co/ideas/fantasies-of-forced-sex-are-common-do-they-enable-rape-culture</a> (accessed Dec. 15, 2020).</li>
+<li><i>“Until we treat rapists as ordinary criminals we won’t stop them – Sandra Newman | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/until-we-treat-rapists-as-ordinary-criminals-we-wont-stop-them">https://aeon.co/essays/until-we-treat-rapists-as-ordinary-criminals-we-wont-stop-them</a> (accessed Dec. 03, 2020).</li>
+<li><i>“Is there such a thing as an almost-rape? – Tove K Danovich | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/is-there-such-a-thing-as-an-almost-rape">https://aeon.co/essays/is-there-such-a-thing-as-an-almost-rape</a> (accessed Dec. 03, 2020).</li>
+<li>P. Dubey, “If I will not fight for my daughter, then who will?,” The Caravan. <a href="https://caravanmagazine.in/crime/mother-struggle-justice-custodial-rape-murder-daughter-nighasan">https://caravanmagazine.in/crime/mother-struggle-justice-custodial-rape-murder-daughter-nighasan</a> (accessed Jan. 18, 2022).</li>
+<li>A. Pope, The Rape of the Lock and Other Major Writings. Penguin UK, 2011.</li>
+<li>L. S. Meyer Ilan H., “Sexual Victimization by Women Is More Common Than Previously Known,” Scientific American. <a href="https://www.scientificamerican.com/article/sexual-victimization-by-women-is-more-common-than-previously-known/">https://www.scientificamerican.com/article/sexual-victimization-by-women-is-more-common-than-previously-known/</a> (accessed Jan. 27, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgd693c8f"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgb0d7874"></a>Creepy Men<br />
+<div class="outline-text-9" id="text-orgb0d7874">
+<ul class="org-ul">
+<li><i>“What is to be done about the problem of creepy men? – Heidi Matthews | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/what-is-to-be-done-about-the-problem-of-creepy-men">https://aeon.co/ideas/what-is-to-be-done-about-the-problem-of-creepy-men</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1f3474d"></a>Perversion<br />
+<div class="outline-text-9" id="text-org1f3474d">
+<ul class="org-ul">
+<li><i>“Perhaps it’s time to get rid of the word pervert altogether – Jesse Bering | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/perhaps-its-time-to-get-rid-of-the-word-pervert-altogether">https://aeon.co/essays/perhaps-its-time-to-get-rid-of-the-word-pervert-altogether</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org07b62e8"></a>MeToo<br />
+<div class="outline-text-9" id="text-org07b62e8">
+<ul class="org-ul">
+<li>T. C. Zora Simic, “‘Sexual Revolution’: A new book covers the flashpoints of the #MeToo-era gender politics,” Scroll.in. <a href="https://scroll.in/article/1019098/sexual-revolution-a-new-book-covers-the-flashpoints-of-the-metoo-era-gender-politics">https://scroll.in/article/1019098/sexual-revolution-a-new-book-covers-the-flashpoints-of-the-metoo-era-gender-politics</a> (accessed Mar. 13, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf64c0a"></a>Sexual Grooming<br />
+<div class="outline-text-9" id="text-orgdf64c0a">
+<ul class="org-ul">
+<li>C. Nast, “R. Kelly Is Accused of ‘Sexual Grooming’ — Here’s What That Really Means,” Allure, Jul. 19, 2017. <a href="https://www.allure.com/story/what-is-sexual-grooming-abuse">https://www.allure.com/story/what-is-sexual-grooming-abuse</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org21567eb"></a>Disciplines<br />
+<ul class="org-ul">
+<li><a id="org525490d"></a>Physical Arts<br />
+<ul class="org-ul">
+<li><a id="org2a7c788"></a>Sports<br />
+<ul class="org-ul">
+<li><a id="orgc3ecdc5"></a>General<br />
+<div class="outline-text-12" id="text-orgc3ecdc5">
+<ul class="org-ul">
+<li>“Sexual harassment and abuse in sport,” International Olympic Committee, Dec. 20, 2021. <a href="https://olympics.com/ioc/safe-sport/sexual-harrassment-and-abuse">https://olympics.com/ioc/safe-sport/sexual-harrassment-and-abuse</a> (accessed Jan. 15, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sexual Harassment and Abuse in Sport,” Athlete365. <a href="https://olympics.com/athlete365/safe-sport/sexual-harassment-and-abuse-in-sport/">https://olympics.com/athlete365/safe-sport/sexual-harassment-and-abuse-in-sport/</a> (accessed Jan. 15, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Fisher and T. Prewitt-White, Eds., Examining and Mitigating Sexual Misconduct in Sport, 1st edition. New York, N.Y: Routledge, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. C. Nussbaum, Citadels of Pride: Sexual Abuse, Accountability, and Reconciliation. WW Norton, 2022.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgc3acd5d"></a>Arts<br />
+<div class="outline-text-12" id="text-orgc3acd5d">
+<ul class="org-ul">
+<li>Dive. Accessed: Jan. 15, 2023. [Online Video]. Available: <a href="https://www.rottentomatoes.com/m/dive_2022">https://www.rottentomatoes.com/m/dive_2022</a></li>
+<li>“Watch DIVE | Prime Video.” <a href="https://www.amazon.com/gp/video/detail/B0B8MH5PZD">https://www.amazon.com/gp/video/detail/B0B8MH5PZD</a> (accessed Jan. 15, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6d9d430"></a>ST<br />
+<ul class="org-ul">
+<li><a id="org8524522"></a>USA Gym<br />
+<div class="outline-text-13" id="text-org8524522">
+<ul class="org-ul">
+<li>“USA Gymnastics sex abuse scandal,” Wikipedia. Dec. 04, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=USA_Gymnastics_sex_abuse_scandal&amp;oldid=1125436562">https://en.wikipedia.org/w/index.php?title=USA_Gymnastics_sex_abuse_scandal&amp;oldid=1125436562</a></li>
+<li>“At the Heart of Gold: Inside the USA Gymnastics Scandal,” Wikipedia. Aug. 31, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=At_the_Heart_of_Gold:_Inside_the_USA_Gymnastics_Scandal&amp;oldid=1107658357">https://en.wikipedia.org/w/index.php?title=At_the_Heart_of_Gold:_Inside_the_USA_Gymnastics_Scandal&amp;oldid=1107658357</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Larry Nassar,” Wikipedia. Jan. 08, 2023. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Larry_Nassar&amp;oldid=1132374899">https://en.wikipedia.org/w/index.php?title=Larry_Nassar&amp;oldid=1132374899</a></li>
+<li>J. Barr and D. Murphy, START BY BELIEVING: Larry Nassar’s Crimes, the Institutions that Enabled Him, and the Brave Women Who Stopped a Monster, Illustrated edition. Westport, Conn: Hachette Books, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Athlete A,” Wikipedia. Dec. 18, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Athlete_A&amp;oldid=1128070194">https://en.wikipedia.org/w/index.php?title=Athlete_A&amp;oldid=1128070194</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org855fd19"></a>India<br />
+<div class="outline-text-13" id="text-org855fd19">
+<ul class="org-ul">
+<li>“India’s female athletes contend with sexual harassment – DW – 06/13/2022,” dw.com. <a href="https://www.dw.com/en/indias-female-athletes-contend-with-sexual-harassment-in-sports/a-62110783">https://www.dw.com/en/indias-female-athletes-contend-with-sexual-harassment-in-sports/a-62110783</a> (accessed Jan. 15, 2023).</li>
+
+<li>“10-year record at SAI: 45 complaints of sexual harassment, 29 against coaches,” The Indian Express, Jan. 16, 2020. <a href="https://indianexpress.com/article/sports/10-year-record-at-sai-45-complaints-of-sexual-harassment-29-against-coaches/">https://indianexpress.com/article/sports/10-year-record-at-sai-45-complaints-of-sexual-harassment-29-against-coaches/</a> (accessed Jan. 15, 2023).</li>
+
+<li>“Sexual harassment must end in sports,” The New Indian Express. <a href="https://www.newindianexpress.com/opinions/editorials/2022/jul/04/sexual-harassment-must-end-in-sports-2472673.html">https://www.newindianexpress.com/opinions/editorials/2022/jul/04/sexual-harassment-must-end-in-sports-2472673.html</a> (accessed Jan. 15, 2023).</li>
+
+<li>T. N. Service, “Sexual harassment in sport,” Tribuneindia News Service. <a href="https://www.tribuneindia.com/news/editorials/sexual-harassment-in-sport-404462">https://www.tribuneindia.com/news/editorials/sexual-harassment-in-sport-404462</a> (accessed Jan. 15, 2023).</li>
+
+<li>“Haryana Sports Minister Sandeep Singh booked for sexual harassment after woman coach files complaint,” The Indian Express, Jan. 01, 2023. <a href="https://indianexpress.com/article/cities/chandigarh/haryana-sports-minister-sandeep-singh-booked-sexual-harassment-8354766/">https://indianexpress.com/article/cities/chandigarh/haryana-sports-minister-sandeep-singh-booked-sexual-harassment-8354766/</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org3fcb290"></a>Misc<br />
+<div class="outline-text-12" id="text-org3fcb290">
+<ul class="org-ul">
+<li>S. Parent and J. Bannon, “Sexual abuse in sport: What about boys?,” Children and Youth Services Review, vol. 34, no. 2, pp. 354–359, Feb. 2012, doi: 10.1016/j.childyouth.2011.11.004.</li>
+
+<li>M. Hartill, “How prevalent is sexual abuse in sport?,” The Conversation. <a href="http://theconversation.com/how-prevalent-is-sexual-abuse-in-sport-69542">http://theconversation.com/how-prevalent-is-sexual-abuse-in-sport-69542</a> (accessed Jan. 15, 2023).</li>
+
+<li>S. Wrack, “Perpetrators of child sexual abuse use sport as cover, inquiry finds,” The Guardian, Jun. 18, 2020. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://www.theguardian.com/sport/2020/jun/18/perpetrators-of-child-sexual-abuse-use-sport-as-cover-inquiry-finds">https://www.theguardian.com/sport/2020/jun/18/perpetrators-of-child-sexual-abuse-use-sport-as-cover-inquiry-finds</a></li>
+
+<li>“Sexual abuse in sport,” Human Kinetics. <a href="https://us.humankinetics.com/blogs/excerpt/sexual-abuse-in-sport">https://us.humankinetics.com/blogs/excerpt/sexual-abuse-in-sport</a> (accessed Jan. 15, 2023).</li>
+<li>“Sexual Abuse in Sports | Psychology Today.” <a href="https://www.psychologytoday.com/us/blog/two-takes-depression/201112/sexual-abuse-in-sports">https://www.psychologytoday.com/us/blog/two-takes-depression/201112/sexual-abuse-in-sports</a> (accessed Jan. 15, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0efaaae"></a>Dance<br />
+<div class="outline-text-11" id="text-org0efaaae">
+<ul class="org-ul">
+<li>A. Dhillon, “India’s classical music and dance ‘guru’ system hit by abuse allegations,” The Guardian, Oct. 01, 2020. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://www.theguardian.com/global-development/2020/oct/01/indias-classical-music-and-dance-guru-system-hit-by-abuse-allegations">https://www.theguardian.com/global-development/2020/oct/01/indias-classical-music-and-dance-guru-system-hit-by-abuse-allegations</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Casiano, “Former Boston ballerina and husband face new sexual assault allegations,” Fox News, Sep. 30, 2021. <a href="https://www.foxnews.com/us/boston-ballerina-sexual-assault">https://www.foxnews.com/us/boston-ballerina-sexual-assault</a> (accessed Jan. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mr. Bean,” Wikipedia. Jan. 16, 2023. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mr._Bean&amp;oldid=1133923404">https://en.wikipedia.org/w/index.php?title=Mr._Bean&amp;oldid=1133923404</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Grooming and Sexual Abuse in Ballet: Why Dancers Are Especially Vulnerable,” Pointe Magazine, Dec. 01, 2021. <a href="https://pointemagazine.com/grooming-and-sexual-abuse-in-ballet/">https://pointemagazine.com/grooming-and-sexual-abuse-in-ballet/</a> (accessed Jan. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Influential dance company bred culture of sex, silence, dancers say,” PBS NewsHour, Apr. 20, 2022. <a href="https://www.pbs.org/newshour/arts/mega-dance-company-bred-culture-of-sex-silence-dancers-say">https://www.pbs.org/newshour/arts/mega-dance-company-bred-culture-of-sex-silence-dancers-say</a> (accessed Jan. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Villarreal, “‘It’s like a cult’: how sexual misconduct permeates the world of ballet,” The Guardian, Nov. 02, 2018. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://www.theguardian.com/stage/2018/nov/02/ballet-stage-me-too-sexual-abuse-harassment">https://www.theguardian.com/stage/2018/nov/02/ballet-stage-me-too-sexual-abuse-harassment</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Henderson, “What Will It Take to End Sexual Abuse in Dance Education?,” Dance Magazine, Jan. 26, 2021. <a href="https://www.dancemagazine.com/sexual-abuse-dance-education/">https://www.dancemagazine.com/sexual-abuse-dance-education/</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga05c972"></a>Military<br />
+<div class="outline-text-10" id="text-orga05c972">
+<ul class="org-ul">
+<li>“Sexual harassment in the military,” Wikipedia. Nov. 27, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_harassment_in_the_military&amp;oldid=1124211098">https://en.wikipedia.org/w/index.php?title=Sexual_harassment_in_the_military&amp;oldid=1124211098</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd1d19fd"></a>Films, Theatre<br />
+<div class="outline-text-10" id="text-orgd1d19fd">
+<ul class="org-ul">
+<li>D. K. Morash, “Acting unpleasantly: why harassment is so common in the theatre,” The Conversation. <a href="http://theconversation.com/acting-unpleasantly-why-harassment-is-so-common-in-the-theatre-87374">http://theconversation.com/acting-unpleasantly-why-harassment-is-so-common-in-the-theatre-87374</a> (accessed Jan. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org715c18e"></a>Music<br />
+<div class="outline-text-10" id="text-org715c18e">
+<ul class="org-ul">
+<li>“‘Shocking’ level of sexual harassment at music festivals,” BBC News, Jun. 18, 2018. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://www.bbc.com/news/entertainment-arts-44518892">https://www.bbc.com/news/entertainment-arts-44518892</a></li>
+
+<li>A. Dhillon, “India’s classical music and dance ‘guru’ system hit by abuse allegations,” The Guardian, Oct. 01, 2020. Accessed: Jan. 16, 2023. [Online]. Available: <a href="https://www.theguardian.com/global-development/2020/oct/01/indias-classical-music-and-dance-guru-system-hit-by-abuse-allegations">https://www.theguardian.com/global-development/2020/oct/01/indias-classical-music-and-dance-guru-system-hit-by-abuse-allegations</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org243d7ec"></a>Kids<br />
+<div class="outline-text-9" id="text-org243d7ec">
+<ul class="org-ul">
+<li>V. Choudhry, R. Dayal, D. Pillai, A. S. Kalokhe, K. Beier, and V. Patel, “Child sexual abuse in India: A systematic review,” PLOS ONE, vol. 13, no. 10, p. e0205086, Oct. 2018, doi: 10.1371/journal.pone.0205086.</li>
+
+<li>S. Pothula, “This Delhi-based NGO aims to prevent child sexual abuse in India with The Rakshin Project,” YourStory.com, May 05, 2020. <a href="https://yourstory.com/socialstory/2020/05/sakshi-ngo-child-sexual-abuse-awareness-campaign">https://yourstory.com/socialstory/2020/05/sakshi-ngo-child-sexual-abuse-awareness-campaign</a> (accessed Jan. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Child rape is far too common in some war-torn African countries,” The Economist. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://www.economist.com/middle-east-and-africa/2022/02/03/child-rape-is-far-too-common-in-some-war-torn-african-countries">https://www.economist.com/middle-east-and-africa/2022/02/03/child-rape-is-far-too-common-in-some-war-torn-african-countries</a></li>
+<li>“Russian troops raped and tortured children in Ukraine, U.N. panel says,” NBC News, Sep. 23, 2022. <a href="https://www.nbcnews.com/news/world/russian-troops-raped-tortured-children-ukraine-un-panel-says-rcna49168">https://www.nbcnews.com/news/world/russian-troops-raped-tortured-children-ukraine-un-panel-says-rcna49168</a> (accessed Jul. 01, 2023).</li>
+<li>“Statutory rape,” Wikipedia. Jun. 28, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Statutory_rape&amp;oldid=1162392585">https://en.wikipedia.org/w/index.php?title=Statutory_rape&amp;oldid=1162392585</a></li>
+<li>Ajji, (Nov. 24, 2017).</li>
+<li>“Child sexual abuse,” Wikipedia. Jun. 23, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Child_sexual_abuse&amp;oldid=1161551148">https://en.wikipedia.org/w/index.php?title=Child_sexual_abuse&amp;oldid=1161551148</a></li>
+<li>“Ajji,” Wikipedia. Jun. 29, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ajji&amp;oldid=1162558112">https://en.wikipedia.org/w/index.php?title=Ajji&amp;oldid=1162558112</a></li>
+</ul>
+</div>
+</li>
+
+
+
+
+
+<li><a id="org5fa6743"></a>India<br />
+<div class="outline-text-9" id="text-org5fa6743">
+<ul class="org-ul">
+<li>“Category:Sexual harassment in India,” Wikipedia. Oct. 03, 2020. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Category:Sexual_harassment_in_India&amp;oldid=981707066">https://en.wikipedia.org/w/index.php?title=Category:Sexual_harassment_in_India&amp;oldid=981707066</a></li>
+
+<li>V. Choudhry, R. Dayal, D. Pillai, A. S. Kalokhe, K. Beier, and V. Patel, “Child sexual abuse in India: A systematic review,” PLOS ONE, vol. 13, no. 10, p. e0205086, Oct. 2018, doi: 10.1371/journal.pone.0205086.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org27335c9"></a>Misc<br />
+<div class="outline-text-8" id="text-org27335c9">
+<ul class="org-ul">
+<li><i>“Women Scientists Described A Culture Of Sexual Misconduct At The Smithsonian’s Tropical Research Institute,”</i> BuzzFeed News. <a href="https://www.buzzfeednews.com/article/nishitajha/smithsonian-tropical-research-institute-metoo">https://www.buzzfeednews.com/article/nishitajha/smithsonian-tropical-research-institute-metoo</a> (accessed Dec. 10, 2021).</li>
+<li>“StopNCII,” StopNCII. <a href="https://stopncii.org/">https://stopncii.org/</a> (accessed Jan. 11, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org55f922d"></a>Classics<br />
+<div class="outline-text-6" id="text-1-3-5-1-3">
+<ul class="org-ul">
+<li>M. Foucault, The History of Sexuality: 1: The Will to Knowledge. Penguin UK, 2019.</li>
+<li>M. Foucault, The History of Sexuality: 4: Confessions of the Flesh. Penguin Books, Limited, 2021.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org28fd45b"></a>Practice<br />
+<ol class="org-ol">
+<li><a id="org14a748f"></a>General<br />
+<div class="outline-text-6" id="text-1-3-5-2-1">
+<ul class="org-ul">
+<li>A. Comfort and S. Quilliam, <b>The New Joy of Sex.</b> Mitchell Beazley, 2008.</li>
+<li>DK, <i>Kama Sutra Workout: Work Hard, Play Harder with 300 Sensual Sexercises.</i> Dorling Kindersley Ltd, 2018.</li>
+<li>D. K. P. Staff, <i>Kama Sutra Expert.</i> Dorling Kindersley, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="org68d6f00"></a>Variants<br />
+<ul class="org-ul">
+<li><a id="org7a7c730"></a>Oral Sex<br />
+<div class="outline-text-7" id="text-org7a7c730">
+<ul class="org-ul">
+<li>I. Kerner, <i>She Comes First: The Thinking Man’s Guide to Pleasuring a Woman.</i> HarperCollins, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Philosophy of Oral Sex, (Apr. 08, 2015). Accessed: Apr. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=KBX0ylUDfXo">https://www.youtube.com/watch?v=KBX0ylUDfXo</a></li>
+<li>“A Brief Philosophy of Oral Sex - The School Of Life.” <a href="https://www.theschooloflife.com/article/a-brief-philosophy-of-oral-sex/">https://www.theschooloflife.com/article/a-brief-philosophy-of-oral-sex/</a> (accessed Apr. 06, 2023).</li>
+
+<li>Should you spit or swallow during oral sex? | Dr. Tanaya explains, (Aug. 28, 2020). Accessed: Apr. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=uOIVcZB1Mhw">https://www.youtube.com/watch?v=uOIVcZB1Mhw</a></li>
+
+<li>Your ORAL SEX Questions Answered | Leeza Mangaldas, (Jul. 25, 2020). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0hnsyrm0xl0">https://www.youtube.com/watch?v=0hnsyrm0xl0</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2eef69d"></a>Anal Sex<br />
+<ul class="org-ul">
+<li><a id="org67a836d"></a>General<br />
+<div class="outline-text-8" id="text-org67a836d">
+<ul class="org-ul">
+<li>“Anal sex,” Wikipedia. Jun. 16, 2023. Accessed: Jun. 29, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Anal_sex&amp;oldid=1160473181#Religion">https://en.wikipedia.org/w/index.php?title=Anal_sex&amp;oldid=1160473181#Religion</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org337b7e0"></a>Safety<br />
+<div class="outline-text-8" id="text-org337b7e0">
+<ul class="org-ul">
+<li><a href="https://www.facebook.com/WebMD">https://www.facebook.com/WebMD</a>, “Anal Sex Safety and Health Concerns,” WebMD. <a href="https://www.webmd.com/sex/anal-sex-health-concerns">https://www.webmd.com/sex/anal-sex-health-concerns</a> (accessed Jun. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga45e88c"></a>Positions<br />
+<div class="outline-text-8" id="text-orga45e88c">
+<ul class="org-ul">
+<li>“Say Hello to the Only Anal Sex Positions Guide You Really Need,” Cosmopolitan, Nov. 09, 2022. <a href="https://www.cosmopolitan.com/sex-love/positions/g5025/anal-sex-positions/">https://www.cosmopolitan.com/sex-love/positions/g5025/anal-sex-positions/</a> (accessed Jun. 29, 2023).</li>
+
+<li>“5 Anal Sex Positions You’ve Probably Never Tried,” Cosmopolitan, Jun. 01, 2016. <a href="https://www.cosmopolitan.com/sex-love/positions/g5767/anal-sex-positions-to-try/">https://www.cosmopolitan.com/sex-love/positions/g5767/anal-sex-positions-to-try/</a> (accessed Jun. 29, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org3aa7ff8"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgc1aab5d"></a>Orgy<br /></li>
+<li><a id="orgf56f2cd"></a>Kink<br />
+<div class="outline-text-7" id="text-orgf56f2cd">
+<ul class="org-ul">
+<li>Midori and C. Morey, The Seductive Art of Japanese Bondage. Greenery Press, 2001.</li>
+
+<li>Midori, Wild Side Sex: Educational, Sensual, and Entertaining Essays. Daedalus Publishing, 2005.</li>
+
+<li>D. Easton and J. W. Hardy, The New Bottoming Book, 2nd edition. Greenery Press, 2011.</li>
+
+<li>D. Easton and J. W. Hardy, The New Topping Book. Greenery Press, 2011.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Christina, The Book of Kink: Sex Beyond the Missionary. Penguin, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org67f17ca"></a>Adult Breast Feeding<br />
+<div class="outline-text-7" id="text-org67f17ca">
+<ul class="org-ul">
+<li>I Breastfeed My Boyfriend As Sex Foreplay | Breastfeeding My Boyfriend | Channel 4, (Nov. 04, 2021). Accessed: Apr. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yTgBzWNzB2o">https://www.youtube.com/watch?v=yTgBzWNzB2o</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="orge17b402"></a>Stages<br />
+<ul class="org-ul">
+<li><a id="orga83a08f"></a>Orgasm<br />
+<div class="outline-text-7" id="text-orga83a08f">
+<ul class="org-ul">
+<li><i>“Delayed orgasm: the sexual technique that’s better than sex – Peter von Ziegesar | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/delayed-orgasm-the-sexual-technique-thats-better-than-sex">https://aeon.co/essays/delayed-orgasm-the-sexual-technique-thats-better-than-sex</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org38d0f16"></a>Post Sex<br />
+<div class="outline-text-7" id="text-org38d0f16">
+<ul class="org-ul">
+<li><i>“Why post-sex cuddles and pillowtalk count for more than orgasm – Tove K Danovich | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/why-post-sex-cuddles-and-pillowtalk-count-for-more-than-orgasm">https://aeon.co/essays/why-post-sex-cuddles-and-pillowtalk-count-for-more-than-orgasm</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3367752"></a>Misc<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9776968" class="outline-4">
+<h4 id="org9776968"><span class="section-number-4">1.3.6.</span> Arts</h4>
+<div class="outline-text-4" id="text-1-3-6">
+</div>
+<ol class="org-ol">
+<li><a id="org6ff7d56"></a>Literature<br />
+<ol class="org-ol">
+<li><a id="orgdafe488"></a>Works<br />
+<ul class="org-ul">
+<li><a id="org1480842"></a>English<br />
+<div class="outline-text-7" id="text-org1480842">
+<ul class="org-ul">
+<li>H. Miller, <i>Tropic of Cancer.</i> Penguin UK, 2015.</li>
+
+<li>P. Washington, Ed., <b>Erotic Poems, First Edition.</b> New York: Everyman's Library, 1994.</li>
+
+<li>A. Andrews, <b>Trine Erotic.</b> SUNY Press, 2013.</li>
+
+<li>A. Nin, <b>Delta of Venus.</b> Penguin, 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8ae9386"></a>Indian<br />
+<ul class="org-ul">
+<li><a id="org630a33d"></a>Classical<br />
+<div class="outline-text-8" id="text-org630a33d">
+<ul class="org-ul">
+<li>Kalidasa, <b>Ritusamharam.</b> Penguin Random House India Private Limited, 2018.
+<ul class="org-ul">
+<li>“Ṛtusaṃhāra,” Wikipedia. Apr. 03, 2023. Accessed: Jun. 23, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=%E1%B9%9Atusa%E1%B9%83h%C4%81ra&amp;oldid=1147964286">https://en.wikipedia.org/w/index.php?title=%E1%B9%9Atusa%E1%B9%83h%C4%81ra&amp;oldid=1147964286</a></li>
+</ul></li>
+
+<li>Kalidasa, <b>The Loom Of Time.</b> Penguin UK, 2005.</li>
+
+<li>R. Calasso, <b>Ka.</b> Random House, 2011.</li>
+
+<li>A. N. D. Haksar, <b>Subhāshitāvali: an anthology of comic, erotic, and other verse.</b> Penguin Books India, 2007.</li>
+
+<li>Amaru and A. Schelling, <b>Erotic Love Poems From India: 101 Classics On Desire And Passion</b>, First paperback edition. Boulder: Shambhala, 2019.</li>
+
+<li>Bhartrihari, <b>Three Hundred Verses: Musings on Life, Love and Renunciation.</b> Penguin Random House India Private Limited, 2017.</li>
+
+<li>K. Malla, <b>Suleiman Charitra.</b> Penguin UK, 2015.</li>
+
+<li>Kshemendra, <b>The Courtesan's Keeper.</b> Penguin Books India Pvt., Limited, 2014.</li>
+
+<li>M. Paḷani, <b>The Appeasement of Radhika.</b> Penguin Books India, 2011.</li>
+
+<li>O. Paz, <b>A Tale of Two Gardens: Poems from India, 1952-1995.</b> New Directions Publishing, 1997.</li>
+
+<li>A. Schelling, Tran., <b>Erotic Love Poems from India: 101 Classics on Desire and Passion</b>, Reprint edition. Boulder: Shambhala, 2019.</li>
+
+<li>Erotic Poems from the Sanskrit: An Anthology. New York, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org49a6f42"></a>Contemporary<br />
+<div class="outline-text-8" id="text-org49a6f42">
+<ul class="org-ul">
+<li>S. Kakar, <i>The Ascetic Of Desire.</i> Penguin UK, 2000.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga24a6a7"></a>Misc<br />
+<div class="outline-text-8" id="text-orga24a6a7">
+<ul class="org-ul">
+<li>S. Kakar and J. M. Ross, Tales of love, sex, and danger. Oxford University Press, 1986.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><a id="org05ec419"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-6-1-2">
+<ul class="org-ul">
+<li><i>“Shakespeare’s sexuality in question: who was the Fair Youth? – Sandra Newman | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/shakespeares-sexuality-in-question-who-was-the-fair-youth">https://aeon.co/essays/shakespeares-sexuality-in-question-who-was-the-fair-youth</a> (accessed Jan. 01, 2021).</li>
+
+<li><i>“Unveiling the erotic mysteries at the heart of Homer’s Odyssey – C D C Reeve | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/unveiling-the-erotic-mysteries-at-the-heart-of-homers-odyssey">https://aeon.co/essays/unveiling-the-erotic-mysteries-at-the-heart-of-homers-odyssey</a> (accessed Jan. 01, 2021).</li>
+
+<li><i>“How ancient poetry can revitalise our erotic imaginations – Jamie Mackay | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/how-ancient-poetry-can-revitalise-our-erotic-imaginations">https://aeon.co/essays/how-ancient-poetry-can-revitalise-our-erotic-imaginations</a> (accessed Nov. 30, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org7a38257"></a>Pornography<br />
+<ol class="org-ol">
+<li><a id="orgc8f24bf"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-6-2-1">
+<ul class="org-ul">
+<li><i>“Does too much pornography numb us to sexual pleasure? | Aeon Essays.”</i> <a href="https://aeon.co/essays/does-too-much-pornography-numb-us-to-sexual-pleasure">https://aeon.co/essays/does-too-much-pornography-numb-us-to-sexual-pleasure</a> (accessed Dec. 03, 2020).</li>
+
+<li>“Does porn harm or help? Gender could matter in a surprising way | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/does-porn-harm-or-help-gender-could-matter-in-a-surprising-way">https://psyche.co/ideas/does-porn-harm-or-help-gender-could-matter-in-a-surprising-way</a> (accessed Jul. 28, 2022).</li>
+
+<li>“What Andrea Dworkin missed about pornography | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/what-andrea-dworkin-missed-about-pornography">https://aeon.co/essays/what-andrea-dworkin-missed-about-pornography</a> (accessed Dec. 11, 2022).</li>
+
+<li>“The Poignancy of Old Pornography - YouTube.” <a href="https://www.youtube.com/watch?v=DPeVVGCmwx0&amp;list=WL&amp;index=6">https://www.youtube.com/watch?v=DPeVVGCmwx0&amp;list=WL&amp;index=6</a> (accessed Apr. 09, 2023).</li>
+
+<li>“Home,” Fight the New Drug. <a href="https://fightthenewdrug.org/">https://fightthenewdrug.org/</a> (accessed Sep. 02, 2023).</li>
+
+<li>“I Had a Helicopter Mom. I Found Pornhub Anyway.,” <a href="https://www.thefp.com/">https://www.thefp.com/</a>, Aug. 29, 2023. <a href="https://www.thefp.com/p/why-are-our-fourth-graders-on-pornhub">https://www.thefp.com/p/why-are-our-fourth-graders-on-pornhub</a> (accessed Sep. 02, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgddc9544"></a>Films<br />
+<div class="outline-text-6" id="text-1-3-6-2-2">
+<ul class="org-ul">
+<li>“Deep Throat (film),” Wikipedia. Jan. 03, 2023. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Deep_Throat_(film)&amp;oldid=1131251478">https://en.wikipedia.org/w/index.php?title=Deep_Throat_(film)&amp;oldid=1131251478</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Lovelace (film),” Wikipedia. Dec. 08, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Lovelace_(film)&amp;oldid=1126226722">https://en.wikipedia.org/w/index.php?title=Lovelace_(film)&amp;oldid=1126226722</a></li>
+<li>“Linda Lovelace,” Wikipedia. Dec. 12, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Linda_Lovelace&amp;oldid=1127088684">https://en.wikipedia.org/w/index.php?title=Linda_Lovelace&amp;oldid=1127088684</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org7ef7099"></a>Music<br />
+<ol class="org-ol">
+<li><a id="orge7697cc"></a>Indian Music<br />
+<ul class="org-ul">
+<li><a id="org1b6d253"></a>HCM<br />
+<div class="outline-text-7" id="text-org1b6d253">
+<ul class="org-ul">
+<li>Pandit Jasraj and Hari Prasad Chaurasia, Live Inside Khajuraho - Vol. 1 and Vol. 2, Music Today.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Hari Prasad Chaurasia - Live Inside Khajuraho (Vol. 2). 1999. Accessed: Jul. 16, 2023. [Online]. Available: <a href="https://www.discogs.com/release/19534945-Hari-Prasad-Chaurasia-Live-Inside-Khajuraho-Vol-2">https://www.discogs.com/release/19534945-Hari-Prasad-Chaurasia-Live-Inside-Khajuraho-Vol-2</a>
+<ul class="org-ul">
+<li>Raga Malaya-Marutam, (Oct. 26, 2013). Accessed: Aug. 09, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=R2phSnUs1Ks">https://www.youtube.com/watch?v=R2phSnUs1Ks</a></li>
+
+<li>Raga Hamsadhwani, (Oct. 26, 2013). Accessed: Aug. 09, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JbRMhn9u1L0">https://www.youtube.com/watch?v=JbRMhn9u1L0</a></li>
+
+<li>Music Of Joy, Based On Raga Vachspati, (Oct. 26, 2013). Accessed: Aug. 09, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3uopZj4UPzk">https://www.youtube.com/watch?v=3uopZj4UPzk</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org494f517"></a>Misc<br />
+<div class="outline-text-7" id="text-org494f517">
+<ul class="org-ul">
+<li>“Echoes Of Khajuraho I Audio Jukebox I World Music I Instrumental - YouTube.” <a href="https://www.youtube.com/watch?v=fzY3qzfDbEI">https://www.youtube.com/watch?v=fzY3qzfDbEI</a> (accessed Jul. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Khajuraho | Lyrical Video | Indian Ocean | Kandisa - YouTube.” <a href="https://www.youtube.com/watch?v=feWrzX_Y6i4">https://www.youtube.com/watch?v=feWrzX_Y6i4</a> (accessed Jul. 16, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org69d3bb8"></a>Misc<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgcb46cb9" class="outline-4">
+<h4 id="orgcb46cb9"><span class="section-number-4">1.3.7.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-1-3-7">
+</div>
+<ol class="org-ol">
+<li><a id="orgf4cc97c"></a>Special Groups<br />
+<ol class="org-ol">
+<li><a id="org9c28119"></a>Female Sexuality<br />
+<ul class="org-ul">
+<li><a id="org47064ca"></a>General<br />
+<div class="outline-text-7" id="text-org47064ca">
+<ul class="org-ul">
+<li>D. Buss, C. M. Meston, and D. M. Buss, <b>Why Women Have Sex: Understanding Sexual Motivation, from Adventure to Revenge (and Everything in Between).</b> Vintage, 2010.</li>
+<li>E. Nagoski, <b>Come As You Are: Revised and Updated: The Surprising New Science That Will Transform Your Sex Life.</b> Simon and Schuster, 2021.</li>
+<li>R. Thornhill and S. W. Gangestad, The Evolutionary Biology of Human Female Sexuality. Oxford University Press, 2008.</li>
+</ul>
+</div>
+</li>
+<li><a id="org553cb1c"></a>Apparel<br /></li>
+<li><a id="org0fc883c"></a>Misc<br />
+<div class="outline-text-7" id="text-org0fc883c">
+<ul class="org-ul">
+<li>L. Cooke, Bitch: A Revolutionary Guide to Sex, Evolution and the Female Animal. Random House, 2022.</li>
+<li>A. Roxo, F*ck Like a Goddess: Heal Yourself. Reclaim Your Voice. Stand in Your Power. Sounds True, 2020.</li>
+<li><i>“Can women’s lost libido be fixed with mere drugs? – Katherine Rowland | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/can-women-s-lost-libido-be-fixed-with-mere-drugs">https://aeon.co/essays/can-women-s-lost-libido-be-fixed-with-mere-drugs</a> (accessed Dec. 18, 2020).</li>
+<li>S. Sarkar, “The Principles Of Pleasure On Netflix: The Sex-Ed Lesson We All Need,” Feminism In India, Apr. 04, 2022. <a href="https://feminisminindia.com/2022/04/05/the-principles-of-pleasure-on-netflix-the-sex-ed-lesson-we-all-need/">https://feminisminindia.com/2022/04/05/the-principles-of-pleasure-on-netflix-the-sex-ed-lesson-we-all-need/</a> (accessed Apr. 08, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7cb0f4d"></a>Male Sexuality<br />
+<div class="outline-text-6" id="text-1-3-7-1-2">
+<ul class="org-ul">
+<li>S. H. Murray, Not Always in the Mood: The New Science of Men, Sex, and Relationships. Rowman &amp; Littlefield Publishers, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4e053b1"></a>Disability<br />
+<div class="outline-text-6" id="text-1-3-7-1-3">
+<ul class="org-ul">
+<li>Medically Assisted Sex: Inside the Controversial World | Slutever, (Oct. 27, 2016). Accessed: Apr. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=TVfIr_uM5zk">https://www.youtube.com/watch?v=TVfIr_uM5zk</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd17753"></a>Senior Citizens<br /></li>
+
+<li><a id="org05831aa"></a>Sexuality in Long Term Relationships<br />
+<div class="outline-text-6" id="text-1-3-7-1-5">
+<ul class="org-ul">
+<li>E. Perel, Mating in Captivity: How to keep desire and passion alive in long-term relationships. Hachette UK, 2012.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgdd29f7b"></a>With Whom<br />
+<ol class="org-ol">
+<li><a id="org5d713aa"></a>Asexuality<br />
+<div class="outline-text-6" id="text-1-3-7-2-1">
+<ul class="org-ul">
+<li><i>“Why sexual desire is objectifying – and hence morally wrong – Raja Halwani | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/why-sexual-desire-is-objectifying-and-hence-morally-wrong">https://aeon.co/ideas/why-sexual-desire-is-objectifying-and-hence-morally-wrong</a> (accessed Dec. 06, 2020).</li>
+<li><i>“What being asexual or aromantic tells us about sex and romance – Natasha McKeever &amp; Luke Brunning | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/what-being-asexual-or-aromantic-tells-us-about-sex-and-romance">https://aeon.co/essays/what-being-asexual-or-aromantic-tells-us-about-sex-and-romance</a> (accessed Dec. 03, 2020).</li>
+<li><i>“How far should medicine go to cure taboo loves and desires? – Angela Chen | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/how-far-should-medicine-go-to-cure-taboo-loves-and-desires">https://aeon.co/essays/how-far-should-medicine-go-to-cure-taboo-loves-and-desires</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org172a703"></a>Homosexuality<br />
+<div class="outline-text-6" id="text-1-3-7-2-2">
+<ul class="org-ul">
+<li><i>“The gay-suicide stereotype kills gay people, and must end – Samuel Clowes Huneke | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/the-gay-suicide-stereotype-kills-gay-people-and-must-end">https://aeon.co/ideas/the-gay-suicide-stereotype-kills-gay-people-and-must-end</a> (accessed Dec. 18, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgffc0182"></a>Solo Sex<br />
+<div class="outline-text-6" id="text-1-3-7-2-3">
+<ul class="org-ul">
+<li>“For ages, solo sex was hardly taboo. What led to its centuries-long dry spell? | Aeon Videos,” Aeon. Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://aeon.co/videos/for-ages-solo-sex-was-hardly-taboo-what-led-to-its-centuries-long-dry-spell">https://aeon.co/videos/for-ages-solo-sex-was-hardly-taboo-what-led-to-its-centuries-long-dry-spell</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“The body as amusement park: a history of masturbation – Barry Reay | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/the-body-as-amusement-park-a-history-of-masturbation">https://aeon.co/essays/the-body-as-amusement-park-a-history-of-masturbation</a> (accessed Dec. 03, 2020).</li>
+<li>T. W. Laqueur, Solitary Sex: A Cultural History of Masturbation. Zone Books, 2003.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd697d7e"></a>Bisexuality<br /></li>
+<li><a id="orgeac05eb"></a>Bestiality<br />
+<div class="outline-text-6" id="text-1-3-7-2-5">
+<ul class="org-ul">
+<li>A. L. Podberscek and A. M. Beetz, Bestiality and Zoophilia: Sexual Relations with Animals. Berg, 2005.</li>
+<li>H. Miletski, Understanding Bestiality and Zoophilia. East-West Publishing, LLC, 2002.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge96bd95"></a>Infidelity<br />
+<div class="outline-text-6" id="text-1-3-7-2-6">
+<ul class="org-ul">
+<li><i>“What my father’s infidelities taught me about intimacy – Lily Dunn | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/what-my-fathers-infidelities-taught-me-about-intimacy">https://aeon.co/essays/what-my-fathers-infidelities-taught-me-about-intimacy</a> (accessed Dec. 18, 2020).</li>
+<li><i>“Does the mate-switching hypothesis explain female infidelity? – David Buss | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/does-the-mate-switching-hypothesis-explain-female-infidelity">https://aeon.co/essays/does-the-mate-switching-hypothesis-explain-female-infidelity</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1ae27cf"></a>Niyoga<br />
+<div class="outline-text-6" id="text-1-3-7-2-7">
+<ul class="org-ul">
+<li>R. R. Sahni, Niyoga Doctrine of the Arya Samaj: Being a Literal Translation of that Portion of the Sattyarth Prakash which Treats of the Doctrine and Practice of Niyoga, with Some Remarks. Punjab Brahmo Samaj, 1897.</li>
+</ul>
+</div>
+</li>
+<li><a id="org41ce82a"></a>Incest<br />
+<div class="outline-text-6" id="text-1-3-7-2-8">
+<ul class="org-ul">
+<li>H. Miletski, Mother-son Incest: The Unthinkable Broken Taboo Persists : an Updated &amp; Revised Overview of Findings. East West Publishing, LLC, 2007.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org7a76830"></a>With How Many<br />
+<ol class="org-ol">
+<li><a id="org7b00541"></a>Monogamy<br /></li>
+<li><a id="org8eb9fe7"></a>Polygamy<br /></li>
+<li><a id="orge174da1"></a>Polyandry<br />
+<div class="outline-text-6" id="text-1-3-7-3-3">
+<ul class="org-ul">
+<li>P. C. Coomar, Polyandry in India: Demographic, Economic, Social, Religious, and Psychological Concomitants of Plural Marriages in Women. Gian Publishing House, 1987.</li>
+<li>G. D. Berreman, Hindus of the Himalayas: Ethnography and Change. University of California Press, 1972.</li>
+<li>G. D. Berreman, Pahari Polyandry: A Comparison. Institute of International Studies, University of California, 1962.</li>
+<li>S. D. Singh, Polyandry in Ancient India. Motilal Banarsidass Publ., 1988.</li>
+</ul>
+</div>
+</li>
+<li><a id="orged336a7"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-7-3-4">
+<ul class="org-ul">
+<li>“How to explore ethical non-monogamy | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-explore-ethical-non-monogamy-with-care-and-kindness">https://psyche.co/guides/how-to-explore-ethical-non-monogamy-with-care-and-kindness</a> (accessed Feb. 17, 2022).</li>
+<li>J. Fern, Polysecure: Attachment, Trauma and Consensual Nonmonogamy. Thorntree Press LLC, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org538bdfb"></a>Nudity<br />
+<ol class="org-ol">
+<li><a id="orgb986b0d"></a>General<br />
+<div class="outline-text-6" id="text-1-3-7-4-1">
+<ul class="org-ul">
+<li>“Nudity,” Wikipedia. Mar. 27, 2022. Accessed: Apr. 03, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nudity&amp;oldid=1079523470">https://en.wikipedia.org/w/index.php?title=Nudity&amp;oldid=1079523470</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org124d648"></a>Sex and Nudity<br />
+<div class="outline-text-6" id="text-1-3-7-4-2">
+<ul class="org-ul">
+<li>“Golden Age of Porn,” Wikipedia. Jun. 11, 2022. Accessed: Jun. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Golden_Age_of_Porn&amp;oldid=1092584504">https://en.wikipedia.org/w/index.php?title=Golden_Age_of_Porn&amp;oldid=1092584504</a></li>
+<li>“The female body under the female gaze poses a monster problem | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/the-female-body-under-the-female-gaze-poses-a-monster-problem">https://aeon.co/essays/the-female-body-under-the-female-gaze-poses-a-monster-problem</a> (accessed Jun. 11, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge36d15f"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org6d697ea"></a>Nude Art<br />
+<div class="outline-text-7" id="text-org6d697ea">
+<ul class="org-ul">
+<li>A. McRobie, <b>The Seduction of Curves: The Lines of Beauty That Connect Mathematics, Art, and the Nude.</b> Princeton University Press, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9c85c48"></a>Nude Photography<br />
+<ul class="org-ul">
+<li><a id="org18e3759"></a>General<br />
+<div class="outline-text-8" id="text-org18e3759">
+<ul class="org-ul">
+<li>P. Baetens, Nude Photography: The Art and the Craft. Dorling Kindersley Limited, 2008.</li>
+
+<li>L. Benjamin, The Naked and the Lens: A Guide to Nude Photography. Taylor &amp; Francis, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1ba9b7"></a>Female<br />
+<div class="outline-text-8" id="text-orgb1ba9b7">
+<ul class="org-ul">
+<li>“TASCHEN Books: The Little Big Book of Breasts.” <a href="https://www.taschen.com/en/books/photography/44012/the-little-big-book-of-breasts">https://www.taschen.com/en/books/photography/44012/the-little-big-book-of-breasts</a> (accessed May 27, 2023).</li>
+<li>“TASCHEN Books: Nature knows best: The Big Book of Breasts.” <a href="https://www.taschen.com/en/books/photography/03848/the-big-book-of-breasts">https://www.taschen.com/en/books/photography/03848/the-big-book-of-breasts</a> (accessed May 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hanson, The Little Big Butt Book, Multilingual edition. Köln Paris: Taschen, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hanson, The Little Big Book of Legs, Multilingual edition. Köln Paris: Taschen GmbH, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“TASCHEN Books: Viva la Vulva with The Big Book of Pussy by.” <a href="https://www.taschen.com/en/books/photography/05741/the-big-book-of-pussy">https://www.taschen.com/en/books/photography/05741/the-big-book-of-pussy</a> (accessed May 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org183cf54"></a>Male<br />
+<div class="outline-text-8" id="text-org183cf54">
+<ul class="org-ul">
+<li>“TASCHEN Books: The Little Big Penis Book.” <a href="https://www.taschen.com/en/books/photography/44013/the-little-big-penis-book">https://www.taschen.com/en/books/photography/44013/the-little-big-penis-book</a> (accessed May 27, 2023).</li>
+<li>“TASCHEN Books: Undressed to impress: The Big Penis Book by.” <a href="https://www.taschen.com/en/books/photography/05703/the-big-penis-book">https://www.taschen.com/en/books/photography/05703/the-big-penis-book</a> (accessed May 27, 2023).</li>
+<li>D. Hanson, Ed., The Big Penis Book. Hong Kong Köln Paris etc.: Taschen GmbH, 2022.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgf73bdb5"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org1b4fc13"></a>ST<br />
+<ul class="org-ul">
+<li><a id="org191a436"></a>India<br />
+<div class="outline-text-7" id="text-org191a436">
+<ul class="org-ul">
+<li>“The unexplored nude beaches in India,” The Times of India. Accessed: Apr. 02, 2022. [Online]. Available: <a href="https://timesofindia.indiatimes.com/travel/destinations/the-unexplored-nude-beaches-in-india/photostory/83174153.cms?utm_source=twitter.com&amp;utm_medium=social&amp;utm_campaign=TimesTravel">https://timesofindia.indiatimes.com/travel/destinations/the-unexplored-nude-beaches-in-india/photostory/83174153.cms?utm_source=twitter.com&amp;utm_medium=social&amp;utm_campaign=TimesTravel</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6de2682"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-7-4-5">
+<ul class="org-ul">
+<li>K. Clark, The Nude: A Study in Ideal Form: A Study in Ideal Form. Princeton University Press, 2015.</li>
+
+<li><i>“Female nudity is powerful – but not necessarily empowering – Shahidha Bari | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/female-nudity-is-powerful-but-not-necessarily-empowering">https://aeon.co/ideas/female-nudity-is-powerful-but-not-necessarily-empowering</a> (accessed Dec. 03, 2020).</li>
+
+<li><i>“What goes on in our minds when we see someone naked? – Matthew Hutson | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/what-goes-on-in-our-minds-when-we-see-someone-naked">https://aeon.co/essays/what-goes-on-in-our-minds-when-we-see-someone-naked</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org4c69f78"></a>Seduction<br />
+<div class="outline-text-5" id="text-1-3-7-5">
+<ul class="org-ul">
+<li>S. Anand, <b>The Art of Seduction.</b> Rupa Publications, 2017.</li>
+<li><i>“Why do the most flamboyant males have the evolutionary edge? – Alex Riley | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/why-do-the-most-flamboyant-males-have-the-evolutionary-edge">https://aeon.co/essays/why-do-the-most-flamboyant-males-have-the-evolutionary-edge</a> (accessed Dec. 03, 2020).</li>
+<li>R. Greene, <i>The Art Of Seduction.</i> Profile Books, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2c1b290"></a>Consent<br />
+<div class="outline-text-5" id="text-1-3-7-6">
+<ul class="org-ul">
+<li><i>“Consent and refusal are not the only talking points in sex – Rebecca Kukla | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/consent-and-refusal-are-not-the-only-talking-points-in-sex">https://aeon.co/essays/consent-and-refusal-are-not-the-only-talking-points-in-sex</a> (accessed Dec. 03, 2020).</li>
+<li><i>“How do we understand sexual pleasure in this age of ‘consent’? – Heidi Matthews | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/how-do-we-understand-sexual-pleasure-in-this-age-of-consent">https://aeon.co/ideas/how-do-we-understand-sexual-pleasure-in-this-age-of-consent</a> (accessed Dec. 03, 2020).</li>
+<li><i>“What do we consent to when we consent to sex? – Joseph J Fischel | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/what-do-we-consent-to-when-we-consent-to-sex">https://aeon.co/ideas/what-do-we-consent-to-when-we-consent-to-sex</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="org8d190e2"></a>Sexual Desires/Fantasies<br />
+<div class="outline-text-5" id="text-1-3-7-7">
+<ul class="org-ul">
+<li>J. J. Lehmiller, Tell Me What You Want: The Science of Sexual Desire and How It Can Help You Improve Your Sex Life. Hachette Books, 2020.</li>
+<li><i>“How to talk about sexual desires | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/how-to-talk-about-sexual-desires-and-strengthen-your-bond">https://psyche.co/guides/how-to-talk-about-sexual-desires-and-strengthen-your-bond</a> (accessed Nov. 29, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org6fd0675"></a>Sex Talk<br />
+<div class="outline-text-5" id="text-1-3-7-8">
+<ul class="org-ul">
+<li><i>“How to talk about sexual desires | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/how-to-talk-about-sexual-desires-and-strengthen-your-bond">https://psyche.co/guides/how-to-talk-about-sexual-desires-and-strengthen-your-bond</a> (accessed Nov. 29, 2021).</li>
+<li><i>“Why post-sex cuddles and pillowtalk count for more than orgasm – Tove K Danovich | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/why-post-sex-cuddles-and-pillowtalk-count-for-more-than-orgasm">https://aeon.co/essays/why-post-sex-cuddles-and-pillowtalk-count-for-more-than-orgasm</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgde67500"></a>Dreams<br />
+<div class="outline-text-5" id="text-1-3-7-9">
+<ul class="org-ul">
+<li><i>“Was Freud right about dreams all along? – Patrick McNamara | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/was-freud-right-about-dreams-all-along">https://aeon.co/essays/was-freud-right-about-dreams-all-along</a> (accessed Jan. 01, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge567ea2"></a>Sexual Therapy<br />
+<ol class="org-ol">
+<li><a id="orgf2a9d7c"></a>General<br />
+<div class="outline-text-6" id="text-1-3-7-10-1">
+<ul class="org-ul">
+<li>“Sex therapy,” Wikipedia. Aug. 06, 2023. Accessed: Nov. 16, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sex_therapy&amp;oldid=1169042863">https://en.wikipedia.org/w/index.php?title=Sex_therapy&amp;oldid=1169042863</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9442389"></a>Handbooks<br />
+<div class="outline-text-6" id="text-1-3-7-10-2">
+<ul class="org-ul">
+<li>Z. D. Peterson, Ed., The Wiley Handbook of Sex Therapy, 1st edition. Wiley-Blackwell, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org559666f"></a>Systems<br />
+<div class="outline-text-6" id="text-1-3-7-10-3">
+<ul class="org-ul">
+<li>N. Gambescia, G. R. Weeks, and K. M. Hertlein, A Clinician’s Guide to Systemic Sex Therapy, 3rd edition. New York, NY: Routledge, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb20a302"></a>Misc<br />
+<div class="outline-text-6" id="text-1-3-7-10-4">
+<ul class="org-ul">
+<li>H. S. Kaplan, Illustrated Manual of Sex Therapy, 2nd edition. New York: Brunner-Mazel Inc, 1988.</li>
+
+<li>P. J. Kleinplatz and A. D. Ménard, Magnificent Sex: Lessons from Extraordinary Lovers, 1st edition. New York ; London: Routledge, 2020.</li>
+
+<li>P. J. Kleinplatz, New Directions in Sex Therapy: Innovations and Alternatives, 2nd edition. London: Routledge, 2017.</li>
+
+<li>D. Flemons, S. Green, and M. F. Hoyt, Quickies – The Handbook of Brief Sex Therapy 3e, Third edition. New York: W. W. Norton &amp; Company, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org48e1ab9"></a>India<br />
+<ol class="org-ol">
+<li><a id="org0d453ba"></a>Space and Time<br />
+<ul class="org-ul">
+<li><a id="org986b614"></a>History<br />
+<div class="outline-text-7" id="text-org986b614">
+<ul class="org-ul">
+<li>J. J. Meyer, Sexual Life in Ancient India: A Study in the Comparative History of Indian Culture. Motilal Banarsidass Publ., 1971.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org03cf926"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org9a6a88a"></a>Homosexuality<br />
+<ul class="org-ul">
+<li><a id="orge1d3b77"></a>General<br />
+<div class="outline-text-8" id="text-orge1d3b77">
+<ul class="org-ul">
+<li>R. Vanita, Gandhi’s Tiger and Sita’s Smile: Essays on Gender, Sexuality, and Culture. Yoda Press, 2005.</li>
+<li>R. Vanita, Love’s Rite: Same-Sex Marriages in Modern India. Penguin Books India, 2021.</li>
+<li>R. Vanita, Queering India: Same-Sex Love and Eroticism in Indian Culture and Society. Routledge, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org914b716"></a>Literature<br />
+<div class="outline-text-8" id="text-org914b716">
+<ul class="org-ul">
+<li>R. Vanita and S. Kidwai, Same-Sex Love in India: A Literary History. Penguin Random House India Private Limited, 2021.</li>
+<li>R. Vanita and S. Kidwai, Same-Sex Love in India: Readings in Indian Literature. Springer, 2000.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf763bd2"></a>Caste<br />
+<div class="outline-text-7" id="text-orgf763bd2">
+<ul class="org-ul">
+<li>S. Paik, The Vulgarity of Caste: Dalits, Sexuality, and Humanity in Modern India. Navayana, 2022.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org79e1b32" class="outline-4">
+<h4 id="org79e1b32"><span class="section-number-4">1.3.8.</span> Misc</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<ul class="org-ul">
+<li>J. Carroll, Sexuality Now: Embracing Diversity, 6th edition. Australia ; Boston: Wadsworth Publishing Co Inc, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Right to Sex | Amia Srinivasan in conversation with Bee Rowlatt | Jaipur Literature Festival - YouTube.” <a href="https://www.youtube.com/watch?v=F5XrfU3Kelc&amp;t=991s">https://www.youtube.com/watch?v=F5XrfU3Kelc&amp;t=991s</a> (accessed May 26, 2023).</li>
+
+<li>“The Right to Sex | Amia Srinivasan in conversation with Bee Rowlatt | Jaipur Literature Festival - YouTube.” <a href="https://www.youtube.com/watch?v=F5XrfU3Kelc&amp;list=WL&amp;index=15&amp;t=991s">https://www.youtube.com/watch?v=F5XrfU3Kelc&amp;list=WL&amp;index=15&amp;t=991s</a> (accessed May 26, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Good sex explained in 9 minutes | Dr. Emily Nagoski, (Mar. 24, 2023). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=eqX38J9ya1I">https://www.youtube.com/watch?v=eqX38J9ya1I</a></li>
+<li>The Principles of Pleasure | Official Trailer | Netflix, (Mar. 03, 2022). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=bbtcUPJ_N4U">https://www.youtube.com/watch?v=bbtcUPJ_N4U</a></li>
+<li>How To Build a Sex Room | Official Trailer | Netflix, (Jun. 23, 2022). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=xltjtd4Tx1A">https://www.youtube.com/watch?v=xltjtd4Tx1A</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sex/Life: Season 2 | Official Trailer | Netflix - YouTube.” <a href="https://www.youtube.com/watch?v=WnV0JoflZiA">https://www.youtube.com/watch?v=WnV0JoflZiA</a> (accessed May 26, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘Radical Intimacy’: fostering love in a capitalist society,” Mashable, Mar. 11, 2023. <a href="https://mashable.com/article/radical-intimacy-excerpt">https://mashable.com/article/radical-intimacy-excerpt</a> (accessed May 26, 2023).</li>
+<li>Z. Kors, Radical Intimacy: Cultivate the Deeply Connected Relationships You Desire and Deserve. New York: Hachette Go, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The female body under the female gaze poses a monster problem | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/the-female-body-under-the-female-gaze-poses-a-monster-problem">https://aeon.co/essays/the-female-body-under-the-female-gaze-poses-a-monster-problem</a> (accessed Jun. 10, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Human bodies change through life. So does our sexuality | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/human-bodies-change-through-life-so-does-our-sexuality">https://psyche.co/ideas/human-bodies-change-through-life-so-does-our-sexuality</a> (accessed Mar. 24, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How to get the excitement back | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-rekindle-a-long-term-sexual-relationship-in-five-strategies">https://psyche.co/guides/how-to-rekindle-a-long-term-sexual-relationship-in-five-strategies</a> (accessed Mar. 24, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“Will human sexuality ever be free from stone age impulses? – Neil McArthur | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/will-human-sexuality-ever-be-free-from-stone-age-impulses">https://aeon.co/essays/will-human-sexuality-ever-be-free-from-stone-age-impulses</a> (accessed Dec. 15, 2020).</li>
+
+<li>M. Hani, Keep It Fresh: Tips for Couples Who Are in It for the Long Haul. East-West Publishing, LLC, 2021.</li>
+
+<li>C. Moser and P. J. Kleinplatz, Eds., Sadomasochism: Powerful Pleasures, 1st edition. New York: Routledge Member of the Taylor and Francis Group, 2006.</li>
+
+<li>P. J. Kleinplatz and A. D. Ménard, Magnificent Sex: Lessons from Extraordinary Lovers, 1st edition. New York ; London: Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f6af40" class="outline-3">
+<h3 id="org0f6af40"><span class="section-number-3">1.4.</span> Love</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>A. D. Botton, <b>The Course of Love.</b> Penguin UK, 2016.</li>
+<li><i>“Love works its magic in mysterious biochemical ways – Barbara Fredrickson | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/love-works-its-magic-in-mysterious-biochemical-ways">https://aeon.co/essays/love-works-its-magic-in-mysterious-biochemical-ways</a> (accessed Dec. 18, 2020).</li>
+<li>E. Fromm, <i>The Art of Loving.</i> Open Road Media, 2013.</li>
+<li>H. Fry, <i>The Mathematics of Love.</i> Simon &amp; Schuster UK, 2015.</li>
+<li>T. Tashiro, <i>The Science of Happily Ever After: What Really Matters in the Quest for Enduring Love.</i> Harlequin, 2014.</li>
+<li>“To understand what love is, read the stories that history tells | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/to-understand-what-love-is-read-the-stories-that-history-tells">https://aeon.co/essays/to-understand-what-love-is-read-the-stories-that-history-tells</a> (accessed Feb. 25, 2022).</li>
+<li>“Why it can be sublime to love someone who doesn’t love you back | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/why-it-can-be-sublime-to-love-someone-who-doesnt-love-you-back">https://psyche.co/ideas/why-it-can-be-sublime-to-love-someone-who-doesnt-love-you-back</a> (accessed Feb. 17, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Percy Shelley invented free love in 1792 | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/how-percy-shelley-invented-free-love-in-1792">https://aeon.co/essays/how-percy-shelley-invented-free-love-in-1792</a> (accessed Dec. 11, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org957a777" class="outline-3">
+<h3 id="org957a777"><span class="section-number-3">1.5.</span> Marriage</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>B. Russell, <i>Marriage and Morals.</i> Routledge, 2009.</li>
+<li><i>“Why marriage is both anachronistic and discriminatory – Clare Chambers | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/why-marriage-is-both-anachronistic-and-discriminatory">https://aeon.co/essays/why-marriage-is-both-anachronistic-and-discriminatory</a> (accessed Dec. 03, 2020).</li>
+<li><i>“Marriage is dead, long live marriage: how will we couple up? – Manvir Singh | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/marriage-is-dead-long-live-marriage-how-will-we-couple-up">https://aeon.co/essays/marriage-is-dead-long-live-marriage-how-will-we-couple-up</a> (accessed Jan. 01, 2021).</li>
+<li>“Divorce,” Wikipedia. Jul. 17, 2022. Accessed: Jul. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Divorce&amp;oldid=1098688390">https://en.wikipedia.org/w/index.php?title=Divorce&amp;oldid=1098688390</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d5a8cd" class="outline-3">
+<h3 id="org4d5a8cd"><span class="section-number-3">1.6.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org89b622c" class="outline-4">
+<h4 id="org89b622c"><span class="section-number-4">1.6.1.</span> India</h4>
+<div class="outline-text-4" id="text-1-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgefcb218"></a>General<br />
+<div class="outline-text-5" id="text-1-6-1-1">
+<ul class="org-ul">
+<li>I. Trivedi, <b>India In Love: Marriage And Sexuality In The 21st century.</b> New Delhi: Aleph Book Company, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf1976d0"></a>Classics<br />
+<ol class="org-ol">
+<li><a id="orgabca5e7"></a>General<br />
+<div class="outline-text-6" id="text-1-6-1-2-1">
+<ul class="org-ul">
+<li>“Manusmriti,” Wikipedia. Jan. 01, 2023. Accessed: Jan. 02, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Manusmriti&amp;oldid=1130861316">https://en.wikipedia.org/w/index.php?title=Manusmriti&amp;oldid=1130861316</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org459e4e3"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-1-6-1-2-2">
+<ul class="org-ul">
+<li>B. R. Ambedkar, Against the Madness of Manu: B.R. Ambedkar’s Writings on Brahmanical Patriarchy. Navayana Pub., 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Laws of Manu and What They Would Mean for Citizens of the Hindu Rashtra,” The Wire. <a href="https://thewire.in/rights/manusmriti-hindu-rashtra-rss">https://thewire.in/rights/manusmriti-hindu-rashtra-rss</a> (accessed Nov. 19, 2022).</li>
+
+<li>“Why Feminists Must Join the Movement Against the Manusmriti,” The Wire. <a href="https://thewire.in/caste/why-feminists-must-join-the-movement-against-the-manusmriti">https://thewire.in/caste/why-feminists-must-join-the-movement-against-the-manusmriti</a> (accessed Jan. 02, 2023).</li>
+
+<li>M. Raut, “Why Manusmriti Dahan Divas Is Still Relevant Today,” Feminism in India, Dec. 24, 2016. <a href="https://feminisminindia.com/2016/12/25/manusmriti-dahan-divas-still-relevant/">https://feminisminindia.com/2016/12/25/manusmriti-dahan-divas-still-relevant/</a> (accessed Jan. 02, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgce695df"></a>Misc<br />
+<div class="outline-text-6" id="text-1-6-1-2-3">
+<ul class="org-ul">
+<li>P. of S. and I. R. D. of C. for A. S. P. Olivelle and Manu (Lawgiver), <i>The Law Code of Manu.</i> Oxford University Press, 2004.</li>
+<li>P. Olivelle, Manu’s Code of Law: A Critical Edition and Translation of the M-anava-Dharmaś-astra. Oxford University Press, 2004.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Laws of Manu. Penguin Publishing Group, 1992.</li>
+<li>M. Vatsyayana, W. Doniger, and S. Kakar, <b>Kamasutra.</b> Oxford University Press, 2009.</li>
+<li>W. Doniger, Redeeming the Kamasutra. Oxford University Press, 2016.</li>
+<li>W. Doniger, Against Dharma: Dissent in the Ancient Indian Sciences of Sex and Politics. Yale University Press, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf15a65e"></a>History<br />
+<div class="outline-text-5" id="text-1-6-1-3">
+<ul class="org-ul">
+<li>F. Orsini, <i>Love in South Asia: A Cultural History.</i> Cambridge University Press, 2006.</li>
+<li>R. Banerji, <b>Sex and Power: Defining History, Shaping Societies.</b> Penguin Books, 2008.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6f38153"></a>Match Making<br />
+<div class="outline-text-5" id="text-1-6-1-4">
+<ul class="org-ul">
+<li>P. Chowdhry, <i>Contentious Marriages, Eloping Couples: Gender, Caste, and Patriarchy in Northern India.</i> Oxford University Press, 2007.</li>
+
+<li>D. Pattanaik, <i>Marriage (PB).</i> Rupa Publication, 2021.</li>
+
+<li>P. Bhandari, <i>Matchmaking in Middle Class India: Beyond Arranged and Love Marriage.</i> Springer Nature, 2020.</li>
+
+<li>R. Palriwala and P. Uberoi, Marriage, Migration and Gender. SAGE Publications Ltd, 2008.</li>
+
+<li>P. Uberoi, Family, Kinship and Marriage in India. Oxford University Press, 1994.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org668d207"></a>Misc<br />
+<div class="outline-text-5" id="text-1-6-1-5">
+<ul class="org-ul">
+<li>W. Doniger, The Bedtrick: Tales of Sex and Masquerade. University of Chicago Press, 2000.</li>
+
+<li>S. Kakar and J. M. Ross, <b>Tales Of Love, Sex, And Danger.</b> Oxford University Press, 1986.</li>
+
+<li>S. Kakar, <b>Intimate Relations: Exploring Indian Sexuality.</b> Penguin Books India, 1990.</li>
+
+<li>C. S. Dogra, <i>Manoj and Babli: A Hate Story.</i> Penguin UK, 2013.</li>
+
+<li>P. Uberoi, Freedom and Destiny: Gender, Family, and Popular Culture in India. Oxford University Press, 2009.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Who Does Not Let You Love?,” Feb. 2018, Accessed: Nov. 21, 2022. [Online]. Available: <a href="https://www.epw.in/engage/interactives/valentines-day-who-does-not-let-you-love">https://www.epw.in/engage/interactives/valentines-day-who-does-not-let-you-love</a></li>
+
+<li>“Respatialising the Digitised and Globalised Sex Industry | Economic and Political Weekly.” <a href="https://www.epw.in/engage/article/respatialising-digitised-and-globalised-sex">https://www.epw.in/engage/article/respatialising-digitised-and-globalised-sex</a> (accessed Nov. 21, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org1273e9c" class="outline-4">
+<h4 id="org1273e9c"><span class="section-number-4">1.6.2.</span> Parenting</h4>
+<div class="outline-text-4" id="text-1-6-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2b82baa"></a>General<br />
+<div class="outline-text-5" id="text-1-6-2-1">
+<ul class="org-ul">
+<li>“Parenting,” Wikipedia. Jul. 14, 2022. Accessed: Jul. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Parenting&amp;oldid=1098055853">https://en.wikipedia.org/w/index.php?title=Parenting&amp;oldid=1098055853</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgec0cc1f"></a>Daycare<br />
+<div class="outline-text-5" id="text-1-6-2-2">
+<ul class="org-ul">
+<li>A. Hancock, “Daycare Apps Are Dangerously Insecure,” Electronic Frontier Foundation, Jun. 21, 2022. <a href="https://www.eff.org/deeplinks/2022/06/daycare-apps-are-dangerously-insecure">https://www.eff.org/deeplinks/2022/06/daycare-apps-are-dangerously-insecure</a> (accessed Jun. 27, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f29d29"></a>Breastfeeding<br />
+<div class="outline-text-5" id="text-1-6-2-3">
+<ul class="org-ul">
+<li>Breastfeeding Tips: Common Breastfeeding Positions, (Aug. 16, 2019). Accessed: Apr. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=or4OnMxihUg">https://www.youtube.com/watch?v=or4OnMxihUg</a></li>
+<li>“Latching Issues? Try These 5 Breastfeeding Positions,” Aug. 19, 2019. <a href="https://www.michiganmedicine.org/health-lab/latching-issues-try-these-5-breastfeeding-positions">https://www.michiganmedicine.org/health-lab/latching-issues-try-these-5-breastfeeding-positions</a> (accessed Apr. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Apr. 06, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org59a5cdb"></a>Misc<br />
+<div class="outline-text-5" id="text-1-6-2-4">
+<ul class="org-ul">
+<li>D. Narvaez, G. A. Bradshaw, and G. Maté, <b>The Evolved Nest: Nature’s Way of Raising Children and Creating Connected Communities.</b> North Atlantic Books, 2023.</li>
+<li>T. E. Nest, “The Evolved Nest,” The Evolved Nest. <a href="https://evolvednest.org/the-evolved-nest-book">https://evolvednest.org/the-evolved-nest-book</a> (accessed Sep. 24, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>V. L. Cooper, Parenting the First Twelve Years: What the Evidence Tells Us. Penguin Books, Limited, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0162d82" class="outline-3">
+<h3 id="org0162d82"><span class="section-number-3">1.7.</span> Misc</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>M. B. Rosenberg and D. Chopra, Nonviolent Communication: A Language of Life: Life-Changing Tools for Healthy Relationships. PuddleDancer Press, 2015.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4b7c2e7" class="outline-2">
+<h2 id="org4b7c2e7"><span class="section-number-2">2.</span> Gender</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6b3a26d" class="outline-3">
+<h3 id="org6b3a26d"><span class="section-number-3">2.1.</span> General</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“LGBT,” Wikipedia. Nov. 16, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=LGBT&amp;oldid=1122206556">https://en.wikipedia.org/w/index.php?title=LGBT&amp;oldid=1122206556</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home,” Women’s &amp; Gender Studies at MIT. <a href="http://wgs.mit.edu/home">http://wgs.mit.edu/home</a> (accessed Apr. 04, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde08037" class="outline-3">
+<h3 id="orgde08037"><span class="section-number-3">2.2.</span> STEMM</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>E. Cheng, <b>x+y: A Mathematician’s Manifesto for Rethinking Gender.</b> Profile Books, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ce093e" class="outline-3">
+<h3 id="org0ce093e"><span class="section-number-3">2.3.</span> Women</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>D. Morris, <b>The Naked Woman.</b> Random House, 2011.</li>
+<li>L. Brizendine, <b>The Female Brain</b>. Random House, 2009.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a88b8a" class="outline-3">
+<h3 id="org7a88b8a"><span class="section-number-3">2.4.</span> Men</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>D. Morris, <b>The Naked Man: A Study Of The Male Body.</b> Random House, 2012.</li>
+
+<li>D. Deida, The Way of the Superior Man: A Spiritual Guide to Mastering the Challenges of Women, Work, and Sexual Desire, Reprint edition. Sounds True, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3af952f" class="outline-3">
+<h3 id="org3af952f"><span class="section-number-3">2.5.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgd6d29a8" class="outline-4">
+<h4 id="orgd6d29a8"><span class="section-number-4">2.5.1.</span> India</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<ul class="org-ul">
+<li>Evans, Alice. <b>“Why Are North and South India so Different on Gender?”</b> Alice Evans, October 6, 2020. <a href="https://www.draliceevans.com/post/why-are-southern-north-eastern-indian-states-more-gender-equal">https://www.draliceevans.com/post/why-are-southern-north-eastern-indian-states-more-gender-equal</a>.</li>
+<li>L. Fernandes, Routledge Handbook of Gender in South Asia. Routledge, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7cb758e" class="outline-4">
+<h4 id="org7cb758e"><span class="section-number-4">2.5.2.</span> Non Binary Gender</h4>
+<div class="outline-text-4" id="text-2-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org743eec8"></a>History<br />
+<div class="outline-text-5" id="text-2-5-2-1">
+<ul class="org-ul">
+<li>J. Manion, Female Husbands: A Trans History. Cambridge University Press, 2020.</li>
+<li><i>“May we all be so brave as 19th-century female husbands – Jen Manion | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/may-we-all-be-so-brave-as-19th-century-female-husbands">https://aeon.co/essays/may-we-all-be-so-brave-as-19th-century-female-husbands</a> (accessed Dec. 03, 2020).</li>
+
+<li>S. Stryker, Transgender History. Hachette UK, 2009.</li>
+
+<li>L. DeVun, The Shape of Sex: Nonbinary Gender from Genesis to the Renaissance. Columbia University Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga27b251"></a>CSE<br />
+<div class="outline-text-5" id="text-2-5-2-2">
+<ul class="org-ul">
+<li>A. Schwartz, “Data Sanctuary for Trans People,” Electronic Frontier Foundation, Jun. 28, 2023. <a href="https://www.eff.org/deeplinks/2023/06/data-sanctuary-trans-people">https://www.eff.org/deeplinks/2023/06/data-sanctuary-trans-people</a> (accessed Jun. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgaa875cc"></a>Africa<br />
+<div class="outline-text-5" id="text-2-5-2-3">
+<ul class="org-ul">
+<li>P. I. Amadiume, Male Daughters, Female Husbands: Gender and Sex in an African Society. Zed Books Ltd., 2015.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org41e69c9"></a>Misc<br />
+<div class="outline-text-5" id="text-2-5-2-4">
+<ul class="org-ul">
+<li>“Beyond Visibility – Assessing Your Transgender and Nonbinary Workplace Inclusion,” Out &amp; Equal, Mar. 15, 2022. <a href="https://outandequal.org/beyond-visibility-assessing-your-transgender-and-nonbinary-workplace-inclusion/">https://outandequal.org/beyond-visibility-assessing-your-transgender-and-nonbinary-workplace-inclusion/</a> (accessed Apr. 04, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7f453d6" class="outline-3">
+<h3 id="org7f453d6"><span class="section-number-3">2.6.</span> Miscellaneous</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>“International Non-Binary People’s Day,” Wikipedia. Jul. 22, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Non-Binary_People%27s_Day&amp;oldid=1099843501">https://en.wikipedia.org/w/index.php?title=International_Non-Binary_People%27s_Day&amp;oldid=1099843501</a></li>
+
+<li>“International Women’s Day,” Wikipedia. Nov. 03, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Women%27s_Day&amp;oldid=1119811588">https://en.wikipedia.org/w/index.php?title=International_Women%27s_Day&amp;oldid=1119811588</a></li>
+
+<li>“International Men’s Day,” Wikipedia. Nov. 19, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Men%27s_Day&amp;oldid=1122696772">https://en.wikipedia.org/w/index.php?title=International_Men%27s_Day&amp;oldid=1122696772</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“Gender is dead, long live gender: just what is ‘performativity’? – Will Fraker | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/gender-is-dead-long-live-gender-just-what-is-performativity">https://aeon.co/ideas/gender-is-dead-long-live-gender-just-what-is-performativity</a> (accessed Dec. 18, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Agarwal, Gender Challenges. Oxford University Press, 2015.</li>
+<li>B. Agarwal, Gender and Green Governance: The Political Economy of Women’s Presence Within and Beyond Community Forestry. Oxford University Press, 2010.</li>
+<li>B. Agarwal and A. Bina, A Field of One’s Own: Gender and Land Rights in South Asia. Cambridge University Press, 1994.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53c0611" class="outline-2">
+<h2 id="org53c0611"><span class="section-number-2">3.</span> Feminism</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org957130d" class="outline-3">
+<h3 id="org957130d"><span class="section-number-3">3.1.</span> General</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>M. Walters, <i>Feminism: A Very Short Introduction.</i> OUP Oxford, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44c7c48" class="outline-3">
+<h3 id="org44c7c48"><span class="section-number-3">3.2.</span> SnT</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org27ef68e" class="outline-4">
+<h4 id="org27ef68e"><span class="section-number-4">3.2.1.</span> Facts</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6c241e0"></a>History<br />
+<ol class="org-ol">
+<li><a id="orgca3b31d"></a>Misc<br />
+<div class="outline-text-6" id="text-3-2-1-1-1">
+<ul class="org-ul">
+<li>L. Delap, Feminisms: A Global History. Penguin UK, 2020.</li>
+
+<li>Sabloff, Paula L. W. <b>“The Political Agency of Royal Women: A Comparative Analysis of Eight Premodern States According to Societal Rules and Roles.”</b> Journal of Archaeological Research 28, no. 1 (March 1, 2020): 53–97. <a href="https://doi.org/10.1007/s10814-019-09131-y">https://doi.org/10.1007/s10814-019-09131-y</a>.
+<ul class="org-ul">
+<li><b>“What big history says about how royal women exercise power – Laura Spinney | Aeon Ideas,"</b> Aeon. <a href="https://aeon.co/ideas/what-big-history-says-about-how-royal-women-exercise-power">https://aeon.co/ideas/what-big-history-says-about-how-royal-women-exercise-power</a> (accessed Dec. 03, 2020).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org63b6e85"></a>Biography<br />
+<div class="outline-text-6" id="text-3-2-1-1-2">
+<ul class="org-ul">
+<li>“Silvia Federici,” Wikipedia. May 04, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Silvia_Federici&amp;oldid=1086159432">https://en.wikipedia.org/w/index.php?title=Silvia_Federici&amp;oldid=1086159432</a></li>
+
+<li>“Angela Davis,” Wikipedia. Jul. 30, 2022. Accessed: Aug. 05, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Angela_Davis&amp;oldid=1101404968">https://en.wikipedia.org/w/index.php?title=Angela_Davis&amp;oldid=1101404968</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgdf5c261"></a>News<br /></li>
+</ol>
+</div>
+<div id="outline-container-org3571d93" class="outline-4">
+<h4 id="org3571d93"><span class="section-number-4">3.2.2.</span> Geography</h4>
+</div>
+</div>
+<div id="outline-container-org3ec77d4" class="outline-3">
+<h3 id="org3ec77d4"><span class="section-number-3">3.3.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Home,” Women’s &amp; Gender Studies at MIT. <a href="http://wgs.mit.edu/home">http://wgs.mit.edu/home</a> (accessed Apr. 17, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0fa423f" class="outline-3">
+<h3 id="org0fa423f"><span class="section-number-3">3.4.</span> STEMM</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org92a1751" class="outline-4">
+<h4 id="org92a1751"><span class="section-number-4">3.4.1.</span> Systems Sciences</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li><b>“Illuminating the path to sustainable wellbeing,”</b> IIASA - International Institute for Applied Systems Analysis. Accessed: Sep. 14, 2023. [Online]. Available: <a href="https://iiasa.ac.at/news/sep-2023/illuminating-path-to-sustainable-wellbeing">https://iiasa.ac.at/news/sep-2023/illuminating-path-to-sustainable-wellbeing</a>
+<ul class="org-ul">
+<li>"Enhance individual agency: Prioritize women’s empowerment through universal female education."</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fad692" class="outline-4">
+<h4 id="org7fad692"><span class="section-number-4">3.4.2.</span> Ecology</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>V. Shiva and M. Mies, <b>Ecofeminism.</b> Zed Books Ltd., 2014.
+<ul class="org-ul">
+<li>Dated, radical, impractical for some, but maybe, THE right stance on feminism. Indian women cannot not read it.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Salleh, Ecofeminism as Politics: Nature, Marx and the Postmodern. Bloomsbury Academic, 1997.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Making Peace with the Earth – Through Diversity, Mutuality, Non-Violence &amp; Care – An Ecofeminist Manifesto,” Navdanya international, Jun. 04, 2023. <a href="https://navdanyainternational.org/publications/making-peace-with-the-earth-an-ecofeminist-manifesto/">https://navdanyainternational.org/publications/making-peace-with-the-earth-an-ecofeminist-manifesto/</a> (accessed Jun. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Ecofeminism &amp; Ecowomanism - YouTube.”</b> <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM1daXDFpR5egW5gSrMsurR">https://www.youtube.com/playlist?list=PLfoNnUIQBvM1daXDFpR5egW5gSrMsurR</a>- (accessed Jun. 15, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd56af42" class="outline-4">
+<h4 id="orgd56af42"><span class="section-number-4">3.4.3.</span> CSE</h4>
+<div class="outline-text-4" id="text-3-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org9cd1030"></a>Everday Computing<br /></li>
+<li><a id="org2904de8"></a>Data Science<br />
+<div class="outline-text-5" id="text-3-4-3-2">
+<ul class="org-ul">
+<li>C. D’Ignazio and L. F. Klein, <b>Data Feminism.</b> MIT Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. C. Perez, <b>Invisible Women: Data Bias in a World Designed for Men.</b> Abrams, Incorporated, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Herre, P. Arriagada, E. Ortiz-Ospina, H. Ritchie, J. Hasell, and M. Roser, “Women’s Rights,” Our World in Data, May 2023, Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://ourworldindata.org/women-rights">https://ourworldindata.org/women-rights</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1b7245c"></a>Artificial Intelligence<br /></li>
+<li><a id="org899258e"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org6098e1b" class="outline-4">
+<h4 id="org6098e1b"><span class="section-number-4">3.4.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<ul class="org-ul">
+<li>C. Napp and T. Breda, “The stereotype that girls lack talent: A worldwide investigation,” Science Advances, vol. 8, no. 10, p. eabm3689, doi: 10.1126/sciadv.abm3689.</li>
+
+<li>“When will economists embrace the quantum revolution? | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution">https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution</a> (accessed Feb. 25, 2022).</li>
+
+<li>C. Fine, <b>Testosterone Rex: Unmaking the Myths of Our Gendered Minds.</b> London: Icon Books Ltd, 2017.</li>
+
+<li>A. Saini, Inferior: The True Power of Women and the Science that Shows it. HarperCollins Publishers Australia, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf1ffe77" class="outline-3">
+<h3 id="orgf1ffe77"><span class="section-number-3">3.5.</span> World</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgfd5b3b3" class="outline-4">
+<h4 id="orgfd5b3b3"><span class="section-number-4">3.5.1.</span> Mgmt</h4>
+</div>
+<div id="outline-container-orgba70673" class="outline-4">
+<h4 id="orgba70673"><span class="section-number-4">3.5.2.</span> Economics</h4>
+<div class="outline-text-4" id="text-3-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org29cb517"></a>History<br />
+<div class="outline-text-5" id="text-3-5-2-1">
+<ul class="org-ul">
+<li>G. Becchio, A History of Feminist and Gender Economics. Routledge, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc095e6a"></a>Orgs<br />
+<div class="outline-text-5" id="text-3-5-2-2">
+<ul class="org-ul">
+<li>“Home.” Accessed: Nov. 15, 2023. [Online]. Available: <a href="https://www.iaffe.org/">https://www.iaffe.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb40da33"></a>Handbooks<br />
+<div class="outline-text-5" id="text-3-5-2-3">
+<ul class="org-ul">
+<li>G. Berik and E. Kongar, The Routledge Handbook of Feminist Economics. Routledge, 2021.</li>
+
+<li>“Routledge IAFFE Advances in Feminist Economics.” <a href="http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share</a> (accessed Dec. 05, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org509e431"></a>ST<br />
+<ol class="org-ol">
+<li><a id="org50ffcdd"></a>Jobs<br />
+<div class="outline-text-6" id="text-3-5-2-4-1">
+<ul class="org-ul">
+<li>The Onion’s Tips For Succeeding As A Woman In The Workplace, (Nov. 18, 2013). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GXZ6oDG9mnY">https://www.youtube.com/watch?v=GXZ6oDG9mnY</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Frankel, Nice Girls Don’t Get the Corner Office: 101 Unconscious Mistakes Women Make That Sabotage Their Careers. Grand Central Publishing, 2004.</li>
+<li>L. P. Frankel, Nice Girls Don’t Get the Corner Office: Unconscious Mistakes Women Make That Sabotage Their Careers. Hachette UK, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org52b9518"></a>India<br />
+<div class="outline-text-6" id="text-3-5-2-4-2">
+<ul class="org-ul">
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+<li>S. Nigam, “Economic Abuse and Legal Remedies in India: A Qualitative Review.” Rochester, NY, Jan. 20, 2023. doi: 10.2139/ssrn.4350642.</li>
+<li>S. Singh, “Economic Abuse and Family Violence Across Cultures: Gendering Money and Assets Through Coercive Control,” in Criminalising Coercive Control : Family Violence and the Criminal Law, M. McMahon and P. McGorrery, Eds., Singapore: Springer, 2020, pp. 51–72. doi: 10.1007/978-981-15-0653-6<sub>3</sub>.</li>
+<li>P. Chowbey, “Women’s narratives of economic abuse and financial strategies in Britain and South Asia,” Psychology of Violence, vol. 7, no. 3, pp. 459–468, 2017, doi: 10.1037/vio0000110.</li>
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1bf62c9"></a>Misc<br />
+<div class="outline-text-5" id="text-3-5-2-5">
+<ul class="org-ul">
+<li>T. C. Collective, A. Chatzidakis, J. Hakim, J. Litter, and C. Rottenberg, The Care Manifesto: The Politics of Interdependence. Verso Books, 2020.</li>
+
+<li>C. Beasley, Sexual Economyths: Conceiving a Feminist Economics. St. Martin’s Press, 1994.</li>
+
+<li>C. Bauhardt and W. Harcourt, Feminist Political Ecology and the Economics of Care: In Search of Economic Alternatives. Routledge, 2018.</li>
+
+<li>J. Ghosh, Ed., Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies, 1st edition. Routledge, 2021.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd2c3c9a" class="outline-4">
+<h4 id="orgd2c3c9a"><span class="section-number-4">3.5.3.</span> Law</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<ul class="org-ul">
+<li>B. Herre, P. Arriagada, E. Ortiz-Ospina, H. Ritchie, J. Hasell, and M. Roser, “Women’s Rights,” Our World in Data, May 2023, Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://ourworldindata.org/women-rights">https://ourworldindata.org/women-rights</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5940d33" class="outline-4">
+<h4 id="org5940d33"><span class="section-number-4">3.5.4.</span> Politics</h4>
+<div class="outline-text-4" id="text-3-5-4">
+<ul class="org-ul">
+<li>M. Shamshiri and S. Thomson, Eds., She Who Struggles: Revolutionary Women Who Shaped the World. Pluto Press, 2023.
+<ul class="org-ul">
+<li>“She Who Struggles,” Pluto Press. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.plutobooks.com/9780745348247/she-who-struggles">https://www.plutobooks.com/9780745348247/she-who-struggles</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org941add8" class="outline-3">
+<h3 id="org941add8"><span class="section-number-3">3.6.</span> Arts</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org473769c" class="outline-4">
+<h4 id="org473769c"><span class="section-number-4">3.6.1.</span> Music</h4>
+</div>
+<div id="outline-container-orgd9fb102" class="outline-4">
+<h4 id="orgd9fb102"><span class="section-number-4">3.6.2.</span> Visuals</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<ul class="org-ul">
+<li>M. Noroc, The Atlas of Beauty: Women of the World in 500 Portraits. Penguin UK, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c6963e" class="outline-4">
+<h4 id="org7c6963e"><span class="section-number-4">3.6.3.</span> Literature</h4>
+<div class="outline-text-4" id="text-3-6-3">
+<ul class="org-ul">
+<li><b>“Can you enjoy romance fiction and be a feminist? – Batya Ungar-Sargon | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/can-you-enjoy-romance-fiction-and-be-a-feminist">https://aeon.co/essays/can-you-enjoy-romance-fiction-and-be-a-feminist</a> (accessed Dec. 03, 2020).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org22b1942" class="outline-4">
+<h4 id="org22b1942"><span class="section-number-4">3.6.4.</span> Humor</h4>
+<div class="outline-text-4" id="text-3-6-4">
+<ul class="org-ul">
+<li>The Onion’s Tips For Succeeding As A Woman In The Workplace, (Nov. 18, 2013). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GXZ6oDG9mnY">https://www.youtube.com/watch?v=GXZ6oDG9mnY</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5869e63" class="outline-3">
+<h3 id="org5869e63"><span class="section-number-3">3.7.</span> Critical Studies</h3>
+</div>
+<div id="outline-container-org9fdb2c1" class="outline-3">
+<h3 id="org9fdb2c1"><span class="section-number-3">3.8.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org80573f9" class="outline-4">
+<h4 id="org80573f9"><span class="section-number-4">3.8.1.</span> Militant Feminism</h4>
+<div class="outline-text-4" id="text-3-8-1">
+</div>
+<ol class="org-ol">
+<li><a id="org096fdee"></a>General<br /></li>
+<li><a id="org2202ef2"></a>Kurdish Women<br />
+<div class="outline-text-5" id="text-3-8-1-2">
+<ul class="org-ul">
+<li>M. Knapp (Historian), A. Flach, E. Ayboga, and A. Abdullah, Revolution in Rojava: Democratic Autonomy and Women’s Liberation in Syrian Kurdistan. Pluto Press, 2016.</li>
+
+<li>D. Dirik, The Kurdish Women’s Movement: History, Theory, Practice. Pluto Press, 2022.</li>
+
+<li>“Jineology,” Wikipedia. Sep. 07, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jineology&amp;oldid=1109031722">https://en.wikipedia.org/w/index.php?title=Jineology&amp;oldid=1109031722</a></li>
+
+<li>“Democratic confederalism,” Wikipedia. Aug. 10, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Democratic_confederalism&amp;oldid=1103559708">https://en.wikipedia.org/w/index.php?title=Democratic_confederalism&amp;oldid=1103559708</a></li>
+
+<li>“Abdullah Öcalan,” Wikipedia. Aug. 15, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Abdullah_%C3%96calan&amp;oldid=1104529702">https://en.wikipedia.org/w/index.php?title=Abdullah_%C3%96calan&amp;oldid=1104529702</a></li>
+
+<li>“Kurdistan Workers’ Party,” Wikipedia. Aug. 29, 2022. Accessed: Sep. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kurdistan_Workers%27_Party&amp;oldid=1107367039">https://en.wikipedia.org/w/index.php?title=Kurdistan_Workers%27_Party&amp;oldid=1107367039</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org2f2cd81"></a>India<br />
+<div class="outline-text-5" id="text-3-8-1-3">
+<ul class="org-ul">
+<li>A. Loomba, Revolutionary Desires: Women, Communism, and Feminism in India. Routledge, 2018.</li>
+
+<li>M. Kandasamy, The Orders Were to Rape You: Tigresses in the Tamil Eelam Struggle. Navayana Publishing Pvt. Limited, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgfecc25e" class="outline-4">
+<h4 id="orgfecc25e"><span class="section-number-4">3.8.2.</span> Radical Feminism</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<ul class="org-ul">
+<li>“Radical feminism,” Wikipedia. Jul. 12, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Radical_feminism&amp;oldid=1097704275">https://en.wikipedia.org/w/index.php?title=Radical_feminism&amp;oldid=1097704275</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf69d013" class="outline-4">
+<h4 id="orgf69d013"><span class="section-number-4">3.8.3.</span> PeaceWomen</h4>
+<div class="outline-text-4" id="text-3-8-3">
+<ul class="org-ul">
+<li>“PeaceWomen Across the Globe,” Wikipedia. May 17, 2022. Accessed: May 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=PeaceWomen_Across_the_Globe&amp;oldid=1088283349">https://en.wikipedia.org/w/index.php?title=PeaceWomen_Across_the_Globe&amp;oldid=1088283349</a></li>
+<li>“For peace and gender justice,” PeaceWomen Across the Globe. <a href="https://www.1000peacewomen.org/en/who-we-are-1.html">https://www.1000peacewomen.org/en/who-we-are-1.html</a> (accessed May 24, 2022).</li>
+<li>“PeaceWomen,” PeaceWomen. <a href="http://www.peacewomen.org/">http://www.peacewomen.org/</a> (accessed May 24, 2022).</li>
+<li>A. 1000 W. for the N. P. Prize 2005, 1000 Peacewomen Across the Globe. Scalo, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b56628" class="outline-4">
+<h4 id="org4b56628"><span class="section-number-4">3.8.4.</span> Partiarchy</h4>
+<div class="outline-text-4" id="text-3-8-4">
+</div>
+<ol class="org-ol">
+<li><a id="org306ca3c"></a>General<br />
+<div class="outline-text-5" id="text-3-8-4-1">
+<ul class="org-ul">
+<li>“Patriarchy,” Wikipedia. Nov. 12, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Patriarchy&amp;oldid=1121436632">https://en.wikipedia.org/w/index.php?title=Patriarchy&amp;oldid=1121436632</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0843440"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org1e99c14"></a>India<br />
+<div class="outline-text-6" id="text-3-8-4-2-1">
+<ul class="org-ul">
+<li>S. Rajasekaran, Smashing The Patriarchy: A Guide For The 21st-Century Indian Woman. Aleph Book Company, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Agrawal, Chaste Wives and Prostitute Sisters: Patriarchy and Prostitution among the Bedias of India. Taylor &amp; Francis, 2020.</li>
+
+<li>P. Chowdhry, Contentious Marriages, Eloping Couples: Gender, Caste, and Patriarchy in Northern India. Oxford University Press, 2007.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Mies, Indian Women and Patriarchy. Brill Academic Pub, 1980.</li>
+
+<li>B. R. Ambedkar, Against the Madness of Manu: B.R. Ambedkar’s Writings on Brahmanical Patriarchy. Navayana Pub., 2013.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orge3d853d"></a>Origins<br />
+<div class="outline-text-6" id="text-3-8-4-2-2">
+<ul class="org-ul">
+<li>R. Mace, “How Did the Patriarchy Start – and Will Evolution Get Rid of It? – The Wire Science.” <a href="https://science.thewire.in/society/patriarchy-origins-evolution/">https://science.thewire.in/society/patriarchy-origins-evolution/</a> (accessed Oct. 15, 2022).</li>
+<li>“The Origin of Patriarchy,” vol. 22, no. 44, Oct. 1987, Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://www.epw.in/journal/1987/44/reviews-uncategorised/origin-patriarchy.html">https://www.epw.in/journal/1987/44/reviews-uncategorised/origin-patriarchy.html</a></li>
+<li>“The sexual origins of patriarchy and the radical power of love – Paul A Kottman | Aeon Ideas,” Aeon. <a href="https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love">https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love</a> (accessed Dec. 15, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8cecaeb"></a>Misc<br />
+<div class="outline-text-5" id="text-3-8-4-3">
+<ul class="org-ul">
+<li>C. von Werlhof, The Failure of Modern Civilization and the Struggle for a “deep” Alternative: On “critical Theory of Patriarchy” as a New Paradigm. P. Lang, 2011.</li>
+<li>M. Mies, Patriarchy and Accumulation on a World Scale: Women in the International Division of Labour. Bloomsbury Publishing, 2014.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“The sexual origins of patriarchy and the radical power of love – Paul A Kottman | Aeon Ideas,”</i> Aeon. <a href="https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love">https://aeon.co/ideas/the-sexual-origins-of-patriarchy-and-the-radical-power-of-love</a> (accessed Dec. 15, 2020).</li>
+
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org639d0fa" class="outline-4">
+<h4 id="org639d0fa"><span class="section-number-4">3.8.5.</span> Nudity</h4>
+<div class="outline-text-4" id="text-3-8-5">
+<ul class="org-ul">
+<li>“Topless Cellist,” MIT Press. <a href="https://mitpress.mit.edu/9780262533584/topless-cellist/">https://mitpress.mit.edu/9780262533584/topless-cellist/</a> (accessed May 27, 2023).</li>
+
+<li>T. M. P. Reader, “'It’s very likely you won’t be electrocuted’: On Charlotte Moorman and Nam June Paik’s ‘TV Bra,’” The MIT Press Reader, May 22, 2023. <a href="https://thereader.mitpress.mit.edu/its-very-likely-you-wont-be-electrocuted-on-charlotte-moorman-and-nam-june-paiks-tv-bra/">https://thereader.mitpress.mit.edu/its-very-likely-you-wont-be-electrocuted-on-charlotte-moorman-and-nam-june-paiks-tv-bra/</a> (accessed May 27, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org688f502" class="outline-4">
+<h4 id="org688f502"><span class="section-number-4">3.8.6.</span> Sexuality</h4>
+<div class="outline-text-4" id="text-3-8-6">
+<ul class="org-ul">
+<li>“Sexuality Policy Watch,” Sexuality Policy Watch. <a href="https://sxpolitics.org/">https://sxpolitics.org/</a> (accessed May 24, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7adbb57" class="outline-4">
+<h4 id="org7adbb57"><span class="section-number-4">3.8.7.</span> India</h4>
+<div class="outline-text-4" id="text-3-8-7">
+</div>
+<ol class="org-ol">
+<li><a id="org27f1b93"></a>General<br />
+<div class="outline-text-5" id="text-3-8-7-1">
+<ul class="org-ul">
+<li>“Feminism in India,” Wikipedia. Mar. 30, 2022. Accessed: Apr. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Feminism_in_India&amp;oldid=1080111814">https://en.wikipedia.org/w/index.php?title=Feminism_in_India&amp;oldid=1080111814</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5312fd6"></a>Space and Time<br />
+<ol class="org-ol">
+<li><a id="org6b787f5"></a>Facts<br />
+<ul class="org-ul">
+<li><a id="org4d3d7a1"></a>History<br />
+<div class="outline-text-7" id="text-org4d3d7a1">
+<ul class="org-ul">
+<li>S. W. Jamison and P. of A. L. and C. I.-E. S. S. W. Jamison, Sacrificed Wife/sacrificer’s Wife: Women, Ritual, and Hospitality in Ancient India. Oxford University Press, 1996.</li>
+
+<li><i>“Recasting Women: Essays in Colonial History,”</i> Wikipedia. Jul. 02, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Recasting_Women:_Essays_in_Colonial_History&amp;oldid=1031526930">https://en.wikipedia.org/w/index.php?title=Recasting_Women:_Essays_in_Colonial_History&amp;oldid=1031526930</a></li>
+
+<li><i>“The History of Doing,”</i> Wikipedia. Jul. 11, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_History_of_Doing&amp;oldid=1033128325">https://en.wikipedia.org/w/index.php?title=The_History_of_Doing&amp;oldid=1033128325</a></li>
+
+<li>W. Doniger, M. E. D. S. P. of the H. of R. W. Doniger, and W. D. O’Flaherty, Splitting the Difference: Gender and Myth in Ancient Greece and India. University of Chicago Press, 1999.</li>
+
+<li>S. Debnath, “‘There is a great hunger to see ourselves reflected in history, to hear our stories’: Ira Mukhoty,” Scroll.in. <a href="https://scroll.in/article/1020183/there-is-a-great-hunger-to-see-ourselves-reflected-in-history-to-hear-our-stories-ira-mukhoty">https://scroll.in/article/1020183/there-is-a-great-hunger-to-see-ourselves-reflected-in-history-to-hear-our-stories-ira-mukhoty</a> (accessed Apr. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org74ede28"></a>Biographies<br />
+<div class="outline-text-7" id="text-org74ede28">
+<ul class="org-ul">
+<li><b>“Ela Bhatt, Self-Employed Women’s Association,”</b> Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/ela-bhatt-self-employed-womens-association/">https://rightlivelihood.org/the-change-makers/find-a-laureate/ela-bhatt-self-employed-womens-association/</a> (accessed Sep. 18, 2021).</li>
+
+<li>M. Sen, <i>India’s Bandit Queen: The True Story of Phoolan Devi.</i> Harvill, 1991.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6dc21e6"></a>News<br />
+<ul class="org-ul">
+<li><a id="orgc42d8e8"></a>English<br />
+<div class="outline-text-8" id="text-orgc42d8e8">
+<ul class="org-ul">
+<li>“Feminism In India | Intersectional Feminism – Desi Style!” Accessed: Jan. 04, 2024. [Online]. Available: <a href="https://feminisminindia.com/">https://feminisminindia.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4ef8c8d"></a>Hindi<br />
+<div class="outline-text-8" id="text-org4ef8c8d">
+<ul class="org-ul">
+<li>“फेमिनिज़म इन इंडिया | Intersectional Feminism—Desi Style!” Accessed: Jan. 04, 2024. [Online]. Available: <a href="https://hindi.feminisminindia.com/">https://hindi.feminisminindia.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org2e10d21"></a>Geography<br /></li>
+</ol>
+</li>
+<li><a id="org2350047"></a>Publishers<br />
+<div class="outline-text-5" id="text-3-8-7-3">
+<ul class="org-ul">
+<li>“Women Unlimited Homepage.” <a href="https://womenunlimited.in/">https://womenunlimited.in/</a> (accessed Jun. 24, 2023).</li>
+
+<li><i>“Zubaan Books,”</i> Wikipedia. Aug. 09, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Zubaan_Books&amp;oldid=1037859028">https://en.wikipedia.org/w/index.php?title=Zubaan_Books&amp;oldid=1037859028</a></li>
+
+<li><i>“Tulika Books,”</i> Wikipedia. Aug. 19, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tulika_Books&amp;oldid=1039640446">https://en.wikipedia.org/w/index.php?title=Tulika_Books&amp;oldid=1039640446</a></li>
+
+<li><i>“Kali for Women,”</i> Wikipedia. Jun. 20, 2021. Accessed: Oct. 12, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kali_for_Women&amp;oldid=1029594138">https://en.wikipedia.org/w/index.php?title=Kali_for_Women&amp;oldid=1029594138</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdeb06ea"></a>Orgs<br />
+<div class="outline-text-5" id="text-3-8-7-4">
+<ul class="org-ul">
+<li><i>“Feminism In India | Intersectional Feminism – Desi Style!,”</i> Feminism In India. <a href="https://feminisminindia.com/">https://feminisminindia.com/</a> (accessed Aug. 26, 2021).</li>
+
+<li>Gender Advancement for Transforming Institutions, “GATI – Centre for Society and Policy.” <a href="https://csp.iisc.ac.in/gati/">https://csp.iisc.ac.in/gati/</a> (accessed Apr. 12, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org54567cd"></a>World<br />
+<ol class="org-ol">
+<li><a id="orgfb12ae2"></a>Religion<br />
+<ul class="org-ul">
+<li><a id="org4f7ca08"></a>Hinduism<br />
+<ul class="org-ul">
+<li><a id="org3b7bbad"></a>Misc<br />
+<div class="outline-text-8" id="text-org3b7bbad">
+<ul class="org-ul">
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+
+<li>A. Mukul, “How the Gita Press opposed birth control to shore up the Hindu population,” Scroll.in. <a href="http://scroll.in/article/750775/how-the-gita-press-opposed-birth-control-to-shore-up-the-hindu-population">http://scroll.in/article/750775/how-the-gita-press-opposed-birth-control-to-shore-up-the-hindu-population</a> (accessed Feb. 16, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Hiltebeitel, When the Goddess was a Woman: Mah?bh?rata Ethnographies - Essays by Alf Hiltebeitel. BRILL, 2011.</li>
+<li>A. Hiltebeitel, The Cult of Draupadi, Volume 2: On Hindu Ritual and the Goddess. University of Chicago Press, 1988.</li>
+<li>A. Hiltebeitel, The cult of Draupadī: Mythologies : from Gingee to Kurukserta. Motilal Banarsidass Publishe, 1991.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. R. Ambedkar, <i>Against the Madness of Manu: B.R. Ambedkar’s Writings on Brahmanical Patriarchy.</i> Navayana Pub., 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgaa2efc3"></a>Sati<br />
+<div class="outline-text-8" id="text-orgaa2efc3">
+<ul class="org-ul">
+<li>M. Sen, <i>Death by Fire: Sati, Dowry, Death, and Female Infanticide in Modern India.</i> Penguin Books India, 2001.</li>
+
+<li>J. S. Hawley, Ed., Sati, the Blessing and the Curse: The Burning of Wives in India, 1st edition. New York: Oxford University Press, 1994.</li>
+
+<li>V. N. Datta, Sati: A Historical, Social, and Philosophical Enquiry Into the Hindu Rite of Widow Burning. Manohar, 1988.</li>
+
+<li>“Prime Video: Sati.” <a href="https://www.primevideo.com/detail/Sati/0FQOTZ7YXMUU4L12BFIL71NX26">https://www.primevideo.com/detail/Sati/0FQOTZ7YXMUU4L12BFIL71NX26</a> (accessed Apr. 01, 2023).</li>
+<li>“Sati (film),” Wikipedia. Jun. 22, 2022. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sati_(film)&amp;oldid=1094471880">https://en.wikipedia.org/w/index.php?title=Sati_(film)&amp;oldid=1094471880</a></li>
+
+<li>“Prime Video: Devi Ahilyabai.” <a href="https://www.primevideo.com/detail/Devi-Ahilyabai/0QX182JBOW3NX0O9X66NK6UJ9D">https://www.primevideo.com/detail/Devi-Ahilyabai/0QX182JBOW3NX0O9X66NK6UJ9D</a> (accessed Apr. 01, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org881372a"></a>Gita<br />
+<div class="outline-text-8" id="text-org881372a">
+<ul class="org-ul">
+<li>Gita:9.32, “श्रीमद् भगवद्गीता | Gita Supersite.” <a href="https://www.gitasupersite.iitk.ac.in/srimad?language=dv&amp;field_chapter_value=9&amp;field_nsutra_value=32&amp;show_mool=1&amp;etsiva=1&amp;etpurohit=1&amp;etgb=1&amp;setgb=1&amp;etssa=1&amp;etassa=1&amp;etradi=1&amp;etadi=1">https://www.gitasupersite.iitk.ac.in/srimad?language=dv&amp;field_chapter_value=9&amp;field_nsutra_value=32&amp;show_mool=1&amp;etsiva=1&amp;etpurohit=1&amp;etgb=1&amp;setgb=1&amp;etssa=1&amp;etassa=1&amp;etradi=1&amp;etadi=1</a> (accessed May 29, 2023).</li>
+</ul>
+<ul class="org-ul">
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org610e396"></a>Patriarchy<br />
+<div class="outline-text-7" id="text-org610e396">
+<ul class="org-ul">
+<li>M. Mies, Indian Women and Patriarchy. Brill Academic Pub, 1980.</li>
+
+<li>S. Rajasekaran, <i>Smashing The Patriarchy: A Guide For The 21st-Century Indian Woman.</i> Aleph Book Company, 2021.</li>
+
+<li>S. Jaiswal, The Making of Brahmanic Hegemony: Studies in Caste, Gender, and Vaiṣṇava Theology. Tulika Books, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org03cebc7"></a>Dowry<br />
+<div class="outline-text-7" id="text-org03cebc7">
+<ul class="org-ul">
+<li>M. Sen, <i>Death by Fire: Sati, Dowry, Death, and Female Infanticide in Modern India.</i> Penguin Books India, 2001.</li>
+</ul>
+</div>
+</li>
+<li><a id="org872cfca"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org8a8ddb0"></a>SocioPol<br />
+<ul class="org-ul">
+<li><a id="org145feb5"></a>Law<br /></li>
+</ul>
+</li>
+<li><a id="orge11275d"></a>Mgmt, Self Help<br />
+<div class="outline-text-6" id="text-3-8-7-5-3">
+<ul class="org-ul">
+<li>N. Subramanian, Powerful: The Indian Woman’s Guide to Unlocking Her Full Potential. HarperCollins, 2021.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf0da2dc"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="orga3f8f91"></a>Literature<br />
+<ul class="org-ul">
+<li><a id="orgf8bb872"></a>Science Fiction<br />
+<div class="outline-text-7" id="text-orgf8bb872">
+<ul class="org-ul">
+<li>U. K. L. Guin, The Left Hand Of Darkness. Gollancz, 2017.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+
+<li><a id="orged17195"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org539a499"></a>Widow<br />
+<div class="outline-text-6" id="text-3-8-7-7-1">
+<ul class="org-ul">
+<li>M. A. Chen, Perpetual Mourning: Widowhood in Rural India. Oxford University Press, 2000.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcc7480e"></a>Female Infanticide<br />
+<div class="outline-text-6" id="text-3-8-7-7-2">
+<ul class="org-ul">
+<li>Kajarya, (Dec. 04, 2015).</li>
+<li>“Female infanticide in India,” Wikipedia. Apr. 30, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Female_infanticide_in_India&amp;oldid=1152420227">https://en.wikipedia.org/w/index.php?title=Female_infanticide_in_India&amp;oldid=1152420227</a></li>
+<li>“Kajarya,” Wikipedia. Apr. 08, 2023. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kajarya&amp;oldid=1148876539">https://en.wikipedia.org/w/index.php?title=Kajarya&amp;oldid=1148876539</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8473e13"></a>Global South<br />
+<div class="outline-text-6" id="text-3-8-7-7-3">
+<ul class="org-ul">
+<li>J. Ghosh, Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies. Routledge, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4441826"></a>Economy<br />
+<div class="outline-text-6" id="text-3-8-7-7-4">
+<ul class="org-ul">
+<li>J. Ghosh, Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies. Routledge, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4c0894f"></a>Kashmir<br />
+<div class="outline-text-6" id="text-3-8-7-7-5">
+<ul class="org-ul">
+<li>E. Batool, I. Butt, S. Mushtaq, M. Rashid, and N. Rather, <i>Do You Remember Kunan Poshpora?</i> Zubaan, 2016.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc6c9ca0"></a>Misc<br />
+<div class="outline-text-5" id="text-3-8-7-8">
+<ul class="org-ul">
+<li>C. W. P. Cooperative and G. LeMaistre, Porn for Women of a Certain Age. Chronicle Books LLC, 2010.</li>
+<li>C. W. P. Cooperative and G. LeMaistre, Porn for the Working Woman. Chronicle Books LLC, 2013.</li>
+<li>C. W. P. Cooperativ and S. Anderson, Porn for Women: San Francisco: Chronicle Books, 2007.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Friedan, Feminine Mystique. London: Penguin Classics, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Cult Of The Femcel | Feminism in India.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://feminisminindia.com/2023/10/03/the-cult-of-the-femcel-inside-the-nooks-and-corners-of-the-femcel-revolution/">https://feminisminindia.com/2023/10/03/the-cult-of-the-femcel-inside-the-nooks-and-corners-of-the-femcel-revolution/</a></li>
+
+<li>M. Chaudhuri, Ed., <i>Feminism in India.</i> London: Zed Books Ltd, 2005.</li>
+
+<li>N. Menon, <i>Seeing Like a Feminist, Latest edition.</i> New Delhi: Penguin India, 2012.</li>
+
+<li>K. Krishnan, <i>Fearless Freedom.</i> Gurgaon, Haryana, India: Penguin, 2020.</li>
+
+<li>A. Loomba, <i>Revolutionary Desires: Women, Communism, and Feminism in India.</i> Routledge, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org50f5c6a" class="outline-3">
+<h3 id="org50f5c6a"><span class="section-number-3">3.9.</span> Miscellaneous</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>A. Kothari, “Mohandas Gandhi speaks to Abdullah Öcalan,” Meer. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan">https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan</a></li>
+<li>A. Salleh, Eco-Sufficiency and Global Justice: Women Write Political Ecology. Pluto Press, 2009.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. D. O’Flaherty, Women, Androgynes, and Other Mythical Beasts. University of Chicago Press, 1982.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. T. Mohanty, Feminism Without Borders: Decolonizing Theory, Practicing Solidarity. Zubaan, 2005.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. Harcourt, Body Politics in Development: Critical Debates in Gender and Development. Zed Books Ltd., 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>ʼAtu Emberson-Bain, Sustainable Development Or Malignant Growth?: Perspectives of Pacific Island Women. Marama Publications, 1994.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Federici, Re-enchanting the World: Feminism and the Politics of the Commons. PM Press, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Federici, Revolution at Point Zero: Housework, Reproduction, and Feminist Struggle. PM Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hayden, The Grand Domestic Revolution: A History of Feminist Designs For American Homes, Neighborhoods, and Cities. MIT Press, 1982.</li>
+
+<li><i>“Feminists never bought the idea of a mind set free from its body – Sally Davies | Aeon Essays,”</i> Aeon. <a href="https://aeon.co/essays/feminists-never-bought-the-idea-of-a-mind-set-free-from-its-body">https://aeon.co/essays/feminists-never-bought-the-idea-of-a-mind-set-free-from-its-body</a> (accessed Jan. 01, 2021).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ff53fa" class="outline-3">
+<h3 id="org3ff53fa"><span class="section-number-3">3.10.</span> Notes</h3>
+</div>
+<div id="outline-container-orgf5c9855" class="outline-3">
+<h3 id="orgf5c9855"><span class="section-number-3">3.11.</span> Projects</h3>
+</div>
+</div>
+<div id="outline-container-orgbad5b08" class="outline-2">
+<h2 id="orgbad5b08"><span class="section-number-2">4.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>C. Martin and C. Hay, The Philosophy of Love and Sex. New York, NY, United States of America: OUP USA, 2023.</li>
+<li>P. Marino, Philosophy of Sex and Love: An Opinionated Introduction, 1st edition. New York: Routledge, 2019.</li>
+<li>R. Halwani, Philosophy of Love, Sex, and Marriage: An Introduction, 2nd edition. Routledge, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ceb8f5" class="outline-2">
+<h2 id="org9ceb8f5"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Love is both wonderful and a dangerous evolutionary trick | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/love-is-both-wonderful-and-a-dangerous-evolutionary-trick">https://aeon.co/essays/love-is-both-wonderful-and-a-dangerous-evolutionary-trick</a> (accessed Apr. 29, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Yogyakarta Principles – Principles on the application of international human rights law in relation to sexual orientation and gender identity. 2007. Accessed: Feb. 14, 2023. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/the-yogyakarta-principles---principles-on-the-application-of-international-human-rights-law-in-relation-to-sexual-orientation-and-gender-identity/">https://ruralindiaonline.org/en/library/resource/the-yogyakarta-principles---principles-on-the-application-of-international-human-rights-law-in-relation-to-sexual-orientation-and-gender-identity/</a></li>
+<li>The Yogyakarta Principles plus 10 – Additional principles and state obligations on the application of international human rights law in relation to sexual orientation, gender identity, gender expression and sex characteristics to complement the Yogyakarta. 2017. Accessed: Feb. 14, 2023. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/the-yogyakarta-principles-plus-10---additional-principles-and-state-obligations-on-the-application-of-international-human-rights-law-in-relation-to-sexual-orientation-gender-identity-gender-expression-and-sex-characteristics-to-complement-the-yogyakarta/">https://ruralindiaonline.org/en/library/resource/the-yogyakarta-principles-plus-10---additional-principles-and-state-obligations-on-the-application-of-international-human-rights-law-in-relation-to-sexual-orientation-gender-identity-gender-expression-and-sex-characteristics-to-complement-the-yogyakarta/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-01-18 Thu 11:33</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
