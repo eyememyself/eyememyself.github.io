@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-29 Mon 12:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>News: English</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">News: English</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb477f2e">1. Big Picture</a>
+<ul>
+<li><a href="#org4d6bc2d">1.1. Systems Sciences</a>
+<ul>
+<li><a href="#org8a9c6de">1.1.1. International Institute for Applied Systems Analysis</a></li>
+</ul>
+</li>
+<li><a href="#orgb73b49b">1.2. Complexity Science</a>
+<ul>
+<li><a href="#org135ff08">1.2.1. New England Complex Systems Institute</a></li>
+<li><a href="#org6537308">1.2.2. Santa Fe Institute</a></li>
+<li><a href="#orgf8119fa">1.2.3. Complexity Science Hub Vienna</a></li>
+</ul>
+</li>
+<li><a href="#orgc738390">1.3. Network Science</a></li>
+<li><a href="#org9ddd36f">1.4. NKS</a></li>
+<li><a href="#org63f4a7b">1.5. Institute for Advanced Study</a></li>
+<li><a href="#orgf1c0791">1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcfe933a">2. STEMM</a>
+<ul>
+<li><a href="#org8523779">2.1. Mathematics</a></li>
+<li><a href="#org42eccfe">2.2. Physics</a></li>
+<li><a href="#orge5ec785">2.3. Chemistry</a></li>
+<li><a href="#orgc41607c">2.4. Computer Science and Engineering</a></li>
+<li><a href="#org5057b3d">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd970cda">3. World</a>
+<ul>
+<li><a href="#org32dd568">3.1. 41</a>
+<ul>
+<li><a href="#org26cadf0">3.1.1. India</a></li>
+<li><a href="#orgae5d10d">3.1.2. Global</a></li>
+</ul>
+</li>
+<li><a href="#orgf623336">3.2. 42</a></li>
+<li><a href="#orgf3ea6b7">3.3. 43</a>
+<ul>
+<li><a href="#org0ecf944">3.3.1. Feminism</a></li>
+<li><a href="#org8c03072">3.3.2. Journalism</a></li>
+<li><a href="#org998d970">3.3.3. MainStream Media</a></li>
+<li><a href="#org97b6048">3.3.4. Alternative Media</a></li>
+<li><a href="#orgcf269f8">3.3.5. Politics: Left</a></li>
+<li><a href="#org58a5135">3.3.6. Law: Human Rights</a></li>
+<li><a href="#org55982ba">3.3.7. Law</a></li>
+</ul>
+</li>
+<li><a href="#orgdfa1f3c">3.4. 44</a></li>
+</ul>
+</li>
+<li><a href="#orgba3e09f">4. Arts</a></li>
+<li><a href="#org0b7b15f">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgb477f2e" class="outline-2">
+<h2 id="orgb477f2e"><span class="section-number-2">1.</span> Big Picture</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4d6bc2d" class="outline-3">
+<h3 id="org4d6bc2d"><span class="section-number-3">1.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org8a9c6de" class="outline-4">
+<h4 id="org8a9c6de"><span class="section-number-4">1.1.1.</span> International Institute for Applied Systems Analysis</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>“Blog,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog">https://iiasa.ac.at/blog</a></li>
+<li>“Press releases,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/media/press-releases">https://iiasa.ac.at/media/press-releases</a></li>
+<li>“News,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news">https://iiasa.ac.at/news</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb73b49b" class="outline-3">
+<h3 id="orgb73b49b"><span class="section-number-3">1.2.</span> Complexity Science</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org135ff08" class="outline-4">
+<h4 id="org135ff08"><span class="section-number-4">1.2.1.</span> New England Complex Systems Institute</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>“Engage,” New England Complex Systems Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://necsi.edu/engage">https://necsi.edu/engage</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6537308" class="outline-4">
+<h4 id="org6537308"><span class="section-number-4">1.2.2.</span> Santa Fe Institute</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>“Newsletters | Santa Fe Institute.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/publications">https://www.santafe.edu/news-center/publications</a></li>
+<li>“News | Santa Fe Institute.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news">https://www.santafe.edu/news-center/news</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8119fa" class="outline-4">
+<h4 id="orgf8119fa"><span class="section-number-4">1.2.3.</span> Complexity Science Hub Vienna</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>“PRESS,” CSH. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.csh.ac.at/press/">https://www.csh.ac.at/press/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc738390" class="outline-3">
+<h3 id="orgc738390"><span class="section-number-3">1.3.</span> Network Science</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>“News | Network Science Institute at Northeastern University.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.networkscienceinstitute.org/news">https://www.networkscienceinstitute.org/news</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ddd36f" class="outline-3">
+<h3 id="org9ddd36f"><span class="section-number-3">1.4.</span> NKS</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>“Stephen Wolfram Writings.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://writings.stephenwolfram.com/">https://writings.stephenwolfram.com/</a></li>
+<li>“Wolfram Blog: News, Views and Insights from Wolfram.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://blog.wolfram.com/">https://blog.wolfram.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org63f4a7b" class="outline-3">
+<h3 id="org63f4a7b"><span class="section-number-3">1.5.</span> Institute for Advanced Study</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>“News | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news">https://www.ias.edu/news</a></li>
+
+<li>“Opinion | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news/opinion">https://www.ias.edu/news/opinion</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Press Clips | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news/press-clips">https://www.ias.edu/news/press-clips</a></li>
+<li>“Press Center | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/press">https://www.ias.edu/press</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf1c0791" class="outline-3">
+<h3 id="orgf1c0791"><span class="section-number-3">1.6.</span> Misc</h3>
+</div>
+</div>
+
+<div id="outline-container-orgcfe933a" class="outline-2">
+<h2 id="orgcfe933a"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8523779" class="outline-3">
+<h3 id="org8523779"><span class="section-number-3">2.1.</span> Mathematics</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“News and Announcements,” Fields Institute for Research in Mathematical Sciences. Accessed: Jan. 29, 2024. [Online]. Available: <a href="http://www.fields.utoronto.ca/news/news-and-announcements">http://www.fields.utoronto.ca/news/news-and-announcements</a></li>
+<li>“News Archive,” Clay Mathematics Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.claymath.org/news/">https://www.claymath.org/news/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org42eccfe" class="outline-3">
+<h3 id="org42eccfe"><span class="section-number-3">2.2.</span> Physics</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“IOPscience.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iopscience.iop.org/">https://iopscience.iop.org/</a></li>
+
+<li>“Home,” Physics World. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://physicsworld.com/">https://physicsworld.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge5ec785" class="outline-3">
+<h3 id="orge5ec785"><span class="section-number-3">2.3.</span> Chemistry</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Chemistry news, research and opinions,” Chemistry World. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.chemistryworld.com">https://www.chemistryworld.com</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc41607c" class="outline-3">
+<h3 id="orgc41607c"><span class="section-number-3">2.4.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>“FSF News — Free Software Foundation — Working together for free software.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.fsf.org/news">https://www.fsf.org/news</a></li>
+<li>“Electronic Frontier Foundation,” Electronic Frontier Foundation. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.eff.org/">https://www.eff.org/</a></li>
+<li>“Home,” AI Now Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://ainowinstitute.org/">https://ainowinstitute.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“MediaNama - Digital India Internet Mobile Policy News,” MediaNama. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.medianama.com/">https://www.medianama.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5057b3d" class="outline-3">
+<h3 id="org5057b3d"><span class="section-number-3">2.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“London Mathematical Laboratory.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://lml.org.uk/blog/">https://lml.org.uk/blog/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Union of Concerned Scientists.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ucsusa.org/">https://www.ucsusa.org/</a></li>
+
+<li>“Bulletin of the Atomic Scientists,” Bulletin of the Atomic Scientists. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thebulletin.org/">https://thebulletin.org/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd970cda" class="outline-2">
+<h2 id="orgd970cda"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org32dd568" class="outline-3">
+<h3 id="org32dd568"><span class="section-number-3">3.1.</span> 41</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org26cadf0" class="outline-4">
+<h4 id="org26cadf0"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgadd9670"></a>Down To Earth<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>“Down To Earth | Latest news, opinion, analysis on environment &amp; science issues | India, South Asia.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/">https://www.downtoearth.org.in/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgda7a372"></a>Mongabay India<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>“Mongabay-India,” Mongabay-India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://india.mongabay.com/">https://india.mongabay.com/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgae5d10d" class="outline-4">
+<h4 id="orgae5d10d"><span class="section-number-4">3.1.2.</span> Global</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgefd2e19"></a>Regeneration International<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<ul class="org-ul">
+<li>“News,” Regeneration International. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://regenerationinternational.org/blog/">https://regenerationinternational.org/blog/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3b796e7"></a>Navdanya International<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<ul class="org-ul">
+<li>“News,” Navdanya international. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://navdanyainternational.org/seasons-greetings-and-a-happy-new-year/">https://navdanyainternational.org/seasons-greetings-and-a-happy-new-year/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd41af06"></a>Mongabay<br />
+<div class="outline-text-5" id="text-3-1-2-3">
+<ul class="org-ul">
+<li>“Conservation news - Environmental science and conservation news.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/">https://news.mongabay.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org185cdae"></a>Extinction Rebellion<br />
+<div class="outline-text-5" id="text-3-1-2-4">
+<ul class="org-ul">
+<li>“Ecological &amp; Climate Change News,” Extinction Rebellion. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://rebellion.global/news/">https://rebellion.global/news/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9b20dfa"></a>Friends Of the Earth International<br />
+<div class="outline-text-5" id="text-3-1-2-5">
+<ul class="org-ul">
+<li>“Friends of the Earth International Podcasts.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-podcasts/">https://www.foei.org/friends-of-the-earth-international-podcasts/</a></li>
+<li>“Friends of the Earth International’s Annual reports.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-internationals-annual-reports/">https://www.foei.org/friends-of-the-earth-internationals-annual-reports/</a></li>
+<li>“Friends of the Earth International videos.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-videos/">https://www.foei.org/friends-of-the-earth-international-videos/</a></li>
+<li>“Friends of the Earth International publications.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-publications/">https://www.foei.org/friends-of-the-earth-international-publications/</a></li>
+<li>“Friends of the Earth International Press.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-press/">https://www.foei.org/friends-of-the-earth-international-press/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3e706a6"></a>Friends Of the Earth<br />
+<div class="outline-text-5" id="text-3-1-2-6">
+<ul class="org-ul">
+<li>“Impact Stories Archive,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/impact-stories/">https://foe.org/impact-stories/</a></li>
+<li>“Blog,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/blog/">https://foe.org/blog/</a></li>
+<li>“News Archive,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/news/">https://foe.org/news/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org99f5f64"></a>Fridays For Future<br />
+<div class="outline-text-5" id="text-3-1-2-7">
+<ul class="org-ul">
+<li>“Fridays For Future – Our Social Media from all over the world,” Fridays For Future. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://fridaysforfuture.org/take-action/social-media/">https://fridaysforfuture.org/take-action/social-media/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd75e213"></a>The Ecologist<br />
+<div class="outline-text-5" id="text-3-1-2-8">
+<ul class="org-ul">
+<li>“Home | The Ecologist.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://theecologist.org/">https://theecologist.org/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf623336" class="outline-3">
+<h3 id="orgf623336"><span class="section-number-3">3.2.</span> 42</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org47c630d"></a>Mind &amp; Life Institute<br />
+<div class="outline-text-5" id="text-3-2-0-1">
+<ul class="org-ul">
+<li>“What We Do,” Mind &amp; Life Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.mindandlife.org/">https://www.mindandlife.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge4a6cf7"></a>Devdutt Pattnaik<br />
+<div class="outline-text-5" id="text-3-2-0-2">
+<ul class="org-ul">
+<li>“Post Archives,” Devdutt Pattanaik. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://devdutt.com/post-archive/">https://devdutt.com/post-archive/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5bff385"></a>Sri Aurobindo<br />
+<div class="outline-text-5" id="text-3-2-0-3">
+<ul class="org-ul">
+<li>“SABDA Newsletter.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.sabda.in/catalog/show.php?id=newsletter">https://www.sabda.in/catalog/show.php?id=newsletter</a></li>
+<li>“Sri Aurobindo Ashram — Journals.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.sriaurobindoashram.org/journals/">https://www.sriaurobindoashram.org/journals/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc3a527a"></a>Vrindavan<br />
+<div class="outline-text-5" id="text-3-2-0-4">
+<ul class="org-ul">
+<li>“Vrindavan Today,” Vrindavan Today. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://vrindavantoday.in/">https://vrindavantoday.in/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf3ea6b7" class="outline-3">
+<h3 id="orgf3ea6b7"><span class="section-number-3">3.3.</span> 43</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org0ecf944" class="outline-4">
+<h4 id="org0ecf944"><span class="section-number-4">3.3.1.</span> Feminism</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>F. I. I. Team, “Feminism In India Homepage,” Feminism in India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://feminisminindia.com/">https://feminisminindia.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c03072" class="outline-4">
+<h4 id="org8c03072"><span class="section-number-4">3.3.2.</span> Journalism</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>“Investigative Journalism and News in the Public Interest,” ProPublica. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.propublica.org/">https://www.propublica.org/</a></li>
+<li>“Homepage,” The Intercept. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://theintercept.com/">https://theintercept.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Freedom of the Press Foundation,” Freedom of the Press. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://freedom.press/">https://freedom.press/</a></li>
+<li>“GIJN.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://gijn.org/">https://gijn.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Asia Archives,” Committee to Protect Journalists. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://cpj.org/asia/">https://cpj.org/asia/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org998d970" class="outline-4">
+<h4 id="org998d970"><span class="section-number-4">3.3.3.</span> MainStream Media</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>“India’s National Fortnightly Magazine,” Frontline. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/">https://frontline.thehindu.com/</a></li>
+<li>“Breaking News Today, Top Headlines, Live Updates,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/">https://www.thehindu.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bengaluru News, Today’s Bangalore News on Politics, Entertainment and Events,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/">https://www.thehindu.com/news/cities/bangalore/</a></li>
+<li>“Puducherry - Latest News, Politics, Events, Entertainment,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/puducherry/">https://www.thehindu.com/news/cities/puducherry/</a></li>
+<li>“Delhi Latest News: Today’s Edition on Delhi Politics, Events &amp; Entertainment,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/">https://www.thehindu.com/news/cities/Delhi/</a></li>
+<li>“Gurugram News, Latest Gurugram News, Gurugram News Today and Headlines,” Hindustan Times. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/cities/gurugram-news">https://www.hindustantimes.com/cities/gurugram-news</a></li>
+<li>“Gurgaon News, Latest Gurgaon News Headlines &amp; Live Updates - Times of India,” The Times of India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/gurgaon">https://timesofindia.indiatimes.com/city/gurgaon</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org97b6048" class="outline-4">
+<h4 id="org97b6048"><span class="section-number-4">3.3.4.</span> Alternative Media</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>“The Caravan.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://caravanmagazine.in">https://caravanmagazine.in</a></li>
+<li>“The India Forum,” The India Forum. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/">https://www.theindiaforum.in/</a></li>
+
+<li>“Welcome to Newslaundry. Sabki dhulai. You watch. We’re watching.,” Newslaundry. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.newslaundry.com/">https://www.newslaundry.com/</a></li>
+<li>“The Wire: The Wire News India, Latest News,News from India, Politics, External Affairs, Science, Economics, Gender and Culture,” The Wire. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thewire.in/">https://thewire.in/</a></li>
+<li>“The Reporters’ Collective | Home.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/">https://www.reporters-collective.in/</a></li>
+<li>“Scroll.in - Latest News, In depth news, India news, Politics news, Indian Cinema, Indian sports, Culture, Video News,” Scroll.in. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://scroll.in">https://scroll.in</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcf269f8" class="outline-4">
+<h4 id="orgcf269f8"><span class="section-number-4">3.3.5.</span> Politics: Left</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<ul class="org-ul">
+<li>“World Socialist Web Site - Marxist analysis, international working class struggles &amp; the fight for socialism,” World Socialist Web Site. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.wsws.org/en">https://www.wsws.org/en</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Democracy Now!,” Democracy Now! Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.democracynow.org/">https://www.democracynow.org/</a></li>
+
+<li>“Homepage,” Economic and Political Weekly. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.epw.in/">https://www.epw.in/</a></li>
+<li>“Show Me The Words That Will Reorder the World, Or Else Keep Silent: The Ninth Newsletter (2020).,” Tricontinental: Institute for Social Research. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thetricontinental.org/">https://thetricontinental.org/</a></li>
+
+<li>“RLS Southasia - RLS Southasia.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.rosalux.in/resources.html">https://www.rosalux.in/resources.html</a></li>
+
+<li>“India,” World Socialist Web Site. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.wsws.org/en/topics/country/as-ind">https://www.wsws.org/en/topics/country/as-ind</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org58a5135" class="outline-4">
+<h4 id="org58a5135"><span class="section-number-4">3.3.6.</span> Law: Human Rights</h4>
+<div class="outline-text-4" id="text-3-3-6">
+<ul class="org-ul">
+<li>“Human rights in India,” Amnesty International. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/india/">https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/india/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org55982ba" class="outline-4">
+<h4 id="org55982ba"><span class="section-number-4">3.3.7.</span> Law</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<ul class="org-ul">
+<li>“Article 14.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.article-14.com/">https://www.article-14.com/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdfa1f3c" class="outline-3">
+<h3 id="orgdfa1f3c"><span class="section-number-3">3.4.</span> 44</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>“Latest News,” INET Oxford. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.inet.ox.ac.uk/news/">https://www.inet.ox.ac.uk/news/</a></li>
+<li>“B The Change,” B The Change. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://bthechange.com/">https://bthechange.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home,” Centre for Financial Accountability. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cenfa.org/">https://www.cenfa.org/</a></li>
+<li>“Homepage,” Economic and Political Weekly. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.epw.in/">https://www.epw.in/</a></li>
+<li>“Outlook Money – India’s number one personal finance magazine,” <a href="https://www.outlookmoney.com/">https://www.outlookmoney.com/</a>. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.outlookmoney.com/">https://www.outlookmoney.com/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba3e09f" class="outline-2">
+<h2 id="orgba3e09f"><span class="section-number-2">4.</span> Arts</h2>
+</div>
+<div id="outline-container-org0b7b15f" class="outline-2">
+<h2 id="org0b7b15f"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-01-29 Mon 12:49</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
