@@ -1,0 +1,9 @@
+#+SETUPFILE: "../design/webpage-export-options.org"
+#+TITLE: Hinduism
+#+OPTIONS: toc:5 num:5
+
+#+INCLUDE: "../design/webpage-header.org"
+
+#+INCLUDE: "~/Documents/me/ourveryownorg/webpages/core/world/god/hindu.org"
+
+#+INCLUDE: "../design/webpage-footer.org"
