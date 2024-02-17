@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-02-17 Sat 12:08 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GMOs</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">GMOs</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1c35117">1. General</a></li>
+<li><a href="#org4631cbe">2. Systems Sciences</a>
+<ul>
+<li><a href="#orga9cc48d">2.1. Complexity Science</a></li>
+</ul>
+</li>
+<li><a href="#org7296988">3. Orgs</a>
+<ul>
+<li><a href="#org0b60664">3.1. IFOAM</a></li>
+<li><a href="#orgb2ad94b">3.2. NoGMOProject</a></li>
+<li><a href="#org6f211d6">3.3. GMWatch</a></li>
+<li><a href="#org3d8cc38">3.4. Navdanya International</a></li>
+<li><a href="#orge40f418">3.5. Regeneration International</a></li>
+<li><a href="#org9ef3c3f">3.6. Organic Consumers Association</a></li>
+<li><a href="#org28dee0b">3.7. US Right To Know</a></li>
+<li><a href="#org29c1e86">3.8. GreenPeace</a></li>
+<li><a href="#org522b159">3.9. Friends of the Earth</a></li>
+<li><a href="#org61d3555">3.10. Union Of Concerned Scientists</a></li>
+</ul>
+</li>
+<li><a href="#orged293ba">4. Special Topics</a>
+<ul>
+<li><a href="#org8ef34a8">4.1. GM Mustard</a></li>
+</ul>
+</li>
+<li><a href="#org23594c1">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org1c35117" class="outline-2">
+<h2 id="org1c35117"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Genetically modified organism,” Wikipedia. Feb. 14, 2024. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Genetically_modified_organism&amp;oldid=1207342240">https://en.wikipedia.org/w/index.php?title=Genetically_modified_organism&amp;oldid=1207342240</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4631cbe" class="outline-2">
+<h2 id="org4631cbe"><span class="section-number-2">2.</span> Systems Sciences</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga9cc48d" class="outline-3">
+<h3 id="orga9cc48d"><span class="section-number-3">2.1.</span> Complexity Science</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>N. N. Taleb, R. Read, R. Douady, J. Norman, and Y. Bar-Yam, <b>“The Precautionary Principle (with Application to the Genetic Modification of Organisms),”</b> arXiv:1410.5787 [physics, q-fin], Oct. 2014, Accessed: Jul. 20, 2019. [Online]. Available: <a href="http://arxiv.org/abs/1410.5787">http://arxiv.org/abs/1410.5787</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7296988" class="outline-2">
+<h2 id="org7296988"><span class="section-number-2">3.</span> Orgs</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org0b60664" class="outline-3">
+<h3 id="org0b60664"><span class="section-number-3">3.1.</span> IFOAM</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“New GMOs – Key resources. A living article to keep you updated,” IFOAM Organics Europe. Accessed: Feb. 07, 2024. [Online]. Available: <a href="https://www.organicseurope.bio/news/new-gmos-key-resources/">https://www.organicseurope.bio/news/new-gmos-key-resources/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“European organic movement resolution: No hidden GMOs,” IFOAM Organics Europe. <a href="https://www.organicseurope.bio/news/european-organic-movement-resolution-no-hidden-gmos-system-based-approach-to-innovation/">https://www.organicseurope.bio/news/european-organic-movement-resolution-no-hidden-gmos-system-based-approach-to-innovation/</a> (accessed Jun. 23, 2023).</li>
+<li>“NGT vote a step backward for biosafety,” IFOAM Organics Europe. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.organicseurope.bio/news/ngt-vote-a-step-backward-for-biosafety-that-nonetheless-safeguards-the-possibility-for-traceability-and-national-coexistence-measures/">https://www.organicseurope.bio/news/ngt-vote-a-step-backward-for-biosafety-that-nonetheless-safeguards-the-possibility-for-traceability-and-national-coexistence-measures/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb2ad94b" class="outline-3">
+<h3 id="orgb2ad94b"><span class="section-number-3">3.2.</span> NoGMOProject</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li><b>“New GMO Alert: Gene-edited Microbes Introduce a New Twist in GMO Agriculture - The Non-GMO Project,”</b> Mar. 16, 2023. <a href="https://www.nongmoproject.org/blog/new-gmo-alert-gene-edited-microbes-introduce-a-new-twist-in-gmo-agriculture/">https://www.nongmoproject.org/blog/new-gmo-alert-gene-edited-microbes-introduce-a-new-twist-in-gmo-agriculture/</a> (accessed Apr. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6f211d6" class="outline-3">
+<h3 id="org6f211d6"><span class="section-number-3">3.3.</span> GMWatch</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“GMWatch Home.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://gmwatch.org/en/">https://gmwatch.org/en/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>GMWatch, <b>“Gene editing myths and reality – a guide through the smokescreen.”</b> <a href="https://gmwatch.org/en/67-uncategorised/19751-gene-editing-myths-and-reality-a-guide-through-the-smokescreen">https://gmwatch.org/en/67-uncategorised/19751-gene-editing-myths-and-reality-a-guide-through-the-smokescreen</a> (accessed Feb. 10, 2022).</li>
+
+<li>Editor2, “Bayer, BASF lobby pushed to scrap safety rules on new GM crops – even if they increase pesticide use.” Accessed: Feb. 05, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20341-bayer-basf-lobby-pushed-to-scrap-safety-rules-on-new-gm-crops-even-if-they-increase-pesticide-use">https://www.gmwatch.org/en/106-news/latest-news/20341-bayer-basf-lobby-pushed-to-scrap-safety-rules-on-new-gm-crops-even-if-they-increase-pesticide-use</a></li>
+<li>Editor2, “CRISPR causes serious DNA damage with high frequency – but it’s often overlooked,” Aug. 09, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies">https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies</a> (accessed Aug. 12, 2023).</li>
+<li>Editor2, “Gene editing is not ‘precision breeding’ – international scientists and policy experts,” Sep. 08, 2022. <a href="https://www.gmwatch.org/en/106-news/latest-news/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts">https://www.gmwatch.org/en/106-news/latest-news/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts</a> (accessed Aug. 11, 2023).</li>
+<li>Editor2, “GMO-using fake meat company Impossible Foods’ EU patent revoked,” Feb. 01, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20169-gmo-using-fake-meat-company-impossible-foods-eu-patent-revoked">https://gmwatch.org/en/106-news/latest-news/20169-gmo-using-fake-meat-company-impossible-foods-eu-patent-revoked</a> (accessed Feb. 05, 2023).</li>
+<li>Editor2, “Scientists genetically engineer mother hens to kill their own male chicks before they hatch,” May 25, 2022. <a href="https://gmwatch.org/en/106-news/latest-news/20034-scientists-genetically-engineer-mother-hens-to-kill-their-own-male-chicks-before-they-hatch">https://gmwatch.org/en/106-news/latest-news/20034-scientists-genetically-engineer-mother-hens-to-kill-their-own-male-chicks-before-they-hatch</a> (accessed Feb. 16, 2023).</li>
+<li>Editor, “Leaked proposal to deregulate new GMOs – Commission plan gives in to GMO seed corporations,” Jun. 16, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20237-leaked-proposal-to-deregulate-new-gmos-commission-plan-gives-in-to-gmo-seed-corporations">https://gmwatch.org/en/106-news/latest-news/20237-leaked-proposal-to-deregulate-new-gmos-commission-plan-gives-in-to-gmo-seed-corporations</a> (accessed Jun. 18, 2023).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3d8cc38" class="outline-3">
+<h3 id="org3d8cc38"><span class="section-number-3">3.4.</span> Navdanya International</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>“New GMOs must not be deregulated,” Navdanya international, Apr. 02, 2022. <a href="https://navdanyainternational.org/cause/new-gmos-must-not-be-deregulated/">https://navdanyainternational.org/cause/new-gmos-must-not-be-deregulated/</a> (accessed Jul. 10, 2023).</li>
+<li>“NOTHING NEW IN NEW GMOS: A new report by Navdanya International exposes the corporate interest behind the gene editing business,” Navdanya international, Aug. 07, 2023. <a href="https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/">https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/</a> (accessed Aug. 08, 2023).</li>
+<li>“Nothing New in New GMOs – Gateway to Total Corporate Control,” Navdanya international, Aug. 07, 2023. <a href="https://navdanyainternational.org/publications/nothing-new-in-new-gmos/">https://navdanyainternational.org/publications/nothing-new-in-new-gmos/</a> (accessed Aug. 08, 2023).</li>
+<li>“Green light for new gene editing techniques: threats and corporate interests behind new wave of GMOs,” Navdanya international, Jul. 08, 2023. <a href="https://navdanyainternational.org/threats-and-corporate-interests-behind-new-wave-of-gmos/">https://navdanyainternational.org/threats-and-corporate-interests-behind-new-wave-of-gmos/</a> (accessed Aug. 16, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge40f418" class="outline-3">
+<h3 id="orge40f418"><span class="section-number-3">3.5.</span> Regeneration International</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>“The Science-based Evidence to Ban Glyphosate and GMOs - Regeneration International.” <a href="https://regenerationinternational.org/2023/02/19/the-science-based-evidence-to-ban-glyphosate-and-gmos/">https://regenerationinternational.org/2023/02/19/the-science-based-evidence-to-ban-glyphosate-and-gmos/</a> (accessed Mar. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ef3c3f" class="outline-3">
+<h3 id="org9ef3c3f"><span class="section-number-3">3.6.</span> Organic Consumers Association</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>oca<sub>admin</sub>, “Home,” Organic Consumers. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://organicconsumers.org/">https://organicconsumers.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28dee0b" class="outline-3">
+<h3 id="org28dee0b"><span class="section-number-3">3.7.</span> US Right To Know</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li>“GMOs Archives,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/gmo/">https://usrtk.org/category/gmo/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29c1e86" class="outline-3">
+<h3 id="org29c1e86"><span class="section-number-3">3.8.</span> GreenPeace</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>“New GMOs: danger ahead,” Greenpeace European Unit. <a href="https://www.greenpeace.org/eu-unit/issues/nature-food/45559/new-gmos-danger-ahead/">https://www.greenpeace.org/eu-unit/issues/nature-food/45559/new-gmos-danger-ahead/</a> (accessed Aug. 17, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org522b159" class="outline-3">
+<h3 id="org522b159"><span class="section-number-3">3.9.</span> Friends of the Earth</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>“New GMOs: how big business gets control over our food,” Friends of the Earth Europe. <a href="https://friendsoftheearth.eu/publication/new-gmos-how-big-business-gets-control-over-our-food/">https://friendsoftheearth.eu/publication/new-gmos-how-big-business-gets-control-over-our-food/</a> (accessed Aug. 17, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61d3555" class="outline-3">
+<h3 id="org61d3555"><span class="section-number-3">3.10.</span> Union Of Concerned Scientists</h3>
+<div class="outline-text-3" id="text-3-10">
+<ul class="org-ul">
+<li>“Everything the 2023 Food and Farm Bill Can—and Should—Do,” The Equation, Aug. 15, 2023. <a href="https://blog.ucsusa.org/melissa-kaplan/everything-the-2023-food-and-farm-bill-can-and-should-do/">https://blog.ucsusa.org/melissa-kaplan/everything-the-2023-food-and-farm-bill-can-and-should-do/</a> (accessed Aug. 18, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orged293ba" class="outline-2">
+<h2 id="orged293ba"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8ef34a8" class="outline-3">
+<h3 id="org8ef34a8"><span class="section-number-3">4.1.</span> GM Mustard</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Union Government Grants Environmental Clearance to Genetically Modified Mustard,” The Wire. <a href="https://thewire.in/agriculture/union-government-grants-environmental-clearance-to-genetically-modified-mustard">https://thewire.in/agriculture/union-government-grants-environmental-clearance-to-genetically-modified-mustard</a> (accessed Nov. 01, 2022).</li>
+
+<li>“Biotech regulator approves GM mustard, now Centre to take a call.” <a href="https://www.downtoearth.org.in/news/agriculture/biotech-regulator-approves-gm-mustard-now-centre-to-take-a-call-85630">https://www.downtoearth.org.in/news/agriculture/biotech-regulator-approves-gm-mustard-now-centre-to-take-a-call-85630</a> (accessed Nov. 01, 2022).</li>
+
+<li>“After Dave, what does future hold for GM Mustard?” <a href="https://www.downtoearth.org.in/news/agriculture/after-dave-what-does-future-hold-for-gm-mustard--57890">https://www.downtoearth.org.in/news/agriculture/after-dave-what-does-future-hold-for-gm-mustard--57890</a> (accessed Nov. 01, 2022).</li>
+
+<li>A. Perinchery, “What Stands in the Way of Transgenic Mustard Becoming India’s First GM Food Crop? – The Wire Science.” <a href="https://science.thewire.in/environment/transgenic-mustard-opposition-geac/">https://science.thewire.in/environment/transgenic-mustard-opposition-geac/</a> (accessed Nov. 02, 2022).</li>
+
+<li>“Supreme Court Puts Environmental Release of GM Mustard on Hold.” <a href="https://www.organicconsumers.org/news/supreme-court-puts-environmental-release-gm-mustard-hold">https://www.organicconsumers.org/news/supreme-court-puts-environmental-release-gm-mustard-hold</a> (accessed Nov. 10, 2022).</li>
+
+<li>D. Sharma, “GM Mustard: India gearing up to be biggest dustbin for risky, harmful tech,” May 16, 2017. <a href="https://www.business-standard.com/article/economy-policy/gm-mustard-india-gearing-up-to-be-biggest-dustbin-for-risky-harmful-tech-117051600321_1.html">https://www.business-standard.com/article/economy-policy/gm-mustard-india-gearing-up-to-be-biggest-dustbin-for-risky-harmful-tech-117051600321_1.html</a> (accessed Nov. 01, 2022).</li>
+
+<li>“India’s GM Mustard and the 30-Year Path to Food Tyranny.” <a href="https://www.organicconsumers.org/news/india%E2%80%99s-gm-mustard-and-30-year-path-food-tyranny">https://www.organicconsumers.org/news/india%E2%80%99s-gm-mustard-and-30-year-path-food-tyranny</a> (accessed Nov. 02, 2022).</li>
+
+<li><b>“Ex-Delhi University Vice Chancellor Deepak Pental Sent to Tihar Jail on Plagiarism Complaint,”</b> NDTV.com. <a href="https://www.ndtv.com/india-news/ex-delhi-university-vice-chancellor-deepak-pental-sent-to-tihar-jail-on-plagiarism-complaint-703842">https://www.ndtv.com/india-news/ex-delhi-university-vice-chancellor-deepak-pental-sent-to-tihar-jail-on-plagiarism-complaint-703842</a> (accessed Nov. 01, 2022).</li>
+
+<li>I. Mishra, “RSS’s farmer body opposes GM Mustard, alleges that it can cause cancer,” The Hindu, New Delhi:, Oct. 27, 2022. Accessed: Nov. 02, 2022. [Online]. Available: <a href="https://www.thehindu.com/news/national/rsss-farmer-body-opposes-gm-mustard-alleges-that-it-can-cause-cancer/article66061585.ece">https://www.thehindu.com/news/national/rsss-farmer-body-opposes-gm-mustard-alleges-that-it-can-cause-cancer/article66061585.ece</a></li>
+
+<li>“Nod for GM mustard could mean a repeat of anti-farm laws stir,” Deccan Herald, Oct. 31, 2022. <a href="https://www.deccanherald.com/opinion/nod-for-gm-mustard-could-mean-a-repeat-of-anti-farm-laws-stir-1158030.html">https://www.deccanherald.com/opinion/nod-for-gm-mustard-could-mean-a-repeat-of-anti-farm-laws-stir-1158030.html</a> (accessed Nov. 02, 2022).</li>
+
+<li>“GM mustard will obliterate honey bees: Apiculturists protest Central decision in Bharatpur.” <a href="https://www.downtoearth.org.in/news/agriculture/gm-mustard-will-obliterate-honey-bees-apiculturists-protest-central-decision-in-bharatpur-85794">https://www.downtoearth.org.in/news/agriculture/gm-mustard-will-obliterate-honey-bees-apiculturists-protest-central-decision-in-bharatpur-85794</a> (accessed Nov. 06, 2022).</li>
+
+<li>“‘Approval of GM mustard may threaten food security, increase pesticide tolerance.’” <a href="https://www.downtoearth.org.in/news/agriculture/-approval-of-gm-mustard-may-threaten-food-security-increase-pesticide-tolerance--85560">https://www.downtoearth.org.in/news/agriculture/-approval-of-gm-mustard-may-threaten-food-security-increase-pesticide-tolerance--85560</a> (accessed Nov. 01, 2022).</li>
+
+<li>G. link, Facebook, Twitter, Pinterest, Email, and O. Apps, “Why there is really ‘no established need’ in India for genetic modification of mustard.” <a href="https://www.counterview.net/2022/11/why-there-is-really-no-established-need.html">https://www.counterview.net/2022/11/why-there-is-really-no-established-need.html</a> (accessed Nov. 07, 2022).</li>
+
+<li><b>“GM mustard gets go-ahead: Scientist Vandana Shiva calls move ’fraud perpetrated on nation’-India News , Firstpost,”</b> Firstpost, May 13, 2017. <a href="https://www.firstpost.com/india/gm-mustard-gets-go-ahead-scientist-vandana-shiva-calls-move-fraud-perpetrated-on-nation-3442044.html">https://www.firstpost.com/india/gm-mustard-gets-go-ahead-scientist-vandana-shiva-calls-move-fraud-perpetrated-on-nation-3442044.html</a> (accessed Nov. 01, 2022).</li>
+
+<li><b>“GMO Mustard: An unnecessary, toxic, and failed technology,”</b> Navdanya international, Nov. 10, 2022. <a href="https://navdanyainternational.org/gmo-mustard-an-unnecessary-toxic-and-failed-technology/">https://navdanyainternational.org/gmo-mustard-an-unnecessary-toxic-and-failed-technology/</a> (accessed Nov. 11, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org23594c1" class="outline-2">
+<h2 id="org23594c1"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Editor2, “GMWatch publishes the full definitive account of the Pusztai affair.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair">https://www.gmwatch.org/en/106-news/latest-news/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair</a></li>
+
+<li>Editor2, “EU Parliament disregards science by endorsing deregulation of new GM plants.” Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20380-eu-parliament-disregards-science-by-endorsing-deregulation-of-new-gm-plants">https://www.gmwatch.org/en/106-news/latest-news/20380-eu-parliament-disregards-science-by-endorsing-deregulation-of-new-gm-plants</a></li>
+
+<li>J. Hettinger, “US court bans three weedkillers and finds EPA broke law in approval process,” The Guardian, Feb. 07, 2024. Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/feb/07/us-weedkiller-ban-dicamba-epa">https://www.theguardian.com/environment/2024/feb/07/us-weedkiller-ban-dicamba-epa</a></li>
+
+<li>“Black Land Loss in the United States,” FoodPrint. Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://foodprint.org/issues/black-land-loss-in-the-united-states/">https://foodprint.org/issues/black-land-loss-in-the-united-states/</a></li>
+
+<li>“Coalition for GM-Free India alleges Solicitor General of India misled court during hearing.” Accessed: Feb. 06, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/coalition-for-gm-free-india-alleges-solicitor-general-of-india-misled-court-during-hearing-94066">https://www.downtoearth.org.in/news/governance/coalition-for-gm-free-india-alleges-solicitor-general-of-india-misled-court-during-hearing-94066</a></li>
+
+<li>“Corporate-Government ‘Tiger Team’ Gutted GMO Regulations,” Watershed Sentinel. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://watershedsentinel.ca/articles/corporate-government-tiger-team-gutted-gmo-regulations/">https://watershedsentinel.ca/articles/corporate-government-tiger-team-gutted-gmo-regulations/</a></li>
+
+<li>“Gene editing of crops to end global hunger is propaganda.” Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://www.newindianexpress.com/xplore/2024/Feb/03/gene-editing-of-crops-to-end-global-hunger-is-propaganda">https://www.newindianexpress.com/xplore/2024/Feb/03/gene-editing-of-crops-to-end-global-hunger-is-propaganda</a></li>
+
+<li>O. Correspondents, “Food Security: Experts Knock FG On Genetically Modified Seedlings, Say It’s No Solution To Starvation,” Independent Newspaper Nigeria. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://independent.ng/food-security-experts-knock-fg-on-genetically-modified-seedlings-say-its-no-solution-to-starvation/">https://independent.ng/food-security-experts-knock-fg-on-genetically-modified-seedlings-say-its-no-solution-to-starvation/</a></li>
+
+<li>“Adani Group complained against farm law. Gov’t diluted it to allow hoarding by corporates.” <a href="https://www.reporters-collective.in/trc/adani-group-complained-against-farm-law-govt-diluted-it-to-allow-hoarding-by-corporates">https://www.reporters-collective.in/trc/adani-group-complained-against-farm-law-govt-diluted-it-to-allow-hoarding-by-corporates</a> (accessed Aug. 18, 2023).</li>
+
+<li>“CRISPR Gene Editing: New Evidence of ‘Potentially Irreversible Safety Risks,’” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/crispr-gene-editing-safety-risk/">https://childrenshealthdefense.org/defender/crispr-gene-editing-safety-risk/</a> (accessed Aug. 17, 2023).</li>
+
+<li>“European proposal to deregulate new GMO techniques ‘would be the end of organic farming,’” The Organic &amp; Non-GMO Report. <a href="https://non-gmoreport.com/articles/european-proposal-to-deregulate-new-gmo-techniques-would-be-the-end-of-organic-farming/">https://non-gmoreport.com/articles/european-proposal-to-deregulate-new-gmo-techniques-would-be-the-end-of-organic-farming/</a> (accessed Aug. 10, 2023).</li>
+
+<li>“‘GEAC bypassing States’ right to take a call on GMO trials’: Activists,” Jul. 14, 2023. <a href="https://www.thehindubusinessline.com/economy/agri-business/geac-bypassing-states-right-to-take-a-call-on-gmo-trials/article67079020.ece">https://www.thehindubusinessline.com/economy/agri-business/geac-bypassing-states-right-to-take-a-call-on-gmo-trials/article67079020.ece</a> (accessed Jul. 17, 2023).</li>
+
+<li>“Repealed Farm Laws: ‘Pro-BJP NRI Businessman’s Proposal Paved Way for Agri Corporatisation,’” NewsClick, Aug. 17, 2023. <a href="https://www.newsclick.in/repealed-farm-laws-pro-bjp-nri-businessmans-proposal-paved-way-agri-corporatisation">https://www.newsclick.in/repealed-farm-laws-pro-bjp-nri-businessmans-proposal-paved-way-agri-corporatisation</a> (accessed Aug. 18, 2023).</li>
+
+<li>“Seeds of Death: Unveiling The Lies of GMO’s - Nurdunya Videos,” Nurdunya. <a href="https://nurdunya.org/videos/seeds-of-death-unveiling-the-lies-of-gmos/">https://nurdunya.org/videos/seeds-of-death-unveiling-the-lies-of-gmos/</a> (accessed Jul. 29, 2023).</li>
+
+<li>T. Burkart, “Ban Factory Farms | GMO / Toxin Free USA,” Aug. 08, 2020. <a href="https://toxinfreeusa.org/take-action/ban-factory-farms/">https://toxinfreeusa.org/take-action/ban-factory-farms/</a> (accessed Feb. 16, 2023).</li>
+</ul>
+
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-02-17 Sat 12:08</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
