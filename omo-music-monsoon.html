@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-02-26 Mon 09:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Monsoon - Music</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Monsoon - Music</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb215ce7">1. Genres</a>
+<ul>
+<li><a href="#org0125996">1.1. SAM</a>
+<ul>
+<li><a href="#orgb4a695c">1.1.1. ICM</a></li>
+<li><a href="#orga4718cd">1.1.2. Indian Films</a></li>
+</ul>
+</li>
+<li><a href="#org0b79416">1.2. WM</a>
+<ul>
+<li><a href="#orge082391">1.2.1. Western Classical Music</a></li>
+<li><a href="#org7e556c0">1.2.2. Jazz</a></li>
+<li><a href="#orgb8d96fd">1.2.3. English Music</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgba53bb1">2. Instruments</a>
+<ul>
+<li><a href="#org0dbefd5">2.1. Santoor</a></li>
+<li><a href="#org6311b97">2.2. Piano</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+
+
+<div id="outline-container-orgb215ce7" class="outline-2">
+<h2 id="orgb215ce7"><span class="section-number-2">1.</span> Genres</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org0125996" class="outline-3">
+<h3 id="org0125996"><span class="section-number-3">1.1.</span> SAM</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb4a695c" class="outline-4">
+<h4 id="orgb4a695c"><span class="section-number-4">1.1.1.</span> ICM</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org137e046"></a>HCM<br />
+<ol class="org-ol">
+<li><a id="org61824ab"></a>Theory<br />
+<div class="outline-text-6" id="text-1-1-1-1-1">
+<ul class="org-ul">
+<li>Geeta Banerjee, <b>Raga Malhar Darshan</b>, Pratibha Prakashan, 1999.</li>
+
+<li>I. Rajamani, M. Pernau, and K. B. Schofield, <i>Monsoon Feelings: A History of Emotions in the Rain.</i> Niyogi Books, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8b8658c"></a>Recordings<br />
+<ul class="org-ul">
+<li><a id="org208e18b"></a>General<br />
+<div class="outline-text-7" id="text-org208e18b">
+<ul class="org-ul">
+<li>“A Tale of Two Malhars,” Rajan Parrikar Music Archive. <a href="https://www.parrikar.org/hindustani/tale-two-malhars/">https://www.parrikar.org/hindustani/tale-two-malhars/</a> (accessed Oct. 09, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“On Gaud Malhar and Miyan Malhar,” Rajan Parrikar Music Archive. <a href="https://www.parrikar.org/hindustani/malhars/">https://www.parrikar.org/hindustani/malhars/</a> (accessed Oct. 09, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org315baef"></a>Recordings<br />
+<ul class="org-ul">
+<li><a id="orgb6c0304"></a>Malhar Variants<br />
+<ul class="org-ul">
+<li><a id="org2d70ca8"></a>Collections<br />
+<div class="outline-text-9" id="text-org2d70ca8">
+<ul class="org-ul">
+<li>“Sadabahar Malhar | Audio Jukebox | Vocal | Instrumental | Classical | Various Artists - YouTube.” <a href="https://www.youtube.com/watch?v=HkYmzrsXzJE">https://www.youtube.com/watch?v=HkYmzrsXzJE</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Malhar Malika, Volumes 1-4, Kishori Amonkar, SaReGaMa 
+<ul class="org-ul">
+<li>Kishori Amonkar - Malhar Malika. 1994. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/release/12839100-Kishori-Amonkar-Malhar-Malika">https://www.discogs.com/release/12839100-Kishori-Amonkar-Malhar-Malika</a></li>
+<li>“Malhar Malika - Kishori Amonkar | Koiliya Na Bol Dar Dar | Bageshwari | Indian Classical Music - YouTube.” <a href="https://www.youtube.com/watch?v=nDEdQ8WQ0ms">https://www.youtube.com/watch?v=nDEdQ8WQ0ms</a> (accessed Jun. 27, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Megh Malhar, Volumes 1-4, Music Today 
+<ul class="org-ul">
+<li>“Megh Malhar | Volume 1 | Audio Jukebox | Vocal/Instrumental | Classical | Ravi Shankar | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=QbsejM7bysQ">https://www.youtube.com/watch?v=QbsejM7bysQ</a> (accessed Jun. 27, 2023).</li>
+<li>“Megh Malhar | Volume 2 | Audio Jukebox | Vocal/Instrumental | Pandit Jasraj | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=A4xU5DExkbc">https://www.youtube.com/watch?v=A4xU5DExkbc</a> (accessed Jun. 27, 2023).</li>
+<li>Megh Malhar Volume 3 | Audio Jukebox | Vocal/Instrumental | Classical | Bhimsen Joshi | Music Today, (Sep. 23, 2015). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7sRHp4leHDg">https://www.youtube.com/watch?v=7sRHp4leHDg</a></li>
+<li>“Megh Malhar | Vol 4 | Audio Jukebox | Vocal/Instrumental | Classical | Kishori Amonkar | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=3aKSR8Rf0zw">https://www.youtube.com/watch?v=3aKSR8Rf0zw</a> (accessed Jun. 27, 2023).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org7317b40"></a>Solo<br />
+<ul class="org-ul">
+<li><a id="org828d791"></a>Mian Ki Malhar<br />
+<div class="outline-text-10" id="text-org828d791">
+<ul class="org-ul">
+<li>“Mian Malhar Music | Discogs.” <a href="https://www.discogs.com/search/?q=mian+malhar&amp;type=all&amp;type=all">https://www.discogs.com/search/?q=mian+malhar&amp;type=all&amp;type=all</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Mian Ki Malhar</i>, Ustad Hafiz Ali Khan, SaReGaMa</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Ustad Amjad Ali Khan - Topic, <i>Miyan Ki Malhar</i> - Alap Jod Jhala And Gat - Ustad Amjad Ali Khan, (Aug. 02, 2019). Accessed: Oct. 10, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=mS-iWBQTXhA">https://www.youtube.com/watch?v=mS-iWBQTXhA</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Mian Ki Malhar</i>, Ustad Imrat Khan, Music Today
+<ul class="org-ul">
+<li>“Raga Mian Ki Malhar - Imrat Khan(Album: Maestro’s Choice) - YouTube.” <a href="https://www.youtube.com/watch?v=AyrMz97sMzE">https://www.youtube.com/watch?v=AyrMz97sMzE</a> (accessed Jun. 27, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Mian Ki Malhar</i>, Pt. Ravi Shankar, Music Today
+<ul class="org-ul">
+<li>“Raga Miyan Ki Malhar | Pandit Ravi Shankar | ( Album: Platinum Vol 3 ) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=8YS1LHwuyzI">https://www.youtube.com/watch?v=8YS1LHwuyzI</a> (accessed Jun. 27, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Mian Ki Malhar</i>, Ustad Vilayat Khan, Ustad Imrat Khan, SaReGaMa</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Raga Miyan Ki Malhar | Ustad Bismillah Khan (Album: Thaat Kafi &amp; Khamaj) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=zLhon2sG94g">https://www.youtube.com/watch?v=zLhon2sG94g</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Pt. Hariprasad Chaurasia Flute | Raga - Miyan Ki Malhar | Flute Music | Indian Classical Music - YouTube.” <a href="https://www.youtube.com/watch?v=IyqWi5oPpJs">https://www.youtube.com/watch?v=IyqWi5oPpJs</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Malhar Bliss | Raga Miyan Malhar | Pandit Chhannulal Mishra | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=bjJoYHJ3rDk">https://www.youtube.com/watch?v=bjJoYHJ3rDk</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>1999 II Kishori Amonkar II Miyan Ki Malhar, (Mar. 05, 2022). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Ykv3xeWrubI">https://www.youtube.com/watch?v=Ykv3xeWrubI</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“1958 - Akashvani National Programme II Ustad Amir Khan II Raga - Miyan Ki Malhar - YouTube.” <a href="https://www.youtube.com/watch?v=YL86cR2-9DQ">https://www.youtube.com/watch?v=YL86cR2-9DQ</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Film Songs in Rag Mian Ki Malhar.” <a href="https://chandrakantha.com/raga_raag/film_song_raga/mian_ki_malhar.shtml">https://chandrakantha.com/raga_raag/film_song_raga/mian_ki_malhar.shtml</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbb75ef9"></a>Megh Malhar<br />
+<ul class="org-ul">
+<li><a id="orgb13ad88"></a>General<br />
+<div class="outline-text-11" id="text-orgb13ad88">
+<ul class="org-ul">
+<li>“Megh Malhar,” Wikipedia. Apr. 10, 2023. Accessed: Jun. 26, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Megh_Malhar&amp;oldid=1149151095">https://en.wikipedia.org/w/index.php?title=Megh_Malhar&amp;oldid=1149151095</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9347f96"></a>Theory<br />
+<div class="outline-text-11" id="text-org9347f96">
+<ul class="org-ul">
+<li>“Raag Megh Malhar - Indian Classical Music - Tanarang.com.” <a href="http://www.tanarang.com/english/megh_eng.htm">http://www.tanarang.com/english/megh_eng.htm</a> (accessed Jun. 26, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org530d85b"></a>Recordings<br />
+<div class="outline-text-11" id="text-org530d85b">
+<ul class="org-ul">
+<li>mm, amjad ak, saregama</li>
+
+<li>mm, bgak, saregama</li>
+</ul>
+</div>
+</li>
+<li><a id="org538a00b"></a>Art<br />
+<div class="outline-text-11" id="text-org538a00b">
+<ul class="org-ul">
+<li>“Raga Megh Malhar,” INDIAN CULTURE. <a href="http://indianculture.gov.in/museum-paintings/raga-megh-malhar">http://indianculture.gov.in/museum-paintings/raga-megh-malhar</a> (accessed Jun. 26, 2023).</li>
+<li>“Megh Malhar Raga,” INDIAN CULTURE. <a href="http://indianculture.gov.in/museum-paintings/megh-malhar-raga">http://indianculture.gov.in/museum-paintings/megh-malhar-raga</a> (accessed Jun. 26, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1878930"></a>Films<br />
+<div class="outline-text-11" id="text-org1878930">
+<ul class="org-ul">
+<li>“Film Songs in Rag Megh Malhar.” <a href="http://chandrakantha.com/raga_raag/film_song_raga/megh_malhar.shtml">http://chandrakantha.com/raga_raag/film_song_raga/megh_malhar.shtml</a> (accessed Jun. 26, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org11bcbe3"></a>Misc<br />
+<div class="outline-text-11" id="text-org11bcbe3">
+<ul class="org-ul">
+<li>“Rag Megh Malhar / राग मेघ मल्हार - YouTube.” <a href="https://www.youtube.com/watch?v=3iQHe2hIJGM">https://www.youtube.com/watch?v=3iQHe2hIJGM</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Film Songs in Rag Megh Malhar.” <a href="https://chandrakantha.com/raga_raag/film_song_raga/megh_malhar.shtml">https://chandrakantha.com/raga_raag/film_song_raga/megh_malhar.shtml</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+
+<li><a id="org21e628f"></a>Gaud Malhar<br />
+<ul class="org-ul">
+<li><a id="org66c581e"></a>Misc<br />
+<div class="outline-text-11" id="text-org66c581e">
+<ul class="org-ul">
+<li>“Gaud Malhar Music | Discogs.” <a href="https://www.discogs.com/search/?q=gaud+malhar&amp;type=all&amp;type=all">https://www.discogs.com/search/?q=gaud+malhar&amp;type=all&amp;type=all</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc7de8cd"></a>JAG<br />
+<div class="outline-text-11" id="text-orgc7de8cd">
+<ul class="org-ul">
+<li><i>Raga Gaud Malhar</i>, Pt. Mallikarjun Mansur, SaReGaMa</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Gaud Malhar</i>, Smt. Kishori Amonkar, Music Today
+<ul class="org-ul">
+<li>“Raga Gaud Malhar | Vidushi Kishori Amonkar | ( Album: Platinum Vol 7 ) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=8gCh_OFz_2w">https://www.youtube.com/watch?v=8gCh_OFz_2w</a> (accessed Jun. 27, 2023).</li>
+<li>Raga Gaud Malhar | Kishori Amonkar | Sangeet Sartaj - Kishori Amonkar | Music Today, (Mar. 10, 2016). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=HQG_olB8J1E">https://www.youtube.com/watch?v=HQG_olB8J1E</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Gaud Malhar</i>, Pt. Biswajit Roy Chowdhary, Music Today
+<ul class="org-ul">
+<li>“Raga Gaud Malhar | Biswajit Roy Chowdhury (Album: Maestro’s Choice Series Three) - YouTube.” <a href="https://www.youtube.com/watch?v=FPEwjYacAnc">https://www.youtube.com/watch?v=FPEwjYacAnc</a> (accessed Jun. 27, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Gaud Malhar</i>, Smt. Kesarbai Kerkar, SaReGaMa</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org055be23"></a>GG<br />
+<div class="outline-text-11" id="text-org055be23">
+<ul class="org-ul">
+<li>Pandit D.V. Paluskar | Raag Gaud Malhar | Akashvani Sangeet, (Aug. 03, 2021). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ZaAwgtO1ENY">https://www.youtube.com/watch?v=ZaAwgtO1ENY</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sangam - Pt. Ulhas Kashalkar by Traditional on Prime Music.” <a href="https://music.amazon.in/albums/B07569B2SQ?marketplaceId=A21TJRUUN4KGV&amp;musicTerritory=IN&amp;trackAsin=B07565GJ9Z">https://music.amazon.in/albums/B07569B2SQ?marketplaceId=A21TJRUUN4KGV&amp;musicTerritory=IN&amp;trackAsin=B07565GJ9Z</a> (accessed Jul. 19, 2023).</li>
+</ul>
+</div>
+</li>
+
+
+
+
+
+
+<li><a id="org65d62e1"></a>Misc<br />
+<div class="outline-text-11" id="text-org65d62e1">
+<ul class="org-ul">
+<li>Pandit D.V. Paluskar | Raag Gaud Malhar | Akashvani Sangeet, (Aug. 03, 2021). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ZaAwgtO1ENY">https://www.youtube.com/watch?v=ZaAwgtO1ENY</a></li>
+
+<li>“Ustad Nissar Hussain Khan | Raag : Gaud Malhar - YouTube.” <a href="https://www.youtube.com/watch?v=XAJ_QfwtDOY">https://www.youtube.com/watch?v=XAJ_QfwtDOY</a> (accessed Jun. 27, 2023)</li>
+
+<li>“Film Songs in Rag Gaur Malhar.” <a href="https://chandrakantha.com/raga_raag/film_song_raga/gaur_malhar.shtml">https://chandrakantha.com/raga_raag/film_song_raga/gaur_malhar.shtml</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+
+<li><a id="orgacabe8d"></a>Chhaya Malhar<br />
+<div class="outline-text-10" id="text-orgacabe8d">
+<ul class="org-ul">
+<li><i>Sakhi Shyam Nahi Aaye</i>, <i>Raga Chhaya Malhar</i>, Pt. Bhimsen Joshi, SaReGaMa.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Raag Chhaya Chhaya Malhar | Album: Lifestory Of A Legend, Bhimsen Joshi | Music Today, (Dec. 28, 2015). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=T8CTseg2al8">https://www.youtube.com/watch?v=T8CTseg2al8</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgad72ff7"></a>Dhuliya Malhar<br />
+<div class="outline-text-10" id="text-orgad72ff7">
+<ul class="org-ul">
+<li>“Raga Dhulia Malhar | Pandit Jasraj ( Album: Sadabahar Darbari) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=Zx6ASz8-kaI">https://www.youtube.com/watch?v=Zx6ASz8-kaI</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbc76383"></a>Ramdasi Malhar<br />
+<div class="outline-text-10" id="text-orgbc76383">
+<ul class="org-ul">
+<li>“Pt. Mallikarjun Mansur | Jaipur Atrauli Gharana | Raag: Ramdasi Malhar | Akashvani Sangeet - YouTube.” <a href="https://www.youtube.com/watch?v=fPGFUN_9W6Y">https://www.youtube.com/watch?v=fPGFUN_9W6Y</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Ramdasi Malhar, Pt. Mallikarjun Mansur, Music Today.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Raag : Ramdasi Malhar - Sarod Instrumental | T-Series Classical | Ali Akbar Khan, (Nov. 06, 2014). Accessed: Jun. 29, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=qVMun5nyAqA">https://www.youtube.com/watch?v=qVMun5nyAqA</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1972c6f"></a>Nat Malhar<br />
+<div class="outline-text-10" id="text-org1972c6f">
+<ul class="org-ul">
+<li>“Raga Nat Malhar | Pandit Bhimsen Joshi | ( Album: Platinum Vol 2 ) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=Kr7j4cbVy2k">https://www.youtube.com/watch?v=Kr7j4cbVy2k</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Pandit Bhimsen Joshi II Nat Malhar - YouTube.” <a href="https://www.youtube.com/watch?v=9cY2Y-tHsxw">https://www.youtube.com/watch?v=9cY2Y-tHsxw</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgac74757"></a>Sur Malhar<br />
+<div class="outline-text-10" id="text-orgac74757">
+<ul class="org-ul">
+<li>“1999 II Kishori Amonkar II Sur Malhar - YouTube.” <a href="https://www.youtube.com/watch?v=ur8hJHJh92c">https://www.youtube.com/watch?v=ur8hJHJh92c</a> (accessed Jun. 27, 2023).</li>
+<li>Pt. Bhimsen Joshi, SaReGaMa.</li>
+
+<li>“Film Songs in Rag Sur Malhar.” <a href="https://chandrakantha.com/raga_raag/film_song_raga/sur_malhar.shtml">https://chandrakantha.com/raga_raag/film_song_raga/sur_malhar.shtml</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0e38e64"></a>Desh Malhar<br />
+<div class="outline-text-10" id="text-org0e38e64">
+<ul class="org-ul">
+<li>Desh Malhar, Ustad Ali Akbar Khan, SaReGaMa.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org1e7689e"></a>Other Variants<br />
+<div class="outline-text-9" id="text-org1e7689e">
+<ul class="org-ul">
+<li>Nanak Malhar, Jasraj , Music Today.</li>
+
+<li>“Raga Mishra Mel Ki Malhar | Ustad Bismillah Khan ( Album: Sadabahar Darbari) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=_SJOHiv2U6Q">https://www.youtube.com/watch?v=_SJOHiv2U6Q</a> (accessed Jun. 27, 2023).</li>
+
+<li>“Raga Madhu Malhar | Pandit Hari Prasad Chaurasia (Album: Sadabahar Malhar) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=tm9iqE7mlOc">https://www.youtube.com/watch?v=tm9iqE7mlOc</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org80a6c7b"></a>Fusion<br />
+<div class="outline-text-9" id="text-org80a6c7b">
+<ul class="org-ul">
+<li>Malhaar by Fuzon &amp; Shafqat Amanat Ali. 2002. Accessed: Jun. 28, 2023. [Online]. Available: <a href="https://music.apple.com/in/album/fuzon/404600751">https://music.apple.com/in/album/fuzon/404600751</a>
+<ul class="org-ul">
+<li>Monsoon Party Music. Fusion.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org1262e59"></a>NCERT<br />
+<div class="outline-text-9" id="text-org1262e59">
+<ul class="org-ul">
+<li>Rag Megh Malhar   राग मेघ मल्हार, (Sep. 20, 2021). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pHbXFAhQtpI">https://www.youtube.com/watch?v=pHbXFAhQtpI</a></li>
+<li>Rag Megh Malhar / राग मेघ मल्हार, (Jul. 27, 2016). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3iQHe2hIJGM">https://www.youtube.com/watch?v=3iQHe2hIJGM</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Malhar 2 Rag “Miyan Malhar Maai Ban Bolan Lage More,” (Jan. 05, 2022). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7K3SYX8THkw">https://www.youtube.com/watch?v=7K3SYX8THkw</a></li>
+<li>राग मियाँ मल्हार  Raag Miyan Malhar, (Sep. 20, 2021). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0hCrVtSoqhA">https://www.youtube.com/watch?v=0hCrVtSoqhA</a></li>
+<li>Rag Miyan Malhar / राग मियाँ मल्हार, (Jul. 27, 2016). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=2uXSCTueyLc">https://www.youtube.com/watch?v=2uXSCTueyLc</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>राग गौड़मल्हार  Raag Gaur Malhar, (Sep. 20, 2021). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lkCRoEAPuas">https://www.youtube.com/watch?v=lkCRoEAPuas</a></li>
+<li>“Malhar 1 Rag ‘Gaud Malhar Umad Ghumad’ - YouTube.” <a href="https://www.youtube.com/watch?v=PuEjJiEVgmU">https://www.youtube.com/watch?v=PuEjJiEVgmU</a> (accessed Jun. 28, 2023).</li>
+<li>Rag Gaur Malhar / राग गौढ़ मल्हार, (Jul. 27, 2016). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JNJ5f4m2y7c">https://www.youtube.com/watch?v=JNJ5f4m2y7c</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org37cefa7"></a>Sikhism<br />
+<div class="outline-text-9" id="text-org37cefa7">
+<ul class="org-ul">
+<li>Hey Govinda Hey Gopal | Raag Malhar | Bani Guru Guru Hai Bani | Akashvani Sangeet, (Jan. 10, 2022). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=cpfqP8etCxU">https://www.youtube.com/watch?v=cpfqP8etCxU</a></li>
+
+<li>Baras Baras | Raag Malhar | Bani Guru Guru Hai Bani | Akashvani Sangeet, (Jan. 11, 2022). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=YfV8peeU_Wk">https://www.youtube.com/watch?v=YfV8peeU_Wk</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgb3d826c"></a>Misc<br />
+<div class="outline-text-9" id="text-orgb3d826c">
+<ul class="org-ul">
+<li>“Malhar Music | Discogs.” <a href="https://www.discogs.com/search/?q=malhar&amp;type=all&amp;page=2">https://www.discogs.com/search/?q=malhar&amp;type=all&amp;page=2</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0cc768c"></a>Megh<br />
+<div class="outline-text-8" id="text-org0cc768c">
+<ul class="org-ul">
+<li><i>Raga Megh</i>, Pt. Nikhil Banerjee, SaReGaMa</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Celebrating the Legend | Ghulam Mustafa Khan | Raga Megh | Music Today, (Mar. 01, 2021). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VrjvpQBfpTY">https://www.youtube.com/watch?v=VrjvpQBfpTY</a></li>
+<li><i>Raga Megh</i>, Ustad G. M. Khan, Music Today</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Ustad Amir khan II Raga - Megh, (Sep. 11, 2021). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=hutg2btzbg0">https://www.youtube.com/watch?v=hutg2btzbg0</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>AIR ARCHIVES - Ustad Ghulam Sadiq Khan- Raag Megh, (Apr. 22, 2020). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=DoceIHC_XAU">https://www.youtube.com/watch?v=DoceIHC_XAU</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Raga Megh</i>, Pt. Shiv Kumar Sharma, Music Today</li>
+<li>“Raga Megh | (Album: The Last Word in Santoor - Pandit Shiv Kumar Sharma) | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=AAr6OG2PFJA">https://www.youtube.com/watch?v=AAr6OG2PFJA</a> (accessed Jun. 27, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Film Songs in Rag Megh.” <a href="https://chandrakantha.com/raga_raag/film_song_raga/megh.shtml">https://chandrakantha.com/raga_raag/film_song_raga/megh.shtml</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga33d11b"></a>Dhrupad<br />
+<ul class="org-ul">
+<li><a id="orgc676cf8"></a>Vocals<br />
+<div class="outline-text-9" id="text-orgc676cf8">
+<ul class="org-ul">
+<li>Khan Sahib Rahimuddinkhan Dagar - -. 2017. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/release/6505628-Khan-Sahib-Rahimuddinkhan-Dagar">https://www.discogs.com/release/6505628-Khan-Sahib-Rahimuddinkhan-Dagar</a>-</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Dagar Brothers = Late Khan Sahib Ustad Nasir Moinuddin Dagar, Late Khan Sahib Ustad Nasir Moinuddin Dagar - Miya Ki Malhar Dhrupad. 2009. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/release/11250315-Dagar-Brothers-2-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-Dagar-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-D">https://www.discogs.com/release/11250315-Dagar-Brothers-2-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-Dagar-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-D</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Dagar Brothers : Ustad Faiyazuddin Dagar &amp; Ustad Zahiruddin Dagar - Raga Miyan Ki Malhar Vocal. 2000. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/master/2350915-Dagar-Brothers-Ustad-Faiyazuddin-Dagar-Ustad-Zahiruddin-Dagar-Raga-Miyan-Ki-Malhar-Vocal">https://www.discogs.com/master/2350915-Dagar-Brothers-Ustad-Faiyazuddin-Dagar-Ustad-Zahiruddin-Dagar-Raga-Miyan-Ki-Malhar-Vocal</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Nasir Aminuddin Dagar, Ustad Zia Fariduddin Dagar, R. Fahimuddin Dagar - Dagar Baani. 1987. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/release/11239046-Nasir-Aminuddin-Dagar-Ustad-Zia-Fariduddin-Dagar-R-Fahimuddin-Dagar-Dagar-Baani">https://www.discogs.com/release/11239046-Nasir-Aminuddin-Dagar-Ustad-Zia-Fariduddin-Dagar-R-Fahimuddin-Dagar-Dagar-Baani</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org4cefc67"></a>Rudra Veena<br />
+<div class="outline-text-9" id="text-org4cefc67">
+<ul class="org-ul">
+<li>Zia Mohiuddin Dagar - Been Sitar. 2009. Accessed: Jun. 27, 2023. [Online]. Available: <a href="https://www.discogs.com/release/11530244-Zia-Mohiuddin-Dagar-Been-Sitar">https://www.discogs.com/release/11530244-Zia-Mohiuddin-Dagar-Been-Sitar</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgda4fc0f"></a>Misc<br />
+<div class="outline-text-8" id="text-orgda4fc0f">
+<ul class="org-ul">
+<li>Smt. Kishori Amonkar || Vocal Recital || National Programme of Music, (Mar. 08, 2021). Accessed: Jun. 27, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=jIWaArFChN0">https://www.youtube.com/watch?v=jIWaArFChN0</a></li>
+
+<li>1996 - Akashvani Sangeet Sammelan II Vocal by Savita Devi II Raga - Mishra Khamaj (Bandish Thumari), (Aug. 03, 2022). Accessed: Aug. 09, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=F8A70bFvy2M">https://www.youtube.com/watch?v=F8A70bFvy2M</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Rain Raga | Various Artistes | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=uVyTwp85RVU">https://www.youtube.com/watch?v=uVyTwp85RVU</a> (accessed Jun. 27, 2023).</li>
+
+<li>Romancing The Rain I Audio Jukebox I World Music I Instrumental I Shiv Kumar Sharma | Music Today, (Aug. 31, 2015). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3aFDmHwOQ1g">https://www.youtube.com/watch?v=3aFDmHwOQ1g</a></li>
+
+<li>“Melodic Monsoon - Saawan Jhar Lagi | Shubha Mudgal | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=lUgAyR8XAxw">https://www.youtube.com/watch?v=lUgAyR8XAxw</a> (accessed Jun. 28, 2023).</li>
+
+<li>“Monsoon Melodies - Hindustani Classical Instrumental by Traditional on Prime Music.” <a href="https://music.amazon.in/albums/B07568T7BV">https://music.amazon.in/albums/B07568T7BV</a> (accessed Jun. 29, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga4718cd" class="outline-4">
+<h4 id="orga4718cd"><span class="section-number-4">1.1.2.</span> Indian Films</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>Back 2 Back: Rainy Romantic Hits, (Jul. 04, 2019). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=SfR_2FRIAV4">https://www.youtube.com/watch?v=SfR_2FRIAV4</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Best Rain Songs | Rimjhim Gire Sawan - Volume 3 | Hindi Monsoon Songs | Audio Jukebox, (Jun. 08, 2015). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ZX6gPK7f8n4">https://www.youtube.com/watch?v=ZX6gPK7f8n4</a></li>
+
+<li>“Bollywood Monsoon Playlist | Iss Baarish Mein | Bheegi Bheegi Raaton Mein | Mausam Ka Jaadu - YouTube.” <a href="https://www.youtube.com/watch?v=QKgKXCgSnXU">https://www.youtube.com/watch?v=QKgKXCgSnXU</a> (accessed Jun. 28, 2023).</li>
+
+<li>“Bollywood Rain Songs | Vol 1| Pyar Hua Iqrar Hua | Ek Ladki Bheegi Bhagi Si | Rimjhim Gire Sawan - YouTube.” <a href="https://www.youtube.com/watch?v=FPX4Yyh56Gs">https://www.youtube.com/watch?v=FPX4Yyh56Gs</a> (accessed Jun. 28, 2023).</li>
+
+<li>“Monsoon Hits - YouTube.” <a href="https://www.youtube.com/playlist?list=PLZZS4Hg-KKQi0fehB8OpGuhVNRIjUjMgP">https://www.youtube.com/playlist?list=PLZZS4Hg-KKQi0fehB8OpGuhVNRIjUjMgP</a> (accessed Jun. 28, 2023).</li>
+
+<li>“Monsoon Special Bollywood Song Collection (HD) - Jukebox 1 - Bollywood Rain Songs - YouTube.” <a href="https://www.youtube.com/watch?v=9ukOfkZiOf0">https://www.youtube.com/watch?v=9ukOfkZiOf0</a> (accessed Jun. 28, 2023).</li>
+
+<li>“Monsoon Special Bollywood Songs Collection | टॉप १५ मानसून स्पेशल सांग्स | Rain Songs HD Video - YouTube.” <a href="https://www.youtube.com/watch?v=YWndz18db1E">https://www.youtube.com/watch?v=YWndz18db1E</a> (accessed Jun. 28, 2023).</li>
+
+<li>Top 50 Monsoon special song | टॉप 50 मानसून  स्पेशल सांग्स | HD Songs | One stop Jukebox, (Jun. 21, 2017). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lUEo8C9ZowQ">https://www.youtube.com/watch?v=lUEo8C9ZowQ</a></li>
+
+<li>Top Bollywood Monsoon Special Songs | Baarish Ke Gaane | Romantic Hindi Rain Songs, (Jun. 20, 2023). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=m8PzI26aGuw">https://www.youtube.com/watch?v=m8PzI26aGuw</a></li>
+
+<li>Weekend Classic Radio Show | Light Classical Songs On Rain Special | RJ Sohini, (Jul. 12, 2018). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=RLB0arsNaHI">https://www.youtube.com/watch?v=RLB0arsNaHI</a></li>
+
+<li>“Weekend Classic Radio Show| Monsoon Special | Mere Khwabon Mein | Lagi Aaj Sawan Ki - YouTube.” <a href="https://www.youtube.com/watch?v=1QMRVYYqojw">https://www.youtube.com/watch?v=1QMRVYYqojw</a> (accessed Jun. 28, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b79416" class="outline-3">
+<h3 id="org0b79416"><span class="section-number-3">1.2.</span> WM</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orge082391" class="outline-4">
+<h4 id="orge082391"><span class="section-number-4">1.2.1.</span> Western Classical Music</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Handel: Water Music Suite in D Major, HWV 349 - Hornpipe, (Jul. 31, 2018). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=oRoEo7lZO6s">https://www.youtube.com/watch?v=oRoEo7lZO6s</a></li>
+
+<li>“Water - YouTube.” <a href="https://www.youtube.com/playlist?list=OLAK5uy_lfQZkrM6paLjbQYlopNRJEZ0tYLmOsHak">https://www.youtube.com/playlist?list=OLAK5uy_lfQZkrM6paLjbQYlopNRJEZ0tYLmOsHak</a> (accessed Jul. 01, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Classical Music for Rainy Days - YouTube.” <a href="https://www.youtube.com/watch?v=yshaBzOcZdk">https://www.youtube.com/watch?v=yshaBzOcZdk</a> (accessed Jul. 01, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e556c0" class="outline-4">
+<h4 id="org7e556c0"><span class="section-number-4">1.2.2.</span> Jazz</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Rainy Jazz: Relaxing Jazz &amp; Bossa Nova Music Radio - 24/7 Chill Out Piano &amp; Guitar Music, (Jan. 15, 2019). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=DSGyEsJ17cI">https://www.youtube.com/watch?v=DSGyEsJ17cI</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>After The Rain, (Oct. 30, 2018). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Q0W4jrKFIpk">https://www.youtube.com/watch?v=Q0W4jrKFIpk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb8d96fd" class="outline-4">
+<h4 id="orgb8d96fd"><span class="section-number-4">1.2.3.</span> English Music</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>Madonna - Rain (Official Video) [HD], (Oct. 27, 2009). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=15kWlTrpt5k">https://www.youtube.com/watch?v=15kWlTrpt5k</a></li>
+
+<li>Led Zeppelin - The Rain Song (Official Audio), (Apr. 21, 2023). Accessed: Jun. 28, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=g8VduT7aR2c">https://www.youtube.com/watch?v=g8VduT7aR2c</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Rainy Day, Dream Away - YouTube.” <a href="https://www.youtube.com/watch?v=ipxBQcci0X0">https://www.youtube.com/watch?v=ipxBQcci0X0</a> (accessed Jul. 01, 2023).</li>
+
+<li>Riders on the Storm (New Stereo Mix), (Nov. 09, 2014). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=1hrgT_ZDUvs">https://www.youtube.com/watch?v=1hrgT_ZDUvs</a></li>
+
+<li>Bob Dylan - Early Mornin’ Rain (Official Audio), (Aug. 31, 2021). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=1yXgy8Oai84">https://www.youtube.com/watch?v=1yXgy8Oai84</a></li>
+<li>Bob Dylan - Buckets of Rain (Official Audio), (Mar. 12, 2019). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=jGsOmKZXDvo">https://www.youtube.com/watch?v=jGsOmKZXDvo</a></li>
+<li>Bob Dylan - A Hard Rain’s A-Gonna Fall (Official Audio), (Dec. 10, 2016). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=T5al0HmR4to">https://www.youtube.com/watch?v=T5al0HmR4to</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba53bb1" class="outline-2">
+<h2 id="orgba53bb1"><span class="section-number-2">2.</span> Instruments</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0dbefd5" class="outline-3">
+<h3 id="org0dbefd5"><span class="section-number-3">2.1.</span> Santoor</h3>
+</div>
+<div id="outline-container-org6311b97" class="outline-3">
+<h3 id="org6311b97"><span class="section-number-3">2.2.</span> Piano</h3>
+<div class="outline-text-3" id="text-2-2">
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-02-26 Mon 09:21</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
