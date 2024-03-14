@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-03-14 Thu 13:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Holi</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Holi</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org139b817">1. General</a></li>
+<li><a href="#org8752675">2. How NOT To Celebrate Holi</a></li>
+<li><a href="#org8815355">3. Gifts, Food, Apparel</a>
+<ul>
+<li><a href="#orgf0b494b">3.1. General</a>
+<ul>
+<li><a href="#org84dcbbc">3.1.1. Cafes</a></li>
+<li><a href="#orgd269787">3.1.2. Stores</a></li>
+<li><a href="#orgeaf87c0">3.1.3. Sweets</a></li>
+<li><a href="#org92404d7">3.1.4. Savory Items</a></li>
+<li><a href="#org32b542a">3.1.5. Intoxicants</a></li>
+</ul>
+</li>
+<li><a href="#org59d29af">3.2. Food</a></li>
+<li><a href="#orgc4678d5">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org54b89e6">4. Arts</a>
+<ul>
+<li><a href="#org3affdfd">4.1. Music</a>
+<ul>
+<li><a href="#orgc94405d">4.1.1. Classical Music</a></li>
+<li><a href="#orgfb77aa1">4.1.2. Films</a></li>
+<li><a href="#org5ad0981">4.1.3. Regional</a></li>
+<li><a href="#org747b336">4.1.4. Devotional</a></li>
+<li><a href="#org85851e4">4.1.5. Dance Party</a></li>
+<li><a href="#org40aadd7">4.1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf7e06e7">4.2. Films</a></li>
+</ul>
+</li>
+<li><a href="#org809cf51">5. Special Topics</a>
+<ul>
+<li><a href="#org0cf87c4">5.1. Color</a>
+<ul>
+<li><a href="#org2a7899f">5.1.1. General</a></li>
+<li><a href="#orge579dd6">5.1.2. Psychology</a></li>
+<li><a href="#orgdb18811">5.1.3. Special Topics</a></li>
+<li><a href="#org567cda5">5.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5768a5e">5.2. Vrindavan</a></li>
+<li><a href="#orgb6a0e46">5.3. Islam</a></li>
+</ul>
+</li>
+<li><a href="#org7b547c0">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org139b817" class="outline-2">
+<h2 id="org139b817"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Holi,” Wikipedia. Mar. 15, 2022. Accessed: Mar. 15, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Holi&amp;oldid=1077234970">https://en.wikipedia.org/w/index.php?title=Holi&amp;oldid=1077234970</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8752675" class="outline-2">
+<h2 id="org8752675"><span class="section-number-2">2.</span> How NOT To Celebrate Holi</h2>
+</div>
+<div id="outline-container-org8815355" class="outline-2">
+<h2 id="org8815355"><span class="section-number-2">3.</span> Gifts, Food, Apparel</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf0b494b" class="outline-3">
+<h3 id="orgf0b494b"><span class="section-number-3">3.1.</span> General</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org84dcbbc" class="outline-4">
+<h4 id="org84dcbbc"><span class="section-number-4">3.1.1.</span> Cafes</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li><b>FabCafe</b>
+<ul class="org-ul">
+<li>“Fabcafe,” Fabcafe. <a href="https://www.fabcafe.menu">https://www.fabcafe.menu</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>Organic Express</i>, Baani Square, Gurgaon.</li>
+<li><i>C'est La Vie</i>, Worldmark Mall, Gurgaon.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd269787" class="outline-4">
+<h4 id="orgd269787"><span class="section-number-4">3.1.2.</span> Stores</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><i>Fab India</i>
+<ul class="org-ul">
+<li>“Fabindia | Shop for Handwoven Garments &amp; Home Furnishings.” <a href="https://www.fabindia.com/">https://www.fabindia.com/</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>ISayOrganic</i>
+<ul class="org-ul">
+<li>“I Say Organic,” I Say Organic. <a href="https://www.isayorganic.com/">https://www.isayorganic.com/</a> (accessed Jul. 08, 2021).</li>
+</ul></li>
+<li><i>The Goodness Store</i>, Courtyard Market, Nirvana Country, Sector 50, Gurgaon.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeaf87c0" class="outline-4">
+<h4 id="orgeaf87c0"><span class="section-number-4">3.1.3.</span> Sweets</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orga4cc807"></a>Energy Bars<br />
+<div class="outline-text-5" id="text-3-1-3-1">
+<ul class="org-ul">
+<li>“Nourish Organics – Nutrition That Fits Your Lifestyle.” <a href="https://www.nourishorganics.in/">https://www.nourishorganics.in/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Nourish Organics Bars</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org268d509"></a>Chocolates<br />
+<ol class="org-ol">
+<li><a id="org24f4eda"></a>P<br />
+<div class="outline-text-6" id="text-3-1-3-2-1">
+<ul class="org-ul">
+<li>“Mason Chocolate – Craftsmen of chocolate.” <a href="https://www.masonchocolate.com/">https://www.masonchocolate.com/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Mason &amp; Co. Chocolates</li>
+<li>Mason &amp; Co. Cacao Nibs</li>
+<li>Mason &amp; Co. Cacao Butter</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pure and Sure Organic Cocoa Powder | Natural Unsweetened Cocoa Powder | Dark Cocoa Powder for Cake | 200 gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a">https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Dark Chocolate | Almond Blueberry Chocolate | Tasty &amp; Healthy Dark Chocolate, 30gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>FabCafe Chocolates</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org6957ae4"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-3-2-2">
+<ul class="org-ul">
+<li>L. C. November 2016, “Butyric acid,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/podcasts/butyric-acid/1017662.article">https://www.chemistryworld.com/podcasts/butyric-acid/1017662.article</a></li>
+<li>A. K. August 2021, “How a single ingredient creates silky smooth chocolate without tempering,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/how-a-single-ingredient-creates-silky-smooth-chocolate-without-tempering/4014278.article">https://www.chemistryworld.com/news/how-a-single-ingredient-creates-silky-smooth-chocolate-without-tempering/4014278.article</a></li>
+<li>R. B. January 2018, “Elemental maps of cocoa beans could help cut chocolate contaminants,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/elemental-maps-of-cocoa-beans-could-help-cut-chocolate-contaminants/3008482.article">https://www.chemistryworld.com/news/elemental-maps-of-cocoa-beans-could-help-cut-chocolate-contaminants/3008482.article</a></li>
+
+<li>R. B. February 2019, “Near-death by chocolate,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/near-death-by-chocolate/3009989.article">https://www.chemistryworld.com/opinion/near-death-by-chocolate/3009989.article</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+
+<li><a id="orgd11099c"></a>Sugars<br />
+<ol class="org-ol">
+<li><a id="org7f7ff92"></a>Fruity<br />
+<div class="outline-text-6" id="text-3-1-3-3-1">
+<ul class="org-ul">
+<li>Phalada Pure And Sure Cocunut Palm Sugar</li>
+
+<li>Organic India Jaggery</li>
+</ul>
+</div>
+</li>
+<li><a id="org723b2bd"></a>Table Sugar<br />
+<div class="outline-text-6" id="text-3-1-3-3-2">
+<ul class="org-ul">
+<li>Organic India Brown Sugar</li>
+</ul>
+</div>
+</li>
+<li><a id="org24a2002"></a>Artificial Sugars<br />
+<div class="outline-text-6" id="text-3-1-3-3-3">
+<ul class="org-ul">
+<li>“Sweeteners Archives,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/sweeteners/">https://usrtk.org/category/sweeteners/</a></li>
+
+<li>Organic India Stevia</li>
+
+<li>“Aspartame ‘possibly carcinogenic to humans’, labels WHO expert panel.” <a href="https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623">https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623</a> (accessed Jul. 16, 2023).</li>
+
+<li>C. Russell, C. Grimes, M. Lawrence, P. Baker, and R. Lindberg, “Too Much Sugar Is a Problem. Non-Nutritive Sweeteners Are Not the Solution. – The Wire Science.” <a href="https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/">https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/</a> (accessed Aug. 02, 2022).</li>
+
+<li>B. Wilson, “The price of ‘sugar free’: are sweeteners as harmless as we thought?,” The Guardian, Dec. 08, 2022. Accessed: Dec. 09, 2022. [Online]. Available: <a href="https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought">https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought</a></li>
+
+<li>A. O’Connor, A. Steckelberg, and L. Reiley, “How fake sugars sneak into foods and disrupt metabolic health,” Washington Post. <a href="https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/">https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/</a> (accessed Mar. 10, 2023).</li>
+
+<li>“WHO advises not to use non-sugar sweeteners for weight control in newly released guideline.” <a href="https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline">https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline</a> (accessed May 16, 2023).</li>
+
+<li>“Using sugar substitutes to lose weight could cause harm long-term, warns WHO.” <a href="https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353">https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353</a> (accessed May 17, 2023).</li>
+
+<li>C. Diaz et al., “Artificially sweetened beverages and health outcomes: an umbrella review,” Advances in Nutrition, May 2023, doi: 10.1016/j.advnut.2023.05.010.</li>
+
+<li>“Sickeningly Sweet,” U.S. Right to Know. <a href="https://usrtk.org/sweeteners/">https://usrtk.org/sweeteners/</a> (accessed Mar. 25, 2022).
+<ul class="org-ul">
+<li>S. Malkan, “Aspartame: Decades of Science Point to Serious Health Risks,” U.S. Right to Know, Nov. 15, 2020. <a href="https://usrtk.org/sweeteners/aspartame_health_risks/">https://usrtk.org/sweeteners/aspartame_health_risks/</a> (accessed Mar. 25, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+
+<li><a id="org8b8df54"></a>Music<br />
+<div class="outline-text-6" id="text-3-1-3-3-4">
+<ul class="org-ul">
+<li>Def Leppard, Def Leppard - <i>“Pour Some Sugar On Me”</i> (Official Music Video), (Aug. 27, 2012). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0UIB9Y4OFPs">https://www.youtube.com/watch?v=0UIB9Y4OFPs</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org30a6dbe"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-3-3-5">
+<ul class="org-ul">
+<li>Y. Huang et al., “Dietary sugar consumption and health: umbrella review,” BMJ, vol. 381, p. e071609, Apr. 2023, doi: 10.1136/bmj-2022-071609.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgeffa8df"></a>Honey<br />
+<ol class="org-ol">
+<li><a id="orgef6bf9c"></a>Organic<br />
+<div class="outline-text-6" id="text-3-1-3-4-1">
+<ul class="org-ul">
+<li>“Pro Nature 100% Organic Honey, 500g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Pro-Nature-Organic-Honey-500g/dp/B00MCLQM2K/ref=sr_1_32?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-32">https://www.amazon.in/Pro-Nature-Organic-Honey-500g/dp/B00MCLQM2K/ref=sr_1_32?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-32</a></li>
+
+<li>“Pure &amp; Sure Organic Honey : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Honey-250g/dp/B00M710ISE/ref=sr_1_27?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-27">https://www.amazon.in/Pure-Sure-Organic-Honey-250g/dp/B00M710ISE/ref=sr_1_27?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-27</a></li>
+
+<li>“24 Mantra Organic Wild Honey - 250gms | Pack of 1 | Chemical Free &amp; Pesticides Free | Free from Sugar Syrup : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/24-Mantra-Organic-Wild-Honey/dp/B00L926OVW/ref=sr_1_9?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-9">https://www.amazon.in/24-Mantra-Organic-Wild-Honey/dp/B00L926OVW/ref=sr_1_9?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-9</a></li>
+
+<li>“ORGANIC INDIA Organic Honey Multi Floral 250g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Organic-India-Wild-Forest-Honey/dp/B01J634N86/ref=sr_1_7?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-7">https://www.amazon.in/Organic-India-Wild-Forest-Honey/dp/B01J634N86/ref=sr_1_7?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-7</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4268dec"></a>Music<br />
+<div class="outline-text-6" id="text-3-1-3-4-2">
+<ul class="org-ul">
+<li>Eric Clapton, Honey in Your Hips, (Sep. 06, 2018). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-Lqj1a-Kd4Y">https://www.youtube.com/watch?v=-Lqj1a-Kd4Y</a></li>
+
+<li>Bob Dylan, Bob Dylan - <i>I Want You</i> (Official Audio), (Mar. 12, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-iIS6ZZ9RVA">https://www.youtube.com/watch?v=-iIS6ZZ9RVA</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf85dcdc"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgca5ee38"></a>Gulkand, Rose Jam<br />
+<ol class="org-ol">
+<li><a id="org490f7d5"></a>Organic<br />
+<div class="outline-text-6" id="text-3-1-3-5-1">
+<ul class="org-ul">
+<li>“Two Brothers Organic Farms - Natural Gulkand | A Rose Petal Preserve | Sweetened Using Raw Honey | No Added Sugar | Rose Petal Jam (300G) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Two-Brothers-Organic-Farms-Sweetened/dp/B0B18Z7HXS/ref=sr_1_8?crid=M9A3SUUUVQD4&amp;keywords=organic%2Bgulkand&amp;qid=1703998082&amp;sprefix=organic%2Bgul%2Caps%2C239&amp;sr=8-8&amp;th=1">https://www.amazon.in/Two-Brothers-Organic-Farms-Sweetened/dp/B0B18Z7HXS/ref=sr_1_8?crid=M9A3SUUUVQD4&amp;keywords=organic%2Bgulkand&amp;qid=1703998082&amp;sprefix=organic%2Bgul%2Caps%2C239&amp;sr=8-8&amp;th=1</a></li>
+<li>“Kapiva Organic Gulkand 300gms (Rose Petal Jam) | 100% Natural | Sun-Cooked Damask Roses : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Kapiva-Organic-Gulkand-Antioxidants-Digestion/dp/B083394R89/ref=sr_1_5?crid=M9A3SUUUVQD4&amp;keywords=organic+gulkand&amp;qid=1703998082&amp;sprefix=organic+gul%2Caps%2C239&amp;sr=8-5">https://www.amazon.in/Kapiva-Organic-Gulkand-Antioxidants-Digestion/dp/B083394R89/ref=sr_1_5?crid=M9A3SUUUVQD4&amp;keywords=organic+gulkand&amp;qid=1703998082&amp;sprefix=organic+gul%2Caps%2C239&amp;sr=8-5</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org55c7db3"></a>Indian<br />
+<div class="outline-text-5" id="text-3-1-3-6">
+<ul class="org-ul">
+<li>“24Mantra Organic Peanut Chikki, (33g*30N). : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1">https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“I Say Organic Assorted Sweet Combo of Shakarpara Meetha (100 grams) | Peanut Chikki 150gm | Sesame Chikki 150gm | Indian Snacks | Organic | Homemade and Ready to Eat | Homemade Sweets (Pack of 3) : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1">https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“I Say Organic Shakarpara Meetha, 100 G | Indian Snacks | Homemade &amp; Ready to Eat, | Chini Ke Shakarpare | Sugar Shakarpara | Homemade Shakarpare : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1">https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+
+
+
+
+<li><a id="org2690830"></a>Pancakes<br />
+<div class="outline-text-5" id="text-3-1-3-7">
+<ul class="org-ul">
+<li>E. Kidwell, “How to Make the Perfect Pancake,” IMA. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://ima.org.uk/3877/make-perfect-pancake/">https://ima.org.uk/3877/make-perfect-pancake/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org92404d7" class="outline-4">
+<h4 id="org92404d7"><span class="section-number-4">3.1.4.</span> Savory Items</h4>
+<div class="outline-text-4" id="text-3-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org99785d8"></a>Nuts<br />
+<div class="outline-text-5" id="text-3-1-4-1">
+<ul class="org-ul">
+<li>“Organic Peanut Masala-200Gms : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Masala-Peanut/dp/B07SD16MJM/ref=sr_1_38?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-38">https://www.amazon.in/Pure-Sure-Organic-Masala-Peanut/dp/B07SD16MJM/ref=sr_1_38?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-38</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0c17fd4"></a>Pulses<br />
+<div class="outline-text-5" id="text-3-1-4-2">
+<ul class="org-ul">
+<li>24 Mantra Roasted Bengal Gram</li>
+</ul>
+</div>
+</li>
+<li><a id="org540441d"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-4-3">
+<ul class="org-ul">
+<li>Nourish Organics Poha</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pure &amp; Sure Organic Nippattu Snack | Delicious South Indian Namkeen | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Nippat-200g/dp/B00M8TENTU/ref=sr_1_55?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-55&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Nippat-200g/dp/B00M8TENTU/ref=sr_1_55?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-55&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Chiwda Namkeen | Organic Snacks | Pure &amp; Sure Sweet and Salt Chiwda | 200gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chiwda-Namkeen/dp/B09DPFLD3B/ref=sr_1_39?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-39">https://www.amazon.in/Pure-Sure-Organic-Chiwda-Namkeen/dp/B09DPFLD3B/ref=sr_1_39?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-39</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Kara Sev | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Khara-200gm/dp/B07SBW5M2P/ref=sr_1_31?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-31&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Khara-200gm/dp/B07SBW5M2P/ref=sr_1_31?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-31&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Phalada Pure &amp; Sure Organic Masala Boondi | Organic Snacks | Pure &amp; Sure Thyme Masala Boondi for Raita | 200gms. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Masala-200gms/dp/B09DNX5PGR/ref=sr_1_30?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-30">https://www.amazon.in/Pure-Sure-Organic-Masala-200gms/dp/B09DNX5PGR/ref=sr_1_30?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-30</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Peri Peri Chakli Snack, Delicious Chrunchy Namkeen and Snacks, Ready to Eat Snacks Cholesterol Free No Trans Fats No Preservatives, Pack Of 1 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Delicious-Cholesterol-Preservatives/dp/B09NKSWB58/ref=sr_1_32?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-32">https://www.amazon.in/Pure-Sure-Delicious-Cholesterol-Preservatives/dp/B09NKSWB58/ref=sr_1_32?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-32</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Palak Chakli Snack | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives | Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Palak-Chakli/dp/B07SCZ7TTB/ref=sr_1_15?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-15&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Palak-Chakli/dp/B07SCZ7TTB/ref=sr_1_15?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-15&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Kodubale | South Indian Snacks | Healthy &amp; Delicious Rice Kodubale Snack | Pack Of 1, 200g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Kodbale-200g/dp/B00M8TEKZW/ref=sr_1_11?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-11&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Kodbale-200g/dp/B00M8TEKZW/ref=sr_1_11?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-11&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Methi Sticks 200 Gms | Healthy Snacks, No Preservative or Artificial Flavours : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Preservative-Artificial-Flavours/dp/B09DP9TQQD/ref=sr_1_10?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-10">https://www.amazon.in/Pure-Sure-Preservative-Artificial-Flavours/dp/B09DP9TQQD/ref=sr_1_10?keywords=pure+and+sure&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=8-10</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Phalada Pure &amp; Sure Organic Chakli, 200g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chakli-200g/dp/B00M8TEHLO/ref=sr_1_8?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-8&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Chakli-200g/dp/B00M8TEHLO/ref=sr_1_8?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-8&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pure &amp; Sure Organic Aloo Bhujia | Delicious Namkeen and Snacks | Ready to Eat Snacks, Cholesterol Free, No Trans Fats, No Preservatives |Pack Of 1, 200gm : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Aloo-Bhujiya/dp/B07SBW1333/ref=rvi_sccl_31/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07SBW1333&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Aloo-Bhujiya/dp/B07SBW1333/ref=rvi_sccl_31/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B07SBW1333&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+
+<li>“Pintola Organic Wholegrain Brown Rice Cakes (All Natural, Unsalted), 125 g : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/gp/product/B083RXY8T3/ref=ox_sc_saved_title_2?smid=ARENK22K2PQRH&amp;th=1">https://www.amazon.in/gp/product/B083RXY8T3/ref=ox_sc_saved_title_2?smid=ARENK22K2PQRH&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org32b542a" class="outline-4">
+<h4 id="org32b542a"><span class="section-number-4">3.1.5.</span> Intoxicants</h4>
+<div class="outline-text-4" id="text-3-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org84c7835"></a>Alcoholic Beverages<br />
+<ol class="org-ol">
+<li><a id="org00a8b93"></a>General<br />
+<div class="outline-text-6" id="text-3-1-5-1-1">
+<ul class="org-ul">
+<li>S. Farrell, <b>A Good Drink: In Pursuit of Sustainable Spirits.</b> Island Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2e90eef"></a>Organic Wine<br />
+<div class="outline-text-6" id="text-3-1-5-1-2">
+<ul class="org-ul">
+<li>“Why you should be drinking organic wine and where to find it,” the Guardian, Feb. 07, 2015. <a href="http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it">http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it</a> (accessed Aug. 14, 2020).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Shapley and A. Garrity, <b>“12 Best Organic Wines for Every Occassion,”</b> Good Housekeeping, Oct. 10, 2017. <a href="https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines">https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines</a> (accessed Mar. 14, 2022).
+<ul class="org-ul">
+<li>Badger Mountain Riesling</li>
+<li>Nativa Terra Reserva Carmenère</li>
+<li>Paul Dolan Vineyards Chardonnay</li>
+<li>Parducci Sustainable Red Wine</li>
+<li>The Vegan Vine Red Wine</li>
+<li>Lapostolle Casa Merlot</li>
+<li>Bonterra Vineyards Cabernet Sauvignon</li>
+<li>Tikal Natural Organic Red Blend</li>
+<li>CalNaturale Cabernet Sauvignon</li>
+<li>CalNaturale Chardonnay</li>
+<li>Domaine Carneros Pinot Noir</li>
+<li>Hall Wines Cabernet Sauvignon</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org50b398d"></a>Organic Beer<br />
+<div class="outline-text-6" id="text-3-1-5-1-3">
+<ul class="org-ul">
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).
+<ul class="org-ul">
+<li>The beers on this list below are clean of additives (including
+processing aids like carrageenan and isinglass) and transparent
+about their ingredients. They either list the complete ingredients
+on their website, on the bottle label, or emailed us the ingredient
+list.  We have not been compensated in any way for these
+recommendations and we are in no way affiliated with these
+brands. We know there are many more brands out there, if your
+favorite beer is not on this list, contact them to find out the
+truth. We will be constantly updating this list as we get more
+information.
+<ul class="org-ul">
+<li>Wolaver’s 100% Organic, IPA: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Brown Ale: Water, Malts, Hops, Yeast</li>
+<li>Wolaver’s 100% Organic, Oatmeal Stout: Water, Malts, Hops, Yeast</li>
+<li>Samuel Smith, Organic Pale Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Samuel Smith, Nut Brown Ale:  Water, Barley Malt, Yeast, Cane Sugar, Hops, Roasted Barley</li>
+<li>Samuel Smith Taddy Porter:  Water, Malted Barley, Yeast, Hops, Roasted Malt, Cane Sugar</li>
+<li>Samuel Smith Oatmeal Stout:  Water, Malted Barley, Cane Sugar, Roasted Malt, Yeast, Hops, Oatmeal</li>
+<li>Samuel Smith India Ale:  Water, Malted Barley, Yeast, Hops</li>
+<li>Samuel Smith Imperial Stout:  Water, Malted Barley, Roasted Malt, Cane Sugar, Yeast, Hops.</li>
+<li>Pinkus, Organic Ur Pils:  Water, Barley Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Hefe-Weizen:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Pinkus, Organic Münster Alt:  Water, Barley Malt, Wheat Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic Summer Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Winter Session:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Fresh Cut:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Hop Blanc:  Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Weiss Principal: Water, Barley Malt, Wheat, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Nut Brown Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Peak Brewing 100% Organic, Amber Ale:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pilsner:  Water, Barley Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Porter:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Butte Creek Organic India Pale Ale:  Water, Barley Malts, Wheat Malt, Hops, Yeast</li>
+<li>Steam Whistle: Water, Malted Barley, Hops Yeast</li>
+<li>Heineken:  Water, Barley Malt, Hops Yeast</li>
+<li>Leavenworth, Whistling Pig Hefeweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Leavenworth, Boulder Bend Dunkelweizen:  Water, Barley, Wheat, Hops, Yeast</li>
+<li>Dogfish Head, 90 Minute IPA:  Water, Barley Malt, Hops, Yeast</li>
+<li>Amarcord, Gradisca:  Water, Barley Malt, Hops, Yeast</li>
+<li>Green’s Dry-Hopped Lager (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Dubbel Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Amber Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Green’s Tripel Blonde Ale (gluten-free/vegan): Water, Millet, Buckwheat (soba), Rice, Sorghum, Hops, Yeast.</li>
+<li>Bison Organic Hop Cuvee:   Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Chocolate Stout:  Water, Organic Malt, Organic Hops, Yeast, Organic Cocoa</li>
+<li>Bison Organic Honey Basil:  Water, Organic Malt, Organic Hops, Yeast, Organic Honey, Organic Basil</li>
+<li>Bison Organic Saison de Wench:  Water, Organic Malt, Organic Hops, Organic Hibiscus, Organic Roses, Organic Lemongrass, Yeast</li>
+<li>Bison Organic Kermit the Hop: Water, Organic Malt, Organic Hops, Yeast</li>
+<li>Bison Organic Gingerbread: Water, Organic Malt, Organic Hops, Organic Spices, Yeast</li>
+</ul></li>
+<li>Please Note: Most German beers are brewed in accordance with German
+Purity Law – Reinheitsgebot – and only can contain a core ingredient
+list of water, hops, yeast, malted barley or wheat.  Although most
+German beers are not listed here, a reference to “Reinheitsgebot’
+will typically be noted on the label.</li>
+</ul></li>
+<li><b>“Clean Beer Choices - Beer Companies That Tell Us What’s In Their Beer!,”</b> Food Babe. <a href="https://foodbabe.com/cleanbeer/">https://foodbabe.com/cleanbeer/</a> (accessed Aug. 14, 2020).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org50a9796"></a>Bhang (aka 'Special' Prasad)<br />
+<div class="outline-text-5" id="text-3-1-5-2">
+<ul class="org-ul">
+<li>“Bhang,” Wikipedia. Feb. 17, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376">https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Staelens, “The Bhang Lassi Is How Hindus Drink Themselves High for Shiva,” Vice, Mar. 10, 2015. <a href="https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva">https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva</a> (accessed Feb. 18, 2023).</li>
+<li>Z. M. Khan, “Here’s the Deal With Bhang Gola,” Vice, Jul. 17, 2018. <a href="https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola">https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org59d29af" class="outline-3">
+<h3 id="org59d29af"><span class="section-number-3">3.2.</span> Food</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Celebrating the festival of colours, the ‘organic way’ #OrganicWaliHoli,” Organic India. <a href="https://organicindia.com/blogs/recent/celebrating-the-festival-of-colours-the-organic-way-organicwaliholi">https://organicindia.com/blogs/recent/celebrating-the-festival-of-colours-the-organic-way-organicwaliholi</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc4678d5" class="outline-3">
+<h3 id="orgc4678d5"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li><b>“Buy Holi Products from Fabindia Holi Collection online.”</b> <a href="https://www.fabindia.com/collection/holi-special">https://www.fabindia.com/collection/holi-special</a> (accessed Mar. 16, 2022).</li>
+
+<li><b>“Herbal &amp; Natural Holi Colors and Gift Hampers Online in India | I Say Organic.”</b> <a href="https://www.isayorganic.com/collections/holi-specials">https://www.isayorganic.com/collections/holi-specials</a> (accessed Mar. 15, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org54b89e6" class="outline-2">
+<h2 id="org54b89e6"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3affdfd" class="outline-3">
+<h3 id="org3affdfd"><span class="section-number-3">4.1.</span> Music</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgc94405d" class="outline-4">
+<h4 id="orgc94405d"><span class="section-number-4">4.1.1.</span> Classical Music</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1e0afa3"></a>Dhrupad<br />
+<div class="outline-text-5" id="text-4-1-1-1">
+<ul class="org-ul">
+<li>Dagar Brothers, <b>Kafi Ki Hori</b>, 2009. Accessed March 15, 2021. <a href="https://www.discogs.com/Dagar-Brothers-2-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-Dagar-Late-Khan-Sahib-Ustad-Nasir-Aminuddin-D/release/11250388">https://www.discogs.com/Dagar-Brothers-2-Late-Khan-Sahib-Ustad-Nasir-Moinuddin-Dagar-Late-Khan-Sahib-Ustad-Nasir-Aminuddin-D/release/11250388</a>.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd29efdd"></a>Light<br />
+<ol class="org-ol">
+<li><a id="orge27865a"></a>Chhannulal Mishra<br />
+<div class="outline-text-6" id="text-4-1-1-2-1">
+<ul class="org-ul">
+<li>Chhannulal Mishra - Topic, Hori - Hori Khelat Nandkumar - Raga Kafi - Teentaal, (Jul. 25, 2020). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=C_1f3hdk-40">https://www.youtube.com/watch?v=C_1f3hdk-40</a></li>
+<li>Chhannulal Mishra - Topic, Hori - Aye Khelan Holi - Raga Yaman - Jhaptal, (Jul. 25, 2020). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=RQSwJht-WNo">https://www.youtube.com/watch?v=RQSwJht-WNo</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org27f6342"></a>Ashwini Bhide<br />
+<div class="outline-text-6" id="text-4-1-1-2-2">
+<ul class="org-ul">
+<li>Music Today, Kaisi Hori Machayi Kanhaiyi - Pandit Bhimsen Joshi, (Nov. 18, 2015). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=NuS-gbvxKwc">https://www.youtube.com/watch?v=NuS-gbvxKwc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2694cb8"></a>Girija Devi<br />
+<div class="outline-text-6" id="text-4-1-1-2-3">
+<ul class="org-ul">
+<li>Girija Devi - Topic, Hori In Mishra Pilu, (Feb. 21, 2015). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=APymNLQ5OPQ">https://www.youtube.com/watch?v=APymNLQ5OPQ</a></li>
+<li>Girija Devi - Topic, Raga Piloo - Hori Aisi Hori Na Khelo - Teen Taal, (Feb. 28, 2017). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=AQnElgDOVbc">https://www.youtube.com/watch?v=AQnElgDOVbc</a></li>
+<li>Girija Devi - Topic, Khel Rahe Rang Hori - Hori, (Jul. 18, 2019). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=PLUdQqHRAWg">https://www.youtube.com/watch?v=PLUdQqHRAWg</a></li>
+<li>Girija Devi - Topic, Rang Daroongi Nand Ke Lalan Pe - Hori, (Feb. 16, 2019). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=NF7w8bYWzcE">https://www.youtube.com/watch?v=NF7w8bYWzcE</a></li>
+<li>Music Today, Kaisi Dhoom Machai Hori Kafi | Girija Devi | ( Album: Songs Of The Seasons Vol 1 ) | Music Today, (Mar. 03, 2016). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=pyL08gxqQQ4">https://www.youtube.com/watch?v=pyL08gxqQQ4</a></li>
+<li>SonyMusicIndiaVEVO, Girija Devi - Hori in Raga Mishra Kafi (Deepchandi Taal (Pseudo Video)), (May 22, 2014). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=SQDAN4fD7Yo">https://www.youtube.com/watch?v=SQDAN4fD7Yo</a></li>
+<li>Prasar Bharati Archives, Girija Devi &amp; Birju Maharaj | Light Classical Music on Holi | Jugalbandi | Holi, (Mar. 20, 2019). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=dTz315LE9SI">https://www.youtube.com/watch?v=dTz315LE9SI</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7b415e0"></a>Shobha Gurtu<br />
+<div class="outline-text-6" id="text-4-1-1-2-4">
+<ul class="org-ul">
+<li>Aaj Biraj Mein Holi Re Rasiya Rasiya | Shobha Gurtu | (Songs Of The Seasons Vol 2) | Music Today, (Mar. 03, 2016). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Bx4DxKTLzHU">https://www.youtube.com/watch?v=Bx4DxKTLzHU</a>
+<ul class="org-ul">
+<li>AIR Raagam, Shobha Gurtu II Hori - Mishra Kafi. Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0MpmpQc9Po0">https://www.youtube.com/watch?v=0MpmpQc9Po0</a></li>
+<li>Shobha Gurtu - Topic, Raga :Holi Pilu in “Holi Khelan Kaise Jaoon - Shobha Gurtu,” (Sep. 25, 2014). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=SoDgh13-b44">https://www.youtube.com/watch?v=SoDgh13-b44</a></li>
+<li>Music Today, Aaj Biraj Mein Holi Re Rasiya Rasiya | Shobha Gurtu | (Songs Of The Seasons Vol 2) | Music Today, (Mar. 03, 2016). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=Bx4DxKTLzHU">https://www.youtube.com/watch?v=Bx4DxKTLzHU</a></li>
+<li>AIR Raagam, Shobha Gurtu II Hori - Jhinjhoti. Accessed: Mar. 18, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=kP-35_9NGdA">https://www.youtube.com/watch?v=kP-35_9NGdA</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org0c7341c"></a>Shubha Mudgal<br />
+<div class="outline-text-6" id="text-4-1-1-2-5">
+<ul class="org-ul">
+<li>Music Today, Kanhaiya Ghar Chalo Mori ( Hori ) | Shubha Mudgal | ( Album: Songs Of The Seasons Vol 4 ), (Mar. 03, 2016). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=oScNA35Ge3I">https://www.youtube.com/watch?v=oScNA35Ge3I</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9e6b6ad"></a>Lakshmi Shankar<br />
+<div class="outline-text-6" id="text-4-1-1-2-6">
+<ul class="org-ul">
+<li>Music Today, Holi Khelat Banwari ( Hori ) | Lakshmi Shankar | ( Album: Songs Of The Seasons Vol 3 ) | Music Today, (Mar. 03, 2016). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=2kMsVSpxwqI">https://www.youtube.com/watch?v=2kMsVSpxwqI</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0480b73"></a>Begum Akhtar<br />
+<div class="outline-text-6" id="text-4-1-1-2-7">
+<ul class="org-ul">
+<li>Begum Akhtar - Thumri - Kajri - Hori - Sawan - Dadra. 1981. Accessed: Mar. 06, 2023. [Online]. Available: <a href="https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra">https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1ee67db"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-1-2-8">
+<ul class="org-ul">
+<li>Holi Khele Raghuveera | Awadh Ki Mazedar Holi | Malini Awasthi | Energetic Performance, (Mar. 29, 2021). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ZmCqLvw6mHA">https://www.youtube.com/watch?v=ZmCqLvw6mHA</a></li>
+
+<li>“Barjori Karo Na Mose Hori Mein | Hori | Savita Devi | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=sKHwuuPdhRo&amp;list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA&amp;index=3">https://www.youtube.com/watch?v=sKHwuuPdhRo&amp;list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA&amp;index=3</a> (accessed Mar. 04, 2023).</li>
+
+<li><a href="https://music.apple.com/in/album/hori/333014444">https://music.apple.com/in/album/hori/333014444</a></li>
+
+<li><i>Hori</i>, MusicToday.
+<ul class="org-ul">
+<li>“Hori | A collection of beautiful songs on Holi | Various Artistes | Music Today - YouTube.” <a href="https://www.youtube.com/watch?v=CxVnn2Z2qKU">https://www.youtube.com/watch?v=CxVnn2Z2qKU</a> (accessed Mar. 15, 2022).</li>
+</ul></li>
+
+<li><i>Rang Darungi</i>, MusicToday.
+<ul class="org-ul">
+<li>“Rang Darungi - Semi Classical Renditions on Holi by Chhannulal Mishra &amp; Girija Devi on Prime Music.” <a href="https://music.amazon.in/albums/B07BJ9VTXK">https://music.amazon.in/albums/B07BJ9VTXK</a> (accessed Mar. 19, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org64f108f"></a>Sufi<br />
+<div class="outline-text-5" id="text-4-1-1-3">
+<ul class="org-ul">
+<li>Aaj Rang Hai - Abida Parveen (Album: Live concert Swarutsav 2000) | Music Today, (Dec. 24, 2015). Accessed: Feb. 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VAb0oe986zE">https://www.youtube.com/watch?v=VAb0oe986zE</a></li>
+<li><i>Aaj Rang Hai</i>, Ustad Nusrat Fateh Ali Khan.
+<ul class="org-ul">
+<li>Navras Records, Ustad Nusrat Fateh Ali Khan ~ Aaj Rang Hai, (May 17, 2020). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=NI4jtyMP9j4">https://www.youtube.com/watch?v=NI4jtyMP9j4</a></li>
+<li>Nupur Audio Mehfil, Aaj Rang Hai Ri Maa | Nusrat Fateh Ali Khan | Latest Qawwali | Nupur Audio, (Jan. 08, 2020). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=8aHxOuEsOEA">https://www.youtube.com/watch?v=8aHxOuEsOEA</a></li>
+</ul></li>
+<li>Rang Aaj Rang Hai - Warsi Brothers (Album: Qawwali - Warsi Brothers - Vol 2), (Dec. 11, 2015). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=oM3ZozonjF0">https://www.youtube.com/watch?v=oM3ZozonjF0</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Ji Chahe (&#x2026;Hori Ho Rahi Hai)</i>, Raqs-E-Bismil, Smt. Abida Parveen, MusicToday.
+<ul class="org-ul">
+<li>Music Today, Ji Chahe  | Abida Parveen (Album: Raqs E Bismil), (Mar. 18, 2016). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=v3kZlaH035E">https://www.youtube.com/watch?v=v3kZlaH035E</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org05be088"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-1-4">
+<ul class="org-ul">
+<li>Girija Devi &amp; Birju Maharaj | Light Classical Music on Holi | Jugalbandi | Holi, (Mar. 20, 2019). Accessed: Feb. 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=dTz315LE9SI">https://www.youtube.com/watch?v=dTz315LE9SI</a></li>
+
+<li>“Holi ke Rang Tesu ke Phool by Pandit Chhannulal Mishra on Prime Music.” <a href="https://music.amazon.in/albums/B07BTCQWTJ">https://music.amazon.in/albums/B07BTCQWTJ</a> (accessed Mar. 05, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgfb77aa1" class="outline-4">
+<h4 id="orgfb77aa1"><span class="section-number-4">4.1.2.</span> Films</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org42e6fc8"></a>Collections<br />
+<div class="outline-text-5" id="text-4-1-2-1">
+<ul class="org-ul">
+<li>Saregama Music, Holi Hai - Best Bollywood Holi Songs | HD Songs Jukebox, (Mar. 19, 2013). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=JKNcrJzjEWU">https://www.youtube.com/watch?v=JKNcrJzjEWU</a></li>
+
+<li>Saregama GenY, Holi Ki Dhoom | Non-stop Holi Special Songs | Rang Barse Bheege Chunarwali Rang Barse, (Mar. 11, 2014). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=WPFilOk8VmU">https://www.youtube.com/watch?v=WPFilOk8VmU</a></li>
+
+<li>Best of Bollywood Holi Songs |Top 25 Holi Songs|Non Stop Holi Playlist| Rang Barse |Aaj Na Chhodenge, (Mar. 18, 2022). Accessed: Feb. 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3RkceYMtPtM">https://www.youtube.com/watch?v=3RkceYMtPtM</a></li>
+
+<li>Saregama Music, Holi Special | Holi Re Holi  | Rang Barse Bheege Chunarwali | Nonstop, (Mar. 29, 2021). Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=oYTiQ5EjdMs">https://www.youtube.com/watch?v=oYTiQ5EjdMs</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc76fa0b"></a>Solo<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ul class="org-ul">
+<li>Hori Mein - Gulmohar | Manoj Bajpayee &amp; Sharmila Tagore | Kavita Seth, Siddhartha K, Alan D, Shellee, (Feb. 17, 2023). Accessed: Mar. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0SLMvbWrk5M">https://www.youtube.com/watch?v=0SLMvbWrk5M</a></li>
+
+<li>Hori Khele Raghuveera Full Song | Baghban | Amitabh Bachchan, Hema Malini, (Feb. 17, 2013). Accessed: Mar. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=87FYp3YLEBM">https://www.youtube.com/watch?v=87FYp3YLEBM</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. L. Saigal - झुलना झुलाओ / होरी हो ब्रजराज - गित​. 1966. Accessed: Mar. 05, 2023. [Online]. Available: <a href="https://www.discogs.com/release/23636930-K-L-Saigal-%E0%A4%9D%E0%A4%B2%E0%A4%A8-%E0%A4%9D%E0%A4%B2%E0%A4%93-%E0%A4%B9%E0%A4%B0-%E0%A4%B9-%E0%A4%AC%E0%A4%B0%E0%A4%9C%E0%A4%B0%E0%A4%9C-%E0%A4%97%E0%A4%A4">https://www.discogs.com/release/23636930-K-L-Saigal-%E0%A4%9D%E0%A4%B2%E0%A4%A8-%E0%A4%9D%E0%A4%B2%E0%A4%93-%E0%A4%B9%E0%A4%B0-%E0%A4%B9-%E0%A4%AC%E0%A4%B0%E0%A4%9C%E0%A4%B0%E0%A4%9C-%E0%A4%97%E0%A4%A4</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org5ad0981" class="outline-4">
+<h4 id="org5ad0981"><span class="section-number-4">4.1.3.</span> Regional</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgbd13eb7"></a>Bengal<br />
+<div class="outline-text-5" id="text-4-1-3-1">
+<ul class="org-ul">
+<li>Saregama Bengali, Weekend Classic Radio Show | Holi Special Songs Of Tagore &amp; Nazrul | Phagun Hawoay | Aajke Doler |, (Mar. 21, 2019). Accessed: Mar. 21, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=elZleIFmCXE">https://www.youtube.com/watch?v=elZleIFmCXE</a></li>
+<li>Esho Kheli Holi | Holi Special Songs | Holi Songs Jukebox |  Bengali Movie Song | Sony Music East, (Feb. 28, 2018). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IDvN3-Ce0G0">https://www.youtube.com/watch?v=IDvN3-Ce0G0</a></li>
+<li>Rangiye Diye Jao | Holi Special Songs | Evergreen Bengali Songs, (Mar. 02, 2018). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=8TMMXakOq3E">https://www.youtube.com/watch?v=8TMMXakOq3E</a></li>
+<li>“Aaj Krishnachurar Aabir Niye | Hangsamithun | Hemanta Mukherjee and Sandhya Mukherjee | Audio - YouTube.” <a href="https://www.youtube.com/watch?v=aVCVIxk23j8&amp;list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA&amp;index=14">https://www.youtube.com/watch?v=aVCVIxk23j8&amp;list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA&amp;index=14</a> (accessed Mar. 04, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc56cca4"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org747b336" class="outline-4">
+<h4 id="org747b336"><span class="section-number-4">4.1.4.</span> Devotional</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li><a href="https://music.apple.com/in/playlist/devotional-holi/pl.ab4cf644f7fe40ffbe53ef66075e66ad">https://music.apple.com/in/playlist/devotional-holi/pl.ab4cf644f7fe40ffbe53ef66075e66ad</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org85851e4" class="outline-4">
+<h4 id="org85851e4"><span class="section-number-4">4.1.5.</span> Dance Party</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<ul class="org-ul">
+<li><a href="https://music.apple.com/in/playlist/holi-dance-party/pl.8bae63d6a7a84891bf723af6f628965f">https://music.apple.com/in/playlist/holi-dance-party/pl.8bae63d6a7a84891bf723af6f628965f</a></li>
+<li>Coke Studio Bharat | Holi Re Rasiya | Maithili Thakur x Seedhe Maut x Ravi Kishan x Mahan, (Feb. 21, 2023). Accessed: Mar. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=5QFL3JzEgrc">https://www.youtube.com/watch?v=5QFL3JzEgrc</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40aadd7" class="outline-4">
+<h4 id="org40aadd7"><span class="section-number-4">4.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<ul class="org-ul">
+<li>“SpiritualityHoli | Community Playlist on Prime Music.” <a href="https://music.amazon.in/user-playlists/50d31fa1817947ec973490af0d847821i8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN">https://music.amazon.in/user-playlists/50d31fa1817947ec973490af0d847821i8n0?marketplaceId=A3K6Y4MI8GDYMT&amp;musicTerritory=IN</a> (accessed Jun. 18, 2023).</li>
+
+<li>“Holi - YouTube.” <a href="https://www.youtube.com/playlist?list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA">https://www.youtube.com/playlist?list=PL3fRBy5PCHGedvRP_nqdqA9g5p-ox1qvA</a> (accessed Mar. 07, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf7e06e7" class="outline-3">
+<h3 id="orgf7e06e7"><span class="section-number-3">4.2.</span> Films</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>“Holi in Films Is Full of Emotions – From the Exuberant to the Naughty,” The Wire. <a href="https://thewire.in/culture/holi-in-films-is-full-of-emotions-from-the-exuberant-to-the-naughty">https://thewire.in/culture/holi-in-films-is-full-of-emotions-from-the-exuberant-to-the-naughty</a> (accessed Mar. 19, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org809cf51" class="outline-2">
+<h2 id="org809cf51"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org0cf87c4" class="outline-3">
+<h3 id="org0cf87c4"><span class="section-number-3">5.1.</span> Color</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org2a7899f" class="outline-4">
+<h4 id="org2a7899f"><span class="section-number-4">5.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Color,” Wikipedia. Mar. 08, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Color&amp;oldid=1075955638">https://en.wikipedia.org/w/index.php?title=Color&amp;oldid=1075955638</a></li>
+<li>B. Maund, “Color,” in The Stanford Encyclopedia of Philosophy, Spring 2022., E. N. Zalta, Ed. Metaphysics Research Lab, Stanford University, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://plato.stanford.edu/archives/spr2022/entries/color/">https://plato.stanford.edu/archives/spr2022/entries/color/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge579dd6" class="outline-4">
+<h4 id="orge579dd6"><span class="section-number-4">5.1.2.</span> Psychology</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>A. J. Elliot, M. D. Fairchild, and A. Franklin, Handbook of Color Psychology. Cambridge University Press, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdb18811" class="outline-4">
+<h4 id="orgdb18811"><span class="section-number-4">5.1.3.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-5-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org4deb112"></a>Hindu Art<br />
+<div class="outline-text-5" id="text-5-1-3-1">
+<ul class="org-ul">
+<li>“Hindu art,” Wikipedia. Mar. 14, 2022. Accessed: Mar. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hindu_art&amp;oldid=1077164290">https://en.wikipedia.org/w/index.php?title=Hindu_art&amp;oldid=1077164290</a></li>
+<li>M. Noble, Hindu Gods and Goddesses Stained Glass Coloring Book. Courier Corporation, 2008.</li>
+<li>T. R. Blurton, Hindu Art. Harvard University Press, 1993.</li>
+<li>G. Michell, Hindu Art and Architecture. Thames &amp; Hudson, 2000.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfebf962"></a>Colorism<br />
+<ol class="org-ol">
+<li><a id="org3d22712"></a>General<br />
+<div class="outline-text-6" id="text-5-1-3-2-1">
+<ul class="org-ul">
+<li>“Discrimination based on skin color,” Wikipedia. Mar. 05, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Discrimination_based_on_skin_color&amp;oldid=1075300980">https://en.wikipedia.org/w/index.php?title=Discrimination_based_on_skin_color&amp;oldid=1075300980</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfb57274"></a>Misc<br />
+<div class="outline-text-6" id="text-5-1-3-2-2">
+<ul class="org-ul">
+<li>N. G. Jablonski, Living Color: The Biological and Social Meaning of Skin Color. University of California Press, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge231ac6"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgda65631"></a>Music<br />
+<div class="outline-text-7" id="text-orgda65631">
+<ul class="org-ul">
+<li>“Michael Jackson - Black Or White (Official Video - Shortened Version) - YouTube.” <a href="https://www.youtube.com/watch?v=F2AitTPI5U0">https://www.youtube.com/watch?v=F2AitTPI5U0</a> (accessed Oct. 08, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org567cda5" class="outline-4">
+<h4 id="org567cda5"><span class="section-number-4">5.1.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<ul class="org-ul">
+<li>J. Gage, Color and Culture: Practice and Meaning from Antiquity to Abstraction. University of California Press, 1999.</li>
+<li>J. Gage, Color and Meaning: Art, Science, and Symbolism. University of California Press, 1999.</li>
+<li>D. E. Carter, The New Big Book of Color. HarperCollins, 2006.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5768a5e" class="outline-3">
+<h3 id="org5768a5e"><span class="section-number-3">5.2.</span> Vrindavan</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>V. Today, “Brajmandal Holi Festival Calendar 2024,” Vrindavan Today. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://vrindavantoday.in/brajmandal-holi-festival-calendar-2024/">https://vrindavantoday.in/brajmandal-holi-festival-calendar-2024/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb6a0e46" class="outline-3">
+<h3 id="orgb6a0e46"><span class="section-number-3">5.3.</span> Islam</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>R. Safvi, <i>“In Mughal India, Holi was celebrated with the same exuberance as Eid,”</i> Scroll.in. <a href="http://scroll.in/article/800900/in-mughal-india-holi-was-celebrated-with-the-same-pomp-as-eid">http://scroll.in/article/800900/in-mughal-india-holi-was-celebrated-with-the-same-pomp-as-eid</a> (accessed Mar. 23, 2021).</li>
+<li>Various, <i>“Two poems that show an Islamic tradition of celebrating Holi and colours,”</i> Scroll.in. <a href="http://scroll.in/article/805588/two-poems-that-show-an-islamic-tradition-of-celebrating-holi-and-colours">http://scroll.in/article/805588/two-poems-that-show-an-islamic-tradition-of-celebrating-holi-and-colours</a> (accessed Mar. 23, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b547c0" class="outline-2">
+<h2 id="org7b547c0"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+<p>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-03-14 Thu 13:12</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
