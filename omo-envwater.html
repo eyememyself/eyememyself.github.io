@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-06-29 Sat 13:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Water</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Water</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd3729a7">1. General</a></li>
+<li><a href="#orga314892">2. STEMM</a>
+<ul>
+<li><a href="#orgae8a1c9">2.1. Systems Sciences</a></li>
+<li><a href="#org18e8ecc">2.2. CSE</a></li>
+<li><a href="#orgd3cf269">2.3. Chemistry</a></li>
+<li><a href="#org3cfc295">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org034aa2a">3. World</a>
+<ul>
+<li><a href="#orgf9dc447">3.1. Politics</a></li>
+<li><a href="#org99dc597">3.2. Nation States</a>
+<ul>
+<li><a href="#orgb196403">3.2.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org24e6774">3.3. People</a></li>
+<li><a href="#orga91ee60">3.4. Orgs</a></li>
+<li><a href="#org0dfdbce">3.5. Events</a>
+<ul>
+<li><a href="#org7ced79c">3.5.1. Misc</a></li>
+<li><a href="#org9063057">3.5.2. Droughts</a></li>
+</ul>
+</li>
+<li><a href="#org5b9dff6">3.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1e99820">4. Core</a>
+<ul>
+<li><a href="#org966c55f">4.1. Water Bodies</a>
+<ul>
+<li><a href="#orgd6c1e22">4.1.1. Oceans</a></li>
+<li><a href="#orgc04ddea">4.1.2. Seas</a></li>
+<li><a href="#org76e394e">4.1.3. Rivers</a></li>
+<li><a href="#org3cfc7a3">4.1.4. Lakes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org22e2c4e">5. Arts</a>
+<ul>
+<li><a href="#orgaf68463">5.1. Music</a></li>
+</ul>
+</li>
+<li><a href="#org7b3dbe9">6. Special Topics</a>
+<ul>
+<li><a href="#orga0e1182">6.1. Fluoride</a></li>
+<li><a href="#org82b3ae5">6.2. AMOC</a></li>
+<li><a href="#org7523f36">6.3. Drinking Water</a>
+<ul>
+<li><a href="#org308b744">6.3.1. General</a></li>
+<li><a href="#org01eb7de">6.3.2. Bottled</a></li>
+<li><a href="#org64022b3">6.3.3. Brands</a></li>
+<li><a href="#org7cff234">6.3.4. Purifiers</a></li>
+<li><a href="#org456adbb">6.3.5. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfcdaf9e">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgd3729a7" class="outline-2">
+<h2 id="orgd3729a7"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Hydrology,” Wikipedia. Oct. 06, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hydrology&amp;oldid=1114450379">https://en.wikipedia.org/w/index.php?title=Hydrology&amp;oldid=1114450379</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga314892" class="outline-2">
+<h2 id="orga314892"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgae8a1c9" class="outline-3">
+<h3 id="orgae8a1c9"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Community Water Model (CWatM),” IIASA - International Institute for Applied Systems Analysis. <a href="https://iiasa.ac.at/models-tools-data/cwatm">https://iiasa.ac.at/models-tools-data/cwatm</a> (accessed Mar. 23, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18e8ecc" class="outline-3">
+<h3 id="org18e8ecc"><span class="section-number-3">2.2.</span> CSE</h3>
+</div>
+<div id="outline-container-orgd3cf269" class="outline-3">
+<h3 id="orgd3cf269"><span class="section-number-3">2.3.</span> Chemistry</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Water and the environment,” Chemistry World. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/collections/water-and-the-environment">https://www.chemistryworld.com/collections/water-and-the-environment</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3cfc295" class="outline-3">
+<h3 id="org3cfc295"><span class="section-number-3">2.4.</span> Misc</h3>
+</div>
+</div>
+
+<div id="outline-container-org034aa2a" class="outline-2">
+<h2 id="org034aa2a"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf9dc447" class="outline-3">
+<h3 id="orgf9dc447"><span class="section-number-3">3.1.</span> Politics</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Water is a stream of geopolitical force through history | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/water-is-a-stream-of-geopolitical-force-through-history">https://aeon.co/essays/water-is-a-stream-of-geopolitical-force-through-history</a> (accessed Feb. 17, 2022).</li>
+
+<li>B. Chellaney, Water: Asia’s New Battleground. Georgetown University Press, 2013.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org99dc597" class="outline-3">
+<h3 id="org99dc597"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgb196403" class="outline-4">
+<h4 id="orgb196403"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org713c38b"></a>General<br /></li>
+<li><a id="org68bfa7f"></a>World<br />
+<ol class="org-ol">
+<li><a id="org01d7977"></a>Prizes<br />
+<div class="outline-text-6" id="text-3-2-1-2-1">
+<ul class="org-ul">
+<li>“Stockholm Junior Water Prize,” Wikipedia. Dec. 28, 2021. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Stockholm_Junior_Water_Prize&amp;oldid=1062430006">https://en.wikipedia.org/w/index.php?title=Stockholm_Junior_Water_Prize&amp;oldid=1062430006</a></li>
+
+<li>“Stockholm Water Prize,” Wikipedia. Mar. 22, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Stockholm_Water_Prize&amp;oldid=1078645570">https://en.wikipedia.org/w/index.php?title=Stockholm_Water_Prize&amp;oldid=1078645570</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orga397335"></a>Orgs<br />
+<div class="outline-text-6" id="text-3-2-1-2-2">
+<ul class="org-ul">
+<li>“International Water Management Institute (IWMI) : Home Page,” International Water Management Institute (IWMI). <a href="https://www.iwmi.cgiar.org/">https://www.iwmi.cgiar.org/</a> (accessed Nov. 19, 2022).</li>
+<li>“International Water Management Institute,” Wikipedia. Apr. 29, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Water_Management_Institute&amp;oldid=1085289913">https://en.wikipedia.org/w/index.php?title=International_Water_Management_Institute&amp;oldid=1085289913</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Stockholm International Water Institute,” Wikipedia. Dec. 28, 2021. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Stockholm_International_Water_Institute&amp;oldid=1062426830">https://en.wikipedia.org/w/index.php?title=Stockholm_International_Water_Institute&amp;oldid=1062426830</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>South Asia Network on Dams, Rivers and People</b>, “SANDRP,” SANDRP. <a href="https://sandrp.in/">https://sandrp.in/</a> (accessed Dec. 12, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Interdisciplinary Centre for Water Research (@ICWaR<sub>IISc</sub>) / Twitter,” Twitter. <a href="https://twitter.com/ICWaR_IISc">https://twitter.com/ICWaR_IISc</a> (accessed Mar. 04, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc5ce868"></a>People<br />
+<div class="outline-text-6" id="text-3-2-1-2-3">
+<ul class="org-ul">
+<li><b>“Medha Patkar, Baba Amte and Narmada Bachao Andolan,”</b> Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/medha-patkar-and-baba-amte-narmada-bachao-andolan/">https://rightlivelihood.org/the-change-makers/find-a-laureate/medha-patkar-and-baba-amte-narmada-bachao-andolan/</a> (accessed Sep. 18, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Anupam Mishra,” Wikipedia. Aug. 06, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Anupam_Mishra&amp;oldid=1102726491">https://en.wikipedia.org/w/index.php?title=Anupam_Mishra&amp;oldid=1102726491</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tarun Bharat Sangh | Bringing Change in Ecology.” <a href="https://tarunbharatsangh.in/">https://tarunbharatsangh.in/</a> (accessed May 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org811b2be"></a>Water Conflicts<br />
+<div class="outline-text-6" id="text-3-2-1-2-4">
+<ul class="org-ul">
+<li>K. J. Joy, P. J. Das, G. Chakraborty, S. Paranjape, C. Mahanta, and S. Vispute, Water Conflicts in Northeast India. Taylor &amp; Francis Group, 2019.</li>
+
+<li>K. J. Joy, B. Gujja, S. Paranjape, S. Vispute, and V. Goud, Water Conflicts in India: A Million Revolts in the Making. Taylor &amp; Francis Group, 2018.</li>
+
+<li>V. Shiva, <b>Water Wars: Privatization, Pollution and Profit.</b> Pluto Press, 2002.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org943335e"></a>Core<br /></li>
+<li><a id="org6864c80"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org76a0639"></a>Hindi<br />
+<div class="outline-text-6" id="text-3-2-1-4-1">
+<ul class="org-ul">
+<li>“जल (Water): जल चक्र, भूजल, पानी का महत्व, पानी की बचत, झील संरक्षण, वर्षा जल से संबंधित सभी खबरें पढ़ें - Down To Earth.” Accessed: Jun. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/hindistory/water">https://www.downtoearth.org.in/hindistory/water</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgd23cab8"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-5">
+<ul class="org-ul">
+<li>“Study flags record low snow over Hindu Kush, risk to over 600 mn in Ganga basin,” Hindustan Times. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/lowest-snow-cover-year-for-ganga-basin-101718563716298.html">https://www.hindustantimes.com/india-news/lowest-snow-cover-year-for-ganga-basin-101718563716298.html</a></li>
+<li>“Low snow on the Himalayas threatens water security: Study.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://phys.org/news/2024-06-himalayas-threatens.html">https://phys.org/news/2024-06-himalayas-threatens.html</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Water for our Cities: Revisiting water-sensitive urban design and planning and other frameworks.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/water-for-our-cities-revisiting-water-sensitive-urban-design-and-planning-and-other-frameworks-96676">https://www.downtoearth.org.in/blog/water/water-for-our-cities-revisiting-water-sensitive-urban-design-and-planning-and-other-frameworks-96676</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Innovative methods are key to encouraging reuse of treated wastewater in India by building trust.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/innovative-methods-are-key-to-encouraging-reuse-of-treated-wastewater-in-india-by-building-trust-96699">https://www.downtoearth.org.in/blog/water/innovative-methods-are-key-to-encouraging-reuse-of-treated-wastewater-in-india-by-building-trust-96699</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Survey finds 60 per cent Indians use water filters, quality concerns rise amid heatwave.” Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/survey-finds-60-per-cent-indians-use-water-filters-quality-concerns-rise-amid-heatwave/cid/2024450">https://www.telegraphindia.com/india/survey-finds-60-per-cent-indians-use-water-filters-quality-concerns-rise-amid-heatwave/cid/2024450</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>V. Rathore, “Himachal’s latest dam accident points to a pattern of negligence of dam safety,” Scroll.in. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://scroll.in/article/1068279/himachals-latest-dam-accident-points-to-a-pattern-of-negligence-of-dam-safety">https://scroll.in/article/1068279/himachals-latest-dam-accident-points-to-a-pattern-of-negligence-of-dam-safety</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Greywater issues plague this Haryana village struggling with polluted groundwater, treatment woes.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/greywater-issues-plague-this-haryana-village-struggling-with-polluted-groundwater-treatment-woes-96391">https://www.downtoearth.org.in/blog/water/greywater-issues-plague-this-haryana-village-struggling-with-polluted-groundwater-treatment-woes-96391</a></li>
+<li>“Managing greywater: A Haryana village shows the way.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/waste/managing-greywater-a-haryana-village-shows-the-way-80333">https://www.downtoearth.org.in/news/waste/managing-greywater-a-haryana-village-shows-the-way-80333</a></li>
+<li>“Stark difference in reality and records, as rural India faces major challenges in managing greywater.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/stark-difference-in-reality-and-records-as-rural-india-faces-major-challenges-in-managing-greywater-96403">https://www.downtoearth.org.in/blog/water/stark-difference-in-reality-and-records-as-rural-india-faces-major-challenges-in-managing-greywater-96403</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Water and Elections: Vikalp Sangam Sets an Alternative Agenda for Water,” Vikalp Sangam. Accessed: May 29, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/water-and-elections-vikalp-sangam-sets-an-alternative-agenda-for-water/">https://vikalpsangam.org/article/water-and-elections-vikalp-sangam-sets-an-alternative-agenda-for-water/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Greywater issues plague this Haryana village struggling with polluted groundwater, treatment woes.” Accessed: May 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/greywater-issues-plague-this-haryana-village-struggling-with-polluted-groundwater-treatment-woes-96391">https://www.downtoearth.org.in/blog/water/greywater-issues-plague-this-haryana-village-struggling-with-polluted-groundwater-treatment-woes-96391</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Parched Garden City.” Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/parched-garden-city-95272">https://www.downtoearth.org.in/infographics/parched-garden-city-95272</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Water: not any drop to drink,” People’s Archive of Rural India. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/water-not-any-drop-to-drink/">https://ruralindiaonline.org/en/articles/water-not-any-drop-to-drink/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Nitnaware, “Telangana IAS Raises Water Table By 6 Metres in 3 Years, Solution Added to Textbooks,” The Better India. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.thebetterindia.com/243812/ias-hero-water-able-raising-method-dam-how-management-government-curriculum-ananthagiri-rajrajeshwara-dam-him16/">https://www.thebetterindia.com/243812/ias-hero-water-able-raising-method-dam-how-management-government-curriculum-ananthagiri-rajrajeshwara-dam-him16/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How a Solar Revolution in Farming Is Depleting World’s Groundwater,” Yale E360. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://e360.yale.edu/features/solar-water-pumps-groundwater-crops">https://e360.yale.edu/features/solar-water-pumps-groundwater-crops</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Book Excerpt: How Odisha achieved the seemingly impossible feat of ‘Water for All.’” Accessed: Mar. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/reviews/book-excerpt-how-odisha-achieved-the-seemingly-impossible-feat-of-water-for-all--95204">https://www.downtoearth.org.in/reviews/book-excerpt-how-odisha-achieved-the-seemingly-impossible-feat-of-water-for-all--95204</a></li>
+
+<li>T. V. P. June 2023, “The subterranean chemistry that explains India’s groundwater contamination,” Chemistry World. <a href="https://www.chemistryworld.com/news/the-subterranean-chemistry-that-explains-indias-groundwater-contamination/4017578.article">https://www.chemistryworld.com/news/the-subterranean-chemistry-that-explains-indias-groundwater-contamination/4017578.article</a> (accessed Jun. 23, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i><a href="https://www.youtube.com/watch?v=jPBkS2Lkhgo">The Violence of the Blue Revolution</a>,</i> Navdanya.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Take waste out of water.” <a href="https://www.downtoearth.org.in/blog/water/take-waste-out-of-water-82314">https://www.downtoearth.org.in/blog/water/take-waste-out-of-water-82314</a> (accessed Apr. 16, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Ramesh, <i>Watershed: How We Destroyed India’s Water and How We Can Save It.</i> Hachette UK, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“[Explainer] How falling groundwater levels compact the land above,” Mongabay-India, Mar. 09, 2022. <a href="https://india.mongabay.com/2022/03/explainer-how-falling-groundwater-levels-compact-the-land-above/">https://india.mongabay.com/2022/03/explainer-how-falling-groundwater-levels-compact-the-land-above/</a> (accessed Mar. 14, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Amrith, Unruly Waters: How Mountain Rivers and Monsoons Have Shaped South Asia’s History. Penguin, 2018.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Rajasthan Ki Rajat Boondein by Anupam Mishra | India Water Portal,” Jun. 28, 2012. <a href="https://web.archive.org/web/20120628031806/http://www.indiawaterportal.org/node/7354">https://web.archive.org/web/20120628031806/http://www.indiawaterportal.org/node/7354</a> (accessed Nov. 19, 2022).</li>
+<li>A. Mishra, Aaj Bhi Khare Hain Talab. Prabhat Prakashan, 2017.</li>
+<li>A. Mishra, Safa Mathe Ka Samaja. Penguin India, 2006.
+<ul class="org-ul">
+<li>मिश्रअनुपम, साफ़ माथे का समाज. Yātrā Buksa, 2006.</li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Water News, Crisis, Shortage, Water Pollution, Facts, Resources.” Accessed: Mar. 13, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water">https://www.downtoearth.org.in/water</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Bengaluru today, your city tomorrow.” Accessed: Mar. 18, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/bengaluru-today-your-city-tomorrow-94960">https://www.downtoearth.org.in/blog/water/bengaluru-today-your-city-tomorrow-94960</a></li>
+<li>“Rainwater harvesting and wastewater treatment best options for Bengaluru: T V Ramachandra.” Accessed: Mar. 13, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/interviews/water/rainwater-harvesting-and-wastewater-treatment-best-options-for-bengaluru-t-v-ramachandra-94966">https://www.downtoearth.org.in/interviews/water/rainwater-harvesting-and-wastewater-treatment-best-options-for-bengaluru-t-v-ramachandra-94966</a></li>
+<li>“Bengaluru water crisis: Citizens raise questions on flourishing tanker business as municipal supply dries up.” Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/bengaluru-water-crisis-citizens-raise-questions-on-flourishing-tanker-business-as-municipal-supply-dries-up-95004">https://www.downtoearth.org.in/news/water/bengaluru-water-crisis-citizens-raise-questions-on-flourishing-tanker-business-as-municipal-supply-dries-up-95004</a></li>
+<li>N. Suresh, “Bengaluru’s Water Crisis: Key Challenges In Water Management.” Accessed: Mar. 20, 2024. [Online]. Available: <a href="https://www.indiaspend.com/earthcheckindia/bengalurus-water-crisis-key-challenges-in-water-management-900523">https://www.indiaspend.com/earthcheckindia/bengalurus-water-crisis-key-challenges-in-water-management-900523</a></li>
+<li>“What’s Causing Bengaluru’s Water Crisis?,” The Wire. Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://thewire.in/environment/whats-causing-bengalurus-water-crisis">https://thewire.in/environment/whats-causing-bengalurus-water-crisis</a></li>
+<li>“Bengaluru water crisis: How use of RO purifiers is reversing efforts to save water.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/bengaluru-water-crisis-how-use-of-ro-purifiers-is-reversing-efforts-to-save-water-95079">https://www.downtoearth.org.in/blog/water/bengaluru-water-crisis-how-use-of-ro-purifiers-is-reversing-efforts-to-save-water-95079</a></li>
+<li>“Bengaluru only needs urgent institutional makeover of its water utilities.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/bengaluru-only-needs-urgent-institutional-makeover-of-its-water-utilities-95160">https://www.downtoearth.org.in/blog/water/bengaluru-only-needs-urgent-institutional-makeover-of-its-water-utilities-95160</a></li>
+<li>“Bengaluru is battling a crisis, but it must leverage water for peace.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/water/bengaluru-is-battling-a-crisis-but-it-must-leverage-water-for-peace-95172">https://www.downtoearth.org.in/blog/water/bengaluru-is-battling-a-crisis-but-it-must-leverage-water-for-peace-95172</a></li>
+<li>“DTE Coverage: Bengaluru Water Crisis 2024.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/coverage/water/dte-coverage-bengaluru-water-crisis-2024-95072">https://www.downtoearth.org.in/coverage/water/dte-coverage-bengaluru-water-crisis-2024-95072</a></li>
+<li>“Why is Bengaluru city facing the worst water crisis in its nearly 500-year history?” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/water/why-is-bengaluru-city-facing-the-worst-water-crisis-in-its-nearly-500-year-history--95053">https://www.downtoearth.org.in/video/water/why-is-bengaluru-city-facing-the-worst-water-crisis-in-its-nearly-500-year-history--95053</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org24e6774" class="outline-3">
+<h3 id="org24e6774"><span class="section-number-3">3.3.</span> People</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li><b>“Jan Pokorný</b> (0000-0002-2614-1667).” <a href="https://orcid.org/0000-0002-2614-1667">https://orcid.org/0000-0002-2614-1667</a> (accessed May 18, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga91ee60" class="outline-3">
+<h3 id="orga91ee60"><span class="section-number-3">3.4.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li><i>“Home,”</i> Marine Conservation Society. <a href="https://www.mcsuk.org/">https://www.mcsuk.org/</a> (accessed Sep. 26, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0dfdbce" class="outline-3">
+<h3 id="org0dfdbce"><span class="section-number-3">3.5.</span> Events</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org7ced79c" class="outline-4">
+<h4 id="org7ced79c"><span class="section-number-4">3.5.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>“World Water Day,” Wikipedia. Mar. 22, 2023. Accessed: Mar. 22, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=World_Water_Day&amp;oldid=1145965150">https://en.wikipedia.org/w/index.php?title=World_Water_Day&amp;oldid=1145965150</a></li>
+
+<li>“World Water Day 2024: Precious blue liquid is a thin red line between war and peace, says UN report.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/world-water-day-2024-precious-blue-liquid-is-a-thin-red-line-between-war-and-peace-says-un-report-95176">https://www.downtoearth.org.in/news/water/world-water-day-2024-precious-blue-liquid-is-a-thin-red-line-between-war-and-peace-says-un-report-95176</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9063057" class="outline-4">
+<h4 id="org9063057"><span class="section-number-4">3.5.2.</span> Droughts</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>Allah Megh De, Guide</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b9dff6" class="outline-3">
+<h3 id="org5b9dff6"><span class="section-number-3">3.6.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>UN-Water, “UN-Water | Be The Change | Be the change you want to see in the world.,” UN-Water | Be The Change. <a href="https://www.unwater.org/bethechange/">https://www.unwater.org/bethechange/</a> (accessed Mar. 23, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1e99820" class="outline-2">
+<h2 id="org1e99820"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org966c55f" class="outline-3">
+<h3 id="org966c55f"><span class="section-number-3">4.1.</span> Water Bodies</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgd6c1e22" class="outline-4">
+<h4 id="orgd6c1e22"><span class="section-number-4">4.1.1.</span> Oceans</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4dab72a"></a>General<br /></li>
+<li><a id="org06965cc"></a>Orgs<br />
+<div class="outline-text-5" id="text-4-1-1-2">
+<ul class="org-ul">
+<li>“National Oceanic and Atmospheric Administration,” Wikipedia. Nov. 21, 2022. Accessed: Dec. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=National_Oceanic_and_Atmospheric_Administration&amp;oldid=1123030995">https://en.wikipedia.org/w/index.php?title=National_Oceanic_and_Atmospheric_Administration&amp;oldid=1123030995</a>
+<ul class="org-ul">
+<li>“National Oceanic and Atmospheric Administration.” Accessed: Dec. 04, 2022. [Online]. Available: <a href="https://www.noaa.gov/">https://www.noaa.gov/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org538d7bd"></a>GreenPeace<br />
+<div class="outline-text-5" id="text-4-1-1-3">
+<ul class="org-ul">
+<li>“6 things you can do for the ocean today,” Greenpeace International. Accessed: Jun. 08, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/">https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/</a></li>
+
+<li>“The sea belongs to us: Stories from Thailand’s Ocean Defenders,” Greenpeace International. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67460/the-sea-belongs-to-us-stories-from-thailands-ocean-defenders/">https://www.greenpeace.org/international/story/67460/the-sea-belongs-to-us-stories-from-thailands-ocean-defenders/</a></li>
+
+<li>K. McVeigh, “‘Where do sharks hang out?’: the race to find safe spaces for the Galápagos’ ocean-going predators,” The Guardian, Jun. 04, 2024. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/04/sharks-tagging-endangered-species-pacific-migration-galapagos-marine-reserves">https://www.theguardian.com/environment/article/2024/jun/04/sharks-tagging-endangered-species-pacific-migration-galapagos-marine-reserves</a></li>
+
+<li>“Un-tangled: How the Global Ocean Treaty can help repair high seas mismanagement,” Greenpeace International. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/publication/67495/untangled-global-ocean-treaty-high-seas-mismanagement/">https://www.greenpeace.org/international/publication/67495/untangled-global-ocean-treaty-high-seas-mismanagement/</a></li>
+
+<li>“ITLOS sets groundbreaking victory for ocean and climate protection,” Greenpeace International. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/67125/itlos-sets-groundbreaking-victory-for-ocean-and-climate-protection/">https://www.greenpeace.org/international/press-release/67125/itlos-sets-groundbreaking-victory-for-ocean-and-climate-protection/</a></li>
+
+<li>“Global Oceans Treaty ratification tracker: Which countries have signed the treaty into law?,” Greenpeace International. Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/66814/global-oceans-treaty-ratification-tracker-countries-signed-treaty-law/">https://www.greenpeace.org/international/story/66814/global-oceans-treaty-ratification-tracker-countries-signed-treaty-law/</a></li>
+
+<li>“Changing Oceans,” Greenpeace International. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/podcasts/66926/life-under-water-changing-oceans/">https://www.greenpeace.org/international/podcasts/66926/life-under-water-changing-oceans/</a></li>
+
+<li>“Meet the women fighting to save our oceans,” Greenpeace International. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/46410/women-girls-science-save-oceans/">https://www.greenpeace.org/international/story/46410/women-girls-science-save-oceans/</a></li>
+
+<li>“Judge Orders Greenpeace Off Seabed Mining Ship in Ocean Standoff,” Bloomberg.com, Nov. 30, 2023. Accessed: Dec. 01, 2023. [Online]. Available: <a href="https://www.bloomberg.com/news/articles/2023-11-30/judge-orders-greenpeace-off-seabed-mining-ship-in-ocean-standoff">https://www.bloomberg.com/news/articles/2023-11-30/judge-orders-greenpeace-off-seabed-mining-ship-in-ocean-standoff</a></li>
+
+<li>“Jane Fonda and 5.5 million people call for UN Ocean Treaty,” Greenpeace International. Accessed: Feb. 22, 2023. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/58327/jane-fonda-5-million-un-ocean-treaty">https://www.greenpeace.org/international/press-release/58327/jane-fonda-5-million-un-ocean-treaty</a></li>
+
+<li>“A Global Ocean Treaty is the best hope for saving our seas,” Greenpeace UK. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.greenpeace.org.uk/news/global-ocean-treaty-hope-saving-seas/">https://www.greenpeace.org.uk/news/global-ocean-treaty-hope-saving-seas/</a></li>
+
+<li>“Protect the Oceans,” Greenpeace International. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.greenpeace.org/international/act/protect-the-oceans">https://www.greenpeace.org/international/act/protect-the-oceans</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The price is too high: the transition to green transportation should not come at the cost of ocean destruction,” Greenpeace USA. Accessed: Aug. 03, 2022. [Online]. Available: <a href="https://www.greenpeace.org/usa/the-price-is-too-high-the-transition-to-green-transportation-should-not-come-at-the-cost-of-ocean-destruction/">https://www.greenpeace.org/usa/the-price-is-too-high-the-transition-to-green-transportation-should-not-come-at-the-cost-of-ocean-destruction/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7834732"></a>India<br />
+<ol class="org-ol">
+<li><a id="orgfc80836"></a>General<br /></li>
+<li><a id="orgc45f375"></a>STEMM<br />
+<div class="outline-text-6" id="text-4-1-1-4-2">
+<ul class="org-ul">
+<li>C. Watson, “There’s a Giant Gravity Hole In The Indian Ocean, And We May Finally Know Why,” ScienceAlert. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://www.sciencealert.com/theres-a-giant-gravity-hole-in-the-indian-ocean-and-we-may-finally-know-why">https://www.sciencealert.com/theres-a-giant-gravity-hole-in-the-indian-ocean-and-we-may-finally-know-why</a></li>
+
+<li>K. Pandey, “Indian Ocean headed for a near-permanent state of marine heatwave,” Mongabay-India. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/">https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/</a></li>
+
+<li>“Report: Illegal fishing and labor abuse rampant in China’s Indian Ocean fleet,” Mongabay Environmental News. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/">https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7afce74"></a>World<br />
+<div class="outline-text-6" id="text-4-1-1-4-3">
+<ul class="org-ul">
+<li>“Report: Illegal fishing and labor abuse rampant in China’s Indian Ocean fleet,” Mongabay Environmental News. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/">https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/</a></li>
+
+<li>A. Winner, A. Weldemichael, and P. Schneider, Eds., Maritime Terrorism and Piracy in the Indian Ocean Region, 1st edition. London: Routledge, 2015.</li>
+
+<li>“Australia hosts Indian Ocean gathering to ramp up US-led confrontation with China,” World Socialist Web Site. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/02/12/heyc-f12.html">https://www.wsws.org/en/articles/2024/02/12/heyc-f12.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2a5415b"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orga319583"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-1-5">
+<ul class="org-ul">
+<li>“Digital Ocean Forum 2024,” events.edito.eu. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://events.edito.eu/2024-digital-ocean-forum">https://events.edito.eu/2024-digital-ocean-forum</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>EcoWatch, “Meet the Winners of the 11th Annual UN World Oceans Day Photo Competition,” EcoWatch. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.ecowatch.com/united-nations-world-oceans-day-photo-contest-2024.html">https://www.ecowatch.com/united-nations-world-oceans-day-photo-contest-2024.html</a></li>
+
+<li>K. Hayhoe, “What’s Happening in the Ocean and Why It Matters to You and Me,” Scientific American. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/whats-happening-in-the-ocean-and-why-it-matters-to-you-and-me/">https://www.scientificamerican.com/article/whats-happening-in-the-ocean-and-why-it-matters-to-you-and-me/</a></li>
+
+<li>James, “Large Ocean States at the forefront of ocean health and governance,” International Science Council. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://council.science/current/blog/world-ocean-day-2024/">https://council.science/current/blog/world-ocean-day-2024/</a></li>
+
+<li>“The Growing Threat of Oceanic Warming,” Atmos. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://atmos.earth/the-growing-threat-of-ocean-warming/">https://atmos.earth/the-growing-threat-of-ocean-warming/</a></li>
+
+<li>“Mission Ocean and Waters service portal | Research and Innovation.” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://projects.research-and-innovation.ec.europa.eu/en/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters/mission-ocean-and-waters-service-portal">https://projects.research-and-innovation.ec.europa.eu/en/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters/mission-ocean-and-waters-service-portal</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Report: Illegal fishing and labor abuse rampant in China’s Indian Ocean fleet,” Mongabay Environmental News. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/">https://news.mongabay.com/2024/06/report-illegal-fishing-and-labor-abuse-rampant-in-chinas-indian-ocean-fleet/</a></li>
+
+<li>K. McVeigh, “‘Where do sharks hang out?’: the race to find safe spaces for the Galápagos’ ocean-going predators,” The Guardian, Jun. 04, 2024. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/04/sharks-tagging-endangered-species-pacific-migration-galapagos-marine-reserves">https://www.theguardian.com/environment/article/2024/jun/04/sharks-tagging-endangered-species-pacific-migration-galapagos-marine-reserves</a></li>
+
+<li>“UNESCO’s State of Ocean Report highlights key knowledge gaps in research &amp; data on spiking oceanic warming.” Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/unesco-s-state-of-ocean-report-highlights-key-knowledge-gaps-in-research-data-on-spiking-oceanic-warming-96534">https://www.downtoearth.org.in/news/climate-change/unesco-s-state-of-ocean-report-highlights-key-knowledge-gaps-in-research-data-on-spiking-oceanic-warming-96534</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>O. Milman, “Oceans face ‘triple threat’ of extreme heat, oxygen loss and acidification,” The Guardian, Jun. 04, 2024. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/04/extreme-heat-oceans-acidification">https://www.theguardian.com/environment/article/2024/jun/04/extreme-heat-oceans-acidification</a></li>
+
+<li>“Un-tangled: How the Global Ocean Treaty can help repair high seas mismanagement,” Greenpeace International. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/publication/67495/untangled-global-ocean-treaty-high-seas-mismanagement/">https://www.greenpeace.org/international/publication/67495/untangled-global-ocean-treaty-high-seas-mismanagement/</a></li>
+<li>“6 things you can do for the ocean today,” Greenpeace International. Accessed: Jun. 08, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/">https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/</a></li>
+<li>“The sea belongs to us: Stories from Thailand’s Ocean Defenders,” Greenpeace International. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67460/the-sea-belongs-to-us-stories-from-thailands-ocean-defenders/">https://www.greenpeace.org/international/story/67460/the-sea-belongs-to-us-stories-from-thailands-ocean-defenders/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“UNESCO’s State of Ocean Report highlights key knowledge gaps in research &amp; data on spiking oceanic warming.” Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/unesco-s-state-of-ocean-report-highlights-key-knowledge-gaps-in-research-data-on-spiking-oceanic-warming-96534">https://www.downtoearth.org.in/news/climate-change/unesco-s-state-of-ocean-report-highlights-key-knowledge-gaps-in-research-data-on-spiking-oceanic-warming-96534</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“ITLOS sets groundbreaking victory for ocean and climate protection,” Greenpeace International. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/67125/itlos-sets-groundbreaking-victory-for-ocean-and-climate-protection/">https://www.greenpeace.org/international/press-release/67125/itlos-sets-groundbreaking-victory-for-ocean-and-climate-protection/</a></li>
+
+<li>“As Ocean Oxygen Levels Dip, Fish Face an Uncertain Future,” Yale E360. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://e360.yale.edu/features/as-ocean-oxygen-levels-dip-fish-face-an-uncertain-future">https://e360.yale.edu/features/as-ocean-oxygen-levels-dip-fish-face-an-uncertain-future</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Global Oceans Treaty ratification tracker: Which countries have signed the treaty into law?,” Greenpeace International. Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/66814/global-oceans-treaty-ratification-tracker-countries-signed-treaty-law/">https://www.greenpeace.org/international/story/66814/global-oceans-treaty-ratification-tracker-countries-signed-treaty-law/</a></li>
+
+<li>“When will the next ocean heat wave strike? Scientists develop early warning systems.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.science.org/content/article/when-will-next-ocean-heat-wave-strike-scientists-develop-early-warning-systems">https://www.science.org/content/article/when-will-next-ocean-heat-wave-strike-scientists-develop-early-warning-systems</a></li>
+
+<li>O. Heffernan, The High Seas: Ambition, Power and Greed on the Unclaimed Ocean. Profile Books, 2024.</li>
+
+<li>James, “Call to Empower Science for the Future of Large Ocean States,” International Science Council. Accessed: May 30, 2024. [Online]. Available: <a href="https://council.science/current/press/sids4-declaration/">https://council.science/current/press/sids4-declaration/</a></li>
+
+<li>“Top oceans court delivers advisory opinion on climate change.” Accessed: May 28, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/top-oceans-court-delivers-advisory-opinion-on-climate-change-96357">https://www.downtoearth.org.in/blog/climate-change/top-oceans-court-delivers-advisory-opinion-on-climate-change-96357</a></li>
+
+<li>“International Court Backs Need to Protect Oceans and Island Nations from Climate Impacts,” The Equation. Accessed: May 23, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/delta-merner/international-court-backs-need-to-protect-oceans-and-island-nations-from-climate-impacts/">https://blog.ucsusa.org/delta-merner/international-court-backs-need-to-protect-oceans-and-island-nations-from-climate-impacts/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Changing Oceans,” Greenpeace International. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/podcasts/66926/life-under-water-changing-oceans/">https://www.greenpeace.org/international/podcasts/66926/life-under-water-changing-oceans/</a></li>
+
+<li>K. Pandey, “Indian Ocean headed for a near-permanent state of marine heatwave,” Mongabay-India. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/">https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/</a></li>
+
+<li>“NOAA Warns World Is Experiencing Its 4th Coral Bleaching Event Due to Warming Oceans,” Democracy Now! Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/4/16/headlines/noaa_warns_world_is_experiencing_its_4th_coral_bleaching_event_due_to_warming_oceans">https://www.democracynow.org/2024/4/16/headlines/noaa_warns_world_is_experiencing_its_4th_coral_bleaching_event_due_to_warming_oceans</a></li>
+
+<li>N. Scharping, “Verifying the Mathematics Behind Ocean Modeling,” Eos. Accessed: Apr. 14, 2024. [Online]. Available: <a href="http://eos.org/research-spotlights/verifying-the-mathematics-behind-ocean-modeling">http://eos.org/research-spotlights/verifying-the-mathematics-behind-ocean-modeling</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. M. P. Reader, “The Algorithmic Ocean: How AI Is Revolutionizing Marine Conservation,” The MIT Press Reader. Accessed: Apr. 13, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-algorithmic-ocean-how-ai-is-revolutionizing-marine-conservation/">https://thereader.mitpress.mit.edu/the-algorithmic-ocean-how-ai-is-revolutionizing-marine-conservation/</a></li>
+
+<li>N. N. March 2024, “The oceans’ climate challenge,” Chemistry World. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/the-oceans-climate-challenge/4019188.article">https://www.chemistryworld.com/features/the-oceans-climate-challenge/4019188.article</a></li>
+
+<li>“One of the major gaps in our weather observational system is over the oceans: Elena Manaenkova.” Accessed: Mar. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/interviews/climate-change/one-of-the-major-gaps-in-our-weather-observational-system-is-over-the-oceans-elena-manaenkova-95207">https://www.downtoearth.org.in/interviews/climate-change/one-of-the-major-gaps-in-our-weather-observational-system-is-over-the-oceans-elena-manaenkova-95207</a></li>
+
+<li>“Australia hosts Indian Ocean gathering to ramp up US-led confrontation with China,” World Socialist Web Site. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/02/12/heyc-f12.html">https://www.wsws.org/en/articles/2024/02/12/heyc-f12.html</a></li>
+
+<li>“Meet the women fighting to save our oceans,” Greenpeace International. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/46410/women-girls-science-save-oceans/">https://www.greenpeace.org/international/story/46410/women-girls-science-save-oceans/</a></li>
+
+<li>L. Paddison, “Critical Atlantic Ocean current system is showing early signs of collapse, prompting warning from scientists,” CNN. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html">https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html</a></li>
+
+<li>J. Watts, “Atlantic Ocean circulation nearing ‘devastating’ tipping point, study finds,” The Guardian, Feb. 09, 2024. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds">https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds</a></li>
+
+<li>A. Press, “Ocean System Trouble Could Cause Weather Chaos, Study Says,” Voice of America. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.voanews.com/a/ocean-system-trouble-could-cause-weather-chaos-study-says-/7482078.html">https://www.voanews.com/a/ocean-system-trouble-could-cause-weather-chaos-study-says-/7482078.html</a></li>
+
+<li>D. Harrison, “Extreme Climate Impacts From Collapse of a Key Atlantic Ocean Current Could be Worse Than Expected, a New Study Warns,” Inside Climate News. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/">https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/</a></li>
+
+<li>H. A. Dijkstra, M. Kliphuis, and R. van Westen, “Atlantic Ocean is headed for a tipping point − once melting glaciers shut down the Gulf Stream, we would see extreme climate change within decades, study shows,” The Conversation. Accessed: Feb. 11, 2024. [Online]. Available: <a href="http://theconversation.com/atlantic-ocean-is-headed-for-a-tipping-point-once-melting-glaciers-shut-down-the-gulf-stream-we-would-see-extreme-climate-change-within-decades-study-shows-222834">http://theconversation.com/atlantic-ocean-is-headed-for-a-tipping-point-once-melting-glaciers-shut-down-the-gulf-stream-we-would-see-extreme-climate-change-within-decades-study-shows-222834</a></li>
+
+<li>D. Harrison, “Extreme Climate Impacts From Collapse of a Key Atlantic Ocean Current Could be Worse Than Expected, a New Study Warns,” Inside Climate News. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/">https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/</a></li>
+
+<li>L. Paddison, “Critical Atlantic Ocean current system is showing early signs of collapse, prompting warning from scientists,” CNN. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html">https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html</a></li>
+
+<li>J. Watts, “Atlantic Ocean circulation nearing ‘devastating’ tipping point, study finds,” The Guardian, Feb. 09, 2024. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds">https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds</a></li>
+
+<li>N. O. and A. A. US Department of Commerce, “What is the AMOC?” Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://oceanservice.noaa.gov/facts/amoc.html">https://oceanservice.noaa.gov/facts/amoc.html</a></li>
+
+<li>“Atlantic meridional overturning circulation,” Wikipedia. Feb. 10, 2024. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Atlantic_meridional_overturning_circulation&amp;oldid=1205920987">https://en.wikipedia.org/w/index.php?title=Atlantic_meridional_overturning_circulation&amp;oldid=1205920987</a></li>
+
+<li>“Nowhere to go,” <a href="https://www.whoi.edu/">https://www.whoi.edu/</a>. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://www.whoi.edu/oceanus/feature/nowhere-to-go-antarctic-krill-climate-change/">https://www.whoi.edu/oceanus/feature/nowhere-to-go-antarctic-krill-climate-change/</a></li>
+
+<li>P. Greenfield, “From tree planting to ‘sponge cities’: why nature-based solutions are crucial to fighting the climate crisis,” The Guardian, Nov. 29, 2023. Accessed: Dec. 07, 2023. [Online]. Available: <a href="https://www.theguardian.com/environment/2023/nov/29/from-tree-planting-to-sponge-cities-why-nature-based-solutions-are-crucial-to-fighting-the-climate-crisis">https://www.theguardian.com/environment/2023/nov/29/from-tree-planting-to-sponge-cities-why-nature-based-solutions-are-crucial-to-fighting-the-climate-crisis</a></li>
+
+<li>C. Russell, “GREEDY EU DECISION-MAKERS FEAST ON THE OCEAN,” Ocean Rebellion. Accessed: Nov. 09, 2023. [Online]. Available: <a href="https://oceanrebellion.earth/greedy-eu-decision-makers-feast-on-the-ocean/">https://oceanrebellion.earth/greedy-eu-decision-makers-feast-on-the-ocean/</a></li>
+
+<li>“Badger Swarm.” Electronic Frontier Foundation, Nov. 07, 2023. Accessed: Nov. 08, 2023. [Online]. Available: <a href="https://github.com/EFForg/badger-swarm">https://github.com/EFForg/badger-swarm</a></li>
+
+<li>“Panspermia theory dives under other worlds’ ocean ice crust | Aeon Essays,” Aeon. Accessed: Nov. 02, 2023. [Online]. Available: <a href="https://aeon.co/essays/panspermia-theory-dives-under-other-worlds-ocean-ice-crust">https://aeon.co/essays/panspermia-theory-dives-under-other-worlds-ocean-ice-crust</a></li>
+
+<li>A. P. Gumbs, Echolocation: Black Feminist Lessons from Marine Mammals. Chico: AK Press, 2021.</li>
+
+<li>“Panspermia theory dives under other worlds’ ocean ice crust | Aeon Essays,” Aeon. Accessed: Oct. 19, 2023. [Online]. Available: <a href="https://aeon.co/essays/panspermia-theory-dives-under-other-worlds-ocean-ice-crust">https://aeon.co/essays/panspermia-theory-dives-under-other-worlds-ocean-ice-crust</a></li>
+
+<li>F. Diaz-Maurin, “Why Japan should stop its Fukushima nuclear wastewater ocean release,” Bulletin of the Atomic Scientists. Accessed: Sep. 25, 2023. [Online]. Available: <a href="https://thebulletin.org/2023/09/why-japan-should-stop-its-fukushima-nuclear-wastewater-ocean-release/">https://thebulletin.org/2023/09/why-japan-should-stop-its-fukushima-nuclear-wastewater-ocean-release/</a></li>
+
+<li>M. Rodrigues, “More Than Half the World’s Ocean Surface Is Getting Greener,” Eos. Accessed: Aug. 25, 2023. [Online]. Available: <a href="http://eos.org/articles/more-than-half-the-worlds-ocean-surface-is-getting-greener">http://eos.org/articles/more-than-half-the-worlds-ocean-surface-is-getting-greener</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Khajuraho | Lyrical Video | Indian Ocean | Kandisa - YouTube.” Accessed: Jul. 16, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=feWrzX_Y6i4">https://www.youtube.com/watch?v=feWrzX_Y6i4</a></li>
+
+<li>“‘Humanity’s signature’: Study finds plastic pollution in world’s lakes can be worse than in oceans.” Accessed: Jul. 14, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/pollution/-humanity-s-signature-study-finds-plastic-pollution-in-world-s-lakes-can-be-worse-than-in-oceans-90600">https://www.downtoearth.org.in/blog/pollution/-humanity-s-signature-study-finds-plastic-pollution-in-world-s-lakes-can-be-worse-than-in-oceans-90600</a></li>
+
+<li>“Japan to release radioactive Fukushima wastewater into the Pacific Ocean after IAEA’s approval.” Accessed: Jul. 08, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/video/pollution/japan-to-release-radioactive-fukushima-wastewater-into-the-pacific-ocean-after-iaea-s-approval-90475">https://www.downtoearth.org.in/video/pollution/japan-to-release-radioactive-fukushima-wastewater-into-the-pacific-ocean-after-iaea-s-approval-90475</a></li>
+
+<li>C. Watson, “There’s a Giant Gravity Hole In The Indian Ocean, And We May Finally Know Why,” ScienceAlert. Accessed: Jul. 01, 2023. [Online]. Available: <a href="https://www.sciencealert.com/theres-a-giant-gravity-hole-in-the-indian-ocean-and-we-may-finally-know-why">https://www.sciencealert.com/theres-a-giant-gravity-hole-in-the-indian-ocean-and-we-may-finally-know-why</a></li>
+
+<li>“Can We Mine the World’s Deep Ocean Without Destroying It?,” Yale E360. Accessed: Jun. 16, 2023. [Online]. Available: <a href="https://e360.yale.edu/features/lisa-levin-interview-deep-sea-mining">https://e360.yale.edu/features/lisa-levin-interview-deep-sea-mining</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Recent, rapid ocean warming ahead of El Niño alarms scientists,” BBC News. Accessed: Apr. 26, 2023. [Online]. Available: <a href="https://www.bbc.com/news/science-environment-65339934">https://www.bbc.com/news/science-environment-65339934</a></li>
+
+<li>“Giant underwater waves affect the ocean’s ability to store carbon,” University of Cambridge. Accessed: Mar. 19, 2023. [Online]. Available: <a href="https://www.cam.ac.uk/research/news/giant-underwater-waves-affect-the-oceans-ability-to-store-carbon">https://www.cam.ac.uk/research/news/giant-underwater-waves-affect-the-oceans-ability-to-store-carbon</a></li>
+
+<li>“Experts pushing for high-seas fishing ban win ‘Nobel Prize for environment,’” Mongabay Environmental News. Accessed: Feb. 23, 2023. [Online]. Available: <a href="https://news.mongabay.com/2023/02/experts-pushing-for-high-seas-fishing-ban-win-nobel-prize-for-environment/">https://news.mongabay.com/2023/02/experts-pushing-for-high-seas-fishing-ban-win-nobel-prize-for-environment/</a></li>
+
+<li>“Jane Fonda and 5.5 million people call for UN Ocean Treaty,” Greenpeace International. Accessed: Feb. 22, 2023. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/58327/jane-fonda-5-million-un-ocean-treaty">https://www.greenpeace.org/international/press-release/58327/jane-fonda-5-million-un-ocean-treaty</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“A Global Ocean Treaty is the best hope for saving our seas,” Greenpeace UK. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.greenpeace.org.uk/news/global-ocean-treaty-hope-saving-seas/">https://www.greenpeace.org.uk/news/global-ocean-treaty-hope-saving-seas/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Protect the Oceans,” Greenpeace International. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.greenpeace.org/international/act/protect-the-oceans">https://www.greenpeace.org/international/act/protect-the-oceans</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>L. L. Wicaksono, “Which Countries Pollute the Most Ocean Plastic Waste?,” Visual Capitalist. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.visualcapitalist.com/cp/visualized-ocean-plastic-waste-pollution-by-country/">https://www.visualcapitalist.com/cp/visualized-ocean-plastic-waste-pollution-by-country/</a></li>
+
+<li>“Visualized: Ocean Plastic Waste Pollution By Country.” Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.visualcapitalist.com/cp/visualized-ocean-plastic-waste-pollution-by-country/">https://www.visualcapitalist.com/cp/visualized-ocean-plastic-waste-pollution-by-country/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Winner, A. Weldemichael, and P. Schneider, Eds., Maritime Terrorism and Piracy in the Indian Ocean Region, 1st edition. London: Routledge, 2015.</li>
+
+<li>J. McKenzie, “War puts cleanup of Russia’s radioactive wrecks on ice,” Bulletin of the Atomic Scientists. Accessed: Nov. 29, 2022. [Online]. Available: <a href="https://thebulletin.org/2022/11/war-puts-cleanup-of-russias-radioactive-wrecks-on-ice/">https://thebulletin.org/2022/11/war-puts-cleanup-of-russias-radioactive-wrecks-on-ice/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ocean plastics: How much do rich countries contribute by shipping their waste overseas?,” Our World in Data. Accessed: Oct. 17, 2022. [Online]. Available: <a href="https://ourworldindata.org/plastic-waste-trade">https://ourworldindata.org/plastic-waste-trade</a></li>
+
+<li>A. Catarino and T. Henry, “Plastics in oceans are mounting, but evidence on harm is surprisingly weak,” The Conversation. Accessed: Oct. 11, 2022. [Online]. Available: <a href="http://theconversation.com/plastics-in-oceans-are-mounting-but-evidence-on-harm-is-surprisingly-weak-93877">http://theconversation.com/plastics-in-oceans-are-mounting-but-evidence-on-harm-is-surprisingly-weak-93877</a></li>
+
+<li>“I Eat Fish, Am I Eating Microplastics?,” Ocean Conservancy. Accessed: Oct. 11, 2022. [Online]. Available: <a href="https://oceanconservancy.org/blog/2021/10/18/eating-microplastics/">https://oceanconservancy.org/blog/2021/10/18/eating-microplastics/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc04ddea" class="outline-4">
+<h4 id="orgc04ddea"><span class="section-number-4">4.1.2.</span> Seas</h4>
+</div>
+<div id="outline-container-org76e394e" class="outline-4">
+<h4 id="org76e394e"><span class="section-number-4">4.1.3.</span> Rivers</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org5a78c89"></a>General<br /></li>
+<li><a id="org2d8200d"></a>India<br />
+<ol class="org-ol">
+<li><a id="org39623de"></a>Saraswati<br />
+<div class="outline-text-6" id="text-4-1-3-2-1">
+<ul class="org-ul">
+<li>A. Nair, <i>Why the River Saraswati Disappeared: (Penguin Petit).</i> Penguin UK, 2013.</li>
+
+<li>K. S. Valdiya, <i>Prehistoric River Saraswati, Western India: Geological Appraisal and Social Aspects.</i> Springer, 2016.</li>
+
+<li>M. Danino, <i>The Lost River: On the Trail of the Sarasvati.</i> Penguin Books India, 2010.</li>
+
+<li>R. Kochhar, “On the Identity and Chronology of the Rigvedic River Sarasvati.” Accessed: Feb. 02, 2024. [Online]. Available: <img src="https://www.webpages.uidaho.edu/ngier/306/contrasarav.htm" alt="contrasarav.htm" /></li>
+</ul>
+</div>
+</li>
+<li><a id="org207f79c"></a>Ganga<br />
+<div class="outline-text-6" id="text-4-1-3-2-2">
+<ul class="org-ul">
+<li>“Powerful ancient earthquake likely rerouted the Ganga 2,500 years ago — and there are risks of another such event in future.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740">https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Sanghi, Ed., Our National River Ganga: Lifeline of Millions, Softcover reprint of the original 1st ed. 2014 edition. Springer, 2016.</li>
+
+<li>B. Banerjee, Superhuman River: Stories of the Ganga. New Delhi: Aleph Book Company, 2020.</li>
+
+<li>V. Mallet, River of Life, River of Death: The Ganges and India’s Future. OUP UK, 2017.
+<ul class="org-ul">
+<li>V. Mallet, “How the Ganga Is Contributing to Increasing Antibiotic Resistance Worldwide,” The Caravan. <a href="https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide">https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide</a> (accessed Apr. 20, 2022).</li>
+</ul></li>
+
+<li>S. Sen, Ganga: The Many Pasts of a River. Gurgaon, Haryana, India: Penguin Viking, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Kochhar, “The virus in the rivers: histories and antibiotic afterlives of the bacteriophage at the sangam in Allahabad,” Notes and Records: the Royal Society Journal of the History of Science, vol. 74, no. 4, pp. 625–651, Dec. 2020, doi: 10.1098/rsnr.2020.0019.</li>
+<li>“Is Ganga losing its resilience?” <a href="https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045">https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045</a> (accessed Apr. 20, 2022).</li>
+<li>K. Khairnar, “Ganges: special at its origin,” J Biol Res (Thessalon), vol. 23, p. 16, Jul. 2016, doi: 10.1186/s40709-016-0055-6.</li>
+<li>“A British scientist’s quest to scientifically explain the ‘mythical powers of the Ganges,’” ThePrint, Nov. 03, 2021. <a href="https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/">https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/</a> (accessed Apr. 20, 2022).</li>
+<li>“Water pollution in rivers: A long pathway to a better tomorrow.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987">https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987</a></li>
+<li>“Namami Gange: Ten Years On, The Ganga Still Runs Dirty, Its Water Undrinkable,” The Wire. Accessed: May 19, 2024. [Online]. Available: <a href="https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable">https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8569c22"></a>Yamuna<br />
+<div class="outline-text-6" id="text-4-1-3-2-3">
+<ul class="org-ul">
+<li>“Yamuna,” Wikipedia. Mar. 19, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Yamuna&amp;oldid=1145513102">https://en.wikipedia.org/w/index.php?title=Yamuna&amp;oldid=1145513102</a></li>
+
+<li>“Chasing a Dying River: The Yamuna in Delhi,” South Asia@LSE. Accessed: Oct. 09, 2023. [Online]. Available: <a href="https://blogs.lse.ac.uk/southasia/2023/07/17/chasing-a-dying-river-the-yamuna-in-delhi/">https://blogs.lse.ac.uk/southasia/2023/07/17/chasing-a-dying-river-the-yamuna-in-delhi/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>SANDRP, “Yamuna Manthan 030424: DDA Continues to Destroy River Floodplains,” SANDRP. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://sandrp.in/2024/04/03/yamuna-manthan-030424-dda-continues-to-destroy-river-floodplains/">https://sandrp.in/2024/04/03/yamuna-manthan-030424-dda-continues-to-destroy-river-floodplains/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge55a970"></a>Chenab<br />
+<div class="outline-text-6" id="text-4-1-3-2-4">
+<ul class="org-ul">
+<li>“Moon River: The Chenab, a symbol of lovers, today symbolises pain of partition &amp; consumerism, says Surjit Patar.” Accessed: May 13, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/moon-river-the-chenab-a-symbol-of-lovers-today-symbolises-pain-of-partition-consumerism-says-surjit-patar-93869">https://www.downtoearth.org.in/news/water/moon-river-the-chenab-a-symbol-of-lovers-today-symbolises-pain-of-partition-consumerism-says-surjit-patar-93869</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga7f9ccc"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-3-2-5">
+<ul class="org-ul">
+<li>“Re-envisioning Riverscapes and Urban Riverfronts in India: Toward Ecological and Social Harmony,” Vikalp Sangam. Accessed: May 05, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/re-envisioning-riverscapes-and-urban-riverfronts-in-india-toward-ecological-and-social-harmony/">https://vikalpsangam.org/article/re-envisioning-riverscapes-and-urban-riverfronts-in-india-toward-ecological-and-social-harmony/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Book Excerpt: An ancient legend explains why the Chambal is India’s cleanest river.” Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/reviews/book-excerpt-an-ancient-legend-explains-why-the-chambal-is-india-s-cleanest-river-95054">https://www.downtoearth.org.in/reviews/book-excerpt-an-ancient-legend-explains-why-the-chambal-is-india-s-cleanest-river-95054</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Interlinking of Rivers: Where is the sense in river-linking?,” The Financial Express. <a href="https://www.financialexpress.com/opinion/interlinking-of-rivers-where-is-the-sense-in-river-linking/2444084/">https://www.financialexpress.com/opinion/interlinking-of-rivers-where-is-the-sense-in-river-linking/2444084/</a> (accessed Feb. 26, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgacef4b7"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-3-3">
+<ul class="org-ul">
+<li>“Home,” RoRSA. <a href="https://www.rorsa.org">https://www.rorsa.org</a> (accessed Jul. 02, 2023).</li>
+
+<li>“Analyzing the benefits of transboundary cooperation in the Lancang-Mekong River Basin,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jun-2024/analyzing-benefits-of-transboundary-cooperation-in-lancang-mekong-river-basin">https://iiasa.ac.at/news/jun-2024/analyzing-benefits-of-transboundary-cooperation-in-lancang-mekong-river-basin</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org3cfc7a3" class="outline-4">
+<h4 id="org3cfc7a3"><span class="section-number-4">4.1.4.</span> Lakes</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org22e2c4e" class="outline-2">
+<h2 id="org22e2c4e"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgaf68463" class="outline-3">
+<h3 id="orgaf68463"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Music Today, The Elements: Water | Audio Jukebox | Instrumental &amp; Vocal | Pt. Shiv Kumar Sharma | Music Today, (Jul. 07, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=aO0UaDJBMCk">https://www.youtube.com/watch?v=aO0UaDJBMCk</a></li>
+<li>Music Today, Mystic Soundscapes - Water | Audio Jukebox | Instrumental | World Music | Rahul Sharma, (Sep. 01, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=jrL5fUhK4sI">https://www.youtube.com/watch?v=jrL5fUhK4sI</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b3dbe9" class="outline-2">
+<h2 id="org7b3dbe9"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orga0e1182" class="outline-3">
+<h3 id="orga0e1182"><span class="section-number-3">6.1.</span> Fluoride</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Fluoride,” nhs.uk, Oct. 18, 2017. <a href="https://www.nhs.uk/conditions/fluoride/">https://www.nhs.uk/conditions/fluoride/</a> (accessed Apr. 19, 2022).</li>
+<li>A. C. Whipple, “‘Into Every Home, Into Every Body’: Organicism and Anti-Statism in the British Anti-Fluoridation Movement, 1952–1960,” Twentieth Century British History, vol. 21, no. 3, pp. 330–349, Sep. 2010, doi: 10.1093/tcbh/hwq016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org82b3ae5" class="outline-3">
+<h3 id="org82b3ae5"><span class="section-number-3">6.2.</span> AMOC</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>“Atlantic meridional overturning circulation,” Wikipedia. Feb. 10, 2024. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Atlantic_meridional_overturning_circulation&amp;oldid=1205920987">https://en.wikipedia.org/w/index.php?title=Atlantic_meridional_overturning_circulation&amp;oldid=1205920987</a></li>
+<li>N. O. and A. A. US Department of Commerce, “What is the AMOC?” Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://oceanservice.noaa.gov/facts/amoc.html">https://oceanservice.noaa.gov/facts/amoc.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. M. van Westen, M. Kliphuis, and H. A. Dijkstra, “Physics-based early warning signal shows that AMOC is on tipping course,” Science Advances, Feb. 2024, doi: 10.1126/sciadv.adk1189.
+<ul class="org-ul">
+<li>H. A. Dijkstra, M. Kliphuis, and R. van Westen, “Atlantic Ocean is headed for a tipping point − once melting glaciers shut down the Gulf Stream, we would see extreme climate change within decades, study shows,” The Conversation. Accessed: Feb. 11, 2024. [Online]. Available: <a href="http://theconversation.com/atlantic-ocean-is-headed-for-a-tipping-point-once-melting-glaciers-shut-down-the-gulf-stream-we-would-see-extreme-climate-change-within-decades-study-shows-222834">http://theconversation.com/atlantic-ocean-is-headed-for-a-tipping-point-once-melting-glaciers-shut-down-the-gulf-stream-we-would-see-extreme-climate-change-within-decades-study-shows-222834</a></li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>J. Watts, “Atlantic Ocean circulation nearing ‘devastating’ tipping point, study finds,” The Guardian, Feb. 09, 2024. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds">https://www.theguardian.com/environment/2024/feb/09/atlantic-ocean-circulation-nearing-devastating-tipping-point-study-finds</a></li>
+<li>L. Paddison, “Critical Atlantic Ocean current system is showing early signs of collapse, prompting warning from scientists,” CNN. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html">https://www.cnn.com/2024/02/09/climate/atlantic-circulation-collapse-weather-climate/index.html</a></li>
+<li>D. Harrison, “Extreme Climate Impacts From Collapse of a Key Atlantic Ocean Current Could be Worse Than Expected, a New Study Warns,” Inside Climate News. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/">https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/</a></li>
+<li>D. Harrison, “Extreme Climate Impacts From Collapse of a Key Atlantic Ocean Current Could be Worse Than Expected, a New Study Warns,” Inside Climate News. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/">https://insideclimatenews.org/news/09022024/climate-impacts-from-collapse-of-atlantic-meridional-overturning-current-could-be-worse-than-expected/</a></li>
+<li>A. Press, “Ocean System Trouble Could Cause Weather Chaos, Study Says,” Voice of America. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.voanews.com/a/ocean-system-trouble-could-cause-weather-chaos-study-says-/7482078.html">https://www.voanews.com/a/ocean-system-trouble-could-cause-weather-chaos-study-says-/7482078.html</a></li>
+<li>“RealClimate: New study suggests the Atlantic overturning circulation AMOC ‘is on tipping course.’” Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.realclimate.org/index.php/archives/2024/02/new-study-suggests-the-atlantic-overturning-circulation-amoc-is-on-tipping-course/">https://www.realclimate.org/index.php/archives/2024/02/new-study-suggests-the-atlantic-overturning-circulation-amoc-is-on-tipping-course/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Dumé, “Atlantic current circulation could shut down, say climate scientists,” Physics World. Accessed: Feb. 22, 2024. [Online]. Available: <a href="https://physicsworld.com/a/atlantic-current-circulation-could-shut-down-say-climate-scientists/">https://physicsworld.com/a/atlantic-current-circulation-could-shut-down-say-climate-scientists/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7523f36" class="outline-3">
+<h3 id="org7523f36"><span class="section-number-3">6.3.</span> Drinking Water</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org308b744" class="outline-4">
+<h4 id="org308b744"><span class="section-number-4">6.3.1.</span> General</h4>
+</div>
+<div id="outline-container-org01eb7de" class="outline-4">
+<h4 id="org01eb7de"><span class="section-number-4">6.3.2.</span> Bottled</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<ul class="org-ul">
+<li>P. H. Gleick and H. S. Cooley, “Energy implications of bottled water,” Environ. Res. Lett., vol. 4, no. 1, p. 014009, Jan. 2009, doi: 10.1088/1748-9326/4/1/014009.</li>
+
+<li>P. H. Gleick, Bottled and Sold: The Story Behind Our Obsession with Bottled Water. Island Press, 2010.</li>
+
+<li>N. N. February 2024, “High levels of nanoplastics found in bottled water,” RSC Education. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://edu.rsc.org/science-research/high-levels-of-nanoplastics-found-in-bottled-water/4018912.article">https://edu.rsc.org/science-research/high-levels-of-nanoplastics-found-in-bottled-water/4018912.article</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org64022b3" class="outline-4">
+<h4 id="org64022b3"><span class="section-number-4">6.3.3.</span> Brands</h4>
+<div class="outline-text-4" id="text-6-3-3">
+<ul class="org-ul">
+<li>“S.Pellegrino,” Wikipedia. Jun. 05, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=S.Pellegrino&amp;oldid=1091691603">https://en.wikipedia.org/w/index.php?title=S.Pellegrino&amp;oldid=1091691603</a></li>
+<li>“Perrier,” Wikipedia. Jun. 02, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Perrier&amp;oldid=1091137995">https://en.wikipedia.org/w/index.php?title=Perrier&amp;oldid=1091137995</a></li>
+<li>“Evian,” Wikipedia. Jun. 30, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Evian&amp;oldid=1095836261">https://en.wikipedia.org/w/index.php?title=Evian&amp;oldid=1095836261</a></li>
+<li>“Dasani,” Wikipedia. May 26, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Dasani&amp;oldid=1089998673">https://en.wikipedia.org/w/index.php?title=Dasani&amp;oldid=1089998673</a></li>
+<li>“Bisleri,” Wikipedia. Jun. 22, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bisleri&amp;oldid=1094443817">https://en.wikipedia.org/w/index.php?title=Bisleri&amp;oldid=1094443817</a></li>
+
+<li>“List of bottled water brands,” Wikipedia. Jun. 27, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=List_of_bottled_water_brands&amp;oldid=1095362610">https://en.wikipedia.org/w/index.php?title=List_of_bottled_water_brands&amp;oldid=1095362610</a></li>
+<li>“Carbonated water - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Carbonated_water">https://en.wikipedia.org/wiki/Carbonated_water</a> (accessed Jul. 04, 2022).</li>
+<li>“Mineral water,” Wikipedia. Apr. 27, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mineral_water&amp;oldid=1084853827">https://en.wikipedia.org/w/index.php?title=Mineral_water&amp;oldid=1084853827</a></li>
+<li>“Bottled water,” Wikipedia. Jul. 04, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bottled_water&amp;oldid=1096364792">https://en.wikipedia.org/w/index.php?title=Bottled_water&amp;oldid=1096364792</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7cff234" class="outline-4">
+<h4 id="org7cff234"><span class="section-number-4">6.3.4.</span> Purifiers</h4>
+<div class="outline-text-4" id="text-6-3-4">
+<ul class="org-ul">
+<li>“DTE Coverage of Reverse Osmosis purifiers.” Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/coverage/water/dte-coverage-of-reverse-osmosis-purifiers-95222">https://www.downtoearth.org.in/coverage/water/dte-coverage-of-reverse-osmosis-purifiers-95222</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“A new sensor detects harmful ‘forever chemicals’ in drinking water – MIT Department of Chemistry.” Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://chemistry.mit.edu/chemistry-news/a-new-sensor-detects-harmful-forever-chemicals-in-drinking-water/">https://chemistry.mit.edu/chemistry-news/a-new-sensor-detects-harmful-forever-chemicals-in-drinking-water/</a></li>
+
+<li>“Fact or fallacy: RO companies in India are under the radar.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/fact-or-fallacy-ro-companies-in-india-are-under-the-radar-95158">https://www.downtoearth.org.in/news/water/fact-or-fallacy-ro-companies-in-india-are-under-the-radar-95158</a></li>
+
+<li>“Fact or fallacy: Is your water purifier safe?” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/fact-or-fallacy-is-your-water-purifier-safe--95154">https://www.downtoearth.org.in/news/water/fact-or-fallacy-is-your-water-purifier-safe--95154</a></li>
+
+<li>“Unhealthy levels of arsenic in water could exacerbate health concerns when used to boil rice.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/unhealthy-levels-of-arsenic-in-water-could-exacerbate-health-concerns-when-used-to-boil-rice-95175">https://www.downtoearth.org.in/news/health/unhealthy-levels-of-arsenic-in-water-could-exacerbate-health-concerns-when-used-to-boil-rice-95175</a></li>
+
+<li>“Fact or fallacy: ‘RO is a defence against contaminants.’” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/interviews/water/fact-or-fallacy-ro-is-a-defence-against-contaminants--95156">https://www.downtoearth.org.in/interviews/water/fact-or-fallacy-ro-is-a-defence-against-contaminants--95156</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>OCA, “Boiling Tap Water May Be Solution to Microplastics,” Organic Consumers. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://organicconsumers.org/boiling-tap-water-may-be-solution-to-microplastics/">https://organicconsumers.org/boiling-tap-water-may-be-solution-to-microplastics/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org456adbb" class="outline-4">
+<h4 id="org456adbb"><span class="section-number-4">6.3.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-3-5">
+<ul class="org-ul">
+<li>S. Khan, “Some of us don’t have high-quality drinking water, and it’s putting public health at risk. How do we deliver universal access?,” The Conversation. Accessed: Jun. 29, 2024. [Online]. Available: <a href="http://theconversation.com/some-of-us-dont-have-high-quality-drinking-water-and-its-putting-public-health-at-risk-how-do-we-deliver-universal-access-233462">http://theconversation.com/some-of-us-dont-have-high-quality-drinking-water-and-its-putting-public-health-at-risk-how-do-we-deliver-universal-access-233462</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Investigating Corruption and the ‘Tanker Mafias’ in Karachi’s Water Supply Chain.” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://gijn.org/stories/investigating-corruption-karachis-water-supply-chain/">https://gijn.org/stories/investigating-corruption-karachis-water-supply-chain/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfcdaf9e" class="outline-2">
+<h2 id="orgfcdaf9e"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Understanding Future Groundwater Sustainability Scenarios | Union of Concerned Scientists.” Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.ucsusa.org/resources/understanding-future-groundwater-sustainability-scenarios">https://www.ucsusa.org/resources/understanding-future-groundwater-sustainability-scenarios</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. News, “Optimization Techniques Maximize Real-time Management of Water Supply Systems,” SIAM News. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://sinews.siam.org/Details-Page/optimization-techniques-maximize-real-time-management-of-water-supply-systems">https://sinews.siam.org/Details-Page/optimization-techniques-maximize-real-time-management-of-water-supply-systems</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>K. Hayhoe, “What’s Happening in the Ocean and Why It Matters to You and Me,” Scientific American. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/whats-happening-in-the-ocean-and-why-it-matters-to-you-and-me/">https://www.scientificamerican.com/article/whats-happening-in-the-ocean-and-why-it-matters-to-you-and-me/</a></li>
+
+<li>James, “Large Ocean States at the forefront of ocean health and governance,” International Science Council. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://council.science/current/blog/world-ocean-day-2024/">https://council.science/current/blog/world-ocean-day-2024/</a></li>
+<li>“Mission Ocean and Waters service portal | Research and Innovation.” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://projects.research-and-innovation.ec.europa.eu/en/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters/mission-ocean-and-waters-service-portal">https://projects.research-and-innovation.ec.europa.eu/en/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters/mission-ocean-and-waters-service-portal</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>P. R. March 2024, “There’s a world of chemistry in water,” Chemistry World. Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/theres-a-world-of-chemistry-in-water/4019215.article">https://www.chemistryworld.com/opinion/theres-a-world-of-chemistry-in-water/4019215.article</a></li>
+
+<li>“Making 10 million poor people water secure.” Accessed: Mar. 12, 2024. [Online]. Available: <a href="https://oumnh.ox.ac.uk/event/making-10-million-poor-people-water-secure">https://oumnh.ox.ac.uk/event/making-10-million-poor-people-water-secure</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. N. March 2024, “The oceans’ climate challenge,” Chemistry World. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/the-oceans-climate-challenge/4019188.article">https://www.chemistryworld.com/features/the-oceans-climate-challenge/4019188.article</a></li>
+<li>D. L. March 2024, “Water isn’t normal,” Chemistry World. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/water-isnt-normal/4019218.article">https://www.chemistryworld.com/opinion/water-isnt-normal/4019218.article</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Analyzing the benefits of transboundary cooperation in the Lancang-Mekong River Basin,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jun-2024/analyzing-benefits-of-transboundary-cooperation-in-lancang-mekong-river-basin">https://iiasa.ac.at/news/jun-2024/analyzing-benefits-of-transboundary-cooperation-in-lancang-mekong-river-basin</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“6 things you can do for the ocean today,” Greenpeace International. Accessed: Jun. 08, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/">https://www.greenpeace.org/international/story/67451/world-oceans-day-take-action/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. C. Press, “Urban water system theory 5.0 offers a systematic solution to complex urban water issues in China.” Accessed: May 25, 2024. [Online]. Available: <a href="https://phys.org/news/2024-05-urban-theory-systematic-solution-complex.html">https://phys.org/news/2024-05-urban-theory-systematic-solution-complex.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Acharya, “Memories of Water,” Places Journal, Apr. 2023, doi: 10.22269/230425.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Rising waters and sinking communities: exploring the scope for transformation and resilience in riverine Bangladesh,” IIASA - International Institute for Applied Systems Analysis. Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/mar-2024/rising-waters-and-sinking-communities-exploring-scope-for-transformation-and">https://iiasa.ac.at/news/mar-2024/rising-waters-and-sinking-communities-exploring-scope-for-transformation-and</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Access to Water Is a Crisis for the Powerless,” The Wire. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://thewire.in/rights/access-to-water-is-a-crisis-for-the-powerless">https://thewire.in/rights/access-to-water-is-a-crisis-for-the-powerless</a></li>
+<li>“Counting India’s waterbodies.” Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/counting-india-s-waterbodies-95199">https://www.downtoearth.org.in/infographics/counting-india-s-waterbodies-95199</a></li>
+<li>“Fact or fallacy: Is your water purifier safe?” Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/water/fact-or-fallacy-is-your-water-purifier-safe--95154">https://www.downtoearth.org.in/news/water/fact-or-fallacy-is-your-water-purifier-safe--95154</a></li>
+<li>SANDRP, “World Water Day 2024: Top Ten Positive Water Stories from Urban India,” SANDRP. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://sandrp.in/2024/03/22/world-water-day-2024-top-ten-positive-urban-water-stories-from-india/">https://sandrp.in/2024/03/22/world-water-day-2024-top-ten-positive-urban-water-stories-from-india/</a></li>
+<li>“Community Water Model (CWatM),” IIASA - International Institute for Applied Systems Analysis. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://iiasa.ac.at/models-tools-data/cwatm">https://iiasa.ac.at/models-tools-data/cwatm</a></li>
+<li>“Caste’s Role in Shaping Water Access Is Missing From Indian Environmental Discourse,” The Wire. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://thewire.in/caste/caste-water-access-missing-india-environmental-discourse">https://thewire.in/caste/caste-water-access-missing-india-environmental-discourse</a></li>
+<li>“SoGE Students Embark on Water Adaptation Photojournalism Research Project | School of Geography and the Environment.” Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.geog.ox.ac.uk/research/soge-students-embark-water-adaptation-photojournalism-research-project">https://www.geog.ox.ac.uk/research/soge-students-embark-water-adaptation-photojournalism-research-project</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Water for peace … for now? | SIPRI.” Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.sipri.org/commentary/blog/2024/water-peace-now">https://www.sipri.org/commentary/blog/2024/water-peace-now</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. M. P. Reader, “The Groundwater Crisis: The Need for New Data to Inform Public Policy,” The MIT Press Reader. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-groundwater-crisis-the-need-for-new-data-to-inform-public-policy/">https://thereader.mitpress.mit.edu/the-groundwater-crisis-the-need-for-new-data-to-inform-public-policy/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Author, “Water observed on asteroids for the first time,” Physics World. Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://physicsworld.com/water-observed-on-asteroids-for-the-first-time/">https://physicsworld.com/water-observed-on-asteroids-for-the-first-time/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Many Lives of Water,” YES! Magazine. <a href="https://www.yesmagazine.org/issue/thirst/2023/05/18/many-lives-of-water">https://www.yesmagazine.org/issue/thirst/2023/05/18/many-lives-of-water</a> (accessed Jun. 27, 2023).</li>
+
+<li><b>“Casting a wide net to see the real cost of water,”</b> KAUST Insight, Jun. 11, 2023. <a href="https://insight.kaust.edu.sa/2023/06/11/casting-a-wide-net-to-see-the-real-cost-of-water/">https://insight.kaust.edu.sa/2023/06/11/casting-a-wide-net-to-see-the-real-cost-of-water/</a> (accessed Jun. 23, 2023).</li>
+
+<li>E. Savelli, M. Mazzoleni, G. Di Baldassarre, H. Cloke, and M. Rusca, “Urban water crises driven by elites’ unsustainable consumption,” Nat Sustain, pp. 1–12, Apr. 2023, doi: 10.1038/s41893-023-01100-0.</li>
+
+<li>M. Knoll, U. Lubken, and D. Schott, Rivers Lost, Rivers Regained: Rethinking City-River Relations. University of Pittsburgh Press, 2017.</li>
+
+<li>R. Nixon and F. Stevens, <b>Mission Blue.</b> Insurgent Media, True Blue Films, 2014.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Vymazal, Natural and Constructed Wetlands: Nutrients, heavy metals and energy cycling, and flow. Springer, 2016.</li>
+
+<li>M. Kravčík, <b>Water for the Recovery of the Climate: A New Water Paradigm.</b> TypoPress, 2008.</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>, 
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19 Resources</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a>. 
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-06-29 Sat 13:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
