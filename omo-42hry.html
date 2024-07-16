@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-16 Tue 12:27 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ramayana</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ramayana</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org406b0b0">1. General</a></li>
+<li><a href="#orgc5aa2bd">2. STEMM</a></li>
+<li><a href="#orga8773e0">3. World</a>
+<ul>
+<li><a href="#org9b4d248">3.1. Space and Time</a>
+<ul>
+<li><a href="#org1d3a38b">3.1.1. History</a></li>
+<li><a href="#org8ce82c7">3.1.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#orgf12b5c9">3.2. Politics</a></li>
+<li><a href="#org84c23a6">3.3. Law</a></li>
+<li><a href="#org7b09474">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgdf6e74b">4. Core</a>
+<ul>
+<li><a href="#orgaa8876e">4.1. Short Works</a></li>
+<li><a href="#org8e882e4">4.2. Illustrated</a>
+<ul>
+<li><a href="#orgfae02dc">4.2.1. Brief</a></li>
+<li><a href="#org9318400">4.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org96799ed">4.3. Companions, Handbooks</a></li>
+<li><a href="#orgbeef65e">4.4. Variants</a>
+<ul>
+<li><a href="#orgb697452">4.4.1. Ramcharitmanas</a></li>
+<li><a href="#orgc17506b">4.4.2. Valmiki Ramayana</a></li>
+<li><a href="#orgbf86324">4.4.3. Alternative Ramayanas</a></li>
+<li><a href="#org4c548d5">4.4.4. Translations</a></li>
+</ul>
+</li>
+<li><a href="#org01b8522">4.5. Media Formats</a>
+<ul>
+<li><a href="#org1918ceb">4.5.1. Audio Books</a></li>
+<li><a href="#orgdb0da4c">4.5.2. Videos</a></li>
+<li><a href="#org95791c3">4.5.3. Podcasts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org94d9797">5. Arts</a></li>
+<li><a href="#org1e9ef59">6. Critical Studies</a></li>
+<li><a href="#orgd088998">7. Special Topics</a>
+<ul>
+<li><a href="#orgc81726d">7.1. Sri Aurobindo</a>
+<ul>
+<li><a href="#orgff49a65">7.1.1. Misc</a></li>
+<li><a href="#org58a376b">7.1.2. Hindi</a></li>
+</ul>
+</li>
+<li><a href="#org77ec51a">7.2. Special Groups</a>
+<ul>
+<li><a href="#org11b6b06">7.2.1. Women</a></li>
+<li><a href="#org2028357">7.2.2. Kids</a></li>
+<li><a href="#orgc5c5870">7.2.3. Old</a></li>
+<li><a href="#org90b0990">7.2.4. Poor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1063197">8. Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org406b0b0" class="outline-2">
+<h2 id="org406b0b0"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Ramayana,” Wikipedia. Feb. 03, 2022. Accessed: Feb. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ramayana&amp;oldid=1069611703">https://en.wikipedia.org/w/index.php?title=Ramayana&amp;oldid=1069611703</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5aa2bd" class="outline-2">
+<h2 id="orgc5aa2bd"><span class="section-number-2">2.</span> STEMM</h2>
+</div>
+<div id="outline-container-orga8773e0" class="outline-2">
+<h2 id="orga8773e0"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9b4d248" class="outline-3">
+<h3 id="org9b4d248"><span class="section-number-3">3.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org1d3a38b" class="outline-4">
+<h4 id="org1d3a38b"><span class="section-number-4">3.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>P. Bhatnagar, Dating the Era of Lord Rama. Rupa &amp; Company, 2004.</li>
+
+<li>D. Pattanaik, What Came First: The Ramayana or the Mahabharata? Penguin, 2016.</li>
+
+<li>“Not Sri Lanka, but Sonepur in Orissa is the Lanka of Ramayana: Archaeologists,” India Today. Accessed: Jan. 25, 2024. [Online]. Available: <a href="https://www.indiatoday.in/magazine/heritage/story/19810430-not-sri-lanka-but-sonepur-in-orissa-is-the-lanka-of-ramayana-archaeologists-772872-2013-11-22">https://www.indiatoday.in/magazine/heritage/story/19810430-not-sri-lanka-but-sonepur-in-orissa-is-the-lanka-of-ramayana-archaeologists-772872-2013-11-22</a></li>
+
+<li>A. K. Rao, Re-figuring the Ramayana as Theology: A History of Reception in Premodern India: Routledge Hindu Studies, 1st edition. London ; New York: Routledge, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ce82c7" class="outline-4">
+<h4 id="org8ce82c7"><span class="section-number-4">3.1.2.</span> Geography</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>V. Pande and N. Kulkarni, In The Footsteps Of Rama: Travels with the Ramayana. Noida: HarperCollins India, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf12b5c9" class="outline-3">
+<h3 id="orgf12b5c9"><span class="section-number-3">3.2.</span> Politics</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>N. Ramnath, “How Modi’s interest has given new life to a 30-year-old Indo-Japanese animated film on the Ramayana,” Scroll.in. <a href="https://scroll.in/reel/1025233/the-continuing-journey-of-an-indo-japanese-animated-film-based-on-the-ramayana">https://scroll.in/reel/1025233/the-continuing-journey-of-an-indo-japanese-animated-film-based-on-the-ramayana</a> (accessed Jun. 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84c23a6" class="outline-3">
+<h3 id="org84c23a6"><span class="section-number-3">3.3.</span> Law</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>V. Maheshwari and A. Maheshwari, Ramayana Revisited: An Epic through a Legal Prism. Bloomsbury Publishing, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b09474" class="outline-3">
+<h3 id="org7b09474"><span class="section-number-3">3.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgdf6e74b" class="outline-2">
+<h2 id="orgdf6e74b"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgaa8876e" class="outline-3">
+<h3 id="orgaa8876e"><span class="section-number-3">4.1.</span> Short Works</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>R. K. Narayan, <i>The Ramayana: A Shortened Modern Prose Version of the Indian Epic.</i> Penguin, 2006.</li>
+
+<li>D. Pattanaik, The Book of Ram. Penguin Books India, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8e882e4" class="outline-3">
+<h3 id="org8e882e4"><span class="section-number-3">4.2.</span> Illustrated</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgfae02dc" class="outline-4">
+<h4 id="orgfae02dc"><span class="section-number-4">4.2.1.</span> Brief</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>A. Pai, <i>Valmiki’s Ramayana.</i> Amar Chitra Katha Pvt Ltd, 1971.</li>
+
+<li>S. Rao, Valmiki’s Ramayana. Amar Chitra Katha, 2009.</li>
+
+<li>A. Pai, The Sons of Rama. Amar Chitra Katha Pvt Ltd, 2005.</li>
+
+<li>A. Pai, Tulsidas Ramayana: Ram Charit Manas, Reprint edition. Amar Chitra Katha, 2011.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9318400" class="outline-4">
+<h4 id="org9318400"><span class="section-number-4">4.2.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>A. Sattar, Ramayana: An Illustrated Retelling. Restless Books, 2018.</li>
+
+<li>D. Pattanaik, <i>Sita: An Illustrated Retelling of the Ramayana.</i> Penguin UK, 2013.</li>
+
+<li>DK, The Illustrated Ramayana: The Timeless Epic of Duty, Love, and Redemption. DK, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org96799ed" class="outline-3">
+<h3 id="org96799ed"><span class="section-number-3">4.3.</span> Companions, Handbooks</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Anonymous, Penguin Companion to the Ramayana, Illustrated edition. New Delhi ; New York: Penguin India, 2006.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbeef65e" class="outline-3">
+<h3 id="orgbeef65e"><span class="section-number-3">4.4.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgb697452" class="outline-4">
+<h4 id="orgb697452"><span class="section-number-4">4.4.1.</span> Ramcharitmanas</h4>
+<div class="outline-text-4" id="text-4-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgbb47a6d"></a>General<br />
+<div class="outline-text-5" id="text-4-4-1-1">
+<ul class="org-ul">
+<li>“Ramcharitmanas,” Wikipedia. Feb. 09, 2022. Accessed: Feb. 15, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ramcharitmanas&amp;oldid=1070863074">https://en.wikipedia.org/w/index.php?title=Ramcharitmanas&amp;oldid=1070863074</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4aabc6f"></a>Audio<br />
+<ol class="org-ol">
+<li><a id="org70fd425"></a>Chhannulal Mishra<br />
+<div class="outline-text-6" id="text-4-4-1-2-1">
+<ul class="org-ul">
+<li>“RamaTulsiDasRamCharitmanasCMishra | Community Playlist on Prime Music.” Accessed: Jan. 21, 2024. [Online]. Available: <a href="https://music.amazon.in/user-playlists/3a366bf82d4b4813b9fead683db54a3ci8n0">https://music.amazon.in/user-playlists/3a366bf82d4b4813b9fead683db54a3ci8n0</a>
+<ul class="org-ul">
+<li>Ramcharitmanas | Volume 1&amp;2 | Audio Jukebox | Devotional | Vocal | Chhannulal Mishra | Music Today, (Sep. 02, 2015). Accessed: Jan. 23, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=PK3JdTjMzEs">https://www.youtube.com/watch?v=PK3JdTjMzEs</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbad38b7"></a>Air Raagam<br />
+<div class="outline-text-6" id="text-4-4-1-2-2">
+<ul class="org-ul">
+<li>Ramcharitmanas | Baal Kaand | Manglacharan | Akashvani Sangeet | Pt. 1, (Nov. 23, 2021). Accessed: Mar. 14, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IX9ItfUnYqo">https://www.youtube.com/watch?v=IX9ItfUnYqo</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf3f578a"></a>Akashvani AIR<br />
+<div class="outline-text-6" id="text-4-4-1-2-3">
+<ul class="org-ul">
+<li>Shri Ramcharit Manas Gaayan (Episode #01), (Jan. 21, 2021). Accessed: Mar. 14, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=I0hyorMexfY">https://www.youtube.com/watch?v=I0hyorMexfY</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org34e1c44"></a>Hindi<br />
+<div class="outline-text-6" id="text-4-4-1-2-4">
+<ul class="org-ul">
+<li>Tulsi Ramayana |सम्पूर्ण तुलसी रामायण - 7 काण्ड| Mukesh की आवाज़ में संपूर्ण रामायण | Ram Navami 2022, (May 12, 2017). Accessed: Jul. 03, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fcjkCZWUemI">https://www.youtube.com/watch?v=fcjkCZWUemI</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org38cca3f"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org5b63834"></a>Murty Classical Library<br />
+<div class="outline-text-5" id="text-4-4-1-3">
+<ul class="org-ul">
+<li>Tulsidas, <b>The Epic of Ram.</b> Harvard University Press, 2020.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgc1d2c6d"></a>Misc<br />
+<div class="outline-text-5" id="text-4-4-1-4">
+<ul class="org-ul">
+<li>Tulsidas, The Ramcharitmanas 1. Penguin Random House India Private Limited, 2019.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>P. Varma, Tulasīdāsa, The Greatest Ode to Lord Ram: Tulsidas’s Ramcharitmanas : Selections &amp; Commentaries. Westland Publications Private Limited, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc17506b" class="outline-4">
+<h4 id="orgc17506b"><span class="section-number-4">4.4.2.</span> Valmiki Ramayana</h4>
+<div class="outline-text-4" id="text-4-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5170c06"></a>Texts<br />
+<div class="outline-text-5" id="text-4-4-2-1">
+<ul class="org-ul">
+<li>Goldman, Goldman, <b>The Rāmāyaṇa of Vālmīki.</b> Princeton University Press, 2009.
+<ul class="org-ul">
+<li>Famous Ramayana epic now in modern English, (Nov. 18, 2016). Accessed: Mar. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VNoF5NaRE80">https://www.youtube.com/watch?v=VNoF5NaRE80</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. S. Library, <b>The Clay Sanskrit Library: Ramayana: 5-volume Set.</b> New York University Press, 2009.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Debroy, <i>The Valmiki Ramayana.</i> Penguin Random House India Private Limited, 2017.</li>
+
+<li>Ramayana of Valmiki (Set of 4 Volumes) Sanskrit Text With English Translation Dr. Ramashraya Sharma And Dr. Ravi Prakash Arya.</li>
+
+<li>Valmiki, Ramayana. Greenleaf Books, 1980.</li>
+
+<li>Vālmīki and R. Menon, The Ramayana: A Modern Retelling of the Great Indian Epic. Farrar, Straus and Giroux, 2004.</li>
+
+<li>A. Ganatra, Ramayana Unravelled: Lesser Known Facets of Rishi Valmiki’s Epic. Bloomsbury Publishing, 2022.</li>
+
+<li>Vālmīki, Ramayana, the Epic of Rama, Prince of India. J.M. Dent and Company, 1902.</li>
+
+<li>A. Sattar, Valmiki’s Ramayana. HarperCollins India, 2019.</li>
+
+<li>R. Tandon, Valmiki Ramayana, 1st Edition. Rupa Publications India, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf76f140"></a>Audio<br />
+<div class="outline-text-5" id="text-4-4-2-2">
+<ul class="org-ul">
+<li>“The Rāmāyana of Valmīki (Audio Download): ValmĪki, Ralph T. H. Griffith - translation, Sagar Arya, Ukemi Audiobooks: Amazon.in: Books.” <a href="https://www.amazon.in/The-R%C4%81m%C4%81yana-of-Valm%C4%ABki/dp/B07ZG42GSS/ref=sr_1_19?crid=QPW6O72UY06A&amp;keywords=ramayana&amp;qid=1678871881&amp;sprefix=ramayan%2Caps%2C335&amp;sr=8-19">https://www.amazon.in/The-R%C4%81m%C4%81yana-of-Valm%C4%ABki/dp/B07ZG42GSS/ref=sr_1_19?crid=QPW6O72UY06A&amp;keywords=ramayana&amp;qid=1678871881&amp;sprefix=ramayan%2Caps%2C335&amp;sr=8-19</a> (accessed Mar. 15, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfd5c490"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgbf86324" class="outline-4">
+<h4 id="orgbf86324"><span class="section-number-4">4.4.3.</span> Alternative Ramayanas</h4>
+<div class="outline-text-4" id="text-4-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgdc8bff9"></a>Comparative<br />
+<div class="outline-text-5" id="text-4-4-3-1">
+<ul class="org-ul">
+<li>“Three Hundred Ramayanas: Five Examples and Three Thoughts on Translation,” Wikipedia. Sep. 11, 2021. Accessed: Feb. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Three_Hundred_Ramayanas:_Five_Examples_and_Three_Thoughts_on_Translation&amp;oldid=1043769646">https://en.wikipedia.org/w/index.php?title=Three_Hundred_Ramayanas:_Five_Examples_and_Three_Thoughts_on_Translation&amp;oldid=1043769646</a></li>
+<li>A. K. Ramanujan, <b>‘Three Hundred Rāmāyaṇas: Five Examples and Three Thoughts on Translation’</b>, The Collected Essays of A. K. Ramanujan, Oxford University Press, 2004.</li>
+
+<li>A. A. Manavalan, Ramayana: A Comparative Study of Ramakathas. Vitasta Publishing Pvt Limited, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7c4e8ab"></a>Muslim<br />
+<div class="outline-text-5" id="text-4-4-3-2">
+<ul class="org-ul">
+<li>A. Tharuvana, “The many Muslim versions of the Ramayana,” The Caravan. <a href="https://caravanmagazine.in/religion/many-muslim-versions-ramayana">https://caravanmagazine.in/religion/many-muslim-versions-ramayana</a> (accessed Mar. 07, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org33bd13c"></a>Jain<br />
+<div class="outline-text-5" id="text-4-4-3-3">
+<ul class="org-ul">
+<li>G. M. Clines, Jain Rāmāyaṇa Narratives: Moral Vision and Literary Innovation. London: Routledge, 2022. doi: 10.4324/9781003167600.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc178853"></a>Tamil Ramayana<br />
+<div class="outline-text-5" id="text-4-4-3-4">
+<ul class="org-ul">
+<li>P. S. Sundaram, Kamba Ramayana, 2002nd edition. Penguin Classics, 2002.</li>
+<li>B. Wentworh, Youth : The Balakandam of Kampan’s Ramayana. New Delhi: Speaking Tiger, 2022.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb81d233"></a>Tibetan Ramayana<br />
+<div class="outline-text-5" id="text-4-4-3-5">
+<ul class="org-ul">
+<li>“Tibetan Ramayana,” Mid-day, Mar. 12, 2023. <a href="https://www.mid-day.com/news/opinion/article/tibetan-ramayana-23274778">https://www.mid-day.com/news/opinion/article/tibetan-ramayana-23274778</a> (accessed Mar. 14, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org8b203d6"></a>Early Forms<br />
+<div class="outline-text-5" id="text-4-4-3-6">
+<ul class="org-ul">
+<li>Valmiki, Rama the Steadfast: An Early Form of the Ramayana. Penguin, 2006.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2249580"></a>W's Ramayana<br />
+<div class="outline-text-5" id="text-4-4-3-7">
+<ul class="org-ul">
+<li>M. Bose and S. P. Bose, A Woman’s Ramayana: Candrāvatī’s Bengali Epic, 1st edition. London ; New York: Routledge, 2013.</li>
+<li>N. D. Sen, Chandrabati’s Ramayan, New Edition. New Delhi: Zubaan, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Sita’s Ramayana.</i> Groundwood Books, House of Anansi Press, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4a9a926"></a>Misc<br />
+<div class="outline-text-5" id="text-4-4-3-8">
+<ul class="org-ul">
+<li>A. Truschke, “Why the Ramayana’s many voices provoke outrage,” The Caravan. <a href="https://caravanmagazine.in/perspectives/sita-ramayana-many-voices-outrage">https://caravanmagazine.in/perspectives/sita-ramayana-many-voices-outrage</a> (accessed Jun. 18, 2023).</li>
+
+<li>P. Richman, Questioning Ramayanas: A South Asian Tradition. University of California Press, 2001.
+<ul class="org-ul">
+<li>P. Richman, “Why Periyar was critical of the Ramayana (and Rama),” Scroll.in, Mar. 09, 2018. <a href="https://scroll.in/article/871237/part-and-parcel-of-the-north-indian-worldview-why-periyar-was-critical-of-the-ramayana-and-rama">https://scroll.in/article/871237/part-and-parcel-of-the-north-indian-worldview-why-periyar-was-critical-of-the-ramayana-and-rama</a> (accessed Mar. 15, 2023).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4c548d5" class="outline-4">
+<h4 id="org4c548d5"><span class="section-number-4">4.4.4.</span> Translations</h4>
+<div class="outline-text-4" id="text-4-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="org1bcf534"></a>Sanskrit, Hindi<br />
+<div class="outline-text-5" id="text-4-4-4-1">
+<ul class="org-ul">
+<li>Ramayana of Valmiki (Set of 4 Volumes) Sanskrit Text With English Translation Dr. Ramashraya Sharma And Dr. Ravi Prakash Arya.</li>
+
+<li>K. Subramaniam, Ramayana. Bharatiya Vidya Bhavan, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgff5bd3b"></a>Indian Languages<br />
+<div class="outline-text-5" id="text-4-4-4-2">
+<ul class="org-ul">
+<li>“Ramayana | Gita Press, Gorakhpur.” <a href="https://www.gitapress.org/our-publication/book/2">https://www.gitapress.org/our-publication/book/2</a> (accessed Nov. 06, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org01b8522" class="outline-3">
+<h3 id="org01b8522"><span class="section-number-3">4.5.</span> Media Formats</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org1918ceb" class="outline-4">
+<h4 id="org1918ceb"><span class="section-number-4">4.5.1.</span> Audio Books</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li>“Ramayana (Audio Download): Ram Dass, Sage Seer, William Buck - adaptation, Phoenix Books: Amazon.in: Audible Books &amp; Originals.” <a href="https://www.amazon.in/dp/B079VSQR4Q?plink=t3HydaxzFLwneugc&amp;ref_=adblp13nvvxx_0_6_ti">https://www.amazon.in/dp/B079VSQR4Q?plink=t3HydaxzFLwneugc&amp;ref_=adblp13nvvxx_0_6_ti</a> (accessed Mar. 15, 2023).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb0da4c" class="outline-4">
+<h4 id="orgdb0da4c"><span class="section-number-4">4.5.2.</span> Videos</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ul class="org-ul">
+<li>रामानंद सागर कृत सम्पूर्ण रामायण I लाईव - भाग 1 l Sampurna Ramayan - Live - Part 1 | Tilak, (Nov. 12, 2020). Accessed: Mar. 14, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=6El8Ia4fYDc">https://www.youtube.com/watch?v=6El8Ia4fYDc</a></li>
+
+<li>Ramayan EP 1 - श्री राम भगवान्‌ का जन्म और बाललीला का आनंद | HQ WIDE SCREEN | English Subtitles, (Aug. 05, 2021). Accessed: Mar. 14, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=RG3Hqth0Eus">https://www.youtube.com/watch?v=RG3Hqth0Eus</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org95791c3" class="outline-4">
+<h4 id="org95791c3"><span class="section-number-4">4.5.3.</span> Podcasts</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<ul class="org-ul">
+<li>“In Our Time - The Ramayana - BBC Sounds.” <a href="https://www.bbc.co.uk/sounds/play/m001jst2">https://www.bbc.co.uk/sounds/play/m001jst2</a> (accessed Mar. 16, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org94d9797" class="outline-2">
+<h2 id="org94d9797"><span class="section-number-2">5.</span> Arts</h2>
+</div>
+<div id="outline-container-org1e9ef59" class="outline-2">
+<h2 id="org1e9ef59"><span class="section-number-2">6.</span> Critical Studies</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>P. E. V. Ramaswami, The Ramayana: a true reading, (translation). publisher not identified.</li>
+
+<li>P. E. V. Ramasamy, Sachchi Ramayan. Radhakrishna Prakashan, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Rebels’ Ramayana: Periyar And Ambedkar’s Critique Of Ramayana,” <a href="https://www.outlookindia.com/">https://www.outlookindia.com/</a>, Sep. 30, 2022. <a href="https://www.outlookindia.com/national/rebels-ramayana-periyar-and-ambedkar-s-critique-of-ramayana-magazine-226477">https://www.outlookindia.com/national/rebels-ramayana-periyar-and-ambedkar-s-critique-of-ramayana-magazine-226477</a> (accessed Mar. 15, 2023).</li>
+<li>P. Richman, “Why Periyar was critical of the Ramayana (and Rama),” Scroll.in, Mar. 09, 2018. <a href="https://scroll.in/article/871237/part-and-parcel-of-the-north-indian-worldview-why-periyar-was-critical-of-the-ramayana-and-rama">https://scroll.in/article/871237/part-and-parcel-of-the-north-indian-worldview-why-periyar-was-critical-of-the-ramayana-and-rama</a> (accessed Mar. 15, 2023).</li>
+
+<li>A. Truschke, “Why the Ramayana’s many voices provoke outrage,” The Caravan. <a href="https://caravanmagazine.in/perspectives/sita-ramayana-many-voices-outrage">https://caravanmagazine.in/perspectives/sita-ramayana-many-voices-outrage</a> (accessed Jun. 18, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd088998" class="outline-2">
+<h2 id="orgd088998"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgc81726d" class="outline-3">
+<h3 id="orgc81726d"><span class="section-number-3">7.1.</span> Sri Aurobindo</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgff49a65" class="outline-4">
+<h4 id="orgff49a65"><span class="section-number-4">7.1.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<ul class="org-ul">
+<li>R. Bijlani, A small RAMAYANA for big boys and girls. Sri Aurobindo Ashram - Delhi Branch, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Joshi, Rama.</li>
+<li>K. Joshi, Raghuvansham.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org58a376b" class="outline-4">
+<h4 id="org58a376b"><span class="section-number-4">7.1.2.</span> Hindi</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<ul class="org-ul">
+<li>R. Bijlani, Suno Kahani Ram Ki. Sri Aurobindo Ashram – Delhi Branch, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org77ec51a" class="outline-3">
+<h3 id="org77ec51a"><span class="section-number-3">7.2.</span> Special Groups</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org11b6b06" class="outline-4">
+<h4 id="org11b6b06"><span class="section-number-4">7.2.1.</span> Women</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<ul class="org-ul">
+<li>K. Kané, “Tara was Vali’s wife, Sugriv’s queen, the woman who cursed Ram. This novel tells her story,” Scroll.in. Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://scroll.in/article/1060790/tara-was-valis-wife-sugrivs-queen-the-woman-who-cursed-ram-this-novel-tells-her-story">https://scroll.in/article/1060790/tara-was-valis-wife-sugrivs-queen-the-woman-who-cursed-ram-this-novel-tells-her-story</a></li>
+
+<li>J. Brockington, M. Brockington, and M. Bose, Eds., The Other Ramayana Women: Regional Rejection and Response, 1st edition. London ; New York: Routledge, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2028357" class="outline-4">
+<h4 id="org2028357"><span class="section-number-4">7.2.2.</span> Kids</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<ul class="org-ul">
+<li>D. Pattanaik, The Girl Who Chose: A New Way of Narrating the Ramayana [Paperback] Devdutt Pattanaik [Paperback] Devdutt Pattanaik, Latest edition. Penguin Books Limited, 2021.</li>
+
+<li>A. Sattar, Ramayana For Children. Juggernaut, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5c5870" class="outline-4">
+<h4 id="orgc5c5870"><span class="section-number-4">7.2.3.</span> Old</h4>
+</div>
+<div id="outline-container-org90b0990" class="outline-4">
+<h4 id="org90b0990"><span class="section-number-4">7.2.4.</span> Poor</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org1063197" class="outline-2">
+<h2 id="org1063197"><span class="section-number-2">8.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>R. P. Goldman, READING WITH THE RSI: A CROSS-CULTURAL AND COMPARATIVE LITERARY APPROACH TO VALMIKIÂ€™S RAMAYANA: A Cross-Cultural and Comparative Literary Approach &#x2026; Comparative Literature, Jadavpur University). Hyderabad, Telangana, India: Orient Blackswan Pvt Ltd, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ramopakhyana,” Wikipedia. Nov. 18, 2023. Accessed: Jul. 16, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ramopakhyana&amp;oldid=1185666668">https://en.wikipedia.org/w/index.php?title=Ramopakhyana&amp;oldid=1185666668</a></li>
+<li>P. Scharf, Ramopakhyana The Story of Rama in The Mahabharata: An Independent- Study Reder in Sanskrit. Routledge, 2017.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>D. Sridhar, Ramayanam Volume 1. HarperCollins India, 2024.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. B. Divakaruni, The Forest of Enchantments, 1st edition. HarperCollins India, 2019.</li>
+<li>C. B. Divakaruni, Sitayan - Hindi, First Edition. Manjul Publishing House, 2020.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>A. Neelakantan, Vanara : The Legend of Baali, Sugreeva and Tara, First Edition. Gurgaon, Haryana, India: Penguin, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“A Companion to Rāmcaritmānas,” vol. 59, no. 7, Feb. 2024, Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/7/book-reviews/companion-%C2%A0r%C4%81mcaritm%C4%81nas.html">https://www.epw.in/journal/2024/7/book-reviews/companion-%C2%A0r%C4%81mcaritm%C4%81nas.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Richness of India’s ‘Epics,’” The India Forum. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/richness-indias-epics">https://www.theindiaforum.in/book-reviews/richness-indias-epics</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. H. Bureau, “IRCTC launches Ramayana circuit tourist train to boost tourism,” The Hindu, Feb. 06, 2024. Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/irctc-launches-ramayana-circuit-tourist-train-to-boost-tourism/article67818415.ece">https://www.thehindu.com/news/national/irctc-launches-ramayana-circuit-tourist-train-to-boost-tourism/article67818415.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Three Hundred Ramayanas: Five Examples and Three Thoughts on Translation. 1991. Accessed: Feb. 05, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/three-hundred-ramayanas-five-examples-and-three-thoughts-on-translation/">https://ruralindiaonline.org/en/library/resource/three-hundred-ramayanas-five-examples-and-three-thoughts-on-translation/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Pattanaik, Ramayana Versus Mahabharata: My Playful Comparison. Rupa Publications, 2018.</li>
+
+<li>S. Gupta, Teachings from the Ramayana. Ebury Press, 2023.</li>
+
+<li>V. Pande and N. Kulkarni, In The Footsteps Of Rama: Travels with the Ramayana. Noida: HarperCollins India, 2021.</li>
+
+<li>D. Nagra, <i>Ramayana.</i> Faber &amp; Faber, 2013.</li>
+
+<li>K. Subramaniam, Ramayana. Bharatiya Vidya Bhavan, 2018.</li>
+
+<li>A. K. Banker, Ramayana Series: The Complete Edition, 2011th edition. AKB eBOOKS, 2011.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>
+<b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a>
+<b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-07-16 Tue 12:27</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
