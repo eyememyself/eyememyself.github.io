@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-17 Wed 17:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sitar</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Sitar</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5c78ad2">1. General</a></li>
+<li><a href="#orgd6b963a">2. Artists</a>
+<ul>
+<li><a href="#org1f0bf2b">2.1. Ravi Shankar</a>
+<ul>
+<li><a href="#org7e6700d">2.1.1. General</a></li>
+<li><a href="#org29e7727">2.1.2. Biographies</a></li>
+<li><a href="#org1df9a20">2.1.3. Interviews</a></li>
+<li><a href="#orgb5d24db">2.1.4. Orgs</a></li>
+<li><a href="#org16f21c4">2.1.5. Discography</a></li>
+<li><a href="#orgd7067bc">2.1.6. Recordings</a></li>
+<li><a href="#orga9af97f">2.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcd5c554">2.2. Nikhil Banerjee</a>
+<ul>
+<li><a href="#org521e38c">2.2.1. General</a></li>
+<li><a href="#org68c6596">2.2.2. Discography</a></li>
+<li><a href="#org7abe97d">2.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb2a02b5">2.3. Vilayat Khan</a>
+<ul>
+<li><a href="#orgd57c22a">2.3.1. General</a></li>
+<li><a href="#orge40986b">2.3.2. Discography</a></li>
+<li><a href="#org040e68c">2.3.3. Recordings</a></li>
+<li><a href="#org196d149">2.3.4. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcca3a7c">3. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org5c78ad2" class="outline-2">
+<h2 id="org5c78ad2"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgd6b963a" class="outline-2">
+<h2 id="orgd6b963a"><span class="section-number-2">2.</span> Artists</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1f0bf2b" class="outline-3">
+<h3 id="org1f0bf2b"><span class="section-number-3">2.1.</span> Ravi Shankar</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org7e6700d" class="outline-4">
+<h4 id="org7e6700d"><span class="section-number-4">2.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Ravi Shankar,” Wikipedia. Apr. 02, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ravi_Shankar&amp;oldid=1147803390">https://en.wikipedia.org/w/index.php?title=Ravi_Shankar&amp;oldid=1147803390</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29e7727" class="outline-4">
+<h4 id="org29e7727"><span class="section-number-4">2.1.2.</span> Biographies</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>R. Shankar and G. Harrison, <b>Raga Mala: The Autobiography Of Ravi Shankar.</b> Welcome Rain Pub., 1997.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>O. Craske, Indian Sun: The Life and Music of Ravi Shankar. Faber &amp; Faber, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1df9a20" class="outline-4">
+<h4 id="org1df9a20"><span class="section-number-4">2.1.3.</span> Interviews</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>1967 || Pandit Ravi Shankar interviewed by Pandit Jnan Prakash Ghosh, (Apr. 07, 2021). Accessed: Apr. 07, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=bSG7rmKwlIo">https://www.youtube.com/watch?v=bSG7rmKwlIo</a></li>
+<li>Interview with Pt. Ravi Shankar | Sitar Maestro, (Apr. 07, 2019). Accessed: Apr. 07, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=w9O0Q4yJ27U">https://www.youtube.com/watch?v=w9O0Q4yJ27U</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb5d24db" class="outline-4">
+<h4 id="orgb5d24db"><span class="section-number-4">2.1.4.</span> Orgs</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>“Ravi Shankar Foundation,” Ravi Shankar. <a href="https://www.ravishankar.org/">https://www.ravishankar.org/</a> (accessed Apr. 07, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“East Meets West Music – The Official Recording Label of the Ravi Shankar Foundation.” <a href="https://eastmeetswestmusic.com/">https://eastmeetswestmusic.com/</a> (accessed Apr. 07, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org16f21c4" class="outline-4">
+<h4 id="org16f21c4"><span class="section-number-4">2.1.5.</span> Discography</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>“Ravi Shankar,” Discogs. <a href="https://www.discogs.com/artist/299241-Ravi-Shankar">https://www.discogs.com/artist/299241-Ravi-Shankar</a> (accessed Dec. 12, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7067bc" class="outline-4">
+<h4 id="orgd7067bc"><span class="section-number-4">2.1.6.</span> Recordings</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<ul class="org-ul">
+<li>Suprabhat | Episode 47 | Pt. Ravi Shankar | Sitar Recital | Raag Parmeshwari, (Sep. 28, 2018). Accessed: Apr. 07, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Qcooie02s7w">https://www.youtube.com/watch?v=Qcooie02s7w</a></li>
+
+<li>Pandit Ravi Shankar || National Programme of Music, (Apr. 07, 2021). Accessed: Apr. 07, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=5eR6HHuMEv0">https://www.youtube.com/watch?v=5eR6HHuMEv0</a></li>
+
+<li>Bharat Ratna Pandit Ravi Shankar II Sitar Recital II II Raviwasariya Akhil Bhartiya Sangeet Sabha, (Aug. 15, 2021). Accessed: Apr. 07, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=kY4Ctdudx6c">https://www.youtube.com/watch?v=kY4Ctdudx6c</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9af97f" class="outline-4">
+<h4 id="orga9af97f"><span class="section-number-4">2.1.7.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgcd5c554" class="outline-3">
+<h3 id="orgcd5c554"><span class="section-number-3">2.2.</span> Nikhil Banerjee</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org521e38c" class="outline-4">
+<h4 id="org521e38c"><span class="section-number-4">2.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org68c6596" class="outline-4">
+<h4 id="org68c6596"><span class="section-number-4">2.2.2.</span> Discography</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Nikhil Banerjee,” Discogs. <a href="https://www.discogs.com/artist/347367-Nikhil-Banerjee">https://www.discogs.com/artist/347367-Nikhil-Banerjee</a> (accessed Dec. 12, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7abe97d" class="outline-4">
+<h4 id="org7abe97d"><span class="section-number-4">2.2.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgb2a02b5" class="outline-3">
+<h3 id="orgb2a02b5"><span class="section-number-3">2.3.</span> Vilayat Khan</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgd57c22a" class="outline-4">
+<h4 id="orgd57c22a"><span class="section-number-4">2.3.1.</span> General</h4>
+</div>
+<div id="outline-container-orge40986b" class="outline-4">
+<h4 id="orge40986b"><span class="section-number-4">2.3.2.</span> Discography</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>“Vilayat Khan,” Discogs. <a href="https://www.discogs.com/artist/910537-Vilayat-Khan">https://www.discogs.com/artist/910537-Vilayat-Khan</a> (accessed Dec. 12, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org040e68c" class="outline-4">
+<h4 id="org040e68c"><span class="section-number-4">2.3.3.</span> Recordings</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org5f64f91"></a>Air Raagam, Prasar Bharati Archives<br />
+<div class="outline-text-5" id="text-2-3-3-1">
+<ul class="org-ul">
+<li>AIR Raagam, Ustad Vilayat Khan II Raga - Darbari Kanada (Part - 1), (Apr. 19, 2022). Accessed: Apr. 23, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=uYACbPZ1qjw">https://www.youtube.com/watch?v=uYACbPZ1qjw</a></li>
+<li>AIR Raagam, Ustad Vilayat Khan II Raga - Darbari Kanada (Part - 2), (Apr. 20, 2022). Accessed: Apr. 23, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=R-awITkoghI">https://www.youtube.com/watch?v=R-awITkoghI</a></li>
+<li>AIR Raagam, Ustad Vilayat Khan II Raga - Darbari Kanada (Part - 3), (Apr. 20, 2022). Accessed: Apr. 23, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=g6EzVruGrvY">https://www.youtube.com/watch?v=g6EzVruGrvY</a></li>
+<li>AIR Raagam, Ustad Vilayat Khan II Raga - Bhairavi (Alap &amp; Gat), (Apr. 20, 2022). Accessed: Apr. 23, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=wj5MqYm3dgQ">https://www.youtube.com/watch?v=wj5MqYm3dgQ</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org196d149" class="outline-4">
+<h4 id="org196d149"><span class="section-number-4">2.3.4.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcca3a7c" class="outline-2">
+<h2 id="orgcca3a7c"><span class="section-number-2">3.</span> Misc</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>“Sitarmakers of Miraj: fading notes,” People’s Archive of Rural India. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/sitarmakers-of-miraj-fading-notes/">https://ruralindiaonline.org/en/articles/sitarmakers-of-miraj-fading-notes/</a></li>
+
+<li>PTI, “Sitars, tanpuras made in Maharashtra’s Miraj town get GI tags,” The Hindu, Apr. 07, 2024. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/maharashtra/sitars-tanpuras-made-in-maharashtras-miraj-town-get-gi-tags/article68038700.ece">https://www.thehindu.com/news/national/maharashtra/sitars-tanpuras-made-in-maharashtras-miraj-town-get-gi-tags/article68038700.ece</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>
+<b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a>
+<b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-07-17 Wed 17:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
