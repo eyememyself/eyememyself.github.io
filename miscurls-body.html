@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-17 Wed 21:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org67e81b2">1. Big Picture</a></li>
+<li><a href="#org0e5a25a">2. STEMM</a>
+<ul>
+<li><a href="#org5030e00">2.1. CSE</a></li>
+<li><a href="#orge89fded">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd1537c9">3. World</a>
+<ul>
+<li><a href="#org4ab11e3">3.1. Health, Environment, Misc</a>
+<ul>
+<li><a href="#org5d9bf9d">3.1.1. Environment, Public Health</a></li>
+<li><a href="#orge1fc162">3.1.2. Personal Health</a></li>
+<li><a href="#orgcfc58a0">3.1.3. Sports</a></li>
+<li><a href="#org8666ad8">3.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge5230d7">3.2. Social Studies</a></li>
+<li><a href="#orgd0a1f8c">3.3. Religions</a>
+<ul>
+<li><a href="#orgc33e5ef">3.3.1. Hinduism</a></li>
+<li><a href="#org2340067">3.3.2. C2</a></li>
+<li><a href="#orgdd0e016">3.3.3. C3</a></li>
+<li><a href="#org9bc47af">3.3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org73d2251">3.4. Transport</a></li>
+<li><a href="#orgf0d366b">3.5. Communication</a>
+<ul>
+<li><a href="#org07f5818">3.5.1. Languages</a></li>
+<li><a href="#orge182e90">3.5.2. News</a></li>
+</ul>
+</li>
+<li><a href="#org0711a37">3.6. India</a>
+<ul>
+<li><a href="#org1bdf460">3.6.1. Places</a></li>
+<li><a href="#orga5677ad">3.6.2. Events</a></li>
+<li><a href="#org84055a4">3.6.3. People</a></li>
+<li><a href="#org7318903">3.6.4. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org82727ae">4. Arts</a>
+<ul>
+<li><a href="#org40f35eb">4.1. Music</a>
+<ul>
+<li><a href="#org69dcb4b">4.1.1. General</a></li>
+<li><a href="#org78ac20c">4.1.2. South Asian Music</a></li>
+<li><a href="#org9135ea6">4.1.3. Western Music</a></li>
+<li><a href="#org6683e37">4.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb83d8b1">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9154978">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67e81b2" class="outline-2">
+<h2 id="org67e81b2"><span class="section-number-2">1.</span> Big Picture</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>The Big Picture: <a href="https://tinyurl.com/bdden5uy">https://tinyurl.com/bdden5uy</a></li>
+
+<li>The Big Picture - Some Non-Tech Resources: <a href="https://tinyurl.com/ykk3mu8u">https://tinyurl.com/ykk3mu8u</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Right Livelihood - Hindi Resources: <a href="https://tinyurl.com/muw2pfms">https://tinyurl.com/muw2pfms</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e5a25a" class="outline-2">
+<h2 id="org0e5a25a"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org5030e00" class="outline-3">
+<h3 id="org5030e00"><span class="section-number-3">2.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Everyday Computing: <a href="https://tinyurl.com/2shxzypv">https://tinyurl.com/2shxzypv</a></li>
+
+<li>Digital Security - The Least Everyone Needs To Know: <a href="https://tinyurl.com/5dmarcet">https://tinyurl.com/5dmarcet</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge89fded" class="outline-3">
+<h3 id="orge89fded"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Chess: <a href="https://tinyurl.com/3af5zcep">https://tinyurl.com/3af5zcep</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1537c9" class="outline-2">
+<h2 id="orgd1537c9"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4ab11e3" class="outline-3">
+<h3 id="org4ab11e3"><span class="section-number-3">3.1.</span> Health, Environment, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org5d9bf9d" class="outline-4">
+<h4 id="org5d9bf9d"><span class="section-number-4">3.1.1.</span> Environment, Public Health</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgb7d1dea"></a><b>Precautionary Principle</b><br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>Climate: <a href="https://tinyurl.com/mvdeda8y">https://tinyurl.com/mvdeda8y</a></li>
+
+<li>Pandemics: <a href="https://tinyurl.com/4j6areh8">https://tinyurl.com/4j6areh8</a>
+<ul class="org-ul">
+<li><b>COVID-19 - Top Resources</b>: <a href="https://tinyurl.com/mvybwvcd">https://tinyurl.com/mvybwvcd</a></li>
+</ul></li>
+
+<li>GMOs: <a href="https://tinyurl.com/5cmap2tw">https://tinyurl.com/5cmap2tw</a>
+<ul class="org-ul">
+<li><b>GMOs - Top Resources</b>: <a href="https://tinyurl.com/5y5rdhyk">https://tinyurl.com/5y5rdhyk</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgbc2d7b4"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>Air Pollution: <a href="https://tinyurl.com/3srnhfxy">https://tinyurl.com/3srnhfxy</a></li>
+
+<li>Cooling: <a href="https://tinyurl.com/bdre5ybz">https://tinyurl.com/bdre5ybz</a></li>
+
+<li>Water: <a href="https://tinyurl.com/faz5cfvd">https://tinyurl.com/faz5cfvd</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgef74df2"></a>Music<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<ul class="org-ul">
+<li>Environment - Music: <a href="https://tinyurl.com/mr95n6b2">https://tinyurl.com/mr95n6b2</a>
+<ul class="org-ul">
+<li>Monsoon - Music: <a href="https://tinyurl.com/46bsbfm7">https://tinyurl.com/46bsbfm7</a></li>
+<li>Spring - Music: <a href="https://tinyurl.com/2czrf5h2">https://tinyurl.com/2czrf5h2</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge1fc162" class="outline-4">
+<h4 id="orge1fc162"><span class="section-number-4">3.1.2.</span> Personal Health</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org46a569a"></a>Food, Diet, Meds<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<ul class="org-ul">
+<li>Agriculture: <a href="https://tinyurl.com/y27mcu54">https://tinyurl.com/y27mcu54</a></li>
+<li>Food, Diet: <a href="https://tinyurl.com/5n8saumw">https://tinyurl.com/5n8saumw</a>
+<ul class="org-ul">
+<li>Alcohol: <a href="https://tinyurl.com/37avwvvd">https://tinyurl.com/37avwvvd</a>
+<ul class="org-ul">
+<li>Organic Alcoholic Drinks: <a href="https://tinyurl.com/55hmn8pz">https://tinyurl.com/55hmn8pz</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>AyurVeda: <a href="https://tinyurl.com/4enyk6ex">https://tinyurl.com/4enyk6ex</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga34e42e"></a>Exercise, Meditation<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<ul class="org-ul">
+<li>Exercise: <a href="https://tinyurl.com/5n7dcbkw">https://tinyurl.com/5n7dcbkw</a>
+<ul class="org-ul">
+<li>Pilates: <a href="https://tinyurl.com/ydc2y2pa">https://tinyurl.com/ydc2y2pa</a></li>
+<li>Yoga: <a href="https://tinyurl.com/49sctcd4">https://tinyurl.com/49sctcd4</a></li>
+<li>Walking: <a href="https://tinyurl.com/4a8sydua">https://tinyurl.com/4a8sydua</a></li>
+<li>Rope Jumping: <a href="https://tinyurl.com/mr3a4bve">https://tinyurl.com/mr3a4bve</a></li>
+</ul></li>
+<li>Meditation: <a href="https://tinyurl.com/caar6era">https://tinyurl.com/caar6era</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org732208d"></a>Massage, Rest, Sleep<br />
+<div class="outline-text-5" id="text-3-1-2-3">
+<ul class="org-ul">
+<li>Massage: <a href="https://tinyurl.com/bdfnntx6">https://tinyurl.com/bdfnntx6</a></li>
+
+<li>Rest: <a href="https://tinyurl.com/yakzc7cp">https://tinyurl.com/yakzc7cp</a></li>
+
+<li>Sleep: <a href="https://tinyurl.com/4k835k2r">https://tinyurl.com/4k835k2r</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0b92966"></a>Common Health Issues<br />
+<div class="outline-text-5" id="text-3-1-2-4">
+<ul class="org-ul">
+<li>Obesity: <a href="https://tinyurl.com/2p8pyssk">https://tinyurl.com/2p8pyssk</a></li>
+<li>Diabetes: <a href="https://tinyurl.com/4nfuncvs">https://tinyurl.com/4nfuncvs</a></li>
+<li>Asthma: <a href="https://tinyurl.com/4vjf9v9e">https://tinyurl.com/4vjf9v9e</a></li>
+<li>Cancer: <a href="https://tinyurl.com/3x298xwz">https://tinyurl.com/3x298xwz</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgcfc58a0" class="outline-4">
+<h4 id="orgcfc58a0"><span class="section-number-4">3.1.3.</span> Sports</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>Table Tennis: <a href="https://tinyurl.com/5xmu66c3">https://tinyurl.com/5xmu66c3</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8666ad8" class="outline-4">
+<h4 id="org8666ad8"><span class="section-number-4">3.1.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Home Making: <a href="https://tinyurl.com/mv6ts4w9">https://tinyurl.com/mv6ts4w9</a>
+<ul class="org-ul">
+<li>Dry Cleaning: <a href="https://tinyurl.com/559ebzz3">https://tinyurl.com/559ebzz3</a></li>
+<li>Gardening: <a href="https://tinyurl.com/3p238f3w">https://tinyurl.com/3p238f3w</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge5230d7" class="outline-3">
+<h3 id="orge5230d7"><span class="section-number-3">3.2.</span> Social Studies</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Caste: <a href="https://tinyurl.com/5n87a3sp">https://tinyurl.com/5n87a3sp</a></li>
+
+<li>Relationships, Gender, Feminism: <a href="https://tinyurl.com/4esbpk6u">https://tinyurl.com/4esbpk6u</a>
+<ul class="org-ul">
+<li>Feminism: <a href="https://tinyurl.com/njjszsdw">https://tinyurl.com/njjszsdw</a>
+<ul class="org-ul">
+<li>International Women's Day: <a href="https://tinyurl.com/krkmbmu7">https://tinyurl.com/krkmbmu7</a></li>
+</ul></li>
+<li>Sex: <a href="https://tinyurl.com/4yncpft8">https://tinyurl.com/4yncpft8</a>
+<ul class="org-ul">
+<li>Sex- Music: <a href="https://tinyurl.com/4vpjcjpk">https://tinyurl.com/4vpjcjpk</a></li>
+</ul></li>
+</ul></li>
+
+<li>Manners, Grooming: <a href="https://tinyurl.com/bdctemn2">https://tinyurl.com/bdctemn2</a>
+<ul class="org-ul">
+<li>Manners, Grooming - Hindi: <a href="https://tinyurl.com/5n6jwpv2">https://tinyurl.com/5n6jwpv2</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0a1f8c" class="outline-3">
+<h3 id="orgd0a1f8c"><span class="section-number-3">3.3.</span> Religions</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgc33e5ef" class="outline-4">
+<h4 id="orgc33e5ef"><span class="section-number-4">3.3.1.</span> Hinduism</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org80e0d29"></a>General<br />
+<div class="outline-text-5" id="text-3-3-1-1">
+<ul class="org-ul">
+<li>Hinduism: <a href="https://tinyurl.com/3k7tp5rh">https://tinyurl.com/3k7tp5rh</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6714d24"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org5ade3f2"></a>Trinity<br />
+<ol class="org-ol">
+<li><a id="orgd7fbdd4"></a>Brahma<br />
+<div class="outline-text-7" id="text-3-3-1-2-1-1">
+<ul class="org-ul">
+<li>Saraswati - Music: <a href="https://tinyurl.com/mr28bd5r">https://tinyurl.com/mr28bd5r</a></li>
+
+<li>Basant Panchami: <a href="https://tinyurl.com/2rptpn6f">https://tinyurl.com/2rptpn6f</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8f736f7"></a>Vishnu<br />
+<ol class="org-ol">
+<li><a id="orgc2ca968"></a>Rama<br />
+<div class="outline-text-8" id="text-3-3-1-2-1-2-1">
+<ul class="org-ul">
+<li>Ramayana: <a href="https://tinyurl.com/cs38b49d">https://tinyurl.com/cs38b49d</a></li>
+<li>RamCharitManas - Music: <a href="https://tinyurl.com/2sf93u3v">https://tinyurl.com/2sf93u3v</a></li>
+<li>Rama - Music: <a href="https://tinyurl.com/wy5t6nuu">https://tinyurl.com/wy5t6nuu</a></li>
+<li>Diwali: <a href="https://tinyurl.com/37vz8z3w">https://tinyurl.com/37vz8z3w</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Hanuman Jayanti: <a href="https://tinyurl.com/3y3mhk2a">https://tinyurl.com/3y3mhk2a</a></li>
+<li>Hanuman - Music: <a href="https://tinyurl.com/3xft6kzt">https://tinyurl.com/3xft6kzt</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org659e8a3"></a>Krishna<br />
+<ol class="org-ol">
+<li><a id="org69ff246"></a>General<br /></li>
+<li><a id="org15f9f26"></a>World<br />
+<ol class="org-ol">
+<li><a id="org1100828"></a>Places<br />
+<div class="outline-text-10" id="text-3-3-1-2-1-2-2-2-1">
+<ul class="org-ul">
+<li>Vrindavan: <a href="https://tinyurl.com/3cy8vx27">https://tinyurl.com/3cy8vx27</a>
+<ul class="org-ul">
+<li>Vrindavan - Hindi: <a href="https://tinyurl.com/2p8utee9">https://tinyurl.com/2p8utee9</a></li>
+<li>Vrindavan - Music: <a href="https://tinyurl.com/26njzcrz">https://tinyurl.com/26njzcrz</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc317e93"></a>Events<br />
+<ol class="org-ol">
+<li><a id="orgb891a15"></a>Festivals<br />
+<div class="outline-text-11" id="text-3-3-1-2-1-2-2-2-2-1">
+<ul class="org-ul">
+<li>Holi: <a href="https://tinyurl.com/2ze5xbvn">https://tinyurl.com/2ze5xbvn</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="orgf4ad264"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org8dfea8f"></a>Texts<br />
+<div class="outline-text-10" id="text-3-3-1-2-1-2-2-3-1">
+<ul class="org-ul">
+<li>Bhagavad Gita: <a href="https://tinyurl.com/yvmevsz3">https://tinyurl.com/yvmevsz3</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Mahabharata: <a href="https://tinyurl.com/39fwy2tt">https://tinyurl.com/39fwy2tt</a></li>
+<li>Purana Bhagavata: <a href="https://tinyurl.com/3j7xvere">https://tinyurl.com/3j7xvere</a></li>
+<li>Purana Vishnu: <a href="https://tinyurl.com/mtp3zx77">https://tinyurl.com/mtp3zx77</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgafb0514"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org76b9e69"></a>Music<br />
+<div class="outline-text-10" id="text-3-3-1-2-1-2-2-4-1">
+<ul class="org-ul">
+<li>Krishna - Music: <a href="https://tinyurl.com/3pz723ks">https://tinyurl.com/3pz723ks</a></li>
+<li>Radha - Music: <a href="https://tinyurl.com/mtt97vfu">https://tinyurl.com/mtt97vfu</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Flute: <a href="https://tinyurl.com/mrw8axz4">https://tinyurl.com/mrw8axz4</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgca24058"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgf86561e"></a>Misc<br />
+<div class="outline-text-8" id="text-3-3-1-2-1-2-3">
+<ul class="org-ul">
+<li>Vishnu - Music: <a href="https://tinyurl.com/4wnwfzcm">https://tinyurl.com/4wnwfzcm</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org174aceb"></a>Mahesh<br />
+<div class="outline-text-7" id="text-3-3-1-2-1-3">
+<ul class="org-ul">
+<li>Shiva - Music: <a href="https://tinyurl.com/yh4ujf77">https://tinyurl.com/yh4ujf77</a></li>
+<li>Shiva Ratri: <a href="https://tinyurl.com/yaft3mb4">https://tinyurl.com/yaft3mb4</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Durga - Music: <a href="https://tinyurl.com/43zcpwpx">https://tinyurl.com/43zcpwpx</a></li>
+<li>Navratri: <a href="https://tinyurl.com/yzmx25wb">https://tinyurl.com/yzmx25wb</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Ganesha - Music: <a href="https://tinyurl.com/uu4a2f99">https://tinyurl.com/uu4a2f99</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgd7b1209"></a>Variants<br />
+<div class="outline-text-6" id="text-3-3-1-2-2">
+<ul class="org-ul">
+<li>Yoga: <a href="https://tinyurl.com/49sctcd4">https://tinyurl.com/49sctcd4</a></li>
+
+<li>Tantra: <a href="https://tinyurl.com/4p69n9zj">https://tinyurl.com/4p69n9zj</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org2ec8703"></a>People<br />
+<div class="outline-text-6" id="text-3-3-1-2-3">
+<ul class="org-ul">
+<li>Sri Aurobindo: <a href="https://tinyurl.com/mw93vyd8">https://tinyurl.com/mw93vyd8</a>  
+<ul class="org-ul">
+<li>Sri Aurobindo - Hindi Resources: <a href="https://tinyurl.com/ymrvysnx">https://tinyurl.com/ymrvysnx</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org647dbfa"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-1-3">
+<ul class="org-ul">
+<li>Vaisakhi: <a href="https://tinyurl.com/2cep4kzs">https://tinyurl.com/2cep4kzs</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org2340067" class="outline-4">
+<h4 id="org2340067"><span class="section-number-4">3.3.2.</span> C2</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org4e16ea2"></a>Judaism<br />
+<div class="outline-text-5" id="text-3-3-2-1">
+<ul class="org-ul">
+<li>Judaism: <a href="https://tinyurl.com/298bdh7z">https://tinyurl.com/298bdh7z</a>
+<ul class="org-ul">
+<li>Judaism - Music: <a href="https://tinyurl.com/5deee7eb">https://tinyurl.com/5deee7eb</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org984c456"></a>Christianity<br />
+<div class="outline-text-5" id="text-3-3-2-2">
+<ul class="org-ul">
+<li>Christianity: <a href="https://tinyurl.com/4b3vmd9c">https://tinyurl.com/4b3vmd9c</a>
+<ul class="org-ul">
+<li>Valentine's Day: <a href="https://tinyurl.com/343kytcd">https://tinyurl.com/343kytcd</a></li>
+<li>Christmas: <a href="https://tinyurl.com/mrxypt2p">https://tinyurl.com/mrxypt2p</a></li>
+<li>Christianity - Music: <a href="https://tinyurl.com/2s9k4uju">https://tinyurl.com/2s9k4uju</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgf321205"></a>Islam<br />
+<div class="outline-text-5" id="text-3-3-2-3">
+<ul class="org-ul">
+<li>Islam: <a href="https://tinyurl.com/249mz6nh">https://tinyurl.com/249mz6nh</a>
+<ul class="org-ul">
+<li>Sufism: <a href="https://tinyurl.com/3tr7epnp">https://tinyurl.com/3tr7epnp</a></li>
+<li>Islam - Music: <a href="https://tinyurl.com/ypfpfn2z">https://tinyurl.com/ypfpfn2z</a></li>
+<li>Eid: <a href="https://tinyurl.com/49v4yc64">https://tinyurl.com/49v4yc64</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org8934008"></a>Sikhism<br />
+<div class="outline-text-5" id="text-3-3-2-4">
+<ul class="org-ul">
+<li>Sikhism: <a href="https://tinyurl.com/44tdhvra">https://tinyurl.com/44tdhvra</a>
+<ul class="org-ul">
+<li>Sikhism - Music: <a href="https://tinyurl.com/5n7de4fp">https://tinyurl.com/5n7de4fp</a> 
+<ul class="org-ul">
+<li>Rabab: <a href="https://tinyurl.com/23v3rrfh">https://tinyurl.com/23v3rrfh</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgdd0e016" class="outline-4">
+<h4 id="orgdd0e016"><span class="section-number-4">3.3.3.</span> C3</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org8befe35"></a>Jainism<br />
+<div class="outline-text-5" id="text-3-3-3-1">
+<ul class="org-ul">
+<li>Jainism: <a href="https://tinyurl.com/bdfrenn5">https://tinyurl.com/bdfrenn5</a>
+<ul class="org-ul">
+<li>Jainism - Music: <a href="https://tinyurl.com/5a2466ne">https://tinyurl.com/5a2466ne</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orged6500a"></a>Buddhism<br />
+<div class="outline-text-5" id="text-3-3-3-2">
+<ul class="org-ul">
+<li>Buddhism: <a href="https://tinyurl.com/bdmtwj8h">https://tinyurl.com/bdmtwj8h</a>
+<ul class="org-ul">
+<li>Buddhism - Music: <a href="https://tinyurl.com/7fkw3utm">https://tinyurl.com/7fkw3utm</a></li>
+<li>Zen: <a href="https://tinyurl.com/2u8r3v7b">https://tinyurl.com/2u8r3v7b</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org9bc47af" class="outline-4">
+<h4 id="org9bc47af"><span class="section-number-4">3.3.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>Vaisakhi: <a href="https://tinyurl.com/2cep4kzs">https://tinyurl.com/2cep4kzs</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org73d2251" class="outline-3">
+<h3 id="org73d2251"><span class="section-number-3">3.4.</span> Transport</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>Transport: <a href="https://tinyurl.com/4artz4me">https://tinyurl.com/4artz4me</a>
+<ul class="org-ul">
+<li>Cars: <a href="https://tinyurl.com/5e97ts3r">https://tinyurl.com/5e97ts3r</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf0d366b" class="outline-3">
+<h3 id="orgf0d366b"><span class="section-number-3">3.5.</span> Communication</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org07f5818" class="outline-4">
+<h4 id="org07f5818"><span class="section-number-4">3.5.1.</span> Languages</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>Sanskrit: <a href="https://tinyurl.com/5cf2hxez">https://tinyurl.com/5cf2hxez</a></li>
+
+<li>English: <a href="https://tinyurl.com/mszzjvvp">https://tinyurl.com/mszzjvvp</a>
+<ul class="org-ul">
+<li>Everyday English - The Least Everyone Needs To Know: <a href="https://tinyurl.com/mrk39dpt">https://tinyurl.com/mrk39dpt</a></li>
+</ul></li>
+
+<li>Hindi: <a href="https://tinyurl.com/mrxna53n">https://tinyurl.com/mrxna53n</a></li>
+
+<li>Urdu: <a href="https://tinyurl.com/cupyvtwf">https://tinyurl.com/cupyvtwf</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge182e90" class="outline-4">
+<h4 id="orge182e90"><span class="section-number-4">3.5.2.</span> News</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>Today: <a href="https://tinyurl.com/5n7c64xw">https://tinyurl.com/5n7c64xw</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Hindi News Resources: <a href="https://tinyurl.com/2d7cdahk">https://tinyurl.com/2d7cdahk</a></li>
+
+<li>English News Resources: <a href="https://tinyurl.com/2256fekr">https://tinyurl.com/2256fekr</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0711a37" class="outline-3">
+<h3 id="org0711a37"><span class="section-number-3">3.6.</span> India</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org1bdf460" class="outline-4">
+<h4 id="org1bdf460"><span class="section-number-4">3.6.1.</span> Places</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li>India NCR: <a href="https://tinyurl.com/2s39c7d7">https://tinyurl.com/2s39c7d7</a>
+<ul class="org-ul">
+<li>Gurugram: <a href="https://tinyurl.com/bddnfrk9">https://tinyurl.com/bddnfrk9</a></li>
+</ul></li>
+
+<li>Bengaluru: <a href="https://tinyurl.com/573j7fyv">https://tinyurl.com/573j7fyv</a></li>
+<li>Puducherry: <a href="https://tinyurl.com/2m5r9fna">https://tinyurl.com/2m5r9fna</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga5677ad" class="outline-4">
+<h4 id="orga5677ad"><span class="section-number-4">3.6.2.</span> Events</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<ul class="org-ul">
+<li>Republic Day: <a href="https://tinyurl.com/34mnsazx">https://tinyurl.com/34mnsazx</a></li>
+<li>Independence Day: <a href="https://tinyurl.com/5f5n98zr">https://tinyurl.com/5f5n98zr</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84055a4" class="outline-4">
+<h4 id="org84055a4"><span class="section-number-4">3.6.3.</span> People</h4>
+<div class="outline-text-4" id="text-3-6-3">
+<ul class="org-ul">
+<li>ShivaJi: <a href="https://tinyurl.com/4s56349j">https://tinyurl.com/4s56349j</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7318903" class="outline-4">
+<h4 id="org7318903"><span class="section-number-4">3.6.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-6-4">
+<ul class="org-ul">
+<li>Indian History - Hindi: <a href="https://tinyurl.com/2b9jh6vx">https://tinyurl.com/2b9jh6vx</a></li>
+
+<li>Race, Religion, Caste in India - Hindi: <a href="https://tinyurl.com/2s4bjs3z">https://tinyurl.com/2s4bjs3z</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org82727ae" class="outline-2">
+<h2 id="org82727ae"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org40f35eb" class="outline-3">
+<h3 id="org40f35eb"><span class="section-number-3">4.1.</span> Music</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org69dcb4b" class="outline-4">
+<h4 id="org69dcb4b"><span class="section-number-4">4.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>Music: <a href="https://tinyurl.com/2mbwtdpt">https://tinyurl.com/2mbwtdpt</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org78ac20c" class="outline-4">
+<h4 id="org78ac20c"><span class="section-number-4">4.1.2.</span> South Asian Music</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb3272fd"></a>Easy Listening Indian Music<br />
+<div class="outline-text-5" id="text-4-1-2-1">
+<ul class="org-ul">
+<li>Easy Listening Indian Music: <a href="https://tinyurl.com/mr3ab53k">https://tinyurl.com/mr3ab53k</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6f5257f"></a>Indian Classical Music<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ul class="org-ul">
+<li>Indian Classical Music: <a href="https://tinyurl.com/3xnywtyh">https://tinyurl.com/3xnywtyh</a>
+<ul class="org-ul">
+<li>Dhrupad: <a href="https://tinyurl.com/5e48x8yy">https://tinyurl.com/5e48x8yy</a></li>
+<li>Khayal: <a href="https://tinyurl.com/4r68jd33">https://tinyurl.com/4r68jd33</a></li>
+<li>Thumri: <a href="https://tinyurl.com/2r4fsahs">https://tinyurl.com/2r4fsahs</a></li>
+<li>Tarana: <a href="https://tinyurl.com/2s389dwc">https://tinyurl.com/2s389dwc</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orga0a31a8"></a>Instruments<br />
+<div class="outline-text-5" id="text-4-1-2-3">
+<ul class="org-ul">
+<li>Sarangi: <a href="https://tinyurl.com/mvz4x8bc">https://tinyurl.com/mvz4x8bc</a></li>
+<li>Sarod: <a href="https://tinyurl.com/3w8vtn4n">https://tinyurl.com/3w8vtn4n</a></li>
+<li>Rabab: <a href="https://tinyurl.com/23v3rrfh">https://tinyurl.com/23v3rrfh</a></li>
+<li>Sitar: <a href="https://tinyurl.com/3wd3e8s7">https://tinyurl.com/3wd3e8s7</a></li>
+<li>Flute: <a href="https://tinyurl.com/mrw8axz4">https://tinyurl.com/mrw8axz4</a></li>
+<li>Tabla: <a href="https://tinyurl.com/msms79n2">https://tinyurl.com/msms79n2</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5ca7fbc"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-2-4">
+<ul class="org-ul">
+<li>Ghazal: <a href="https://tinyurl.com/53ppsfvu">https://tinyurl.com/53ppsfvu</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org9135ea6" class="outline-4">
+<h4 id="org9135ea6"><span class="section-number-4">4.1.3.</span> Western Music</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>Western Classical Music: <a href="https://tinyurl.com/rrb9bfrk">https://tinyurl.com/rrb9bfrk</a>
+<ul class="org-ul">
+<li>J. S. Bach: <a href="https://tinyurl.com/49959845">https://tinyurl.com/49959845</a></li>
+</ul></li>
+
+<li>Jazz: <a href="https://tinyurl.com/a48nzvnr">https://tinyurl.com/a48nzvnr</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6683e37" class="outline-4">
+<h4 id="org6683e37"><span class="section-number-4">4.1.4.</span> Misc</h4>
+</div>
+</div>
+
+<div id="outline-container-orgb83d8b1" class="outline-3">
+<h3 id="orgb83d8b1"><span class="section-number-3">4.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Art
+<ul class="org-ul">
+<li>M. C. Escher: <a href="https://tinyurl.com/y63z3cuk">https://tinyurl.com/y63z3cuk</a></li>
+</ul></li>
+<li>Photography: <a href="https://tinyurl.com/47xuuvh6">https://tinyurl.com/47xuuvh6</a></li>
+<li>Fashion: <a href="https://tinyurl.com/4c5ybd6c">https://tinyurl.com/4c5ybd6c</a></li>
+<li>Films: <a href="https://tinyurl.com/4tetrver">https://tinyurl.com/4tetrver</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Literature: <a href="https://tinyurl.com/3m9aff2z">https://tinyurl.com/3m9aff2z</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9154978" class="outline-2">
+<h2 id="org9154978"><span class="section-number-2">5.</span> Misc</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-07-17 Wed 21:06</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
