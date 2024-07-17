@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-17 Wed 12:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ghazal</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ghazal</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb6f0057">1. General</a></li>
+<li><a href="#orge03a2f7">2. Recordings</a>
+<ul>
+<li><a href="#org1f064c6">2.1. A</a></li>
+<li><a href="#orgd879176">2.2. B</a></li>
+<li><a href="#org7fa82f9">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd8696e4">3. Artists</a>
+<ul>
+<li><a href="#org013935c">3.1. A</a>
+<ul>
+<li><a href="#org315b70e">3.1.1. Begum Akhtar</a></li>
+</ul>
+</li>
+<li><a href="#org6429cb0">3.2. B</a>
+<ul>
+<li><a href="#orgbce9802">3.2.1. Jagjit Singh</a></li>
+<li><a href="#org1bf114f">3.2.2. Mehdi Hassan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org20a1594">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgb6f0057" class="outline-2">
+<h2 id="orgb6f0057"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>G. C. Narang, The Urdu Ghazal: A Gift of India’s Composite Culture. Oxford University Press, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge03a2f7" class="outline-2">
+<h2 id="orge03a2f7"><span class="section-number-2">2.</span> Recordings</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1f064c6" class="outline-3">
+<h3 id="org1f064c6"><span class="section-number-3">2.1.</span> A</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Ustad Amjad Ali Khan – Ghazals And Nagmas For Shān-e-Mughal (1981, Vinyl). Accessed: Oct. 23, 2021. [Online]. Available: <a href="https://www.discogs.com/release/3682895-Ustad-Amjad-Ali-Khan-Ghazals-And-Nagmas-For-Sh%C4%81n-e-Mughal">https://www.discogs.com/release/3682895-Ustad-Amjad-Ali-Khan-Ghazals-And-Nagmas-For-Sh%C4%81n-e-Mughal</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd879176" class="outline-3">
+<h3 id="orgd879176"><span class="section-number-3">2.2.</span> B</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Husn-e-Jaana : The Beauty of the My beloved | Audio Jukebox | Ghazals | Music Today, (Nov. 02, 2023). Accessed: Mar. 06, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=m64MdOGC7A0">https://www.youtube.com/watch?v=m64MdOGC7A0</a></li>
+<li>Muzaffar Ali - Topic, Piya Baaj Pyala, (Sep. 30, 2014). Accessed: Nov. 15, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4rddxbePxsY">https://www.youtube.com/watch?v=4rddxbePxsY</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Nayyara Noor,” Wikipedia. Aug. 28, 2022. Accessed: Aug. 28, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nayyara_Noor&amp;oldid=1107076527">https://en.wikipedia.org/w/index.php?title=Nayyara_Noor&amp;oldid=1107076527</a></li>
+<li>“Nayyara Noor,” Discogs. <a href="https://www.discogs.com/artist/2731411-Nayyara-Noor">https://www.discogs.com/artist/2731411-Nayyara-Noor</a> (accessed Aug. 28, 2022).</li>
+<li>Nayyara Noor, EMI Pakistan, 10  Hum Ke Thehre Ajnabi, (Jan. 02, 2014). Accessed: Nov. 15, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=mdTB6dPlRaI">https://www.youtube.com/watch?v=mdTB6dPlRaI</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>EMI Pakistan, Ranjish Hi Sahi - Iqbal Bano | EMI Pakistan Originals, (Jul. 25, 2019). Accessed: Nov. 15, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zlJMv3nmJE8">https://www.youtube.com/watch?v=zlJMv3nmJE8</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>EMI Pakistan, Farida Khanum Ghazals | Aaj Jane Ki Zid Na Karo | Farida Khanum In Concert, (Apr. 01, 2016). Accessed: Nov. 15, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=_gNUQsj1O7g">https://www.youtube.com/watch?v=_gNUQsj1O7g</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fa82f9" class="outline-3">
+<h3 id="org7fa82f9"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Saregama Ghazal,” YouTube. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UCcfQ2IQNVoAb7znCP2dlIqw">https://www.youtube.com/channel/UCcfQ2IQNVoAb7znCP2dlIqw</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ghazal - YouTube.” Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLqtVCj5iilH5aeXb_xGjh-d5KGa__jzY0">https://www.youtube.com/playlist?list=PLqtVCj5iilH5aeXb_xGjh-d5KGa__jzY0</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd8696e4" class="outline-2">
+<h2 id="orgd8696e4"><span class="section-number-2">3.</span> Artists</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org013935c" class="outline-3">
+<h3 id="org013935c"><span class="section-number-3">3.1.</span> A</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org315b70e" class="outline-4">
+<h4 id="org315b70e"><span class="section-number-4">3.1.1.</span> Begum Akhtar</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc38b53b"></a>General<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>“Begum Akhtar,” Wikipedia. May 01, 2024. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Begum_Akhtar&amp;oldid=1221668520">https://en.wikipedia.org/w/index.php?title=Begum_Akhtar&amp;oldid=1221668520</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd7345d9"></a>Biographies<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>S. Mukherjee, Begum Akhtar the Queen of Ghazal. Rupa Publications India, 2012.</li>
+<li>S. Hiranand, Begum Akhtar: The Story of My Ammi. New Delhi: Viva Books, 2005.</li>
+
+<li>Y. and T. M. Mishra, Tran., Akhtari: The Life and Music of Begum Akhtar. Noida, Uttar Pradesh, India : New Delhi: HarperCollins, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. by Y. Mishra, Akhtari : Soz Aur Saaz Ka Afsana, 2nd edition. Vani Prakashan, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc313fd"></a>Documentaries<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<ul class="org-ul">
+<li>Begam Akhtar, (Sep. 27, 2016). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=uLkYCF8aw7o">https://www.youtube.com/watch?v=uLkYCF8aw7o</a></li>
+<li>Begum Akthar, (Dec. 17, 2015). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-VzYi3DCRm8">https://www.youtube.com/watch?v=-VzYi3DCRm8</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Begum Akhtar Documentary based on her life and work by Rekhta.org, (Dec. 30, 2014). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=iBZZftc1RpQ">https://www.youtube.com/watch?v=iBZZftc1RpQ</a></li>
+<li>Begum Akhtar: Her Journey From a Courtesan to ‘Mallika-e-Ghazal | The Quint, (Oct. 30, 2019). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fxiXrMclQi8">https://www.youtube.com/watch?v=fxiXrMclQi8</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgcd83417"></a>Discography<br />
+<div class="outline-text-5" id="text-3-1-1-4">
+<ul class="org-ul">
+<li>“Begum Akhtar,” Discogs. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.discogs.com/artist/1123894-Begum-Akhtar">https://www.discogs.com/artist/1123894-Begum-Akhtar</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfe6c4b6"></a>Recordings<br />
+<ol class="org-ol">
+<li><a id="orgcc902bf"></a>Light Hindustani Classical Music<br />
+<div class="outline-text-6" id="text-3-1-1-5-1">
+<ul class="org-ul">
+<li>Begum Akhtar Truly Classical Collection | Beautiful Wake Up Morning Music | Indian Classical Music, (Sep. 18, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LW312o2uHxA">https://www.youtube.com/watch?v=LW312o2uHxA</a></li>
+<li>Begum Akhtar - The Queen Of Classical Music | Indian Classical Music | Hindustani Classical Song, (Aug. 15, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7_I5tvd4btA">https://www.youtube.com/watch?v=7_I5tvd4btA</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org8e90498"></a>Playlists<br />
+<div class="outline-text-6" id="text-3-1-1-5-2">
+<ul class="org-ul">
+<li>“Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLqtVCj5iilH5k2up50wQapQtx-jUF8Q4B">https://www.youtube.com/playlist?list=PLqtVCj5iilH5k2up50wQapQtx-jUF8Q4B</a></li>
+
+<li>“Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLsgcggrrPOHtttYm_jQ8B2WYHLOSvMh_5">https://www.youtube.com/playlist?list=PLsgcggrrPOHtttYm_jQ8B2WYHLOSvMh_5</a></li>
+
+<li>“Vidushi Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLsgcggrrPOHsYKt_-Xd-RfpUHhKKxfps7">https://www.youtube.com/playlist?list=PLsgcggrrPOHsYKt_-Xd-RfpUHhKKxfps7</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb56dd30"></a>Albums<br />
+<div class="outline-text-6" id="text-3-1-1-5-3">
+<ul class="org-ul">
+<li>Magic Moments of Begum Akhtar | Piya Bholo Abhiman |Bengali Songs Audio Jukebox | Begum Akhtar Songs, (Oct. 08, 2013). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Lg_Fu4L11TE">https://www.youtube.com/watch?v=Lg_Fu4L11TE</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Best of Begum Akhtar | Hindi Ghazals | Begum Akhtar Ghazals, (Sep. 25, 2015). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=6C4Tls6C2Mo">https://www.youtube.com/watch?v=6C4Tls6C2Mo</a></li>
+<li>Best of Begum Akhtar Songs | Woh Jo Ham Men Tum Men Qarar Tha | Ghazal Queen Begum Akhtar, (Feb. 22, 2024). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=k_EgMKpqKDY">https://www.youtube.com/watch?v=k_EgMKpqKDY</a></li>
+<li>Best Of Begum Akhtar’s Ghazals | Woh Jo Ham Men Tum Men Qarar Tha | Yeh Na Thi Humari Qismat, (Jan. 08, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ebSjc1P_7TI">https://www.youtube.com/watch?v=ebSjc1P_7TI</a></li>
+<li>Begum Akhtar Ghazals | Mehfil - E - Ghazal | Top 10 Ghazal Songs | Begum Akhtar Ghazal Songs, (Feb. 24, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VRfMcC3wGVc">https://www.youtube.com/watch?v=VRfMcC3wGVc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6bfaaff"></a>Holi<br />
+<div class="outline-text-6" id="text-3-1-1-5-4">
+<ul class="org-ul">
+<li>Begum Akhtar - Thumri - Kajri - Hori - Sawan - Dadra. 1981. Accessed: Mar. 06, 2023. [Online]. Available: <a href="https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra">https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra</a></li>
+
+<li>Begum Akhtar | होली मुबारक़ | Kajri | Thumri | Holi 2019, (Mar. 20, 2019). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=YcBrn0HtgFw">https://www.youtube.com/watch?v=YcBrn0HtgFw</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9c7f633"></a>Solo<br />
+<div class="outline-text-6" id="text-3-1-1-5-5">
+<ul class="org-ul">
+<li>Koyelia Mat Karo Pukar (Dadra) | Ghazal Song | Begum Akhtar, (Aug. 28, 2014). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4mu_KZdwDHI">https://www.youtube.com/watch?v=4mu_KZdwDHI</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org070309d"></a>Special Topics<br /></li>
+<li><a id="org6083ac0"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6429cb0" class="outline-3">
+<h3 id="org6429cb0"><span class="section-number-3">3.2.</span> B</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgbce9802" class="outline-4">
+<h4 id="orgbce9802"><span class="section-number-4">3.2.1.</span> Jagjit Singh</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3c67b60"></a>General<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>“Jagjit Singh - Wikipedia.” Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Jagjit_Singh">https://en.wikipedia.org/wiki/Jagjit_Singh</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc5507b8"></a>Discography<br />
+<div class="outline-text-5" id="text-3-2-1-2">
+<ul class="org-ul">
+<li>“Jagjit Singh,” Discogs. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.discogs.com/artist/824469-Jagjit-Singh">https://www.discogs.com/artist/824469-Jagjit-Singh</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9a73385"></a>Documentaries<br /></li>
+<li><a id="orgec4980d"></a>Recordings<br />
+<ol class="org-ol">
+<li><a id="org0e79408"></a>Playlists<br />
+<div class="outline-text-6" id="text-3-2-1-4-1">
+<ul class="org-ul">
+<li>“Best of Jagjit Singh | Chitra Singh | Ghazals | Audio - YouTube.” Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLJeNQvgQ4Sl-WJX41V39pPd3oQxKNc7EA">https://www.youtube.com/playlist?list=PLJeNQvgQ4Sl-WJX41V39pPd3oQxKNc7EA</a></li>
+<li>“Best of Jagjit Singh (All time hits) - YouTube.” Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLJeNQvgQ4Sl_beDke_V6L2OL67jl3CfF4">https://www.youtube.com/playlist?list=PLJeNQvgQ4Sl_beDke_V6L2OL67jl3CfF4</a></li>
+<li>“Best of Jagjit Singh Ghazals - YouTube.” Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLXCoHsJ9oLedyTJJ-Tx_fpVP69iPfi0jF">https://www.youtube.com/playlist?list=PLXCoHsJ9oLedyTJJ-Tx_fpVP69iPfi0jF</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Saregama Ghazal, Golden Collections of Jagjit Singh &amp; Javed Akhtar | Tum Ko Dekha To Yeh | Urdu Ghazal | Gajal, (Dec. 25, 2023). Accessed: Jul. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JxEuILqPbqE">https://www.youtube.com/watch?v=JxEuILqPbqE</a></li>
+<li>Saregama Ghazal, Dard Bhari Ghazals | Jagjit Singh Ghazal | Tum Itna Jo Muskura Rahe Ho | Superhit Ghazals, (Nov. 22, 2023). Accessed: Jul. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JO2cbUVsZ50">https://www.youtube.com/watch?v=JO2cbUVsZ50</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org67e8cde"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org1bf114f" class="outline-4">
+<h4 id="org1bf114f"><span class="section-number-4">3.2.2.</span> Mehdi Hassan</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>Mehdi Hassan - Topic, <b>Ranjish Hi Sahi</b>, (Mar. 05, 2020). Accessed: Nov. 15, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Ux7jQVb96Ts">https://www.youtube.com/watch?v=Ux7jQVb96Ts</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org20a1594" class="outline-2">
+<h2 id="org20a1594"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>A. Sethi, “कलकत्ता में फरीदा खानम की वापसी,” The Caravan. <a href="https://caravanmagazine.in/reviews-and-essays/djinn-aiman-hindi">https://caravanmagazine.in/reviews-and-essays/djinn-aiman-hindi</a> (accessed Mar. 07, 2022).</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>
+<b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a>
+<b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-07-17 Wed 12:11</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-17 Wed 12:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thumri</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Thumri</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0bebf5d">1. General</a></li>
+<li><a href="#orgac87a63">2. Theory</a></li>
+<li><a href="#org75d5d0c">3. Artists</a>
+<ul>
+<li><a href="#org10b4141">3.1. Begum Akhtar</a>
+<ul>
+<li><a href="#org2305ae0">3.1.1. General</a></li>
+<li><a href="#org94b29d6">3.1.2. Biographies</a></li>
+<li><a href="#org8f640b9">3.1.3. Documentaries</a></li>
+<li><a href="#org80e3f10">3.1.4. Discography</a></li>
+<li><a href="#orgf0df82d">3.1.5. Recordings</a></li>
+<li><a href="#org47dbcfb">3.1.6. Special Topics</a></li>
+<li><a href="#org4fa3462">3.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1972eb7">3.2. Shobha Gurtu</a></li>
+<li><a href="#orgfdedc32">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2d02a1b">4. Special Topics</a>
+<ul>
+<li><a href="#org0d95411">4.1. Heera Mandi</a></li>
+<li><a href="#orgdccf702">4.2. Tawaifs</a></li>
+</ul>
+</li>
+<li><a href="#orgcc38da1">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org0bebf5d" class="outline-2">
+<h2 id="org0bebf5d"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgac87a63" class="outline-2">
+<h2 id="orgac87a63"><span class="section-number-2">2.</span> Theory</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>P. Manuel, <i>Ṭhumrī in Historical and Stylistic Perspectives.</i> Motilal Banarsidass Publ., 1989.</li>
+
+<li>L. D. Perron, “‘Thumrī’: A Discussion of the Female Voice of Hindustani Music,” Modern Asian Studies, vol. 36, no. 1, pp. 173–193, Feb. 2002, doi: 10.1017/S0026749X02001051.</li>
+
+<li>L. du Perron, Hindi Poetry in a Musical Genre: Thumri Lyrics. Routledge, 2007.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75d5d0c" class="outline-2">
+<h2 id="org75d5d0c"><span class="section-number-2">3.</span> Artists</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org10b4141" class="outline-3">
+<h3 id="org10b4141"><span class="section-number-3">3.1.</span> Begum Akhtar</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org2305ae0" class="outline-4">
+<h4 id="org2305ae0"><span class="section-number-4">3.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“Begum Akhtar,” Wikipedia. May 01, 2024. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Begum_Akhtar&amp;oldid=1221668520">https://en.wikipedia.org/w/index.php?title=Begum_Akhtar&amp;oldid=1221668520</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94b29d6" class="outline-4">
+<h4 id="org94b29d6"><span class="section-number-4">3.1.2.</span> Biographies</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>S. Mukherjee, Begum Akhtar the Queen of Ghazal. Rupa Publications India, 2012.</li>
+<li>S. Hiranand, Begum Akhtar: The Story of My Ammi. New Delhi: Viva Books, 2005.</li>
+
+<li>Y. and T. M. Mishra, Tran., Akhtari: The Life and Music of Begum Akhtar. Noida, Uttar Pradesh, India : New Delhi: HarperCollins, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. by Y. Mishra, Akhtari : Soz Aur Saaz Ka Afsana, 2nd edition. Vani Prakashan, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8f640b9" class="outline-4">
+<h4 id="org8f640b9"><span class="section-number-4">3.1.3.</span> Documentaries</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>Begam Akhtar, (Sep. 27, 2016). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=uLkYCF8aw7o">https://www.youtube.com/watch?v=uLkYCF8aw7o</a></li>
+<li>Begum Akthar, (Dec. 17, 2015). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-VzYi3DCRm8">https://www.youtube.com/watch?v=-VzYi3DCRm8</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Begum Akhtar Documentary based on her life and work by Rekhta.org, (Dec. 30, 2014). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=iBZZftc1RpQ">https://www.youtube.com/watch?v=iBZZftc1RpQ</a></li>
+<li>Begum Akhtar: Her Journey From a Courtesan to ‘Mallika-e-Ghazal | The Quint, (Oct. 30, 2019). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fxiXrMclQi8">https://www.youtube.com/watch?v=fxiXrMclQi8</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org80e3f10" class="outline-4">
+<h4 id="org80e3f10"><span class="section-number-4">3.1.4.</span> Discography</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>“Begum Akhtar,” Discogs. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.discogs.com/artist/1123894-Begum-Akhtar">https://www.discogs.com/artist/1123894-Begum-Akhtar</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf0df82d" class="outline-4">
+<h4 id="orgf0df82d"><span class="section-number-4">3.1.5.</span> Recordings</h4>
+<div class="outline-text-4" id="text-3-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgf4020cd"></a>Light Hindustani Classical Music<br />
+<div class="outline-text-5" id="text-3-1-5-1">
+<ul class="org-ul">
+<li>Begum Akhtar Truly Classical Collection | Beautiful Wake Up Morning Music | Indian Classical Music, (Sep. 18, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LW312o2uHxA">https://www.youtube.com/watch?v=LW312o2uHxA</a></li>
+<li>Begum Akhtar - The Queen Of Classical Music | Indian Classical Music | Hindustani Classical Song, (Aug. 15, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7_I5tvd4btA">https://www.youtube.com/watch?v=7_I5tvd4btA</a></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org81c996f"></a>Playlists<br />
+<div class="outline-text-5" id="text-3-1-5-2">
+<ul class="org-ul">
+<li>“Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLqtVCj5iilH5k2up50wQapQtx-jUF8Q4B">https://www.youtube.com/playlist?list=PLqtVCj5iilH5k2up50wQapQtx-jUF8Q4B</a></li>
+
+<li>“Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLsgcggrrPOHtttYm_jQ8B2WYHLOSvMh_5">https://www.youtube.com/playlist?list=PLsgcggrrPOHtttYm_jQ8B2WYHLOSvMh_5</a></li>
+
+<li>“Vidushi Begum Akhtar - YouTube.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLsgcggrrPOHsYKt_-Xd-RfpUHhKKxfps7">https://www.youtube.com/playlist?list=PLsgcggrrPOHsYKt_-Xd-RfpUHhKKxfps7</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4741949"></a>Albums<br />
+<div class="outline-text-5" id="text-3-1-5-3">
+<ul class="org-ul">
+<li>Magic Moments of Begum Akhtar | Piya Bholo Abhiman |Bengali Songs Audio Jukebox | Begum Akhtar Songs, (Oct. 08, 2013). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Lg_Fu4L11TE">https://www.youtube.com/watch?v=Lg_Fu4L11TE</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Best of Begum Akhtar | Hindi Ghazals | Begum Akhtar Ghazals, (Sep. 25, 2015). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=6C4Tls6C2Mo">https://www.youtube.com/watch?v=6C4Tls6C2Mo</a></li>
+<li>Best of Begum Akhtar Songs | Woh Jo Ham Men Tum Men Qarar Tha | Ghazal Queen Begum Akhtar, (Feb. 22, 2024). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=k_EgMKpqKDY">https://www.youtube.com/watch?v=k_EgMKpqKDY</a></li>
+<li>Best Of Begum Akhtar’s Ghazals | Woh Jo Ham Men Tum Men Qarar Tha | Yeh Na Thi Humari Qismat, (Jan. 08, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ebSjc1P_7TI">https://www.youtube.com/watch?v=ebSjc1P_7TI</a></li>
+<li>Begum Akhtar Ghazals | Mehfil - E - Ghazal | Top 10 Ghazal Songs | Begum Akhtar Ghazal Songs, (Feb. 24, 2023). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VRfMcC3wGVc">https://www.youtube.com/watch?v=VRfMcC3wGVc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org33196f3"></a>Holi<br />
+<div class="outline-text-5" id="text-3-1-5-4">
+<ul class="org-ul">
+<li>Begum Akhtar - Thumri - Kajri - Hori - Sawan - Dadra. 1981. Accessed: Mar. 06, 2023. [Online]. Available: <a href="https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra">https://www.discogs.com/release/20156122-Begum-Akhtar-Thumri-Kajri-Hori-Sawan-Dadra</a></li>
+
+<li>Begum Akhtar | होली मुबारक़ | Kajri | Thumri | Holi 2019, (Mar. 20, 2019). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=YcBrn0HtgFw">https://www.youtube.com/watch?v=YcBrn0HtgFw</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org22fccf3"></a>Solo<br />
+<div class="outline-text-5" id="text-3-1-5-5">
+<ul class="org-ul">
+<li>Koyelia Mat Karo Pukar (Dadra) | Ghazal Song | Begum Akhtar, (Aug. 28, 2014). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4mu_KZdwDHI">https://www.youtube.com/watch?v=4mu_KZdwDHI</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org47dbcfb" class="outline-4">
+<h4 id="org47dbcfb"><span class="section-number-4">3.1.6.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org4fa3462" class="outline-4">
+<h4 id="org4fa3462"><span class="section-number-4">3.1.7.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org1972eb7" class="outline-3">
+<h3 id="org1972eb7"><span class="section-number-3">3.2.</span> Shobha Gurtu</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Music Today, Shringar - Shobha Gurtu | Volume 2 | Audio Jukebox | Thumri &amp; Dadra | Vocal | Music Today, (Sep. 01, 2015). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=O8gCGlzF9jA">https://www.youtube.com/watch?v=O8gCGlzF9jA</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Music Today, The Best Of Shobha Gurtu | Audio Jukebox | Vocal | Classical | Shobha Gurtu | Music Today, (Aug. 31, 2015). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=A-4l6AiAmBE">https://www.youtube.com/watch?v=A-4l6AiAmBE</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>AIR Raagam, 1982 - Akashvani Sangeet Sammelan II Shobha Gurtu II Dadra, (Sep. 09, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=tgH3aduypq8">https://www.youtube.com/watch?v=tgH3aduypq8</a></li>
+<li>AIR Raagam, 1982 - Akashvani Sangeet Sammelan II Shobha Gurtu II Dadra, (Sep. 11, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=PvXQ90ieHIc">https://www.youtube.com/watch?v=PvXQ90ieHIc</a></li>
+<li>AIR Raagam, 1963 - Akashvani Sangeet Sammelan II Shobha Gurtu II Dadra, (Mar. 31, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ClepLcf3PCc">https://www.youtube.com/watch?v=ClepLcf3PCc</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>AIR Raagam, 1980 - Akashvani Sangeet Sammelan II Shobha Gurtu II Raga - Khamaj Thumari, (Jul. 24, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=EVjzOyVbc_M">https://www.youtube.com/watch?v=EVjzOyVbc_M</a></li>
+<li>AIR Raagam, 1982 - Akashvani Sangeet Sammelan II Shobha Gurtu II Khamaj Thumari, (Sep. 08, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=jbVDAzH1IhU">https://www.youtube.com/watch?v=jbVDAzH1IhU</a></li>
+<li>AIR Raagam, 1963 - Akashvani Sangeet Sammelan II Shobha Gurtu II Raga - Thumari Tilang, (Mar. 21, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7vodQxijJTk">https://www.youtube.com/watch?v=7vodQxijJTk</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>AIR Raagam, Shobha Gurtu || Hindustani Vocal Recital, (Mar. 08, 2021). Accessed: Mar. 19, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GdqBwunttx8">https://www.youtube.com/watch?v=GdqBwunttx8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfdedc32" class="outline-3">
+<h3 id="orgfdedc32"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>V. Rao, Heart To Heart : Remembring Nainaji. HarperCollins Publishers India, 2011.</li>
+
+<li>S. Devi and V. S. Chauhan, Maa - Siddheshwari. Lotus Collection.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2d02a1b" class="outline-2">
+<h2 id="org2d02a1b"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0d95411" class="outline-3">
+<h3 id="org0d95411"><span class="section-number-3">4.1.</span> Heera Mandi</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>R. Kapuria, “Heeramandi’s stereotyped courtesan world is a missed opportunity,” The Times of India. Accessed: May 13, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/blogs/voices/heeramandis-stereotyped-courtesan-world-is-a-missed-opportunity/">https://timesofindia.indiatimes.com/blogs/voices/heeramandis-stereotyped-courtesan-world-is-a-missed-opportunity/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Diamonds and bazaars,” Mid-day. Accessed: May 13, 2024. [Online]. Available: <a href="https://www.mid-day.com/news/opinion/article/diamonds-and-bazaars-23348703">https://www.mid-day.com/news/opinion/article/diamonds-and-bazaars-23348703</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Ghani, “‘Heeramandi’: Bollywood’s Construction Of ‘Tawaif Culture’ Is All Empty Opulence,” Feminism in India. Accessed: May 08, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/05/08/heeramandi-bollywoods-construction-of-tawaif-culture-is-all-empty-opulence/">https://feminisminindia.com/2024/05/08/heeramandi-bollywoods-construction-of-tawaif-culture-is-all-empty-opulence/</a></li>
+
+<li>“Heera Mandi,” Wikipedia. May 04, 2024. Accessed: May 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Heera_Mandi&amp;oldid=1222142982">https://en.wikipedia.org/w/index.php?title=Heera_Mandi&amp;oldid=1222142982</a></li>
+
+<li>“Episode 174: Tawaif,” The Seen and the Unseen. Accessed: May 05, 2024. [Online]. Available: <a href="https://seenunseen.in/episodes/2020/5/24/episode-174-tawaif/">https://seenunseen.in/episodes/2020/5/24/episode-174-tawaif/</a></li>
+
+<li>“Sanjay Leela Bhansali on the History Behind ‘Heeramandi,’” TIME. Accessed: May 05, 2024. [Online]. Available: <a href="https://time.com/6973848/heeramandi-netflix-history-sanjay-leela-bhansali/">https://time.com/6973848/heeramandi-netflix-history-sanjay-leela-bhansali/</a></li>
+<li>S. Ray, “Heeramandi: Know the real story behind the lives of the royal courtesans shown in Sanjay Leela Bhansali’s popular period drama,” GQ India. Accessed: May 05, 2024. [Online]. Available: <a href="https://www.gqindia.com/content/heeramandi-know-the-real-story-behind-the-lives-of-the-royal-courtesans-shown-in-sanjay-leela-bhansalis-popular-period-drama">https://www.gqindia.com/content/heeramandi-know-the-real-story-behind-the-lives-of-the-royal-courtesans-shown-in-sanjay-leela-bhansalis-popular-period-drama</a></li>
+<li>“Watch Heeramandi: The Diamond Bazaar | Netflix Official Site.” Accessed: May 05, 2024. [Online]. Available: <a href="https://www.netflix.com/in/title/81122198">https://www.netflix.com/in/title/81122198</a></li>
+<li>Heeramandi: The Diamond Bazaar, (May 01, 2024).</li>
+<li>“Heeramandi,” Wikipedia. May 05, 2024. Accessed: May 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Heeramandi&amp;oldid=1222298140">https://en.wikipedia.org/w/index.php?title=Heeramandi&amp;oldid=1222298140</a></li>
+
+<li>A Bloody Difficult Woman: Mayalee Dancing Girl vs. the East India Company. 2018. Accessed: May 05, 2024. [Online]. Available: <a href="https://soundcloud.com/user-513302522/a-bloody-difficult-woman-mayalee-dancing-girl-vs-the-east-india-company">https://soundcloud.com/user-513302522/a-bloody-difficult-woman-mayalee-dancing-girl-vs-the-east-india-company</a></li>
+<li>Eclipsed By The Moon: Mahlaqa Bai and her Teacher “The Incomparable” in Nizami Hyderabad. 2018. Accessed: May 05, 2024. [Online]. Available: <a href="https://soundcloud.com/user-513302522/eclipsed-by-the-moon-mahlaqa-bai-and-her-teacher-the-incomparable-in-nizami-hyderabad">https://soundcloud.com/user-513302522/eclipsed-by-the-moon-mahlaqa-bai-and-her-teacher-the-incomparable-in-nizami-hyderabad</a></li>
+<li>The Courtesan and the Memsahib: Khanum Jan Meets Sophia Plowden at the 18C Court of Lucknow. 2018. Accessed: May 05, 2024. [Online]. Available: <a href="https://soundcloud.com/user-513302522/the-courtesan-and-the-memsahib-khanum-jan-meets-sophia-plowden-at-the-18c-court-of-lucknow">https://soundcloud.com/user-513302522/the-courtesan-and-the-memsahib-khanum-jan-meets-sophia-plowden-at-the-18c-court-of-lucknow</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Music and Musicians in Late Mughal India | Eighteenth-century music,” Cambridge University Press. Accessed: May 05, 2024. [Online]. Available: <a href="https://www.cambridge.org/gb/academic/subjects/music/eighteenth-century-music/music-and-musicians-late-mughal-india-histories-ephemeral-17481858">https://www.cambridge.org/gb/academic/subjects/music/eighteenth-century-music/music-and-musicians-late-mughal-india-histories-ephemeral-17481858</a>, <a href="https://www.cambridge.org/gb/academic/subjects/music/eighteenth-century-music">https://www.cambridge.org/gb/academic/subjects/music/eighteenth-century-music</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. B. Schofield, “If music be the food of love: masculinity and eroticism in the Mughal mehfil”, Accessed: May 05, 2024. [Online]. Available: <a href="https://www.academia.edu/118538866/If_music_be_the_food_of_love_masculinity_and_eroticism_in_the_Mughal_mehfil">https://www.academia.edu/118538866/If_music_be_the_food_of_love_masculinity_and_eroticism_in_the_Mughal_mehfil</a></li>
+<li>K. B. Schofield, “The Courtesan Tale: Female Musicians and Dancers in Mughal Historical Chronicles, c.1556-1748,” Gender &amp;amp; History, vol. 24, no. 1, p. 150, 2012, Accessed: May 05, 2024. [Online]. Available: <a href="https://www.academia.edu/42271218/The_Courtesan_Tale_Female_Musicians_and_Dancers_in_Mughal_Historical_Chronicles_c_1556_1748">https://www.academia.edu/42271218/The_Courtesan_Tale_Female_Musicians_and_Dancers_in_Mughal_Historical_Chronicles_c_1556_1748</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“How tawaifs fell from grace and came to be known as prostitutes,” Rana Safvi. Accessed: May 06, 2024. [Online]. Available: <a href="https://ranasafvi.com/how-tawaifs-fell-from-grace-and-came-to-be-known-as-prostitutes-2/">https://ranasafvi.com/how-tawaifs-fell-from-grace-and-came-to-be-known-as-prostitutes-2/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdccf702" class="outline-3">
+<h3 id="orgdccf702"><span class="section-number-3">4.2.</span> Tawaifs</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>“Tawaifs, the first women in Hindi cinema - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=g8GTAC4igWg&amp;list=WL&amp;index=13">https://www.youtube.com/watch?v=g8GTAC4igWg&amp;list=WL&amp;index=13</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The history of Tawaifs in India | Feminism In India, (Jan. 17, 2022). Accessed: May 08, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=6vxxbT7PM8c">https://www.youtube.com/watch?v=6vxxbT7PM8c</a></li>
+<li>R. Ghani, “‘Heeramandi’: Bollywood’s Construction Of ‘Tawaif Culture’ Is All Empty Opulence,” Feminism in India. Accessed: May 08, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/05/08/heeramandi-bollywoods-construction-of-tawaif-culture-is-all-empty-opulence/">https://feminisminindia.com/2024/05/08/heeramandi-bollywoods-construction-of-tawaif-culture-is-all-empty-opulence/</a></li>
+
+<li>K. B. Schofield, “The Courtesan Tale: Female Musicians and Dancers in Mughal Historical Chronicles, c.1556-1748,” Gender &amp;amp; History, vol. 24, no. 1, p. 150, 2012, Accessed: May 05, 2024. [Online]. Available: <a href="https://www.academia.edu/42271218/The_Courtesan_Tale_Female_Musicians_and_Dancers_in_Mughal_Historical_Chronicles_c_1556_1748">https://www.academia.edu/42271218/The_Courtesan_Tale_Female_Musicians_and_Dancers_in_Mughal_Historical_Chronicles_c_1556_1748</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Dewan, Tawaifnama. Context, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How tawaifs fell from grace and came to be known as prostitutes,” Rana Safvi. Accessed: May 06, 2024. [Online]. Available: <a href="https://ranasafvi.com/how-tawaifs-fell-from-grace-and-came-to-be-known-as-prostitutes-2/">https://ranasafvi.com/how-tawaifs-fell-from-grace-and-came-to-be-known-as-prostitutes-2/</a></li>
+<li>“Episode 174: Tawaif,” The Seen and the Unseen. Accessed: May 05, 2024. [Online]. Available: <a href="https://seenunseen.in/episodes/2020/5/24/episode-174-tawaif/">https://seenunseen.in/episodes/2020/5/24/episode-174-tawaif/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc38da1" class="outline-2">
+<h2 id="orgcc38da1"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>M. Nair, “Is thumri louche or evolved? 100 years on, a debate around the classical form still rages,” Scroll.in. <a href="https://scroll.in/magazine/1016993/is-thumri-louche-or-evolved-100-years-on-a-debate-around-the-classical-form-still-rages">https://scroll.in/magazine/1016993/is-thumri-louche-or-evolved-100-years-on-a-debate-around-the-classical-form-still-rages</a> (accessed Feb. 11, 2022).</li>
+
+<li>V. Rao, “Thumri as Feminine Voice : | Economic and Political Weekly.” <a href="https://www.epw.in/journal/1990/17/review-womens-studies-review-issues-specials/thumri-feminine-voice.html">https://www.epw.in/journal/1990/17/review-womens-studies-review-issues-specials/thumri-feminine-voice.html</a> (accessed Feb. 11, 2022).</li>
+
+<li>V. Rao, Thumri and Thumri Singers: Changes in Style and Life-style. 1996.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>
+<b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a>
+<b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-07-17 Wed 12:11</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
