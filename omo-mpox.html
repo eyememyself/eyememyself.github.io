@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-08-27 Tue 14:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Monkey Pox</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Monkey Pox</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4fa7274">1. <b>Top Resources</b></a>
+<ul>
+<li><a href="#orgcddfd2a">1.1. World Health Network</a></li>
+</ul>
+</li>
+<li><a href="#orgf0889fc">2. General</a></li>
+<li><a href="#orgea983d3">3. Official Resources</a>
+<ul>
+<li><a href="#orga40f632">3.1. WHO</a></li>
+<li><a href="#org510ada7">3.2. USA</a></li>
+</ul>
+</li>
+<li><a href="#orgde5a081">4. STEMM</a>
+<ul>
+<li><a href="#org5cc4579">4.1. CSE</a></li>
+<li><a href="#org2af576c">4.2. Medicine</a></li>
+<li><a href="#orgf2e3ee1">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge2756ee">5. World</a>
+<ul>
+<li><a href="#org184b84e">5.1. Law</a></li>
+<li><a href="#org28baa40">5.2. Nation States</a>
+<ul>
+<li><a href="#org1c1ba11">5.2.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orgbeaace6">5.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge1a88b5">6. Special Topics</a>
+<ul>
+<li><a href="#org35736a3">6.1. Possibly MisInfo/DisInfo</a></li>
+</ul>
+</li>
+<li><a href="#org54b886d">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org4fa7274" class="outline-2">
+<h2 id="org4fa7274"><span class="section-number-2">1.</span> <b>Top Resources</b></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgcddfd2a" class="outline-3">
+<h3 id="orgcddfd2a"><span class="section-number-3">1.1.</span> World Health Network</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><b>“Monkey Pox,”</b> World Health Network. <a href="https://www.worldhealthnetwork.global/monkeypox">https://www.worldhealthnetwork.global/monkeypox</a> (accessed May 25, 2022).
+<ul class="org-ul">
+<li>“Monkeypox Declaration,” World Health Network. <a href="https://www.worldhealthnetwork.global/monkeypoxdeclaration">https://www.worldhealthnetwork.global/monkeypoxdeclaration</a> (accessed Jun. 23, 2022).</li>
+<li>“Monkeypox Infographics,” World Health Network. <a href="https://www.worldhealthnetwork.global/infographics/monkeypox">https://www.worldhealthnetwork.global/infographics/monkeypox</a> (accessed Aug. 01, 2022).</li>
+<li>“Monkeypox in Brief,” World Health Network. <a href="https://www.worldhealthnetwork.global/monkeypox-in-brief">https://www.worldhealthnetwork.global/monkeypox-in-brief</a> (accessed Aug. 01, 2022).</li>
+<li>“Monkeypox Guidelines,” World Health Network. <a href="https://www.worldhealthnetwork.global/monkeypoxguidelines">https://www.worldhealthnetwork.global/monkeypoxguidelines</a> (accessed Aug. 01, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf0889fc" class="outline-2">
+<h2 id="orgf0889fc"><span class="section-number-2">2.</span> General</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Monkeypox,” Wikipedia. May 20, 2022. Accessed: May 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Monkeypox&amp;oldid=1088819265">https://en.wikipedia.org/w/index.php?title=Monkeypox&amp;oldid=1088819265</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea983d3" class="outline-2">
+<h2 id="orgea983d3"><span class="section-number-2">3.</span> Official Resources</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orga40f632" class="outline-3">
+<h3 id="orga40f632"><span class="section-number-3">3.1.</span> WHO</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Monkeypox.” <a href="https://www.who.int/news-room/fact-sheets/detail/monkeypox">https://www.who.int/news-room/fact-sheets/detail/monkeypox</a> (accessed Jun. 27, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org510ada7" class="outline-3">
+<h3 id="org510ada7"><span class="section-number-3">3.2.</span> USA</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Monkeypox | Poxvirus | CDC,” Nov. 17, 2021. <a href="https://www.cdc.gov/poxvirus/monkeypox/index.html">https://www.cdc.gov/poxvirus/monkeypox/index.html</a> (accessed May 20, 2022).</li>
+
+<li>“Monkeypox | NIH: National Institute of Allergy and Infectious Diseases.” <a href="https://www.niaid.nih.gov/diseases-conditions/monkeypox">https://www.niaid.nih.gov/diseases-conditions/monkeypox</a> (accessed Aug. 01, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgde5a081" class="outline-2">
+<h2 id="orgde5a081"><span class="section-number-2">4.</span> STEMM</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org5cc4579" class="outline-3">
+<h3 id="org5cc4579"><span class="section-number-3">4.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>E. Mathieu, S. Dattani, H. Ritchie, and M. Roser, “Monkeypox,” Our World in Data, May 2022, Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://ourworldindata.org/monkeypox">https://ourworldindata.org/monkeypox</a></li>
+<li>“Monkeypox Data Explorer,” Our World in Data. <a href="https://ourworldindata.org/monkeypox">https://ourworldindata.org/monkeypox</a> (accessed Jun. 08, 2022).</li>
+<li>H. Sayama, Monkeypox Geographical Animation Generator. 2022. Accessed: Jul. 18, 2022. [Online]. Available: <a href="https://github.com/hsayama/Monkeypox-geographical-animations">https://github.com/hsayama/Monkeypox-geographical-animations</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2af576c" class="outline-3">
+<h3 id="org2af576c"><span class="section-number-3">4.2.</span> Medicine</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>S. Sreenivas, “Monkeypox: What to Know,” WebMD. <a href="https://www.webmd.com/a-to-z-guides/monkeypox-what-know">https://www.webmd.com/a-to-z-guides/monkeypox-what-know</a> (accessed Aug. 01, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How effective is the monkeypox vaccine? Scientists scramble for clues as trials ramp up.” <a href="https://www.science.org/content/article/how-effective-monkeypox-vaccine-scientists-scramble-clues-trials-ramp">https://www.science.org/content/article/how-effective-monkeypox-vaccine-scientists-scramble-clues-trials-ramp</a> (accessed Aug. 11, 2022).</li>
+<li>“Everything you need to know about the monkeypox vaccines,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/08/03/1056649/everything-know-monkeypox-vaccines/">https://www.technologyreview.com/2022/08/03/1056649/everything-know-monkeypox-vaccines/</a> (accessed Aug. 10, 2022).</li>
+<li>E. Peck, “One of the Biggest Obstacles to Monkeypox Vaccine Access Is Mostly Overlooked,” Slate, Aug. 08, 2022. Accessed: Aug. 10, 2022. [Online]. Available: <a href="https://slate.com/technology/2022/08/intellectual-property-monkeypox-vaccine.html">https://slate.com/technology/2022/08/intellectual-property-monkeypox-vaccine.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2e3ee1" class="outline-3">
+<h3 id="orgf2e3ee1"><span class="section-number-3">4.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“WHO warns more mpox to come in Europe after case in Sweden.” Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-mpox-europe-case-sweden.html">https://medicalxpress.com/news/2024-08-mpox-europe-case-sweden.html</a></li>
+<li>C. Baxter, J. Nachega, and W. Preiser, “Mpox outbreak in Africa was neglected – it could now turn into the next global pandemic,” The Conversation. Accessed: Aug. 16, 2024. [Online]. Available: <a href="http://theconversation.com/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic-236893">http://theconversation.com/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic-236893</a></li>
+<li>C. R. MacIntyre, “WHO has declared mpox a global health emergency. What happens next?,” The Conversation. Accessed: Aug. 15, 2024. [Online]. Available: <a href="http://theconversation.com/who-has-declared-mpox-a-global-health-emergency-what-happens-next-236778">http://theconversation.com/who-has-declared-mpox-a-global-health-emergency-what-happens-next-236778</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Africa poised to declare continentwide emergency alarm for mpox outbreak.” Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.science.org/content/article/africa-poised-declare-continentwide-emergency-alarm-mpox-outbreak">https://www.science.org/content/article/africa-poised-declare-continentwide-emergency-alarm-mpox-outbreak</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Kopp, “Fauci’s institute hid mpox gain-of-function plans from Congress and the media,” U.S. Right to Know. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://usrtk.org/risky-research/fauci-institute-hid-mpox-gain-of-function-plans/">https://usrtk.org/risky-research/fauci-institute-hid-mpox-gain-of-function-plans/</a></li>
+
+<li>“Rattled by mpox surge in Africa, WHO declares a global health emergency—again.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.science.org/content/article/rattled-mpox-surge-africa-who-declares-global-health-emergency-again">https://www.science.org/content/article/rattled-mpox-surge-africa-who-declares-global-health-emergency-again</a></li>
+
+<li>R. E. Rohde, “What is mpox? A microbiologist explains what’s known about this smallpox cousin,” The Conversation. Accessed: Aug. 16, 2024. [Online]. Available: <a href="http://theconversation.com/what-is-mpox-a-microbiologist-explains-whats-known-about-this-smallpox-cousin-236857">http://theconversation.com/what-is-mpox-a-microbiologist-explains-whats-known-about-this-smallpox-cousin-236857</a></li>
+<li>C. Baxter, J. Nachega, and W. Preiser, “Mpox outbreak in Africa was neglected – it could now turn into the next global pandemic,” The Conversation. Accessed: Aug. 16, 2024. [Online]. Available: <a href="http://theconversation.com/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic-236893">http://theconversation.com/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic-236893</a></li>
+
+<li>“The untold story of how Nigeria’s mpox outbreak sparked a worldwide epidemic.” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.science.org/content/article/untold-story-how-nigeria-s-mpox-outbreak-sparked-worldwide-epidemic">https://www.science.org/content/article/untold-story-how-nigeria-s-mpox-outbreak-sparked-worldwide-epidemic</a></li>
+
+<li>R. Barrie, “Bavarian Nordic tops up US smallpox/mpox vaccine stockpile with $156.8m order,” Pharmaceutical Technology. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.pharmaceutical-technology.com/news/bavarian-nordic-tops-up-us-smallpox-mpox-vaccine-stockpile-with-156-8m-order/">https://www.pharmaceutical-technology.com/news/bavarian-nordic-tops-up-us-smallpox-mpox-vaccine-stockpile-with-156-8m-order/</a></li>
+
+<li>W. P. Conversation The Conversation, Cheryl Baxter, The Conversation &amp;. Jean Nachega, The, “Mpox upsurge shows the global perils of ignoring infectious disease outbreak in poorer regions,” Scroll.in. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://scroll.in/article/1072106/mpox-upsurge-shows-the-global-perils-of-ignoring-infectious-disease-outbreak-in-poorer-regions">https://scroll.in/article/1072106/mpox-upsurge-shows-the-global-perils-of-ignoring-infectious-disease-outbreak-in-poorer-regions</a></li>
+
+<li>P. Adepoju, “Mpox is a Global Public Health Emergency. What Does That Mean?,” Scientific American. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/the-who-declared-mpox-a-global-health-emergency-heres-where-the-virus-is/">https://www.scientificamerican.com/article/the-who-declared-mpox-a-global-health-emergency-heres-where-the-virus-is/</a></li>
+
+<li>M. Cheng, “Now that mpox is a global health emergency, will it trigger another pandemic?” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-mpox-global-health-emergency-trigger.html">https://medicalxpress.com/news/2024-08-mpox-global-health-emergency-trigger.html</a></li>
+
+<li>“WHO’s emergency committee to meet Aug 14 over Mpox.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-emergency-committee-aug-mpox.html">https://medicalxpress.com/news/2024-08-emergency-committee-aug-mpox.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2756ee" class="outline-2">
+<h2 id="orge2756ee"><span class="section-number-2">5.</span> World</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org184b84e" class="outline-3">
+<h3 id="org184b84e"><span class="section-number-3">5.1.</span> Law</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“As U.S. declares public health emergency, science leaders ask publishers for access to monkeypox research.” <a href="https://www.science.org/content/article/science-leaders-ask-publishers-access-monkeypox-research">https://www.science.org/content/article/science-leaders-ask-publishers-access-monkeypox-research</a> (accessed Aug. 05, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28baa40" class="outline-3">
+<h3 id="org28baa40"><span class="section-number-3">5.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org1c1ba11" class="outline-4">
+<h4 id="org1c1ba11"><span class="section-number-4">5.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd868e6e"></a>General<br /></li>
+<li><a id="org59c26f8"></a>GoI Official<br />
+<div class="outline-text-5" id="text-5-2-1-2">
+<ul class="org-ul">
+<li>“Monkeypox | National Health Portal Of India.” <a href="https://www.nhp.gov.in/disease/communicable-disease/monkeypox">https://www.nhp.gov.in/disease/communicable-disease/monkeypox</a> (accessed Aug. 01, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7381cc0"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org1bf1aec"></a>Med Sci<br />
+<ul class="org-ul">
+<li><a id="org13df964"></a>AIIMS<br /></li>
+<li><a id="org4a390c5"></a>Private Hospitals<br />
+<div class="outline-text-7" id="text-org4a390c5">
+<ul class="org-ul">
+<li>“Monkeypox: Causes, Symptoms, Treatment, and Prevention.” <a href="https://www.maxhealthcare.in/blogs/monkeypox-causes-symptoms-treatment-prevention">https://www.maxhealthcare.in/blogs/monkeypox-causes-symptoms-treatment-prevention</a> (accessed Aug. 01, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0a72f9c"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org66a0367"></a>World<br />
+<ol class="org-ol">
+<li><a id="org7d3fa83"></a>Misc<br /></li>
+</ol>
+</li>
+
+<li><a id="org072db9c"></a>Misc<br />
+<div class="outline-text-5" id="text-5-2-1-5">
+<ul class="org-ul">
+<li>“Alert issued in Gurugram over possible Mpox threat,” Hindustan Times. Accessed: Aug. 24, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/cities/gurugram-news/alert-issued-in-gurugram-over-possible-mpox-threat-101724437672285.html">https://www.hindustantimes.com/cities/gurugram-news/alert-issued-in-gurugram-over-possible-mpox-threat-101724437672285.html</a></li>
+
+<li>D. T. E. Staff, “Why is the latest mpox outbreak a ‘global public health emergency’?,” Down To Earth. Accessed: Aug. 18, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/why-is-the-latest-mpox-outbreak-a-global-public-health-emergency">https://www.downtoearth.org.in/health/why-is-the-latest-mpox-outbreak-a-global-public-health-emergency</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“WHO Declares Global Health Emergency Over Monkeypox Outbreak,” The Wire. <a href="https://thewire.in/health/who-declares-global-health-emergency-over-monkeypox-outbreak">https://thewire.in/health/who-declares-global-health-emergency-over-monkeypox-outbreak</a> (accessed Jul. 25, 2022).</li>
+<li>“Monkeypox: Brazil, Spain Report First Deaths Outside Africa,” The Wire. <a href="https://thewire.in/health/monkeypox-brazil-spain-report-first-deaths-outside-africa">https://thewire.in/health/monkeypox-brazil-spain-report-first-deaths-outside-africa</a> (accessed Jul. 31, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“WHO declares monkeypox public health emergency of international concern.” <a href="https://www.downtoearth.org.in/news/health/who-declares-monkeypox-public-health-emergency-of-international-concern-83900">https://www.downtoearth.org.in/news/health/who-declares-monkeypox-public-health-emergency-of-international-concern-83900</a> (accessed Jul. 24, 2022).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>AP, “WHO declares mpox outbreaks in Africa a global health emergency,” The Hindu, Aug. 14, 2024. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/health/world-health-organization-declares-mpox-outbreaks-in-africa-a-global-health-emergency/article68526543.ece">https://www.thehindu.com/sci-tech/health/world-health-organization-declares-mpox-outbreaks-in-africa-a-global-health-emergency/article68526543.ece</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>P. Prakash, “mpox outbreak: Symptoms, treatment, and status of outbreak explained,” The Hindu, Aug. 13, 2024. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/health/mpox-outbreak-symptoms-treatment-and-status-of-outbreak-explained/article68519834.ece">https://www.thehindu.com/sci-tech/health/mpox-outbreak-symptoms-treatment-and-status-of-outbreak-explained/article68519834.ece</a></li>
+<li>Reuters, “Mpox virus detected in Pakistan, health authorities say,” The Hindu, Aug. 16, 2024. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/international/mpox-virus-detected-in-pakistan-health-authorities-say/article68531606.ece">https://www.thehindu.com/news/international/mpox-virus-detected-in-pakistan-health-authorities-say/article68531606.ece</a></li>
+<li>Reuters, “Mpox virus detected in Pakistan, health authorities say,” The Hindu, Aug. 16, 2024. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/international/mpox-virus-detected-in-pakistan-health-authorities-say/article68531606.ece">https://www.thehindu.com/news/international/mpox-virus-detected-in-pakistan-health-authorities-say/article68531606.ece</a></li>
+<li>“Pakistan Records 3 Cases of Mpox After WHO Declares Public Health Emergency of International Concern,” The Wire. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://thewire.in/health/mpox-public-health-emergency-pakistan-sweden">https://thewire.in/health/mpox-public-health-emergency-pakistan-sweden</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. P. Nachega Cheryl Baxter,Jean, “Mpox outbreak in Africa was neglected — it could now turn into the next global pandemic,” Down To Earth. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic">https://www.downtoearth.org.in/health/mpox-outbreak-in-africa-was-neglected-it-could-now-turn-into-the-next-global-pandemic</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “Mpox outbreak: Global emergency declaration on the cards as WHO calls for emergency meet,” Down To Earth. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/mpox-outbreak-global-emergency-declaration-on-the-cards-as-who-calls-for-emergency-meet">https://www.downtoearth.org.in/health/mpox-outbreak-global-emergency-declaration-on-the-cards-as-who-calls-for-emergency-meet</a></li>
+<li>D. T. E. Staff, “Mpox outbreak: Global emergency declaration on the cards as WHO calls for emergency meet,” Down To Earth. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/mpox-outbreak-global-emergency-declaration-on-the-cards-as-who-calls-for-emergency-meet">https://www.downtoearth.org.in/health/mpox-outbreak-global-emergency-declaration-on-the-cards-as-who-calls-for-emergency-meet</a></li>
+<li>R. Ghai, “WHO declares mpox as public health emergency of international concern,” Down To Earth. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/who-declares-mpox-as-public-health-emergency-of-international-concern">https://www.downtoearth.org.in/health/who-declares-mpox-as-public-health-emergency-of-international-concern</a></li>
+<li>D. T. E. Staff, “Sweden becomes first country outside of Africa to report deadly mpox strain clade I,” Down To Earth. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/sweden-becomes-first-country-outside-of-africa-to-report-case-deadly-mpox-strain-clade-i">https://www.downtoearth.org.in/health/sweden-becomes-first-country-outside-of-africa-to-report-case-deadly-mpox-strain-clade-i</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“India’s first Monkeypox case reported in Kerala,” The Times of India, Jul. 14, 2022. Accessed: Jul. 15, 2022. [Online]. Available: <a href="https://timesofindia.indiatimes.com/india/indias-first-monkeypox-case-reported-in-kerala/articleshow/92880420.cms">https://timesofindia.indiatimes.com/india/indias-first-monkeypox-case-reported-in-kerala/articleshow/92880420.cms</a></li>
+<li>“India’s first monkeypox case reported from Kerala.” <a href="https://www.downtoearth.org.in/news/health/india-s-first-monkeypox-case-reported-from-kerala-83729">https://www.downtoearth.org.in/news/health/india-s-first-monkeypox-case-reported-from-kerala-83729</a> (accessed Jul. 15, 2022).</li>
+
+<li>“Kerala reports India’s first suspected death due to monkeypox.” <a href="https://www.downtoearth.org.in/news/health/kerala-reports-india-s-first-suspected-death-due-to-monkeypox-84067">https://www.downtoearth.org.in/news/health/kerala-reports-india-s-first-suspected-death-due-to-monkeypox-84067</a> (accessed Aug. 01, 2022).</li>
+<li>“Monkeypox outbreak most geographically widespread in half a century.” <a href="https://www.downtoearth.org.in/news/health/monkey-pox-outbreak-most-geographically-widespread-in-half-a-century-82951">https://www.downtoearth.org.in/news/health/monkey-pox-outbreak-most-geographically-widespread-in-half-a-century-82951</a> (accessed May 21, 2022).</li>
+<li>“India’s monkeypox outbreak may not be linked to European superspreader events.” <a href="https://www.downtoearth.org.in/news/health/india-s-monkeypox-outbreak-may-not-be-linked-to-european-superspreader-events-84020">https://www.downtoearth.org.in/news/health/india-s-monkeypox-outbreak-may-not-be-linked-to-european-superspreader-events-84020</a> (accessed Jul. 29, 2022).</li>
+<li>“Current monkeypox symptoms are different from previous outbreaks, finds study.” <a href="https://www.downtoearth.org.in/news/health/current-monkeypox-symptoms-are-different-from-previous-outbreaks-finds-study-84040">https://www.downtoearth.org.in/news/health/current-monkeypox-symptoms-are-different-from-previous-outbreaks-finds-study-84040</a> (accessed Jul. 30, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbeaace6" class="outline-3">
+<h3 id="orgbeaace6"><span class="section-number-3">5.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“To avoid a new pandemic, the GPMB calls on the world to ensure that equity is at the center of the collective response to mpox.” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://gpmb.org/news/news/item/12-08-2024-to-avoid-a-new-pandemic-the-gpmb-calls-on-the-world-to-ensure-that-equity-is-at-the-center-of-the-collective-response-to-mpox">https://gpmb.org/news/news/item/12-08-2024-to-avoid-a-new-pandemic-the-gpmb-calls-on-the-world-to-ensure-that-equity-is-at-the-center-of-the-collective-response-to-mpox</a></li>
+<li>“‘Decolonize Global Health’: WHO Declares Mpox Public Health Emergency as Africa Awaits Vaccines,” Democracy Now! Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/8/16/mpox_vaccine_africa_s_wait_continues">https://www.democracynow.org/2024/8/16/mpox_vaccine_africa_s_wait_continues</a></li>
+
+<li>“Mpox detected in Sweden one day after World Health Organization declares epidemic a Public Health Emergency of International Concern,” World Socialist Web Site. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/16/svcs-a16.html">https://www.wsws.org/en/articles/2024/08/16/svcs-a16.html</a></li>
+<li>“WHO considers declaring public health emergency of international concern due to outbreak of deadlier Mpox strain,” World Socialist Web Site. Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/07/kwpw-a07.html">https://www.wsws.org/en/articles/2024/08/07/kwpw-a07.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge1a88b5" class="outline-2">
+<h2 id="orge1a88b5"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org35736a3" class="outline-3">
+<h3 id="org35736a3"><span class="section-number-3">6.1.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Monkeypox or Moneypox?” <a href="https://www.organicconsumers.org/news/monkeypox-or-moneypox">https://www.organicconsumers.org/news/monkeypox-or-moneypox</a> (accessed Jul. 26, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org54b886d" class="outline-2">
+<h2 id="org54b886d"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>M. Field, “A new mpox variant is taking off in Africa. The WHO plan for stopping it isn’t realistic.,” Bulletin of the Atomic Scientists. Accessed: Aug. 27, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/08/a-new-mpox-variant-is-taking-off-in-africa-the-who-plan-for-stopping-it-isnt-realistic/">https://thebulletin.org/2024/08/a-new-mpox-variant-is-taking-off-in-africa-the-who-plan-for-stopping-it-isnt-realistic/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Esterman, “Mpox cases in Australia are less severe than in Africa. Here’s what to know about the strain spreading here,” The Conversation. Accessed: Aug. 23, 2024. [Online]. Available: <a href="http://theconversation.com/mpox-cases-in-australia-are-less-severe-than-in-africa-heres-what-to-know-about-the-strain-spreading-here-237324">http://theconversation.com/mpox-cases-in-australia-are-less-severe-than-in-africa-heres-what-to-know-about-the-strain-spreading-here-237324</a></li>
+
+<li>“Confused about the mpox outbreaks? Here’s what’s spreading, where, and why.” Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://www.science.org/content/article/confused-about-mpox-outbreaks-here-s-what-s-spreading-where-and-why">https://www.science.org/content/article/confused-about-mpox-outbreaks-here-s-what-s-spreading-where-and-why</a></li>
+
+<li>O. Tomori, “Mpox: African countries have beaten disease outbreaks before – here’s what it takes,” The Conversation. Accessed: Aug. 25, 2024. [Online]. Available: <a href="http://theconversation.com/mpox-african-countries-have-beaten-disease-outbreaks-before-heres-what-it-takes-237238">http://theconversation.com/mpox-african-countries-have-beaten-disease-outbreaks-before-heres-what-it-takes-237238</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Canary, “A crucial piece of advice on how to stop Mpox spreading may surprise you,” Canary. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://www.thecanary.co/global/world-news/2024/08/21/mpox-hygiene/">https://www.thecanary.co/global/world-news/2024/08/21/mpox-hygiene/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “How does bushmeat play a role in the Mpox outbreak?,” Down To Earth. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/africa/how-does-bushmeat-play-a-role-in-the-mpox-outbreak">https://www.downtoearth.org.in/africa/how-does-bushmeat-play-a-role-in-the-mpox-outbreak</a></li>
+
+<li>P. H. Ngorora, “After COVID and Ebola, doctors take on mpox amid conflict in eastern DRC,” Al Jazeera. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://www.aljazeera.com/features/2024/8/19/drc-medics-take-on-mpox-after-ebola-covid-conflict">https://www.aljazeera.com/features/2024/8/19/drc-medics-take-on-mpox-after-ebola-covid-conflict</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. G. P. Health, “From COVID-19 pandemic to mpox emergency: The power of community in protecting public global health,” Speaking of Medicine and Health. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://speakingofmedicine.plos.org/2024/08/19/from-covid-19-pandemic-to-mpox-emergency-the-power-of-community-in-protecting-public-global-health/">https://speakingofmedicine.plos.org/2024/08/19/from-covid-19-pandemic-to-mpox-emergency-the-power-of-community-in-protecting-public-global-health/</a></li>
+
+<li>K. Lay and K. L. G. health correspondent, “Mpox outbreak in Africa is public health emergency, declares WHO,” The Guardian, Aug. 14, 2024. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/article/2024/aug/14/mpox-outbreak-africa-public-health-emergency-declares-who">https://www.theguardian.com/world/article/2024/aug/14/mpox-outbreak-africa-public-health-emergency-declares-who</a></li>
+
+<li>R. Ghai, “Mpox spreads through contaminated bushmeat, which Central Africa produces in largest quantities,” Down To Earth. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/africa/mpox-spreads-through-contaminated-bushmeat-which-central-africa-produces-in-largest-quantities">https://www.downtoearth.org.in/africa/mpox-spreads-through-contaminated-bushmeat-which-central-africa-produces-in-largest-quantities</a></li>
+
+<li>A. Beeson et al., “Mpox respiratory transmission: the state of the evidence,” The Lancet Microbe, vol. 4, no. 4, pp. e277–e283, Apr. 2023, doi: 10.1016/S2666-5247(23)00034-4.</li>
+
+<li>K. G. Card, “The WHO has declared Mpox a ‘public health emergency of international concern.’ Is it time to worry?,” The Conversation. Accessed: Aug. 20, 2024. [Online]. Available: <a href="http://theconversation.com/the-who-has-declared-mpox-a-public-health-emergency-of-international-concern-is-it-time-to-worry-236994">http://theconversation.com/the-who-has-declared-mpox-a-public-health-emergency-of-international-concern-is-it-time-to-worry-236994</a></li>
+
+<li>W. Preiser, C. Baxter, J. Nachega, and T. Conversation, “Mpox outbreak in Africa was neglected—it could now turn into the next global pandemic.” Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-mpox-outbreak-africa-neglected-global.html">https://medicalxpress.com/news/2024-08-mpox-outbreak-africa-neglected-global.html</a></li>
+
+<li>P. Adepoju, “Mpox is a Global Public Health Emergency. What Does That Mean?,” Scientific American. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/the-who-declared-mpox-a-global-health-emergency-heres-where-the-virus-is/">https://www.scientificamerican.com/article/the-who-declared-mpox-a-global-health-emergency-heres-where-the-virus-is/</a></li>
+
+<li>“The global mpox emergency and the destruction of public health,” World Socialist Web Site. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/20/nnyr-a20.html">https://www.wsws.org/en/articles/2024/08/20/nnyr-a20.html</a></li>
+<li>“Mpox detected in Sweden one day after World Health Organization declares epidemic a Public Health Emergency of International Concern,” World Socialist Web Site. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/16/svcs-a16.html">https://www.wsws.org/en/articles/2024/08/16/svcs-a16.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Caelers, “WHO declares mpox a public health emergency of international concern,” Nature Africa, Aug. 2024, doi: 10.1038/d44148-024-00244-1.</li>
+
+<li>P. G. P. Health, “Mpox Declares to Africa that Global Health is in Fact, Not Global,” Speaking of Medicine and Health. Accessed: Aug. 18, 2024. [Online]. Available: <a href="https://speakingofmedicine.plos.org/2024/08/16/mpox-declares-to-africa-that-global-health-is-in-fact-not-global/">https://speakingofmedicine.plos.org/2024/08/16/mpox-declares-to-africa-that-global-health-is-in-fact-not-global/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What we know about the new mpox outbreak.” Accessed: Aug. 18, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-mpox-outbreak-africa-1.html">https://medicalxpress.com/news/2024-08-mpox-outbreak-africa-1.html</a></li>
+
+<li>“WHO seeks mpox vaccine production surge.” Accessed: Aug. 18, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-08-mpox-vaccine-production-surge.html">https://medicalxpress.com/news/2024-08-mpox-vaccine-production-surge.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“WHO declares mpox a global public health emergency,” Al Jazeera. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.aljazeera.com/news/2024/8/14/who-declares-mpox-a-global-public-health-emergency">https://www.aljazeera.com/news/2024/8/14/who-declares-mpox-a-global-public-health-emergency</a></li>
+<li>“WHO declares Mpox global health emergency.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.bbc.com/news/articles/cvg35w27gzno">https://www.bbc.com/news/articles/cvg35w27gzno</a></li>
+<li>“WHO declares mpox outbreaks in Africa a global health emergency as a new form of the virus spreads,” AP News. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://apnews.com/article/who-mpox-africa-health-emergency-cc9bdf31b49d06bec5efd44fb55d5e42">https://apnews.com/article/who-mpox-africa-health-emergency-cc9bdf31b49d06bec5efd44fb55d5e42</a></li>
+
+<li>“2022 monkeypox outbreak,” Wikipedia. Jul. 24, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2022_monkeypox_outbreak&amp;oldid=1100074744">https://en.wikipedia.org/w/index.php?title=2022_monkeypox_outbreak&amp;oldid=1100074744</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Declaring monkeypox an international emergency, WHO chief rejects expert panel’s advice.” <a href="https://www.science.org/content/article/declaring-monkeypox-an-international-emergency-who-chief-rejects-expert-panels-advice">https://www.science.org/content/article/declaring-monkeypox-an-international-emergency-who-chief-rejects-expert-panels-advice</a> (accessed Jul. 24, 2022).</li>
+<li>“WHO declines to label monkeypox a global emergency.” <a href="https://www.science.org/content/article/monkeypox-name-pandemic-decision--who">https://www.science.org/content/article/monkeypox-name-pandemic-decision--who</a> (accessed Jun. 27, 2022).</li>
+
+<li>M. Field, “Is the US slow-walking toward a monkeypox disaster?,” Bulletin of the Atomic Scientists, Jul. 29, 2022. <a href="https://thebulletin.org/2022/07/is-the-us-slow-walking-toward-a-monkeypox-disaster/">https://thebulletin.org/2022/07/is-the-us-slow-walking-toward-a-monkeypox-disaster/</a> (accessed Aug. 02, 2022).</li>
+
+<li>T. Lewis, “There Is an Effective Treatment for Monkeypox, but It's Hard to Get,” Scientific American. <a href="https://www.scientificamerican.com/article/there-is-an-effective-treatment-for-monkeypox-but-it-rsquo-s-hard-to-get/">https://www.scientificamerican.com/article/there-is-an-effective-treatment-for-monkeypox-but-it-rsquo-s-hard-to-get/</a> (accessed Jul. 30, 2022).</li>
+
+<li>“‘Immense Frustration’: Monkeypox Spreads Amid Slow U.S. Response, Few Vaccines; WHO Declares Emergency,” Democracy Now! <a href="https://www.democracynow.org/2022/7/25/who_declares_monkeypox_public_health_emergency">https://www.democracynow.org/2022/7/25/who_declares_monkeypox_public_health_emergency</a> (accessed Jul. 26, 2022).</li>
+
+<li>“The Download: monkeypox detection in wastewater, and China’s tycoon control,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/07/25/1056432/download-monkeypox-detection-wastewater-virus-spread-china-tycoon-control/">https://www.technologyreview.com/2022/07/25/1056432/download-monkeypox-detection-wastewater-virus-spread-china-tycoon-control/</a> (accessed Jul. 26, 2022).</li>
+
+<li>K. H. Jacobsen, “Is monkeypox a pandemic? An epidemiologist explains why it isn’t likely to become as widespread as COVID-19, but is worth watching,” The Conversation. <a href="http://theconversation.com/is-monkeypox-a-pandemic-an-epidemiologist-explains-why-it-isnt-likely-to-become-as-widespread-as-covid-19-but-is-worth-watching-186872">http://theconversation.com/is-monkeypox-a-pandemic-an-epidemiologist-explains-why-it-isnt-likely-to-become-as-widespread-as-covid-19-but-is-worth-watching-186872</a> (accessed Jul. 24, 2022).</li>
+
+<li>“As monkeypox spreads: 5 questions answered,” Bulletin of the Atomic Scientists, Jun. 30, 2022. <a href="https://thebulletin.org/2022/06/as-monkeypox-spreads-5-questions-answered/">https://thebulletin.org/2022/06/as-monkeypox-spreads-5-questions-answered/</a> (accessed Jul. 02, 2022).</li>
+
+<li>T. Lewis, “U.S. Monkeypox Response Has Been Woefully Inadequate, Experts Say,” Scientific American. <a href="https://www.scientificamerican.com/article/monkeypox-testing-and-vaccination-in-u-s-have-been-vastly-inadequate-experts-say1/">https://www.scientificamerican.com/article/monkeypox-testing-and-vaccination-in-u-s-have-been-vastly-inadequate-experts-say1/</a> (accessed Jul. 15, 2022).</li>
+
+<li>K. Piper, “Stop scolding people for worrying about monkeypox,” Vox, May 28, 2022. <a href="https://www.vox.com/future-perfect/23140258/monkeypox-pandemic-covid-public-health">https://www.vox.com/future-perfect/23140258/monkeypox-pandemic-covid-public-health</a> (accessed Jul. 04, 2022).</li>
+
+<li>E. A. Jonczy, J. Daly, and G. J. Kotwal, “A novel approach using an attenuated recombinant vaccinia virus to test the antipoxviral effects of handsoaps,” Antiviral Research, vol. 45, no. 2, pp. 149–153, Feb. 2000, doi: 10.1016/S0166-3542(00)00067-X.</li>
+
+<li>E. Mahase, “Monkeypox: What do we know about the outbreaks in Europe and North America?,” BMJ, vol. 377, p. o1274, May 2022, doi: 10.1136/bmj.o1274.</li>
+
+<li>“How big of a deal is monkeypox?,” Bulletin of the Atomic Scientists, May 24, 2022. <a href="https://thebulletin.org/2022/05/how-big-of-a-deal-is-monkeypox/">https://thebulletin.org/2022/05/how-big-of-a-deal-is-monkeypox/</a> (accessed May 25, 2022).</li>
+
+<li>L. F. Lewis Tanya, “What We Know about the Rise in Monkeypox Cases Worldwide,” Scientific American. <a href="https://www.scientificamerican.com/article/what-we-know-about-the-rise-in-monkeypox-cases-worldwide/">https://www.scientificamerican.com/article/what-we-know-about-the-rise-in-monkeypox-cases-worldwide/</a> (accessed May 25, 2022).</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>,
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-08-27 Tue 14:38</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
