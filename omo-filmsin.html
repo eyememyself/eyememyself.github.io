@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-01 Sun 09:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Indian Films</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Indian Films</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org85b6fb5">1. General</a></li>
+<li><a href="#org7230858">2. World</a>
+<ul>
+<li><a href="#orgf62f7db">2.1. Orgs</a>
+<ul>
+<li><a href="#org9b74394">2.1.1. GoI Official</a></li>
+<li><a href="#orgdca5857">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3be116e">2.2. Politics</a></li>
+<li><a href="#orge5b9f47">2.3. Feminism</a></li>
+<li><a href="#org48467cb">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgddd0eda">3. Core</a>
+<ul>
+<li><a href="#orgcdd1cce">3.1. Filmography</a></li>
+<li><a href="#org2079a73">3.2. Artsy Films</a>
+<ul>
+<li><a href="#org5c199d7">3.2.1. Actors</a></li>
+<li><a href="#org915c05d">3.2.2. Actresses</a></li>
+<li><a href="#org7aefe99">3.2.3. Directors</a></li>
+<li><a href="#orgd19bfe0">3.2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9a6c504">3.3. Actors</a>
+<ul>
+<li><a href="#org7053cd5">3.3.1. Male</a></li>
+<li><a href="#orgdab4170">3.3.2. Female</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org874161b">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-org85b6fb5" class="outline-2">
+<h2 id="org85b6fb5"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>S. Ray, <i>Speaking of Films.</i> Penguin Books India, 2005.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Rajadhyaksha, Indian Cinema: A Very Short Introduction. Oxford University Press, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7230858" class="outline-2">
+<h2 id="org7230858"><span class="section-number-2">2.</span> World</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf62f7db" class="outline-3">
+<h3 id="orgf62f7db"><span class="section-number-3">2.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org9b74394" class="outline-4">
+<h4 id="org9b74394"><span class="section-number-4">2.1.1.</span> GoI Official</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Films Division - Ministry of Information and Broadcasting | Documentaries | Short Films | Animation Films.” <a href="https://filmsdivision.org/">https://filmsdivision.org/</a> (accessed Jan. 18, 2022).</li>
+
+<li>“National Film Development Corporation” <a href="https://www.nfdcindia.com/">https://www.nfdcindia.com/</a> (accessed Mar. 24, 2021).
+<ul class="org-ul">
+<li><i><a href="https://www.cinemasofindia.com/">NFDC: Cinemas Of India</a></i></li>
+</ul></li>
+
+<li>Directorate of Film Festivals (DFF)</li>
+
+<li>National Film Archive of India (NFAI)</li>
+
+<li>Children’s Film Society of India (CFSI)</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Patwardhan, “Why the merger of the National Film Archives and Films Division is an assault on the Constitution,” Scroll.in. <a href="https://scroll.in/reel/1020454/why-the-merger-of-the-national-film-archives-and-films-division-is-an-assault-on-the-constitution">https://scroll.in/reel/1020454/why-the-merger-of-the-national-film-archives-and-films-division-is-an-assault-on-the-constitution</a> (accessed Apr. 01, 2022).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdca5857" class="outline-4">
+<h4 id="orgdca5857"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org3be116e" class="outline-3">
+<h3 id="org3be116e"><span class="section-number-3">2.2.</span> Politics</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“How Bollywood is rewriting history,” Mintlounge. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://lifestyle.livemint.com/news/talking-point/how-bollywood-is-rewriting-history-111641421170823.html">https://lifestyle.livemint.com/news/talking-point/how-bollywood-is-rewriting-history-111641421170823.html</a></li>
+
+<li>N. Ramnath, “A dummy’s guide to propaganda films in Bollywood,” Scroll.in. Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://scroll.in/reel/1065984/a-dummys-guide-to-propaganda-films-in-bollywood">https://scroll.in/reel/1065984/a-dummys-guide-to-propaganda-films-in-bollywood</a></li>
+
+<li>H. Najeeb, “Bollywood’s Love Affair With Hindutva: Films And Actors Aiding The 2024 Elections,” Feminism in India. Accessed: Apr. 10, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/04/10/bollywoods-love-affair-with-hindutva-films-and-actors-aiding-the-2024-elections/">https://feminisminindia.com/2024/04/10/bollywoods-love-affair-with-hindutva-films-and-actors-aiding-the-2024-elections/</a></li>
+
+<li>H. S. Wankhede, “Rise of ‘Hindutva’ cinema,” Frontline. Accessed: Apr. 18, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/arts-and-culture/cinema/propaganda-indian-cinemas-continued-caste-bias/article68046069.ece">https://frontline.thehindu.com/arts-and-culture/cinema/propaganda-indian-cinemas-continued-caste-bias/article68046069.ece</a></li>
+<li>L. Liang, “Movie trailers: The unofficial manifestos of our time,” Frontline. Accessed: Apr. 18, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/arts-and-culture/cinema/the-movie-trailers-increased-importance-is-symptomatic-of-our-contemporary-post-truth-world/article68042329.ece">https://frontline.thehindu.com/arts-and-culture/cinema/the-movie-trailers-increased-importance-is-symptomatic-of-our-contemporary-post-truth-world/article68042329.ece</a></li>
+<li>V. Roy, “Editor’s Note: When cinema becomes a tool for propaganda,” Frontline. Accessed: Apr. 18, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/arts-and-culture/cinema/editors-note-vaishna-roy-cinema-as-tool-to-disseminate-hatred/article68061327.ece">https://frontline.thehindu.com/arts-and-culture/cinema/editors-note-vaishna-roy-cinema-as-tool-to-disseminate-hatred/article68061327.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge5b9f47" class="outline-3">
+<h3 id="orge5b9f47"><span class="section-number-3">2.3.</span> Feminism</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>A. Bhattacharya, “Jaya Bachchan’s Political Journey: Key Points And Reflections,” Feminism in India. Accessed: Mar. 09, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/03/07/jaya-bachchans-political-journey-key-points-and-reflections/">https://feminisminindia.com/2024/03/07/jaya-bachchans-political-journey-key-points-and-reflections/</a></li>
+
+<li>A. Bhattacharya, “Hema Malini, BJP Candidate From Mathura: A Critical Analysis Of Her Political Journey,” Feminism in India. Accessed: Mar. 19, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/03/19/hema-malini-bjp-candidate-from-mathura-a-critical-analysis-of-her-political-journey/">https://feminisminindia.com/2024/03/19/hema-malini-bjp-candidate-from-mathura-a-critical-analysis-of-her-political-journey/</a></li>
+
+<li>D. G. Vats, “Kangana Ranaut: A Phenomenon Of Hate, Revenge And Nationalism,” Feminism in India. Accessed: Apr. 11, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/04/11/kangana-ranaut-a-phenomenon-of-hate-revenge-and-nationalism/">https://feminisminindia.com/2024/04/11/kangana-ranaut-a-phenomenon-of-hate-revenge-and-nationalism/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org48467cb" class="outline-3">
+<h3 id="org48467cb"><span class="section-number-3">2.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgddd0eda" class="outline-2">
+<h2 id="orgddd0eda"><span class="section-number-2">3.</span> Core</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgcdd1cce" class="outline-3">
+<h3 id="orgcdd1cce"><span class="section-number-3">3.1.</span> Filmography</h3>
+</div>
+<div id="outline-container-org2079a73" class="outline-3">
+<h3 id="org2079a73"><span class="section-number-3">3.2.</span> Artsy Films</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org5c199d7" class="outline-4">
+<h4 id="org5c199d7"><span class="section-number-4">3.2.1.</span> Actors</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>“Om Puri,” Wikipedia. Mar. 06, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Om_Puri&amp;oldid=1143187612">https://en.wikipedia.org/w/index.php?title=Om_Puri&amp;oldid=1143187612</a></li>
+
+<li>“Nawazuddin Siddiqui,” Wikipedia. Mar. 22, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nawazuddin_Siddiqui&amp;oldid=1146070896">https://en.wikipedia.org/w/index.php?title=Nawazuddin_Siddiqui&amp;oldid=1146070896</a></li>
+
+<li>“Pankaj Kapur,” Wikipedia. Mar. 26, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pankaj_Kapur&amp;oldid=1146685000">https://en.wikipedia.org/w/index.php?title=Pankaj_Kapur&amp;oldid=1146685000</a></li>
+
+<li>“Irrfan Khan,” Wikipedia. Mar. 27, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Irrfan_Khan&amp;oldid=1146877360">https://en.wikipedia.org/w/index.php?title=Irrfan_Khan&amp;oldid=1146877360</a></li>
+
+<li>N. Shah, And Then One Day: A Memoir. Penguin UK, 2015.</li>
+<li>“Naseeruddin Shah,” Wikipedia. Mar. 21, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Naseeruddin_Shah&amp;oldid=1145923765">https://en.wikipedia.org/w/index.php?title=Naseeruddin_Shah&amp;oldid=1145923765</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org915c05d" class="outline-4">
+<h4 id="org915c05d"><span class="section-number-4">3.2.2.</span> Actresses</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>“Mita Vashisht | Actress, Music Department, Soundtrack,” IMDb. <a href="https://www.imdb.com/name/nm0890622/">https://www.imdb.com/name/nm0890622/</a> (accessed Sep. 25, 2023).</li>
+<li>“Mita Vashisht,” Wikipedia. Sep. 19, 2023. Accessed: Sep. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mita_Vashisht&amp;oldid=1176086488">https://en.wikipedia.org/w/index.php?title=Mita_Vashisht&amp;oldid=1176086488</a></li>
+
+<li>“Kalki Koechlin,” Wikipedia. Apr. 02, 2023. Accessed: Apr. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kalki_Koechlin&amp;oldid=1147849242">https://en.wikipedia.org/w/index.php?title=Kalki_Koechlin&amp;oldid=1147849242</a></li>
+
+<li>“Tabu (actress),” Wikipedia. Mar. 16, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tabu_(actress)&amp;oldid=1144923651">https://en.wikipedia.org/w/index.php?title=Tabu_(actress)&amp;oldid=1144923651</a></li>
+
+<li>“Shabana Azmi,” Wikipedia. Mar. 05, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Shabana_Azmi&amp;oldid=1142958435">https://en.wikipedia.org/w/index.php?title=Shabana_Azmi&amp;oldid=1142958435</a></li>
+
+<li>“Smita Patil,” Wikipedia. Jan. 25, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Smita_Patil&amp;oldid=1135550568">https://en.wikipedia.org/w/index.php?title=Smita_Patil&amp;oldid=1135550568</a></li>
+
+<li>“Indira Varma,” Wikipedia. Mar. 26, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Indira_Varma&amp;oldid=1146766904">https://en.wikipedia.org/w/index.php?title=Indira_Varma&amp;oldid=1146766904</a></li>
+
+<li>“Nandita Das,” Wikipedia. Mar. 23, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nandita_Das&amp;oldid=1146275731">https://en.wikipedia.org/w/index.php?title=Nandita_Das&amp;oldid=1146275731</a></li>
+
+<li>“Konkona Sen Sharma,” Wikipedia. Mar. 23, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Konkona_Sen_Sharma&amp;oldid=1146265118">https://en.wikipedia.org/w/index.php?title=Konkona_Sen_Sharma&amp;oldid=1146265118</a></li>
+
+<li>M. Rao, Smita Patil: A Brief Incandescence. Harper Collins, 2015.</li>
+
+<li>G. Jain, Shabana Azmi: (Penguin Petit). Penguin Random House India Private Limited, 2018.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7aefe99" class="outline-4">
+<h4 id="org7aefe99"><span class="section-number-4">3.2.3.</span> Directors</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>“Deepa Mehta,” Wikipedia. Mar. 20, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Deepa_Mehta&amp;oldid=1145623366">https://en.wikipedia.org/w/index.php?title=Deepa_Mehta&amp;oldid=1145623366</a></li>
+
+<li>“Mira Nair,” Wikipedia. Mar. 20, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mira_Nair&amp;oldid=1145622380">https://en.wikipedia.org/w/index.php?title=Mira_Nair&amp;oldid=1145622380</a></li>
+
+<li>“Anurag Kashyap,” Wikipedia. Mar. 21, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Anurag_Kashyap&amp;oldid=1145837621">https://en.wikipedia.org/w/index.php?title=Anurag_Kashyap&amp;oldid=1145837621</a></li>
+
+<li>“Aparna Sen,” Wikipedia. Mar. 12, 2023. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Aparna_Sen&amp;oldid=1144176667">https://en.wikipedia.org/w/index.php?title=Aparna_Sen&amp;oldid=1144176667</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Mukim, “Mani Kaul and the cinema to come,” The Caravan. <a href="https://caravanmagazine.in/reviews-essays/mani-kaul-cinema-come">https://caravanmagazine.in/reviews-essays/mani-kaul-cinema-come</a> (accessed Mar. 07, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd19bfe0" class="outline-4">
+<h4 id="orgd19bfe0"><span class="section-number-4">3.2.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<ul class="org-ul">
+<li>“Parallel cinema - Wikipedia.” Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Parallel_cinema">https://en.wikipedia.org/wiki/Parallel_cinema</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a6c504" class="outline-3">
+<h3 id="org9a6c504"><span class="section-number-3">3.3.</span> Actors</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org7053cd5" class="outline-4">
+<h4 id="org7053cd5"><span class="section-number-4">3.3.1.</span> Male</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgcdb3b00"></a>Raj Babbar<br />
+<ol class="org-ol">
+<li><a id="org3bc735e"></a>General<br />
+<div class="outline-text-6" id="text-3-3-1-1-1">
+<ul class="org-ul">
+<li>“Raj Babbar,” Wikipedia. Apr. 30, 2024. Accessed: May 01, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Raj_Babbar&amp;oldid=1221497717">https://en.wikipedia.org/w/index.php?title=Raj_Babbar&amp;oldid=1221497717</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org51a281e"></a>Films<br />
+<div class="outline-text-6" id="text-3-3-1-1-2">
+<ul class="org-ul">
+<li>“Nikaah (film),” Wikipedia. Apr. 17, 2024. Accessed: May 01, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nikaah_(film)&amp;oldid=1219366078">https://en.wikipedia.org/w/index.php?title=Nikaah_(film)&amp;oldid=1219366078</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org988dc03"></a>Music<br />
+<div class="outline-text-6" id="text-3-3-1-1-3">
+<ul class="org-ul">
+<li>Top 15 Songs Of Raj Babbar | Hits Of Raj Babbar | Hindi Hit Songs, (Jun. 22, 2021). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VEvTLs9n0zs">https://www.youtube.com/watch?v=VEvTLs9n0zs</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>होठों से छूलो तुम&#x2026;| Hothon Se Chhulo Tum | Prem Geet | Jagjit Singh | Ghazal | Best Romantic Songs, (Mar. 22, 2016). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=dDO9ZRSNB9s">https://www.youtube.com/watch?v=dDO9ZRSNB9s</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mere Pyaar Ki Umar Ho Itni Sanam” Full Video | Waaris | Lata Mangeshkar | Amrita Singh, Raj Babbar, (Jun. 09, 2020). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=60U-LwYARMg">https://www.youtube.com/watch?v=60U-LwYARMg</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Tu Iss Tarah Se Meri Zindagi Mein (HD) - Aap To Aise Na The Song - Ranjeeta Kaur - Raj Babbar, (Apr. 13, 2018). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=WJVrKhMbh1Q">https://www.youtube.com/watch?v=WJVrKhMbh1Q</a></li>
+<li>Dil Ki Ye Aarazu Thi Koi | Nikaah (1982) | Mahendra Kapoor, Salma Agha | Kishore Kumar, Asha Bhosle, (Sep. 18, 2021). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=hUcs3QMYuNA">https://www.youtube.com/watch?v=hUcs3QMYuNA</a></li>
+<li>Beete Hue Lamhon Ki  | Nikaah (1982) | Mahendra Kapoor | Raj Babbar, Salma Agha, (May 04, 2022). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=oewxBEs8jGo">https://www.youtube.com/watch?v=oewxBEs8jGo</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga140e49"></a>Misc<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgdab4170" class="outline-4">
+<h4 id="orgdab4170"><span class="section-number-4">3.3.2.</span> Female</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org74b0bde"></a>Kangana Ranaut<br />
+<ol class="org-ol">
+<li><a id="org5f06339"></a>General<br />
+<div class="outline-text-6" id="text-3-3-2-1-1">
+<ul class="org-ul">
+<li>“Kangana Ranaut,” Wikipedia. Apr. 24, 2024. Accessed: May 31, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kangana_Ranaut&amp;oldid=1220621310">https://en.wikipedia.org/w/index.php?title=Kangana_Ranaut&amp;oldid=1220621310</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5218a92"></a>Biographies<br />
+<div class="outline-text-6" id="text-3-3-2-1-2">
+<ul class="org-ul">
+<li>M. D. Sharma, Kon Hai Kangana Ranaut: Unveiling the Enigmatic Persona - Exploring the Intriguing Life of Kangana Ranaut. Prabhat Prakashan, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9fe8718"></a>Interviews<br />
+<div class="outline-text-6" id="text-3-3-2-1-3">
+<ul class="org-ul">
+<li>Kangana Ranaut Exclusive : News18 इंडिया पर कंगना रनौत EXCLUSIVE | Interview | Election 2024 । N18V, (May 19, 2024). Accessed: May 31, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=HP8zngsU4gA">https://www.youtube.com/watch?v=HP8zngsU4gA</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgda746c0"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgf918c4c"></a>Mandi Election<br />
+<div class="outline-text-7" id="text-orgf918c4c">
+<ul class="org-ul">
+<li>Mandi Elections 2024 | Inside Kangana Ranaut’s Village: “Naughty Student” To “Local Pride,” (May 28, 2024). Accessed: May 31, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=r3u54SiAfLw">https://www.youtube.com/watch?v=r3u54SiAfLw</a></li>
+<li>Kangana Ranaut | PM Modi Calls Kangana A “Representative Of India’s Daughters” In Mandi | N18V, (May 24, 2024). Accessed: May 31, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=12Sc-FAHGJg">https://www.youtube.com/watch?v=12Sc-FAHGJg</a></li>
+<li>Kangana Ranaut Speech | Kangana Ranaut’s “Bigdel Shehzada” Jibe At Mandi Rival Vikramaditya Singh, (May 22, 2024). Accessed: May 31, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lDTQw15zf2o">https://www.youtube.com/watch?v=lDTQw15zf2o</a></li>
+<li>Kangana Ranaut के सामने Mandi में Vikramaditya Singh की चुनौती, स्थानीय लोग क्या बोले (BBC Hindi), (May 29, 2024). Accessed: May 31, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=FXG1sZfErb0">https://www.youtube.com/watch?v=FXG1sZfErb0</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+
+<li><a id="org284817a"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-2-1-5">
+<ul class="org-ul">
+<li>“Kulwinder Kaur: from lawbreaker to lawmaker?,” People’s Archive of Rural India. Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/kulwinder-kaur-from-lawbreaker-to-lawmaker/">https://ruralindiaonline.org/en/articles/kulwinder-kaur-from-lawbreaker-to-lawmaker/</a></li>
+
+<li>“Farmers’ Heroine Vs RSS’s Heroine,” NewsClick. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.newsclick.in/farmers-heroine-vs-rsss-heroine">https://www.newsclick.in/farmers-heroine-vs-rsss-heroine</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Chakravarty and S. K. Chaudhuri, Centring Women in Bollywood Biopics: Empowerment and Agency in Contemporary Indian Cinema, 1st edition. Routledge, 2024.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org3fbd9f7"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-2-2">
+<ul class="org-ul">
+<li>“Shilpa Shukla,” Wikipedia. Apr. 07, 2024. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Shilpa_Shukla&amp;oldid=1217797443">https://en.wikipedia.org/w/index.php?title=Shilpa_Shukla&amp;oldid=1217797443</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org874161b" class="outline-2">
+<h2 id="org874161b"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Encyclopedia of Indian Cinema. 1998. Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/encyclopedia-of-indian-cinema/">https://ruralindiaonline.org/en/library/resource/encyclopedia-of-indian-cinema/</a></li>
+<li>Impact of Indian Cinema on Young Viewers: Responses to gender and violence against women. 2018. Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/impact-of-indian-cinema-on-young-viewers-responses-to-gender-and-violence-against-women/">https://ruralindiaonline.org/en/library/resource/impact-of-indian-cinema-on-young-viewers-responses-to-gender-and-violence-against-women/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“The Karnad-Benegal-Dubey trinity that transformed theatre and cinema.” Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://scroll.in/reel/1071398/the-karnad-benegal-dubey-trinity-that-transformed-theatre-and-cinema">https://scroll.in/reel/1071398/the-karnad-benegal-dubey-trinity-that-transformed-theatre-and-cinema</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Making of Girish Karnad’s ‘Utsav,’ a Film Ahead of Its Time,” The Wire. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://thewire.in/film/the-making-of-girish-karnads-utsav-a-film-ahead-of-its-time">https://thewire.in/film/the-making-of-girish-karnads-utsav-a-film-ahead-of-its-time</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“B.A. Pass,” Wikipedia. Apr. 07, 2024. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=B.A._Pass&amp;oldid=1217647386">https://en.wikipedia.org/w/index.php?title=B.A._Pass&amp;oldid=1217647386</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“All We Imagine As Light: How to make it to Cannes,” The Indian Express. Accessed: May 22, 2024. [Online]. Available: <a href="https://indianexpress.com/article/express-sunday-eye/all-we-imagine-as-light-how-to-make-it-to-cannes-9336350/">https://indianexpress.com/article/express-sunday-eye/all-we-imagine-as-light-how-to-make-it-to-cannes-9336350/</a></li>
+
+<li>“Garm Hava,” Wikipedia. Jan. 13, 2024. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Garm_Hava&amp;oldid=1195462173">https://en.wikipedia.org/w/index.php?title=Garm_Hava&amp;oldid=1195462173</a></li>
+
+<li>“2006 Noida serial murders,” Wikipedia. Oct. 01, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2006_Noida_serial_murders&amp;oldid=1178075131">https://en.wikipedia.org/w/index.php?title=2006_Noida_serial_murders&amp;oldid=1178075131</a></li>
+
+<li>“Baishe Srabon,” Wikipedia. Oct. 05, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Baishe_Srabon&amp;oldid=1178687664">https://en.wikipedia.org/w/index.php?title=Baishe_Srabon&amp;oldid=1178687664</a></li>
+
+<li>“Hostel (2011 film),” Wikipedia. Apr. 28, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hostel_(2011_film)&amp;oldid=1152070606">https://en.wikipedia.org/w/index.php?title=Hostel_(2011_film)&amp;oldid=1152070606</a></li>
+
+<li>“Manish Gupta (director),” Wikipedia. Aug. 28, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Manish_Gupta_(director)&amp;oldid=1172692501">https://en.wikipedia.org/w/index.php?title=Manish_Gupta_(director)&amp;oldid=1172692501</a></li>
+
+<li>“Rukhsar Rehman - Wikipedia.” Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Rukhsar_Rehman">https://en.wikipedia.org/wiki/Rukhsar_Rehman</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Stoneman Murders,” Wikipedia. Aug. 29, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Stoneman_Murders&amp;oldid=1172880770">https://en.wikipedia.org/w/index.php?title=The_Stoneman_Murders&amp;oldid=1172880770</a></li>
+<li>“Stoneman,” Wikipedia. Sep. 24, 2023. Accessed: Oct. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Stoneman&amp;oldid=1176907570">https://en.wikipedia.org/w/index.php?title=Stoneman&amp;oldid=1176907570</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Prime Video: Manorama: Six Feet Under.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Manorama-Six-Feet-Under/0MJXH0D9R3T6ZGBNH065CSWUYZ">https://www.primevideo.com/detail/Manorama-Six-Feet-Under/0MJXH0D9R3T6ZGBNH065CSWUYZ</a></li>
+
+<li>“Prime Video: Godam.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Godam/0L33U8LYKDGALNNXQ22KN3K9HY">https://www.primevideo.com/detail/Godam/0L33U8LYKDGALNNXQ22KN3K9HY</a></li>
+
+<li>“Prime Video: My Mother’s Girlfriend.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/My-Mother%E2%80%99s-Girlfriend/0FF6MNBE19K8M7DU5MND3Y7QED">https://www.primevideo.com/detail/My-Mother%E2%80%99s-Girlfriend/0FF6MNBE19K8M7DU5MND3Y7QED</a></li>
+
+<li>“Prime Video: The Township.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/The-Township/0NSR99DL8I013OG4QAUL8WFSNJ">https://www.primevideo.com/detail/The-Township/0NSR99DL8I013OG4QAUL8WFSNJ</a></li>
+
+<li>“Prime Video: Char Adhyay.” Accessed: Sep. 27, 2023. [Online]. Available: <a href="https://www.primevideo.com/detail/Char-Adhyay/0N86T787K46197LNHBNO3J2FR9">https://www.primevideo.com/detail/Char-Adhyay/0N86T787K46197LNHBNO3J2FR9</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Caravan, “Editor’s Pick,” The Caravan. <a href="https://caravanmagazine.in/editors-corner/24011">https://caravanmagazine.in/editors-corner/24011</a> (accessed Mar. 07, 2022).</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a>,
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-01 Sun 09:35</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
