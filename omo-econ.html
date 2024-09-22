@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-22 Sun 10:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Economics</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Economics</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org396bb22">1. General</a>
+<ul>
+<li><a href="#org8f3633e">1.1. Non Tech</a></li>
+<li><a href="#org52b0e80">1.2. Tech</a></li>
+</ul>
+</li>
+<li><a href="#org0f93240">2. STEMM</a>
+<ul>
+<li><a href="#orgf25736d">2.1. Ergodicity Economics</a>
+<ul>
+<li><a href="#orgb23ad9f">2.1.1. Non Tech Resources</a></li>
+<li><a href="#org01268de">2.1.2. Tech Resources</a></li>
+<li><a href="#org28915af">2.1.3. Miscellaneous</a></li>
+</ul>
+</li>
+<li><a href="#org467e48c">2.2. Quantum Economics</a></li>
+<li><a href="#orge338cdd">2.3. Systems Sciences</a>
+<ul>
+<li><a href="#org52e9c46">2.3.1. Network Economics</a></li>
+<li><a href="#orgc6a80f3">2.3.2. Complexity Economics</a></li>
+<li><a href="#org2d76d5f">2.3.3. Ecological Economics</a></li>
+<li><a href="#org6327921">2.3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8f89943">2.4. NeuroScience</a></li>
+<li><a href="#org94c9091">2.5. Mathematics</a></li>
+<li><a href="#org619f4a9">2.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org268c556">3. C1</a>
+<ul>
+<li><a href="#orgf24aa22">3.1. Philosophy</a>
+<ul>
+<li><a href="#orgce78a4f">3.1.1. Ethics</a></li>
+</ul>
+</li>
+<li><a href="#org2149573">3.2. Core</a>
+<ul>
+<li><a href="#orgc067c8d">3.2.1. Alternative Economics</a></li>
+<li><a href="#orgfb5513d">3.2.2. Neoliberalism</a></li>
+<li><a href="#orgd2281f6">3.2.3. Circular Economy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5f3618e">4. World</a>
+<ul>
+<li><a href="#orgb278b04">4.1. Space and Time</a>
+<ul>
+<li><a href="#org4617164">4.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#orgfc890c8">4.2. Religion</a></li>
+<li><a href="#org9af1172">4.3. Feminist Economics</a>
+<ul>
+<li><a href="#org05198e7">4.3.1. History</a></li>
+<li><a href="#org9e499db">4.3.2. Orgs</a></li>
+<li><a href="#org402e290">4.3.3. Handbooks</a></li>
+<li><a href="#org8d769ec">4.3.4. ST</a></li>
+<li><a href="#org322438b">4.3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7164839">4.4. Economism</a></li>
+<li><a href="#org3a9ac87">4.5. Nation States</a>
+<ul>
+<li><a href="#org832696a">4.5.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org3ff9a03">4.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3c77a35">5. Special Topics</a>
+<ul>
+<li><a href="#orgc358503">5.1. Gig Economy</a>
+<ul>
+<li><a href="#org4f6e41b">5.1.1. General</a></li>
+<li><a href="#org7def4e3">5.1.2. Orgs</a></li>
+<li><a href="#org7a184c2">5.1.3. Politics: Left</a></li>
+<li><a href="#orga856ae6">5.1.4. India</a></li>
+<li><a href="#orgd0c79a6">5.1.5. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6c297b1">6. Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org396bb22" class="outline-2">
+<h2 id="org396bb22"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8f3633e" class="outline-3">
+<h3 id="org8f3633e"><span class="section-number-3">1.1.</span> Non Tech</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>DK, <i>The Economics Book.</i> DK Publishing, 2014.</li>
+
+<li>H. J. Chang, <i>Economics: The User's Guide: A Pelican Introduction.</i> Penguin UK, 2014.</li>
+
+<li>D. Orrell, <b>Introducing Economics: A Graphic Guide.</b> Icon Books Ltd, 2014.</li>
+
+<li>D. Orrell, <b>Economyths: 11 Ways Economics Gets it Wrong.</b> Icon Books, 2017.</li>
+
+<li>K. Raworth, <b>Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist.</b> Random House, 2017.</li>
+
+<li>S. Y. Deodhar, <i>IIMA-Day To Day Economics: Day to Day Economics.</i> Random House India, 2016.</li>
+
+<li>Y. B. Ph.D, <i>The Cartoon Introduction to Economics.</i> Farrar, Straus and Giroux, 2011.</li>
+
+<li>S. Keen, <b>The New Economics: A Manifesto, 1st edition.</b> Cambridge, UK ; Medford, MA: Polity, 2021.</li>
+
+<li>F. Carugati and M. Levi, <b>“A Moral Political Economy: Present, Past, and Future,”</b> Elements in Political Economy, May 2021, doi: 10.1017/9781108872942.</li>
+
+<li>Y. Varoufakis, Talking to My Daughter About the Economy: A Brief History of Capitalism. Random House, 2017.</li>
+
+<li>H. Hazlitt, <i>Economics in One Lesson: The Shortest and Surest Way to Understand Basic Economics.</i> Crown Publishing Group, 2010.</li>
+
+<li>K. Basu, <i>Economic Graffiti: Essays for Everyone.</i> Oxford University Press, 1991.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org52b0e80" class="outline-3">
+<h3 id="org52b0e80"><span class="section-number-3">1.2.</span> Tech</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>T. Cowen and A. Tabarrok, <i>Modern Principles of Economics.</i> Macmillan Learning, 2017.</li>
+
+<li><b>“Complexity Economics,”</b> SFI Press. <a href="https://www.sfipress.org/books/complexity-economics">https://www.sfipress.org/books/complexity-economics</a> (accessed Nov. 28, 2020).</li>
+
+<li><b>CORE - Economics for a changing world, CORE.</b> <a href="https://www.core-econ.org/">https://www.core-econ.org/</a> (accessed Mar. 26, 2020).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f93240" class="outline-2">
+<h2 id="org0f93240"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf25736d" class="outline-3">
+<h3 id="orgf25736d"><span class="section-number-3">2.1.</span> Ergodicity Economics</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb23ad9f" class="outline-4">
+<h4 id="orgb23ad9f"><span class="section-number-4">2.1.1.</span> Non Tech Resources</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li><b>“How ergodicity reimagines economics for the benefit of us all – Mark Buchanan | Aeon Ideas,”</b> Aeon. <a href="https://aeon.co/ideas/how-ergodicity-reimagines-economics-for-the-benefit-of-us-all">https://aeon.co/ideas/how-ergodicity-reimagines-economics-for-the-benefit-of-us-all</a> (accessed Nov. 25, 2020).</li>
+<li><b>Farmers Fable. A Tale of Cooperation.</b> [Online]. Available: <a href="http://www.farmersfable.org/index.html">http://www.farmersfable.org/index.html</a>. [Accessed: 10-Feb-2020].</li>
+<li>M. Elsberg, <b>Greed: The page-turning thriller that warned of financial melt-down.</b> Random House, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org01268de" class="outline-4">
+<h4 id="org01268de"><span class="section-number-4">2.1.2.</span> Tech Resources</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li><b>Ergodicity Economics in Plain English.</b> [Online]. Available: <a href="https://www.researchers.one/article/2020-03-7">https://www.researchers.one/article/2020-03-7</a>. [Accessed: 13-Mar-2020].</li>
+<li>Ergodicity Economics. <b>“Ergodicity Economics.”</b> Accessed April 9, 2021. <a href="https://ergodicityeconomics.com/">https://ergodicityeconomics.com/</a>.</li>
+<li><b>Time to move beyond average thinking,</b> Nat. Phys., vol. 15, no. 12, pp. 1207&#x2013;1207, Dec. 2019, doi: 10.1038/s41567-019-0758-3.</li>
+<li>O. Peters, <b>“Optimal leverage from non-ergodicity,”</b> Quantitative Finance, vol. 11, no. 11, pp. 1593–1602, Nov. 2011, doi: 10.1080/14697688.2010.513338.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org28915af" class="outline-4">
+<h4 id="org28915af"><span class="section-number-4">2.1.3.</span> Miscellaneous</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li><b>“Ergodicity TV - YouTube.”</b> Accessed April 9, 2021. <a href="https://www.youtube.com/channel/UCJG8N5P1RFX29JTKt_6R21A">https://www.youtube.com/channel/UCJG8N5P1RFX29JTKt_6R21A</a>.</li>
+<li>O. Peters and A. Adamou, <b>“The sum of log-normal variates in geometric Brownian motion,”</b> arXiv:1802.02939 [cond-mat, q-fin], Feb. 2018, Accessed: Oct. 11, 2021. [Online]. Available: <a href="http://arxiv.org/abs/1802.02939">http://arxiv.org/abs/1802.02939</a></li>
+<li>A. Vanhoyweghen, B. Verbeken, C. Macharis, and V. Ginis, <b>“The influence of ergodicity on risk affinity of timed and non-timed respondents,”</b> Sci Rep, vol. 12, no. 1, Art. no. 1, Mar. 2022, doi: 10.1038/s41598-022-07613-6.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org467e48c" class="outline-3">
+<h3 id="org467e48c"><span class="section-number-3">2.2.</span> Quantum Economics</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>D. Orrell, <b>Introducing Economics: A Graphic Guide.</b> Icon Books Ltd, 2014.</li>
+<li>D. Orrell, <b>Economyths: 11 Ways Economics Gets it Wrong.</b> Icon Books, 2017.</li>
+<li>D. Orrell, Quantum Economics: The New Science of Money. Icon Books, 2018.</li>
+<li>D. Orrell, Behavioural Economics: Psychology, neuroscience, and the human side of economics. Icon Books, 2021.</li>
+<li>D. Orrell, Money, Magic, and How to Dismantle a Financial Bomb: Quantum Economics for the Real World. Icon Books, Limited, 2022.</li>
+<li>P. Wilmott and D. Orrell, The Money Formula: Dodgy Finance, Pseudo Science, and How Mathematicians Took Over the Markets. John Wiley &amp; Sons, 2017.</li>
+<li>D. Orrell and R. Chlupatý, The Evolution of Money. Columbia University Press, 2016.</li>
+<li>“When will economists embrace the quantum revolution? | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution">https://aeon.co/essays/when-will-economists-embrace-the-quantum-revolution</a> (accessed Feb. 04, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge338cdd" class="outline-3">
+<h3 id="orge338cdd"><span class="section-number-3">2.3.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org52e9c46" class="outline-4">
+<h4 id="org52e9c46"><span class="section-number-4">2.3.1.</span> Network Economics</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li><a id="orgb7a26e3"></a> M. O. Jackson, <b>The Human Network: How We're Connected and Why It Matters.</b> Atlantic Books, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc6a80f3" class="outline-4">
+<h4 id="orgc6a80f3"><span class="section-number-4">2.3.2.</span> Complexity Economics</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge575e0b"></a>General<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ul class="org-ul">
+<li><b>“Complexity Economics,”</b> SFI Press. <a href="https://www.sfipress.org/books/complexity-economics">https://www.sfipress.org/books/complexity-economics</a> (accessed Nov. 28, 2020).</li>
+
+<li><b>“Economics,”</b> New England Complex Systems Institute. <a href="https://necsi.edu/economics">https://necsi.edu/economics</a> (accessed Jul. 31, 2021).</li>
+
+<li><b>“Economic Dynamics,”</b> New England Complex Systems Institute. <a href="https://necsi.edu/economic-dynamics">https://necsi.edu/economic-dynamics</a> (accessed Jul. 31, 2021).</li>
+
+<li><b>Complexity Economics Research Group</b>, Institute for New Economic Thinking at the Oxford Martin School, University of Oxford.
+<ul class="org-ul">
+<li>“Complexity Economics | Research,” INET Oxford. <a href="https://www.inet.ox.ac.uk/research/programmes/complexity-economics/">https://www.inet.ox.ac.uk/research/programmes/complexity-economics/</a> (accessed Mar. 05, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org5273085"></a>Orgs<br />
+<div class="outline-text-5" id="text-2-3-2-2">
+<ul class="org-ul">
+<li><b>Complexity Economics Research Group</b>, Institute for New Economic Thinking at the Oxford Martin School, University of Oxford.
+<ul class="org-ul">
+<li>“Complexity Economics | Research,” INET Oxford. <a href="https://www.inet.ox.ac.uk/research/programmes/complexity-economics/">https://www.inet.ox.ac.uk/research/programmes/complexity-economics/</a> (accessed Mar. 05, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“The Observatory of Economic Complexity | OEC,”</b> OEC - The Observatory of Economic Complexity. <a href="https://oec.world/en">https://oec.world/en</a> (accessed Apr. 04, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“SUERF: The European Money and Finance Forum,” SUERF. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.suerf.org/">https://www.suerf.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga2bdffb"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-2-3">
+<ul class="org-ul">
+<li>“Complexity Science Hub * News * CSH Joins Forces With Growth Lab And CEU.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://csh.ac.at/news/csh-joins-forces-with-growth-lab-and-ceu/">https://csh.ac.at/news/csh-joins-forces-with-growth-lab-and-ceu/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Itao and K. Kaneko, “Emergence of economic and social disparities through competitive gift-giving,” PLOS Complex Systems, vol. 1, no. 1, p. e0000001, Sep. 2024, doi: 10.1371/journal.pcsy.0000001.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Roos, Principles of Complexity Economics: Concepts, Methods and Applications. in Classroom Companion: Economics. Cham: Springer International Publishing, 2024. doi: 10.1007/978-3-031-51436-4.
+<ul class="org-ul">
+<li>cxdig, “Principles of Complexity Economics: Concepts, Methods and Applications, by Michael Roos,” Complexity Digest. Accessed: Aug. 14, 2024. [Online]. Available: <a href="https://comdig.unam.mx/2024/08/13/principles-of-complexity-economics-concepts-methods-and-applications-by-michael-roos/">https://comdig.unam.mx/2024/08/13/principles-of-complexity-economics-concepts-methods-and-applications-by-michael-roos/</a></li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Ole Peters awarded the Freedom of the City of London | Santa Fe Institute.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/ole-peters-awarded-the-freedom-of-the-city-of-london">https://www.santafe.edu/news-center/news/ole-peters-awarded-the-freedom-of-the-city-of-london</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Interactive Economics teaches through play | Santa Fe Institute.” Accessed: Jul. 06, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/interactive-economics-teaches-through-play">https://www.santafe.edu/news-center/news/interactive-economics-teaches-through-play</a></li>
+
+<li>“Finding Markets via Firm Embeddings: A machine learning approach to…,” INET Oxford. Accessed: May 08, 2024. [Online]. Available: <a href="https://www.inet.ox.ac.uk/events/tt2024-week-3-inet-researcher-seminar/">https://www.inet.ox.ac.uk/events/tt2024-week-3-inet-researcher-seminar/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Making Sense of Chaos - shaping economics for a better world,” The RSA. Accessed: May 10, 2024. [Online]. Available: <a href="https://www.thersa.org/events/2024/06/making-sense-of-chaos-shaping-economics-for-a-better-world">https://www.thersa.org/events/2024/06/making-sense-of-chaos-shaping-economics-for-a-better-world</a></li>
+<li>“New Book: The time for complexity economics has come | Santa Fe Institute.” Accessed: Apr. 27, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/new-book-the-time-for-complexity-economics-has-come">https://www.santafe.edu/news-center/news/new-book-the-time-for-complexity-economics-has-come</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Which Countries Are More At Risk In The Global Supply Chain?” Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://csh.ac.at/news/which-countries-are-more-at-risk-in-the-global-supply-chain/">https://csh.ac.at/news/which-countries-are-more-at-risk-in-the-global-supply-chain/</a></li>
+
+<li>#author.fullName}, “The man reinventing economics with chaos theory and complexity science,” New Scientist. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://www.newscientist.com/article/mg26234870-200-the-man-reinventing-economics-with-chaos-theory-and-complexity-science/">https://www.newscientist.com/article/mg26234870-200-the-man-reinventing-economics-with-chaos-theory-and-complexity-science/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>W. B. Arthur, <b>“Foundations of complexity economics,”</b> Nature Reviews Physics, vol. 3, no. 2, Art. no. 2, Feb. 2021, doi: 10.1038/s42254-020-00273-3.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Hidalgo, <b>Why Information Grows: The Evolution of Order, from Atoms to Economies.</b> Penguin UK, 2015.</li>
+<li>C. A. Hidalgo, <b>“Economic complexity theory and applications,”</b> Nature Reviews Physics, vol. 3, no. 2, Art. no. 2, Feb. 2021, doi :10.1038/s42254-020-00275-1.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Hausmann, C. A. Hidalgo, S. Bustos, M. Coscia, and A. Simoes, <b>The Atlas of Economic Complexity: Mapping Paths to Prosperity.</b> MIT Press, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. D. Beinhocker, <i>The Origin of Wealth: Evolution, Complexity, and the Radical Remaking of Economics.</i> Random House Business, 2007.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. D. Farmer, Making Sense of Chaos: A Better Economics for a Better World. Penguin, 2024.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“New study finds economic progress is aided by longer supply chains….” <a href="https://www.inet.ox.ac.uk/news/economic-progress-aided-by-longer-supply-chains-and-deeper-networks/">https://www.inet.ox.ac.uk/news/economic-progress-aided-by-longer-supply-chains-and-deeper-networks/</a> (accessed Mar. 05, 2022).</li>
+<li>A. Pichler et al., “Building an alliance to map global supply networks,” Science, Oct. 2023, doi: 10.1126/science.adi7521.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org2d76d5f" class="outline-4">
+<h4 id="org2d76d5f"><span class="section-number-4">2.3.3.</span> Ecological Economics</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org83dcec5"></a>General<br />
+<div class="outline-text-5" id="text-2-3-3-1">
+<ul class="org-ul">
+<li>“Ecological economics,” Wikipedia. May 19, 2022. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ecological_economics&amp;oldid=1088696065">https://en.wikipedia.org/w/index.php?title=Ecological_economics&amp;oldid=1088696065</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org22be7aa"></a>Introductory Texts<br />
+<div class="outline-text-5" id="text-2-3-3-2">
+<ul class="org-ul">
+<li>R. Costanza et al., <b>An Introduction to Ecological Economics, Second Edition.</b> CRC Press, 2014.</li>
+<li>H. E. Daly and J. Farley, <b>Ecological Economics, Second Edition: Principles and Applications.</b> Island Press, 2011.</li>
+<li>J. C. Farley, H. E. Daly, and J. D. Erickson, <b>Ecological Economics: A Workbook for Problem-based Learning.</b> Island Press, 2005.</li>
+
+<li>H. Healy, J. Martínez-Alier, L. Temper, M. Walter, and J.-F. Gerber, Ecological Economics from the Ground Up. Routledge, 2013.</li>
+
+<li>J. O. Andersson and R. Eriksson, Elements of Ecological Economics. Routledge, 2010.</li>
+
+<li>M. Common and S. Stagl, Ecological Economics: An Introduction. Cambridge University Press, 2005.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd9807f3"></a>Handbooks<br />
+<div class="outline-text-5" id="text-2-3-3-3">
+<ul class="org-ul">
+<li>C. L. Spash, Routledge Handbook of Ecological Economics: Nature and Society. Routledge, 2017.</li>
+<li>J. Martínez-Alier and R. Muradian, Handbook of Ecological Economics. Edward Elgar Publishing, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga7f5d8c"></a>Orgs<br />
+<div class="outline-text-5" id="text-2-3-3-4">
+<ul class="org-ul">
+<li>“International Society for Ecological Economics,” Wikipedia. Jun. 17, 2021. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Society_for_Ecological_Economics&amp;oldid=1029066256">https://en.wikipedia.org/w/index.php?title=International_Society_for_Ecological_Economics&amp;oldid=1029066256</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcfbac0a"></a>People<br />
+<ol class="org-ol">
+<li><a id="orga7c5854"></a>HD<br />
+<div class="outline-text-6" id="text-2-3-3-5-1">
+<ul class="org-ul">
+<li>“Herman Daly,” Wikipedia. Dec. 12, 2021. Accessed: Jun. 09, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Herman_Daly&amp;oldid=1059978775">https://en.wikipedia.org/w/index.php?title=Herman_Daly&amp;oldid=1059978775</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd445a56"></a>JMA<br />
+<div class="outline-text-6" id="text-2-3-3-5-2">
+<ul class="org-ul">
+<li>“Joan Martinez Alier,” Wikipedia. Apr. 09, 2023. Accessed: Apr. 11, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Joan_Martinez_Alier&amp;oldid=1149044440">https://en.wikipedia.org/w/index.php?title=Joan_Martinez_Alier&amp;oldid=1149044440</a></li>
+
+<li>J. Martínez-Alier, Land, Water, Air and Freedom: The Making of World Movements for Environmental Justice. Northampton: Edward Elgar Publishing Ltd, 2023.</li>
+
+<li>S. Villamayor-Tomas and R. Muradian, The Barcelona School of Ecological Economics and Political Ecology: A Companion in Honour of Joan Martinez-Alier. Springer Nature, 2023.
+<ul class="org-ul">
+<li>“The Barcelona School of Ecological Economics and Political Ecology - YouTube.” Accessed: Dec. 01, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=IGOq14ac0dU&amp;list=WL&amp;index=3">https://www.youtube.com/watch?v=IGOq14ac0dU&amp;list=WL&amp;index=3</a></li>
+<li>“New book: A tribute to ecological economics scholar Joan Martinez-Alier - YouTube.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLK1vjSCUwqddaT-19aNdCPwsrKcm49Q9Y">https://www.youtube.com/playlist?list=PLK1vjSCUwqddaT-19aNdCPwsrKcm49Q9Y</a></li>
+<li>“Elevator Pitch - YouTube.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLK1vjSCUwqde4iFCeBNCFdNoAVL2PTcfR">https://www.youtube.com/playlist?list=PLK1vjSCUwqde4iFCeBNCFdNoAVL2PTcfR</a></li>
+<li>“Women and Girls in Science - YouTube.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLK1vjSCUwqdeAYUu3mrQfc8PT7FyyHji7">https://www.youtube.com/playlist?list=PLK1vjSCUwqdeAYUu3mrQfc8PT7FyyHji7</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaabd8ce"></a>PDG<br />
+<ul class="org-ul">
+<li><a id="orgf608259"></a>General<br />
+<div class="outline-text-7" id="text-orgf608259">
+<ul class="org-ul">
+<li>“Partha Dasgupta,” Wikipedia. Mar. 25, 2023. Accessed: Apr. 05, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Partha_Dasgupta&amp;oldid=1146610680">https://en.wikipedia.org/w/index.php?title=Partha_Dasgupta&amp;oldid=1146610680</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Administrator, “Professor Sir Partha Dasgupta,” Feb. 06, 2017. <a href="https://www.econ.cam.ac.uk/people/emeritus/pd10000">https://www.econ.cam.ac.uk/people/emeritus/pd10000</a> (accessed Apr. 05, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgeac1d7a"></a>DR<br />
+<div class="outline-text-7" id="text-orgeac1d7a">
+<ul class="org-ul">
+<li>David Attenborough and Venki Ramakrishnan on the Dasgupta Review | The Royal Society, (Feb. 02, 2021). Accessed: Apr. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=e2QDOeKH0DE">https://www.youtube.com/watch?v=e2QDOeKH0DE</a></li>
+<li>“Launch of full report of The Economics of Biodiversity: The Dasgupta Review.” Accessed: Feb. 20, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/news/launch-full-report-economics-biodiversity-dasgupta/">https://www.cser.ac.uk/news/launch-full-report-economics-biodiversity-dasgupta/</a></li>
+<li>“Final Report - The Economics of Biodiversity: The Dasgupta Review,” GOV.UK, Aug. 20, 2021. <a href="https://www.gov.uk/government/publications/final-report-the-economics-of-biodiversity-the-dasgupta-review">https://www.gov.uk/government/publications/final-report-the-economics-of-biodiversity-the-dasgupta-review</a> (accessed Apr. 05, 2023).</li>
+<li>The Economics of Biodiversity: The Dasgupta Review, (Apr. 22, 2021). Accessed: Apr. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=5QQ0KPMYkFc">https://www.youtube.com/watch?v=5QQ0KPMYkFc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga1276d6"></a>Misc<br />
+<div class="outline-text-7" id="text-orga1276d6">
+<ul class="org-ul">
+<li>“Alexander Skarsgard, Partha Dasgupta and the Answer to Everything | NYT Opinion - YouTube.” <a href="https://www.youtube.com/watch?v=Ggo07G1XB6A">https://www.youtube.com/watch?v=Ggo07G1XB6A</a> (accessed Apr. 05, 2023).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Nature’s Role in Sustainable Economic Development, (Oct. 25, 2011). Accessed: Apr. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=btMxGFYzPGg">https://www.youtube.com/watch?v=btMxGFYzPGg</a></li>
+<li>Ecology in economics, counting nature in, (Nov. 24, 2022). Accessed: Apr. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lMr8-FZeWnA">https://www.youtube.com/watch?v=lMr8-FZeWnA</a></li>
+
+<li>Sir Partha Dasgupta &amp; Cameron Hepburn in conversation: “The Economics of Biodiversity Review,” (May 06, 2021). Accessed: Apr. 05, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VHHhtd6mp-w">https://www.youtube.com/watch?v=VHHhtd6mp-w</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org98761a1"></a>RN<br />
+<div class="outline-text-6" id="text-2-3-3-5-4">
+<ul class="org-ul">
+<li>“Richard B. Norgaard - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Richard_B._Norgaard">https://en.wikipedia.org/wiki/Richard_B._Norgaard</a> (accessed Jun. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘A Communion of Subjects: Law, Environment, and Religion’ with Richard Norgaard - YouTube.” <a href="https://www.youtube.com/watch?v=I8M1UWQqafw">https://www.youtube.com/watch?v=I8M1UWQqafw</a> (accessed Jun. 16, 2023).</li>
+<li>“ERG 22nd Annual Lecture 2016: Richard Norgaard - YouTube.” <a href="https://www.youtube.com/watch?v=OEyoEqO5tPY">https://www.youtube.com/watch?v=OEyoEqO5tPY</a> (accessed Jun. 16, 2023).</li>
+<li>Richard Norgaard: Being An Ecological Economist, (Oct. 27, 2022). Accessed: Jun. 16, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=TfTMMfmkQqo">https://www.youtube.com/watch?v=TfTMMfmkQqo</a></li>
+<li>“Richard Norgaard: Being An Ecological Economist - YouTube.” <a href="https://www.youtube.com/watch?v=TfTMMfmkQqo&amp;list=WL&amp;index=8&amp;t=44s">https://www.youtube.com/watch?v=TfTMMfmkQqo&amp;list=WL&amp;index=8&amp;t=44s</a> (accessed Jun. 19, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgab572c6"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgd1d9064"></a>India<br />
+<div class="outline-text-6" id="text-2-3-3-6-1">
+<ul class="org-ul">
+<li>“Indian Society for Ecological Economics,” Wikipedia. Jun. 17, 2021. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Indian_Society_for_Ecological_Economics&amp;oldid=1029066564">https://en.wikipedia.org/w/index.php?title=Indian_Society_for_Ecological_Economics&amp;oldid=1029066564</a></li>
+<li>“INSEE | Indian Society for Ecological Economics.” <a href="https://www.ecoinsee.org/">https://www.ecoinsee.org/</a> (accessed Jun. 10, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Jayanta Bandyopadhyay,” Wikipedia. Mar. 19, 2022. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jayanta_Bandyopadhyay&amp;oldid=1077975448">https://en.wikipedia.org/w/index.php?title=Jayanta_Bandyopadhyay&amp;oldid=1077975448</a></li>
+
+<li>V. Dayal, A. Duraiappah, and N. Nawn, Ecology, Economy and Society: Essays in Honour of Kanchan Chopra. Springer, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org84a3841"></a>SEE<br />
+<div class="outline-text-6" id="text-2-3-3-6-2">
+<ul class="org-ul">
+<li>“Manchester University Press - Foundations of social ecological economics,” Manchester University Press. Accessed: Jan. 27, 2024. [Online]. Available: <a href="https://manchesteruniversitypress.co.uk/9781526171481">https://manchesteruniversitypress.co.uk/9781526171481</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf1cb10a"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-3-7">
+<ul class="org-ul">
+<li>J. B. Foster, Capitalism in the Anthropocene: Ecological Ruin or Ecological Revolution. Monthly Review Press, 2022.</li>
+
+<li>H. Healy, J. Martínez-Alier, L. Temper, M. Walter, and J.-F. Gerber, Eds., Ecological Economics from the Ground Up, 1st edition. London ; New York: Routledge, 2012.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. D. Erickson, The Progress Illusion: Reclaiming Our Future from the Fairytale of Economics. Island Press, 2022.</li>
+
+<li>H. E. Daly, Beyond Growth: The Economics of Sustainable Development. Beacon Press, 2014.</li>
+
+<li>“Uneconomic growth,” Wikipedia. Aug. 24, 2021. Accessed: Jun. 09, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Uneconomic_growth&amp;oldid=1040478291">https://en.wikipedia.org/w/index.php?title=Uneconomic_growth&amp;oldid=1040478291</a></li>
+
+<li><b>A Good Life For All Within Planetary Boundaries.</b> <a href="https://goodlife.leeds.ac.uk/">https://goodlife.leeds.ac.uk/</a> (accessed Jan. 24, 2021).</li>
+<li>D. O’Neill, <b>“Is it possible for everyone to live a good life within our planet’s limits?,”</b> The Conversation. <a href="http://theconversation.com/is-it-possible-for-everyone-to-live-a-good-life-within-our-planets-limits-91421">http://theconversation.com/is-it-possible-for-everyone-to-live-a-good-life-within-our-planets-limits-91421</a> (accessed Jan. 24, 2021).</li>
+
+<li><b>“What Indigenous Wisdom Can Teach Us About Economics,”</b> Local Futures, Aug. 17, 2020. <a href="https://www.localfutures.org/what-indigenous-wisdom-can-teach-us-about-economics/">https://www.localfutures.org/what-indigenous-wisdom-can-teach-us-about-economics/</a> (accessed Jan. 20, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Beijer Institute.” Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://beijer.kva.se/">https://beijer.kva.se/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Serviceberry: An Economy of Abundance – Robin Wall Kimmerer,” Emergence Magazine. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://emergencemagazine.org/essay/the-serviceberry/">https://emergencemagazine.org/essay/the-serviceberry/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>D. Wiedenhofer et al., “A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part I: bibliometric and conceptual mapping,” Environ. Res. Lett., vol. 15, no. 6, p. 063002, Jun. 2020, doi: 10.1088/1748-9326/ab8429.</li>
+<li>H. Haberl et al., “A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights,” Environ. Res. Lett., vol. 15, no. 6, p. 065003, Jun. 2020, doi: 10.1088/1748-9326/ab842a.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6327921" class="outline-4">
+<h4 id="org6327921"><span class="section-number-4">2.3.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<ul class="org-ul">
+<li>M. J. Albert, Navigating the Polycrisis: Mapping the Futures of Capitalism and the Earth. MIT Press, 2024.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8f89943" class="outline-3">
+<h3 id="org8f89943"><span class="section-number-3">2.4.</span> NeuroScience</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>T. Singer and M. Ricard, Caring Economics. New York: St Martin’s Press, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94c9091" class="outline-3">
+<h3 id="org94c9091"><span class="section-number-3">2.5.</span> Mathematics</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>M. Anthony and N. Biggs, “Mathematics for Economics and Finance: Methods and Modelling,” Higher Education from Cambridge University Press. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.cambridge.org/highereducation/books/mathematics-for-economics-and-finance/BBA84A10570642C91B1A0C9BDDED56FB">https://www.cambridge.org/highereducation/books/mathematics-for-economics-and-finance/BBA84A10570642C91B1A0C9BDDED56FB</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org619f4a9" class="outline-3">
+<h3 id="org619f4a9"><span class="section-number-3">2.6.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>“The Global Economic Ripple Effect Of Climate Change.” Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://csh.ac.at/news/the-global-economic-ripple-effect-of-climate-change/">https://csh.ac.at/news/the-global-economic-ripple-effect-of-climate-change/</a></li>
+
+<li>D. Herman et al., “Quantum computing for finance,” Nat Rev Phys, vol. 5, no. 8, pp. 450–465, Aug. 2023, doi: 10.1038/s42254-023-00603-1.</li>
+
+<li>“Exploring circularity through science and art: CircEUlar project at the Vienna Climate Summit,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog/jul-2024/exploring-circularity-through-science-and-art-circeular-project-at-vienna-climate">https://iiasa.ac.at/blog/jul-2024/exploring-circularity-through-science-and-art-circeular-project-at-vienna-climate</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org268c556" class="outline-2">
+<h2 id="org268c556"><span class="section-number-2">3.</span> C1</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf24aa22" class="outline-3">
+<h3 id="orgf24aa22"><span class="section-number-3">3.1.</span> Philosophy</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgce78a4f" class="outline-4">
+<h4 id="orgce78a4f"><span class="section-number-4">3.1.1.</span> Ethics</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“Ethical Economy.” Accessed: Nov. 24, 2023. [Online]. Available: <a href="http://www.amazon.in/-/dp/B09MRSL3BC?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B09MRSL3BC?ref=dbs_m_mng_rwt_0000_share</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Lütge and C. Strosetzki, Eds., The Honorable Merchant – Between Modesty and Risk-Taking: Intercultural and Literary Aspects: 56, 1st ed. 2019 edition. Cham: Springer, 2019.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>F. Obermaier and B. Obermayer, <b>The Panama Papers: Breaking the Story of How the Rich and Powerful Hide Their Money.</b> Simon and Schuster, 2017.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2149573" class="outline-3">
+<h3 id="org2149573"><span class="section-number-3">3.2.</span> Core</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgc067c8d" class="outline-4">
+<h4 id="orgc067c8d"><span class="section-number-4">3.2.1.</span> Alternative Economics</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf7d8cf2"></a>Degrowth<br />
+<ol class="org-ol">
+<li><a id="orgd44eb01"></a>General<br />
+<div class="outline-text-6" id="text-3-2-1-1-1">
+<ul class="org-ul">
+<li>D. Stuart, R. Gunderson, and B. Petersen, <b>The Degrowth Alternative: A Path to Address our Environmental Crisis?</b> Routledge, 2020.</li>
+<li>G. D’Alisa, F. Demaria, and G. Kallis, <b>Degrowth: A Vocabulary for a New Era.</b> Routledge, 2014.</li>
+<li>G. Kallis, <b>Degrowth.</b> Agenda Publishing, 2018.</li>
+<li>G. Kallis, S. Paulson, G. D’Alisa, and F. Demaria, <b>The Case for Degrowth.</b> Wiley, 2020.</li>
+
+<li>J. Hickel, <b>Less is More: How Degrowth Will Save the World.</b> Random House, 2020.</li>
+
+<li>M. Schmelzer, A. Vansintjan, and A. Vetter, <b>The Future is Degrowth: A Guide to a World Beyond Capitalism.</b> Verso Books, 2022.</li>
+
+<li>N. Treu, M. Schmelzer, and C. Burkhart, <b>Degrowth in Movement(s): Exploring Pathways for Transformation.</b> John Hunt Publishing, 2020.</li>
+
+<li>T. Jackson, <b>Prosperity without Growth: Foundations for the Economy of Tomorrow.</b> Routledge, 2016.</li>
+
+<li>V. Liegey and A. Nelson, <b>Exploring Degrowth: A Critical Guide.</b> Pluto Press, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org32948da"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org1d6458f"></a>CSE<br />
+<ul class="org-ul">
+<li><a id="org2d0a685"></a>Systems Sciences<br />
+<div class="outline-text-8" id="text-org2d0a685">
+<ul class="org-ul">
+<li>T.-T. W. in 2050, “The Digital Revolution and Sustainable Development: Opportunities and Challenges. Report prepared by the World in 2050 initiative.” Accessed: Dec. 28, 2023. [Online]. Available: <a href="http://www.iiasa.ac.at/web/home/research/twi/TWI2050.html">http://www.iiasa.ac.at/web/home/research/twi/TWI2050.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbce2f6b"></a>Misc<br />
+<div class="outline-text-8" id="text-orgbce2f6b">
+<ul class="org-ul">
+<li>L. Futures, “Appropriate Technology, Traditional Cultures and Degrowth — Local Futures,” Medium, Nov. 30, 2021. <a href="https://localfutures.medium.com/appropriate-technology-traditional-cultures-and-degrowth-local-futures-ecdcb407df55">https://localfutures.medium.com/appropriate-technology-traditional-cultures-and-degrowth-local-futures-ecdcb407df55</a> (accessed Jan. 26, 2022).</li>
+
+<li>M. Koch, “Deepening the degrowth planning debate: division of labor, complexity, and the roles of markets and digital tools,” Sustainability: Science, Practice and Policy, vol. 20, no. 1, p. 2383335, Dec. 2024, doi: 10.1080/15487733.2024.2383335.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org2c71500"></a>Misc<br />
+<div class="outline-text-7" id="text-org2c71500">
+<ul class="org-ul">
+<li>G. Tsakraklides, “Biology Lessons In Degrowth,” George Tsakraklides. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://tsakraklides.com/2024/07/28/biology-lessons-in-degrowth/">https://tsakraklides.com/2024/07/28/biology-lessons-in-degrowth/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgeabf448"></a>World<br />
+<ul class="org-ul">
+<li><a id="orga305079"></a>COVID-19<br />
+<div class="outline-text-7" id="text-orga305079">
+<ul class="org-ul">
+<li>M. Büchs et al., “Wellbeing Economics for the COVID-19 recovery,” Wellbeing Economy Alliance, available at: <a href="https://weall">https://weall</a>. org/wpcontent/uploads/2020/05/Wellbeing<sub>Economics</sub><sub>for</sub><sub>the</sub><sub>COVID</sub>-19<sub>recovery</sub><sub>10Principles</sub>. pdf, 2020, Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://serval.unil.ch/resource/serval:BIB_C2D492EC73DF.P001/REF">https://serval.unil.ch/resource/serval:BIB_C2D492EC73DF.P001/REF</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2017e6b"></a>Green Growth<br />
+<div class="outline-text-7" id="text-org2017e6b">
+<ul class="org-ul">
+<li>J. Hickel and G. Kallis, “Is Green Growth Possible?,” New Political Economy, vol. 25, no. 4, pp. 469–486, Jun. 2020, doi: 10.1080/13563467.2019.1598964.</li>
+</ul>
+</div>
+</li>
+<li><a id="org03d0165"></a>Decoupling<br />
+<div class="outline-text-7" id="text-org03d0165">
+<ul class="org-ul">
+<li>“Decoupling debunked – Evidence and arguments against green growth as a sole strategy for sustainability,” EEB - The European Environmental Bureau. Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://eeb.org/library/decoupling-debunked/">https://eeb.org/library/decoupling-debunked/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org435981c"></a>Rebound Effect<br />
+<div class="outline-text-7" id="text-org435981c">
+<ul class="org-ul">
+<li>“What is the Rebound Effect? — Energy Efficiency, Part 2,” The Equation. Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://blog.ucsusa.org/peter-oconnor/energy-efficiency-what-is-the-rebound-effect-946/">https://blog.ucsusa.org/peter-oconnor/energy-efficiency-what-is-the-rebound-effect-946/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org440657a"></a>LifeStyle<br />
+<div class="outline-text-7" id="text-org440657a">
+<ul class="org-ul">
+<li>“Living Well Within Limits [LiLi] | Homepage of the LiLi Leverhulme Research Leadership Award Project.” Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://lili.leeds.ac.uk/">https://lili.leeds.ac.uk/</a></li>
+
+<li>J. K. Steinberger, M. Lenzen, and T. Wiedmann, “Affluence is killing the planet, warn scientists,” The Conversation. Accessed: Dec. 28, 2023. [Online]. Available: <a href="http://theconversation.com/affluence-is-killing-the-planet-warn-scientists-141017">http://theconversation.com/affluence-is-killing-the-planet-warn-scientists-141017</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc8ae9da"></a>Justice<br />
+<div class="outline-text-7" id="text-orgc8ae9da">
+<ul class="org-ul">
+<li>“Degrowth Is About Global Justice.” <a href="https://www.greeneuropeanjournal.eu/degrowth-is-about-global-justice/">https://www.greeneuropeanjournal.eu/degrowth-is-about-global-justice/</a> (accessed Mar. 15, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge1d0b1f"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org76c1966"></a>USA<br />
+<div class="outline-text-8" id="text-org76c1966">
+<ul class="org-ul">
+<li>C. Beam, “Is America Ready for ‘Degrowth Communism’?,” The Atlantic. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theatlantic.com/ideas/archive/2024/05/kohei-saito-degrowth-communism/678481/">https://www.theatlantic.com/ideas/archive/2024/05/kohei-saito-degrowth-communism/678481/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org06d01a5"></a>Education<br />
+<ul class="org-ul">
+<li><a id="org3fb52ed"></a>Courses<br />
+<ul class="org-ul">
+<li><a id="orga020fb8"></a>ICTA UAB<br />
+<div class="outline-text-9" id="text-orga020fb8">
+<ul class="org-ul">
+<li>“Master in Political Ecology &amp; Online Master on Degrowth.” <a href="https://master.degrowth.org/">https://master.degrowth.org/</a> (accessed Jan. 24, 2022).</li>
+
+<li>“Program – Master in Political Ecology &amp; Online Master on Degrowth.” <a href="https://master.degrowth.org/program-2/">https://master.degrowth.org/program-2/</a> (accessed Jan. 24, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2b044d5"></a>NMBU<br />
+<div class="outline-text-9" id="text-org2b044d5">
+<ul class="org-ul">
+<li>“NMBU Sustainability Arena: Embedding planetary boundaries in science, policy and education,” Apr. 15, 2021. <a href="https://www.nmbu.no/en/projects/node/42986">https://www.nmbu.no/en/projects/node/42986</a> (accessed Jan. 24, 2022).</li>
+
+<li>“Political Ecology of Scarcity, Limits and Degrowth,” Nov. 09, 2021. <a href="https://www.nmbu.no/en/faculty/landsam/department/noragric/news/node/44249">https://www.nmbu.no/en/faculty/landsam/department/noragric/news/node/44249</a> (accessed Jan. 24, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3736784"></a>Picture Books<br />
+<div class="outline-text-8" id="text-org3736784">
+<ul class="org-ul">
+<li>“Who Is Afraid of Degrowth?,” Céline Keller. Accessed: May 08, 2024. [Online]. Available: <a href="https://www.celinekeller.com/who-is-afraid-of-degrowth">https://www.celinekeller.com/who-is-afraid-of-degrowth</a></li>
+<li>F. Goteo, “Who Is Afraid of Degrowth?,” Goteo.org. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://en.goteo.org/project/who-is-afraid-of-degrowth">https://en.goteo.org/project/who-is-afraid-of-degrowth</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org61e46a3"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orga743e7f"></a>from The Future Is Degrowth (TFID)<br />
+<div class="outline-text-7" id="text-orga743e7f">
+<ul class="org-ul">
+<li>L. Phillips and M. Rozworski, The People’s Republic of Walmart: How the World’s Biggest Corporations are Laying the Foundation for Socialism. London ; New York: Verso, 2019.</li>
+
+<li>“Buy Platform Capitalism in India (Global Transformations in Media and Communication Research - A Palgrave and IAMCR Series) Book Online at Low Prices in India | Platform Capitalism in India (Global Transformations in Media and Communication Research - A Palgrave and IAMCR Series) Reviews &amp; Ratings - Amazon.in.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.amazon.in/Platform-Capitalism-Transformations-Communication-Research/dp/3030445623?dib=eyJ2IjoiMSJ9.GMKRmVBy3xGdLxIfRVVid2jeIxXWly7-z_lwQq1WzeQAhw7cIrEZIEm1MJM1pK5bLTJLnPMuHaHPqbubInEHrlxjmQPaJTU1DZDY7SuoKdkZZHAfvvWuj3RERUsdI1D3bCAdaAYQNA4g117uKpzE6lgW5RN_QZnjogFn8X5cmXMCyhuRkrwQT_LoVCXODOjCflWRyjLtuZ-FPRu1NDj7wRDhuQWQvIa59LnN9kCM_io.fXCxZrWlM1hAh2lmsbJALuSjoc0enufSDi5omdaJ1Ck&amp;dib_tag=se">https://www.amazon.in/Platform-Capitalism-Transformations-Communication-Research/dp/3030445623?dib=eyJ2IjoiMSJ9.GMKRmVBy3xGdLxIfRVVid2jeIxXWly7-z_lwQq1WzeQAhw7cIrEZIEm1MJM1pK5bLTJLnPMuHaHPqbubInEHrlxjmQPaJTU1DZDY7SuoKdkZZHAfvvWuj3RERUsdI1D3bCAdaAYQNA4g117uKpzE6lgW5RN_QZnjogFn8X5cmXMCyhuRkrwQT_LoVCXODOjCflWRyjLtuZ-FPRu1NDj7wRDhuQWQvIa59LnN9kCM_io.fXCxZrWlM1hAh2lmsbJALuSjoc0enufSDi5omdaJ1Ck&amp;dib_tag=se</a></li>
+<li>N. Srnicek, Platform Capitalism, 1st edition. Cambridge, UK ; Malden, MA: Polity Press, 2016.</li>
+<li>T. Scholz, Ours to Hack and to Own: The Rise of Platform Cooperativism, A New Vision for the Future of Work and a Fairer Internet, 1st edition. OR Books, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Dyer-Witheford, A. M. Kjøsen, and J. Steinhoff, Inhuman Power: Artificial Intelligence and the Future of Capitalism. London: Pluto Press, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“White Skin, Black Fuel,” Verso. Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.versobooks.com/en-gb/products/2520-white-skin-black-fuel">https://www.versobooks.com/en-gb/products/2520-white-skin-black-fuel</a></li>
+
+<li>R. Solnit, A Paradise Built in Hell, Reprint edition. New York: Penguin Books, 2010.</li>
+
+<li>P. A. Victor, Managing Without Growth: Slower by Design, Not Disaster. Cheltenham, UK ; Northampton, MA: Edward Elgar Publishing Ltd, 2008.</li>
+
+<li>O. mi O. Taiwo, Reconsidering Reparations. New York: Oxford University Press Inc, 2022.</li>
+
+<li>J. Tyberg, “Degrowth and Revolutionary Organizing,” RLS-NYC. Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://rosalux.nyc/degrowth-and-revolutionary-organizing/">https://rosalux.nyc/degrowth-and-revolutionary-organizing/</a></li>
+
+<li>A. Nelson and F. Edwards, Eds., Food for Degrowth: Perspectives and Practices, 1st edition. Routledge, 2022.</li>
+
+<li>“Mental Infrastructures: How Growth Entered the World and Our Souls | Heinrich Böll Stiftung.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.boell.de/en/2013/12/09/mental-infrastructures-how-growth-entered-world-and-our-souls">https://www.boell.de/en/2013/12/09/mental-infrastructures-how-growth-entered-world-and-our-souls</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Crashed (Audio Download): Adam Tooze, Simon Vance, Adam Tooze, Penguin Audio: Amazon.in: Books.” Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://www.amazon.in/Crashed/dp/B07FPKSKQJ?dib=eyJ2IjoiMSJ9.GAz7--topaI9aFHY9gU8GLPGkzHZi4GL_pxz4YTPJxmbf8p5GxUWucrp49zidINLpokf04qqGoDiPMFfWMOZ8dpVslL98B4DnQCff0qA5FSL3pb7RJ6j2JzBbUQZ8zdlaxULeBBoMxT1GRfLFR6FfA0l0Kvo5jJGY2m2OPAfjIpJ8gNuNiCK_y3dN-Zz8eJwPPaIFfnMvCdhsV8F02jfBbB4S7tEw9T6GtrFO9Mwym8.ziPjo8oZAQEbXznWkMpBbECNJNxLx2aYkBKii-D0TcI&amp;dib_tag=se">https://www.amazon.in/Crashed/dp/B07FPKSKQJ?dib=eyJ2IjoiMSJ9.GAz7--topaI9aFHY9gU8GLPGkzHZi4GL_pxz4YTPJxmbf8p5GxUWucrp49zidINLpokf04qqGoDiPMFfWMOZ8dpVslL98B4DnQCff0qA5FSL3pb7RJ6j2JzBbUQZ8zdlaxULeBBoMxT1GRfLFR6FfA0l0Kvo5jJGY2m2OPAfjIpJ8gNuNiCK_y3dN-Zz8eJwPPaIFfnMvCdhsV8F02jfBbB4S7tEw9T6GtrFO9Mwym8.ziPjo8oZAQEbXznWkMpBbECNJNxLx2aYkBKii-D0TcI&amp;dib_tag=se</a></li>
+<li>A. Tooze, Shutdown. Dublin: Allen Lane, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Lange and T. Santarius, Smart Green World?: Making Digitalization Work for Sustainability, 1st edition. London; New York, NY: Routledge, 2020.</li>
+
+<li>F. Adloff, Gifts of Cooperation, Mauss and Pragmatism, 1st edition. London New York: Routledge, 2017.</li>
+
+<li>M. Arboleda, Planetary Mine: Territories of Extraction under Late Capitalism. London New York: Verso, 2020.</li>
+<li>M. Fairbairn, Fields of Gold: Financing the Global Land Rush. Cornell University Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Hardt and A. Negri, Assembly, Reprint edition. Oxford University Press, 2017.</li>
+
+<li>S. Alexander and B. Gleeson, Degrowth in the Suburbs: A Radical Urban Imaginary, Softcover reprint of the original 1st ed. 2019 edition. Springer Verlag, Singapore, 2018.</li>
+<li>A. Nelson and F. Schneider, Eds., Housing for Degrowth: Principles, Models, Challenges and Opportunities, 1st edition. Abingdon, Oxon ; New York, NY: Routledge, 2018.</li>
+<li>D. Harvey, Rebel Cities: From the Right to the City to the Urban Revolution. London New York: Verso, 2019.</li>
+<li>S. Stein, Capital City: Gentrification and the Real Estate State. Verso, 2019.</li>
+<li>H. Lefebvre, The Production of Space, 1st edition. Malden: Wiley-Blackwell, 1991.</li>
+<li>P. Dauvergne, Environmentalism of the Rich. Cambridge, Massachusetts: MIT Press, 2018.</li>
+<li>S. Lessenich, Living Well at Others’ Expense: The Hidden Costs of Western Prosperity, 1st edition. Polity, 2019.</li>
+
+<li>J. Wajcman, TechnoFeminism: War Crimes, Trials and the Reinvention of International Law, 1st edition. Polity, 2013.</li>
+
+<li>L. Winner, The Whale and the Reactor: A Search for Limits in an Age of High Technology, Second edition. The University of Chicago Press, 2020.</li>
+<li>G. Mueller, Breaking Things at Work: The Luddites Are Right About Why You Hate Your Job. London New York: Verso, 2021.</li>
+
+<li>M. Hultman and P. M. Pulé, Ecological Masculinities: Theoretical Foundations and Practical Guidance, 1st edition. Abingdon New york, NY: Routledge, 2019.</li>
+<li>R. W. Connell, Masculinities, 2nd edition. Routledge, 2005.</li>
+
+<li>B. Erickson and C. Mortimer-Sandilands, Queer Ecologies: Sex, Nature, Politics, Desire. Bloomington, Ind.: Indiana University Press, 2010.</li>
+
+<li>M. Waring, Counting for Nothing: What Men Value and What Women are Worth, 2nd edition. University of Toronto Press, 1999.</li>
+
+<li>S. Alexander, Art Against Empire: Toward an Aesthetics of Degrowth. Melbourne: Simplicity Institute, 2017.</li>
+<li>C. N. Daggett, The Birth of Energy: Fossil Fuels, Thermodynamics, and the Politics of Work. Duke University Press Books, 2019.</li>
+<li>S. Barca, Forces of Reproduction: Notes for a Counter-Hegemonic Anthropocene. Cambridge University Press, 2020.</li>
+<li>H. Rosa, Resonance: A Sociology of Our Relationship to the World, 1st edition. Polity, 2019.</li>
+<li>“Hamster wheel,” Wikipedia. Mar. 01, 2024. Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hamster_wheel&amp;oldid=1211317312">https://en.wikipedia.org/w/index.php?title=Hamster_wheel&amp;oldid=1211317312</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5799cad"></a>Critical Studies<br />
+<div class="outline-text-7" id="text-org5799cad">
+<ul class="org-ul">
+<li>I. Savin and J. van den Bergh, “Reviewing studies of degrowth: Are claims matched by data, methods and policy analysis?,” Ecological Economics, vol. 226, p. 108324, Dec. 2024, doi: 10.1016/j.ecolecon.2024.108324.
+<ul class="org-ul">
+<li>“A response to Savin and van den Bergh: Ceci n’est pas degrowth – Timothée Parrique.” Accessed: Sep. 12, 2024. [Online]. Available: <a href="https://timotheeparrique.com/a-response-to-savin-and-van-den-bergh-ceci-nest-pas-degrowth/">https://timotheeparrique.com/a-response-to-savin-and-van-den-bergh-ceci-nest-pas-degrowth/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4aba402"></a>Misc<br />
+<div class="outline-text-6" id="text-3-2-1-1-5">
+<ul class="org-ul">
+<li>“Credit guidance: how we achieve degrowth,” Jason Hickel. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://www.jasonhickel.org/blog/2024/8/20/credit-guidance-how-we-achieve-degrowth">https://www.jasonhickel.org/blog/2024/8/20/credit-guidance-how-we-achieve-degrowth</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Eastwood and K. Heron, Eds., De Gruyter Handbook of Degrowth, 1st edition. De Gruyter, 2024.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Less is more: Can degrowth save the world?” Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.bbc.com/reel/video/p0jg7gxh/less-is-more-can-degrowth-save-the-world">https://www.bbc.com/reel/video/p0jg7gxh/less-is-more-can-degrowth-save-the-world</a>-</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>adititandon, “[Commentary] Moving towards post-growth economics,” Mongabay-India. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/07/commentary-moving-towards-post-growth-economics/">https://india.mongabay.com/2024/07/commentary-moving-towards-post-growth-economics/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Koch, “Deepening the degrowth planning debate: division of labor, complexity, and the roles of markets and digital tools,” Sustainability: Science, Practice and Policy, vol. 20, no. 1, p. 2383335, Dec. 2024, doi: 10.1080/15487733.2024.2383335.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GrowthKills.” Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://growthkills.org/">https://growthkills.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Marquis, “In Defense of Degrowth,” Harvard Business Review, Jun. 11, 2024. Accessed: Jun. 13, 2024. [Online]. Available: <a href="https://hbr.org/2024/06/in-defense-of-degrowth">https://hbr.org/2024/06/in-defense-of-degrowth</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The many social and ecological benefits of a “degrowth” world, (Jan. 31, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=p0LDGsz97do">https://www.youtube.com/watch?v=p0LDGsz97do</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“From Davos to Reykjavík: decoupling wellbeing from growth | By Tim Jackson,” Centre for the Understanding of Sustainable Prosperity. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://cusp.ac.uk/themes/aetw/tj-blog-wef-reykjavik/">https://cusp.ac.uk/themes/aetw/tj-blog-wef-reykjavik/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GrowthKills.” Accessed: May 12, 2024. [Online]. Available: <a href="https://growthkills.org/">https://growthkills.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Full article: Downscaling down under: towards degrowth in integrated assessment models.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.tandfonline.com/doi/full/10.1080/09535314.2023.2301443">https://www.tandfonline.com/doi/full/10.1080/09535314.2023.2301443</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Wissen and U. Brand, The Limits to Capitalist Nature: Theorizing and Overcoming the Imperial Mode of Living. London ; New York: Rowman &amp; Littlefield, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Shaw, “The case for degrowth: stop the endless expansion and work with what our cities already have,” The Conversation. <a href="http://theconversation.com/the-case-for-degrowth-stop-the-endless-expansion-and-work-with-what-our-cities-already-have-187929">http://theconversation.com/the-case-for-degrowth-stop-the-endless-expansion-and-work-with-what-our-cities-already-have-187929</a> (accessed Aug. 08, 2022).</li>
+
+<li>“Degrowth Economy: Let’s Address the People and Planetary Crises,” Resilience, Jan. 24, 2022. <a href="https://www.resilience.org/stories/2022-01-24/degrowth-economy-lets-address-the-people-and-planetary-crises/">https://www.resilience.org/stories/2022-01-24/degrowth-economy-lets-address-the-people-and-planetary-crises/</a> (accessed Jan. 26, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The limits to growth: eco-socialism or barbarism,” laU, Apr. 29, 2022. <a href="https://la-u.org/the-limits-to-growth-eco-socialism-or-barbarism/">https://la-u.org/the-limits-to-growth-eco-socialism-or-barbarism/</a> (accessed May 06, 2022).</li>
+
+<li>“Degrowth &amp; Strategy: how to bring about social-ecological transformation – MayFly.” <a href="https://mayflybooks.org/degrowth-strategy/">https://mayflybooks.org/degrowth-strategy/</a> (accessed Aug. 01, 2022).</li>
+
+<li>N. Author, “The climate is doomed if we continue to be fixated by economic growth,” Physics World. Accessed: Feb. 27, 2024. [Online]. Available: <a href="https://physicsworld.com/a/the-climate-is-doomed-if-we-continue-to-be-fixated-by-economic-growth/">https://physicsworld.com/a/the-climate-is-doomed-if-we-continue-to-be-fixated-by-economic-growth/</a></li>
+
+<li>I. M. Otto et al., “Social tipping dynamics for stabilizing Earth’s climate by 2050,” Proceedings of the National Academy of Sciences, vol. 117, no. 5, pp. 2354–2365, Feb. 2020, doi: 10.1073/pnas.1900577117.</li>
+
+<li>“Degrowth, energy descent, and ‘low-tech’ living: Potential pathways for increased resilience in times of crisis,” Journal of Cleaner Production, vol. 197, pp. 1840–1848, Oct. 2018, doi: 10.1016/j.jclepro.2016.09.100.</li>
+
+<li>“Julia K. Steinberger,” The Conversation. Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://theconversation.com/profiles/julia-k-steinberger-213830">https://theconversation.com/profiles/julia-k-steinberger-213830</a></li>
+
+<li>“‪Roots, Riots, and Radical Change—A Road Less Travelled for Ecological Economics‬.” Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://scholar.google.ch/citations?view_op=view_citation&amp;hl=en&amp;user=c8Ar3N4AAAAJ&amp;cstart=20&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=c8Ar3N4AAAAJ:1sJd4Hv_s6UC">https://scholar.google.ch/citations?view_op=view_citation&amp;hl=en&amp;user=c8Ar3N4AAAAJ&amp;cstart=20&amp;pagesize=80&amp;sortby=pubdate&amp;citation_for_view=c8Ar3N4AAAAJ:1sJd4Hv_s6UC</a></li>
+
+<li>J. Hickel et al., “Degrowth can work—here’s how science can help,” Nature, vol. 612, no. 7940, pp. 400–403, 2022, Accessed: Dec. 28, 2023. [Online]. Available: <a href="https://www.nature.com/articles/d41586-022-04412-x">https://www.nature.com/articles/d41586-022-04412-x</a></li>
+
+<li>K. Saito, Slow Down: How Degrowth Communism Can Save the Earth. W&amp;N, 2024.</li>
+<li>“Is it time to Slow Down?” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://theecologist.org/2024/feb/20/it-time-slow-down">https://theecologist.org/2024/feb/20/it-time-slow-down</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org26d44aa"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-2">
+<ul class="org-ul">
+<li>“Alternative Economies Vikalp Sangam,” Vikalp Sangam. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://vikalpsangam.org/alternative-economies-vikalp-sangam/">https://vikalpsangam.org/alternative-economies-vikalp-sangam/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>E. S. Reinert, J. Ghosh, and R. Kattel, Handbook of Alternative Theories of Economic Development. Cheltenham, UK: Edward Elgar Publishing Ltd, 2016.</li>
+
+<li>J. Gerber and R. Steppacher, Towards an Integrated Paradigm in Heterodox Economics: Alternative Approaches to the Current Eco-Social Crises. Springer, 2011.</li>
+
+<li>T. Wiedmann, M. Lenzen, L. T. Keyßer, and J. K. Steinberger, <b>“Scientists’ warning on affluence,”</b> Nat Commun, vol. 11, no. 1, p. 3107, Jun. 2020, doi: 10.1038/s41467-020-16941-y.</li>
+
+<li><b>“On liberty, security and our system of racial capitalism – Olúfẹ́mi O Táíwò | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/on-liberty-security-and-our-system-of-racial-capitalism">https://aeon.co/essays/on-liberty-security-and-our-system-of-racial-capitalism</a> (accessed Nov. 25, 2020).</li>
+
+<li><b>“The challenge of reclaiming the commons from capitalism – Dirk Philipsen | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/the-challenge-of-reclaiming-the-commons-from-capitalism">https://aeon.co/essays/the-challenge-of-reclaiming-the-commons-from-capitalism</a> (accessed Nov. 25, 2020).</li>
+
+<li>“Circle Economy - Practical, scalable implementation of the circular economy.” <a href="https://www.circle-economy.com/">https://www.circle-economy.com/</a> (accessed Feb. 12, 2022).</li>
+
+<li>“Circularity Gap Reporting Initiative - Home.” <a href="https://www.circularity-gap.world/">https://www.circularity-gap.world/</a> (accessed Feb. 12, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgfb5513d" class="outline-4">
+<h4 id="orgfb5513d"><span class="section-number-4">3.2.2.</span> Neoliberalism</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>“Neoliberalism,” Wikipedia. Jul. 23, 2022. Accessed: Jul. 25, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Neoliberalism&amp;oldid=1100012741">https://en.wikipedia.org/w/index.php?title=Neoliberalism&amp;oldid=1100012741</a></li>
+
+<li>S. Springer, K. Birch, and J. MacLeavy, Handbook of Neoliberalism. Routledge, 2016.</li>
+
+<li>D. Cayla, The Decline and Fall of Neoliberalism: Rebuilding the Economy in an Age of Crises, 1st edition. Routledge, 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2281f6" class="outline-4">
+<h4 id="orgd2281f6"><span class="section-number-4">3.2.3.</span> Circular Economy</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>“Open Source Circular Economy Days.” <a href="https://oscedays.org/">https://oscedays.org/</a> (accessed May 18, 2022).</li>
+
+<li>“Our world is now only 8.6% circular - Circle Economy.” <a href="https://www.circle-economy.com/news/our-world-is-now-only-8-6-circular">https://www.circle-economy.com/news/our-world-is-now-only-8-6-circular</a> (accessed May 18, 2022).</li>
+
+<li>W. Haas, F. Krausmann, D. Wiedenhofer, and M. Heinz, “How Circular is the Global Economy?: An Assessment of Material Flows, Waste Production, and Recycling in the European Union and the World in 2005,” Journal of Industrial Ecology, vol. 19, no. 5, pp. 765–777, 2015, doi: 10.1111/jiec.12244.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f3618e" class="outline-2">
+<h2 id="org5f3618e"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgb278b04" class="outline-3">
+<h3 id="orgb278b04"><span class="section-number-3">4.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org4617164" class="outline-4">
+<h4 id="org4617164"><span class="section-number-4">4.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>R. L. Heilbroner, The Worldly Philosophers: The Lives, Times And Ideas Of The Great Economic Thinkers. Simon and Schuster, 2011.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfc890c8" class="outline-3">
+<h3 id="orgfc890c8"><span class="section-number-3">4.2.</span> Religion</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>T. Singer and M. Ricard, Caring Economics. New York: St Martin’s Press, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Does Economics Need an Infusion of Religious or Quasi-Religious Formulations? A Symposium Prologue · Econ Journal Watch : Economics, religion, theism, God, faith, duty, benevolence.”</b> <a href="https://econjwatch.org/articles/does-economics-need-an-infusion-of-religious-or-quasi-religious-formulations-a-symposium-prologue">https://econjwatch.org/articles/does-economics-need-an-infusion-of-religious-or-quasi-religious-formulations-a-symposium-prologue</a> (accessed Nov. 05, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9af1172" class="outline-3">
+<h3 id="org9af1172"><span class="section-number-3">4.3.</span> Feminist Economics</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org05198e7" class="outline-4">
+<h4 id="org05198e7"><span class="section-number-4">4.3.1.</span> History</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>G. Becchio, A History of Feminist and Gender Economics. Routledge, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e499db" class="outline-4">
+<h4 id="org9e499db"><span class="section-number-4">4.3.2.</span> Orgs</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>“Home.” Accessed: Nov. 15, 2023. [Online]. Available: <a href="https://www.iaffe.org/">https://www.iaffe.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org402e290" class="outline-4">
+<h4 id="org402e290"><span class="section-number-4">4.3.3.</span> Handbooks</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>G. Berik and E. Kongar, The Routledge Handbook of Feminist Economics. Routledge, 2021.</li>
+
+<li>“Routledge IAFFE Advances in Feminist Economics.” <a href="http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B09S416W4R?ref=dbs_m_mng_rwt_0000_share</a> (accessed Dec. 05, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d769ec" class="outline-4">
+<h4 id="org8d769ec"><span class="section-number-4">4.3.4.</span> ST</h4>
+<div class="outline-text-4" id="text-4-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgeea8682"></a>Jobs<br />
+<div class="outline-text-5" id="text-4-3-4-1">
+<ul class="org-ul">
+<li>The Onion’s Tips For Succeeding As A Woman In The Workplace, (Nov. 18, 2013). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GXZ6oDG9mnY">https://www.youtube.com/watch?v=GXZ6oDG9mnY</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Frankel, Nice Girls Don’t Get the Corner Office: 101 Unconscious Mistakes Women Make That Sabotage Their Careers. Grand Central Publishing, 2004.</li>
+<li>L. P. Frankel, Nice Girls Don’t Get the Corner Office: Unconscious Mistakes Women Make That Sabotage Their Careers. Hachette UK, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdb6c5e8"></a>India<br />
+<div class="outline-text-5" id="text-4-3-4-2">
+<ul class="org-ul">
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+<li>S. Nigam, “Economic Abuse and Legal Remedies in India: A Qualitative Review.” Rochester, NY, Jan. 20, 2023. doi: 10.2139/ssrn.4350642.</li>
+<li>S. Singh, “Economic Abuse and Family Violence Across Cultures: Gendering Money and Assets Through Coercive Control,” in Criminalising Coercive Control : Family Violence and the Criminal Law, M. McMahon and P. McGorrery, Eds., Singapore: Springer, 2020, pp. 51–72. doi: 10.1007/978-981-15-0653-6<sub>3</sub>.</li>
+<li>P. Chowbey, “Women’s narratives of economic abuse and financial strategies in Britain and South Asia,” Psychology of Violence, vol. 7, no. 3, pp. 459–468, 2017, doi: 10.1037/vio0000110.</li>
+<li>P. Chowbey, “India: how COVID enabled new forms of economic abuse of women,” The Conversation. Accessed: Dec. 03, 2023. [Online]. Available: <a href="http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822">http://theconversation.com/india-how-covid-enabled-new-forms-of-economic-abuse-of-women-212822</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org322438b" class="outline-4">
+<h4 id="org322438b"><span class="section-number-4">4.3.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ul class="org-ul">
+<li>T. C. Collective, A. Chatzidakis, J. Hakim, J. Litter, and C. Rottenberg, The Care Manifesto: The Politics of Interdependence. Verso Books, 2020.</li>
+
+<li>C. Beasley, Sexual Economyths: Conceiving a Feminist Economics. St. Martin’s Press, 1994.</li>
+
+<li>C. Bauhardt and W. Harcourt, Feminist Political Ecology and the Economics of Care: In Search of Economic Alternatives. Routledge, 2018.</li>
+
+<li>J. Ghosh, Ed., Informal Women Workers in the Global South: Policies and Practices for the Formalisation of Women’s Employment in Developing Economies, 1st edition. Routledge, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Y. Varoufakis, “Economics Is Irredeemably Sexist | by Yanis Varoufakis,” Project Syndicate. Accessed: Mar. 12, 2024. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/philosophical-sexism-deters-women-from-economics-by-yanis-varoufakis-2024-03">https://www.project-syndicate.org/commentary/philosophical-sexism-deters-women-from-economics-by-yanis-varoufakis-2024-03</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7164839" class="outline-3">
+<h3 id="org7164839"><span class="section-number-3">4.4.</span> Economism</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“Economism,” Wikipedia. Jun. 02, 2023. Accessed: Jun. 16, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Economism&amp;oldid=1158111965">https://en.wikipedia.org/w/index.php?title=Economism&amp;oldid=1158111965</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a9ac87" class="outline-3">
+<h3 id="org3a9ac87"><span class="section-number-3">4.5.</span> Nation States</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org832696a" class="outline-4">
+<h4 id="org832696a"><span class="section-number-4">4.5.1.</span> India</h4>
+<div class="outline-text-4" id="text-4-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="org99663aa"></a>General<br /></li>
+<li><a id="orgd26f5ac"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org6458040"></a>CSE<br />
+<ul class="org-ul">
+<li><a id="org8e7cc6c"></a>Data Science<br />
+<div class="outline-text-7" id="text-org8e7cc6c">
+<ul class="org-ul">
+<li><i>“EPWRF India Time Series – Home Page.”</i> <a href="https://epwrfits.in/">https://epwrfits.in/</a> (accessed Nov. 23, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Rukmini S., <i>Whole Numbers and Half Truths: What Data Can and Cannot Tell Us About Modern India.</i></li>
+</ul>
+</div>
+</li>
+<li><a id="org150c46f"></a>Misc<br />
+<div class="outline-text-7" id="text-org150c46f">
+<ul class="org-ul">
+<li><b>Giant Economy Monitor</b>, IITD,  <a href="http://act4d.iitd.ac.in/act4dgem/index.htm">http://act4d.iitd.ac.in/act4dgem/index.htm</a> (accessed Apr. 04, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org5d34365"></a>World<br />
+<ol class="org-ol">
+<li><a id="orgf0283f3"></a>Orgs<br />
+<div class="outline-text-6" id="text-4-5-1-3-1">
+<ul class="org-ul">
+<li>“Home | Economics Unit, Humanities and Social Sciences.” <a href="https://econ.iitd.ac.in/">https://econ.iitd.ac.in/</a> (accessed Apr. 28, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Department of Economics, DSE | Delhi School of Economics, University of Delhi.” <a href="http://econdse.org/">http://econdse.org/</a> (accessed Jun. 12, 2022).</li>
+<li>“Delhi School of Economics,” Wikipedia. May 24, 2022. Accessed: Jun. 12, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Delhi_School_of_Economics&amp;oldid=1089541119">https://en.wikipedia.org/w/index.php?title=Delhi_School_of_Economics&amp;oldid=1089541119</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Home | Rethinking Economics India Network,”</b> Rethinking Economics. <a href="https://www.rethinkeconindia.org">https://www.rethinkeconindia.org</a> (accessed Mar. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4f990ae"></a>History<br />
+<div class="outline-text-6" id="text-4-5-1-3-2">
+<ul class="org-ul">
+<li>U. Patnaik and P. Patnaik, <b>Capital and Imperialism: Theory, History, and the Present.</b> NYU Press, 2021.</li>
+
+<li>B. Ganguli, Indian Economic Thought: Nineteenth Century Perspectives. Tata McGraw-Hill Publishing Company, 1977.</li>
+
+<li>A. Kumar, Indian Economy Since Independence: Persisting Colonial Disruption. Vision Books, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge6dcacc"></a>Politics<br />
+<div class="outline-text-6" id="text-4-5-1-3-3">
+<ul class="org-ul">
+<li>Are Hindu nationalists good for the economy? A webinar on the development in India under the BJP, (Jun. 07, 2024). Accessed: Jun. 14, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=QHtLpiAvfc0">https://www.youtube.com/watch?v=QHtLpiAvfc0</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8c9c7bc"></a>Core<br />
+<ol class="org-ol">
+<li><a id="orgca85998"></a>Texts<br />
+<div class="outline-text-6" id="text-4-5-1-4-1">
+<ul class="org-ul">
+<li>K. Basu and A. Maertens, <i>The Concise Oxford Companion to Economics in India.</i> OUP India, 2010.</li>
+
+<li>C. Ghate, <i>The Oxford Handbook of the Indian Economy.</i> Oxford University Press, USA, 2012.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org3eef1ab"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgcfde8e0"></a>Black Economy<br />
+<div class="outline-text-6" id="text-4-5-1-5-1">
+<ul class="org-ul">
+<li>A. Kumar, <i>The Black Economy in India.</i> Penguin Books India, 2017.</li>
+
+<li>A. Kumar, <i>Understanding the Black Economy and Black Money in India: An Enquiry Into Causes, Consequences and Remedies.</i> Aleph, 2017.</li>
+
+<li>A. Kumar, <i>Demonetization and Black Economy.</i> Penguin Random House India Private Limited, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org862f13f"></a>Neoliberal Reforms in India<br />
+<div class="outline-text-6" id="text-4-5-1-5-2">
+<ul class="org-ul">
+<li>J. Ghosh and C. P. Chandrasekhar, The Market that Failed: Neoliberal Economic Reforms in India, 1st edition. LeftWord Books, 2017.</li>
+
+<li>A. Shrivastava, <b>Churning the Earth: The Making of Global India.</b> Penguin UK, 2012.</li>
+
+<li>R. Das, Neoliberalism and the Transforming Left in India: A Contradictory Manifesto. Taylor &amp; Francis Group, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1478fd"></a>Women<br />
+<div class="outline-text-6" id="text-4-5-1-5-3">
+<ul class="org-ul">
+<li>K. S. &amp; S. Narla, “Tracing the journeys of India’s women economists and policymakers,” Scroll.in. <a href="https://scroll.in/article/1020656/tracing-the-journeys-of-indias-women-economists-policymakers">https://scroll.in/article/1020656/tracing-the-journeys-of-indias-women-economists-policymakers</a> (accessed Apr. 01, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org278c2e1"></a>Misc<br />
+<div class="outline-text-5" id="text-4-5-1-6">
+<ul class="org-ul">
+<li>“A Supply-fix for a Demand-problem?,” The India Forum. Accessed: Aug. 23, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/economy/supply-fix-demand-problem">https://www.theindiaforum.in/economy/supply-fix-demand-problem</a></li>
+
+<li>C. P. Chandrasekhar, “India’s Federal Democracy Teeters on the Brink as Centre Deploys Aggressive Tactics to Undermine State Autonomy,” Frontline. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/politics/bjp-led-central-govt-attacks-fiscal-federalism-and-starves-and-squeezes-opposition-ruled-states-of-funds/article68524889.ece">https://frontline.thehindu.com/politics/bjp-led-central-govt-attacks-fiscal-federalism-and-starves-and-squeezes-opposition-ruled-states-of-funds/article68524889.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Steuwer, “Two Myths About the Indian Middle Class,” Frontline. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/economy/indian-middle-class-ambedkar-economic-inequality-nirmala-sitharaman-budget-2024-hindenburg/article68521449.ece">https://frontline.thehindu.com/economy/indian-middle-class-ambedkar-economic-inequality-nirmala-sitharaman-budget-2024-hindenburg/article68521449.ece</a></li>
+</ul>
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Retirement blues.” Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/opinion/retirement-blues-old-men-and-their-lust-for-power/cid/2036571">https://www.telegraphindia.com/opinion/retirement-blues-old-men-and-their-lust-for-power/cid/2036571</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. H. Bureau, “C.T. Kurien, distinguished economist, no more,” The Hindu, Jul. 24, 2024. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/ct-kurien-distinguished-economist-no-more/article68440057.ece">https://www.thehindu.com/news/national/ct-kurien-distinguished-economist-no-more/article68440057.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. N. Desk, “Economic Survey 2023-24: Growth Prospects, China Strategy, AI Impact,” Frontline. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/economic-survey-2023-24-analysis-india-resilient-to-global-geopolitical-economic-shocks-union-budget-nirmala-sitharaman/article68432390.ece">https://frontline.thehindu.com/news/economic-survey-2023-24-analysis-india-resilient-to-global-geopolitical-economic-shocks-union-budget-nirmala-sitharaman/article68432390.ece</a></li>
+
+<li>P. Raj, “The Economic Survey Only Increases Concerns of Inequality,” Centre for Financial Accountability. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://www.cenfa.org/the-economic-survey-only-increases-concerns-of-inequality/">https://www.cenfa.org/the-economic-survey-only-increases-concerns-of-inequality/</a></li>
+
+<li>“The Reality of India’s Health System Starkly Differs from ‘Achievements’ Spelt Out in Economic Survey,” The Wire. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://thewire.in/health/the-reality-of-indias-health-system-starkly-differs-from-achievements-spelt-out-in-economic-survey">https://thewire.in/health/the-reality-of-indias-health-system-starkly-differs-from-achievements-spelt-out-in-economic-survey</a></li>
+<li>“No Jobs Problem and No Household Distress: It’s Better We Call Economic Survey a Fantasy Novel,” The Wire. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://thewire.in/economy/no-jobs-problem-and-no-household-distress-its-better-we-call-economic-survey-a-fantasy-novel">https://thewire.in/economy/no-jobs-problem-and-no-household-distress-its-better-we-call-economic-survey-a-fantasy-novel</a></li>
+<li>“The Wire: The Wire News India, Latest News,News from India, Politics, External Affairs, Science, Economics, Gender and Culture.” Accessed: Jul. 19, 2024. [Online]. Available: <a href="https://thewire.in/macro/an-alternative-economic-survey">https://thewire.in/macro/an-alternative-economic-survey</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Capitalist Poverty Vis-à-Vis Pre-Capitalist Poverty,” NewsClick. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.newsclick.in/capitalist-poverty-vis-vis-pre-capitalist-poverty">https://www.newsclick.in/capitalist-poverty-vis-vis-pre-capitalist-poverty</a></li>
+
+<li>C. P. Chandrasekhar, “Modi’s economic policies are primarily driven by political objectives rather than substantive economic concerns,” Frontline. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/columns/new-narendra-modi-bjp-nda-government-coalition-partners-economic-policy/article68307139.ece">https://frontline.thehindu.com/columns/new-narendra-modi-bjp-nda-government-coalition-partners-economic-policy/article68307139.ece</a></li>
+
+<li>P. Cohen, “$29 Trillion: That’s How Much Debt Emerging Nations Are Facing,” The New York Times, Jun. 14, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.nytimes.com/2024/06/14/business/government-debt.html">https://www.nytimes.com/2024/06/14/business/government-debt.html</a></li>
+
+<li>M. Mukherjee, “Gujarat: Before industry, comes the safety of lives,” Frontline. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/columns/gujarat-before-industry-comes-the-safety-of-lives/article68288581.ece">https://frontline.thehindu.com/columns/gujarat-before-industry-comes-the-safety-of-lives/article68288581.ece</a></li>
+
+<li>A. Mody, “India’s looming financial crisis,” The Hindu, Jun. 11, 2024. Accessed: Jun. 12, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/lead/indias-looming-financial-crisis/article68278359.ece">https://www.thehindu.com/opinion/lead/indias-looming-financial-crisis/article68278359.ece</a></li>
+
+<li>“Understanding Policy through Economic History,” The India Forum. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/understanding-policy-through-economic-history">https://www.theindiaforum.in/book-reviews/understanding-policy-through-economic-history</a></li>
+
+<li>M. Mukherjee, “What it means for the market and economy,” Frontline. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/election-2024/narendra-modi-nda-bjp-lok-sabha-election-2024-stock-market-nse-sensex/article68266621.ece">https://frontline.thehindu.com/election-2024/narendra-modi-nda-bjp-lok-sabha-election-2024-stock-market-nse-sensex/article68266621.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Filling public employment vacancies &amp; regularising all workers, especially women, should be new government’s priority.” Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/governance/filling-public-employment-vacancies-regularising-all-workers-especially-women-should-be-new-government-s-priority-96470">https://www.downtoearth.org.in/blog/governance/filling-public-employment-vacancies-regularising-all-workers-especially-women-should-be-new-government-s-priority-96470</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. R. Chowdhury, “How India’s Economy Has Really Fared Under Modi,” TIME. Accessed: May 25, 2024. [Online]. Available: <a href="https://time.com/6969626/india-modi-economy-election/">https://time.com/6969626/india-modi-economy-election/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pocket Money | PDF to Flipbook.” Accessed: May 07, 2024. [Online]. Available: <a href="https://heyzine.com/flip-book/56313b4718.html">https://heyzine.com/flip-book/56313b4718.html</a></li>
+<li>I. A. and A. Thampi, “Mind the wealth gap, bridge it with wealth tax,” Centre for Financial Accountability. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.cenfa.org/mind-the-wealth-gap-bridge-it-with-wealth-tax/">https://www.cenfa.org/mind-the-wealth-gap-bridge-it-with-wealth-tax/</a></li>
+<li>P. Patnaik, “Building a rights-based welfare State in India,” Centre for Financial Accountability. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.cenfa.org/building-a-rights-based-welfare-state-in-india/">https://www.cenfa.org/building-a-rights-based-welfare-state-in-india/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Sampath, “Satire | Whose wealth is it? Clearing the air on the redistribution debate,” The Hindu, May 02, 2024. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/society/sampath-column-allegedly-whose-wealth-is-it-satire/article68120927.ece">https://www.thehindu.com/society/sampath-column-allegedly-whose-wealth-is-it-satire/article68120927.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Ghosh, “The double life of the Indian economy.” Accessed: Apr. 09, 2024. [Online]. Available: <a href="https://www.socialeurope.eu/the-double-life-of-the-indian-economy">https://www.socialeurope.eu/the-double-life-of-the-indian-economy</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Vaishnav, When Crime Pays: Money and Muscle in Indian Politics. Yale University Press, 2017.</li>
+
+<li>P. Ray, Monetary Policy: Oxford India Short Introductions. OUP India, 2013.</li>
+
+<li>“Kerala model,” Wikipedia. Jul. 31, 2022. Accessed: Aug. 01, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kerala_model&amp;oldid=1101535068">https://en.wikipedia.org/w/index.php?title=Kerala_model&amp;oldid=1101535068</a></li>
+
+<li>A. Kumar, Indian Economy’s Greatest Crisis: Impact of Coronavirus and the Road Ahead. Penguin Random House, 2021.</li>
+
+<li>S. Swamy, <i>Reset: Regaining India’s Economic Legacy.</i> Rupa, 2019.</li>
+
+<li>P. Sainath, <i>Everybody loves a good drought</i>, 1st edition.* Penguin, 2000.</li>
+
+<li><i>“The everyday lives of everyday people,”</i> People’s Archive of Rural India. <a href="https://ruralindiaonline.org/en/">https://ruralindiaonline.org/en/</a> (accessed Nov. 28, 2021).</li>
+
+<li>“Ideas for India - for more evidence based policy.” <a href="https://www.ideasforindia.in/">https://www.ideasforindia.in/</a> (accessed Dec. 07, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Goldman Sachs Report and the True Picture of the Indian Economy – Centre for Financial Accountability.” Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.cenfa.org/goldman-sachs-report-and-the-true-picture-of-the-indian-economy/">https://www.cenfa.org/goldman-sachs-report-and-the-true-picture-of-the-indian-economy/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3ff9a03" class="outline-3">
+<h3 id="org3ff9a03"><span class="section-number-3">4.6.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-6">
+<ul class="org-ul">
+<li>T. M. P. Reader, “The Deep Religious Roots of American Economics,” The MIT Press Reader. Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-deep-religious-roots-of-american-economics/">https://thereader.mitpress.mit.edu/the-deep-religious-roots-of-american-economics/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Racket by Matt Kennard | Waterstones.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.waterstones.com/book/the-racket/matt-kennard//9781350422711">https://www.waterstones.com/book/the-racket/matt-kennard//9781350422711</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c77a35" class="outline-2">
+<h2 id="org3c77a35"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgc358503" class="outline-3">
+<h3 id="orgc358503"><span class="section-number-3">5.1.</span> Gig Economy</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org4f6e41b" class="outline-4">
+<h4 id="org4f6e41b"><span class="section-number-4">5.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Gig worker,” Wikipedia. Jul. 18, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gig_worker&amp;oldid=1098929085">https://en.wikipedia.org/w/index.php?title=Gig_worker&amp;oldid=1098929085</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7def4e3" class="outline-4">
+<h4 id="org7def4e3"><span class="section-number-4">5.1.2.</span> Orgs</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>“Homepage.” Accessed: Mar. 02, 2024. [Online]. Available: <a href="https://fair.work/en/fw/homepage/">https://fair.work/en/fw/homepage/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a184c2" class="outline-4">
+<h4 id="org7a184c2"><span class="section-number-4">5.1.3.</span> Politics: Left</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>“Workers’ Rights on Demand - RLS Southasia.” Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1179.html">https://www.rosalux.in/details-resources/1179.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga856ae6" class="outline-4">
+<h4 id="orga856ae6"><span class="section-number-4">5.1.4.</span> India</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<ul class="org-ul">
+<li>“India’s Urban Company revolutionised gig work for women. Then it bled them,” Al Jazeera. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/3/1/how-indias-urban-company-has-soured-gig-work-for-women">https://www.aljazeera.com/economy/2024/3/1/how-indias-urban-company-has-soured-gig-work-for-women</a></li>
+<li>“India’s women gig workers fight for a better future,” Rest of World. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://restofworld.org/2024/gig-workers-rising-video-india/">https://restofworld.org/2024/gig-workers-rising-video-india/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0c79a6" class="outline-4">
+<h4 id="orgd0c79a6"><span class="section-number-4">5.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<ul class="org-ul">
+<li>S. Paliath, “Why A Robust Gig Work Legislation Will Help Women Workers.” Accessed: Aug. 19, 2024. [Online]. Available: <a href="https://www.indiaspend.com/womenwork/why-a-robust-gig-work-legislation-will-help-women-workers-920675">https://www.indiaspend.com/womenwork/why-a-robust-gig-work-legislation-will-help-women-workers-920675</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. S. IndiaSpend.com IndiaSpend com &amp;. Udisha Srivastav, “How many gig workers does India have? Nobody knows and it’s helping companies duck responsibility,” Scroll.in. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://scroll.in/article/1069761/how-many-gig-workers-does-india-have-nobody-knows-and-its-helping-companies-duck-responsibility">https://scroll.in/article/1069761/how-many-gig-workers-does-india-have-nobody-knows-and-its-helping-companies-duck-responsibility</a></li>
+
+<li>“The graying gig economy,” Rest of World. Accessed: May 22, 2024. [Online]. Available: <a href="https://restofworld.org/2024/aging-global-gig-workers/">https://restofworld.org/2024/aging-global-gig-workers/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Gig Work Pits Customers Against Workers - IAS News | Institute for Advanced Study.” Accessed: May 21, 2024. [Online]. Available: <a href="https://www.ias.edu/news/how-gig-work-pits-customers-against-workers">https://www.ias.edu/news/how-gig-work-pits-customers-against-workers</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6c297b1" class="outline-2">
+<h2 id="org6c297b1"><span class="section-number-2">6.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Pluralistic: There’s no such thing as ‘shareholder supremacy’ (18 Sep 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/09/18/falsifiability/">https://pluralistic.net/2024/09/18/falsifiability/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: 18 Nov 2021 – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://pluralistic.net/2021/11/18/bipartisan-consensus/">https://pluralistic.net/2021/11/18/bipartisan-consensus/</a></li>
+<li>“Letter: Future will be shaped by the heresies of heterodox economics,” archive.is. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://archive.is/kEk63">https://archive.is/kEk63</a></li>
+<li>“Pluralistic: The long lineage of private equity’s looting (02 June 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://pluralistic.net/2023/06/02/plunderers/">https://pluralistic.net/2023/06/02/plunderers/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Rise of Big Tech Is Generating Economic Stagnation.” Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://jacobin.com/2024/09/big-tech-economic-stagnation-exploitation">https://jacobin.com/2024/09/big-tech-economic-stagnation-exploitation</a></li>
+
+<li>“The Insidious Elitist Upshot of Behavioral Economics.” Accessed: Aug. 23, 2024. [Online]. Available: <a href="https://jacobin.com/2024/08/behavioral-economics-exxon-valdez-elitism">https://jacobin.com/2024/08/behavioral-economics-exxon-valdez-elitism</a></li>
+
+<li>“Gold price reaches record high,” World Socialist Web Site. Accessed: Aug. 23, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/23/iwbr-a23.html">https://www.wsws.org/en/articles/2024/08/23/iwbr-a23.html</a></li>
+
+<li>R. Hahnel, A Participatory Economy. A K Pr Distribution, 2022.</li>
+
+<li>M. Albert, No Bosses: A New Economy for a Better World. Zero Books, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Perils of Economic Growth Under Free Trade,” NewsClick. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.newsclick.in/perils-economic-growth-under-free-trade">https://www.newsclick.in/perils-economic-growth-under-free-trade</a></li>
+
+<li>“The surprising truth about wealth and inequality in the West | Aeon Essays,” Aeon. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://aeon.co/essays/the-surprising-truth-about-wealth-and-inequality-in-the-west">https://aeon.co/essays/the-surprising-truth-about-wealth-and-inequality-in-the-west</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Mazzucato, “Collective Intelligence and the Common Good | by Mariana Mazzucato,” Project Syndicate. Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/collective-intelligence-calls-for-sharing-rewards-from-innovation-for-the-common-good-by-mariana-mazzucato-2024-08">https://www.project-syndicate.org/commentary/collective-intelligence-calls-for-sharing-rewards-from-innovation-for-the-common-good-by-mariana-mazzucato-2024-08</a></li>
+
+<li>G. Tsakraklides, “Fossilised Economies,” George Tsakraklides. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://tsakraklides.com/2024/07/30/fossilised-economies/">https://tsakraklides.com/2024/07/30/fossilised-economies/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Free Trade Agreements | Transnational Institute.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/topic/free-trade-agreements">https://www.tni.org/en/topic/free-trade-agreements</a></li>
+<li>“Bilateral Investment Treaties | Transnational Institute.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/topic/bilateral-investment-treaties">https://www.tni.org/en/topic/bilateral-investment-treaties</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Green Economy | Transnational Institute.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/topic/green-economy">https://www.tni.org/en/topic/green-economy</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Private sufficiency and public luxury.” Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://theecologist.org/2024/jul/09/private-sufficiency-and-public-luxury">https://theecologist.org/2024/jul/09/private-sufficiency-and-public-luxury</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Is the Reign of the Dollar Coming to an End?: The Twenty-Fifth Newsletter (2024),” Tricontinental: Institute for Social Research. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://thetricontinental.org/newsletterissue/de-dollarisation-brics/">https://thetricontinental.org/newsletterissue/de-dollarisation-brics/</a></li>
+
+<li>“How free market economics was smuggled into Britain - alongside factory farming.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://theecologist.org/2018/aug/08/how-free-market-economics-was-smuggled-britain-alongside-factory-farming">https://theecologist.org/2018/aug/08/how-free-market-economics-was-smuggled-britain-alongside-factory-farming</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Economics,” The MIT Press Reader. Accessed: May 20, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/economics/">https://thereader.mitpress.mit.edu/economics/</a></li>
+
+<li>“Economics,” Cambridge Core. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.cambridge.org/core/elements/subject/Economics/FA44491F1F55F917C43E9832715B9DE7">https://www.cambridge.org/core/elements/subject/Economics/FA44491F1F55F917C43E9832715B9DE7</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Efroymson, Beyond Apologies: Defining &amp; Achieving an Economics of Wellbeing. Institute of Wellbeing, 2017.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Economics Superbus I,” Peter Turchin. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://peterturchin.com/economics-superbus-i/">https://peterturchin.com/economics-superbus-i/</a></li>
+<li>“REINVENTING CAPITALISM: Local Futures - Economics of Happiness with Helena Norberg-Hodge,” Google Docs. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://docs.google.com/forms/d/e/1FAIpQLSckMsmB014ixLr6p5QCsIrY2VGK11BZo7_os-ycz1Ekf4sVWg/viewform?usp=embed_facebook">https://docs.google.com/forms/d/e/1FAIpQLSckMsmB014ixLr6p5QCsIrY2VGK11BZo7_os-ycz1Ekf4sVWg/viewform?usp=embed_facebook</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What should Econ 101 courses teach students today? | Aeon Essays,” Aeon. Accessed: Jun. 08, 2024. [Online]. Available: <a href="https://aeon.co/essays/what-should-econ-101-courses-teach-students-today">https://aeon.co/essays/what-should-econ-101-courses-teach-students-today</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“World economy,” World Socialist Web Site. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/en/topics/site_area/world">https://www.wsws.org/en/topics/site_area/world</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>U.-U. A. de Barcelona, “It’s true, happiness doesn’t cost much,” UAB Barcelona. Accessed: May 14, 2024. [Online]. Available: <a href="https://www.uab.cat/web/sala-de-premsa-icta-uab/detall-noticia/it-s-true-happiness-doesn-t-cost-much-1345819915004.html?detid=1345908468875">https://www.uab.cat/web/sala-de-premsa-icta-uab/detall-noticia/it-s-true-happiness-doesn-t-cost-much-1345819915004.html?detid=1345908468875</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How to think about the prospects of truly green growth | Aeon Essays,” Aeon. Accessed: May 08, 2024. [Online]. Available: <a href="https://aeon.co/essays/how-to-think-about-the-prospects-of-truly-green-growth">https://aeon.co/essays/how-to-think-about-the-prospects-of-truly-green-growth</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Water Flowing Upwards: Net financial flows from developing countries – IDEAs.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.networkideas.org/featured-articles/2024/04/water-flowing-upwards-net-financial-flows-from-developing-countries/">https://www.networkideas.org/featured-articles/2024/04/water-flowing-upwards-net-financial-flows-from-developing-countries/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Decolonizing Economics 2024: Earth Day to May Day,” Decolonizing Economics 2024: Earth Day to May Day. Accessed: May 01, 2024. [Online]. Available: <a href="https://decolonizingeconomicssummit.org/">https://decolonizingeconomicssummit.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Rapid Transition Alliance.” Accessed: May 01, 2024. [Online]. Available: <a href="https://rapidtransition.org/">https://rapidtransition.org/</a></li>
+<li>“Badvertising,” Badvertising. Accessed: May 01, 2024. [Online]. Available: <a href="https://www.badverts.org">https://www.badverts.org</a></li>
+<li>“home,” New Weather Institute. Accessed: May 01, 2024. [Online]. Available: <a href="https://www.newweather.org/">https://www.newweather.org/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Suicidal growth &amp; the future of sustainable economies I Andrew Simms, (Apr. 30, 2024). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=w_WQ27w7KBE">https://www.youtube.com/watch?v=w_WQ27w7KBE</a></li>
+
+<li>G. Tsakraklides, In The Grip Of Necrocapitalism: The Making And Breaking Of A Psychonomy. Independently published, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Crack-Up Capitalism,” Macmillan Publishers. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://us.macmillan.com/books/9781250753892/crackupcapitalism">https://us.macmillan.com/books/9781250753892/crackupcapitalism</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Deficit Myth with Stephanie Kelton — what to ask when governments can’t afford to fix things.,” ABC listen. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.abc.net.au/listen/programs/bigideas/stephanie-kelton-modern-monetary-theory-the-deficit-myth-mmt/103551422">https://www.abc.net.au/listen/programs/bigideas/stephanie-kelton-modern-monetary-theory-the-deficit-myth-mmt/103551422</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Economics and policy | The Ecologist.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://theecologist.org/section/economics">https://theecologist.org/section/economics</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Dávila, Blockchain Radicals: How Capitalism Ruined Crypto and How to Fix It, New edition. Repeater, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why everyone needs to learn (some) economics | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/why-everyone-needs-to-learn-some-economics">https://aeon.co/essays/why-everyone-needs-to-learn-some-economics</a> (accessed Apr. 10, 2023).</li>
+
+<li>S. Keen, Debunking Economics - Revised and Expanded Edition: The Naked Emperor Dethroned? Zed Books, 2011.</li>
+
+<li>D. Acemoglu, Introduction to Modern Economic Growth. Princeton University Press, 2008.</li>
+
+<li>R. Hill and T. Myatt, <b>The Microeconomics Anti-Textbook: A Critical Thinker’s Guide - second edition.</b> Bloomsbury Publishing, 2021.</li>
+
+<li>“Are there limits to economic growth? It’s time to call time on a 50-year argument,” Nature, vol. 603, no. 7901, pp. 361–361, Mar. 2022, doi: 10.1038/d41586-022-00723-1.</li>
+
+<li>K. Marçal, Mother of Invention: How Good Ideas Get Ignored in an Economy Built for Men. HarperCollins UK, 2021.</li>
+
+<li><i>“Econ Journal Watch: Scholarly Comments on Academic Economics.” <a href="https://econjwatch.org">https://econjwatch.org</a></i> (accessed Nov. 05, 2021).</li>
+
+<li>D. N. McCloskey, <i>Bourgeois Dignity: Why Economics Can’t Explain the Modern World.</i> University of Chicago Press, 2011.</li>
+
+<li>D. N. McCloskey, <i>The Bourgeois Virtues: Ethics for an Age of Commerce.</i> University of Chicago Press, 2010.</li>
+
+<li>E. Porter, <i>The Price of Everything: Finding Method in the Madness of What Things Cost</i>. Penguin Publishing Group, 2012.</li>
+
+<li>M. Mazzucato, Mission Economy: A Moonshot Guide to Changing Capitalism. Penguin UK, 2021.</li>
+
+<li>M. Mazzucato, <b>The Value of Everything: Making and Taking in the Global Economy.</b> Penguin UK, 2018.</li>
+
+<li>P. Malmgren, <b>Signals: How Everyday Signs Can Help Us Navigate the World’s Turbulent Economy.</b> Hachette UK, 2016.</li>
+
+<li>S. D. Levitt and S. J. Dubner, <i>When to Rob a Bank: A Rogue Economist's Guide to the World</i>. Penguin UK, 2015.</li>
+
+<li>S. E. Landsburg, <i>The Armchair Economist (revised and updated May 2012): Economics &amp; Everyday Life.</i> Simon and Schuster, 2007.</li>
+
+<li>S. Kelton, The Deficit Myth: Modern Monetary Theory and the Birth of the People’s Economy. PublicAffairs, 2020.</li>
+
+<li>W. Easterly, <b>The Tyranny of Experts: Economists, Dictators, and the Forgotten Rights of the Poor.</b> Basic Books, 2021.</li>
+
+<li>“World Economic Outlook, October 2020: A Long and Difficult Ascent,” IMF. <a href="https://www.imf.org/en/Publications/WEO/Issues/2020/09/30/world-economic-outlook-october-2020">https://www.imf.org/en/Publications/WEO/Issues/2020/09/30/world-economic-outlook-october-2020</a> (accessed Jan. 13, 2022).</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-22 Sun 10:40</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

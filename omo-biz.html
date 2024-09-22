@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-22 Sun 09:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Business</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Business</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbe31635">1. General</a></li>
+<li><a href="#org47895ae">2. Fair Business</a></li>
+<li><a href="#org120191a">3. STEMM</a>
+<ul>
+<li><a href="#orgdac3410">3.1. Environment</a></li>
+<li><a href="#org6ff655f">3.2. Systems Sciences</a>
+<ul>
+<li><a href="#org0fea61e">3.2.1. Misc</a></li>
+<li><a href="#org52c1bf1">3.2.2. Complexity Science</a></li>
+</ul>
+</li>
+<li><a href="#org98144a8">3.3. Computer Science And Engineering</a>
+<ul>
+<li><a href="#orgab05cb8">3.3.1. Artificial Intelligence</a></li>
+<li><a href="#org143d5a8">3.3.2. BlockChain</a></li>
+<li><a href="#org2ae1285">3.3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org52595e2">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge27bd14">4. World</a>
+<ul>
+<li><a href="#org0fa4a61">4.1. People</a>
+<ul>
+<li><a href="#org837114f">4.1.1. 0</a></li>
+<li><a href="#orgc9f4f62">4.1.2. 1</a></li>
+</ul>
+</li>
+<li><a href="#orgdc814aa">4.2. India</a>
+<ul>
+<li><a href="#orgaf422ce">4.2.1. General</a></li>
+<li><a href="#org58b3f9f">4.2.2. Big Business</a></li>
+<li><a href="#org5f90889">4.2.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8caafc5">5. Special Topics</a>
+<ul>
+<li><a href="#org4bb9515">5.1. 0</a>
+<ul>
+<li><a href="#org9a2efbd">5.1.1. Monsanto</a></li>
+</ul>
+</li>
+<li><a href="#orgd8237d2">5.2. 1</a>
+<ul>
+<li><a href="#org1a971d1">5.2.1. Patagonia</a></li>
+</ul>
+</li>
+<li><a href="#orgf3ea191">5.3. Logstics</a></li>
+<li><a href="#org0b45082">5.4. Disaster Capitalism</a></li>
+</ul>
+</li>
+<li><a href="#orgd51bad4">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgbe31635" class="outline-2">
+<h2 id="orgbe31635"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>DK, <b>The Business Book: Big Ideas Simply Explained.</b> Dorling Kindersley Ltd, 2014.</li>
+
+<li>R. Honeyman and T. Jana, <b>The B Corp Handbook, Second Edition: How You Can Use Business as a Force for Good.</b> Berrett-Koehler Publishers, 2019.</li>
+
+<li>P. D. Broughton and T. S. of Life, <i>How to Think Like an Entrepreneur.</i> Pan Macmillan, 2016.</li>
+
+<li>P. Jarvis, <b>Company of One: Why Staying Small is the Next Big Thing for Business.</b> Penguin UK, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org47895ae" class="outline-2">
+<h2 id="org47895ae"><span class="section-number-2">2.</span> Fair Business</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>R. Nader, The Rebellious CEO: 12 Leaders Who Did It Right. Brooklyn: Melville House, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Honeyman and T. Jana, <b>The B Corp Handbook, Second Edition: How You Can Use Business as a Force for Good.</b> Berrett-Koehler Publishers, 2019.</li>
+<li>“B Lab Global Launches 2023 Annual Report.” Accessed: May 10, 2024. [Online]. Available: <a href="https://www.bcorporation.net/en-us/news/blog/annual-report-2023">https://www.bcorporation.net/en-us/news/blog/annual-report-2023</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org120191a" class="outline-2">
+<h2 id="org120191a"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgdac3410" class="outline-3">
+<h3 id="orgdac3410"><span class="section-number-3">3.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>J. Salazar, “7 Tips for Building a Sustainable Business,” IEEE Computer Society. Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/trends/tips-building-sustainable-business/">https://www.computer.org/publications/tech-news/trends/tips-building-sustainable-business/</a></li>
+
+<li>“Survival of the greenest: businesses must reduce their footprint,” UNEP. Accessed: Feb. 23, 2024. [Online]. Available: <a href="http://www.unep.org/news-and-stories/story/survival-greenest-businesses-must-reduce-their-footprint">http://www.unep.org/news-and-stories/story/survival-greenest-businesses-must-reduce-their-footprint</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Science Based Targets Network (SBTN),” Science Based Targets Initiative. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://sciencebasedtargets.org/about-us/sbtn">https://sciencebasedtargets.org/about-us/sbtn</a></li>
+<li>“Science Based Targets Network,” Science Based Targets Network. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://sciencebasedtargetsnetwork.org/">https://sciencebasedtargetsnetwork.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ff655f" class="outline-3">
+<h3 id="org6ff655f"><span class="section-number-3">3.2.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org0fea61e" class="outline-4">
+<h4 id="org0fea61e"><span class="section-number-4">3.2.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>J. S. Professor, <b>Business Dynamics: Systems Thinking and Modeling for a Complex World with CD-ROM.</b> McGraw-Hill Education, 2000.</li>
+
+<li>J. Zhang, C. P. Kempes, M. J. Hamilton, and G. B. West, <b>“Scaling laws and a general theory for the growth of companies,”</b> arXiv:2109.10379 [physics], Sep. 2021, Accessed: Sep. 25, 2021. [Online]. Available: <a href="http://arxiv.org/abs/2109.10379">http://arxiv.org/abs/2109.10379</a></li>
+
+<li>M. I. G. Daepp, M. J. Hamilton, G. B. West, and L. M. A. Bettencourt, <b>“The mortality of companies,”</b> Journal of The Royal Society Interface, vol. 12, no. 106, p. 20150120, May 2015, doi: 10.1098/rsif.2015.0120.</li>
+
+<li>“The race between innovation and obsolescence | Santa Fe Institute.” Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/the-race-between-innovation-and-obsolescence">https://www.santafe.edu/news-center/news/the-race-between-innovation-and-obsolescence</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Diem, A. Borsos, T. Reisch, J. Kertész, and S. Thurner, “Quantifying firm-level economic systemic risk from nation-wide supply networks,” Sci Rep, vol. 12, no. 1, Art. no. 1, May 2022, doi: 10.1038/s41598-022-11522-z.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org52c1bf1" class="outline-4">
+<h4 id="org52c1bf1"><span class="section-number-4">3.2.2.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li><b>“Business,”</b> New England Complex Systems Institute. <a href="https://necsi.edu/business">https://necsi.edu/business</a> (accessed Jul. 31, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org98144a8" class="outline-3">
+<h3 id="org98144a8"><span class="section-number-3">3.3.</span> Computer Science And Engineering</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgab05cb8" class="outline-4">
+<h4 id="orgab05cb8"><span class="section-number-4">3.3.1.</span> Artificial Intelligence</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>C. Meyer, D. Cohen, and S. Nair, “Does your service business need AI? Here are 4 rules to help you decide,” The Conversation. Accessed: May 31, 2024. [Online]. Available: <a href="http://theconversation.com/does-your-service-business-need-ai-here-are-4-rules-to-help-you-decide-221490">http://theconversation.com/does-your-service-business-need-ai-here-are-4-rules-to-help-you-decide-221490</a></li>
+
+<li>D. Rose, Artificial Intelligence for Business: What You Need to Know About Machine Learning and Neural Networks, 2nd edition. Hoboken: Pearson, 2021.</li>
+
+<li>H. B. Review, E. Mollick, D. D. Cremer, T. Neeley, and P. Sinha, Generative AI: The Insights You Need from Harvard Business Review. Boston, Massachusetts: Harvard Business Review Press, 2024.</li>
+
+<li>T. Taulli, Generative AI: How ChatGPT and Other AI Tools Will Revolutionize Business, 1st ed. edition. APress, 2023.</li>
+
+<li>B. Marr, Generative AI in Practice: 100+ Amazing Ways Generative Artificial Intelligence is Changing Business and Society, 1st edition. Wiley, 2024.</li>
+
+<li>K. Huang, Y. Wang, F. Zhu, X. Chen, and C. Xing, Eds., Beyond AI: ChatGPT, Web3, and the Business Landscape of Tomorrow, 1st ed. 2023 edition. Springer International Publishing AG, 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org143d5a8" class="outline-4">
+<h4 id="org143d5a8"><span class="section-number-4">3.3.2.</span> BlockChain</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>J. S. Arun, J. Cuomo, and N. Gaur, Blockchain for Business, First Edition. Pearson Education, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ae1285" class="outline-4">
+<h4 id="org2ae1285"><span class="section-number-4">3.3.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>H. E. Press, “Study finds 94% of business spreadsheets have critical errors.” Accessed: Aug. 14, 2024. [Online]. Available: <a href="https://phys.org/news/2024-08-business-spreadsheets-critical-errors.html">https://phys.org/news/2024-08-business-spreadsheets-critical-errors.html</a></li>
+
+<li>“Pricing: Using Data to Improve Pricing Performance.” Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://executive.mit.edu/course/pricing/a056g00000URaaPAAT.html">https://executive.mit.edu/course/pricing/a056g00000URaaPAAT.html</a></li>
+
+<li>“HBS Pricing Lab,” HBS Pricing Lab. Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://sites.harvard.edu/pricing-lab/">https://sites.harvard.edu/pricing-lab/</a></li>
+
+<li>“The Billion Prices Project.” Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://thebillionpricesproject.com/">https://thebillionpricesproject.com/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org52595e2" class="outline-3">
+<h3 id="org52595e2"><span class="section-number-3">3.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>A. Danchin, P. M. Binder, and S. Noria, “Antifragility and Tinkering in Biology (and in Business) Flexibility Provides an Efficient Epigenetic Way to Manage Risk,” Genes (Basel), vol. 2, no. 4, pp. 998–1016, Nov. 2011, doi: 10.3390/genes2040998.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Whole Picture: Cartographic Insights into Global Supply Chain Dependency,” The Whole Picture: Cartographic Insights into Global Supply Chain Dependency. Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://vis.csh.ac.at/global-supply-chain-maps/">https://vis.csh.ac.at/global-supply-chain-maps/</a></li>
+
+<li>W. Spiess-Knafl, ARTIFICIAL INTELLIGENCE AND BLOCKCHAIN FOR SOCIAL IMPACT: Social Business Models and Impact Finance, 1st edition. Taylor &amp; Francis Ltd, 2022.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge27bd14" class="outline-2">
+<h2 id="orge27bd14"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0fa4a61" class="outline-3">
+<h3 id="org0fa4a61"><span class="section-number-3">4.1.</span> People</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org837114f" class="outline-4">
+<h4 id="org837114f"><span class="section-number-4">4.1.1.</span> 0</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge9d6309"></a>Bill Gates<br />
+<ol class="org-ol">
+<li><a id="org5651f9d"></a>General<br />
+<div class="outline-text-6" id="text-4-1-1-1-1">
+<ul class="org-ul">
+<li>“Bill Gates,” Wikipedia. Sep. 10, 2023. Accessed: Sep. 12, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bill_Gates&amp;oldid=1174792754">https://en.wikipedia.org/w/index.php?title=Bill_Gates&amp;oldid=1174792754</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgadc1038"></a>Works<br />
+<ul class="org-ul">
+<li><a id="orgd49dc40"></a>Non Tech<br />
+<div class="outline-text-7" id="text-orgd49dc40">
+<ul class="org-ul">
+<li>B. Gates, “The Personal Blog of Bill Gates | Gates Notes,” gatesnotes.com. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.gatesnotes.com/Home">https://www.gatesnotes.com/Home</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Gates, Source Code: My Beginnings. New York: Knopf, 2025.
+<ul class="org-ul">
+<li>B. Gates, “My memoir Source Code comes out next year,” gatesnotes.com. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.gatesnotes.com/Source-Code">https://www.gatesnotes.com/Source-Code</a></li>
+</ul></li>
+
+<li>B. Gates, N. Myhrvold, and P. Rinearson, The Road Ahead. Viking, 1995.</li>
+
+<li>Bill Gates Harvard Commencement Address 2007, (May 20, 2013). Accessed: Sep. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zPx5N6Lh3sw">https://www.youtube.com/watch?v=zPx5N6Lh3sw</a></li>
+
+<li>B. Gates, How to Avoid a Climate Disaster: The Solutions We Have and the Breakthroughs We Need, 1st edition. London: Allen Lane, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5e044ab"></a>Tech<br />
+<div class="outline-text-7" id="text-org5e044ab">
+<ul class="org-ul">
+<li>W. H. Gates and <b>C. H. Papadimitriou</b>, “Bounds for sorting by prefix reversal,” Discrete Mathematics, vol. 27, no. 1, pp. 47–57, Jan. 1979, doi: 10.1016/0012-365X(79)90068-2.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgdd9ef54"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org813fa61"></a>Critical Studies<br />
+<ul class="org-ul">
+<li><a id="orgbc7a447"></a>PhilanthroCapitalism<br />
+<div class="outline-text-8" id="text-orgbc7a447">
+<ul class="org-ul">
+<li>V. Shiva, Ed., <b>Philanthrocapitalism and the Erosion of Democracy: A Global Citizens Report on the Corporate Control of Technology, Health, and Agriculture.</b> Synergetic Press, 2022.
+<ul class="org-ul">
+<li>“Philanthrocapitalism and the Erosion of Democracy: A Global Citizens’ Report on the Corporate Control of Technology, Health, and Agriculture,” Synergetic Press. <a href="https://synergeticpress.com/catalog/philanthrocapitalism-and-the-erosion-of-democracy-a-global-citizens-report-on-the-corporate-control-of-technology-health-and-agriculture/">https://synergeticpress.com/catalog/philanthrocapitalism-and-the-erosion-of-democracy-a-global-citizens-report-on-the-corporate-control-of-technology-health-and-agriculture/</a> (accessed Sep. 07, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. M. Fejerskov, The Gates Foundation’s Rise to Power: Private Authority in Global Politics, 1st edition. Routledge, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf822c44"></a>Agriculture<br />
+<div class="outline-text-8" id="text-orgf822c44">
+<ul class="org-ul">
+<li><b>“Gates Ag One: The Recolonisation Of Agriculture,”</b> Navdanya international, Nov. 30, 2020. <a href="https://navdanyainternational.org/publications/gates-ag-one-the-recolonisation-of-agriculture/">https://navdanyainternational.org/publications/gates-ag-one-the-recolonisation-of-agriculture/</a> (accessed Dec. 26, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Investigating Bill Gates control over food systems,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/bill-gates/">https://usrtk.org/category/bill-gates/</a></li>
+<li>S. Malkan, “5 questions Gates Foundation Goalkeepers should answer about their agriculture projects in Africa,” U.S. Right to Know, Sep. 20, 2023. <a href="https://usrtk.org/bill-gates/goalkeepers2023/">https://usrtk.org/bill-gates/goalkeepers2023/</a> (accessed Sep. 21, 2023).</li>
+<li>S. Malkan, “Gates Foundation agriculture project in Africa flunks review,” U.S. Right to Know, Mar. 17, 2022. <a href="https://usrtk.org/bill-gates-food-tracker/gates-foundation-agriculture-project-in-africa-flunks-review/">https://usrtk.org/bill-gates-food-tracker/gates-foundation-agriculture-project-in-africa-flunks-review/</a> (accessed Mar. 20, 2022).</li>
+<li>S. Malkan, “Bill Gates’ plans to remake food systems will harm the climate,” U.S. Right to Know, Feb. 25, 2021. <a href="https://usrtk.org/bill-gates-food-tracker/gates-foundations-plans-to-remake-food-systems-will-hurt-the-climate/">https://usrtk.org/bill-gates-food-tracker/gates-foundations-plans-to-remake-food-systems-will-hurt-the-climate/</a> (accessed Jul. 19, 2022).</li>
+<li>S. Malkan, “Bill Gates has radical plans to change our food. What’s on the menu?,” Local Futures. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.localfutures.org/bill-gates-has-radical-plans-to-change-our-food-whats-on-the-menu/">https://www.localfutures.org/bill-gates-has-radical-plans-to-change-our-food-whats-on-the-menu/</a></li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>OCA, “‘Bill Gates Is Continuing the Work of Monsanto:’ Vandana Shiva Calls Out Billionaire Philanthropist in French TV Interview,” Organic Consumers, Jun. 17, 2020. <a href="https://organicconsumers.org/bill-gates-continuing-work-monsanto-vandana-shiva-calls-out-billlionare-philanthropist-french-tv-interview/">https://organicconsumers.org/bill-gates-continuing-work-monsanto-vandana-shiva-calls-out-billlionare-philanthropist-french-tv-interview/</a> (accessed Aug. 26, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bill Gates’ ‘Magic Seeds’ Won’t Solve World Hunger But Will ‘Create Ecological Disaster,’” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/bill-gates-genetically-engineered-seeds-world-hunger-ecological-disaster/">https://childrenshealthdefense.org/defender/bill-gates-genetically-engineered-seeds-world-hunger-ecological-disaster/</a> (accessed Sep. 24, 2022).</li>
+<li>“Vandana Shiva: Bill Gates Is Promoting ‘Surveillance Agriculture,’” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/vandana-shiva-bill-gates-surveillance-agriculture/">https://childrenshealthdefense.org/defender/vandana-shiva-bill-gates-surveillance-agriculture/</a> (accessed Aug. 26, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga4d464b"></a>Vaccines<br />
+<div class="outline-text-8" id="text-orga4d464b">
+<ul class="org-ul">
+<li>“A Year After Being Deported, Novak Djokovic Makes History Winning Australian Open as Bill Gates Looks On,” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/novak-djokovic-australian-open-bill-gates/">https://childrenshealthdefense.org/defender/novak-djokovic-australian-open-bill-gates/</a> (accessed Feb. 01, 2023).</li>
+
+<li>“Bill Gates — After Reaping Huge Profits Selling BioNTech Shares — Trashes Effectiveness of COVID Vaccines,” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/bill-gates-profits-biontech-effectiveness-covid-vaccines/">https://childrenshealthdefense.org/defender/bill-gates-profits-biontech-effectiveness-covid-vaccines/</a> (accessed Jan. 28, 2023).</li>
+
+<li>“Here’s why Bill Gates wants indemnity… Are you willing to take the risk?,” Children’s Health Defense, Apr. 11, 2020. <a href="https://childrenshealthdefense.org/news/heres-why-bill-gates-wants-indemnity-are-you-willing-to-take-the-risk/">https://childrenshealthdefense.org/news/heres-why-bill-gates-wants-indemnity-are-you-willing-to-take-the-risk/</a> (accessed Jul. 04, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb38871a"></a>Misc<br />
+<div class="outline-text-8" id="text-orgb38871a">
+<ul class="org-ul">
+<li>“Pluralistic: Microsoft pinky swears that THIS TIME they’ll make security a priority (14 Jun 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/06/14/patch-tuesday/">https://pluralistic.net/2024/06/14/patch-tuesday/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Schwab, The Bill Gates Problem: Reckoning with the Myth of the Good Billionaire. Penguin Business, 2023.
+<ul class="org-ul">
+<li>A. Stirling, “The ‘Bill Gates problem’: do billionaire philanthropists skew global health research?,” Nature, vol. 626, no. 7999, pp. 477–479, Feb. 2024, doi: 10.1038/d41586-024-00394-0.</li>
+<li>A very critical work (including some sleazy Mid Day News, Saandhya Times type material) on the Bill Gates Parivar.</li>
+<li>“When Billionaires Think They Have All the Answers,” The India Forum. Accessed: Mar. 20, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/when-billionaires-think-they-have-all-answers">https://www.theindiaforum.in/book-reviews/when-billionaires-think-they-have-all-answers</a></li>
+</ul></li>
+
+<li>“The Gates Foundation is becoming an oligarchy,” UnHerd. Accessed: May 18, 2024. [Online]. Available: <a href="https://unherd.com/newsroom/the-gates-foundation-is-becoming-an-oligarchy/">https://unherd.com/newsroom/the-gates-foundation-is-becoming-an-oligarchy/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. F. Kennedy, The Real Anthony Fauci: Bill Gates, Big Pharma, and the Global War on Democracy and Public Health. Skyhorse, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. International, <b>“Vandana Shiva: Bill Gates Empires ‘Must Be Dismantled,’”</b> Regeneration International, Apr. 05, 2021. <a href="https://regenerationinternational.org/2021/04/05/vandana-shiva-bill-gates-empires-must-be-dismantled/">https://regenerationinternational.org/2021/04/05/vandana-shiva-bill-gates-empires-must-be-dismantled/</a> (accessed Aug. 26, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org80186bd"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-1-1-4">
+<ul class="org-ul">
+<li>“What Bill Gates reveals about other billionaires,” The Economist. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.economist.com/culture/2024/08/13/what-bill-gates-reveals-about-other-billionaires">https://www.economist.com/culture/2024/08/13/what-bill-gates-reveals-about-other-billionaires</a></li>
+
+<li>A. Das, Billionaire, Nerd, Savior, King: Bill Gates and His Quest to Shape Our World. New York: Avid Reader Press / Simon &amp; Schuster, 2024.</li>
+
+<li>“Inside the stressful culture at the Gates Foundation and what it was like to work with Bill and Melinda Gates, according to former employees | Business Insider India,” Business Insider. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.businessinsider.in/tech/news/inside-the-stressful-culture-at-the-gates-foundation-and-what-it-was-like-to-work-with-bill-and-melinda-gates-according-to-former-employees/articleshow/112407159.cms">https://www.businessinsider.in/tech/news/inside-the-stressful-culture-at-the-gates-foundation-and-what-it-was-like-to-work-with-bill-and-melinda-gates-according-to-former-employees/articleshow/112407159.cms</a></li>
+<li>S. Malkan, “Critiques of Gates Foundation agricultural interventions in Africa,” U.S. Right to Know. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://usrtk.org/bill-gates/critiques-of-gates-foundation/">https://usrtk.org/bill-gates/critiques-of-gates-foundation/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Sabine Hossenfelder, “Are we the idiots?” – Bill Gates on Planting Trees, (Jun. 06, 2024). Accessed: Jul. 24, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=kGRjwT7mkx8">https://www.youtube.com/watch?v=kGRjwT7mkx8</a></li>
+<li>Sabine Hossenfelder, Why Bill Gates’ New Natrium Reactor is a Big Deal, (Jul. 02, 2024). Accessed: Jul. 24, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ixSCZwFCQlc">https://www.youtube.com/watch?v=ixSCZwFCQlc</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>B. L. / K. Wash, “Melinda French Gates Is Going It Alone,” TIME. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://time.com/6989402/melinda-french-gates-interview-2024/">https://time.com/6989402/melinda-french-gates-interview-2024/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Melinda French Gates says she’s donating $1bn in support of women, families,” Al Jazeera. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/5/29/melinda-french-gates-says-shes-donating-1bn-in-support-of-women-families">https://www.aljazeera.com/economy/2024/5/29/melinda-french-gates-says-shes-donating-1bn-in-support-of-women-families</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Met Melinda verliest de Gates Foundation weer een sleutelfiguur,” Quote Net. Accessed: May 19, 2024. [Online]. Available: <a href="https://www.quotenet.nl/financien/filantropie/a60788764/gates-bill-melinda-foundation-filantropie-miljarden/">https://www.quotenet.nl/financien/filantropie/a60788764/gates-bill-melinda-foundation-filantropie-miljarden/</a></li>
+<li>“Melinda French Gates resigns as Gates Foundation co-chair, gets $12.5bn,” Al Jazeera. Accessed: May 19, 2024. [Online]. Available: <a href="https://www.aljazeera.com/news/2024/5/14/melinda-french-gates-steps-down-as-gates-foundation-co-chair">https://www.aljazeera.com/news/2024/5/14/melinda-french-gates-steps-down-as-gates-foundation-co-chair</a></li>
+
+<li>G. Sampath, “The art of Gatescrashing democracy,” The Hindu, Apr. 12, 2024. Accessed: Apr. 13, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/interview/journalist-tim-schwab-talks-about-his-new-book-the-dangers-of-unconstrained-philanthropic-power-and-where-india-figures-in-bill-gatess-scheme-of-things/article68035476.ece">https://www.thehindu.com/opinion/interview/journalist-tim-schwab-talks-about-his-new-book-the-dangers-of-unconstrained-philanthropic-power-and-where-india-figures-in-bill-gatess-scheme-of-things/article68035476.ece</a></li>
+
+<li>“Modi-Gates Meeting: A Collaboration for Profit and Control Over India’s Digital Economy.” Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://thewire.in/tech/modi-gates-meeting-a-collaboration-for-profit-and-control-over-indias-digital-economy">https://thewire.in/tech/modi-gates-meeting-a-collaboration-for-profit-and-control-over-indias-digital-economy</a></li>
+
+<li>“Investigating Bill Gates’ power over food systems,” U.S. Right to Know. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://usrtk.org/category/bill-gates/">https://usrtk.org/category/bill-gates/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bill &amp;amp; Melinda Gates Foundation,” Wikipedia. Nov. 29, 2023. Accessed: Dec. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bill_%26_Melinda_Gates_Foundation&amp;oldid=1187474068">https://en.wikipedia.org/w/index.php?title=Bill_%26_Melinda_Gates_Foundation&amp;oldid=1187474068</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. R. Matthews and V. Ho, “The grand impact of the Gates Foundation. Sixty billion dollars and one famous person can affect the spending and research focus of public agencies,” EMBO Rep, vol. 9, no. 5, pp. 409–412, May 2008, doi: 10.1038/embor.2008.52.</li>
+<li>“Meet the world’s most powerful doctor: Bill Gates,” POLITICO. Accessed: Dec. 03, 2023. [Online]. Available: <a href="https://www.politico.eu/article/bill-gates-who-most-powerful-doctor/">https://www.politico.eu/article/bill-gates-who-most-powerful-doctor/</a></li>
+<li>“The WHO has a worrisome reliance on the Bill &amp; Melinda Gates Foundation,” Quartz. Accessed: Dec. 03, 2023. [Online]. Available: <a href="https://qz.com/2102889/the-who-is-too-dependent-on-gates-foundation-donations">https://qz.com/2102889/the-who-is-too-dependent-on-gates-foundation-donations</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. Bergman, “EU Backs Bill Gates’ Plan to ‘Fight Global Warming’ by Blocking the Sun,” Slay News, Aug. 05, 2023. <a href="https://slaynews.com/news/eu-backs-bill-gates-plan-fight-global-warming-blocking-sun/">https://slaynews.com/news/eu-backs-bill-gates-plan-fight-global-warming-blocking-sun/</a> (accessed Aug. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Oxfam: 8 richest billionaires have as much wealth as the world’s poorest half,” POLITICO, Jan. 16, 2017. <a href="https://www.politico.eu/article/8-billionaires-own-the-same-as-half-the-world-bill-gates-jeff-bezos-mark-zuckerberg/">https://www.politico.eu/article/8-billionaires-own-the-same-as-half-the-world-bill-gates-jeff-bezos-mark-zuckerberg/</a> (accessed Aug. 29, 2023).</li>
+
+<li>J. Wallace and J. Erickson, Hard Drive: Bill Gates and the Making of the Microsoft Empire. New York: John Wiley &amp; Sons, 1992.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc9f4f62" class="outline-4">
+<h4 id="orgc9f4f62"><span class="section-number-4">4.1.2.</span> 1</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>R. Nader, The Rebellious CEO: 12 Leaders Who Did It Right. Brooklyn: Melville House, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc814aa" class="outline-3">
+<h3 id="orgdc814aa"><span class="section-number-3">4.2.</span> India</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgaf422ce" class="outline-4">
+<h4 id="orgaf422ce"><span class="section-number-4">4.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>C. Jaffrelot, A. Kohli, and K. Murali, <b>Business and Politics in India.</b> Oxford University Press, 2019.</li>
+
+<li>W. N. Bissell, <b>Making India Work.</b> Penguin UK, 2010.</li>
+
+<li>R. Singh, <b>The Fabric of Our Lives: The Story of Fabindia.</b> Penguin Books India, 2010.</li>
+
+<li>N. Forbes, The Struggle And The Promise: Restoring India’s Potential. Harper Collins, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58b3f9f" class="outline-4">
+<h4 id="org58b3f9f"><span class="section-number-4">4.2.2.</span> Big Business</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org45c95e9"></a>Adani<br />
+<ol class="org-ol">
+<li><a id="orgf518993"></a>General<br />
+<div class="outline-text-6" id="text-4-2-2-1-1">
+<ul class="org-ul">
+<li>“Adani Group,” Wikipedia. Nov. 14, 2022. Accessed: Nov. 15, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Adani_Group&amp;oldid=1121808044">https://en.wikipedia.org/w/index.php?title=Adani_Group&amp;oldid=1121808044</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Gautam Adani,” Wikipedia. Nov. 05, 2022. Accessed: Nov. 15, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gautam_Adani&amp;oldid=1120200847">https://en.wikipedia.org/w/index.php?title=Gautam_Adani&amp;oldid=1120200847</a></li>
+<li>R. N. Bhaskar, Gautam Adani: Reimagining Business in India and the World. Penguin Business, 2022.</li>
+</ul>
+</div>
+</li>
+<li><a id="org45f988c"></a>Misc<br />
+<div class="outline-text-6" id="text-4-2-2-1-2">
+<ul class="org-ul">
+<li>“Adani’s overseas investments can now cost India her national security vis-a-vis China: Congress.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/adanis-overseas-investments-can-now-cost-india-her-national-security-vis-a-vis-china-congress/cid/2046985">https://www.telegraphindia.com/india/adanis-overseas-investments-can-now-cost-india-her-national-security-vis-a-vis-china-congress/cid/2046985</a></li>
+
+<li>T. H. Bureau, “AAP demands Modi’s resignation over Hindenburg report,” The Hindu, Aug. 11, 2024. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/aap-demands-modis-resignation-over-hindenburg-report/article68513939.ece">https://www.thehindu.com/news/cities/Delhi/aap-demands-modis-resignation-over-hindenburg-report/article68513939.ece</a></li>
+<li>“Hindenburg Research Findings, if True, Call for Independent Judicial Probe: EAS Sarma,” NewsClick. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.newsclick.in/hindenburg-research-findings-if-true-call-independent-judicial-probe-eas-sarma">https://www.newsclick.in/hindenburg-research-findings-if-true-call-independent-judicial-probe-eas-sarma</a></li>
+<li>PTI, “Hindenburg report allegations: Adani group stocks tumble,” The Hindu, Aug. 12, 2024. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.thehindu.com/business/markets/hindenburg-report-echo-adani-group-stocks-tumble/article68515095.ece">https://www.thehindu.com/business/markets/hindenburg-report-echo-adani-group-stocks-tumble/article68515095.ece</a></li>
+<li>T. H. Bureau, “Hindenburg report on SEBI chief: Congress threatens nationwide stir if JPC demand not met,” The Hindu, Aug. 12, 2024. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/hindenburg-report-on-sebi-chief-congress-reiterates-its-demand-for-jpc-probe-into-modani-megascam/article68515219.ece">https://www.thehindu.com/news/national/hindenburg-report-on-sebi-chief-congress-reiterates-its-demand-for-jpc-probe-into-modani-megascam/article68515219.ece</a></li>
+
+<li>V. Dhoot, “Hindenburg Research alleges SEBI chief Madhabi Buch, spouse had stakes in offshore funds tied to its Adani report,” The Hindu, Aug. 10, 2024. Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/hindenburg-research-alleges-sebi-chief-held-investments-in-offshore-funds-used-by-adani-group/article68510613.ece">https://www.thehindu.com/news/national/hindenburg-research-alleges-sebi-chief-held-investments-in-offshore-funds-used-by-adani-group/article68510613.ece</a></li>
+<li>“Whistleblower Documents Reveal SEBI’s Chairperson Had Stake In Obscure Offshore Entities Used In Adani Money Siphoning Scandal – Hindenburg Research.” Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://hindenburgresearch.com/sebi-chairperson/">https://hindenburgresearch.com/sebi-chairperson/</a></li>
+<li>“Hindenburg Research alleges SEBI chair Madhabi Puri Buch had stake in obscure offshore entities used in Adani scandal,” Moneycontrol. Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://www.moneycontrol.com/news/business/sebi-chair-had-stake-in-obscure-offshore-entities-used-in-adani-scandal-hindenburg-research-reveals-12792841.html">https://www.moneycontrol.com/news/business/sebi-chair-had-stake-in-obscure-offshore-entities-used-in-adani-scandal-hindenburg-research-reveals-12792841.html</a></li>
+
+<li>PTI, “Hindenburg alleges Sebi chief held investments in offshore funds used by Adani Group,” Deccan Herald. Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://www.deccanherald.com/business/hindenburg-research-alleges-sebi-chief-held-investments-in-offshore-funds-used-by-adani-group-3145824">https://www.deccanherald.com/business/hindenburg-research-alleges-sebi-chief-held-investments-in-offshore-funds-used-by-adani-group-3145824</a></li>
+
+<li>Shivangini, “Hindenburg Research hints at new Indian target, says, ‘something big soon India,’” mint. Accessed: Aug. 11, 2024. [Online]. Available: <a href="https://www.livemint.com/companies/news/hindenburg-research-hints-at-new-indian-target-says-something-big-soon-india-11723255750992.html">https://www.livemint.com/companies/news/hindenburg-research-hints-at-new-indian-target-says-something-big-soon-india-11723255750992.html</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Documents Reveal Details of Adani Group’s Controversial Bid to Run Kenya’s Largest Airport.” Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://www.occrp.org/en/37-ccblog/ccblog/18915-documents-reveal-details-of-adani-groups-controversial-bid-to-run-kenyas-largest-airport">https://www.occrp.org/en/37-ccblog/ccblog/18915-documents-reveal-details-of-adani-groups-controversial-bid-to-run-kenyas-largest-airport</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Assure probe, backpedal later: Government’s Parliament tactic when questions rise on Adani.” Accessed: Jul. 08, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/the-assurance-project/assure-probe-backpedal-later-governments-parliament-tactic-when-questions-rise-on-adani">https://www.reporters-collective.in/the-assurance-project/assure-probe-backpedal-later-governments-parliament-tactic-when-questions-rise-on-adani</a></li>
+
+<li>“Hans Staiger Award Winner Finds Evidence Bolstering Allegations that Indian Company Overcharged for Coal,” International Center for Journalists. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.icfj.org/news/hans-staiger-award-winner-finds-evidence-bolstering-allegations-indian-company-overcharged">https://www.icfj.org/news/hans-staiger-award-winner-finds-evidence-bolstering-allegations-indian-company-overcharged</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“A coal block, unlocked for mining after industry lobbying, awarded to Adani Group.” Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/trc/coal-block-awarded-to-adani-group">https://www.reporters-collective.in/trc/coal-block-awarded-to-adani-group</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“2022 Redux: Adani Group will make most of Haryana’s long, hot summer,” Adani Watch. <a href="https://www.adaniwatch.org/2022_redux_and_a_long_hot_summer_adani_group_will_make_most_of_haryana_s_power_crisis">https://www.adaniwatch.org/2022_redux_and_a_long_hot_summer_adani_group_will_make_most_of_haryana_s_power_crisis</a> (accessed Apr. 29, 2023).</li>
+<li>“Adani group reveals mystery co-owner of Australian rail project,” The Morning Context. <a href="https://themorningcontext.com/business/adani-group-reveals-mystery-co-owner-of-australian-rail-project">https://themorningcontext.com/business/adani-group-reveals-mystery-co-owner-of-australian-rail-project</a> (accessed May 11, 2023).</li>
+<li>“Adani-Hindenburg Allegations: SC-Appointed Panel Submits Report in a Sealed Cover,” The Wire. <a href="https://thewire.in/law/adani-hindenburg-allegations-sc-appointed-panel-submits-report-in-a-sealed-cover">https://thewire.in/law/adani-hindenburg-allegations-sc-appointed-panel-submits-report-in-a-sealed-cover</a> (accessed May 11, 2023).</li>
+
+<li>A. Mukherjee, “View: Adani probe will only produce heat, not light,” The Economic Times, May 21, 2023. Accessed: May 23, 2023. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/view-adani-probe-will-only-produce-heat-not-light/articleshow/100389548.cms">https://economictimes.indiatimes.com/news/company/corporate-trends/view-adani-probe-will-only-produce-heat-not-light/articleshow/100389548.cms</a></li>
+<li>A. Mukherjee, “Who’ll finance Indian infrastructure after the Adani scandal?,” The Economic Times, Apr. 13, 2023. Accessed: Apr. 14, 2023. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/economy/infrastructure/wholl-finance-indian-infrastructure-after-the-adani-scandal/articleshow/99450418.cms?from=mdr">https://economictimes.indiatimes.com/news/economy/infrastructure/wholl-finance-indian-infrastructure-after-the-adani-scandal/articleshow/99450418.cms?from=mdr</a></li>
+
+<li>A. Rai, “NSE, BSE Put Adani Enterprises Under Short-Term Surveillance,” BQ Prime, May 24, 2023. <a href="https://www.bqprime.com/business/nse-bse-put-adani-enterprises-under-short-term-surveillance">https://www.bqprime.com/business/nse-bse-put-adani-enterprises-under-short-term-surveillance</a> (accessed May 26, 2023).</li>
+
+<li>“EXCLUSIVE: Firm linked to Adani’s infrastructure projects owned by Chinese national,” Adani Watch. <a href="https://www.adaniwatch.org/exclusive_firm_linked_to_adani_s_infrastructure_projects_owned_by_chinese_national">https://www.adaniwatch.org/exclusive_firm_linked_to_adani_s_infrastructure_projects_owned_by_chinese_national</a> (accessed Apr. 07, 2023).</li>
+
+<li>“Explained | Decoding the expert committee report on Adani,” The Hindu, Jun. 19, 2023. Accessed: Jun. 21, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/explained-decoding-the-expert-committee-report-on-adani/article66985824.ece">https://www.thehindu.com/news/national/explained-decoding-the-expert-committee-report-on-adani/article66985824.ece</a></li>
+
+<li>G. Shih, K. Mehrotra, and A. Gupta, “India cracks down on critics of coal,” Washington Post, Jun. 05, 2023. Accessed: Jun. 06, 2023. [Online]. Available: <a href="https://www.washingtonpost.com/world/2023/06/05/india-coal-adani-modi-crackdown/">https://www.washingtonpost.com/world/2023/06/05/india-coal-adani-modi-crackdown/</a></li>
+
+<li>Hindenburg-Adani case: What Does the Supreme Court’s Expert Committee Report say? | NewsClick, (May 22, 2023). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=r9S4YuyQJ_k">https://www.youtube.com/watch?v=r9S4YuyQJ_k</a></li>
+
+<li>“Hindenburg fallout generates rare unity amongst Indian opposition parties,” Adani Watch. <a href="https://www.adaniwatch.org/hindenburg_fallout_generates_rare_unity_amongst_indian_opposition_parties">https://www.adaniwatch.org/hindenburg_fallout_generates_rare_unity_amongst_indian_opposition_parties</a> (accessed Apr. 27, 2023).</li>
+
+<li>“No clean chit to Adani by SC panel – only a JPC can unearth the full truth,” The Indian Express, May 22, 2023. <a href="https://indianexpress.com/article/opinion/columns/adani-supreme-court-panel-jpc-unearth-full-truth-8623380/">https://indianexpress.com/article/opinion/columns/adani-supreme-court-panel-jpc-unearth-full-truth-8623380/</a> (accessed May 23, 2023).</li>
+
+<li>P. Burugula, “Adani funds refuse to identify their owners,” mint, May 02, 2023. <a href="https://www.livemint.com/companies/news/foreign-funds-investing-in-adani-group-refuse-to-reveal-beneficial-owners-sebi-seeks-ownership-information-11683050537297.html">https://www.livemint.com/companies/news/foreign-funds-investing-in-adani-group-refuse-to-reveal-beneficial-owners-sebi-seeks-ownership-information-11683050537297.html</a> (accessed May 06, 2023).</li>
+
+<li>“SC panel report on Adani finds no regulatory failure on price manipulation,” Moneycontrol, May 19, 2023. <a href="https://www.moneycontrol.com/news/business/sc-panel-report-on-adani-finds-no-regulatory-failure-on-price-manipulation-10622081.html">https://www.moneycontrol.com/news/business/sc-panel-report-on-adani-finds-no-regulatory-failure-on-price-manipulation-10622081.html</a> (accessed May 20, 2023).</li>
+
+<li>S. Mohapatra, “‘Pradhan Mantri Chinese Projects’: Rahul alleges Adani has Chinese links,” The Federal, Apr. 06, 2023. <a href="https://thefederal.com/news/pradhan-mantri-chinese-projects-rahul-alleges-adani-has-chinese-links/">https://thefederal.com/news/pradhan-mantri-chinese-projects-rahul-alleges-adani-has-chinese-links/</a> (accessed Apr. 07, 2023).</li>
+
+<li>“Three Adani Companies Lose Endorsement of UN-Backed Climate Group: Report,” The Wire. <a href="https://thewire.in/environment/three-adani-companies-lose-endorsement-of-un-backed-climate-group-report">https://thewire.in/environment/three-adani-companies-lose-endorsement-of-un-backed-climate-group-report</a> (accessed May 14, 2023).</li>
+
+<li>“Why doesn’t Adani disclose potential conflicts?,” Deccan Herald, Jun. 19, 2023. <a href="https://www.deccanherald.com/business/business-news/why-doesn-t-adani-disclose-potential-conflicts-1229034.html">https://www.deccanherald.com/business/business-news/why-doesn-t-adani-disclose-potential-conflicts-1229034.html</a> (accessed Jun. 20, 2023).</li>
+
+<li>“Why Has the Adani-Hindenburg Issue Become a Matter of National Concern?,” The Wire. <a href="https://thewire.in/business/why-has-the-adani-hindenburg-issue-become-a-matter-of-national-concern">https://thewire.in/business/why-has-the-adani-hindenburg-issue-become-a-matter-of-national-concern</a> (accessed May 28, 2023).</li>
+
+<li>“Why Is SEBI Taking Umbrage at Being ‘Accused’ of Investigating Adani Stock Run-up?,” Moneylife NEWS &amp; VIEWS. <a href="https://www.moneylife.in/article/why-is-sebi-taking-umbrage-at-being-accused-of-investigating-adani-stock-run-up/70790.html">https://www.moneylife.in/article/why-is-sebi-taking-umbrage-at-being-accused-of-investigating-adani-stock-run-up/70790.html</a> (accessed May 21, 2023).</li>
+
+<li>Y. Bhargava, “Adani Group market value fell 52% in 6 months up to April, 6.4% drop for India’s top 500 pvt firms,” ThePrint, Jun. 21, 2023. <a href="https://theprint.in/economy/adani-group-market-value-fell-52-in-6-months-up-to-april-6-4-drop-for-indias-top-500-pvt-firms/1635131/">https://theprint.in/economy/adani-group-market-value-fell-52-in-6-months-up-to-april-6-4-drop-for-indias-top-500-pvt-firms/1635131/</a> (accessed Jun. 21, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Rajshekhar, “From 2014 to 2019: How the Adani Group’s footprint expanded across India,” Scroll.in. <a href="https://scroll.in/article/923095/from-2014-to-2019-how-the-adani-groups-footprint-expanded-across-india">https://scroll.in/article/923095/from-2014-to-2019-how-the-adani-groups-footprint-expanded-across-india</a> (accessed Nov. 01, 2022).</li>
+<li>M. Rajshekhar, “From 2014 to 2019: How the Adani Group funded its expansion,” Scroll.in. <a href="https://scroll.in/article/923201/from-2014-to-2019-how-the-adani-group-funded-its-expansion">https://scroll.in/article/923201/from-2014-to-2019-how-the-adani-group-funded-its-expansion</a> (accessed Nov. 01, 2022).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“SBI underwrites the entire debt of ₹12,770 crore of Adani’s Navi Mumbai airport,” The Hindu, Mumbai, Mar. 29, 2022. Accessed: Aug. 13, 2022. [Online]. Available: <a href="https://www.thehindu.com/business/Industry/sbi-underwrites-the-entire-debt-of-12770-crore-of-adanis-navi-mumbai-airport/article65271859.ece">https://www.thehindu.com/business/Industry/sbi-underwrites-the-entire-debt-of-12770-crore-of-adanis-navi-mumbai-airport/article65271859.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Credit Research Firm Red-Flags Adani Group’s House of Debt,” The Wire. <a href="https://thewire.in/business/creditsights-red-flag-adani-group">https://thewire.in/business/creditsights-red-flag-adani-group</a> (accessed Aug. 25, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Reuters, “CreditSights finds errors in debt report on India’s Adani Group firms,” The Hindu, New Delhi, Sep. 08, 2022. Accessed: Sep. 09, 2022. [Online]. Available: <a href="https://www.thehindu.com/business/Industry/creditsights-finds-errors-in-debt-report-on-indias-adani-group-firms/article65866999.ece">https://www.thehindu.com/business/Industry/creditsights-finds-errors-in-debt-report-on-indias-adani-group-firms/article65866999.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. M. | Bloomberg, “Gautam Adani and his fortune drivers deserve keener spotlight, scrutiny,” Sep. 23, 2022. <a href="https://www.business-standard.com/article/companies/gautam-adani-and-his-fortune-drivers-deserve-keener-spotlight-scrutiny-122092300102_1.html">https://www.business-standard.com/article/companies/gautam-adani-and-his-fortune-drivers-deserve-keener-spotlight-scrutiny-122092300102_1.html</a> (accessed Sep. 25, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Adani Enterprises: risks of following world’s third-richest man,” Financial Times, Sep. 29, 2022.</li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Adani Group: Asia’s richest man hits back at ‘con’ allegations,” BBC News, Jan. 26, 2023. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://www.bbc.com/news/business-64408720">https://www.bbc.com/news/business-64408720</a></li>
+<li>A. M. | Bloomberg, “Gautam Adani and his fortune drivers deserve keener spotlight, scrutiny,” Sep. 23, 2022. <a href="https://www.business-standard.com/article/companies/gautam-adani-and-his-fortune-drivers-deserve-keener-spotlight-scrutiny-122092300102_1.html">https://www.business-standard.com/article/companies/gautam-adani-and-his-fortune-drivers-deserve-keener-spotlight-scrutiny-122092300102_1.html</a> (accessed Jan. 27, 2023).</li>
+<li>A. M. | Bloomberg, “Hindenburg allegations against Adani puts investor trust in India in doubt,” Jan. 26, 2023. <a href="https://www.business-standard.com/article/companies/hindenburg-allegations-against-adani-puts-investor-trust-in-india-in-doubt-123012600402_1.html">https://www.business-standard.com/article/companies/hindenburg-allegations-against-adani-puts-investor-trust-in-india-in-doubt-123012600402_1.html</a> (accessed Jan. 27, 2023).</li>
+<li>M. Sen, “Hindenburg Research says if Adani files lawsuit it will demand company documents,” mint, Jan. 26, 2023. <a href="https://www.livemint.com/news/india/hindenburg-research-says-fully-stand-by-report-on-adani-group-11674740839648.html">https://www.livemint.com/news/india/hindenburg-research-says-fully-stand-by-report-on-adani-group-11674740839648.html</a> (accessed Jan. 27, 2023).</li>
+<li>R. Neate and R. N. W. correspondent, “Adani Group firms lose $9bn in value amid short-seller claims,” The Guardian, Jan. 25, 2023. Accessed: Jan. 27, 2023. [Online]. Available: <a href="https://www.theguardian.com/business/2023/jan/25/adani-group-firms-lose-9bn-in-value-amid-short-seller-claims">https://www.theguardian.com/business/2023/jan/25/adani-group-firms-lose-9bn-in-value-amid-short-seller-claims</a></li>
+<li>S. Staff, “Adani Group mulling legal action against Hindenburg Research over stock manipulation allegations,” Scroll.in, Jan. 26, 2023. <a href="https://scroll.in/latest/1042636/adani-group-mulling-legal-action-against-hindenburg-research-over-stock-manipulation-allegations">https://scroll.in/latest/1042636/adani-group-mulling-legal-action-against-hindenburg-research-over-stock-manipulation-allegations</a> (accessed Jan. 27, 2023).</li>
+<li>“Hindenburg Shorts Adani Group, Flags Debt and Accounting Concerns,” The Wire. <a href="https://thewire.in/business/hindenburg-shorts-adani-group-flags-debt-and-accounting-concerns">https://thewire.in/business/hindenburg-shorts-adani-group-flags-debt-and-accounting-concerns</a> (accessed Jan. 26, 2023).</li>
+<li>“The Adani Short Sale Puts Investor Trust in India in Doubt,” Bloomberg.com, Jan. 26, 2023. Accessed: Jan. 26, 2023. [Online]. Available: <a href="https://www.bloomberg.com/opinion/articles/2023-01-26/adani-hindenburg-saga-puts-investor-trust-in-india-in-doubt">https://www.bloomberg.com/opinion/articles/2023-01-26/adani-hindenburg-saga-puts-investor-trust-in-india-in-doubt</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga3bb95f"></a>Murthy<br />
+<ol class="org-ol">
+<li><a id="org6f12af0"></a>General<br />
+<div class="outline-text-6" id="text-4-2-2-2-1">
+<ul class="org-ul">
+<li>“N. R. Narayana Murthy,” Wikipedia. Nov. 01, 2022. Accessed: Nov. 01, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=N._R._Narayana_Murthy&amp;oldid=1119342315">https://en.wikipedia.org/w/index.php?title=N._R._Narayana_Murthy&amp;oldid=1119342315</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org59f2e97"></a>Misc<br />
+<div class="outline-text-6" id="text-4-2-2-2-2">
+<ul class="org-ul">
+<li>A. Dhillon, “‘His humility is genuine’: Rishi Sunak’s father-in-law, the billionaire who does the dishes,” The Guardian, Oct. 25, 2022. Accessed: Nov. 01, 2022. [Online]. Available: <a href="https://www.theguardian.com/politics/2022/oct/25/rishi-sunak-father-in-law-narayana-murthy-billionaire-who-does-the-dishes">https://www.theguardian.com/politics/2022/oct/25/rishi-sunak-father-in-law-narayana-murthy-billionaire-who-does-the-dishes</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“After a bitter train journey in Serbia that put him behind bars, Narayana Murthy became a ‘compassionate capitalist,’” The Economic Times, Jan. 08, 2020. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://economictimes.indiatimes.com/magazines/panache/after-a-bitter-train-journey-in-serbia-that-put-him-behind-bars-narayana-murthy-became-a-compassionate-capitalist/articleshow/73153331.cms?from=mdr">https://economictimes.indiatimes.com/magazines/panache/after-a-bitter-train-journey-in-serbia-that-put-him-behind-bars-narayana-murthy-became-a-compassionate-capitalist/articleshow/73153331.cms?from=mdr</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org5d10235"></a>Tata<br />
+<ol class="org-ol">
+<li><a id="org90be5eb"></a>General<br /></li>
+<li><a id="org3769789"></a>Misc<br />
+<div class="outline-text-6" id="text-4-2-2-3-2">
+<ul class="org-ul">
+<li>S. Khilnani, Incarnations: A History of India in 50 Lives [Paperback] Sunil Khilnani. Penguin Random House India, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. B. &amp; R. Gopalakrishnan, “A new book about Jamsetji Tata explains his visions for homegrown industries and honing local talent,” Scroll.in. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://scroll.in/article/1071240/a-new-book-about-jamsetji-tata-explains-his-visions-for-homegrown-industries-and-honing-local-talent">https://scroll.in/article/1071240/a-new-book-about-jamsetji-tata-explains-his-visions-for-homegrown-industries-and-honing-local-talent</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5f90889" class="outline-4">
+<h4 id="org5f90889"><span class="section-number-4">4.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>“When Modi Govt, RBI told half-truths and lies to downplay damage to small businesses.” Accessed: Jul. 13, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/the-assurance-project/when-modi-govt-rbi-told-half-truths-and-lies-to-downplay-damage-to-small-businesses">https://www.reporters-collective.in/the-assurance-project/when-modi-govt-rbi-told-half-truths-and-lies-to-downplay-damage-to-small-businesses</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why business icons are terrified of the Modi government.” Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://caravanmagazine.in/commentary/why-indian-corporate-icons-terrified-modi-government">https://caravanmagazine.in/commentary/why-indian-corporate-icons-terrified-modi-government</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India Inc. Must Only Cheer Growth, Not Question It,” Bloomberg.com, May 20, 2024. Accessed: May 21, 2024. [Online]. Available: <a href="https://www.bloomberg.com/opinion/articles/2024-05-20/india-inc-must-cheer-growth-not-question-it">https://www.bloomberg.com/opinion/articles/2024-05-20/india-inc-must-cheer-growth-not-question-it</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Mandlecha and D. Sethi, The Pilani Pioneers: Inspiring Success Stories of 25 BITS Pilani Graduates. New Delhi: Pan, 2021.</li>
+<li>S. Pandey, D. S. Sundararajan, and S. Shashin, The IITM Nexus : 16 Amazing Journeys of IIT Madras Graduates Who Turned into Business Tycoons. Notion Press, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. to P. R. Mashelkar and L. to P. R. Pandit, Leapfrogging to Pole-vaulting: Creating the Magic of Radical yet Sustainable Transformation [Hardcover] Mashelkar, Leapfrogging to Pole-vaulting RA and Pandit, Leapfrogging to Pole-vaulting Ravi. Penguin Viking, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. R. A, S. K. Jha, J. Thomas, R. Chinchwadkar, A. G. Mahindra, and K. VijayRaghavan, SHIFTING ORBITS, First Edition. Hyderabad, Telangana, India: Universities Press India Pvt. Ltd., 2021.</li>
+<li>Launch of iVEIN book Shifting Orbits: Decoding the&#x2026; on July 23 by Amitabh Kant - CEO, NITI Aayog, (Jul. 23, 2021). Accessed: Sep. 25, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=R0qPVSSP0Yc">https://www.youtube.com/watch?v=R0qPVSSP0Yc</a></li>
+<li>“iVEIN.” <a href="https://doms.iitm.ac.in/iVEIN/">https://doms.iitm.ac.in/iVEIN/</a> (accessed Sep. 23, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Chandrasekaran and R. Purushothaman, Bridgital Nation: Solving Technology’s P: Solving Technology’s People Problem. Gurgaon, Haryana, India: Penguin Allen Lane, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org8caafc5" class="outline-2">
+<h2 id="org8caafc5"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4bb9515" class="outline-3">
+<h3 id="org4bb9515"><span class="section-number-3">5.1.</span> 0</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org9a2efbd" class="outline-4">
+<h4 id="org9a2efbd"><span class="section-number-4">5.1.1.</span> Monsanto</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Monsanto Roundup Trial Tracker Archives,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/monsanto-roundup-trial-tracker/">https://usrtk.org/category/monsanto-roundup-trial-tracker/</a></li>
+<li>“Reporting on Monsanto/Bayer,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/monsanto/">https://usrtk.org/category/monsanto/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “‘Definitive historical account’ of Monsanto provides motherlode of valuable material.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material">https://www.gmwatch.org/en/106-news/latest-news/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material</a></li>
+
+<li>“Seed Money | Bart Elmore.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://www.bartelmore.com/work/seedmoney">https://www.bartelmore.com/work/seedmoney</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd8237d2" class="outline-3">
+<h3 id="orgd8237d2"><span class="section-number-3">5.2.</span> 1</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org1a971d1" class="outline-4">
+<h4 id="org1a971d1"><span class="section-number-4">5.2.1.</span> Patagonia</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>N. Gallagher and L. Myers, <b>Patagonia Tools for Grassroots Activists: Best Practices for Success in the Environmental Movement.</b> Patagonia, 2016.</li>
+
+<li>Y. Chouinard, V. Stanley, D. Chadwick, and G. Lopez, <b>Books That Change Lives: A Sampling from Patagonia Books.</b> Patagonia, 2014.</li>
+
+<li>Y. Chouinard and V. Stanley, <b>The Responsible Company: What We’ve Learned from Patagonia’s First 40 Years.</b> Patagonia, 2013.</li>
+
+<li>Y. Chouinard, <b>Let My People Go Surfing: The Education of a Reluctant Businessman.</b> Penguin Books, 2006.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf3ea191" class="outline-3">
+<h3 id="orgf3ea191"><span class="section-number-3">5.3.</span> Logstics</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>D. Cowen, The Deadly Life of Logistics: Mapping Violence in Global Trade. University of Minnesota Press, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b45082" class="outline-3">
+<h3 id="org0b45082"><span class="section-number-3">5.4.</span> Disaster Capitalism</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>N. Klein, “Why was there no water to fight the fire in Maui?,” The Guardian, Aug. 17, 2023. Accessed: Aug. 20, 2023. [Online]. Available: <a href="https://www.theguardian.com/commentisfree/2023/aug/17/hawaii-fires-maui-water-rights-disaster-capitalism">https://www.theguardian.com/commentisfree/2023/aug/17/hawaii-fires-maui-water-rights-disaster-capitalism</a></li>
+
+<li>“The Climate Crisis, Maui Wildfires &amp; Why Disasters Are Becoming Deadlier,” Democracy Now! <a href="https://www.democracynow.org/2023/8/14/maui_wildfires_climate_crisis_michael_mann">https://www.democracynow.org/2023/8/14/maui_wildfires_climate_crisis_michael_mann</a> (accessed Aug. 20, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd51bad4" class="outline-2">
+<h2 id="orgd51bad4"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Crash Course on rentier and monopoly capitalism | Transnational Institute.” Accessed: Sep. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/event/crash-course-on-rentier-and-monopoly-capitalism">https://www.tni.org/en/event/crash-course-on-rentier-and-monopoly-capitalism</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Denniss, “Tech billionaire Elon Musk is on track to become the world’s first trillionaire. It’s a sign markets aren’t working,” The Conversation. Accessed: Sep. 12, 2024. [Online]. Available: <a href="http://theconversation.com/tech-billionaire-elon-musk-is-on-track-to-become-the-worlds-first-trillionaire-its-a-sign-markets-arent-working-238560">http://theconversation.com/tech-billionaire-elon-musk-is-on-track-to-become-the-worlds-first-trillionaire-its-a-sign-markets-arent-working-238560</a></li>
+
+<li>“Pluralistic: America’s best-paid CEOs have the worst-paid employees (09 Sep 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/09/09/low-wage-100/">https://pluralistic.net/2024/09/09/low-wage-100/</a></li>
+
+<li>“Pluralistic: Corporate Bullshit (19 Aug 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 26, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/08/19/apologetics-spotters-guide/">https://pluralistic.net/2024/08/19/apologetics-spotters-guide/</a></li>
+
+<li>S. Tombs and D. Whyte, The Corporate Criminal: Why Corporations Must Be Abolished, 1st edition. Abingdon, Oxon ; New York, NY: Routledge, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Phillips and M. Rozworski, The People’s Republic of Walmart: How the World’s Biggest Corporations are Laying the Foundation for Socialism. London New York: Verso, 2019.</li>
+
+<li>“Corporate Bullsh*t,” The New Press. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://thenewpress.com/books/corporate-bullsht">https://thenewpress.com/books/corporate-bullsht</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. McGrath, “50 Over 50: Innovation,” Forbes. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://www.forbes.com/sites/maggiemcgrath/2024/08/01/50-over-50-innovation/">https://www.forbes.com/sites/maggiemcgrath/2024/08/01/50-over-50-innovation/</a></li>
+
+<li>R. Dalio, “The Coming Great Conflict,” TIME. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://time.com/6991271/civil-war-conflict-ray-dalio/">https://time.com/6991271/civil-war-conflict-ray-dalio/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“2023 B Lab Global Annual Report - Infogram.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://infogram.com/1pg2rxgk96vl5rf95zkdk3mdjwbw05mwrny">https://infogram.com/1pg2rxgk96vl5rf95zkdk3mdjwbw05mwrny</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Business for Humanity.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://leadershipsociety.world/knowledgehub/BusinessforHumanity/">https://leadershipsociety.world/knowledgehub/BusinessforHumanity/</a></li>
+
+<li>“www.RegenerativeInvestingInstitute.org.” Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.regenerativeinvestinginstitute.org/">https://www.regenerativeinvestinginstitute.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Future of Business and Finance.” <a href="http://www.amazon.in/-/dp/B087RMF3VC?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B087RMF3VC?ref=dbs_m_mng_rwt_0000_share</a> (accessed Jul. 11, 2023).</li>
+
+<li>“Banking, Money and International Finance.” <a href="http://www.amazon.in/-/dp/B08BHM3QR8?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B08BHM3QR8?ref=dbs_m_mng_rwt_0000_share</a> (accessed Jul. 11, 2023).</li>
+
+<li>M. Mazzucato and R. Collington, The Big Con: How the Consulting Industry Weakens our Businesses, Infantilizes our Governments and Warps our Economies. London: Allen Lane, 2023.</li>
+
+<li>“How to Get Companies to Make Investments That Benefit Everyone,” HBS Working Knowledge, Jan. 10, 2022. <a href="http://hbswk.hbs.edu/item/how-to-get-companies-to-make-investments-that-benefit-everyone">http://hbswk.hbs.edu/item/how-to-get-companies-to-make-investments-that-benefit-everyone</a> (accessed Jan. 14, 2022).</li>
+
+<li>K. H. Blanchard and S. M. Bowles, <i>Big Bucks!: How to Make Serious Money for Both You and Your Company.</i> HarperCollinsBusiness, 2001.</li>
+
+<li>R. T. Kiyosaki, <i>Rich Dad Poor Dad: What the Rich Teach Their Kids about Money That the Poor and Middle Class Do Not</i>!, Plata Publishing, 2017.</li>
+
+<li>T. J. Stanley and W. D. Danko, <i>The Millionaire Next Door: The Surprising Secrets of America's Wealthy.</i> Government Institutes, 2010.</li>
+
+<li>B. Gates, N. Myhrvold, and P. Rinearson, <i>The Road Ahead.</i> Viking, 1995.</li>
+
+<li>Robert A. Gore, Everything I Know About Business I Learned From The Godfather.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-22 Sun 09:42</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
