@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-23 Mon 10:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tax</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Tax</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org800b251">1. General</a></li>
+<li><a href="#org253e252">2. STEMM</a>
+<ul>
+<li><a href="#orgdfcc60a">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org0d26edf">2.1.1. Complexity Science</a></li>
+<li><a href="#orgf09a372">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga6def0c">2.2. Environment</a>
+<ul>
+<li><a href="#org52eea90">2.2.1. GreenPeace International</a></li>
+</ul>
+</li>
+<li><a href="#orgd7d636d">2.3. CSE</a>
+<ul>
+<li><a href="#org5211113">2.3.1. General</a></li>
+<li><a href="#orgeddba3c">2.3.2. Fair Tech</a></li>
+<li><a href="#org8d4c88b">2.3.3. Everyday Computing</a></li>
+<li><a href="#orgac8364a">2.3.4. AI</a></li>
+<li><a href="#orge90429e">2.3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org789f12a">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org891d9fa">3. World</a>
+<ul>
+<li><a href="#org12ce066">3.1. Orgs</a></li>
+<li><a href="#orgcafbf02">3.2. Nation States</a>
+<ul>
+<li><a href="#orge5d13f2">3.2.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orge6e9433">3.3. Economics</a>
+<ul>
+<li><a href="#org1afad3a">3.3.1. OXFAM</a></li>
+</ul>
+</li>
+<li><a href="#org862f158">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7ab9f54">4. Core</a></li>
+<li><a href="#orgd98f1ac">5. Special Topics</a>
+<ul>
+<li><a href="#org1f99018">5.1. Documentaries</a></li>
+</ul>
+</li>
+<li><a href="#orgcfb6d3a">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org800b251" class="outline-2">
+<h2 id="org800b251"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Tax,” Wikipedia. Sep. 20, 2024. Accessed: Sep. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tax&amp;oldid=1246746435">https://en.wikipedia.org/w/index.php?title=Tax&amp;oldid=1246746435</a></li>
+
+<li>S. Smith, Taxation VSI: A Very Short Introduction, Illustrated edition. Oxford: Oxford University Press, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org253e252" class="outline-2">
+<h2 id="org253e252"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgdfcc60a" class="outline-3">
+<h3 id="orgdfcc60a"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org0d26edf" class="outline-4">
+<h4 id="org0d26edf"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Complexity Science Hub * News * VAT Data Could Help Countries Prepare Better For Crises.” Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://csh.ac.at/news/vat-data-could-help-countries-prepare-better-for-crises/">https://csh.ac.at/news/vat-data-could-help-countries-prepare-better-for-crises/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf09a372" class="outline-4">
+<h4 id="orgf09a372"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Predicting Tax Treaty Formation Using Machine Learning: Implications for Parliamentary Practice. IIASA Researcher Presents Study on the Day of Parliamentary Research 2024,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jun-2024/predicting-tax-treaty-formation-using-machine-learning-implications-for-parliamentary">https://iiasa.ac.at/news/jun-2024/predicting-tax-treaty-formation-using-machine-learning-implications-for-parliamentary</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga6def0c" class="outline-3">
+<h3 id="orga6def0c"><span class="section-number-3">2.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org52eea90" class="outline-4">
+<h4 id="org52eea90"><span class="section-number-4">2.2.1.</span> GreenPeace International</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“We need global tax rules that work for people like me (not multinational corporations and the ultra rich),” Greenpeace International. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/68588/we-need-global-tax-rules-that-work-for-people-like-me-not-multinational-corporations-and-the-ultra-rich/">https://www.greenpeace.org/international/story/68588/we-need-global-tax-rules-that-work-for-people-like-me-not-multinational-corporations-and-the-ultra-rich/</a></li>
+<li>“Greenpeace welcomes historic G20 support for taxing the ultra rich,” Greenpeace International. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/68607/greenpeace-welcomes-historic-g20-support-for-taxing-the-ultra-rich/">https://www.greenpeace.org/international/press-release/68607/greenpeace-welcomes-historic-g20-support-for-taxing-the-ultra-rich/</a></li>
+<li>“Open Letter to the Man Who Could Change How Global Taxes Work,” Greenpeace International. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/66705/open-letter-to-the-man-who-could-change-how-global-taxes-work/">https://www.greenpeace.org/international/story/66705/open-letter-to-the-man-who-could-change-how-global-taxes-work/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7d636d" class="outline-3">
+<h3 id="orgd7d636d"><span class="section-number-3">2.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org5211113" class="outline-4">
+<h4 id="org5211113"><span class="section-number-4">2.3.1.</span> General</h4>
+</div>
+<div id="outline-container-orgeddba3c" class="outline-4">
+<h4 id="orgeddba3c"><span class="section-number-4">2.3.2.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>“Call on the IRS to provide libre tax-filing software — Free Software Foundation — Working together for free software.” Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.fsf.org/blogs/community/call-on-the-irs-to-provide-libre-tax-filing-software">https://www.fsf.org/blogs/community/call-on-the-irs-to-provide-libre-tax-filing-software</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8d4c88b" class="outline-4">
+<h4 id="org8d4c88b"><span class="section-number-4">2.3.3.</span> Everyday Computing</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org95756a5"></a>Official GoI<br />
+<div class="outline-text-5" id="text-2-3-3-1">
+<ul class="org-ul">
+<li>“TRACES | Tax Payer Registration.” <a href="https://www.tdscpc.gov.in/app/tapreg1.xhtml">https://www.tdscpc.gov.in/app/tapreg1.xhtml</a> (accessed Jul. 02, 2023).</li>
+<li>“TRACES | Tax Payer Registration.” <a href="https://www.tdscpc.gov.in/app/tapreg2.xhtml">https://www.tdscpc.gov.in/app/tapreg2.xhtml</a> (accessed Aug. 10, 2022).</li>
+
+<li>“Income Tax Portal, Government of India Login Page.” <a href="https://eportal.incometax.gov.in/iec/foservices/#/login">https://eportal.incometax.gov.in/iec/foservices/#/login</a> (accessed Jul. 02, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge359c31"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-3-2">
+<ul class="org-ul">
+<li>ClearTax, “Income Tax efiling in India for FY 2021-22 (AY 2022-23) : ClearTax | Upload your Form-16 to e-File Income Tax Returns.” <a href="https://cleartax.in">https://cleartax.in</a> (accessed Aug. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>TurboTax, “Taxes Done Smarter With TurboTax #1 Best-Selling Tax Software,” TurboTax. <a href="https://turbotax.intuit.com/">https://turbotax.intuit.com/</a> (accessed Jul. 02, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgac8364a" class="outline-4">
+<h4 id="orgac8364a"><span class="section-number-4">2.3.4.</span> AI</h4>
+<div class="outline-text-4" id="text-2-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org920e768"></a>General<br /></li>
+<li><a id="orgc692f0b"></a>India<br />
+<div class="outline-text-5" id="text-2-3-4-2">
+<ul class="org-ul">
+<li>“Page not found,” Vidhi Centre for Legal Policy. Accessed: May 29, 2024. [Online]. Available: <a href="https://vidhilegalpolicy.in/2020/03/27/can-artificial-intelligence-improve-tax-assessment-in-india/">https://vidhilegalpolicy.in/2020/03/27/can-artificial-intelligence-improve-tax-assessment-in-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcb8a793"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-4-3">
+<ul class="org-ul">
+<li>“Tax AI,” xkcd. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://xkcd.com/2265/">https://xkcd.com/2265/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>adam.gleason@thomsonreuters.com, “The evolution of artificial intelligence,” Tax &amp; Accounting Blog Posts by Thomson Reuters. Accessed: May 29, 2024. [Online]. Available: <a href="https://tax.thomsonreuters.com/blog/the-evolution-of-artificial-intelligence/">https://tax.thomsonreuters.com/blog/the-evolution-of-artificial-intelligence/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge90429e" class="outline-4">
+<h4 id="orge90429e"><span class="section-number-4">2.3.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<ul class="org-ul">
+<li>“The Tax-Preparation Racket Might Be Coming to an End.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://jacobin.com/2024/06/tax-preparation-intuit-irs-direct-file/">https://jacobin.com/2024/06/tax-preparation-intuit-irs-direct-file/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Taxes, Automation, and the Future of Labor,” MIT Work of the Future, Sep. 29, 2020. <a href="https://workofthefuture.mit.edu/research-post/taxes-automation-and-the-future-of-labor/">https://workofthefuture.mit.edu/research-post/taxes-automation-and-the-future-of-labor/</a> (accessed Aug. 02, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org789f12a" class="outline-3">
+<h3 id="org789f12a"><span class="section-number-3">2.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org891d9fa" class="outline-2">
+<h2 id="org891d9fa"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org12ce066" class="outline-3">
+<h3 id="org12ce066"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Tax Justice Network,” Tax Justice Network. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://taxjustice.net/">https://taxjustice.net/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcafbf02" class="outline-3">
+<h3 id="orgcafbf02"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orge5d13f2" class="outline-4">
+<h4 id="orge5d13f2"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3d08c94"></a>General<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>M. C. Purohit and V. K. Purohit, The Oxford Handbook of Tax System in India: An Analysis of Tax Policy and Governance. Oxford University Press, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6b0eca8"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org241f93a"></a>GoI Official<br />
+<div class="outline-text-6" id="text-3-2-1-2-1">
+<ul class="org-ul">
+<li>“Home - Central Board of Direct Taxes, Government of India.” <a href="https://www.incometaxindia.gov.in/Pages/default.aspx">https://www.incometaxindia.gov.in/Pages/default.aspx</a> (accessed Aug. 03, 2022).
+<ul class="org-ul">
+<li>“Frequently Asked Questions.” <a href="https://incometaxindia.gov.in/Pages/faqs.aspx?k=General%20FAQs">https://incometaxindia.gov.in/Pages/faqs.aspx?k=General%20FAQs</a> (accessed Aug. 03, 2022).</li>
+<li>“File Income Tax Return.” <a href="https://incometaxindia.gov.in/Pages/tax-services/file-income-tax-return.aspx">https://incometaxindia.gov.in/Pages/tax-services/file-income-tax-return.aspx</a> (accessed Aug. 03, 2022).</li>
+<li>“Pay Tax Online​​.” <a href="https://incometaxindia.gov.in/Pages/tax-services/pay-tax-online.aspx">https://incometaxindia.gov.in/Pages/tax-services/pay-tax-online.aspx</a> (accessed Aug. 03, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“National Securities Depository Limited,” Wikipedia. Jul. 29, 2022. Accessed: Aug. 03, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=National_Securities_Depository_Limited&amp;oldid=1101066218">https://en.wikipedia.org/w/index.php?title=National_Securities_Depository_Limited&amp;oldid=1101066218</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2cc2fa5"></a>Income Tax<br />
+<div class="outline-text-6" id="text-3-2-1-2-2">
+<ul class="org-ul">
+<li>B. B. Lal, Income Tax. Pearson Education India, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga3fc14d"></a>GST<br />
+<ul class="org-ul">
+<li><a id="org0637bf9"></a>General<br />
+<div class="outline-text-7" id="text-org0637bf9">
+<ul class="org-ul">
+<li>“Goods and Services Tax (India),” Wikipedia. Sep. 12, 2022. Accessed: Dec. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Goods_and_Services_Tax_(India)&amp;oldid=1109908556#cite_note-51">https://en.wikipedia.org/w/index.php?title=Goods_and_Services_Tax_(India)&amp;oldid=1109908556#cite_note-51</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org738a84d"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org54a286a"></a>Critical Studies<br />
+<div class="outline-text-8" id="text-org54a286a">
+<ul class="org-ul">
+<li>A. Kumar, Ground Scorching Tax. Penguin Random House India Private Limited, 2019.</li>
+
+<li>“The Structurally Flawed GST : Finding an Alternative | Economic and Political Weekly.” <a href="https://www.epw.in/journal/2019/9/perspectives/structurally-flawed-gst.html">https://www.epw.in/journal/2019/9/perspectives/structurally-flawed-gst.html</a> (accessed Dec. 04, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org44fea99"></a>Misc<br />
+<div class="outline-text-7" id="text-org44fea99">
+<ul class="org-ul">
+<li>G. R. Reddy, Indian Fiscal Federalism. Oxford University Press, 2019.</li>
+
+<li>G. Bhattacharjee and D. Bhattacharya, GST and Its Aftermath: Is Consumer Really the King? SAGE Publishing India, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org597409b"></a>Wealth Tax<br />
+<div class="outline-text-6" id="text-3-2-1-2-4">
+<ul class="org-ul">
+<li>J. Ghosh, “Wealth tax: Keep it simple, tax the 177 dollar billionaires in India,” Deccan Herald. Accessed: May 19, 2024. [Online]. Available: <a href="https://www.deccanherald.com/opinion/wealth-tax-keep-it-simple-tax-the-177-dollar-billionaires-in-india-1234630.html">https://www.deccanherald.com/opinion/wealth-tax-keep-it-simple-tax-the-177-dollar-billionaires-in-india-1234630.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Proposals for a wealth tax package to tackle extreme inequalities in India,” WID - World Inequality Database. Accessed: May 25, 2024. [Online]. Available: <a href="https://wid.world/news-article/proposals-for-a-wealth-tax-package-to-tackle-extreme-inequalities-in-india/">https://wid.world/news-article/proposals-for-a-wealth-tax-package-to-tackle-extreme-inequalities-in-india/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Towards Tax Justice and Wealth Redistribution in India | Economic and Political Weekly.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.epw.in/journal/special-articles/towards-tax-justice-and-wealth-redistribution.html">https://www.epw.in/journal/special-articles/towards-tax-justice-and-wealth-redistribution.html</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org222c35e"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org9059c5f"></a>AIS<br />
+<div class="outline-text-6" id="text-3-2-1-3-1">
+<ul class="org-ul">
+<li>S. Kulkarni, “What is the password to open Annual Information Statement (AIS) after downloading,” The Economic Times, Aug. 08, 2022. Accessed: Aug. 09, 2022. [Online]. Available: <a href="https://economictimes.indiatimes.com/wealth/tax/what-is-the-password-to-open-annual-information-statement-ais-after-downloading/articleshow/93002275.cms">https://economictimes.indiatimes.com/wealth/tax/what-is-the-password-to-open-annual-information-statement-ais-after-downloading/articleshow/93002275.cms</a></li>
+<li>“FAQs on AIS (Annual Information Statement),” Income Tax Department. <a href="https://www.incometax.gov.in/iec/foportal/ais-faq">https://www.incometax.gov.in/iec/foportal/ais-faq</a> (accessed Aug. 09, 2022).</li>
+<li>P. Motiani, “What is Annual Information Statement and how to download AIS from new income tax portal,” The Economic Times, Jul. 28, 2022. Accessed: Aug. 09, 2022. [Online]. Available: <a href="https://economictimes.indiatimes.com/wealth/tax/what-is-ais-and-how-to-download-it-from-new-income-tax-portal/articleshow/87732363.cms">https://economictimes.indiatimes.com/wealth/tax/what-is-ais-and-how-to-download-it-from-new-income-tax-portal/articleshow/87732363.cms</a></li>
+<li>V. Vasal, “What Is The Annual Information Statement?,” Forbes Advisor INDIA, Jun. 10, 2022. <a href="https://www.forbes.com/advisor/in/tax/what-is-the-annual-information-statement/">https://www.forbes.com/advisor/in/tax/what-is-the-annual-information-statement/</a> (accessed Aug. 09, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org026860f"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-4">
+<ul class="org-ul">
+<li>“Lok Sabha Passes Bill Easing Long-Term Capital Gains Tax Policy For Real Estate Transactions,” The Wire. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://thewire.in/politics/ls-finance-bill-ltcg-real-estate-insurance-gst">https://thewire.in/politics/ls-finance-bill-ltcg-real-estate-insurance-gst</a></li>
+
+<li>“The Spirit Underlying Some Recent Proposals for Redistributive Taxation,” The India Forum. Accessed: Jul. 03, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/forum/spirit-underlying-some-recent-proposals-redistributive-taxation">https://www.theindiaforum.in/forum/spirit-underlying-some-recent-proposals-redistributive-taxation</a></li>
+
+<li>“Towards Tax Justice and Wealth Redistribution in India,” The India Forum. Accessed: May 25, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/economy/towards-tax-justice-and-wealth-redistribution-india">https://www.theindiaforum.in/economy/towards-tax-justice-and-wealth-redistribution-india</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge6e9433" class="outline-3">
+<h3 id="orge6e9433"><span class="section-number-3">3.3.</span> Economics</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org1afad3a" class="outline-4">
+<h4 id="org1afad3a"><span class="section-number-4">3.3.1.</span> OXFAM</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“Take Part,” MAKE RICH POLLUTERS PAY. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://makerichpolluterspay.org/take-part/">https://makerichpolluterspay.org/take-part/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org862f158" class="outline-3">
+<h3 id="org862f158"><span class="section-number-3">3.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org7ab9f54" class="outline-2">
+<h2 id="org7ab9f54"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>B. Corp, <a href="https://assets.ctfassets.net/l575jm7617lt/4RGdKtk7BQfyX9hsegCXA1/c9fbe3a535c5d269e2c227c7a8f6ad9c/Tax_Strategies__Tax_Advisory_Services_and_Pending_Tax_Litigation.pdf">Tax Strategies &amp; Tax Advisory Services (2020, revised)</a> . (accessed Mar. 31, 2022).</li>
+
+<li>“The Joy of Tax : Murphy, Richard: Amazon.in: Books.” Accessed: Apr. 11, 2024. [Online]. Available: <a href="https://www.amazon.in/Joy-Tax-Richard-Murphy/dp/0552171611">https://www.amazon.in/Joy-Tax-Richard-Murphy/dp/0552171611</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd98f1ac" class="outline-2">
+<h2 id="orgd98f1ac"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org1f99018" class="outline-3">
+<h3 id="org1f99018"><span class="section-number-3">5.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“TAX WARS - OFFICIAL WEBSITE,” TAX WARS - OFFICIAL WEBSITE. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://taxwars.org/en/">https://taxwars.org/en/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfb6d3a" class="outline-2">
+<h2 id="orgcfb6d3a"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-23 Mon 10:47</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
