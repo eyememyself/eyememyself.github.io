@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-24 Tue 12:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dairy</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Dairy</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9e838f5">1. General</a></li>
+<li><a href="#org9e74ff2">2. World</a>
+<ul>
+<li><a href="#org7b9a0e0">2.1. Products</a>
+<ul>
+<li><a href="#orgeb150b9">2.1.1. <b>Organic</b></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5e1d683">3. Core</a>
+<ul>
+<li><a href="#org350a33f">3.1. Milk</a>
+<ul>
+<li><a href="#org342c00d">3.1.1. General</a></li>
+<li><a href="#orge5e120c">3.1.2. <b>Organic</b></a></li>
+<li><a href="#org319b024">3.1.3. Breast Milk</a></li>
+<li><a href="#org99dee5b">3.1.4. Camel Milk</a></li>
+<li><a href="#org2b1044d">3.1.5. Milk Powder</a></li>
+<li><a href="#org284d268">3.1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga5980f9">3.2. Cheese</a>
+<ul>
+<li><a href="#orgfd45a46">3.2.1. <b>Organic</b></a></li>
+<li><a href="#org5a1231e">3.2.2. Cottage Cheese, Paneer</a></li>
+<li><a href="#orgc124015">3.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org06ce878">3.3. Cream</a></li>
+<li><a href="#orgf8f1469">3.4. Butter</a>
+<ul>
+<li><a href="#org197790f">3.4.1. General</a></li>
+<li><a href="#org498df54">3.4.2. <b>Organic</b></a></li>
+<li><a href="#orgaa7346b">3.4.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga0568a2">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org9e838f5" class="outline-2">
+<h2 id="org9e838f5"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org9e74ff2" class="outline-2">
+<h2 id="org9e74ff2"><span class="section-number-2">2.</span> World</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7b9a0e0" class="outline-3">
+<h3 id="org7b9a0e0"><span class="section-number-3">2.1.</span> Products</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgeb150b9" class="outline-4">
+<h4 id="orgeb150b9"><span class="section-number-4">2.1.1.</span> <b>Organic</b></h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e1d683" class="outline-2">
+<h2 id="org5e1d683"><span class="section-number-2">3.</span> Core</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org350a33f" class="outline-3">
+<h3 id="org350a33f"><span class="section-number-3">3.1.</span> Milk</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org342c00d" class="outline-4">
+<h4 id="org342c00d"><span class="section-number-4">3.1.1.</span> General</h4>
+</div>
+<div id="outline-container-orge5e120c" class="outline-4">
+<h4 id="orge5e120c"><span class="section-number-4">3.1.2.</span> <b>Organic</b></h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org319b024" class="outline-4">
+<h4 id="org319b024"><span class="section-number-4">3.1.3.</span> Breast Milk</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgd87e6e8"></a>General<br /></li>
+<li><a id="org66c4abc"></a>Safety<br />
+<div class="outline-text-5" id="text-3-1-3-2">
+<ul class="org-ul">
+<li>OCA, “Greens Warn: German Breast Milk Unsafe after Glyphosate Findings,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/greens-warn-german-breast-milk-unsafe-after-glyphosate-findings/">https://organicconsumers.org/greens-warn-german-breast-milk-unsafe-after-glyphosate-findings/</a></li>
+
+<li>OCA, “‘Detection of Messenger RNA COVID-19 Vaccines in Human Breast Milk,’” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/detection-of-messenger-rna-covid-19-vaccines-in-human-breast-milk/">https://organicconsumers.org/detection-of-messenger-rna-covid-19-vaccines-in-human-breast-milk/</a></li>
+
+<li>OCA, “Non-Stick Chemicals Contaminate Breast Milk,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/non-stick-chemicals-contaminate-breast-milk/">https://organicconsumers.org/non-stick-chemicals-contaminate-breast-milk/</a></li>
+
+<li>OCA, “Got MilQ? Gene Engineers Move to Replace Dairy and Breast Milk,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/got-milq-gene-engineers-move-to-replace-dairy-and-breast-milk-2/">https://organicconsumers.org/got-milq-gene-engineers-move-to-replace-dairy-and-breast-milk-2/</a></li>
+
+<li>“Does Mother’s Milk Transfer Environmental Toxins to Breast-Feeding Babies?,” Scientific American. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/earth-talks-breast-feeding/">https://www.scientificamerican.com/article/earth-talks-breast-feeding/</a></li>
+
+<li>“Traces of pesticides found in breastmilk. Is this the reason behind the death of infants in UP?,” India Today. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.indiatoday.in/newsmo/video/traces-of-pesticides-found-in-breastmilk-is-this-the-reason-behind-the-death-of-infants-in-up-2329708-2023-02-02">https://www.indiatoday.in/newsmo/video/traces-of-pesticides-found-in-breastmilk-is-this-the-reason-behind-the-death-of-infants-in-up-2329708-2023-02-02</a></li>
+
+<li>J. R. Schroeder, “Pesticides found in mothers’ breast milk – so what?,” The Conversation. Accessed: May 31, 2024. [Online]. Available: <a href="http://theconversation.com/pesticides-found-in-mothers-breast-milk-so-what-26427">http://theconversation.com/pesticides-found-in-mothers-breast-milk-so-what-26427</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd51c363"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-3-3">
+<ul class="org-ul">
+<li>H. Devlin and H. D. S. correspondent, “Tobacco-like plant engineered to pump out nutrients found in breast milk,” The Guardian, Jun. 16, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.theguardian.com/science/article/2024/jun/16/tobacco-like-plant-engineered-to-pump-out-nutrients-found-in-breast-milk">https://www.theguardian.com/science/article/2024/jun/16/tobacco-like-plant-engineered-to-pump-out-nutrients-found-in-breast-milk</a></li>
+
+<li>“Sale of breast milk raises eyebrows,” The Times of India, Jul. 03, 2022. Accessed: May 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/home/sunday-times/sale-of-breast-milk-raises-eyebrows/articleshow/92623732.cms">https://timesofindia.indiatimes.com/home/sunday-times/sale-of-breast-milk-raises-eyebrows/articleshow/92623732.cms</a></li>
+
+<li>S. Steele, “Why Aren’t Governments Acting Against Breast Milk Cos in India and Elsewhere? – The Wire Science.” Accessed: Jul. 05, 2022. [Online]. Available: <a href="https://science.thewire.in/health/breast-milk-india-profitable/">https://science.thewire.in/health/breast-milk-india-profitable/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org99dee5b" class="outline-4">
+<h4 id="org99dee5b"><span class="section-number-4">3.1.4.</span> Camel Milk</h4>
+<div class="outline-text-4" id="text-3-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org21bd941"></a>General<br />
+<div class="outline-text-5" id="text-3-1-4-1">
+<ul class="org-ul">
+<li>“Camel milk,” Wikipedia. Nov. 01, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187">https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org546230d"></a>Environment<br />
+<div class="outline-text-5" id="text-3-1-4-2">
+<ul class="org-ul">
+<li>“Would you drink camel milk?,” BBC News, Jul. 10, 2019. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.bbc.com/news/business-48935371">https://www.bbc.com/news/business-48935371</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfd5417f"></a>Health<br />
+<div class="outline-text-5" id="text-3-1-4-3">
+<ul class="org-ul">
+<li>S. Zibaee, S. M. al-reza Hosseini, M. Yousefi, A. Taghipour, M. A. Kiani, and M. R. Noras, “Nutritional and Therapeutic Characteristics of Camel Milk in Children: A Systematic Review,” Electron Physician, vol. 7, no. 7, pp. 1523–1528, Nov. 2015, doi: 10.19082/1523.</li>
+
+<li>“Camel Milk: Are There Health Benefits?,” WebMD. <a href="https://www.webmd.com/diet/health-benefits-camel-milk">https://www.webmd.com/diet/health-benefits-camel-milk</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcb802a6"></a>Products<br />
+<div class="outline-text-5" id="text-3-1-4-4">
+<ul class="org-ul">
+<li>“Amazon.com: Organic Fresh Frozen Camel Milk - Fresh Flavor with Health Benefits - Raw &amp; Natural Grade A -Allergen Free Milk from Healthy Camels in Midwest - Made In The USA [6 Pack] : Grocery &amp; Gourmet Food.” <a href="https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU">https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org061d791"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-4-5">
+<ul class="org-ul">
+<li>J. Narzary, “The Last Cheesemakers of the Eastern Himalayas,” Atlas Obscura, 00:00 400AD. <a href="http://www.atlasobscura.com/articles/yak-cheese-india-bhutan">http://www.atlasobscura.com/articles/yak-cheese-india-bhutan</a> (accessed Nov. 18, 2022).</li>
+
+<li>R. Lebeter, “‘Happy milk’: the dairy family that sustains a fair shake of the bottle,” The Guardian, Oct. 28, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle">https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle</a></li>
+
+<li>“Godwar Camel Cheese Fest,” League for Pastoral Peoples, Nov. 06, 2022. <a href="http://www.pastoralpeoples.org/godwar-camel-cheese-fest/">http://www.pastoralpeoples.org/godwar-camel-cheese-fest/</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org2b1044d" class="outline-4">
+<h4 id="org2b1044d"><span class="section-number-4">3.1.5.</span> Milk Powder</h4>
+<div class="outline-text-4" id="text-3-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org76c17c8"></a>General<br />
+<div class="outline-text-5" id="text-3-1-5-1">
+<ul class="org-ul">
+<li>“Powdered milk,” Wikipedia. Jan. 06, 2023. Accessed: Feb. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463">https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org967af49"></a>Products<br />
+<div class="outline-text-5" id="text-3-1-5-2">
+<ul class="org-ul">
+<li>“Nestle Everyday Milk Powder - 400g Pouch : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010">https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb269502"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-5-3">
+<ul class="org-ul">
+<li>“Pros and Cons of Powdered Milk,” LIVESTRONG.COM. <a href="https://www.livestrong.com/article/68702-pros-cons-powdered-milk/">https://www.livestrong.com/article/68702-pros-cons-powdered-milk/</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org284d268" class="outline-4">
+<h4 id="org284d268"><span class="section-number-4">3.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<ul class="org-ul">
+<li>“Pasteurization Kills Bird Flu Virus in Milk, New Studies Confirm | Scientific American.” Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/pasteurization-kills-bird-flu-virus-in-milk-new-studies-confirm/">https://www.scientificamerican.com/article/pasteurization-kills-bird-flu-virus-in-milk-new-studies-confirm/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Gillam, “Baby bottle makers deceived parents over dangers of plastic products, lawsuits allege,” The New Lede. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/06/baby-bottle-makers-deceived-parents-over-dangers-of-plastic-products-lawsuits-allege/">https://www.thenewlede.org/2024/06/baby-bottle-makers-deceived-parents-over-dangers-of-plastic-products-lawsuits-allege/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Warrior skeletons reveal Bronze Age Europeans couldn’t drink milk.” Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.science.org/content/article/warrior-skeletons-reveal-bronze-age-europeans-couldn-t-drink-milk">https://www.science.org/content/article/warrior-skeletons-reveal-bronze-age-europeans-couldn-t-drink-milk</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Strogatz, “What Does Milk Do for Babies?,” Quanta Magazine. Accessed: Apr. 28, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/">https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/</a></li>
+<li>“What Does Milk Do for Babies? | Quanta Magazine.” Accessed: Apr. 28, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/">https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Opinion: There is no longer any justification for drinking cow’s milk,” The Independent, Feb. 15, 2022. <a href="https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html">https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html</a> (accessed Feb. 17, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. G. Sperling, Roman Charity: Queer Lactations in Early Modern Visual Culture. transcript publishing, 2016, p. 430 Pages.</li>
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga5980f9" class="outline-3">
+<h3 id="orga5980f9"><span class="section-number-3">3.2.</span> Cheese</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgfd45a46" class="outline-4">
+<h4 id="orgfd45a46"><span class="section-number-4">3.2.1.</span> <b>Organic</b></h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a1231e" class="outline-4">
+<h4 id="org5a1231e"><span class="section-number-4">3.2.2.</span> Cottage Cheese, Paneer</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>Whyte Paneer</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc124015" class="outline-4">
+<h4 id="orgc124015"><span class="section-number-4">3.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li><i>ISayOrganic</i></li>
+
+<li>arathimenon, “Say cheese! Traditional pastoralists embrace innovation with artisanal cheese,” Mongabay-India. Accessed: Dec. 26, 2023. [Online]. Available: <a href="https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/">https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org06ce878" class="outline-3">
+<h3 id="org06ce878"><span class="section-number-3">3.3.</span> Cream</h3>
+</div>
+<div id="outline-container-orgf8f1469" class="outline-3">
+<h3 id="orgf8f1469"><span class="section-number-3">3.4.</span> Butter</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org197790f" class="outline-4">
+<h4 id="org197790f"><span class="section-number-4">3.4.1.</span> General</h4>
+</div>
+<div id="outline-container-org498df54" class="outline-4">
+<h4 id="org498df54"><span class="section-number-4">3.4.2.</span> <b>Organic</b></h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Organic India Cow Ghee</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa7346b" class="outline-4">
+<h4 id="orgaa7346b"><span class="section-number-4">3.4.3.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orga0568a2" class="outline-2">
+<h2 id="orga0568a2"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>H. V. Tri-yasakda June Watsamon, “The U.S. Government Defended the Overseas Business Interests of Baby Formula Makers. Kids Paid the Price.,” ProPublica. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://www.propublica.org/article/how-america-waged-global-campaign-against-baby-formula-regulation-thailand">https://www.propublica.org/article/how-america-waged-global-campaign-against-baby-formula-regulation-thailand</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Holy Terroir: Finding Taste in an Edge-Place - by Lily Kelting,” Emergence Magazine. Accessed: Mar. 24, 2024. [Online]. Available: <a href="https://emergencemagazine.org/essay/holy-terroir/">https://emergencemagazine.org/essay/holy-terroir/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mad Max: Fury Road,” Wikipedia. Mar. 13, 2023. Accessed: Mar. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014">https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-24 Tue 12:45</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
