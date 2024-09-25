@@ -1,0 +1,2645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-25 Wed 09:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Journalism</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Journalism</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7fd2fda">1. General</a></li>
+<li><a href="#org8c1927d">2. STEMM</a>
+<ul>
+<li><a href="#orgab9b085">2.1. General</a></li>
+<li><a href="#orgbb6f5ec">2.2. Network Science</a></li>
+<li><a href="#org6866abc">2.3. Computer Science And Engineering</a>
+<ul>
+<li><a href="#org12fb176">2.3.1. General</a></li>
+<li><a href="#org708d72f">2.3.2. Core</a></li>
+<li><a href="#orgaff88c0">2.3.3. World</a></li>
+<li><a href="#org61ef5c5">2.3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc4e4866">2.4. Health</a></li>
+<li><a href="#org20db317">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc74aad8">3. World</a>
+<ul>
+<li><a href="#orgd4ffe5b">3.1. Orgs</a>
+<ul>
+<li><a href="#org2c33525">3.1.1. International Federation</a></li>
+<li><a href="#org2068c95">3.1.2. C1</a></li>
+<li><a href="#orgf8ee62a">3.1.3. Sub Disciples</a></li>
+<li><a href="#org6ce7092">3.1.4. Wikileaks</a></li>
+<li><a href="#orga6f263a">3.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc57af72">3.2. Prizes</a></li>
+<li><a href="#org330f4a3">3.3. Special Groups</a></li>
+<li><a href="#org7bcf6c4">3.4. Education</a></li>
+<li><a href="#org41f1ded">3.5. Nation States</a>
+<ul>
+<li><a href="#org32911bc">3.5.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org3b58bad">3.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5884cdb">4. Core</a>
+<ul>
+<li><a href="#org361068e">4.1. Practice</a></li>
+<li><a href="#orgcbd18b3">4.2. Misinformation</a>
+<ul>
+<li><a href="#orgfbe05a7">4.2.1. The Royal Society</a></li>
+<li><a href="#org0359456">4.2.2. Applied Mathematics</a></li>
+<li><a href="#orgecea969">4.2.3. Fair Tech</a></li>
+<li><a href="#orgd0de008">4.2.4. India</a></li>
+<li><a href="#org404bc21">4.2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4cf74c1">4.3. Disinformation</a>
+<ul>
+<li><a href="#org3e33c45">4.3.1. General</a></li>
+<li><a href="#org75acde6">4.3.2. Tech</a></li>
+<li><a href="#org46c8920">4.3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgca57468">4.4. GIJN Resources</a>
+<ul>
+<li><a href="#orga21b89a">4.4.1. 1</a></li>
+<li><a href="#orge9f9195">4.4.2. 2</a></li>
+<li><a href="#org223115c">4.4.3. 3</a></li>
+<li><a href="#orge368977">4.4.4. 4h</a></li>
+<li><a href="#orge832105">4.4.5. 43</a></li>
+<li><a href="#orgafa6d46">4.4.6. 4l</a></li>
+<li><a href="#org9e910aa">4.4.7. 44</a></li>
+<li><a href="#org77bf387">4.4.8. 49</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org55475ba">5. Arts</a></li>
+<li><a href="#org022a553">6. Special Topics</a>
+<ul>
+<li><a href="#org6ef9103">6.1. Hindi</a>
+<ul>
+<li><a href="#org7b00c8c">6.1.1. Global</a></li>
+<li><a href="#org5ca454f">6.1.2. India</a></li>
+</ul>
+</li>
+<li><a href="#orga27093d">6.2. English</a>
+<ul>
+<li><a href="#org4e9f4b8">6.2.1. Big Picture</a></li>
+<li><a href="#org10ba084">6.2.2. STEMM</a></li>
+<li><a href="#orgefe2415">6.2.3. World</a></li>
+<li><a href="#orgb371637">6.2.4. Arts</a></li>
+<li><a href="#org404b0ca">6.2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb84e9a9">6.3. Trust</a></li>
+<li><a href="#org1aa3a85">6.4. Rumours</a></li>
+</ul>
+</li>
+<li><a href="#org010307e">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org7fd2fda" class="outline-2">
+<h2 id="org7fd2fda"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Z. Sardar, <i>Introducing Media Studies: A Graphic Guide.</i> Icon Books Ltd, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. D. Botton, <b>The News: A User's Manual.</b> Penguin UK, 2014.
+<ul class="org-ul">
+<li>Self customized digital news has got some of us to live in our own
+echo chambers. A little, judicious exposure to broadcast news
+could change our 'concerns', and/or consider hitherto unknown
+views on existing ones.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c1927d" class="outline-2">
+<h2 id="org8c1927d"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgab9b085" class="outline-3">
+<h3 id="orgab9b085"><span class="section-number-3">2.1.</span> General</h3>
+</div>
+<div id="outline-container-orgbb6f5ec" class="outline-3">
+<h3 id="orgbb6f5ec"><span class="section-number-3">2.2.</span> Network Science</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>J. P. Wihbey, <b>The Social Fact: News and Knowledge in a Networked World.</b> MIT Press, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6866abc" class="outline-3">
+<h3 id="org6866abc"><span class="section-number-3">2.3.</span> Computer Science And Engineering</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org12fb176" class="outline-4">
+<h4 id="org12fb176"><span class="section-number-4">2.3.1.</span> General</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>“The online information environment | Royal Society.” <a href="https://royalsociety.org/topics-policy/projects/online-information-environment/">https://royalsociety.org/topics-policy/projects/online-information-environment/</a> (accessed Apr. 19, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org708d72f" class="outline-4">
+<h4 id="org708d72f"><span class="section-number-4">2.3.2.</span> Core</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc1d6859"></a>Artificial Intelligence<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ul class="org-ul">
+<li>“Journalists Share Their Views on Which AI ‘Myths’ They Would Dispel,” Mozilla Foundation. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/if-i-had-a-magic-wand-journalists-share-their-views-on-which-ai-myths-they-would-dispel/">https://foundation.mozilla.org/en/blog/if-i-had-a-magic-wand-journalists-share-their-views-on-which-ai-myths-they-would-dispel/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Rappler Is Building Its Own Communities to Counter AI and Big Tech.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://gijn.org/stories/rappler-building-communities-counter-ai-big-tech/">https://gijn.org/stories/rappler-building-communities-counter-ai-big-tech/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tips for Using ChatGPT as a Quick Search Tool in Investigations.” Accessed: Jul. 16, 2024. [Online]. Available: <a href="https://gijn.org/stories/using-chatgpt-quick-search-investigative-tool/">https://gijn.org/stories/using-chatgpt-quick-search-investigative-tool/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Dissecting Propaganda: Using AI to Cut Through North Korean TV Spin.” Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://gijn.org/stories/how-ai-cut-through-north-korean-tv-spin/">https://gijn.org/stories/how-ai-cut-through-north-korean-tv-spin/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Eisikovits, “Newsrooms are experimenting with generative AI, warts and all,” The Conversation. Accessed: Jun. 03, 2024. [Online]. Available: <a href="http://theconversation.com/newsrooms-are-experimenting-with-generative-ai-warts-and-all-228565">http://theconversation.com/newsrooms-are-experimenting-with-generative-ai-warts-and-all-228565</a></li>
+
+<li>J. P. Whittaker, Tech Giants, Artificial Intelligence, and the Future of Journalism, 1st edition. Routledge, 2020.</li>
+
+<li>“AI and Responsible Journalism: New Toolkit Released!” Accessed: Jan. 31, 2024. [Online]. Available: <a href="http://lcfi.ac.uk/news-and-events/news/2023/oct/25/ai-and-responsible-journalism-new-toolkit-released/">http://lcfi.ac.uk/news-and-events/news/2023/oct/25/ai-and-responsible-journalism-new-toolkit-released/</a></li>
+
+<li>“New AI and Large Language Model Tools for Journalists: What to Know.” Accessed: May 08, 2024. [Online]. Available: <a href="https://gijn.org/stories/new-ai-large-language-model-tools-journalists/">https://gijn.org/stories/new-ai-large-language-model-tools-journalists/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Can Copyright Law Save Journalism From A.I.?,” The New Republic. Accessed: May 19, 2024. [Online]. Available: <a href="https://newrepublic.com/article/181168/newspapers-sue-openai-microsoft-journalism-existential-fight">https://newrepublic.com/article/181168/newspapers-sue-openai-microsoft-journalism-existential-fight</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Medianama, “Announcing the AI for Journalists Workshop by Nikhil Pahwa, Founder and Editor, MediaNama,” MEDIANAMA. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/05/223-announcing-the-ai-for-journalists-workshop-by-nikhil-pahwa-founder-and-editor-medianama/">https://www.medianama.com/2024/05/223-announcing-the-ai-for-journalists-workshop-by-nikhil-pahwa-founder-and-editor-medianama/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd7d32fb"></a>Privacy And Security<br /></li>
+<li><a id="orge69f3cc"></a>BlockChain<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgaff88c0" class="outline-4">
+<h4 id="orgaff88c0"><span class="section-number-4">2.3.3.</span> World</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgff55826"></a>Orgs<br />
+<div class="outline-text-5" id="text-2-3-3-1">
+<ul class="org-ul">
+<li>“Guides &amp; Training,” Freedom of the Press. <a href="https://freedom.press/training/">https://freedom.press/training/</a> (accessed Mar. 14, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7a61fe3"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="orga817eeb"></a>India<br />
+<div class="outline-text-6" id="text-2-3-3-2-1">
+<ul class="org-ul">
+<li>“India | Reuters Institute for the Study of Journalism.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/india">https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/india</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home, DigiPub,” DigiPub. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.digipubindia.in/">https://www.digipubindia.in/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1871499"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-3-3">
+<ul class="org-ul">
+<li>L. Knight, “Social media bosses are ‘the largest dictators’, says Nobel peace prize winner,” The Guardian, May 27, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/media/article/2024/may/27/social-media-bosses-are-the-largest-dictators-says-nobel-peace-prize-winner-maria-ressa">https://www.theguardian.com/media/article/2024/may/27/social-media-bosses-are-the-largest-dictators-says-nobel-peace-prize-winner-maria-ressa</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org61ef5c5" class="outline-4">
+<h4 id="org61ef5c5"><span class="section-number-4">2.3.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<ul class="org-ul">
+<li>“Big tech is painting itself as journalism’s savior. We should tread carefully.,” Nieman Lab. Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.niemanlab.org/2024/09/big-tech-is-painting-itself-as-journalisms-savior-we-should-tread-carefully/">https://www.niemanlab.org/2024/09/big-tech-is-painting-itself-as-journalisms-savior-we-should-tread-carefully/</a></li>
+
+<li>“Django (web framework),” Wikipedia. Aug. 11, 2024. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Django_(web_framework)&amp;oldid=1239731424">https://en.wikipedia.org/w/index.php?title=Django_(web_framework)&amp;oldid=1239731424</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Rozen, “Cyberattackers use easily available tools to target media sites, threaten press freedom,” Committee to Protect Journalists. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://cpj.org/2024/07/cyberattackers-use-easily-available-tools-to-target-media-sites-threaten-press-freedom/">https://cpj.org/2024/07/cyberattackers-use-easily-available-tools-to-target-media-sites-threaten-press-freedom/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tipsheet: Latest Tools for Investigating with Telegram.” Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://gijn.org/resource/tipsheet/tipsheet-latest-tools-investigating-with-telegram/">https://gijn.org/resource/tipsheet/tipsheet-latest-tools-investigating-with-telegram/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Digital News Report 2024 | Reuters Institute for the Study of Journalism, (Jun. 17, 2024). Accessed: Jun. 18, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=9YWF9QNIUAA">https://www.youtube.com/watch?v=9YWF9QNIUAA</a></li>
+<li>“Overview and key findings of the 2024 Digital News Report | Reuters Institute for the Study of Journalism.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/dnr-executive-summary">https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/dnr-executive-summary</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Google News Initiative - Home.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://newsinitiative.withgoogle.com/">https://newsinitiative.withgoogle.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tips for Using Data in a Small Newsroom.” Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://gijn.org/stories/tips-using-data-small-newsroom/">https://gijn.org/stories/tips-using-data-small-newsroom/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. C. York, “On World Press Freedom Day (and Every Day), We Fight for an Open Internet,” Electronic Frontier Foundation. Accessed: May 04, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/05/world-press-freedom-day-and-every-day-we-fight-open-internet">https://www.eff.org/deeplinks/2024/05/world-press-freedom-day-and-every-day-we-fight-open-internet</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Security considerations for confidential tip pages,” Freedom of the Press. <a href="https://freedom.press/training/blog/security-confidential-tip-pages/">https://freedom.press/training/blog/security-confidential-tip-pages/</a> (accessed Dec. 31, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>EFF, “Attending a Protest,” Surveillance Self-Defense, Aug. 01, 2014. <a href="https://ssd.eff.org/en/module/attending-protest">https://ssd.eff.org/en/module/attending-protest</a> (accessed Mar. 31, 2022).</li>
+<li>EFF, “Journalist on the move?,” Surveillance Self-Defense, Apr. 13, 2015. <a href="https://ssd.eff.org/en/playlist/journalist-move">https://ssd.eff.org/en/playlist/journalist-move</a> (accessed Mar. 31, 2022).</li>
+<li>EFF, “Journalism student?,” Surveillance Self-Defense, Apr. 13, 2015. <a href="https://ssd.eff.org/en/playlist/journalism-student">https://ssd.eff.org/en/playlist/journalism-student</a> (accessed Mar. 31, 2022).</li>
+<li>EFF, “Human rights defender?,” Surveillance Self-Defense, Apr. 13, 2015. <a href="https://ssd.eff.org/en/playlist/human-rights-defender">https://ssd.eff.org/en/playlist/human-rights-defender</a> (accessed Mar. 31, 2022).</li>
+<li>EFF, “Activist or protester?,” Surveillance Self-Defense, Apr. 13, 2015. <a href="https://ssd.eff.org/en/playlist/activist-or-protester">https://ssd.eff.org/en/playlist/activist-or-protester</a> (accessed Mar. 31, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. van Sickle, “Reporter’s Guide to Investigating Digital Threats: Trolling Campaigns,” Global Investigative Journalism Network, May 24, 2023. <a href="https://gijn.org/2023/05/24/investigating-digital-threats-trolling-campaigns/">https://gijn.org/2023/05/24/investigating-digital-threats-trolling-campaigns/</a> (accessed Aug. 31, 2023).</li>
+<li>R. Richardson, “Reporter’s Guide to Investigating Digital Threats: Digital Threat Landscape,” Global Investigative Journalism Network, Apr. 18, 2023. <a href="https://gijn.org/2023/04/18/investigating-digital-threat-landscape/">https://gijn.org/2023/04/18/investigating-digital-threat-landscape/</a> (accessed Aug. 31, 2023).</li>
+<li>A. van Sickle, “Reporter’s Guide to Investigating Digital Threats: Disinformation,” Global Investigative Journalism Network, Apr. 03, 2023. <a href="https://gijn.org/2023/04/03/reporters-guide-cyber-digital-threats-disinformation/">https://gijn.org/2023/04/03/reporters-guide-cyber-digital-threats-disinformation/</a> (accessed Aug. 31, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“CoverDrop: Securing Initial Contact for Whistleblowers | Light Blue Touchpaper.” <a href="https://www.lightbluetouchpaper.org/2022/03/11/coverdrop-securing-initial-contact-for-whistleblowers/">https://www.lightbluetouchpaper.org/2022/03/11/coverdrop-securing-initial-contact-for-whistleblowers/</a> (accessed Mar. 14, 2022).</li>
+
+<li>A. Muffett, Real-World Onion Sites. 2022. Accessed: Feb. 26, 2022. [Online]. Available: <a href="https://github.com/alecmuffett/real-world-onion-sites">https://github.com/alecmuffett/real-world-onion-sites</a></li>
+
+<li>J. Assange, When Google Met Wikileaks. OR Books, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Digital News Report 2021,” Reuters Institute for the Study of Journalism. <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021">https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2021</a> (accessed Apr. 19, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GIJN Toolbox: Cutting-Edge — and Free — Online Investigative Tools You Can Try Right Now.” Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://gijn.org/stories/cutting-edge-free-online-investigative-tools/">https://gijn.org/stories/cutting-edge-free-online-investigative-tools/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4e4866" class="outline-3">
+<h3 id="orgc4e4866"><span class="section-number-3">2.4.</span> Health</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>H. Storm, Mental Health and Wellbeing for Journalists: A Practical Guide, 1st edition. Routledge, 2024.
+<ul class="org-ul">
+<li>“Mental Health and Wellbeing for Journalists: A Practical Guide,” Routledge &amp; CRC Press. Accessed: May 26, 2024. [Online]. Available: <a href="https://www.routledge.com/Mental-Health-and-Wellbeing-for-Journalists-A-Practical-Guide/Storm/p/book/9781032382456">https://www.routledge.com/Mental-Health-and-Wellbeing-for-Journalists-A-Practical-Guide/Storm/p/book/9781032382456</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How to exercise newsroom leadership with empathy | Reuters Institute for the Study of Journalism.” Accessed: May 26, 2024. [Online]. Available: <a href="http://reutersinstitute.politics.ox.ac.uk/news/how-exercise-newsroom-leadership-empathy">http://reutersinstitute.politics.ox.ac.uk/news/how-exercise-newsroom-leadership-empathy</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20db317" class="outline-3">
+<h3 id="org20db317"><span class="section-number-3">2.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“IPIE - International Panel on the Information Environment.” Accessed: Mar. 09, 2024. [Online]. Available: <a href="https://www.ipie.info/">https://www.ipie.info/</a></li>
+
+<li>S. Goudarzi, “How to better study—and then improve—today’s corrupted information environment,” Bulletin of the Atomic Scientists. Accessed: Mar. 09, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/03/how-to-better-study-and-then-improve-todays-corrupted-information-environment/">https://thebulletin.org/2024/03/how-to-better-study-and-then-improve-todays-corrupted-information-environment/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. M. Hills Thomas, “Information Overload Helps Fake News Spread, and Social Media Knows It,” Scientific American. <a href="https://www.scientificamerican.com/article/information-overload-helps-fake-news-spread-and-social-media-knows-it/">https://www.scientificamerican.com/article/information-overload-helps-fake-news-spread-and-social-media-knows-it/</a> (accessed Jan. 18, 2022).</li>
+<li>S. Vosoughi, D. Roy, and S. Aral, <b>“The spread of true and false news online,”</b> Science, vol. 359, no. 6380, pp. 1146–1151, Mar. 2018, doi: 10.1126/science.aap9559.</li>
+<li><b>“Viral news – true and untrue – moves equally through Twitter,”</b> Cornell Chronicle. <a href="https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter">https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter</a> (accessed Nov. 13, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. J. Watts, D. M. Rothschild, and M. Mobius, <b>“Measuring the news and its impact on democracy,”</b> PNAS, vol. 118, no. 15, Apr. 2021, doi: 10.1073/pnas.1912443118.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. L. Juul and J. Ugander, <i>“Comparing information diffusion mechanisms by matching on cascade size,”</i> PNAS, vol. 118, no. 46, Nov. 2021, doi: 10.1073/pnas.2100786118.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. C. Morgan, D. J. Economou, S. F. Way, and A. Clauset, “Prestige drives epistemic inequality in the diffusion of scientific ideas,” EPJ Data Sci., vol. 7, no. 1, Art. no. 1, Dec. 2018, doi: 10.1140/epjds/s13688-018-0166-4.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc74aad8" class="outline-2">
+<h2 id="orgc74aad8"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd4ffe5b" class="outline-3">
+<h3 id="orgd4ffe5b"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org2c33525" class="outline-4">
+<h4 id="org2c33525"><span class="section-number-4">3.1.1.</span> International Federation</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“International Federation of Journalists,” IFJ. Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.ifj.org/">https://www.ifj.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2068c95" class="outline-4">
+<h4 id="org2068c95"><span class="section-number-4">3.1.2.</span> C1</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><i>“Reuters Institute for the Study of Journalism | Reuters Institute for the Study of Journalism,”</i> reutersinstitute.politics.ox.ac.uk. <a href="https://reutersinstitute.politics.ox.ac.uk/">https://reutersinstitute.politics.ox.ac.uk/</a> (accessed Sep. 02, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Nieman Reports,” Nieman Reports. Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://niemanreports.org/">https://niemanreports.org/</a></li>
+<li><b>“Nieman Journalism Lab » Pushing to the Future of Journalism,”</b> Nieman Lab. <a href="https://www.niemanlab.org">https://www.niemanlab.org</a> (accessed Aug. 18, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8ee62a" class="outline-4">
+<h4 id="orgf8ee62a"><span class="section-number-4">3.1.3.</span> Sub Disciples</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orga630578"></a>Reporters<br />
+<div class="outline-text-5" id="text-3-1-3-1">
+<ul class="org-ul">
+<li>“Homepage | RSF.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://rsf.org/en">https://rsf.org/en</a>
+<ul class="org-ul">
+<li>“RSF,” Bienvenue sur le site de Reporter sans frontières | RSF. <a href="https://rsf.org/en">https://rsf.org/en</a> (accessed Mar. 22, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org12dc582"></a>Fact Checking<br />
+<div class="outline-text-5" id="text-3-1-3-2">
+<ul class="org-ul">
+<li>“International Fact-Checking Network,” Poynter. <a href="https://www.poynter.org/ifcn/">https://www.poynter.org/ifcn/</a> (accessed Apr. 18, 2022).</li>
+
+<li>“European Fact-Checking Standards Network (EFCSN),” European Fact-Checking Standards Network (EFCSN). Accessed: Aug. 06, 2024. [Online]. Available: <a href="https://efcsn.com/">https://efcsn.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org06cda60"></a>Social Media<br />
+<div class="outline-text-5" id="text-3-1-3-3">
+<ul class="org-ul">
+<li>“Observatory on Social Media: Home.” <a href="https://osome.iu.edu/">https://osome.iu.edu/</a> (accessed Jan. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge2641ef"></a>Investigative Journalism<br />
+<div class="outline-text-5" id="text-3-1-3-4">
+<ul class="org-ul">
+<li>“International Consortium of Investigative Journalists - ICIJ.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.icij.org/">https://www.icij.org/</a></li>
+
+<li><i>“The Centre for Investigative Journalism.”</i> Accessed April 9, 2021. <a href="https://tcij.org/">https://tcij.org/</a>.</li>
+</ul>
+</div>
+</li>
+<li><a id="org55e2b07"></a>Crime and Corruption<br />
+<div class="outline-text-5" id="text-3-1-3-5">
+<ul class="org-ul">
+<li>“Organized Crime and Corruption Reporting Project - OCCRP.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.occrp.org/en">https://www.occrp.org/en</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6ce7092" class="outline-4">
+<h4 id="org6ce7092"><span class="section-number-4">3.1.4.</span> Wikileaks</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li><b>“WikiLeaks.”</b> <a href="https://www.wikileaks.org/">https://www.wikileaks.org/</a> (accessed Aug. 18, 2021).
+<ul class="org-ul">
+<li>"According to many activists in the global south, Wikileaks is a
+very popular, controversial primary source of facts on all kinds of
+misdeeds in international affairs."</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Maurizi and K. Loach, Secret Power: WikiLeaks and Its Enemies. Pluto Press, 2022.</li>
+<li>WikiLeaks, The WikiLeaks Files: The World According to US Empire. Verso Books, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Beckett, WikiLeaks: News in the Networked Era, 1st edition. Polity, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. M. E. Marmura, The WikiLeaks Paradigm: Paradoxes and Revelations, 1st ed. 2018 edition. New York, NY: Palgrave Pivot, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Leigh, L. Harding, and T. Guardian, WikiLeaks: Inside Julian Assange’s War on Secrecy, Tie-In edition. Guardian Faber Publishing, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Melzer, The Trial of Julian Assange: A Story of Persecution. Verso, 2022.</li>
+
+<li>J. Assange, J. Appelbaum, A. Muller-Maguhn, and J. Zimmermann, Cypherpunks: Freedom and the Future of the Internet, 1st edition. The Times Group Books, 2013.</li>
+<li>J. Assange, Julian Assange In His Own Words. OR Books, 2021.</li>
+<li>J. Assange, When Google Met Wikileaks. New Delhi: Navayana, 2014.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. H. Bureau, “When material from WikiLeaks were used by newspapers,” The Hindu, Jul. 01, 2024. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/tamil-nadu/when-material-from-wikileaks-were-used-by-newspapers/article68355042.ece">https://www.thehindu.com/news/national/tamil-nadu/when-material-from-wikileaks-were-used-by-newspapers/article68355042.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga6f263a" class="outline-4">
+<h4 id="orga6f263a"><span class="section-number-4">3.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<ul class="org-ul">
+<li>“The Gecko Project.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://thegeckoproject.org/">https://thegeckoproject.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Committee to Protect Journalists – Defending Journalists Worldwide.,” Committee to Protect Journalists. Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://cpj.org/">https://cpj.org/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“News &amp; Advocacy,” Freedom of the Press. <a href="https://freedom.press/news/">https://freedom.press/news/</a> (accessed Mar. 14, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Stop Hate for Profit,”</b> Stop Hate for Profit. <a href="https://www.stophateforprofit.org">https://www.stophateforprofit.org</a> (accessed Jun. 18, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“NewsQ,”</i> NewsQ. <a href="https://newsq.net/">https://newsq.net/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc57af72" class="outline-3">
+<h3 id="orgc57af72"><span class="section-number-3">3.2.</span> Prizes</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“JCB Prize - Wikipedia.” <a href="https://en.wikipedia.org/wiki/JCB_Prize">https://en.wikipedia.org/wiki/JCB_Prize</a> (accessed Nov. 19, 2022).</li>
+
+<li>“Ryszard Kapuściński Award - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Ryszard_Kapu%C5%9Bci%C5%84ski_Award">https://en.wikipedia.org/wiki/Ryszard_Kapu%C5%9Bci%C5%84ski_Award</a> (accessed Nov. 19, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org330f4a3" class="outline-3">
+<h3 id="org330f4a3"><span class="section-number-3">3.3.</span> Special Groups</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Rising Voices · Helping the global population join the global conversation,” Rising Voices. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://rising.globalvoices.org">https://rising.globalvoices.org</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7bcf6c4" class="outline-3">
+<h3 id="org7bcf6c4"><span class="section-number-3">3.4.</span> Education</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>“Tips and Resources for Students on Investigative Journalism.” Accessed: Aug. 27, 2024. [Online]. Available: <a href="https://gijn.org/stories/tips-resources-students-investigative-journalism/">https://gijn.org/stories/tips-resources-students-investigative-journalism/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41f1ded" class="outline-3">
+<h3 id="org41f1ded"><span class="section-number-3">3.5.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org32911bc" class="outline-4">
+<h4 id="org32911bc"><span class="section-number-4">3.5.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgdbb82c4"></a>General<br />
+<div class="outline-text-5" id="text-3-5-1-1">
+<ul class="org-ul">
+<li>S. Rao, <i>Indian Journalism in a New Era: Changes, Challenges, and Perspectives.</i> Oxford University Press, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb3c470f"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org4c6e9b3"></a>Main Stream Media<br />
+<ul class="org-ul">
+<li><a id="org66565f5"></a>NDTV<br />
+<div class="outline-text-7" id="text-org66565f5">
+<ul class="org-ul">
+<li>NDTV, <i>More News Is Good News: 25 Years of NDTV.</i> HarperCollins, 2016.
+<ul class="org-ul">
+<li>B. Dutt, <i>This Unquiet Land: Stories from India's Fault Lines.</i> Aleph Book Company, 2016.</li>
+<li>N. Razdan, <i>Left, Right and Centre: The Idea of India.</i> Penguin Random House India Private Limited, 2017.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb531d25"></a>Alternative Media<br />
+<ul class="org-ul">
+<li><a id="org45885e0"></a>NewsClick<br />
+<div class="outline-text-7" id="text-org45885e0">
+<ul class="org-ul">
+<li>N. Ram, “Assault on NewsClick marks the lowest point for media freedom in India since Emergency,” Frontline. Accessed: Oct. 18, 2023. [Online]. Available: <a href="https://frontline.thehindu.com/columns/attack-on-newsclick-lowest-point-for-media-freedom-in-india-since-emergency-n-ram/article67411306.ece">https://frontline.thehindu.com/columns/attack-on-newsclick-lowest-point-for-media-freedom-in-india-since-emergency-n-ram/article67411306.ece</a></li>
+
+<li>A. Sharma, “Crackdown on NewsClick signals erosion of democratic values,” Frontline. Accessed: Oct. 18, 2023. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/crackdown-on-newsclick-over-alleged-peddling-of-chinese-propaganda/article67411254.ece">https://frontline.thehindu.com/the-nation/crackdown-on-newsclick-over-alleged-peddling-of-chinese-propaganda/article67411254.ece</a></li>
+
+<li>“NewsClick Editor, HR Head Challenge UAPA Arrests in Supreme Court,” NewsClick. Accessed: Oct. 18, 2023. [Online]. Available: <a href="https://www.newsclick.in/newsclick-editor-hr-head-challenge-uapa-arrests-supreme-court">https://www.newsclick.in/newsclick-editor-hr-head-challenge-uapa-arrests-supreme-court</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“CBI Conducts Search at NewsClick Office, Residence of Arrested Editor Prabir Purkayastha,” The Wire. Accessed: Oct. 11, 2023. [Online]. Available: <a href="https://thewire.in/media/cbi-conducts-search-at-residence-of-arrested-newsclick-editor-prabir-purkayastha">https://thewire.in/media/cbi-conducts-search-at-residence-of-arrested-newsclick-editor-prabir-purkayastha</a></li>
+
+<li>“‘NewsClick Raids Emblematic of Shrinking Press Freedom, Democratic Backslide in South Asia,’” The Wire. Accessed: Oct. 11, 2023. [Online]. Available: <a href="https://thewire.in/media/newsclick-raids-shrinking-press-freedom-democratic-backslide-south-asia">https://thewire.in/media/newsclick-raids-shrinking-press-freedom-democratic-backslide-south-asia</a></li>
+
+<li>“‘Worrying Attack on Press Freedom’: 230+ Journalists, Artists, Academics Slam NewsClick Raids,” The Wire. Accessed: Oct. 08, 2023. [Online]. Available: <a href="https://thewire.in/media/230-journalists-artists-academics-slam-newsclick-raids">https://thewire.in/media/230-journalists-artists-academics-slam-newsclick-raids</a></li>
+<li>V. Bhalla, “NewsClick FIR casts farmer protests as terror and fails to back sweeping charges with evidence,” Scroll.in. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence">https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence</a></li>
+<li>“India’s Modi government uses ‘anti-terror’ laws to persecute NewsClick editor and manager - World Socialist Web Site.” Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://www.wsws.org/en/articles/2023/10/06/ivfy-o06.html">https://www.wsws.org/en/articles/2023/10/06/ivfy-o06.html</a></li>
+<li>“Delhi HC Posts NewsClick’s Prabir Purkayastha, Amit Chakravorty’s Pleas Against FIR for Oct 9,” The Wire. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://thewire.in/law/newsclick-prabir-purkayastha-amit-chakravorty-delhi-high-court">https://thewire.in/law/newsclick-prabir-purkayastha-amit-chakravorty-delhi-high-court</a></li>
+<li>V. Bhalla, “NewsClick FIR casts farmer protests as terror and fails to back sweeping charges with evidence,” Scroll.in. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence">https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘This is an emergency’: Biggest crackdown on press freedom in Indian history,” Progressive International. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://progressive.international/wire/2023-10-06-this-is-an-emergency-biggest-crackdown-on-press-freedom-in-indian-history/en">https://progressive.international/wire/2023-10-06-this-is-an-emergency-biggest-crackdown-on-press-freedom-in-indian-history/en</a></li>
+
+<li>“Delhi Police Conduct Raids, Question Journalists, Commentators, Activists Over UAPA Case,” The Wire. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists">https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists</a></li>
+
+<li>“Terrorising Journalism,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/media/terrorising-journalism-editorial">https://thewire.in/media/terrorising-journalism-editorial</a></li>
+
+<li>A. Deb, “NewsClick raids: Indian law has few safeguards when electronic devices are seized,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/article/1057017/newsclick-raids-indian-law-has-few-safeguards-when-electronic-devices-are-seized">https://scroll.in/article/1057017/newsclick-raids-indian-law-has-few-safeguards-when-electronic-devices-are-seized</a></li>
+
+<li>A. Saikia, “No one spared in ‘NewsClick’ raids – young staffers, part-time employees, freelance contributors,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/article/1057022/no-one-spared-in-newsclick-raids-young-staffers-part-time-employees-freelance-contributors">https://scroll.in/article/1057022/no-one-spared-in-newsclick-raids-young-staffers-part-time-employees-freelance-contributors</a></li>
+
+<li>“NewsClick Raids: Journos Questioned by Police About Delhi Riots, Farmers Protest and COVID Crisis,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis">https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis</a></li>
+
+<li>“After Delhi Police’s Raids, Two – Including NewsClick Editor Purkayastha – Arrested Under UAPA,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists">https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists</a></li>
+
+<li>P. M.N, “India Is Using Terrorism Laws to Target Journalists,” Wired. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.wired.com/story/india-is-using-terrorism-laws-to-target-journalists/">https://www.wired.com/story/india-is-using-terrorism-laws-to-target-journalists/</a></li>
+
+<li>“‘Distraction from Caste Census’, ‘Intimidation’: Outrage as Delhi Police Questions Journalists,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/media/delhi-police-raid-newsclick-reaction">https://thewire.in/media/delhi-police-raid-newsclick-reaction</a></li>
+
+<li>“Prof Gyan Prakash: Wrong to Compare 1975 Emergency to Today. This is Way More Dangerous.,” The Wire. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://thewire.in/rights/professor-gyan-prakash-emergency-totalitarianism-prabir-purkayastha">https://thewire.in/rights/professor-gyan-prakash-emergency-totalitarianism-prabir-purkayastha</a></li>
+
+<li>S. Spicer, “CPJ says Indian police raids on NewsClick office, journalists’ homes are an attack on press freedom,” Committee to Protect Journalists. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/">https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/</a></li>
+
+<li>“I Have Written Only Facts: Paranjoy Guha Thakurta| Countercurrents.” Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://countercurrents.org/2023/10/i-have-written-only-facts-paranjoy-guha-thakurta/">https://countercurrents.org/2023/10/i-have-written-only-facts-paranjoy-guha-thakurta/</a></li>
+
+<li>K. Krishnan, “NYT’s report has been weaponised against Indian journalists. I had warned the paper about it,” Scroll.in. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://scroll.in/article/1057147/nyts-report-has-been-weaponised-against-indian-journalists-i-had-warned-the-paper-about-it">https://scroll.in/article/1057147/nyts-report-has-been-weaponised-against-indian-journalists-i-had-warned-the-paper-about-it</a></li>
+
+<li>V. Bhalla, “NewsClick FIR casts farmer protests as terror and fails to back sweeping charges with evidence,” Scroll.in. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence">https://scroll.in/article/1057098/newsclick-fir-casts-farmer-protests-as-terror-and-fails-to-back-sweeping-charges-with-evidence</a></li>
+
+<li>“Delhi HC Posts NewsClick’s Prabir Purkayastha, Amit Chakravorty’s Pleas Against FIR for Oct 9,” The Wire. Accessed: Oct. 07, 2023. [Online]. Available: <a href="https://thewire.in/law/newsclick-prabir-purkayastha-amit-chakravorty-delhi-high-court">https://thewire.in/law/newsclick-prabir-purkayastha-amit-chakravorty-delhi-high-court</a></li>
+
+<li>“16 Indian Journalists Have Been Charged Under UAPA, 7 Are Currently Behind Bars,” The Wire. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://thewire.in/media/16-indian-journalists-have-been-charged-under-uapa-7-are-currently-behind-bars">https://thewire.in/media/16-indian-journalists-have-been-charged-under-uapa-7-are-currently-behind-bars</a></li>
+
+<li>S. Staff, “Delhi Police raid journalists associated with ‘NewsClick’ in UAPA case, seal office,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/latest/1056959/delhi-police-raids-homes-of-journalists-in-probe-into-funding-of-newsclick-reports">https://scroll.in/latest/1056959/delhi-police-raids-homes-of-journalists-in-probe-into-funding-of-newsclick-reports</a></li>
+
+<li>T. A. Press, “New Delhi police launch fresh raids on Indian journalists,” NPR, Oct. 03, 2023. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://www.npr.org/2023/10/03/1203296071/india-newsclick-raid-press-freedom">https://www.npr.org/2023/10/03/1203296071/india-newsclick-raid-press-freedom</a></li>
+
+<li>“I Have Written Only Facts: Paranjoy Guha Thakurta| Countercurrents.” Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://countercurrents.org/2023/10/i-have-written-only-facts-paranjoy-guha-thakurta/">https://countercurrents.org/2023/10/i-have-written-only-facts-paranjoy-guha-thakurta/</a></li>
+
+<li>S. Spicer, “CPJ says Indian police raids on NewsClick office, journalists’ homes are an attack on press freedom,” Committee to Protect Journalists. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/">https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/</a></li>
+
+<li>“State Vilifying Journalists Who Speak Truth to Power: Renowned Writers, Activists on Newsclick Case,” The Wire. Accessed: Oct. 06, 2023. [Online]. Available: <a href="https://thewire.in/media/state-vilifying-journalists-who-speak-truth-to-power-renowned-writers-activists-on-newsclick-case">https://thewire.in/media/state-vilifying-journalists-who-speak-truth-to-power-renowned-writers-activists-on-newsclick-case</a></li>
+
+<li>S. Staff, “NewsClick says government has failed to prove charges against it, calls UAPA case ‘motivated,’” Scroll.in. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://scroll.in/latest/1057061/newsclick-says-government-has-failed-to-prove-charges-against-it-calls-uapa-case-motivated">https://scroll.in/latest/1057061/newsclick-says-government-has-failed-to-prove-charges-against-it-calls-uapa-case-motivated</a></li>
+
+<li>PTI, “NewsClick founder Prabir Purkayastha, HR head sent to seven-day police custody,” The Hindu, Oct. 04, 2023. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/newsclick-founder-prabir-purkayastha-hr-head-sent-to-seven-day-police-custody/article67378789.ece">https://www.thehindu.com/news/cities/Delhi/newsclick-founder-prabir-purkayastha-hr-head-sent-to-seven-day-police-custody/article67378789.ece</a></li>
+
+<li>“Undeclared Emergency: The Hindu Editorial on the arrests in the Newsclick case,” The Hindu, Oct. 04, 2023. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/undeclared-emergency-the-hindu-editorial-on-the-arrests-in-the-newsclick-case/article67380803.ece">https://www.thehindu.com/opinion/editorial/undeclared-emergency-the-hindu-editorial-on-the-arrests-in-the-newsclick-case/article67380803.ece</a></li>
+
+<li>“National Rights Body Condemns Action Against Newsclick, Highlights Disability of Arrested,” The Wire. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://thewire.in/media/national-platform-for-the-rights-of-the-disabled-newsclick-amit-chakravarti">https://thewire.in/media/national-platform-for-the-rights-of-the-disabled-newsclick-amit-chakravarti</a></li>
+
+<li>“United Nations Commissioner for Human Rights ‘Troubled’ by NewsClick Raids, Arrests,” The Wire. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://thewire.in/media/united-nations-commissioner-for-human-rights-troubled-by-newsclick-raids-arrests">https://thewire.in/media/united-nations-commissioner-for-human-rights-troubled-by-newsclick-raids-arrests</a></li>
+
+<li>“‘More Dangerous Than Emergency’: Arundhati Roy on Raiding of Journalists,” The Wire. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://thewire.in/rights/more-dangerous-emergency-arundhati-roy-raids-journalists-newsclick">https://thewire.in/rights/more-dangerous-emergency-arundhati-roy-raids-journalists-newsclick</a></li>
+
+<li>“NewsClick Raids: Journos Questioned by Police About Delhi Riots, Farmers Protest and COVID Crisis,” The Wire. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis">https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis</a></li>
+
+<li>A. Sharma, “Journalists, activists, opposition condemn police action on NewsClick,” Frontline. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://frontline.thehindu.com/news/journalists-activists-opposition-condemn-delhi-police-raid-and-arrest-of-prabir-purkayastha-newsclick/article67379053.ece">https://frontline.thehindu.com/news/journalists-activists-opposition-condemn-delhi-police-raid-and-arrest-of-prabir-purkayastha-newsclick/article67379053.ece</a></li>
+
+<li>“Indian Police Raid Journalists in Ongoing Crackdown on Press,” Democracy Now! Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://www.democracynow.org/2023/10/4/headlines/indian_police_raid_journalists_in_ongoing_crackdown_on_press">https://www.democracynow.org/2023/10/4/headlines/indian_police_raid_journalists_in_ongoing_crackdown_on_press</a></li>
+
+<li>“Journalism Cannot Be Prosecuted As ‘Terrorism’.,” The India Forum. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://www.theindiaforum.in/open-letter-chief-justice-arrest-journalists">https://www.theindiaforum.in/open-letter-chief-justice-arrest-journalists</a></li>
+
+<li>M. Malpani, “Delhi police raids journalists, individuals linked to media outlet NewsClick,” The Hindu, Oct. 03, 2023. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/delhi-police-raids-journalists-individuals-linked-to-media-outlet-newsclick/article67374549.ece">https://www.thehindu.com/news/cities/Delhi/delhi-police-raids-journalists-individuals-linked-to-media-outlet-newsclick/article67374549.ece</a></li>
+
+<li>N. L. Team, “Over a month after NewsClick ‘China funding’ row, cops search homes of journalists,” Newslaundry. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://www.newslaundry.com/2023/10/03/over-a-month-after-newsclick-china-funding-row-cops-search-homes-of-journalists">https://www.newslaundry.com/2023/10/03/over-a-month-after-newsclick-china-funding-row-cops-search-homes-of-journalists</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Staff, “Delhi Police raid journalists associated with ‘NewsClick’ in UAPA case, seal office,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/latest/1056959/delhi-police-raids-homes-of-journalists-in-probe-into-funding-of-newsclick-reports">https://scroll.in/latest/1056959/delhi-police-raids-homes-of-journalists-in-probe-into-funding-of-newsclick-reports</a></li>
+
+<li>“‘Distraction from Caste Census’, ‘Intimidation’: Outrage as Delhi Police Questions Journalists,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/media/delhi-police-raid-newsclick-reaction">https://thewire.in/media/delhi-police-raid-newsclick-reaction</a></li>
+
+<li>N. L. Team, “‘Targeted harassment campaign’: Press bodies condemn police searches against NewsClick,” Newslaundry. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.newslaundry.com/2023/10/03/targeted-harassment-campaign-press-bodies-condemn-police-searches-against-newsclick">https://www.newslaundry.com/2023/10/03/targeted-harassment-campaign-press-bodies-condemn-police-searches-against-newsclick</a></li>
+
+<li>H. S. Bal, “China is a pretext to target those who question a tyrannical government,” The Caravan. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://caravanmagazine.in/media/newsclick-raids-china-funding-uapa-journalist-arrests">https://caravanmagazine.in/media/newsclick-raids-china-funding-uapa-journalist-arrests</a></li>
+
+<li>P. M.N, “India Is Using Terrorism Laws to Target Journalists,” Wired. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.wired.com/story/india-is-using-terrorism-laws-to-target-journalists/">https://www.wired.com/story/india-is-using-terrorism-laws-to-target-journalists/</a></li>
+
+<li>“NewsClick: India police arrest journalists over China funding claims,” BBC News, Oct. 03, 2023. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-66909370">https://www.bbc.com/news/world-asia-india-66909370</a></li>
+
+<li>“NewsClick Raids: Journos Questioned by Police About Delhi Riots, Farmers Protest and COVID Crisis,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis">https://thewire.in/rights/newsclick-raids-journos-questioned-delhi-riots-farmers-protest-covid-crisis</a></li>
+
+<li>“After Delhi Police’s Raids, Two – Including NewsClick Editor Purkayastha – Arrested Under UAPA,” The Wire. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists">https://thewire.in/media/delhi-police-conducts-early-morning-raids-at-houses-of-journalists-satirists</a></li>
+
+<li>A. Deb, “NewsClick raids: Indian law has few safeguards when electronic devices are seized,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/article/1057017/newsclick-raids-indian-law-has-few-safeguards-when-electronic-devices-are-seized">https://scroll.in/article/1057017/newsclick-raids-indian-law-has-few-safeguards-when-electronic-devices-are-seized</a></li>
+
+<li>A. Saikia, “No one spared in ‘NewsClick’ raids – young staffers, part-time employees, freelance contributors,” Scroll.in. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://scroll.in/article/1057022/no-one-spared-in-newsclick-raids-young-staffers-part-time-employees-freelance-contributors">https://scroll.in/article/1057022/no-one-spared-in-newsclick-raids-young-staffers-part-time-employees-freelance-contributors</a></li>
+
+<li>S. Spicer, “CPJ says Indian police raids on NewsClick office, journalists’ homes are an attack on press freedom,” Committee to Protect Journalists. Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/">https://cpj.org/2023/10/cpj-says-indian-police-raids-on-newsclick-office-journalists-homes-are-an-attack-on-press-freedom/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org908ea80"></a>World<br />
+<div class="outline-text-5" id="text-3-5-1-3">
+<ul class="org-ul">
+<li>H. S. Bal, “How the media becomes an arm of the government,” The Caravan. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://caravanmagazine.in/media/media-becomes-government-modi-indian-express-republic">https://caravanmagazine.in/media/media-becomes-government-modi-indian-express-republic</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Billionaire Press Barons Are Squeezing Media Freedom in India,” Bloomberg.com, Feb. 26, 2024. Accessed: Feb. 27, 2024. [Online]. Available: <a href="https://www.bloomberg.com/news/features/2024-02-26/india-s-press-freedom-squeezed-as-billionaires-close-to-modi-take-over-newsrooms">https://www.bloomberg.com/news/features/2024-02-26/india-s-press-freedom-squeezed-as-billionaires-close-to-modi-take-over-newsrooms</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org22ff348"></a>Misc<br />
+<div class="outline-text-5" id="text-3-5-1-4">
+<ul class="org-ul">
+<li>F. N. Desk, “Network of Women in Media in India Brings out Comprehensive Guidelines to Combat Toxic Work Environments in Indian Newsrooms,” Frontline. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/women-india-toxic-newsroom-gender-discrimination-menstrual-leave-harrassment-violence/article68533112.ece">https://frontline.thehindu.com/news/women-india-toxic-newsroom-gender-discrimination-menstrual-leave-harrassment-violence/article68533112.ece</a></li>
+
+<li>“The submission of India Today Group.” Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://caravanmagazine.in/media/india-today-group-submission">https://caravanmagazine.in/media/india-today-group-submission</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. J. Staff, “Police in India book journalists after posts on alleged Muslim lynching,” Al Jazeera. Accessed: Jul. 12, 2024. [Online]. Available: <a href="https://www.aljazeera.com/news/2024/7/11/police-in-india-book-journalists-for-post-on-alleged-lynching-of-muslim-man">https://www.aljazeera.com/news/2024/7/11/police-in-india-book-journalists-for-post-on-alleged-lynching-of-muslim-man</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India court delays nearly $90K defamation order against journalist Rahul Pandita,” Committee to Protect Journalists. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://cpj.org/2024/07/india-court-delays-nearly-90k-defamation-order-against-journalist-rahul-pandita/">https://cpj.org/2024/07/india-court-delays-nearly-90k-defamation-order-against-journalist-rahul-pandita/</a></li>
+<li>“Indian police launch criminal investigation into 2 journalists under new penal code,” Committee to Protect Journalists. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://cpj.org/2024/07/indian-police-launch-criminal-investigation-into-2-journalists-under-new-penal-code/">https://cpj.org/2024/07/indian-police-launch-criminal-investigation-into-2-journalists-under-new-penal-code/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Reporters Without Borders Makes 10 Recommendations to Modi Govt to Guarantee Press Freedom,” The Wire. Accessed: Jul. 04, 2024. [Online]. Available: <a href="https://thewire.in/media/reporters-without-borderss-makes-10-recommendations-to-modi-govt-to-guarantee-press-freedom">https://thewire.in/media/reporters-without-borderss-makes-10-recommendations-to-modi-govt-to-guarantee-press-freedom</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Manish, “Busting fake news: Who funds whom?,” Rediff. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.rediff.com/news/special/busting-fake-news-who-funds-whom/20180408.htm">https://www.rediff.com/news/special/busting-fake-news-who-funds-whom/20180408.htm</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Hoot – Watching Media in The Subcontinent,” <a href="http://asu.thehoot.org/">http://asu.thehoot.org/</a>. Accessed: Jun. 24, 2024. [Online]. Available: <a href="http://asu.thehoot.org/">http://asu.thehoot.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“French journalist Sébastien Farcis leaves India after permit not renewed,” Committee to Protect Journalists. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://cpj.org/2024/06/french-journalist-sebastien-farcis-leaves-india-after-journalism-permit-revoked/">https://cpj.org/2024/06/french-journalist-sebastien-farcis-leaves-india-after-journalism-permit-revoked/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Press Club, DUJ Condemn FIR Against ‘The Caravan’ Journalists Who Faced Assault in 2020,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/press-club-duj-condemn-fir-against-caravan-journalists-who-faced-assault-2020">https://www.newsclick.in/press-club-duj-condemn-fir-against-caravan-journalists-who-faced-assault-2020</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Home - Factshala.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://factshala.com/">https://factshala.com/</a></li>
+<li>“Home - OW DataLEADS Private Limited.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://dataleads.co.in/">https://dataleads.co.in/</a></li>
+<li>“Shakti – India Election Fact-Checking Collective.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://projectshakti.in/">https://projectshakti.in/</a></li>
+<li>“Fact Check: Viral Fake News Fact Check, WhatsApp &amp; Facebook Viral Photos, Video Fact Check - The Quint WebQoof,” TheQuint. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.thequint.com/news/webqoof">https://www.thequint.com/news/webqoof</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Cable operators block 4 news channels in India’s Andhra Pradesh state post-election,” Committee to Protect Journalists. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://cpj.org/2024/06/cable-operators-block-4-news-channels-in-indias-andhra-pradesh-state-post-election/">https://cpj.org/2024/06/cable-operators-block-4-news-channels-in-indias-andhra-pradesh-state-post-election/</a></li>
+
+<li>“How Newslaundry worked with its users to make its journalism more accessible,” Nieman Lab. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.niemanlab.org/2024/06/how-newslaundry-worked-with-its-users-to-make-its-journalism-more-accessible/">https://www.niemanlab.org/2024/06/how-newslaundry-worked-with-its-users-to-make-its-journalism-more-accessible/</a></li>
+
+<li>“Hans Staiger Award Winner Finds Evidence Bolstering Allegations that Indian Company Overcharged for Coal,” International Center for Journalists. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.icfj.org/news/hans-staiger-award-winner-finds-evidence-bolstering-allegations-indian-company-overcharged">https://www.icfj.org/news/hans-staiger-award-winner-finds-evidence-bolstering-allegations-indian-company-overcharged</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How the Indian government is weaponizing laws to silence and intimidate journalists,” International Journalists’ Network. Accessed: May 21, 2024. [Online]. Available: <a href="https://ijnet.org/en/story/how-indian-government-weaponizing-laws-silence-and-intimidate-journalists">https://ijnet.org/en/story/how-indian-government-weaponizing-laws-silence-and-intimidate-journalists</a></li>
+
+<li>“Indian journalist shot dead on bike, another assaulted at BJP election rally,” Committee to Protect Journalists. Accessed: May 14, 2024. [Online]. Available: <a href="https://cpj.org/2024/05/indian-journalist-shot-dead-on-bike-another-assaulted-at-bjp-election-rally/">https://cpj.org/2024/05/indian-journalist-shot-dead-on-bike-another-assaulted-at-bjp-election-rally/</a></li>
+
+<li>“Indian journalists turned to YouTube to dodge Modi’s censorship. Some of their channels are now being blocked | Reuters Institute for the Study of Journalism.” Accessed: May 13, 2024. [Online]. Available: <a href="https://reutersinstitute.politics.ox.ac.uk/news/indian-journalists-turned-youtube-dodge-modis-censorship-some-their-channels-are-now-being">https://reutersinstitute.politics.ox.ac.uk/news/indian-journalists-turned-youtube-dodge-modis-censorship-some-their-channels-are-now-being</a></li>
+
+<li>“French journalist Vanessa Dougnac leaves India after journalism permit revoked - Committee to Protect Journalists.” Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://cpj.org/2024/02/french-journalist-vanessa-dougnac-leaves-india-after-journalism-permit-revoked/">https://cpj.org/2024/02/french-journalist-vanessa-dougnac-leaves-india-after-journalism-permit-revoked/</a></li>
+
+<li>“Spyware Deals, China’s Border Encroachment, Toxic Cough Syrup: 2023’s Best Investigative Stories in India.” Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://gijn.org/stories/best-investigative-stories-india-2023/">https://gijn.org/stories/best-investigative-stories-india-2023/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3b58bad" class="outline-3">
+<h3 id="org3b58bad"><span class="section-number-3">3.6.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>“Introduction to Fundraising for Investigative Journalism.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://gijn.org/resource/guide-fundraising-investigative-journalism/">https://gijn.org/resource/guide-fundraising-investigative-journalism/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Solving Investigative Journalism’s ‘Profit Puzzle’ — From Diversification to Independence.” Accessed: May 30, 2024. [Online]. Available: <a href="https://gijn.org/stories/solving-investigative-journalisms-profit-puzzle/">https://gijn.org/stories/solving-investigative-journalisms-profit-puzzle/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Solving Investigative Journalism’s ‘Profit Puzzle’ — From Diversification to Independence.” Accessed: May 30, 2024. [Online]. Available: <a href="https://gijn.org/stories/solving-investigative-journalisms-profit-puzzle/">https://gijn.org/stories/solving-investigative-journalisms-profit-puzzle/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5884cdb" class="outline-2">
+<h2 id="org5884cdb"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org361068e" class="outline-3">
+<h3 id="org361068e"><span class="section-number-3">4.1.</span> Practice</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b>Guides &amp; Training,</b> Freedom of the Press. <a href="https://freedom.press/training/">https://freedom.press/training/</a> (accessed Aug. 09, 2020).</li>
+
+<li><i>IFLA &#x2013; How To Spot Fake News.</i> [Online]. Available: <a href="https://www.ifla.org/publications/node/11174">https://www.ifla.org/publications/node/11174</a>. [Accessed: 15-Mar-2020].</li>
+
+<li>“Full Fact.” <a href="https://fullfact.org/">https://fullfact.org/</a> (accessed Jan. 13, 2022).</li>
+
+<li>T. Tech, “Are You Listening? Basics of Investigating (with) Sound.” <a href="https://exposingtheinvisible.org/en/articles/investigating-with-sound/">https://exposingtheinvisible.org/en/articles/investigating-with-sound/</a> (accessed Jan. 27, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Resources,” bellingcat. Accessed: May 01, 2024. [Online]. Available: <a href="https://www.bellingcat.com/category/resources/">https://www.bellingcat.com/category/resources/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcbd18b3" class="outline-3">
+<h3 id="orgcbd18b3"><span class="section-number-3">4.2.</span> Misinformation</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgfbe05a7" class="outline-4">
+<h4 id="orgfbe05a7"><span class="section-number-4">4.2.1.</span> The Royal Society</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>“The online information environment | Royal Society.” <a href="https://royalsociety.org/topics-policy/projects/online-information-environment/">https://royalsociety.org/topics-policy/projects/online-information-environment/</a> (accessed Jan. 28, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0359456" class="outline-4">
+<h4 id="org0359456"><span class="section-number-4">4.2.2.</span> Applied Mathematics</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li><b>In Peer Review We (Don't) Trust: How Peer Review's Filtering Poses A Systemic Risk To Science.</b> [Online]. Available: <a href="https://www.researchers.one/article/2018-09-17">https://www.researchers.one/article/2018-09-17</a>. [Accessed: 10-Sep-2019].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgecea969" class="outline-4">
+<h4 id="orgecea969"><span class="section-number-4">4.2.3.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li><b>“Fighting back against misinformation,”</b> Mozilla Foundation. <a href="https://foundation.mozilla.org/en/campaigns/eu-misinformation/">https://foundation.mozilla.org/en/campaigns/eu-misinformation/</a> (accessed Mar. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0de008" class="outline-4">
+<h4 id="orgd0de008"><span class="section-number-4">4.2.4.</span> India</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<ul class="org-ul">
+<li>“Misinformation Combat Alliance.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://mcaindia.in/">https://mcaindia.in/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org404bc21" class="outline-4">
+<h4 id="org404bc21"><span class="section-number-4">4.2.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<ul class="org-ul">
+<li>“The surprising role of deep thinking in conspiracy theories | Psyche Ideas,” Psyche. Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://psyche.co/ideas/the-surprising-role-of-deep-thinking-in-conspiracy-theories">https://psyche.co/ideas/the-surprising-role-of-deep-thinking-in-conspiracy-theories</a></li>
+
+<li>A. Johns, F. Bailo, and M.-A. Rizoiu, “Meta just closed a vital online research tool. It’s bad news for the fight against misinformation,” The Conversation. Accessed: Aug. 16, 2024. [Online]. Available: <a href="http://theconversation.com/meta-just-closed-a-vital-online-research-tool-its-bad-news-for-the-fight-against-misinformation-236785">http://theconversation.com/meta-just-closed-a-vital-online-research-tool-its-bad-news-for-the-fight-against-misinformation-236785</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Komendantova, D. Erokhin, and T. Albano, “Misinformation and Its Impact on Contested Policy Issues: The Example of Migration Discourses,” Societies, vol. 13, no. 7, Art. no. 7, Jul. 2023, doi: 10.3390/soc13070168.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Turning point for the Internet? UN announces global framework to fight online misinformation, hate speech.” Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/turning-point-for-the-internet-un-announces-global-framework-to-fight-online-misinformation-hate-speech-96852">https://www.downtoearth.org.in/news/governance/turning-point-for-the-internet-un-announces-global-framework-to-fight-online-misinformation-hate-speech-96852</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The public is worried about online misinformation. Are the tools we have to fight it working?,” The Alan Turing Institute. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.turing.ac.uk/blog/public-worried-about-online-misinformation-are-tools-we-have-fight-it-working">https://www.turing.ac.uk/blog/public-worried-about-online-misinformation-are-tools-we-have-fight-it-working</a></li>
+
+<li>A. Kozyreva et al., “Toolbox of individual-level interventions against online misinformation,” Nat Hum Behav, pp. 1–9, May 2024, doi: 10.1038/s41562-024-01881-0.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Commentary: Why scientific misinformation is so difficult to tackle,” Fortune. <a href="https://fortune.com/2022/01/25/we-need-a-radical-new-approach-to-tackle-scientific-misinformation-online-covid-vaccine-hesitancy-gina-neff/">https://fortune.com/2022/01/25/we-need-a-radical-new-approach-to-tackle-scientific-misinformation-online-covid-vaccine-hesitancy-gina-neff/</a> (accessed Jan. 28, 2022).</li>
+
+<li>“Computer Model Seeks to Explain the Spread of Misinformation, and Suggest Counter Measures,” Tufts Now, Jan. 10, 2022. <a href="https://now.tufts.edu/news-releases/computer-model-seeks-explain-spread-misinformation-and-suggest-counter-measures">https://now.tufts.edu/news-releases/computer-model-seeks-explain-spread-misinformation-and-suggest-counter-measures</a> (accessed Jan. 14, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Stopping the Spread of Misinformation: Is Psychological Inoculation the Key?,” The Equation. Accessed: May 11, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/guest-commentary/stopping-the-spread-of-misinformation-is-psychological-inoculation-the-key/">https://blog.ucsusa.org/guest-commentary/stopping-the-spread-of-misinformation-is-psychological-inoculation-the-key/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4cf74c1" class="outline-3">
+<h3 id="org4cf74c1"><span class="section-number-3">4.3.</span> Disinformation</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org3e33c45" class="outline-4">
+<h4 id="org3e33c45"><span class="section-number-4">4.3.1.</span> General</h4>
+</div>
+<div id="outline-container-org75acde6" class="outline-4">
+<h4 id="org75acde6"><span class="section-number-4">4.3.2.</span> Tech</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org37371e0"></a>Fair Tech<br />
+<div class="outline-text-5" id="text-4-3-2-1">
+<ul class="org-ul">
+<li>J. Hoffman-Andrews, “AI Watermarking Won’t Curb Disinformation,” Electronic Frontier Foundation. Accessed: Jan. 06, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/01/ai-watermarking-wont-curb-disinformation">https://www.eff.org/deeplinks/2024/01/ai-watermarking-wont-curb-disinformation</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org29e7799"></a>Misc<br />
+<div class="outline-text-5" id="text-4-3-2-2">
+<ul class="org-ul">
+<li>T. Tech, “How to Track Disinformation Networks.” <a href="https://exposingtheinvisible.org/en/workshops/mapping-disinformation-networks/">https://exposingtheinvisible.org/en/workshops/mapping-disinformation-networks/</a> (accessed Jul. 25, 2022).</li>
+
+<li>T. Tech, “How to Track and Investigate Online Disinformation Networks.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://exposingtheinvisible.org/en/films/disinformation-networks/">https://exposingtheinvisible.org/en/films/disinformation-networks/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>P. Iyer, “Researchers Validate the Dangers of Disinformation | TechPolicy.Press,” Tech Policy Press. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://techpolicy.press/researchers-validate-the-dangers-of-disinformation">https://techpolicy.press/researchers-validate-the-dangers-of-disinformation</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org46c8920" class="outline-4">
+<h4 id="org46c8920"><span class="section-number-4">4.3.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>U. of Sheffield, “Calls for a new ‘digital vaccination’ for children to tackle fake news and disinformation.” Accessed: Aug. 24, 2024. [Online]. Available: <a href="https://phys.org/news/2024-08-digital-vaccination-children-tackle-fake.html">https://phys.org/news/2024-08-digital-vaccination-children-tackle-fake.html</a></li>
+
+<li>Lea, “Fighting disinformation with sunshine: promoting funding transparency in science,” International Science Council. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://council.science/blog/fighting-disinformation-with-sunshine-promoting-funding-transparency-in-science/">https://council.science/blog/fighting-disinformation-with-sunshine-promoting-funding-transparency-in-science/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgca57468" class="outline-3">
+<h3 id="orgca57468"><span class="section-number-3">4.4.</span> GIJN Resources</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orga21b89a" class="outline-4">
+<h4 id="orga21b89a"><span class="section-number-4">4.4.1.</span> 1</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>“GIJN/NAJA Guide for Indigenous Investigative Journalists,” Global Investigative Journalism Network. <a href="https://gijn.org/gijn-naja-guide-for-indigenous-investigative-journalists/">https://gijn.org/gijn-naja-guide-for-indigenous-investigative-journalists/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Health and Medicine Guide - Table of Contents,” Global Investigative Journalism Network. <a href="https://gijn.org/health-and-medicine-guide-table-of-contents/">https://gijn.org/health-and-medicine-guide-table-of-contents/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Climate Change Reporting Guide: Methane - Introduction / TOC,” Global Investigative Journalism Network. <a href="https://gijn.org/climate-change-reporting-guide-methane-introduction-toc/">https://gijn.org/climate-change-reporting-guide-methane-introduction-toc/</a> (accessed Sep. 06, 2023).</li>
+<li>R. Richardson, “Reporting Guide to Holding Governments Accountable for Climate Change Pledges — Introduction / TOC,” Global Investigative Journalism Network, May 31, 2023. <a href="https://gijn.org/2023/05/31/reporting-guide-holding-governments-accountable-climate-change-introduction/">https://gijn.org/2023/05/31/reporting-guide-holding-governments-accountable-climate-change-introduction/</a> (accessed Sep. 06, 2023).</li>
+<li>“GIJN’s Guide to Investigating Sea Level Rise,” Global Investigative Journalism Network. <a href="https://gijn.org/investigating-sea-level-rise/">https://gijn.org/investigating-sea-level-rise/</a> (accessed Sep. 06, 2023).</li>
+<li>“Climate Crisis: Ideas for Investigative Journalists,” Global Investigative Journalism Network. <a href="https://gijn.org/climate-crisis-ideas-for-investigative-journalists/">https://gijn.org/climate-crisis-ideas-for-investigative-journalists/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Richardson, “Guide to Investigating Disability Issues: Introduction — Table of Contents,” Global Investigative Journalism Network, Mar. 07, 2023. <a href="https://gijn.org/2023/03/07/guide-to-investigating-disability-issues-introduction/">https://gijn.org/2023/03/07/guide-to-investigating-disability-issues-introduction/</a> (accessed Sep. 06, 2023).</li>
+<li>“Illegal Wildlife Trafficking: A GIJN Guide,” Global Investigative Journalism Network. <a href="https://gijn.org/illegal-wildlife-trafficking-a-gijn-guide/">https://gijn.org/illegal-wildlife-trafficking-a-gijn-guide/</a> (accessed Sep. 06, 2023).</li>
+<li>“Covering the Extractive Industries,” Global Investigative Journalism Network. <a href="https://gijn.org/covering-the-extractive-industries/">https://gijn.org/covering-the-extractive-industries/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge9f9195" class="outline-4">
+<h4 id="orge9f9195"><span class="section-number-4">4.4.2.</span> 2</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li>L. Dixon, “GIJN’s Guide to Undercover Reporting,” Global Investigative Journalism Network, Aug. 01, 2022. <a href="https://gijn.org/2022/08/01/gijns-guide-to-undercover-reporting/">https://gijn.org/2022/08/01/gijns-guide-to-undercover-reporting/</a> (accessed Sep. 06, 2023).</li>
+
+<li>N. Apostolou, “How to Set Up a Video Unit: A GIJN Guide for Small Organizations,” Global Investigative Journalism Network, Nov. 04, 2021. <a href="https://gijn.org/2021/11/04/how-to-do-video-for-small-newsrooms/">https://gijn.org/2021/11/04/how-to-do-video-for-small-newsrooms/</a> (accessed Sep. 06, 2023).</li>
+
+<li>N. Apostolou, “A Guide to Fact-Checking Investigative Stories,” Global Investigative Journalism Network, Nov. 03, 2021. <a href="https://gijn.org/2021/11/03/fact-checking-for-journalists/">https://gijn.org/2021/11/03/fact-checking-for-journalists/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Unlocking Laws to Set Information Free: GIJN’s Global Guide to FOI and RTI,” Global Investigative Journalism Network. <a href="https://gijn.org/gijns-global-guide-to-foi-and-rti/">https://gijn.org/gijns-global-guide-to-foi-and-rti/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Data Journalism,” / Help Desk. <a href="https://helpdesk.gijn.org/support/solutions/articles/14000036505-data-journalism">https://helpdesk.gijn.org/support/solutions/articles/14000036505-data-journalism</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org223115c" class="outline-4">
+<h4 id="org223115c"><span class="section-number-4">4.4.3.</span> 3</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li>“Investigating Sexual Abuse: An Updated Reporting Guide,” Global Investigative Journalism Network. <a href="https://gijn.org/investigating-sexual-abuse-reporting-tips-and-tools/">https://gijn.org/investigating-sexual-abuse-reporting-tips-and-tools/</a> (accessed Sep. 06, 2023).</li>
+
+<li>tpampalone, “Investigating Femicide: A GIJN Guide,” Global Investigative Journalism Network, Jun. 07, 2021. <a href="https://gijn.org/2021/06/07/investigating-femicide/">https://gijn.org/2021/06/07/investigating-femicide/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Resources for Women Journalists - A GIJN Guide,” Global Investigative Journalism Network. <a href="https://gijn.org/resources-women-journalists-gijn-guide/">https://gijn.org/resources-women-journalists-gijn-guide/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“LGBTQ Issues,” / Help Desk. <a href="https://helpdesk.gijn.org/support/solutions/articles/14000075850-lgbtq-issues">https://helpdesk.gijn.org/support/solutions/articles/14000075850-lgbtq-issues</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge368977" class="outline-4">
+<h4 id="orge368977"><span class="section-number-4">4.4.4.</span> 4h</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ul class="org-ul">
+<li>“Migration Reporting: Sources, Guidelines, Contests,” Global Investigative Journalism Network. <a href="https://gijn.org/migration-reporting-sources-guidelines-contests/">https://gijn.org/migration-reporting-sources-guidelines-contests/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Human Trafficking, Forced Labor and Slavery,” / Help Desk. <a href="https://helpdesk.gijn.org/support/solutions/articles/14000075896-human-trafficking-forced-labor-and-slavery">https://helpdesk.gijn.org/support/solutions/articles/14000075896-human-trafficking-forced-labor-and-slavery</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Introduction: GIJN Guide to Reporting on Migration in the Gulf Arab Countries,” Global Investigative Journalism Network. <a href="https://gijn.org/introduction-gijn-guide-to-reporting-on-migration-in-the-gulf-arab-countries/">https://gijn.org/introduction-gijn-guide-to-reporting-on-migration-in-the-gulf-arab-countries/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge832105" class="outline-4">
+<h4 id="orge832105"><span class="section-number-4">4.4.5.</span> 43</h4>
+<div class="outline-text-4" id="text-4-4-5">
+<ul class="org-ul">
+<li>“Citizen Investigation Guide,” Global Investigative Journalism Network. <a href="https://gijn.org/citizen-investigation-guide/">https://gijn.org/citizen-investigation-guide/</a> (accessed Sep. 06, 2023).</li>
+
+<li>N. Apostolou, “Investigating Russia and the War in Ukraine,” Global Investigative Journalism Network, Mar. 28, 2022. <a href="https://gijn.org/2022/03/28/investigating-russia-and-the-war-in-ukraine/">https://gijn.org/2022/03/28/investigating-russia-and-the-war-in-ukraine/</a> (accessed Sep. 06, 2023).</li>
+
+<li>R. Richardson, “Elections Guide for Investigative Reporters: Introduction,” Global Investigative Journalism Network, Mar. 28, 2022. <a href="https://gijn.org/2022/03/28/elections-guide-for-investigative-reporters-introduction/">https://gijn.org/2022/03/28/elections-guide-for-investigative-reporters-introduction/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgafa6d46" class="outline-4">
+<h4 id="orgafa6d46"><span class="section-number-4">4.4.6.</span> 4l</h4>
+<div class="outline-text-4" id="text-4-4-6">
+<ul class="org-ul">
+<li>R. Richardson, “A Journalist’s Guide to Avoiding Lawsuits and Other Legal Dangers,” Global Investigative Journalism Network, Sep. 01, 2021. <a href="https://gijn.org/2021/09/01/a-journalists-guide-to-avoiding-lawsuits-and-other-legal-dangers/">https://gijn.org/2021/09/01/a-journalists-guide-to-avoiding-lawsuits-and-other-legal-dangers/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e910aa" class="outline-4">
+<h4 id="org9e910aa"><span class="section-number-4">4.4.7.</span> 44</h4>
+<div class="outline-text-4" id="text-4-4-7">
+<ul class="org-ul">
+<li>“Biz Tools — TOC / Introduction,” Global Investigative Journalism Network. <a href="https://gijn.org/biz-tools-toc-introduction/">https://gijn.org/biz-tools-toc-introduction/</a> (accessed Sep. 06, 2023).</li>
+<li>“Investigating Supply Chains,” Global Investigative Journalism Network. <a href="https://gijn.org/investigating-supply-chains/">https://gijn.org/investigating-supply-chains/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Asset Disclosure,” Global Investigative Journalism Network. <a href="https://gijn.org/asset-disclosure/">https://gijn.org/asset-disclosure/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Land Ownership Records: So Useful, but Challenging to Find,” Global Investigative Journalism Network. <a href="https://gijn.org/land-ownership-records-so-useful-but-challenging-to-find/">https://gijn.org/land-ownership-records-so-useful-but-challenging-to-find/</a> (accessed Sep. 06, 2023).</li>
+
+<li>“Researching Corporations and Their Owners,” Global Investigative Journalism Network. <a href="https://gijn.org/researching-corporations-and-their-owners/">https://gijn.org/researching-corporations-and-their-owners/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Digging into Disappearances: A Guide to Investigating Missing People and Organized Crime,” Global Investigative Journalism Network. <a href="https://gijn.org/digging-into-disappearances-a-guide-to-investigating-missing-people-and-organized-crime/">https://gijn.org/digging-into-disappearances-a-guide-to-investigating-missing-people-and-organized-crime/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org77bf387" class="outline-4">
+<h4 id="org77bf387"><span class="section-number-4">4.4.8.</span> 49</h4>
+<div class="outline-text-4" id="text-4-4-8">
+<ul class="org-ul">
+<li>“Planespotting: An Updated Guide to Tracking Aircraft Around the World,” Global Investigative Journalism Network. <a href="https://gijn.org/flight-tracking/">https://gijn.org/flight-tracking/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Organized Crime Introduction / TOC GIJN’s Organized Crime Guide,” Global Investigative Journalism Network. <a href="https://gijn.org/organized-crime-introduction-toc/">https://gijn.org/organized-crime-introduction-toc/</a> (accessed Sep. 06, 2023).</li>
+<li>R. Richardson, “Guide to Investigating Organized Crime in the Golden Triangle — Introduction,” Global Investigative Journalism Network, Nov. 28, 2022. <a href="https://gijn.org/2022/11/28/guide-to-investigating-organized-crime-in-the-golden-triangle-introduction/">https://gijn.org/2022/11/28/guide-to-investigating-organized-crime-in-the-golden-triangle-introduction/</a> (accessed Sep. 06, 2023).</li>
+<li>“Guide to Investigating Organized Crime in the Golden Triangle,” Global Investigative Journalism Network. <a href="https://gijn.org/gijns-guide-to-investigating-organized-crime-in-the-golden-triangle/">https://gijn.org/gijns-guide-to-investigating-organized-crime-in-the-golden-triangle/</a> (accessed Sep. 06, 2023).</li>
+<li>“Guide to Investigating Organized Crime in Africa,” Global Investigative Journalism Network. <a href="https://gijn.org/guide-to-investigating-organized-crime-in-africa/">https://gijn.org/guide-to-investigating-organized-crime-in-africa/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Richardson, “Reporter’s Guide to Investigating War Crimes: Attacks on Civilians,” Global Investigative Journalism Network, May 09, 2023. <a href="https://gijn.org/2023/05/09/reporters-guide-investigating-war-crimes-attacks-civilians/">https://gijn.org/2023/05/09/reporters-guide-investigating-war-crimes-attacks-civilians/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org55475ba" class="outline-2">
+<h2 id="org55475ba"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Greatest Hits from a ‘Journalism in the Movies’ Course.” Accessed: May 29, 2024. [Online]. Available: <a href="https://gijn.org/stories/what-10-movies-teach-about-news-reporting/">https://gijn.org/stories/what-10-movies-teach-about-news-reporting/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org022a553" class="outline-2">
+<h2 id="org022a553"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org6ef9103" class="outline-3">
+<h3 id="org6ef9103"><span class="section-number-3">6.1.</span> Hindi</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org7b00c8c" class="outline-4">
+<h4 id="org7b00c8c"><span class="section-number-4">6.1.1.</span> Global</h4>
+<div class="outline-text-4" id="text-6-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org2a57c80"></a>Alternative Media<br />
+<ol class="org-ol">
+<li><a id="orga414eeb"></a>GIJN<br />
+<div class="outline-text-6" id="text-6-1-1-1-1">
+<ul class="org-ul">
+<li><b>“GIJN.”</b> Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://gijn.org/hi/">https://gijn.org/hi/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0f5159a"></a>Misc<br />
+<div class="outline-text-6" id="text-6-1-1-1-2">
+<ul class="org-ul">
+<li>“Global Voices हिन्दी में · पूरे विश्व से नागरिक मिडिया की कहानियाँ,” Global Voices हिन्दी में. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://hi.globalvoices.org">https://hi.globalvoices.org</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“विलुप्ति विद्रोह | जलवायु और पारिस्थितिकी के पतन के ख़िलाफ़ लड़ाई में शामिल होइयें,”</b> Extinction Rebellion. Accessed: Mar. 09, 2024. [Online]. Available: <a href="https://rebellion.global/hi/">https://rebellion.global/hi/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf497f00"></a>MainStream Media<br />
+<div class="outline-text-5" id="text-6-1-1-2">
+<ul class="org-ul">
+<li>“ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news,” BBC News हिंदी. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.bbc.com/hindi">https://www.bbc.com/hindi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“खबरें – DW.” Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.dw.com/hi/">https://www.dw.com/hi/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4b52a67"></a>Politics: Left<br />
+<div class="outline-text-5" id="text-6-1-1-3">
+<ul class="org-ul">
+<li>“World Socialist Web Site - Marxist analysis, international working class struggles &amp; the fight for socialism,” World Socialist Web Site. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/hi">https://www.wsws.org/hi</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfaff4a9"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org5ca454f" class="outline-4">
+<h4 id="org5ca454f"><span class="section-number-4">6.1.2.</span> India</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org56f3de9"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org4294fcf"></a>Environment<br />
+<div class="outline-text-6" id="text-6-1-2-1-1">
+<ul class="org-ul">
+<li><b>“Down To Earth | Latest news, opinion, analysis on environment and science issues | India, South Asia.”</b> Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/hindistory">https://www.downtoearth.org.in/hindistory</a></li>
+
+<li><b>“Mongabay हिन्दी,” Mongabay हिन्दी.</b> Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://hindi.mongabay.com/">https://hindi.mongabay.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org456936e"></a>CSE<br /></li>
+<li><a id="orgee987fa"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org8e5cad1"></a>World<br />
+<ol class="org-ol">
+<li><a id="org7ff8432"></a>Feminism<br />
+<div class="outline-text-6" id="text-6-1-2-2-1">
+<ul class="org-ul">
+<li>F. I. I. Team, “फेमिनिज़म इन इंडिया,” फेमिनिज़म इन इंडिया. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://hindi.feminisminindia.com/">https://hindi.feminisminindia.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org73a0568"></a>Tribal India<br />
+<div class="outline-text-6" id="text-6-1-2-2-2">
+<ul class="org-ul">
+<li>उत्तरजीविताअंतरराष्ट्रीय, “मुखपृष्ठ - अंतरराष्ट्रीय उत्तरजीविता.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.survivalinternational.in/hi">https://www.survivalinternational.in/hi</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org64a6de2"></a>Rural India<br />
+<div class="outline-text-6" id="text-6-1-2-2-3">
+<ul class="org-ul">
+<li>“The everyday lives of everyday people,” People’s Archive of Rural India. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/hi/">https://ruralindiaonline.org/hi/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org74cadfa"></a>Spirituality<br />
+<ul class="org-ul">
+<li><a id="org980e1c2"></a>Devdutt Pattanaik<br />
+<div class="outline-text-7" id="text-org980e1c2">
+<ul class="org-ul">
+<li>“Hindi Archives,” Devdutt Pattanaik. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://devdutt.com/category/translations/hindi/">https://devdutt.com/category/translations/hindi/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org9d4c5ff"></a>Alternative Media<br />
+<div class="outline-text-6" id="text-6-1-2-2-5">
+<ul class="org-ul">
+<li><b>“language | Economic and Political Weekly.”</b> Accessed: Sep. 14, 2024. [Online]. Available: <a href="https://www.epw.in/translation?lang=hi">https://www.epw.in/translation?lang=hi</a></li>
+<li><b>“कारवां.”</b> Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://hindi.caravanmagazine.in">https://hindi.caravanmagazine.in</a></li>
+<li><b>न्यूज़क्लिक.</b> Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://hindi.newsclick.in/home">https://hindi.newsclick.in/home</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Alt News,” Alt News. Accessed: Feb. 06, 2024. [Online]. Available: <a href="https://www.altnews.in/hindi/">https://www.altnews.in/hindi/</a></li>
+<li>“Hindi News (हिंदी न्यूज़): Latest News in Hindi हिन्दी समाचार लेटेस्ट न्यूज़ इन हिंदी, The Wire Hindi,” The Wire - Hindi. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://thewirehindi.com/">https://thewirehindi.com/</a></li>
+<li>“Satyagrah | सत्याग्रह - Latest Hindi News, India | ताज़ा हिंदी समाचार, भारत,” सत्याग्रह. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://satyagrah.scroll.in">https://satyagrah.scroll.in</a></li>
+<li>“न्यूज़लॉन्ड्री हिंदी,” Newslaundry. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://hindi.newslaundry.com">https://hindi.newslaundry.com</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“भारत · Global Voices हिन्दी में,” Global Voices हिन्दी में. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://hi.globalvoices.org/category/world/south-asia/india/">https://hi.globalvoices.org/category/world/south-asia/india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7c951f8"></a>Politics: Left<br />
+<div class="outline-text-6" id="text-6-1-2-2-6">
+<ul class="org-ul">
+<li>“India,” World Socialist Web Site. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/hi/topics/country/as-ind">https://www.wsws.org/hi/topics/country/as-ind</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“समाज बदलने की बात करो, या चुप रहो: नौवाँ समाचार-पत्र (2020),” Tricontinental: Institute for Social Research. Accessed: Jan. 31, 2024. [Online]. Available: <a href="https://thetricontinental.org/hi/">https://thetricontinental.org/hi/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7d66b4f"></a>Politics: Right<br />
+<div class="outline-text-6" id="text-6-1-2-2-7">
+<ul class="org-ul">
+<li>“हिंदी न्यूज़, Hindi News, ब्रेकिंग न्यूज़, हिंदी समाचार, लेटेस्ट हिंदी न्यूज़, राष्ट्रीय समाचार, अंतरराष्ट्रीय समाचार, न्यूज़ इन हिंदी - Republic Bharat.” Accessed: Jan. 31, 2024. [Online]. Available: <a href="https://www.republicbharat.com/">https://www.republicbharat.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org42bda06"></a>MainStream Media<br />
+<ul class="org-ul">
+<li><a id="org86d6032"></a>Misc<br />
+<div class="outline-text-7" id="text-org86d6032">
+<ul class="org-ul">
+<li>“Hindi News | हिन्दी न्यूज़ | Latest and Breaking News in Hindi - NDTV India.” Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://ndtv.india">https://ndtv.india</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgd0baeac"></a>Misc<br />
+<div class="outline-text-6" id="text-6-1-2-2-9">
+<ul class="org-ul">
+<li>indiaspendhi, “इंडियास्पेंड: डेटा पत्रकारिता, भारतीय अर्थव्यवस्था पर विश्लेषण, शिक्षा, स्वास्थ्य सेवा, कृषि, राजनीति.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.indiaspendhindi.com/">https://www.indiaspendhindi.com/</a></li>
+
+<li>“Hindi News: Hindi Samachar, Latest News in Hindi, Breaking News in Hindi, India News Hindi, हिंदी न्यूज़, ताजा हिंदी समाचार - Quint Hindi,” TheQuint. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://hindi.thequint.com/">https://hindi.thequint.com/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org9103605"></a>Arts<br /></li>
+<li><a id="org8a2bcfd"></a>Misc<br />
+<ol class="org-ol">
+<li><a id="org14aef37"></a>YouTube<br />
+<div class="outline-text-6" id="text-6-1-2-4-1">
+<ul class="org-ul">
+<li>Satya Hindi सत्य हिन्दी - YouTube.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/@SatyaHindi">https://www.youtube.com/@SatyaHindi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>4PM,” YouTube. Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UCqJByGbhsWdMhnDYaK-7prw">https://www.youtube.com/channel/UCqJByGbhsWdMhnDYaK-7prw</a>
+<ul class="org-ul">
+<li>4PM Delhi,” YouTube. Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UCfTSlcf38FIrIsCT3NTi8iw">https://www.youtube.com/channel/UCfTSlcf38FIrIsCT3NTi8iw</a></li>
+<li>4PM Haryana,” YouTube. Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UCxxWUdFJ3cDKyDQ8s6s0OPA">https://www.youtube.com/channel/UCxxWUdFJ3cDKyDQ8s6s0OPA</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>विधान और लोकतंत्र से बड़ा कोई नहीं । Navin Kumar. Accessed: Sep. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=dNVTIs7THZY">https://www.youtube.com/watch?v=dNVTIs7THZY</a></li>
+
+<li>Home - Article19 India.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="http://article19india.com">http://article19india.com</a></li>
+
+<li>Deepak Sharma - YouTube.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/@deepaksharmaindia">https://www.youtube.com/@deepaksharmaindia</a></li>
+
+<li>Punya Prasun Bajpai - YouTube.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/@PunyaPrasunBajpaiindia">https://www.youtube.com/@PunyaPrasunBajpaiindia</a></li>
+
+<li>Ravish Kumar Official - YouTube.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/@ravishkumar.official">https://www.youtube.com/@ravishkumar.official</a></li>
+
+<li>Dhruv Rathee - YouTube.” Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://www.youtube.com/@dhruvrathee">https://www.youtube.com/@dhruvrathee</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga27093d" class="outline-3">
+<h3 id="orga27093d"><span class="section-number-3">6.2.</span> English</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org4e9f4b8" class="outline-4">
+<h4 id="org4e9f4b8"><span class="section-number-4">6.2.1.</span> Big Picture</h4>
+<div class="outline-text-4" id="text-6-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3f868b0"></a>Institute for Advanced Study<br />
+<div class="outline-text-5" id="text-6-2-1-1">
+<ul class="org-ul">
+<li>“News | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news">https://www.ias.edu/news</a></li>
+
+<li>“Opinion | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news/opinion">https://www.ias.edu/news/opinion</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Press Clips | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/news/press-clips">https://www.ias.edu/news/press-clips</a></li>
+<li>“Press Center | Institute for Advanced Study.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ias.edu/press">https://www.ias.edu/press</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2fc08fd"></a>Systems Sciences<br />
+<ol class="org-ol">
+<li><a id="orge1e8af0"></a>International Institute for Applied Systems Analysis<br />
+<div class="outline-text-6" id="text-6-2-1-2-1">
+<ul class="org-ul">
+<li>“News,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news">https://iiasa.ac.at/news</a></li>
+<li>“Blog,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog">https://iiasa.ac.at/blog</a></li>
+<li>“Press releases,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iiasa.ac.at/media/press-releases">https://iiasa.ac.at/media/press-releases</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgbd6a4ce"></a>Complexity Science<br />
+<ol class="org-ol">
+<li><a id="orga1fed8a"></a>New England Complex Systems Institute<br />
+<div class="outline-text-6" id="text-6-2-1-3-1">
+<ul class="org-ul">
+<li>“Engage,” New England Complex Systems Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://necsi.edu/engage">https://necsi.edu/engage</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org98fd0d5"></a>Santa Fe Institute<br />
+<div class="outline-text-6" id="text-6-2-1-3-2">
+<ul class="org-ul">
+<li>“Newsletters | Santa Fe Institute.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/publications">https://www.santafe.edu/news-center/publications</a></li>
+<li>“News | Santa Fe Institute.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news">https://www.santafe.edu/news-center/news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5efb22a"></a>Complexity Science Hub Vienna<br />
+<div class="outline-text-6" id="text-6-2-1-3-3">
+<ul class="org-ul">
+<li>“News * Complexity Science Hub.” Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://csh.ac.at/events-news/news/">https://csh.ac.at/events-news/news/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8b4229f"></a>Wolfram: A New Kind Of Science<br />
+<div class="outline-text-5" id="text-6-2-1-4">
+<ul class="org-ul">
+<li>“Stephen Wolfram Writings.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://writings.stephenwolfram.com/">https://writings.stephenwolfram.com/</a></li>
+<li>“Wolfram Blog: News, Views and Insights from Wolfram.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://blog.wolfram.com/">https://blog.wolfram.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga7acaad"></a>Network Science<br />
+<div class="outline-text-5" id="text-6-2-1-5">
+<ul class="org-ul">
+<li>“News | Network Science Institute at Northeastern University.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.networkscienceinstitute.org/news">https://www.networkscienceinstitute.org/news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org373cc4d"></a>Center For Study Of Existential Research<br />
+<div class="outline-text-5" id="text-6-2-1-6">
+<ul class="org-ul">
+<li>“News.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/news/">https://www.cser.ac.uk/news/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“TERRA.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/resources/terra/">https://www.cser.ac.uk/resources/terra/</a></li>
+<li>“CSER Infographics.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/resources/cser-infographics/">https://www.cser.ac.uk/resources/cser-infographics/</a></li>
+<li>“Reports.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/about-us/reports/">https://www.cser.ac.uk/about-us/reports/</a></li>
+<li>“Newsletters.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/about-us/newsletters/">https://www.cser.ac.uk/about-us/newsletters/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaf49020"></a>Misc<br />
+<div class="outline-text-5" id="text-6-2-1-7">
+<ul class="org-ul">
+<li>“Union of Concerned Scientists.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.ucsusa.org/">https://www.ucsusa.org/</a></li>
+
+<li>“Bulletin of the Atomic Scientists,” Bulletin of the Atomic Scientists. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thebulletin.org/">https://thebulletin.org/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org10ba084" class="outline-4">
+<h4 id="org10ba084"><span class="section-number-4">6.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgf9c10ab"></a>Mathematics, Computer Science and Engineering<br />
+<ul class="org-ul">
+<li><a id="org9be8e67"></a>Mathematics<br />
+<div class="outline-text-7" id="text-org9be8e67">
+<ul class="org-ul">
+<li>“News and Announcements,” Fields Institute for Research in Mathematical Sciences. Accessed: Jan. 29, 2024. [Online]. Available: <a href="http://www.fields.utoronto.ca/news/news-and-announcements">http://www.fields.utoronto.ca/news/news-and-announcements</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“News Archive,” Clay Mathematics Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.claymath.org/news/">https://www.claymath.org/news/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Newsletter Archive - SLMath.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.slmath.org/newsletter-archive">https://www.slmath.org/newsletter-archive</a></li>
+<li>“SLMath in the Media - SLMath.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.slmath.org/media">https://www.slmath.org/media</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“EMS | News.” Accessed: Jan. 31, 2024. [Online]. Available: <a href="https://euromathsoc.org/news">https://euromathsoc.org/news</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mathematics News - Math News, Mathematical Sciences.” Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://phys.org/science-news/mathematics/">https://phys.org/science-news/mathematics/</a></li>
+
+<li>“MATH VALUES,” MATH VALUES. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.mathvalues.org">https://www.mathvalues.org</a></li>
+
+<li>“SIAM News &gt; Current Issue.” Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://sinews.siam.org/Current-Issue">https://sinews.siam.org/Current-Issue</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd61b88d"></a>Computer Science and Engineering<br />
+<ul class="org-ul">
+<li><a id="org064007d"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="org86c726e"></a>Global<br />
+<div class="outline-text-9" id="text-org86c726e">
+<ul class="org-ul">
+<li>“Blog,” Mozilla Foundation. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/">https://foundation.mozilla.org/en/blog/</a></li>
+<li>“Open Source Initiative: Blog,” Open Source Initiative. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://opensource.org/blog">https://opensource.org/blog</a></li>
+
+<li>“Electronic Frontier Foundation,” Electronic Frontier Foundation. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.eff.org/">https://www.eff.org/</a></li>
+
+<li>“FSF News — Free Software Foundation — Working together for free software.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.fsf.org/news">https://www.fsf.org/news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org30f90cf"></a>India<br />
+<div class="outline-text-9" id="text-org30f90cf">
+<ul class="org-ul">
+<li>“CoE News and Events - Centre of Excellence in Cyber Security, Govt. of Karnataka.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://cs-coe.iisc.ac.in/about/coe-news-and-events/">https://cs-coe.iisc.ac.in/about/coe-news-and-events/</a></li>
+<li>“MediaNama - Digital India Internet Mobile Policy News,” MediaNama. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.medianama.com/">https://www.medianama.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8a69ba1"></a>AI<br />
+<ul class="org-ul">
+<li><a id="org719e70b"></a>AI Now<br />
+<div class="outline-text-9" id="text-org719e70b">
+<ul class="org-ul">
+<li>“Home,” AI Now Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://ainowinstitute.org/">https://ainowinstitute.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc3fa723"></a>LCFI<br />
+<div class="outline-text-9" id="text-orgc3fa723">
+<ul class="org-ul">
+<li>“News - LCFI,” LCFI - Leverhulme Centre for the Future of Intelligence. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://www.lcfi.ac.uk/news-events/news">https://www.lcfi.ac.uk/news-events/news</a></li>
+<li>“Publications.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="http://lcfi.ac.uk/resources/publications/">http://lcfi.ac.uk/resources/publications/</a></li>
+<li>“Reports.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="http://lcfi.ac.uk/resources/reports/">http://lcfi.ac.uk/resources/reports/</a></li>
+<li>“Popular Press.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="http://lcfi.ac.uk/resources/popular-press/">http://lcfi.ac.uk/resources/popular-press/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3d5b911"></a>Misc<br />
+<div class="outline-text-9" id="text-org3d5b911">
+<ul class="org-ul">
+<li>“News | MIT CSAIL.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.csail.mit.edu/news/">https://www.csail.mit.edu/news/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org1f4c2cf"></a>Basic<br />
+<ol class="org-ol">
+<li><a id="orgbe49d47"></a>Physics<br />
+<div class="outline-text-6" id="text-6-2-2-2-1">
+<ul class="org-ul">
+<li>“IOPscience.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://iopscience.iop.org/">https://iopscience.iop.org/</a></li>
+
+<li>“Home,” Physics World. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://physicsworld.com/">https://physicsworld.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6ae6b16"></a>Chemistry<br />
+<div class="outline-text-6" id="text-6-2-2-2-2">
+<ul class="org-ul">
+<li>“Chemistry news, research and opinions,” Chemistry World. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.chemistryworld.com">https://www.chemistryworld.com</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org93ffb3a"></a>Biology<br />
+<div class="outline-text-6" id="text-6-2-2-2-3">
+<ul class="org-ul">
+<li>“News,” MIT Department of Biology. Accessed: Feb. 02, 2024. [Online]. Available: <a href="https://biology.mit.edu/news/">https://biology.mit.edu/news/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf6c1283"></a>Advanced<br />
+<ol class="org-ol">
+<li><a id="org756f382"></a>Nano Science &amp; Technology<br />
+<div class="outline-text-6" id="text-6-2-2-3-1">
+<ul class="org-ul">
+<li>“News,” nanotechnologyworld. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://www.nanotechnologyworld.org/newsroom">https://www.nanotechnologyworld.org/newsroom</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“News.” Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://kavlinano.ox.ac.uk/latest-news">https://kavlinano.ox.ac.uk/latest-news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcdc3445"></a>Quantum Computing<br />
+<div class="outline-text-6" id="text-6-2-2-3-2">
+<ul class="org-ul">
+<li>V. support, “Latest news and comment | University of Oxford Department of Physics.” Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://www.physics.ox.ac.uk/news?theme=40">https://www.physics.ox.ac.uk/news?theme=40</a></li>
+
+<li>“News – MIT EECS.” Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://www.eecs.mit.edu/category/news/?fwp_topics=quantum-computing-communication-and-sensing">https://www.eecs.mit.edu/category/news/?fwp_topics=quantum-computing-communication-and-sensing</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb5f420f"></a>Misc<br />
+<div class="outline-text-5" id="text-6-2-2-4">
+<ul class="org-ul">
+<li>“Undark: Truth, Beauty, Science.,” Undark Magazine. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://undark.org/">https://undark.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“London Mathematical Laboratory.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://lml.org.uk/blog/">https://lml.org.uk/blog/</a></li>
+
+<li>“Newsroom - Heidelberg Laureate Foundation,” - Heidelberg Laureate Foundation. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.newsroom.hlf-foundation.org/">https://www.newsroom.hlf-foundation.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Nautilus | Science Connected,” Nautilus. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://nautil.us/">https://nautil.us/</a></li>
+<li>“Science and Math News,” Quanta Magazine. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/">https://www.quantamagazine.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Scientific American,” Scientific American. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/">https://www.scientificamerican.com/</a></li>
+<li>“Popular Science Homepage,” Popular Science. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.popsci.com/">https://www.popsci.com/</a></li>
+<li>“Popular Mechanics - Product Reviews, How-To, Space, Military, Math, Science, and New Technology,” Popular Mechanics. Accessed: Jul. 13, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/">https://www.popularmechanics.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Science Advocacy 101,” Union of Concerned Scientists. Accessed: May 15, 2024. [Online]. Available: <a href="https://secure.ucsusa.org/a/2024-science-advocacy-101">https://secure.ucsusa.org/a/2024-science-advocacy-101</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgefe2415" class="outline-4">
+<h4 id="orgefe2415"><span class="section-number-4">6.2.3.</span> World</h4>
+<div class="outline-text-4" id="text-6-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgaf88cba"></a>41<br />
+<ol class="org-ol">
+<li><a id="org9e802e8"></a>Environment, Ecology<br />
+<ul class="org-ul">
+<li><a id="orga343f42"></a>India<br />
+<ul class="org-ul">
+<li><a id="org02688c8"></a>Vikalp Sangam<br />
+<div class="outline-text-8" id="text-org02688c8">
+<ul class="org-ul">
+<li>“Vikalp Sangam - Alternatives’ Confluence,” Vikalp Sangam. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://vikalpsangam.org/">https://vikalpsangam.org/</a></li>
+
+<li>“Latest Stories,” Vikalp Sangam. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://vikalpsangam.org/stories/">https://vikalpsangam.org/stories/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3f1c811"></a>GreenPeace India<br />
+<div class="outline-text-8" id="text-org3f1c811">
+<ul class="org-ul">
+<li>“Latest Publications,” Greenpeace India. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/latest-publications/">https://www.greenpeace.org/india/en/latest-publications/</a></li>
+
+<li>“Press Release,” Greenpeace India. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/">https://www.greenpeace.org/india/en/press/</a></li>
+
+<li>“News &amp;#038; Stories,” Greenpeace India. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/news-stories/">https://www.greenpeace.org/india/en/news-stories/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org643d6ce"></a>Friends of the Earth India<br />
+<div class="outline-text-8" id="text-org643d6ce">
+<ul class="org-ul">
+<li>“Friends of the Earth India,” Voices from FoE Asia Pacific. Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://foeasiapacific.org/member_group/foe-india/">https://foeasiapacific.org/member_group/foe-india/</a></li>
+<li>foeint, “India - Friends of the Earth International.” Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://www.foei.org/member-groups/india/">https://www.foei.org/member-groups/india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge076b00"></a>Mongabay India<br />
+<div class="outline-text-8" id="text-orge076b00">
+<ul class="org-ul">
+<li>“Mongabay-India,” Mongabay-India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://india.mongabay.com/">https://india.mongabay.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5e90b65"></a>Down To Earth<br />
+<div class="outline-text-8" id="text-org5e90b65">
+<ul class="org-ul">
+<li>“Down To Earth | Latest news, opinion, analysis on environment &amp; science issues | India, South Asia.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/">https://www.downtoearth.org.in/</a>
+
+<ul class="org-ul">
+<li><i>“State of India’s Environment 2020.”</i> <a href="https://www.downtoearth.org.in/reviews/state-of-india-s-environment-2020-67869">https://www.downtoearth.org.in/reviews/state-of-india-s-environment-2020-67869</a> (accessed Jan. 07, 2021).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcfe1f64"></a>Misc<br />
+<div class="outline-text-8" id="text-orgcfe1f64">
+<ul class="org-ul">
+<li>indiaspend, “Environment Undone.” Accessed: Feb. 10, 2024. [Online]. Available: <a href="https://www.indiaspend.com/environment-undone">https://www.indiaspend.com/environment-undone</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org97aad07"></a>Global<br />
+<ul class="org-ul">
+<li><a id="orgd9d0dab"></a>Global Tapestry of Alternatives<br />
+<div class="outline-text-8" id="text-orgd9d0dab">
+<ul class="org-ul">
+<li>franco, “Publications,” GTA. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://globaltapestryofalternatives.org/publications:index">https://globaltapestryofalternatives.org/publications:index</a></li>
+<li>franco, “GTA’s Periodical: Weaving Alternatives,” GTA. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://globaltapestryofalternatives.org/newsletters:index">https://globaltapestryofalternatives.org/newsletters:index</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb66d05e"></a>Regeneration International<br />
+<div class="outline-text-8" id="text-orgb66d05e">
+<ul class="org-ul">
+<li>“News,” Regeneration International. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://regenerationinternational.org/blog/">https://regenerationinternational.org/blog/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3deb128"></a>Navdanya International<br />
+<div class="outline-text-8" id="text-org3deb128">
+<ul class="org-ul">
+<li>“News,” Navdanya international. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://navdanyainternational.org/seasons-greetings-and-a-happy-new-year/">https://navdanyainternational.org/seasons-greetings-and-a-happy-new-year/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org44d5a69"></a>Mongabay<br />
+<div class="outline-text-8" id="text-org44d5a69">
+<ul class="org-ul">
+<li>“Conservation news - Environmental science and conservation news.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/">https://news.mongabay.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8660045"></a>Extinction Rebellion<br />
+<div class="outline-text-8" id="text-org8660045">
+<ul class="org-ul">
+<li>“Ecological &amp; Climate Change News,” Extinction Rebellion. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://rebellion.global/news/">https://rebellion.global/news/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf4e0ecb"></a>Scientist Rebellion<br />
+<div class="outline-text-8" id="text-orgf4e0ecb">
+<ul class="org-ul">
+<li>“Scientist Rebellion Press,” Scientist Rebellion. Accessed: Feb. 04, 2024. [Online]. Available: <a href="http://scientistrebellion.org/about-us/press/">http://scientistrebellion.org/about-us/press/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd0140bb"></a>Friends Of the Earth International<br />
+<div class="outline-text-8" id="text-orgd0140bb">
+<ul class="org-ul">
+<li>“Friends of the Earth International Podcasts.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-podcasts/">https://www.foei.org/friends-of-the-earth-international-podcasts/</a></li>
+<li>“Friends of the Earth International’s Annual reports.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-internationals-annual-reports/">https://www.foei.org/friends-of-the-earth-internationals-annual-reports/</a></li>
+<li>“Friends of the Earth International videos.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-videos/">https://www.foei.org/friends-of-the-earth-international-videos/</a></li>
+<li>“Friends of the Earth International publications.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-publications/">https://www.foei.org/friends-of-the-earth-international-publications/</a></li>
+<li>“Friends of the Earth International Press.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.foei.org/friends-of-the-earth-international-press/">https://www.foei.org/friends-of-the-earth-international-press/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfeadf0c"></a>Friends Of the Earth<br />
+<div class="outline-text-8" id="text-orgfeadf0c">
+<ul class="org-ul">
+<li>“Impact Stories Archive,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/impact-stories/">https://foe.org/impact-stories/</a></li>
+<li>“Blog,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/blog/">https://foe.org/blog/</a></li>
+<li>“News Archive,” Friends of the Earth. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://foe.org/news/">https://foe.org/news/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org56b9613"></a>Fridays For Future<br />
+<div class="outline-text-8" id="text-org56b9613">
+<ul class="org-ul">
+<li>“Fridays For Future – Our Social Media from all over the world,” Fridays For Future. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://fridaysforfuture.org/take-action/social-media/">https://fridaysforfuture.org/take-action/social-media/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2093d83"></a>The Ecologist<br />
+<div class="outline-text-8" id="text-org2093d83">
+<ul class="org-ul">
+<li>“Home | The Ecologist.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://theecologist.org/">https://theecologist.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org702a4dd"></a>Local Futures<br />
+<div class="outline-text-8" id="text-org702a4dd">
+<ul class="org-ul">
+<li>“Local Futures’ media room,” Local Futures. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.localfutures.org/media-room/">https://www.localfutures.org/media-room/</a></li>
+<li>“Blog,” Local Futures. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.localfutures.org/blog/">https://www.localfutures.org/blog/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orga6b09df"></a>Health<br />
+<ul class="org-ul">
+<li><a id="org87b53e8"></a>World Health Network<br />
+<div class="outline-text-7" id="text-org87b53e8">
+<ul class="org-ul">
+<li>“Press,” WHN. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://whn.global/press/">https://whn.global/press/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd08b060"></a>European Society of Preventive Medicine<br />
+<div class="outline-text-7" id="text-orgd08b060">
+<ul class="org-ul">
+<li>admin, “News,” European Society of Preventive Medicine. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://espm.co/news/">https://espm.co/news/</a></li>
+<li>admin, “Preventive Medicine,” European Society of Preventive Medicine. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://espm.co/">https://espm.co/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfe1ee67"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgb22a4ef"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgf769531"></a>42<br />
+<ol class="org-ol">
+<li><a id="org52f9b9c"></a>Mind &amp; Life Institute<br />
+<div class="outline-text-6" id="text-6-2-3-2-1">
+<ul class="org-ul">
+<li>“What We Do,” Mind &amp; Life Institute. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.mindandlife.org/">https://www.mindandlife.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2e15446"></a>Devdutt Pattanaik<br />
+<div class="outline-text-6" id="text-6-2-3-2-2">
+<ul class="org-ul">
+<li>“Post Archives,” Devdutt Pattanaik. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://devdutt.com/post-archive/">https://devdutt.com/post-archive/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org561f2b1"></a>Sri Aurobindo<br />
+<div class="outline-text-6" id="text-6-2-3-2-3">
+<ul class="org-ul">
+<li>“SABDA Newsletter.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.sabda.in/catalog/show.php?id=newsletter">https://www.sabda.in/catalog/show.php?id=newsletter</a></li>
+<li>“Sri Aurobindo Ashram — Journals.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.sriaurobindoashram.org/journals/">https://www.sriaurobindoashram.org/journals/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7f45269"></a>Vrindavan<br />
+<div class="outline-text-6" id="text-6-2-3-2-4">
+<ul class="org-ul">
+<li>“Vrindavan Today,” Vrindavan Today. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://vrindavantoday.in/">https://vrindavantoday.in/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Latest news, opinion, analysis on vrindavan, Videos, photos, magazine stories | Down To Earth.” <a href="https://www.downtoearth.org.in/search?keyword=vrindavan&amp;amp;author=&amp;amp;content_type=&amp;amp;sort=desc">https://www.downtoearth.org.in/search?keyword=vrindavan&amp;amp;author=&amp;amp;content_type=&amp;amp;sort=desc</a> (accessed Apr. 07, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbff6c54"></a>India<br />
+<div class="outline-text-6" id="text-6-2-3-2-5">
+<ul class="org-ul">
+<li>“Religion | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/religion">https://caravanmagazine.in/religion</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1afdf2c"></a>43<br />
+<ol class="org-ol">
+<li><a id="org63cd227"></a>Tribal<br />
+<div class="outline-text-6" id="text-6-2-3-3-1">
+<ul class="org-ul">
+<li>S. International, “Home - Survival International.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.survivalinternational.org/">https://www.survivalinternational.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“YES! Magazine | Solutions Journalism,” YES! Magazine. Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://www.yesmagazine.org/">https://www.yesmagazine.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf9ed90c"></a>Journalism<br />
+<div class="outline-text-6" id="text-6-2-3-3-2">
+<ul class="org-ul">
+<li>“Freedom of the Press Foundation,” Freedom of the Press. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://freedom.press/">https://freedom.press/</a></li>
+
+<li>“GIJN.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://gijn.org/">https://gijn.org/</a></li>
+
+<li>“Welcome,” Center for Collaborative Investigative Journalism. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://ccij.io/">https://ccij.io/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf6c7749"></a>Politics<br />
+<div class="outline-text-6" id="text-6-2-3-3-3">
+<ul class="org-ul">
+<li>“Home,” openDemocracy. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.opendemocracy.net/en/">https://www.opendemocracy.net/en/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Transnational Institute | Ideas into Movement.” Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.tni.org/en">https://www.tni.org/en</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org15d8939"></a>Law<br />
+<ul class="org-ul">
+<li><a id="org42021c3"></a>Law: Human Rights<br />
+<div class="outline-text-7" id="text-org42021c3">
+<ul class="org-ul">
+<li>“Human Rights Watch.” [Online]. Available: <a href="https://www.hrw.org/">https://www.hrw.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Amnesty International,” Amnesty International. Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/">https://www.amnesty.org/en/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgabd42f9"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org27c1e79"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org885539e"></a>44<br />
+<ol class="org-ol">
+<li><a id="org7e70ba4"></a>Misc<br />
+<div class="outline-text-6" id="text-6-2-3-4-1">
+<ul class="org-ul">
+<li>“Latest News,” INET Oxford. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.inet.ox.ac.uk/news/">https://www.inet.ox.ac.uk/news/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“B The Change,” B The Change. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://bthechange.com/">https://bthechange.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8da0288"></a>India<br />
+<ul class="org-ul">
+<li><a id="org1c408f3"></a>Misc<br />
+<div class="outline-text-7" id="text-org1c408f3">
+<ul class="org-ul">
+<li>“Home,” Centre for Financial Accountability. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.cenfa.org/">https://www.cenfa.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Homepage,” Economic and Political Weekly. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.epw.in/">https://www.epw.in/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd28ea5c"></a>Personal Finance<br />
+<div class="outline-text-7" id="text-orgd28ea5c">
+<ul class="org-ul">
+<li>“Outlook Money – India’s number one personal finance magazine,” <a href="https://www.outlookmoney.com/">https://www.outlookmoney.com/</a>. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.outlookmoney.com/">https://www.outlookmoney.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org5aede07"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgb042ef4"></a>Places<br />
+<ul class="org-ul">
+<li><a id="orge27e100"></a>World<br />
+<ul class="org-ul">
+<li><a id="org7d5ed8b"></a>MainStream Media<br />
+<div class="outline-text-8" id="text-org7d5ed8b">
+<ul class="org-ul">
+<li>“TIME Homepage,” Time. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://time.com">https://time.com</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org011f313"></a>Alternative Media<br />
+<ul class="org-ul">
+<li><a id="org6cee848"></a>Misc<br />
+<div class="outline-text-9" id="text-org6cee848">
+<ul class="org-ul">
+<li>“Democracy Now!,” Democracy Now! Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.democracynow.org/">https://www.democracynow.org/</a></li>
+
+<li>“Home | New Internationalist Magazine.” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://newint.org/">https://newint.org/</a></li>
+
+<li>“Global Voices · Citizen media stories from around the world,” Global Voices. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://globalvoices.org">https://globalvoices.org</a></li>
+
+<li>“Breaking News &amp; Views for the Progressive Community | Common Dreams.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.commondreams.org/">https://www.commondreams.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2c77e68"></a>Politics: Left<br />
+<div class="outline-text-9" id="text-org2c77e68">
+<ul class="org-ul">
+<li>“Latest articles - World Socialist Web Site.” Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.wsws.org/en/archive/recent">https://www.wsws.org/en/archive/recent</a>
+<ul class="org-ul">
+<li>“World Socialist Web Site - Marxist analysis, international working class struggles &amp; the fight for socialism,” World Socialist Web Site. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.wsws.org/en">https://www.wsws.org/en</a></li>
+</ul></li>
+
+<li>“Show Me The Words That Will Reorder the World, Or Else Keep Silent: The Ninth Newsletter (2020).,” Tricontinental: Institute for Social Research. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thetricontinental.org/">https://thetricontinental.org/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org1f5bc52"></a>C1<br />
+<ul class="org-ul">
+<li><a id="org8e694a1"></a>USA<br />
+<ul class="org-ul">
+<li><a id="org2476138"></a>MainStream Media<br />
+<div class="outline-text-9" id="text-org2476138">
+<ul class="org-ul">
+<li>M. Sarkar, “Breaking News, Latest News and Videos,” CNN. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.cnn.com">https://www.cnn.com</a></li>
+<li>“Fox News - Breaking News Updates | Latest News Headlines | Photos &amp; News Video,” Fox News. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.foxnews.com">https://www.foxnews.com</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd8241c9"></a>Alternative Media<br />
+<div class="outline-text-9" id="text-orgd8241c9">
+<ul class="org-ul">
+<li>“Homepage,” The Intercept. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://theintercept.com/">https://theintercept.com/</a></li>
+<li><i>“ProPublica — Investigative Journalism and News in the Public Interest.”</i> <a href="https://www.propublica.org/">https://www.propublica.org/</a> (accessed Aug. 18, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7c841ad"></a>Canada<br />
+<div class="outline-text-8" id="text-org7c841ad">
+<ul class="org-ul">
+<li>“The Tyee | Home,” The Tyee. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://thetyee.ca/">https://thetyee.ca/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5a26953"></a>EU<br />
+<div class="outline-text-8" id="text-org5a26953">
+<ul class="org-ul">
+<li>“European Federation of Journalists – European Federation of Journalists.” Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://europeanjournalists.org/">https://europeanjournalists.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0292c09"></a>UK<br />
+<div class="outline-text-8" id="text-org0292c09">
+<ul class="org-ul">
+<li>“Home,” Canary. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.thecanary.co/">https://www.thecanary.co/</a></li>
+
+<li>“Declassified UK,” Declassified Media Ltd. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.declassifieduk.org/">https://www.declassifieduk.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home,” BBC News. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.bbc.com/news">https://www.bbc.com/news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org45c76a9"></a>Germany<br />
+<div class="outline-text-8" id="text-org45c76a9">
+<ul class="org-ul">
+<li>“News and current affairs from Germany and around the world – DW,” dw.com. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.dw.com/en/top-stories/s-9097">https://www.dw.com/en/top-stories/s-9097</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfadeaf8"></a>France<br />
+<div class="outline-text-8" id="text-orgfadeaf8">
+<ul class="org-ul">
+<li>“France 24 - International breaking news, top stories and headlines,” France 24. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.france24.com/en/">https://www.france24.com/en/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org147e2e9"></a>Australia<br />
+<div class="outline-text-8" id="text-org147e2e9">
+<ul class="org-ul">
+<li><b>“The Juice Media,”</b> Wikipedia. Feb. 07, 2022. Accessed: Mar. 22, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Juice_Media&amp;oldid=1070411687">https://en.wikipedia.org/w/index.php?title=The_Juice_Media&amp;oldid=1070411687</a>
+<ul class="org-ul">
+<li>“THE JUICE MEDIA,” The Juice Media. <a href="https://www.thejuicemedia.com/">https://www.thejuicemedia.com/</a> (accessed Mar. 22, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org92650b3"></a>Russia<br />
+<div class="outline-text-8" id="text-org92650b3">
+<ul class="org-ul">
+<li>“Meduza — The Real Russia. Today.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://meduza.io/en">https://meduza.io/en</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgee237cd"></a>ME<br />
+<div class="outline-text-7" id="text-orgee237cd">
+<ul class="org-ul">
+<li>“Middle East Eye: News, Opinion, and Analysis,” Middle East Eye. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.middleeasteye.net/home">https://www.middleeasteye.net/home</a></li>
+<li>“Breaking News, World News and Video from Al Jazeera,” Al Jazeera. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.aljazeera.com">https://www.aljazeera.com</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org10b19f2"></a>Asia<br />
+<div class="outline-text-7" id="text-org10b19f2">
+<ul class="org-ul">
+<li>“Asia Archives,” Committee to Protect Journalists. Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://cpj.org/asia/">https://cpj.org/asia/</a></li>
+</ul>
+</div>
+<ul class="org-ul">
+<li><a id="org54953a1"></a>SA<br />
+<ul class="org-ul">
+<li><a id="org8eb6a99"></a>Alternative Media<br />
+<div class="outline-text-9" id="text-org8eb6a99">
+<ul class="org-ul">
+<li>“Region: South Asia | New Internationalist.” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://newint.org/regions/south-asia">https://newint.org/regions/south-asia</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org91bbfdc"></a>India<br />
+<ul class="org-ul">
+<li><a id="org6964f8b"></a>MainStream Media<br />
+<ul class="org-ul">
+<li><a id="org8442438"></a>National<br />
+<div class="outline-text-10" id="text-org8442438">
+<ul class="org-ul">
+<li>“News - Latest News, Breaking News, Bollywood, Sports, Business and Political News | Times of India,” The Times of India. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/">https://timesofindia.indiatimes.com/</a></li>
+<li>“News: Today’s News Headlines, Breaking News India, World News and Cricket News,” Hindustan Times. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.hindustantimes.com">https://www.hindustantimes.com</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“News, Breaking News, Latest News, News Headlines, Live News, Today News CNN,” News18. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.news18.com/">https://www.news18.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India’s National Fortnightly Magazine,” Frontline. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/">https://frontline.thehindu.com/</a></li>
+<li>“Breaking News Today, Top Headlines, Live Updates,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/">https://www.thehindu.com/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“News: Latest News, India News, World News, Opinion, Politics, Governance, Defence, Economy, Education,” ThePrint. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://theprint.in/">https://theprint.in/</a></li>
+<li>“Latest News, Breaking News LIVE, Top News Headlines, Viral Videos News Updates - The Quint,” TheQuint. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.thequint.com/">https://www.thequint.com/</a></li>
+<li>“Open Magazine,” Open The Magazine. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://openthemagazine.com/">https://openthemagazine.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfb5e239"></a>Cities<br />
+<ul class="org-ul">
+<li><a id="org8d14e4b"></a>Bengaluru<br />
+<div class="outline-text-11" id="text-org8d14e4b">
+<ul class="org-ul">
+<li>“Bengaluru News, Today’s Bangalore News on Politics, Entertainment and Events,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/">https://www.thehindu.com/news/cities/bangalore/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga3b54c9"></a>Puducherry<br />
+<div class="outline-text-11" id="text-orga3b54c9">
+<ul class="org-ul">
+<li>“Puducherry - Latest News, Politics, Events, Entertainment,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/puducherry/">https://www.thehindu.com/news/cities/puducherry/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0730888"></a>NCR<br />
+<ul class="org-ul">
+<li><a id="org48d3641"></a>Delhi<br />
+<div class="outline-text-12" id="text-org48d3641">
+<ul class="org-ul">
+<li>“Delhi Latest News: Today’s Edition on Delhi Politics, Events &amp; Entertainment,” The Hindu. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/">https://www.thehindu.com/news/cities/Delhi/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org83a7966"></a>Gurugram<br />
+<div class="outline-text-12" id="text-org83a7966">
+<ul class="org-ul">
+<li>“Gurugram News, Latest Gurugram News, Gurugram News Today and Headlines,” Hindustan Times. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/cities/gurugram-news">https://www.hindustantimes.com/cities/gurugram-news</a></li>
+
+<li>“Gurgaon News, Latest Gurgaon News Headlines &amp; Live Updates - Times of India,” The Times of India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/gurgaon">https://timesofindia.indiatimes.com/city/gurgaon</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org8db89ef"></a>Politics: Right<br />
+<div class="outline-text-10" id="text-org8db89ef">
+<ul class="org-ul">
+<li>“Open Magazine,” Open The Magazine. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://openthemagazine.com/">https://openthemagazine.com/</a></li>
+<li>“Swarajya – Read India Right.” Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://swarajyamag.com/">https://swarajyamag.com/</a></li>
+
+<li>“LIVE updates, Latest News, Breaking News, World News, Sports News, Bollywood News, Business, Entertainment, Tech, Political News and more,” Firstpost. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.firstpost.com">https://www.firstpost.com</a></li>
+
+<li>“WION: Breaking News, Latest News, World, South Asia, India, Pakistan, Bangladesh News &amp; Analysis,” WION. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.wionews.com">https://www.wionews.com</a></li>
+
+<li>R. W. Digital, “Latest News, News Today, Breaking News, India News and Current News on Politics, Bollywood, Business and Sports- Republic World,” <a href="https://www.republicworld.com/">https://www.republicworld.com/</a>. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.republicworld.com/">https://www.republicworld.com/</a></li>
+<li>“Latest News, News Today, Breaking News, India News and Current News on Politics, Bollywood, Business and Sports- Republic World.” Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.republicworld.com/">https://www.republicworld.com/</a></li>
+
+<li>“OpIndia - Latest India News, Updates, Analysis, Opinions, Social Media news,” OpIndia. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://www.opindia.com/">https://www.opindia.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7a60072"></a>Alternative Media<br />
+<ul class="org-ul">
+<li><a id="org2d3b3b2"></a>Politics: Left<br />
+<div class="outline-text-10" id="text-org2d3b3b2">
+<ul class="org-ul">
+<li>“India,” World Socialist Web Site. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.wsws.org/en/topics/country/as-ind">https://www.wsws.org/en/topics/country/as-ind</a></li>
+
+<li>“RLS Southasia - RLS Southasia.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.rosalux.in/resources.html">https://www.rosalux.in/resources.html</a></li>
+
+<li>“Homepage,” Economic and Political Weekly. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.epw.in/">https://www.epw.in/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0c9977b"></a>Feminism<br />
+<div class="outline-text-10" id="text-org0c9977b">
+<ul class="org-ul">
+<li>F. I. I. Team, “Feminism In India Homepage,” Feminism in India. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://feminisminindia.com/">https://feminisminindia.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2104237"></a>Misc<br />
+<div class="outline-text-10" id="text-org2104237">
+<ul class="org-ul">
+<li>“India Archives,” Declassified Media Ltd. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.declassifieduk.org/tag/india/">https://www.declassifieduk.org/tag/india/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Region: India | New Internationalist.” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://newint.org/regions/india">https://newint.org/regions/india</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India · Global Voices,” Global Voices. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://globalvoices.org/-/world/south-asia/india/">https://globalvoices.org/-/world/south-asia/india/</a></li>
+
+<li>“Asia Archives,” Committee to Protect Journalists. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://cpj.org/asia/">https://cpj.org/asia/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Caravan.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://caravanmagazine.in">https://caravanmagazine.in</a>
+<ul class="org-ul">
+<li>“Security | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/security">https://caravanmagazine.in/security</a></li>
+<li>“Environment | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/environment">https://caravanmagazine.in/environment</a></li>
+<li>“Caste | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/caste">https://caravanmagazine.in/caste</a></li>
+<li>“Gender And Sexuality | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/gender-and-sexuality">https://caravanmagazine.in/gender-and-sexuality</a></li>
+<li>“Science And Technology | The Caravan.” Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/science-and-technology">https://caravanmagazine.in/science-and-technology</a></li>
+</ul></li>
+
+<li>“The India Forum,” The India Forum. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/">https://www.theindiaforum.in/</a></li>
+
+<li>“NewsClick,” NewsClick. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.newsclick.in/">https://www.newsclick.in/</a></li>
+
+<li>“Home,” Alt News. Accessed: Feb. 06, 2024. [Online]. Available: <a href="https://www.altnews.in/">https://www.altnews.in/</a></li>
+<li>“Welcome to Newslaundry. Sabki dhulai. You watch. We’re watching.,” Newslaundry. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.newslaundry.com/">https://www.newslaundry.com/</a></li>
+<li>“The Wire: The Wire News India, Latest News,News from India, Politics, External Affairs, Science, Economics, Gender and Culture,” The Wire. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://thewire.in/">https://thewire.in/</a></li>
+<li>“The Reporters’ Collective | Home.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/">https://www.reporters-collective.in/</a></li>
+<li>“Scroll.in - Latest News, In depth news, India news, Politics news, Indian Cinema, Indian sports, Culture, Video News,” Scroll.in. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://scroll.in">https://scroll.in</a></li>
+<li>“The News Minute | South News | Latest Breaking News and Headlines From South India,” The News Minute. Accessed: Jan. 28, 2024. [Online]. Available: <a href="https://www.thenewsminute.com/">https://www.thenewsminute.com/</a></li>
+
+<li>“Blog,” Oorvani Foundation. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://oorvani.org/blog">https://oorvani.org/blog</a></li>
+<li>“Home • Forbidden Stories.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://forbiddenstories.org/">https://forbiddenstories.org/</a></li>
+
+<li>“The Centre for Investigative.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="http://cij.co.in/">http://cij.co.in/</a></li>
+
+<li>“Home,” Oorvani Foundation. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://oorvani.org/">https://oorvani.org/</a></li>
+
+<li>indiaspend, “IndiaSpend: Data journalism, analysis on Indian economy, education, healthcare, agriculture, politics.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.indiaspend.com/">https://www.indiaspend.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org5969e03"></a>Law<br />
+<ul class="org-ul">
+<li><a id="orgfcfd769"></a>Law: Human Rights<br />
+<div class="outline-text-10" id="text-orgfcfd769">
+<ul class="org-ul">
+<li>“Human rights in India,” Amnesty International. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/india/">https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/india/</a></li>
+
+<li>“Human Rights Watch: India.” [Online]. Available: <a href="https://www.hrw.org/asia/india">https://www.hrw.org/asia/india</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org416606f"></a>Misc<br />
+<div class="outline-text-10" id="text-org416606f">
+<ul class="org-ul">
+<li>“Article 14.” Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://www.article-14.com/">https://www.article-14.com/</a></li>
+
+<li>“The Leaflet.” Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://theleaflet.in/">https://theleaflet.in/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org81adcf3"></a>Misc<br />
+<div class="outline-text-9" id="text-org81adcf3">
+<ul class="org-ul">
+<li>“India - Latest news, videos and opinion,” Middle East Eye. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.middleeasteye.net/countries/india">https://www.middleeasteye.net/countries/india</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org4fa8dec"></a>China<br /></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgcbf4ba3"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgb371637" class="outline-4">
+<h4 id="orgb371637"><span class="section-number-4">6.2.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org9f62b80"></a>Music<br /></li>
+<li><a id="orgcefb807"></a>Dance<br />
+<div class="outline-text-5" id="text-6-2-4-2">
+<ul class="org-ul">
+<li>“News.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.roh.org.uk/news">https://www.roh.org.uk/news</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6048ab9"></a>Arts<br />
+<div class="outline-text-5" id="text-6-2-4-3">
+<ul class="org-ul">
+<li>“Articles,” Arts at MIT. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://arts.mit.edu/news/articles/">https://arts.mit.edu/news/articles/</a></li>
+<li>“Press Releases,” Arts at MIT. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://arts.mit.edu/news/press-releases/">https://arts.mit.edu/news/press-releases/</a></li>
+<li>“In the Media,” Arts at MIT. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://arts.mit.edu/news/in-the-media/">https://arts.mit.edu/news/in-the-media/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgda66eb6"></a>Literature<br />
+<div class="outline-text-5" id="text-6-2-4-4">
+<ul class="org-ul">
+<li>“News | LIT@MIT.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://lit.mit.edu/news/">https://lit.mit.edu/news/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org054a422"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org404b0ca" class="outline-4">
+<h4 id="org404b0ca"><span class="section-number-4">6.2.5.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgb84e9a9" class="outline-3">
+<h3 id="orgb84e9a9"><span class="section-number-3">6.3.</span> Trust</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>“The Trust Project,” Wikipedia. Mar. 02, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Trust_Project&amp;oldid=1211474290">https://en.wikipedia.org/w/index.php?title=The_Trust_Project&amp;oldid=1211474290</a>
+<ul class="org-ul">
+<li>“Home,” The Trust Project. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://thetrustproject.org/">https://thetrustproject.org/</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Journalism Trust Initiative | RSF.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://rsf.org/en/journalism-trust-initiative">https://rsf.org/en/journalism-trust-initiative</a>
+<ul class="org-ul">
+<li>active value, “JTI | Journalism Trust Initiative,” JTI Website. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.journalismtrustinitiative.org/">https://www.journalismtrustinitiative.org/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1aa3a85" class="outline-3">
+<h3 id="org1aa3a85"><span class="section-number-3">6.4.</span> Rumours</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>H. Johnston, “Rumours spread like nuclear fission, say physicists,” Physics World. Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://physicsworld.com/a/rumours-spread-like-nuclear-fission-say-physicists/">https://physicsworld.com/a/rumours-spread-like-nuclear-fission-say-physicists/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org010307e" class="outline-2">
+<h2 id="org010307e"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“The surprising role of deep thinking in conspiracy theories | Psyche Ideas,” Psyche. Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://psyche.co/ideas/the-surprising-role-of-deep-thinking-in-conspiracy-theories">https://psyche.co/ideas/the-surprising-role-of-deep-thinking-in-conspiracy-theories</a></li>
+
+<li>“Impress: The Independent Monitor of the Press,” Impress. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://www.impressorg.com/">https://www.impressorg.com/</a></li>
+
+<li>“How Reporters Shield is Protecting Newsrooms from SLAPP Attacks Around the World.” Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://gijn.org/stories/how-reporters-shield-protects-newsrooms-slapp-attacks-legal-harassment/">https://gijn.org/stories/how-reporters-shield-protects-newsrooms-slapp-attacks-legal-harassment/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“From Mexico to South Africa, Brazil to the Philippines: GIJN’s Investigative Bookshelf.” Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://gijn.org/stories/investigative-bookshelf-2024/">https://gijn.org/stories/investigative-bookshelf-2024/</a></li>
+
+<li>“Dismissed cases show university should not have arrested journalists,” Freedom of the Press. Accessed: Aug. 06, 2024. [Online]. Available: <a href="https://freedom.press/news/dismissed-cases-show-university-should-not-have-arrested-journalists/">https://freedom.press/news/dismissed-cases-show-university-should-not-have-arrested-journalists/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Young and Inexperienced, Talented and Empathetic: How to Train New Reporters for Collaborative Investigations.” Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://gijn.org/stories/training-young-reporters-collaborative-investigations/">https://gijn.org/stories/training-young-reporters-collaborative-investigations/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Embracing Failure: The Importance of Learning from Your Mistakes in Open Source Reporting.” Accessed: Jul. 06, 2024. [Online]. Available: <a href="https://gijn.org/stories/embracing-failure-importance-making-mistakes-osint/">https://gijn.org/stories/embracing-failure-importance-making-mistakes-osint/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The government says it won’t prosecute ‘real’ journalists. Don’t believe it,” Freedom of the Press. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://freedom.press/news/the-government-says-it-wont-prosecute-real-journalists-dont-believe-it/">https://freedom.press/news/the-government-says-it-wont-prosecute-real-journalists-dont-believe-it/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Leading press freedom organizations submit amicus brief in Maria Ressa case,” Committee to Protect Journalists. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://cpj.org/2024/06/leading-press-freedom-organizations-submit-amicus-brief-in-maria-ressa-case/">https://cpj.org/2024/06/leading-press-freedom-organizations-submit-amicus-brief-in-maria-ressa-case/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Fairness &amp;amp; Accuracy in Reporting,” Wikipedia. Dec. 17, 2023. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Fairness_%26_Accuracy_in_Reporting&amp;oldid=1190410197">https://en.wikipedia.org/w/index.php?title=Fairness_%26_Accuracy_in_Reporting&amp;oldid=1190410197</a></li>
+<li>“FAIR,” FAIR. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://fair.org/">https://fair.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Goudarzi, “How to better study—and then improve—today’s corrupted information environment,” Bulletin of the Atomic Scientists. Accessed: Mar. 06, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/03/how-to-better-study-and-then-improve-todays-corrupted-information-environment/">https://thebulletin.org/2024/03/how-to-better-study-and-then-improve-todays-corrupted-information-environment/</a></li>
+
+<li>camille, “OSCE Safety of Journalists Toolbox,” European Federation of Journalists. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://europeanjournalists.org/blog/2024/02/13/osce-safety-of-journalists-toolbox/">https://europeanjournalists.org/blog/2024/02/13/osce-safety-of-journalists-toolbox/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. S. Herman and N. Chomsky, <b>Manufacturing Consent: The Political Economy of the Mass Media.</b> Random House, 2010.
+<ul class="org-ul">
+<li>Al Jazeera English, Noam Chomsky - The 5 Filters of the Mass Media Machine, (Mar. 02, 2017). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=34LGPIXvU5M">https://www.youtube.com/watch?v=34LGPIXvU5M</a></li>
+</ul></li>
+
+<li>“Civic Media Observatory · Global Voices,” Global Voices. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://globalvoices.org/special/observatory/">https://globalvoices.org/special/observatory/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-25 Wed 09:20</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

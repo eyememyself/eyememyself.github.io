@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-25 Wed 09:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Martial Arts, Fighting</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Martial Arts, Fighting</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0d8ca34">1. General</a></li>
+<li><a href="#orgfbb0a9f">2. Core</a>
+<ul>
+<li><a href="#org7b4ac98">2.1. Forms</a>
+<ul>
+<li><a href="#org86b4126">2.1.1. Boxing</a></li>
+<li><a href="#orgfa03781">2.1.2. Wrestling</a></li>
+<li><a href="#org6d38e21">2.1.3. Aikido</a></li>
+<li><a href="#org91affa9">2.1.4. Judo</a></li>
+<li><a href="#org03298ed">2.1.5. Karate</a></li>
+<li><a href="#org4b201ef">2.1.6. Kung Fu</a></li>
+<li><a href="#org23965eb">2.1.7. Jiu Jitsu</a></li>
+<li><a href="#org4a04a4f">2.1.8. Krav Maga</a></li>
+</ul>
+</li>
+<li><a href="#orgbd3f3b0">2.2. Samurai</a></li>
+</ul>
+</li>
+<li><a href="#orge05383d">3. World</a>
+<ul>
+<li><a href="#org2900cd4">3.1. People</a>
+<ul>
+<li><a href="#org3ac7bd8">3.1.1. Bruce Lee</a></li>
+</ul>
+</li>
+<li><a href="#org0e22cc1">3.2. India</a>
+<ul>
+<li><a href="#org7609697">3.2.1. General</a></li>
+<li><a href="#org65636fa">3.2.2. People</a></li>
+<li><a href="#org054fda5">3.2.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7ad27f4">4. Special Topics</a>
+<ul>
+<li><a href="#org6f95958">4.1. Classics</a></li>
+</ul>
+</li>
+<li><a href="#org86702d1">5. Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org0d8ca34" class="outline-2">
+<h2 id="org0d8ca34"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>J. Lawler, <i>Martial Arts For Dummies.</i> 2003.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. A. of Manliness, The Spartan Way: What Modern Men Can Learn from Ancient Warriors, 1st edition. Semper Virilis Publishing, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfbb0a9f" class="outline-2">
+<h2 id="orgfbb0a9f"><span class="section-number-2">2.</span> Core</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7b4ac98" class="outline-3">
+<h3 id="org7b4ac98"><span class="section-number-3">2.1.</span> Forms</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org86b4126" class="outline-4">
+<h4 id="org86b4126"><span class="section-number-4">2.1.1.</span> Boxing</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4c3df3a"></a>General<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<ul class="org-ul">
+<li>“Boxing,” Wikipedia. Mar. 24, 2022. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Boxing&amp;oldid=1079050411">https://en.wikipedia.org/w/index.php?title=Boxing&amp;oldid=1079050411</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc033453"></a>People<br />
+<ol class="org-ol">
+<li><a id="org74285da"></a>Muhammad Ali<br />
+<div class="outline-text-6" id="text-2-1-1-2-1">
+<ul class="org-ul">
+<li>“Muhammad Ali,” Wikipedia. Sep. 25, 2021. Accessed: Sep. 26, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Muhammad_Ali&amp;oldid=1046413301">https://en.wikipedia.org/w/index.php?title=Muhammad_Ali&amp;oldid=1046413301</a></li>
+<li>M. Ali and R. Durham, The Greatest: My Own Story. Graymalkin Media, 2015.</li>
+<li>D. Remnick and S. Rushdie, King of the World: Muhammad Ali and the Rise of an American Hero. Picador, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga78383e"></a>Mike Tyson<br />
+<div class="outline-text-6" id="text-2-1-1-2-2">
+<ul class="org-ul">
+<li>B. McKay and K. McKay, The Warrior Monk Philosophy of Trainer Cus D’Amato: The 5 Strategies That Turned Mike Tyson Into a World Champion, 1st edition. Semper Virilis Publishing, 2019.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgd18812c"></a>India<br />
+<ol class="org-ol">
+<li><a id="org038602f"></a>Feminism<br />
+<div class="outline-text-6" id="text-2-1-1-3-1">
+<ul class="org-ul">
+<li>M. Nabi, “Shalakha Sansanwal: A Trailblazer Defying Odds In Delhi’s Boxing Arena,” Feminism in India. Accessed: Feb. 13, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/13/shalakha-sansanwal-a-trailblazer-defying-odds-in-delhis-boxing-arena/">https://feminisminindia.com/2024/02/13/shalakha-sansanwal-a-trailblazer-defying-odds-in-delhis-boxing-arena/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orge619ef5"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgfa03781" class="outline-4">
+<h4 id="orgfa03781"><span class="section-number-4">2.1.2.</span> Wrestling</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb12b6d9"></a>General<br /></li>
+<li><a id="orgc631825"></a>India<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<ul class="org-ul">
+<li>N. Mohta, “The realities of Haryana’s women wrestlers,” The Caravan. Accessed: Mar. 03, 2024. [Online]. Available: <a href="https://caravanmagazine.in/sports/realities-haryana-women-wrestlers">https://caravanmagazine.in/sports/realities-haryana-women-wrestlers</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org91e5b04"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org6d38e21" class="outline-4">
+<h4 id="org6d38e21"><span class="section-number-4">2.1.3.</span> Aikido</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>M. Ueshiba, <i>The Art of Peace: Teachings of the Founder of Aikido Pocket Classic.</i> 1992.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org91affa9" class="outline-4">
+<h4 id="org91affa9"><span class="section-number-4">2.1.4.</span> Judo</h4>
+<div class="outline-text-4" id="text-2-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org3e31685"></a>General<br />
+<div class="outline-text-5" id="text-2-1-4-1">
+<ul class="org-ul">
+<li>“Judo,” Wikipedia. Mar. 20, 2022. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Judo&amp;oldid=1078166298">https://en.wikipedia.org/w/index.php?title=Judo&amp;oldid=1078166298</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org57b0c85"></a>World<br />
+<ol class="org-ol">
+<li><a id="org9a877b2"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org8d1f8b2"></a>India<br />
+<div class="outline-text-7" id="text-org8d1f8b2">
+<ul class="org-ul">
+<li>JUDO 🥋 Men’s &amp; Women’s FINALS | National Games 2022 | Doordarshan Sports, (Oct. 09, 2022). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pBn_BEjGtFM">https://www.youtube.com/watch?v=pBn_BEjGtFM</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org1280252"></a>Feminism<br />
+<div class="outline-text-6" id="text-2-1-4-2-2">
+<ul class="org-ul">
+<li>The Judo Family Celebrates International Women’s Day, (Mar. 09, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=io379oE8njw">https://www.youtube.com/watch?v=io379oE8njw</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga1c9769"></a>Core<br /></li>
+<li><a id="orgb5e365e"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org4f45fe5"></a>Diet<br />
+<div class="outline-text-6" id="text-2-1-4-4-1">
+<ul class="org-ul">
+<li>“Food for Fight.” <a href="https://www.ijf.org/news/show/food-for-fight">https://www.ijf.org/news/show/food-for-fight</a> (accessed Jun. 03, 2022).</li>
+<li>B. Judo, “Fuelling the Body for Judo,” British Judo, May 24, 2016. <a href="https://www.britishjudo.org.uk/fuelling-the-body-for-judo/">https://www.britishjudo.org.uk/fuelling-the-body-for-judo/</a> (accessed Jun. 03, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org77c2264"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org03298ed" class="outline-4">
+<h4 id="org03298ed"><span class="section-number-4">2.1.5.</span> Karate</h4>
+<div class="outline-text-4" id="text-2-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgfa7678a"></a>General<br />
+<div class="outline-text-5" id="text-2-1-5-1">
+<ul class="org-ul">
+<li>“Karate,” Wikipedia. Mar. 27, 2022. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Karate&amp;oldid=1079523315">https://en.wikipedia.org/w/index.php?title=Karate&amp;oldid=1079523315</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9afa4af"></a>Orgs<br />
+<div class="outline-text-5" id="text-2-1-5-2">
+<ul class="org-ul">
+<li>“World Karate Federation,” Wikipedia. Feb. 06, 2022. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=World_Karate_Federation&amp;oldid=1070320316">https://en.wikipedia.org/w/index.php?title=World_Karate_Federation&amp;oldid=1070320316</a></li>
+<li>“World karate Federation | WKF.” <a href="https://www.wkf.net/">https://www.wkf.net/</a> (accessed Mar. 29, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4f699a1"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-5-3">
+<ul class="org-ul">
+<li>Karate Female Team Kata Bronze Medal - Serbia vs Italy - WKF World Championships Belgrade 2010 (1/2), (Aug. 30, 2012). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=sgN7fUGPgMM">https://www.youtube.com/watch?v=sgN7fUGPgMM</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4b201ef" class="outline-4">
+<h4 id="org4b201ef"><span class="section-number-4">2.1.6.</span> Kung Fu</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<ul class="org-ul">
+<li>“Bruce Lee,” Wikipedia. Apr. 24, 2023. Accessed: Apr. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bruce_Lee&amp;oldid=1151572140">https://en.wikipedia.org/w/index.php?title=Bruce_Lee&amp;oldid=1151572140</a></li>
+
+<li>“Wing Chun,” Wikipedia. Apr. 19, 2023. Accessed: Apr. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wing_Chun&amp;oldid=1150727465">https://en.wikipedia.org/w/index.php?title=Wing_Chun&amp;oldid=1150727465</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ip Man (film),” Wikipedia. Feb. 04, 2023. Accessed: Apr. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ip_Man_(film)&amp;oldid=1137330093">https://en.wikipedia.org/w/index.php?title=Ip_Man_(film)&amp;oldid=1137330093</a></li>
+<li>“Ip Man,” Wikipedia. Apr. 20, 2023. Accessed: Apr. 25, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ip_Man&amp;oldid=1150761378">https://en.wikipedia.org/w/index.php?title=Ip_Man&amp;oldid=1150761378</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23965eb" class="outline-4">
+<h4 id="org23965eb"><span class="section-number-4">2.1.7.</span> Jiu Jitsu</h4>
+<div class="outline-text-4" id="text-2-1-7">
+</div>
+<ol class="org-ol">
+<li><a id="orgb0db8a9"></a>General<br />
+<div class="outline-text-5" id="text-2-1-7-1">
+<ul class="org-ul">
+<li>“Brazilian jiu-jitsu,” Wikipedia. Mar. 26, 2022. Accessed: Mar. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Brazilian_jiu-jitsu&amp;oldid=1079302984">https://en.wikipedia.org/w/index.php?title=Brazilian_jiu-jitsu&amp;oldid=1079302984</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb8d135b"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-7-2">
+<ul class="org-ul">
+<li>L. V. Andreato, F. J. D. Lara, A. Andrade, and B. H. M. Branco, “Physical and Physiological Profiles of Brazilian Jiu-Jitsu Athletes: a Systematic Review,” Sports Med Open, vol. 3, p. 9, Feb. 2017, doi: 10.1186/s40798-016-0069-5.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Brazilian Jiu Jitsu and Strength | Adam Lauritzen,” Starting Strength. Accessed: Apr. 14, 2024. [Online]. Available: <a href="https://startingstrength.com/article/brazilian-jiu-jitsu-and-strength">https://startingstrength.com/article/brazilian-jiu-jitsu-and-strength</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4a04a4f" class="outline-4">
+<h4 id="org4a04a4f"><span class="section-number-4">2.1.8.</span> Krav Maga</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<ul class="org-ul">
+<li>D. Kahn and C. C. L. B. D. B. of L. E. Pennsylvania, <i>Krav Maga Fundamental Strategies.</i> Wolfeboro: YMAA Publication Center, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd3f3b0" class="outline-3">
+<h3 id="orgbd3f3b0"><span class="section-number-3">2.2.</span> Samurai</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>T. Cleary and O. Ratti, <i>Code of the Samurai: A Modern Translation of the Bushido Shoshinshu of Taira Shigesuke.</i> 1999.</li>
+<li>T. Deshimaru and G. Leonard, <i>The Zen Way to Martial Arts: A Japanese Master Reveals the Secrets of the Samurai.</i> 1992.</li>
+<li>T. Cleary, <i>Soul of the Samurai: Modern Translations of Three Classic Works of Zen &amp; Bushido.</i> 2017.</li>
+<li>Y. Tsunetomo, <i>Hagakure.</i> 2011.</li>
+<li>W. S. Wilson, <i>Budoshoshinshu.</i> 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge05383d" class="outline-2">
+<h2 id="orge05383d"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2900cd4" class="outline-3">
+<h3 id="org2900cd4"><span class="section-number-3">3.1.</span> People</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org3ac7bd8" class="outline-4">
+<h4 id="org3ac7bd8"><span class="section-number-4">3.1.1.</span> Bruce Lee</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>S. Lee, Be Water, <i>My Friend: The True Teachings of Bruce Lee.</i> 2020.</li>
+<li>“Bruce Lee’s pioneering diet and fitness regime revealed,” South China Morning Post. Accessed: Nov. 11, 2023. [Online]. Available: <a href="https://www.scmp.com/sport/martial-arts/kung-fu/article/3015409/bruce-lees-fitness-regime-and-diet-made-him-pioneer">https://www.scmp.com/sport/martial-arts/kung-fu/article/3015409/bruce-lees-fitness-regime-and-diet-made-him-pioneer</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0e22cc1" class="outline-3">
+<h3 id="org0e22cc1"><span class="section-number-3">3.2.</span> India</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org7609697" class="outline-4">
+<h4 id="org7609697"><span class="section-number-4">3.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org65636fa" class="outline-4">
+<h4 id="org65636fa"><span class="section-number-4">3.2.2.</span> People</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org9db7e9a"></a>Puja Tomar<br />
+<div class="outline-text-5" id="text-3-2-2-1">
+<ul class="org-ul">
+<li>“Draft:Puja Tomar (fighter),” Wikipedia. Jun. 09, 2024. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Draft:Puja_Tomar_(fighter)&amp;oldid=1228156784">https://en.wikipedia.org/w/index.php?title=Draft:Puja_Tomar_(fighter)&amp;oldid=1228156784</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Tenzin Pema VS Puja Tomar I Full Fight I MFN 9, (Jul. 08, 2022). Accessed: Jun. 10, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=E-DfJH6Y4Jo">https://www.youtube.com/watch?v=E-DfJH6Y4Jo</a></li>
+
+<li>Puja Tomar Continues Late Father’s Legacy | ONE Feature, (Jan. 09, 2020). Accessed: Jun. 10, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4BcLTdXdf8Q">https://www.youtube.com/watch?v=4BcLTdXdf8Q</a></li>
+
+<li>PUJA TOMAR IS FULLY CHARGED UP, (Jun. 09, 2024). Accessed: Jun. 10, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=8GHQLC8u8B8">https://www.youtube.com/watch?v=8GHQLC8u8B8</a></li>
+
+<li>INSANE Women’s MMA War 🤩 Jihin Radzuan vs. Puja Tomar, (Sep. 23, 2022). Accessed: Jun. 10, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fmUMLClk1I8">https://www.youtube.com/watch?v=fmUMLClk1I8</a></li>
+
+<li>Puja Tomar Octagon Interview | UFC Louisville, (Jun. 09, 2024). Accessed: Jun. 10, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=juh-9k4DjAc">https://www.youtube.com/watch?v=juh-9k4DjAc</a></li>
+
+<li>“Puja Tomar: History In The Making | UFC.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.ufc.com/news/puja-tomar-history-making-ufc-louisville?language_content_entity=en">https://www.ufc.com/news/puja-tomar-history-making-ufc-louisville?language_content_entity=en</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Find out about Puja ‘The Cyclone’ Tomar who became the first Indian to win a UFC bout.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/my-kolkata/people/find-out-about-puja-the-cyclone-tomar-who-became-the-first-indian-to-win-a-ufc-bout/cid/2025744">https://www.telegraphindia.com/my-kolkata/people/find-out-about-puja-the-cyclone-tomar-who-became-the-first-indian-to-win-a-ufc-bout/cid/2025744</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org054fda5" class="outline-4">
+<h4 id="org054fda5"><span class="section-number-4">3.2.3.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org7ad27f4" class="outline-2">
+<h2 id="org7ad27f4"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6f95958" class="outline-3">
+<h3 id="org6f95958"><span class="section-number-3">4.1.</span> Classics</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>T. Cleary, <i>The Japanese Art of War: Understanding the Culture of Strategy.</i> 2005.</li>
+<li>M. Musashi, <i>The Book of Five Rings.</i> 2012.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org86702d1" class="outline-2">
+<h2 id="org86702d1"><span class="section-number-2">5.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“World Karate Federation - YouTube.” Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://www.youtube.com/user/WKFKarateWorldChamps">https://www.youtube.com/user/WKFKarateWorldChamps</a></li>
+<li>“International Judo Federation - YouTube.” Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://www.youtube.com/user/judo">https://www.youtube.com/user/judo</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“FIE Fencing Channel - YouTube.” Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://www.youtube.com/user/FIEvideo">https://www.youtube.com/user/FIEvideo</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-25 Wed 09:34</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

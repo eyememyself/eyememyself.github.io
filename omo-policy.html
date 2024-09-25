@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-25 Wed 09:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Policy</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Policy</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge079033">1. General</a></li>
+<li><a href="#org685c368">2. STEMM</a>
+<ul>
+<li><a href="#orge2bcc93">2.1. The Precautionary Principle</a>
+<ul>
+<li><a href="#org2f3f069">2.1.1. <b>The Precautionary Principle: Top Resources</b></a></li>
+<li><a href="#orgfa11761">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcd24f74">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6efd980">3. World</a>
+<ul>
+<li><a href="#org89ead43">3.1. Nation States</a>
+<ul>
+<li><a href="#orgc9ec480">3.1.1. India</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org79a3f34">4. Special Topics</a>
+<ul>
+<li><a href="#orga89e9ed">4.1. Post Development</a>
+<ul>
+<li><a href="#org7073360">4.1.1. General</a></li>
+<li><a href="#org09f2b6c">4.1.2. World</a></li>
+<li><a href="#org3c4fd9d">4.1.3. Core</a></li>
+<li><a href="#org13780c7">4.1.4. Arts</a></li>
+<li><a href="#org077957a">4.1.5. Special Topics</a></li>
+<li><a href="#org722302a">4.1.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org27d2bf7">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orge079033" class="outline-2">
+<h2 id="orge079033"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org685c368" class="outline-2">
+<h2 id="org685c368"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge2bcc93" class="outline-3">
+<h3 id="orge2bcc93"><span class="section-number-3">2.1.</span> The Precautionary Principle</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org2f3f069" class="outline-4">
+<h4 id="org2f3f069"><span class="section-number-4">2.1.1.</span> <b>The Precautionary Principle: Top Resources</b></h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>N. N. Taleb, R. Read, R. Douady, J. Norman, and Y. Bar-Yam, <b>“The Precautionary Principle (with Application to the Genetic Modification of Organisms),”</b> Oct. 17, 2014, arXiv: arXiv:1410.5787. doi: 10.48550/arXiv.1410.5787.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa11761" class="outline-4">
+<h4 id="orgfa11761"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgcd24f74" class="outline-3">
+<h3 id="orgcd24f74"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>J. Rutten, A. Holland, and S. Roudavski, “Plants as Designers of Better Futures: Can Humans Let Them Lead?,” Plant Perspectives, Jul. 2024, doi: 10.3197/whppp.63845494909729.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6efd980" class="outline-2">
+<h2 id="org6efd980"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org89ead43" class="outline-3">
+<h3 id="org89ead43"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgc9ec480" class="outline-4">
+<h4 id="orgc9ec480"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>T. P. A. K. Narayanan, <b>Empowering INDIA Ideas For Action By Scientist and Engineers.</b> Indian Academy Of Sciences, 2023.
+<ul class="org-ul">
+<li>EMPOWERING INDIA, (Aug. 24, 2023). Accessed: Sep. 25, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=rnZ0v7KibjY">https://www.youtube.com/watch?v=rnZ0v7KibjY</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Kothari and K. J. Joy, Alternative Futures: India Unshackled. Authorsupfront Publishing Services Private Limited, 2018.</li>
+<li>“PEOPLE’S MANIFESTO FOR A JUST, EQUITABLE, AND SUSTAINABLE INDIA 2024 | Heinrich Böll Stiftung | India Office.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://in.boell.org/en/2024/peoples-manifesto">https://in.boell.org/en/2024/peoples-manifesto</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“More Practical than Principled,” The India Forum. Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/more-practical-principled">https://www.theindiaforum.in/book-reviews/more-practical-principled</a></li>
+
+<li>“Governance without Democracy? ‘Techno-populism’ and Modi’s India,” The India Forum. Accessed: Aug. 06, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/governance-without-democracy-techno-populism-and-modis-india">https://www.theindiaforum.in/book-reviews/governance-without-democracy-techno-populism-and-modis-india</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org79a3f34" class="outline-2">
+<h2 id="org79a3f34"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orga89e9ed" class="outline-3">
+<h3 id="orga89e9ed"><span class="section-number-3">4.1.</span> Post Development</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org7073360" class="outline-4">
+<h4 id="org7073360"><span class="section-number-4">4.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Postdevelopment theory - Wikipedia.” <a href="https://en.wikipedia.org/wiki/Postdevelopment_theory">https://en.wikipedia.org/wiki/Postdevelopment_theory</a> (accessed Jun. 10, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Kothari, A. Salleh, A. Escobar, A. Acosta, and F. Demaria, <b>Pluriverse: A Post-development Dictionary.</b> Tulika Books and Authorsupfront, 2019.
+<ul class="org-ul">
+<li>“Pluriverse,” Radical Ecological Democracy, Dec. 28, 2018. <a href="https://radicalecologicaldemocracy.org/pluriverse/">https://radicalecologicaldemocracy.org/pluriverse/</a> (accessed May 14, 2022).</li>
+<li>“‘Development’ is colonialism in disguise,” openDemocracy. <a href="https://www.opendemocracy.net/en/oureconomy/development-colonialism-disguise/">https://www.opendemocracy.net/en/oureconomy/development-colonialism-disguise/</a> (accessed May 14, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Rodríguez, M. Walter, and L. Temper, Eds., Just Transformations: Grassroots Struggles for Alternative Futures. Pluto Press, 2023.
+<ul class="org-ul">
+<li>I. Rodríguez, Just Transformations: Grassroots Struggles for Alternative Futures. Pluto Press, 2023. Accessed: Jan. 29, 2024. [Online]. Available: <a href="https://library.oapen.org/handle/20.500.12657/77032">https://library.oapen.org/handle/20.500.12657/77032</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org09f2b6c" class="outline-4">
+<h4 id="org09f2b6c"><span class="section-number-4">4.1.2.</span> World</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc31560a"></a>Space and Time<br />
+<ol class="org-ol">
+<li><a id="org7a4e66a"></a>BioRegionalism<br />
+<div class="outline-text-6" id="text-4-1-2-1-1">
+<ul class="org-ul">
+<li>“Tides of Thought: Integrating Science and Spirit in Marine Bioregionalism,” Radical Ecological Democracy. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://radicalecologicaldemocracy.org/tides-of-thought-integrating-science-and-spirit-in-marine-bioregionalism/">https://radicalecologicaldemocracy.org/tides-of-thought-integrating-science-and-spirit-in-marine-bioregionalism/</a></li>
+
+<li>“The BioFi Project: Bioregional Finance for Planetary Regeneration.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.biofi.earth/">https://www.biofi.earth/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Contested Terrain,” Future Observatory Journal. Accessed: May 31, 2024. [Online]. Available: <a href="https://fojournal.org/essay/contested-terrain/">https://fojournal.org/essay/contested-terrain/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“r3.0 | Redesign for Resilience &amp; Regeneration for a green, inclusive and open economie.” Accessed: Apr. 26, 2024. [Online]. Available: <a href="https://www.r3-0.org/">https://www.r3-0.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Legacy Project.” Accessed: May 16, 2024. [Online]. Available: <a href="https://legacyproject.org/">https://legacyproject.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. S. C. Staff, “Bioregionalism, Tribal Sovereignty, and Regional Banking,” Schumacher Center for a New Economics. Accessed: May 19, 2024. [Online]. Available: <a href="https://centerforneweconomics.org/newsletters/bioregionalism-tribal-sovereignty-and-regional-banking/">https://centerforneweconomics.org/newsletters/bioregionalism-tribal-sovereignty-and-regional-banking/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Brewer, “Bioregional Weaving in Cali, Colombia,” Medium. Accessed: May 21, 2024. [Online]. Available: <a href="https://medium.com/@joe_brewer/bioregional-weaving-in-cali-colombia-dc256493b8b7">https://medium.com/@joe_brewer/bioregional-weaving-in-cali-colombia-dc256493b8b7</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org3224d64"></a>Awards<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ul class="org-ul">
+<li><b>“Welcome to Right Livelihood!,”</b> Right Livelihood. <a href="https://rightlivelihood.org/">https://rightlivelihood.org/</a> (accessed Sep. 18, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org851d801"></a>People<br />
+<div class="outline-text-5" id="text-4-1-2-3">
+<ul class="org-ul">
+<li>S. Kumar and F. Whitefield, Eds., Visionaries of the 20th Century: A Resurgence Anthology, First Edition. Green Books, 2006.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf182c3e"></a>Orgs<br />
+<ol class="org-ol">
+<li><a id="org3550fc9"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-2-4-1">
+<ul class="org-ul">
+<li><b>Global Tapestry Of Alternatives</b>, Feb. 26, 2020. <a href="https://www.globaltapestryofalternatives.org/index">https://www.globaltapestryofalternatives.org/index</a> (accessed May 14, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org899e5fc"></a>Post Growth Alliance<br />
+<div class="outline-text-6" id="text-4-1-2-4-2">
+<ul class="org-ul">
+<li>“Post Growth Alliance,” Post Growth Alliance. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://postgrowthalliance.org/">https://postgrowthalliance.org/</a>
+<ul class="org-ul">
+<li>Shareable, “Shareable,” Shareable. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.shareable.net/">https://www.shareable.net/</a></li>
+<li>“Post Growth Institute,” Post Growth Institute. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://postgrowth.org/">https://postgrowth.org/</a></li>
+<li>“Post Carbon Institute,” Post Carbon Institute. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.postcarbon.org/">https://www.postcarbon.org/</a></li>
+<li>“Home,” New Economy Coalition. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://neweconomy.net/">https://neweconomy.net/</a></li>
+<li>“New Economy Network Australia,” New Economy Network Australia. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.neweconomy.org.au/">https://www.neweconomy.org.au/</a></li>
+<li>“GNH Centre Bhutan – A GNH organization in Bhutan.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.gnhcentrebhutan.org/">https://www.gnhcentrebhutan.org/</a></li>
+<li>“Inicio,” PINE. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://nuevaseconomias.org/">https://nuevaseconomias.org/</a></li>
+<li>“Ecoversities - reclaiming knowledges, relationships and imaginations,” Ecoversities. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://ecoversities.org/">https://ecoversities.org/</a></li>
+<li>“Home - Ecoist.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://ecoist.eco/">https://ecoist.eco/</a></li>
+<li>“DEAL.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://doughnuteconomics.org/">https://doughnuteconomics.org/</a></li>
+<li>“#1 change agency in global development,” Disrupt Development. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.disruptdevelopment.org">https://www.disruptdevelopment.org</a></li>
+<li>Dark Optimism. Accessed: Jun. 16, 2024. [Online Video]. Available: <a href="https://www.facebook.com/DarkOptimism">https://www.facebook.com/DarkOptimism</a></li>
+<li>“Home,” Decolonising Economics. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://decolonisingeconomics.org/">https://decolonisingeconomics.org/</a></li>
+<li>Chriswaterguy,Curtbeckmann,Lonny,Iocj,Roger,RichardF,Grawp, “Welcome to Appropedia,” Appropedia, the sustainability wiki. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.appropedia.org/Welcome_to_Appropedia">https://www.appropedia.org/Welcome_to_Appropedia</a></li>
+<li>“Maswanganyi, Muyanga + Co,” Maswanganyi, Muyanga + Co. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.designwithmm.com">https://www.designwithmm.com</a></li>
+<li>“3BL Associates.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.3blassociates.com/">https://www.3blassociates.com/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgee212c7"></a>Events<br />
+<div class="outline-text-5" id="text-4-1-2-5">
+<ul class="org-ul">
+<li>mugdha, “GTA in WSF 2024,” GTA. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://globaltapestryofalternatives.org/events:wsf2024">https://globaltapestryofalternatives.org/events:wsf2024</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org03622f9"></a>Spirituality<br />
+<div class="outline-text-5" id="text-4-1-2-6">
+<ul class="org-ul">
+<li>K. J. Vanhoozer, Ed., The Cambridge Companion to Postmodern Theology. Cambridge University Press, 2003.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2c104d4"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="orga217d5a"></a>India<br />
+<ul class="org-ul">
+<li><a id="org65eec30"></a>General<br />
+<div class="outline-text-7" id="text-org65eec30">
+<ul class="org-ul">
+<li>J.-F. Gerber and R. S. Raina, Post-Growth Thinking in India: Towards Sustainable Egalitarian Alternatives. Orient Blackswan, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Kothari and K. J. Joy, <b>Alternative Futures: India Unshackled.</b> Authorsupfront Publishing Services Private Limited, 2018.
+<ul class="org-ul">
+<li>T. Caravan, “Alternative Futures India Unshackled,” The Caravan. Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://caravanmagazine.in/bookshelf/alternative-futures-india-unshackled">https://caravanmagazine.in/bookshelf/alternative-futures-india-unshackled</a></li>
+<li>S. G. Warrier, “[Interview] Imagining an alternative future,” Mongabay-India. Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://india.mongabay.com/2018/05/interview-imagining-an-alternative-future/">https://india.mongabay.com/2018/05/interview-imagining-an-alternative-future/</a></li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Shrivastava, <b>Churning the Earth: The Making of Global India.</b> Penguin UK, 2012.
+<ul class="org-ul">
+<li>A. Shrivastava and A. Kothari, <b>Prithvi Manthan, First edition.</b> Rajkamal Prakashan, 2016.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcc19f44"></a>World<br />
+<ul class="org-ul">
+<li><a id="org2a56dca"></a>Orgs<br />
+<div class="outline-text-8" id="text-org2a56dca">
+<ul class="org-ul">
+<li><b>“Kalpavriksh,”</b> Kalpavriksh. <a href="https://kalpavriksh.org/">https://kalpavriksh.org/</a> (accessed Oct. 11, 2021).</li>
+
+<li><b>“Vikalp Sangam - Alternatives’ Confluence,”</b> Vikalp Sangam. <a href="https://vikalpsangam.org/">https://vikalpsangam.org/</a> (accessed Oct. 11, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org963a4d9"></a>Awards<br />
+<div class="outline-text-8" id="text-org963a4d9">
+<ul class="org-ul">
+<li><b>“Lokayan,”</b> Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/lokayan/">https://rightlivelihood.org/the-change-makers/find-a-laureate/lokayan/</a> (accessed Sep. 18, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgeb67289"></a>People<br />
+<ul class="org-ul">
+<li><a id="org875c3e7"></a>Ashish Kothari<br />
+<ul class="org-ul">
+<li><a id="org6acec1f"></a>General<br />
+<div class="outline-text-10" id="text-org6acec1f">
+<ul class="org-ul">
+<li>“Ashish Kothari,” Wikipedia. Feb. 19, 2022. Accessed: May 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ashish_Kothari&amp;oldid=1072808162">https://en.wikipedia.org/w/index.php?title=Ashish_Kothari&amp;oldid=1072808162</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf0de951"></a>Misc<br />
+<div class="outline-text-10" id="text-orgf0de951">
+<ul class="org-ul">
+<li>“Ashish Kothari.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.slideshare.net/AshishKothari6">https://www.slideshare.net/AshishKothari6</a>
+<ul class="org-ul">
+<li>“Ashish Kothari, Member, kalpavriksh at Kalpavriksh | SlideShare.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.slideshare.net/AshishKothari6/presentations">https://www.slideshare.net/AshishKothari6/presentations</a></li>
+<li>“Ecoswaraj: Rights of Nature &amp; the Flower of Transformation,” SlideShare. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.slideshare.net/slideshow/ecoswaraj-rights-of-nature-the-flower-of-transformation/270919081">https://www.slideshare.net/slideshow/ecoswaraj-rights-of-nature-the-flower-of-transformation/270919081</a></li>
+<li>Ashish Kothari, Eco-swaraj: Pluriversal Pathways out of Global Crises, (Aug. 19, 2024). Accessed: Aug. 20, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=cSPWZ1eB_5w">https://www.youtube.com/watch?v=cSPWZ1eB_5w</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org949d195"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org375d0f1"></a>Arts<br />
+<div class="outline-text-7" id="text-org375d0f1">
+<ul class="org-ul">
+<li>“Not a token in your hands (Poem),” Vikalp Sangam. Accessed: May 10, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/not-a-token-in-your-hands-poem/">https://vikalpsangam.org/article/not-a-token-in-your-hands-poem/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga34efce"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgafaf657"></a>Critical Studies<br />
+<div class="outline-text-8" id="text-orgafaf657">
+<ul class="org-ul">
+<li>Meera Nanda</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd4abb7e"></a>Hindi Resources<br />
+<ul class="org-ul">
+<li><a id="org95519f4"></a>Local Futures<br />
+<ul class="org-ul">
+<li><a id="org2b300b4"></a>Texts<br />
+<div class="outline-text-10" id="text-org2b300b4">
+<ul class="org-ul">
+<li>Helena Norberg-Hodge, <b>Ancient Futures - Hindi - Pracheenta Ka Bhavishya (प्रचीनता का भविष्य).</b> Accessed: Dec. 31, 2023. [Online]. Available: <a href="http://archive.org/details/AncientFutures-Hindi-PracheentaKaBhavishya">http://archive.org/details/AncientFutures-Hindi-PracheentaKaBhavishya</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Helena Norberg-Hodge, <b>स्थानीय ही है – हमारा भविष्य.</b> Accessed: Dec. 31, 2023. Available: <a href="https://www.localfutures.org/wp-content/uploads/Excerpt-Local-is-Our-Future-by-Helena-Norberg-Hodge-Hindi-Translation-1.pdf">https://www.localfutures.org/wp-content/uploads/Excerpt-Local-is-Our-Future-by-Helena-Norberg-Hodge-Hindi-Translation-1.pdf</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb28693c"></a>Videos<br />
+<div class="outline-text-10" id="text-orgb28693c">
+<ul class="org-ul">
+<li>उन्मत्त व्यापार!, (May 02, 2019). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://vimeo.com/333753545">https://vimeo.com/333753545</a></li>
+
+<li>स्थानिक अन्न जगाला वाचवू शकतं!, (Dec. 23, 2021). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=2XW-4msAryQ">https://www.youtube.com/watch?v=2XW-4msAryQ</a></li>
+
+<li>स्थानीय भविष्य प्रस्तुत करता है: स्थानीय जा रहे हैं: समाधान - गुणक, (Mar. 07, 2017). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zLwGgpguxJk">https://www.youtube.com/watch?v=zLwGgpguxJk</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge84f557"></a>A. Kothari<br />
+<div class="outline-text-9" id="text-orge84f557">
+<ul class="org-ul">
+<li>A. Shrivastava and A. Kothari, <b>Prithvi Manthan, First edition.</b> Rajkamal Prakashan, 2016.
+<ul class="org-ul">
+<li>Churning the Earth The Cost of India’s Growth Book Review of Asis kothari’s book, (May 10, 2022). Accessed: Apr. 29, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=xz2kTNNw7iI">https://www.youtube.com/watch?v=xz2kTNNw7iI</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“भारत का वैकल्पिक भविष्य: कुछ झलक (In Hindi),” Vikalp Sangam. Accessed: Jan. 01, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/bharat-ka-vaikalpik-bhavishya-kuch-jhalak-in-hindi/">https://vikalpsangam.org/article/bharat-ka-vaikalpik-bhavishya-kuch-jhalak-in-hindi/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Vikalp Sangam General Assembly Released A People’s Manifesto 2024,” Vikalp Sangam. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://vikalpsangam.org/article/vikalp-sangam-general-assembly-to-release-peoples-manifesto-2024/">https://vikalpsangam.org/article/vikalp-sangam-general-assembly-to-release-peoples-manifesto-2024/</a>
+<ul class="org-ul">
+<li>Hindi Summary. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://vikalpsangam.org/wp-content/uploads/2023/12/Peoples-Manifesto-2024-21-%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A5%87%E0%A4%82-Hindi-Summary.pdf">https://vikalpsangam.org/wp-content/uploads/2023/12/Peoples-Manifesto-2024-21-%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A5%87%E0%A4%82-Hindi-Summary.pdf</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org6c53f12"></a>Misc<br />
+<div class="outline-text-9" id="text-org6c53f12">
+<ul class="org-ul">
+<li>R. Guha, Upbhog Ki Laxman Rekha, Latest Edition. Penguin India, 2013.</li>
+
+<li>A. Ghosh, Mahaparbat: Ek Kahani Hamare Daur Ki. HarperHindi, 2022.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org76ad488"></a>Youth<br />
+<div class="outline-text-8" id="text-org76ad488">
+<ul class="org-ul">
+<li>“Youth Vikalp Sangam,” Vikalp Sangam. Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://vikalpsangam.org/youth-vikalp-sangam/">https://vikalpsangam.org/youth-vikalp-sangam/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1dcd6f7"></a>BioRegionalism<br />
+<ul class="org-ul">
+<li><a id="org10f8103"></a>Orgs<br />
+<div class="outline-text-9" id="text-org10f8103">
+<ul class="org-ul">
+<li>“South Asia Bioregionalism Working Group,” Vikalp Sangam. Accessed: May 05, 2024. [Online]. Available: <a href="https://vikalpsangam.org/south-asia-bioregionalism-working-group/">https://vikalpsangam.org/south-asia-bioregionalism-working-group/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org41f3f2f"></a>Misc<br />
+<div class="outline-text-9" id="text-org41f3f2f">
+<ul class="org-ul">
+<li>“Tides of Thought: Integrating Science and Spirit in Marine Bioregionalism,” Radical Ecological Democracy. Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://radicalecologicaldemocracy.org/tides-of-thought-integrating-science-and-spirit-in-marine-bioregionalism/">https://radicalecologicaldemocracy.org/tides-of-thought-integrating-science-and-spirit-in-marine-bioregionalism/</a></li>
+
+<li>S. Bajpai, J. Crespo, and A. Kothari, “Bioregionalism in Amazonia and South Asia as pathway for healing the Earth,” Culture Hack Labs. Accessed: May 23, 2024. [Online]. Available: <a href="https://www.culturehack.io/issues/post-capitalist-philanthropy/bioregionalism-in-amazonia-and-south-asia-as-pathway-for-healing-the-earth/">https://www.culturehack.io/issues/post-capitalist-philanthropy/bioregionalism-in-amazonia-and-south-asia-as-pathway-for-healing-the-earth/</a></li>
+
+<li>“Nation-states are destroying the world. Could ‘bioregions’ be the answer? | openDemocracy.” Accessed: May 23, 2024. [Online]. Available: <a href="https://www.opendemocracy.net/en/oureconomy/nation-states-are-destroying-the-world-could-bioregions-be-the-answer/">https://www.opendemocracy.net/en/oureconomy/nation-states-are-destroying-the-world-could-bioregions-be-the-answer/</a></li>
+
+<li>“Living bioregionally, now,” Radical Ecological Democracy. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://radicalecologicaldemocracy.org/living-bioregionally-now/">https://radicalecologicaldemocracy.org/living-bioregionally-now/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org18ec049"></a>Misc<br />
+<div class="outline-text-7" id="text-org18ec049">
+<ul class="org-ul">
+<li>“A fictional piece on the past, present and uncertain futures of an India,” The Week. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.theweek.in/theweek/specials/2024/08/10/a-fictional-piece-on-the-past-present-and-uncertain-futures-of-an-india-where-the-bjp-has-long-reigned-supreme.html">https://www.theweek.in/theweek/specials/2024/08/10/a-fictional-piece-on-the-past-present-and-uncertain-futures-of-an-india-where-the-bjp-has-long-reigned-supreme.html</a></li>
+
+<li>“Approaching Life Sustainably: Through the process lens,” Vikalp Sangam. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/approaching-life-sustainably/">https://vikalpsangam.org/article/approaching-life-sustainably/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>franco, “Articulating Crisis and creating Radical Alternatives,” GTA. Accessed: Jul. 19, 2024. [Online]. Available: <a href="https://globaltapestryofalternatives.org/reports:articulating:index">https://globaltapestryofalternatives.org/reports:articulating:index</a></li>
+<li>S. Bajpai and V. Ramasar, “Articulating Crisis and creating radical alternatives: Insights from weavers of the Global Tapestry of Alternatives”.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“India’s 2024 Election Results Should Spur a Renewed Movement Towards Justice, Equity, and Sustainability,” Vikalp Sangam. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/indias-2024-election-results-should-spur-a-renewed-movement-towards-justice-equity-and-sustainability/">https://vikalpsangam.org/article/indias-2024-election-results-should-spur-a-renewed-movement-towards-justice-equity-and-sustainability/</a></li>
+
+<li>M. Wani and S. D. Asane, Ecosophies of Freedom. Kalpavriksh and Earthcare Books, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Churning The Earth, (Mar. 25, 2024). Accessed: Apr. 08, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=d8ajoGL8jII">https://www.youtube.com/watch?v=d8ajoGL8jII</a></li>
+<li>“Vikalp Sangam General Assembly Released A People’S Manifesto 2024,” Vikalp Sangam. Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://vikalpsangam.org/article/vikalp-sangam-general-assembly-to-release-peoples-manifesto-2024/">https://vikalpsangam.org/article/vikalp-sangam-general-assembly-to-release-peoples-manifesto-2024/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why We Must Think of ‘Post-Growth,’” The India Forum, Aug. 30, 2023. <a href="https://www.theindiaforum.in/economy/why-we-must-think-post-growth">https://www.theindiaforum.in/economy/why-we-must-think-post-growth</a> (accessed Sep. 09, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Koulagi, Development as Swaraj: Towards a Sustainable and Equitable Future. Routledge, 2022.
+<ul class="org-ul">
+<li>“In Search Of Alternative Moral Political Economies,” The India Forum. Accessed: Jan. 19, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/search-alternative-moral-political-economies">https://www.theindiaforum.in/book-reviews/search-alternative-moral-political-economies</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Kothari, “Vikalp Sangam: a decade of alternatives for India,” Meer. Accessed: Sep. 14, 2024. [Online]. Available: <a href="https://www.meer.com/en/82717-vikalp-sangam-a-decade-of-alternatives-for-india">https://www.meer.com/en/82717-vikalp-sangam-a-decade-of-alternatives-for-india</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org657a342"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org3c4fd9d" class="outline-4">
+<h4 id="org3c4fd9d"><span class="section-number-4">4.1.3.</span> Core</h4>
+</div>
+<div id="outline-container-org13780c7" class="outline-4">
+<h4 id="org13780c7"><span class="section-number-4">4.1.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-4-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org2c18e0c"></a>Music<br />
+<div class="outline-text-5" id="text-4-1-4-1">
+<ul class="org-ul">
+<li>Lennon, Imagine</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Faiz, Hum Dekhenge</li>
+</ul>
+</div>
+</li>
+<li><a id="org1c299d0"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org077957a" class="outline-4">
+<h4 id="org077957a"><span class="section-number-4">4.1.5.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-4-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="orga5ced18"></a>Post Modernism<br />
+<ol class="org-ol">
+<li><a id="org7a68d86"></a>General<br />
+<div class="outline-text-6" id="text-4-1-5-1-1">
+<ul class="org-ul">
+<li>“Postmodernism,” Wikipedia. Dec. 03, 2022. Accessed: Dec. 10, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Postmodernism&amp;oldid=1125292536">https://en.wikipedia.org/w/index.php?title=Postmodernism&amp;oldid=1125292536</a></li>
+<li>C. Butler, Postmodernism: A Very Short Introduction. OUP Oxford, 2002.
+<ul class="org-ul">
+<li>C. Butler, Modernism: A Very Short Introduction. Oxford University Press, 2010.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Garratt and R. Appignanesi, Introducing Postmodernism: A Graphic Guide. Icon Books Ltd, 2014.</li>
+
+<li>T. Woods, Beginning Postmodernism: Second edition, 2nd edition. Manchester: Manchester University Press, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="org0acd968"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org8f9f2e6"></a>General<br />
+<div class="outline-text-7" id="text-org8f9f2e6">
+<ul class="org-ul">
+<li>B. McHale, The Cambridge Introduction to Postmodernism. Cambridge University Press, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="org07652eb"></a>Readers<br />
+<div class="outline-text-7" id="text-org07652eb">
+<ul class="org-ul">
+<li>T. Docherty, Postmodernism: A Reader. Harvester Wheatsheaf, 1993.</li>
+</ul>
+</div>
+</li>
+<li><a id="org27dcf67"></a>Handbooks, Companions<br />
+<div class="outline-text-7" id="text-org27dcf67">
+<ul class="org-ul">
+<li>S. Sim, The Routledge Companion to Postmodernism. Routledge, 2011.</li>
+<li>S. Connor and P. of M. L. and T. S. of E. and H. S. Connor, The Cambridge Companion to Postmodernism. Cambridge University Press, 2004.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7edff8f"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org030cf42"></a>Music<br />
+<div class="outline-text-7" id="text-org030cf42">
+<ul class="org-ul">
+<li>K. Gloag, Postmodernism in Music. Cambridge University Press, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf3ad3d0"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org7fad6aa"></a>from Slow Down<br />
+<div class="outline-text-5" id="text-4-1-5-2">
+<ul class="org-ul">
+<li>K. Saito, Slow Down: How Degrowth Communism Can Save the Earth. W&amp;N, 2024.</li>
+
+<li>A. Gorz, Ecologica (The French List) Andr� Gorz, Reprint edition. Calcutta: Seagull Books, 2017.</li>
+
+<li>J. Wainwright and G. Mann, Climate Leviathan: A Political Theory of Our Planetary Future, Reprint edition. London: Verso, 2020.</li>
+
+<li>W. Streeck, Buying Time: The Delayed Crisis of Democratic Capitalism, 2nd edition. London New York: Verso, 2017.</li>
+
+<li>K. Milburn, Generation Left, 1st edition. Polity, 2019.</li>
+
+<li>D. Graeber, The Utopia Of Rules: On Technology, Stupidity, and the Secret Joys of Bureaucracy, Reprint edition. Brooklyn, NY London: Melville House Publishing, 2016.</li>
+
+<li>J. B. Foster and B. Clark, The Robbery Of Nature: Capitalism And the Ecological Rift, First Edition. Aakar Books, 2023.</li>
+
+<li>G. Kallis, Limits: Why Malthus Was Wrong and Why Environmentalists Should Care. Stanford Briefs, 2019.</li>
+
+<li>J. Suzman, Work: A Deep History, from the Stone Age to the Age of Robots, Reprint edition. New York: Penguin Books, 2022.</li>
+<li>J. Suzman, Affluence Without Abundance: What We Can Learn from the World’s Most Successful Civilisation, Reprint edition. London Oxford New York$bNew Delhi Sydney: Bloomsbury Publishing, 2019.</li>
+
+<li>A. Bastani, Fully Automated Luxury Communism: A Manifesto. London ; New York: Verso, 2019.</li>
+
+<li>R. Hopkins, The Transition Handbook: From Oil Dependency to Local Resilience, First Edition. White River Junction, Vt: Transition Books, 2008.</li>
+
+<li>N. Srnicek and A. Williams, Inventing the Future (revised and updated edition): Postcapitalism and a World Without Work, Revised, Updated ed. edition. London New York NY: Verso, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Marx-Engels-Gesamtausgabe,” Wikipedia. Mar. 01, 2024. Accessed: Mar. 13, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Marx-Engels-Gesamtausgabe&amp;oldid=1211137226">https://en.wikipedia.org/w/index.php?title=Marx-Engels-Gesamtausgabe&amp;oldid=1211137226</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Pitron, The Rare Metals War: the dark side of clean energy and digital technologies. London: Scribe Publications, 2023.</li>
+
+<li>T. Jackson, Post Growth - Life after Capitalism, 1st edition. Cambridge, UK: Polity, 2021.</li>
+<li>T. Jackson, Prosperity without Growth: Foundations for the Economy of Tomorrow, 2nd edition. Routledge, 2016.</li>
+
+<li>G. Arrighi, I. Wallerstein, and T. K. Hopkins, Anti-Systemic Movements, Reprint edition. London New York: Verso Books, 2012.</li>
+<li>I. Wallerstein, World-Systems Analysis: An Introduction, 7/28/04 edition. Durham, NC: Duke University Press, 2004.</li>
+
+<li>Streeck and Woolfgang, How Will Capitalism End? Juggernaut Books, 2020.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org722302a" class="outline-4">
+<h4 id="org722302a"><span class="section-number-4">4.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<ul class="org-ul">
+<li>A. Ladha, L. Murphy, and V. Shiva, Post Capitalist Philanthropy. Transition Resource Circle, 2022.
+<ul class="org-ul">
+<li>Local Futures, A spiritual-political praxis I Alnoor Ladha, (Sep. 13, 2024). Accessed: Sep. 14, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=j4cuxGb3uvQ">https://www.youtube.com/watch?v=j4cuxGb3uvQ</a></li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“XR Global Newsletter #91: The Biggest Death Project in Human History,” Extinction Rebellion. Accessed: Aug. 24, 2024. [Online]. Available: <a href="https://rebellion.global/blog/2024/08/23/global-newsletter-91/">https://rebellion.global/blog/2024/08/23/global-newsletter-91/</a></li>
+
+<li>“Re-nesting Humanity I Darcia Narvaez - YouTube.” Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=hAvI8ArZmaw">https://www.youtube.com/watch?v=hAvI8ArZmaw</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“2024 Home - Ecovillage Gathering.” Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://ecovillagegathering.org/">https://ecovillagegathering.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Enough: Thriving Societies Beyond Growth (Brussels),” Green European Foundation. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://gef.eu/event/thriving-societies-beyond-growth/">https://gef.eu/event/thriving-societies-beyond-growth/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Navigating the Polycrisis,” MIT Press. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262547758/navigating-the-polycrisis/">https://mitpress.mit.edu/9780262547758/navigating-the-polycrisis/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What an Ecological Civilization Looks Like,” YES! Magazine. Accessed: Apr. 26, 2024. [Online]. Available: <a href="https://www.yesmagazine.org/issues/ecological-civilization">https://www.yesmagazine.org/issues/ecological-civilization</a></li>
+<li>“A Nearly True Story: The Tale of the Hamlet,” YES! Magazine. Accessed: Apr. 26, 2024. [Online]. Available: <a href="https://www.yesmagazine.org/issue/ecological-civilization/2021/02/16/neighbors-grow-food-community-joy">https://www.yesmagazine.org/issue/ecological-civilization/2021/02/16/neighbors-grow-food-community-joy</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bella Cio, Bella Cio… Hope comes from the young for a world-weary Socialist,” Radical Ecological Democracy. Accessed: Apr. 14, 2024. [Online]. Available: <a href="https://radicalecologicaldemocracy.org/bella-cio-bella-cio-hope-comes-from-the-young-for-a-world-weary-socialist/">https://radicalecologicaldemocracy.org/bella-cio-bella-cio-hope-comes-from-the-young-for-a-world-weary-socialist/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kumar and F. Whitefield, Eds., Visionaries of the 20th Century: A Resurgence Anthology, First Edition. Green Books, 2006.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Soper, Post-Growth Living: For an Alternative Hedonism. London New York (N.Y.): Verso, 2020.</li>
+
+<li>A. Kothari, “A clash of worldviews,” Meer, Nov. 18, 2022. <a href="https://www.meer.com/en/71355-a-clash-of-worldviews">https://www.meer.com/en/71355-a-clash-of-worldviews</a> (accessed Nov. 19, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>U. Brand et al., “From planetary to societal boundaries: an argument for collectively defined self-limitation,” Sustainability: Science, Practice and Policy, vol. 17, no. 1, pp. 264–291, Jan. 2021, doi: 10.1080/15487733.2021.1940754.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Koulagi, Development as Swaraj: Towards a Sustainable and Equitable Future. Routledge, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kaul, B. Akbulut, F. Demaria, and J.-F. Gerber, “Alternatives to sustainable development: what can we learn from the pluriverse in practice?,” Sustain Sci, vol. 17, no. 4, pp. 1149–1158, Jul. 2022, doi: 10.1007/s11625-022-01210-2.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Sustainable Development is an oxymoron | Prof. Maharaja K Pandit | TEDxYouth@DPSGurgaon - YouTube.” <a href="https://www.youtube.com/watch?v=vui5ix_S_H4&amp;list=WL&amp;index=10">https://www.youtube.com/watch?v=vui5ix_S_H4&amp;list=WL&amp;index=10</a> (accessed Sep. 25, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“World Social Forum: Rethinking and Redefining Development Itself,” Vikalp Sangam. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/world-social-forum-rethinking-and-redefining-development-itself/">https://vikalpsangam.org/article/world-social-forum-rethinking-and-redefining-development-itself/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org27d2bf7" class="outline-2">
+<h2 id="org27d2bf7"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“People’s Working Group on Multistakeholderism | Transnational Institute.” Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.tni.org/en/profile/peoples-working-group-on-multistakeholderism">https://www.tni.org/en/profile/peoples-working-group-on-multistakeholderism</a></li>
+
+<li>“Multistakeholderism | Transnational Institute.” Accessed: Sep. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/topic/multistakeholderism">https://www.tni.org/en/topic/multistakeholderism</a></li>
+
+<li>foeint, “The Three COVID crises and Multistakeholderism: Impacts on the Global South - Friends of the Earth International.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://www.foei.org/publication/the-three-covid-crises-and-multistakeholderism-impacts-on-the-global-south/">https://www.foei.org/publication/the-three-covid-crises-and-multistakeholderism-impacts-on-the-global-south/</a></li>
+
+<li>“United in Science,” World Meteorological Organization. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://wmo.int/publication-series/united-science">https://wmo.int/publication-series/united-science</a></li>
+<li>A. Meston, “United in Science: Reboot climate action,” International Science Council. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://council.science/news/united-in-science-reboot-climate-action/">https://council.science/news/united-in-science-reboot-climate-action/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Lea, “Broadening horizons: Local knowledge to strengthen foresight practices,” International Science Council. Accessed: Sep. 14, 2024. [Online]. Available: <a href="https://council.science/blog/broadening-horizons-local-knowledge-foresight-practices/">https://council.science/blog/broadening-horizons-local-knowledge-foresight-practices/</a></li>
+
+<li>“A guide to anticipation: Tools and methods of horizon scanning and foresight,” International Science Council. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://council.science/publications/foresight-working-paper/">https://council.science/publications/foresight-working-paper/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Polycrisis Research and Action Roadmap,” Cascade Institute. Accessed: Aug. 28, 2024. [Online]. Available: <a href="https://cascadeinstitute.org/technical-paper/polycrisisroadmap/">https://cascadeinstitute.org/technical-paper/polycrisisroadmap/</a></li>
+<li>“Polycrisis Research and Action Roadmap.” Accessed: Aug. 28, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/news/polycrisis-research-and-action-roadmap/">https://www.cser.ac.uk/news/polycrisis-research-and-action-roadmap/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Navigating Uncertainty: Radical Rethinking for a Turbulent World.” Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.politybooks.com/bookdetail?book_slug=navigating-uncertainty-radical-rethinking-for-a-turbulent-world--9781509560073">https://www.politybooks.com/bookdetail?book_slug=navigating-uncertainty-radical-rethinking-for-a-turbulent-world--9781509560073</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Mazzucato, “Ending the consultancy cult,” New Statesman. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.newstatesman.com/comment/2024/08/ending-the-consultancy-cult">https://www.newstatesman.com/comment/2024/08/ending-the-consultancy-cult</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Navigating new horizons to protect human and planetary health,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jul-2024/navigating-new-horizons-to-protect-human-and-planetary-health">https://iiasa.ac.at/news/jul-2024/navigating-new-horizons-to-protect-human-and-planetary-health</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home,” School of Sustainability. Accessed: Jul. 21, 2024. [Online]. Available: <a href="https://schoolofsustainability.asu.edu/">https://schoolofsustainability.asu.edu/</a></li>
+
+<li>“Public Administration and Public Policy.” Accessed: Jul. 16, 2024. [Online]. Available: <a href="http://www.amazon.in/-/dp/B0B6ZXG4N4?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B0B6ZXG4N4?ref=dbs_m_mng_rwt_0000_share</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>D. M. Menon, Ed., Changing Theory: Concepts from the Global South, 1st edition. Routledge India, 2022.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Supporting the right small changes can have big impacts,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jun-2024/supporting-right-small-changes-can-have-big-impacts">https://iiasa.ac.at/news/jun-2024/supporting-right-small-changes-can-have-big-impacts</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. Fuso Nerini et al., “Extending the Sustainable Development Goals to 2050 — a road map,” Nature, vol. 630, no. 8017, pp. 555–558, Jun. 2024, doi: 10.1038/d41586-024-01754-6.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Sustainable Development Goals: can they be made smarter?,” Nature, vol. 630, no. 8017, pp. 529–529, Jun. 2024, doi: 10.1038/d41586-024-02023-2.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. Cairney, T. Heikkila, and M. Wood, Making Policy in a Complex World. Cambridge University Press, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Schneier, A Hacker’s Mind: How the Powerful Bend Society’s Rules, and How to Bend them Back. W. W. Norton &amp; Company, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Nature-Based Solutions Initiative,” Nature-Based Solutions Initiative. Accessed: Feb. 27, 2024. [Online]. Available: <a href="https://www.naturebasedsolutionsinitiative.org/">https://www.naturebasedsolutionsinitiative.org/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>T. H. Bureau, “Lifestyle change is need of the hour to reduce carbon footprint, says Sachin Chaturvedi,” The Hindu, Jun. 15, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Mangalore/lifestyle-change-is-need-of-the-hour-to-reduce-carbon-footprints-says-sachin-chaturvedi/article68293636.ece">https://www.thehindu.com/news/cities/Mangalore/lifestyle-change-is-need-of-the-hour-to-reduce-carbon-footprints-says-sachin-chaturvedi/article68293636.ece</a></li>
+<li>Wellbeing, Values and Lifestyles. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://link.springer.com/book/9789819747290">https://link.springer.com/book/9789819747290</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-25 Wed 09:16</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

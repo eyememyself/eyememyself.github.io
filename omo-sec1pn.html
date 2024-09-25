@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-25 Wed 09:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nuclear Security</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Nuclear Security</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge4ada88">1. General</a></li>
+<li><a href="#org1c2dd1b">2. STEMM</a>
+<ul>
+<li><a href="#orgc41297e">2.1. CSE</a></li>
+<li><a href="#org6101f64">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org12b733d">3. World</a>
+<ul>
+<li><a href="#orgbc84c38">3.1. Events</a>
+<ul>
+<li><a href="#orgda9c49b">3.1.1. Cuban Missile Crisis</a></li>
+</ul>
+</li>
+<li><a href="#org39aed9d">3.2. Education</a>
+<ul>
+<li><a href="#orgcb4c1c7">3.2.1. Courses</a></li>
+</ul>
+</li>
+<li><a href="#org691385e">3.3. Nation States</a>
+<ul>
+<li><a href="#org8478a9e">3.3.1. USA</a></li>
+<li><a href="#orgf91dbe2">3.3.2. Russia</a></li>
+<li><a href="#orgcca43bb">3.3.3. Asia</a></li>
+<li><a href="#org87884c4">3.3.4. ME</a></li>
+</ul>
+</li>
+<li><a href="#org95b9643">3.4. Law</a></li>
+<li><a href="#org70ae220">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org44ba37c">4. Special Topics</a></li>
+<li><a href="#org7dfcc7f">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orge4ada88" class="outline-2">
+<h2 id="orge4ada88"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org1c2dd1b" class="outline-2">
+<h2 id="org1c2dd1b"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc41297e" class="outline-3">
+<h3 id="orgc41297e"><span class="section-number-3">2.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>B. Herre, P. Rosado, M. Roser, and J. Hasell, “Nuclear Weapons,” Our World in Data, Feb. 2024, Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://ourworldindata.org/nuclear-weapons">https://ourworldindata.org/nuclear-weapons</a></li>
+
+<li><i>“Nuclear weapons: Why reducing the risk of nuclear war should be a key concern of our generation,”</i> Our World in Data. <a href="https://ourworldindata.org/nuclear-weapons-risk">https://ourworldindata.org/nuclear-weapons-risk</a> (accessed Mar. 04, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6101f64" class="outline-3">
+<h3 id="org6101f64"><span class="section-number-3">2.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org12b733d" class="outline-2">
+<h2 id="org12b733d"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgbc84c38" class="outline-3">
+<h3 id="orgbc84c38"><span class="section-number-3">3.1.</span> Events</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgda9c49b" class="outline-4">
+<h4 id="orgda9c49b"><span class="section-number-4">3.1.1.</span> Cuban Missile Crisis</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>S. Plokhy, <i>Nuclear Folly: A New History of the Cuban Missile Crisis.</i> Penguin UK, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org39aed9d" class="outline-3">
+<h3 id="org39aed9d"><span class="section-number-3">3.2.</span> Education</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgcb4c1c7" class="outline-4">
+<h4 id="orgcb4c1c7"><span class="section-number-4">3.2.1.</span> Courses</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>C. Owen and W. James, <i>“Nuclear Weapons in International Politics: Past, Present and Future,”</i> MIT OpenCourseWare. <a href="https://ocw.mit.edu/courses/political-science/17-951-nuclear-weapons-in-international-politics-past-present-and-future-spring-2009/">https://ocw.mit.edu/courses/political-science/17-951-nuclear-weapons-in-international-politics-past-present-and-future-spring-2009/</a> (accessed Mar. 05, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org691385e" class="outline-3">
+<h3 id="org691385e"><span class="section-number-3">3.3.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org8478a9e" class="outline-4">
+<h4 id="org8478a9e"><span class="section-number-4">3.3.1.</span> USA</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“United States nuclear weapons, 2024,” Bulletin of the Atomic Scientists. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2024-05/united-states-nuclear-weapons-2024/">https://thebulletin.org/premium/2024-05/united-states-nuclear-weapons-2024/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf91dbe2" class="outline-4">
+<h4 id="orgf91dbe2"><span class="section-number-4">3.3.2.</span> Russia</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>“Russian nuclear weapons, 2024,” Bulletin of the Atomic Scientists. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2024-03/russian-nuclear-weapons-2024/">https://thebulletin.org/premium/2024-03/russian-nuclear-weapons-2024/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcca43bb" class="outline-4">
+<h4 id="orgcca43bb"><span class="section-number-4">3.3.3.</span> Asia</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgb3189e1"></a>China<br />
+<div class="outline-text-5" id="text-3-3-3-1">
+<ul class="org-ul">
+<li>“Chinese nuclear weapons, 2024,” Bulletin of the Atomic Scientists. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2024-01/chinese-nuclear-weapons-2024/">https://thebulletin.org/premium/2024-01/chinese-nuclear-weapons-2024/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2f9d471"></a>India<br />
+<div class="outline-text-5" id="text-3-3-3-2">
+<ul class="org-ul">
+<li>H. M. Kristensen, M. Korda, E. Johns, and M. Knight, “Indian nuclear weapons, 2024,” Bulletin of the Atomic Scientists, vol. 80, no. 5, pp. 326–342, Sep. 2024, doi: 10.1080/00963402.2024.2388470.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8a2a5f8"></a>Pakistan<br />
+<div class="outline-text-5" id="text-3-3-3-3">
+<ul class="org-ul">
+<li>“Pakistan nuclear weapons, 2023,” Bulletin of the Atomic Scientists. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2023-09/pakistan-nuclear-weapons-2023/">https://thebulletin.org/premium/2023-09/pakistan-nuclear-weapons-2023/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga8a11fd"></a>Korea<br /></li>
+</ol>
+</div>
+<div id="outline-container-org87884c4" class="outline-4">
+<h4 id="org87884c4"><span class="section-number-4">3.3.4.</span> ME</h4>
+<div class="outline-text-4" id="text-3-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org7d34bf2"></a>Iran<br /></li>
+<li><a id="orgd5904f4"></a>Iraq<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org95b9643" class="outline-3">
+<h3 id="org95b9643"><span class="section-number-3">3.4.</span> Law</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li><i>“Nuclear weapons are illegal at last,”</i> Greenpeace International. <a href="https://www.greenpeace.org/international/story/46233/nuclear-weapons-illegal-treaty">https://www.greenpeace.org/international/story/46233/nuclear-weapons-illegal-treaty</a> (accessed Jan. 25, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org70ae220" class="outline-3">
+<h3 id="org70ae220"><span class="section-number-3">3.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>“America prepares for a new nuclear-arms race,” The Economist. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.economist.com/united-states/2024/08/12/america-prepares-for-a-new-nuclear-arms-race">https://www.economist.com/united-states/2024/08/12/america-prepares-for-a-new-nuclear-arms-race</a></li>
+
+<li>“Interview with Eric Schlosser: Why we can’t trust the government’s figures about nuclear close calls,” Bulletin of the Atomic Scientists. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2023-05/interview-with-eric-schlosser-why-we-cant-trust-the-governments-figures-about-nuclear-close-calls/">https://thebulletin.org/premium/2023-05/interview-with-eric-schlosser-why-we-cant-trust-the-governments-figures-about-nuclear-close-calls/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org44ba37c" class="outline-2">
+<h2 id="org44ba37c"><span class="section-number-2">4.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org7dfcc7f" class="outline-2">
+<h2 id="org7dfcc7f"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Is Russia Helping China Expand Its Nuclear Weapons Program?,” The Equation. Accessed: Sep. 20, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/sulgiye-park/is-russia-helping-china-expand-its-nuclear-weapons-program/">https://blog.ucsusa.org/sulgiye-park/is-russia-helping-china-expand-its-nuclear-weapons-program/</a></li>
+
+<li>S. Goudarzi, “AI and the A-bomb: What the analogy captures and misses,” Bulletin of the Atomic Scientists. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/09/ai-and-the-a-bomb-what-the-analogy-captures-and-misses/">https://thebulletin.org/2024/09/ai-and-the-a-bomb-what-the-analogy-captures-and-misses/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Mecklin, “What do Americans really think about the bombing of Hiroshima and Nagasaki?,” Bulletin of the Atomic Scientists. Accessed: Aug. 06, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/08/what-do-americans-really-think-about-the-bombing-of-hiroshima-and-nagasaki/">https://thebulletin.org/2024/08/what-do-americans-really-think-about-the-bombing-of-hiroshima-and-nagasaki/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“SIPRI Yearbook 2023 | SIPRI.” <a href="https://www.sipri.org/yearbook/2023">https://www.sipri.org/yearbook/2023</a> (accessed Jul. 27, 2023).</li>
+<li>S. I. P. R. Institute, SIPRI Yearbook 2023: Armaments, Disarmament and International Security. OUP Oxford, 2023.</li>
+
+<li>“States invest in nuclear arsenals as geopolitical relations deteriorate—New SIPRI Yearbook out now | SIPRI,” Jun. 12, 2023. <a href="https://www.sipri.org/media/press-release/2023/states-invest-nuclear-arsenals-geopolitical-relations-deteriorate-new-sipri-yearbook-out-now">https://www.sipri.org/media/press-release/2023/states-invest-nuclear-arsenals-geopolitical-relations-deteriorate-new-sipri-yearbook-out-now</a> (accessed Jul. 27, 2023).</li>
+
+<li>“Atomic Days,” CounterPunch.org. <a href="https://www.counterpunch.org/product/atomic-days/">https://www.counterpunch.org/product/atomic-days/</a> (accessed Oct. 02, 2022).</li>
+
+<li>J. Mecklin, “A response to Kallenborn: Why realism requires that nuclear weapons be abolished,” Bulletin of the Atomic Scientists. Accessed: Jan. 18, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/01/a-response-to-kallenborn-why-realism-requires-that-nuclear-weapons-be-abolished/">https://thebulletin.org/2024/01/a-response-to-kallenborn-why-realism-requires-that-nuclear-weapons-be-abolished/</a></li>
+<li>J. Mecklin, “Why a nuclear weapons ban would threaten, not save, humanity,” Bulletin of the Atomic Scientists. Accessed: Jan. 13, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/01/why-a-nuclear-weapons-ban-would-threaten-not-save-humanity/">https://thebulletin.org/2024/01/why-a-nuclear-weapons-ban-would-threaten-not-save-humanity/</a></li>
+<li>J. Mecklin, “A hurting stalemate? The risks of nuclear weapon use in the Ukraine crisis,” Bulletin of the Atomic Scientists, Mar. 02, 2022. <a href="https://thebulletin.org/2022/03/a-hurting-stalemate-the-risks-of-nuclear-weapon-use-in-the-ukraine-crisis/">https://thebulletin.org/2022/03/a-hurting-stalemate-the-risks-of-nuclear-weapon-use-in-the-ukraine-crisis/</a> (accessed Dec. 27, 2022).</li>
+<li>“Support Arms Control, Not Nuclear Weapons,” Union of Concerned Scientists. <a href="https://secure.ucsusa.org/a/2023-1-12-ax-arms-control-newsletter">https://secure.ucsusa.org/a/2023-1-12-ax-arms-control-newsletter</a> (accessed Feb. 18, 2023).</li>
+<li>“Despite challenges, US-Russian nuclear arms control has its benefits,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/premium/2022-11/despite-challenges-us-russian-nuclear-arms-control-has-its-benefits/">https://thebulletin.org/premium/2022-11/despite-challenges-us-russian-nuclear-arms-control-has-its-benefits/</a> (accessed Feb. 22, 2023).</li>
+<li>S. Goudarzi, “How civil society can help monitor and verify nuclear arms control,” Bulletin of the Atomic Scientists, Feb. 23, 2023. <a href="https://thebulletin.org/2023/02/how-civil-society-can-help-monitor-and-verify-nuclear-arms-control/">https://thebulletin.org/2023/02/how-civil-society-can-help-monitor-and-verify-nuclear-arms-control/</a> (accessed Feb. 25, 2023).</li>
+<li>F. Diaz-Maurin, “Russia is deploying nuclear weapons in Belarus. NATO shouldn’t take the bait,” Bulletin of the Atomic Scientists, Apr. 24, 2023. <a href="https://thebulletin.org/2023/04/russia-is-deploying-nuclear-weapons-in-belarus-nato-shouldnt-take-the-bait/">https://thebulletin.org/2023/04/russia-is-deploying-nuclear-weapons-in-belarus-nato-shouldnt-take-the-bait/</a> (accessed Apr. 26, 2023).</li>
+<li>“Brandon’s ‘Usable Nukes’ Are the Fast-Track to Jopocalypse.” <a href="https://www.organicconsumers.org/news/brandon%E2%80%99s-%E2%80%9Cusable-nukes%E2%80%9D-are-fast-track-jopocalypse">https://www.organicconsumers.org/news/brandon%E2%80%99s-%E2%80%9Cusable-nukes%E2%80%9D-are-fast-track-jopocalypse</a> (accessed Nov. 04, 2022).</li>
+<li>“The Global South is Leading the Way in Being A Nuclear Weapon Free Zone,” The Equation, Jul. 17, 2023. <a href="https://blog.ucsusa.org/chanese-forte/the-global-south-is-leading-the-way-in-being-a-nuclear-weapon-free-zone/">https://blog.ucsusa.org/chanese-forte/the-global-south-is-leading-the-way-in-being-a-nuclear-weapon-free-zone/</a> (accessed Jul. 21, 2023).</li>
+<li>“Nuclear War Research,” Future of Life Institute. <a href="https://futureoflife.org/grant-program/nuclear-war-research/">https://futureoflife.org/grant-program/nuclear-war-research/</a> (accessed Jul. 27, 2023).</li>
+<li>J. Mecklin, “A new nuclear-armed, sea-launched cruise missile: Just say no,” Bulletin of the Atomic Scientists, Jul. 19, 2023. <a href="https://thebulletin.org/2023/07/a-new-nuclear-armed-sea-launched-cruise-missile-just-say-no/">https://thebulletin.org/2023/07/a-new-nuclear-armed-sea-launched-cruise-missile-just-say-no/</a> (accessed Jul. 27, 2023).</li>
+<li>“It Is Possible: A Future Without Nuclear Weapons by Ward Hayes Wilson,” Avenues The World School Press. Accessed: Jan. 18, 2024. [Online]. Available: <a href="https://press.avenues.org/it-is-possible/">https://press.avenues.org/it-is-possible/</a></li>
+<li>T. Gaulkin, “Facing nuclear reality, 35 years after The Day After,” Bulletin of the Atomic Scientists, Dec. 13, 2018. <a href="https://thebulletin.org/2018/12/facing-nuclear-reality-35-years-after-the-day-after/">https://thebulletin.org/2018/12/facing-nuclear-reality-35-years-after-the-day-after/</a> (accessed Nov. 21, 2022).</li>
+<li>T. Gaulkin, “Facing nuclear reality, 35 years after The Day After,” Bulletin of the Atomic Scientists, Dec. 13, 2018. <a href="https://thebulletin.org/2018/12/facing-nuclear-reality-35-years-after-the-day-after/">https://thebulletin.org/2018/12/facing-nuclear-reality-35-years-after-the-day-after/</a> (accessed Nov. 21, 2022).</li>
+<li>“Nuclear Notebook: How many nuclear weapons does North Korea have in 2022?,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/premium/2022-09/nuclear-notebook-how-many-nuclear-weapons-does-north-korea-have-in-2022/">https://thebulletin.org/premium/2022-09/nuclear-notebook-how-many-nuclear-weapons-does-north-korea-have-in-2022/</a> (accessed Oct. 10, 2022).</li>
+<li>T. Gaulkin, “Nowhere to hide: How a nuclear war would kill you—and almost everyone else.,” Bulletin of the Atomic Scientists, Oct. 20, 2022. <a href="https://thebulletin.org/2022/10/nowhere-to-hide-how-a-nuclear-war-would-kill-you-and-almost-everyone-else/">https://thebulletin.org/2022/10/nowhere-to-hide-how-a-nuclear-war-would-kill-you-and-almost-everyone-else/</a> (accessed Oct. 28, 2022).</li>
+<li>F. Diaz-Maurin, “‘Not a bluff:’ Losing ground in Ukraine, Putin raises nuclear threats,” Bulletin of the Atomic Scientists, Sep. 21, 2022. <a href="https://thebulletin.org/2022/09/not-a-bluff-losing-ground-in-ukraine-putin-raises-nuclear-threats/">https://thebulletin.org/2022/09/not-a-bluff-losing-ground-in-ukraine-putin-raises-nuclear-threats/</a> (accessed Sep. 22, 2022).</li>
+<li>T. M. P. Reader, “The Dark Radiance of Atomic Bomb Literature,” The MIT Press Reader, Apr. 06, 2021. <a href="https://thereader.mitpress.mit.edu/the-dark-radiance-of-atomic-bomb-literature/">https://thereader.mitpress.mit.edu/the-dark-radiance-of-atomic-bomb-literature/</a> (accessed Jul. 27, 2023).</li>
+<li>J. Mecklin, “Twenty years after 9/11, terrorists could still go nuclear,” Bulletin of the Atomic Scientists, Sep. 16, 2021. <a href="https://thebulletin.org/2021/09/twenty-years-after-9-11-terrorists-could-still-go-nuclear/">https://thebulletin.org/2021/09/twenty-years-after-9-11-terrorists-could-still-go-nuclear/</a> (accessed Sep. 12, 2022).</li>
+<li>“SIPRI launches landmark report in New York | SIPRI.” Accessed: Feb. 16, 2024. [Online]. Available: <a href="https://www.sipri.org/media/2024/sipri-launches-landmark-report-new-york">https://www.sipri.org/media/2024/sipri-launches-landmark-report-new-york</a></li>
+<li>“There Is No Such Thing as a Small Nuclear War: The Twenty-Sixth Newsletter (2024),” Tricontinental: Institute for Social Research. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://thetricontinental.org/newsletterissue/nato-ukraine-nuclear-crisis/">https://thetricontinental.org/newsletterissue/nato-ukraine-nuclear-crisis/</a></li>
+<li>“United States nuclear weapons, 2024,” Bulletin of the Atomic Scientists. Accessed: May 17, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2024-05/united-states-nuclear-weapons-2024/">https://thebulletin.org/premium/2024-05/united-states-nuclear-weapons-2024/</a></li>
+<li>J. Mecklin, “Trump could win back the nuclear codes. Biden should put guardrails on the nuclear arsenal—now.,” Bulletin of the Atomic Scientists. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/07/trump-could-win-back-the-nuclear-codes-biden-should-put-guardrails-on-the-nuclear-arsenal-now/">https://thebulletin.org/2024/07/trump-could-win-back-the-nuclear-codes-biden-should-put-guardrails-on-the-nuclear-arsenal-now/</a></li>
+<li>F. Diaz-Maurin, “Eastern Europe’s purchase of US nuclear reactors is primarily about military ties, not climate change,” Bulletin of the Atomic Scientists. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/08/eastern-europes-purchase-of-us-nuclear-reactors-is-primarily-about-military-ties-not-climate-change/">https://thebulletin.org/2024/08/eastern-europes-purchase-of-us-nuclear-reactors-is-primarily-about-military-ties-not-climate-change/</a></li>
+<li>“North Korean nuclear weapons, 2024,” Bulletin of the Atomic Scientists. Accessed: Jul. 16, 2024. [Online]. Available: <a href="https://thebulletin.org/premium/2024-07/north-korean-nuclear-weapons-2024/">https://thebulletin.org/premium/2024-07/north-korean-nuclear-weapons-2024/</a></li>
+<li>S. Starkey, “The Bulletin welcomes top nuclear security experts to its leadership,” Bulletin of the Atomic Scientists. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/07/the-bulletin-welcomes-top-nuclear-security-experts-to-its-leadership/">https://thebulletin.org/2024/07/the-bulletin-welcomes-top-nuclear-security-experts-to-its-leadership/</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>T. M. P. Reader, “What Public Opinion Says About the Use of Nuclear Weapons,” The MIT Press Reader. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/what-public-opinion-says-about-the-use-of-nuclear-weapons/">https://thereader.mitpress.mit.edu/what-public-opinion-says-about-the-use-of-nuclear-weapons/</a></li>
+
+<li>R. Wolfson and F. Dalnoki-Veress, <i>Nuclear Choices for the Twenty-First Century: A Citizen’s Guide.</i> Cambridge, MA, USA: MIT Press, 2021.
+
+<ul class="org-ul">
+<li>R. Wolfson and F. Dalnoki-Veress, <i>“The Devastating Effects of Nuclear Weapons – The Wire Science.”</i> <a href="https://science.thewire.in/the-sciences/russia-ukraine-invasion-devastating-effects-nuclear-weapons/">https://science.thewire.in/the-sciences/russia-ukraine-invasion-devastating-effects-nuclear-weapons/</a> (accessed Mar. 06, 2022).</li>
+</ul></li>
+
+<li>“Turning Point: The Bomb and the Cold War | Rotten Tomatoes.” Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.rottentomatoes.com/tv/turning_point_the_bomb_and_the_cold_war">https://www.rottentomatoes.com/tv/turning_point_the_bomb_and_the_cold_war</a></li>
+
+<li>R. Rhodes, Dark Sun: The Making Of The Hydrogen Bomb, Reprint edition. New York, N.Y: Simon &amp; Schuster, 1996.</li>
+
+<li>R. Rhodes, The Making of the Atomic Bomb: 25th Anniversary Edition. Simon and Schuster, 2012.</li>
+
+<li>D. Ellsberg, <b>The Doomsday Machine: Confessions of a Nuclear War Planner, 1st Printing edition.</b> New York: Bloomsbury USA, 2017.</li>
+
+<li><i>“A look at how countries go nuclear — and why some do not,”</i> MIT News | Massachusetts Institute of Technology. <a href="https://news.mit.edu/2022/how-countries-go-nuclear-and-why-some-do-not-0111">https://news.mit.edu/2022/how-countries-go-nuclear-and-why-some-do-not-0111</a> (accessed Mar. 03, 2022).</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-25 Wed 09:48</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

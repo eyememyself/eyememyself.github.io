@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-25 Wed 09:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Military</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Military</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1d630c1">1. General</a></li>
+<li><a href="#org40700e4">2. STEMM</a>
+<ul>
+<li><a href="#org73e31ca">2.1. Complexity Science</a></li>
+<li><a href="#orge311d3d">2.2. Ecology</a></li>
+<li><a href="#orgb35dd4a">2.3. Health</a></li>
+<li><a href="#org9697bb7">2.4. CSE</a>
+<ul>
+<li><a href="#orgacf5a54">2.4.1. AI</a></li>
+<li><a href="#org58cb7e6">2.4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge9d37ac">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9176df6">3. World</a>
+<ul>
+<li><a href="#org5b36256">3.1. Nation States</a>
+<ul>
+<li><a href="#org294dc0d">3.1.1. USA</a></li>
+<li><a href="#org203031b">3.1.2. India</a></li>
+</ul>
+</li>
+<li><a href="#org2f50798">3.2. Business</a></li>
+<li><a href="#org779aeed">3.3. Special Groups</a>
+<ul>
+<li><a href="#orgefd5b08">3.3.1. Women</a></li>
+</ul>
+</li>
+<li><a href="#orged880f2">3.4. Special Topics</a>
+<ul>
+<li><a href="#orgc174fa2">3.4.1. Bad Sex</a></li>
+</ul>
+</li>
+<li><a href="#org53c360e">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org41f7d7b">4. Arts</a>
+<ul>
+<li><a href="#orgbd5ca07">4.1. Films</a></li>
+<li><a href="#org387011b">4.2. Music</a></li>
+</ul>
+</li>
+<li><a href="#org69f953b">5. Special Topics</a>
+<ul>
+<li><a href="#org441f378">5.1. Fighter Jets</a>
+<ul>
+<li><a href="#orga4a6b7a">5.1.1. General</a></li>
+<li><a href="#orgb3dbe44">5.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org54d7405">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org1d630c1" class="outline-2">
+<h2 id="org1d630c1"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“The Military Balance 2024: Launch,” IISS. Accessed: Feb. 13, 2024. [Online]. Available: <a href="https://www.iiss.org/events/2024/02/the-military-balance-2024-launch/">https://www.iiss.org/events/2024/02/the-military-balance-2024-launch/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40700e4" class="outline-2">
+<h2 id="org40700e4"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org73e31ca" class="outline-3">
+<h3 id="org73e31ca"><span class="section-number-3">2.1.</span> Complexity Science</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>Military Strategy in a Complex World</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/military-strategy-in-a-complex-world">https://necsi.edu/military-strategy-in-a-complex-world</a>. [Accessed: 24-Jul-2019].</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge311d3d" class="outline-3">
+<h3 id="orge311d3d"><span class="section-number-3">2.2.</span> Ecology</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>M. Davis and B. Sanders, The Green Zone: The Environmental Cost of Militarism. Oakland, CA: AK Press, 2009.</li>
+
+<li>K. A. Gould, <i>“The Ecological Costs of Militarization,”</i> Peace Review, vol. 19, no. 3, pp. 331–334, Aug. 2007, doi: 10.1080/10402650701524873.</li>
+
+<li>D. Noor, “Divert military spending to fund climate aid, activists urge Cop28,” The Guardian, Dec. 02, 2023. Accessed: Dec. 04, 2023. [Online]. Available: <a href="https://www.theguardian.com/environment/2023/dec/02/cop28-climate-change-military-funds">https://www.theguardian.com/environment/2023/dec/02/cop28-climate-change-military-funds</a></li>
+
+<li>“From Gaza to Ukraine, How War &amp; Military Spending Accelerates Climate Chaos,” Democracy Now! Accessed: Dec. 06, 2023. [Online]. Available: <a href="https://www.democracynow.org/2023/12/5/cop28_climate_and_militarism">https://www.democracynow.org/2023/12/5/cop28_climate_and_militarism</a></li>
+
+<li>“Climate Collateral | Transnational Institute.” Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://www.tni.org/en/publication/climate-collateral">https://www.tni.org/en/publication/climate-collateral</a></li>
+<li>“‘Climate Collateral’: How Military Spending Fuels Environmental Damage,” Democracy Now! Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://www.democracynow.org/2022/11/16/military_spending_worsens_environmental_damage_transnational">https://www.democracynow.org/2022/11/16/military_spending_worsens_environmental_damage_transnational</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb35dd4a" class="outline-3">
+<h3 id="orgb35dd4a"><span class="section-number-3">2.3.</span> Health</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>M. Busby, “The VA Is Quietly Fast-Tracking MDMA Therapy for Veterans,” The Intercept. Accessed: May 21, 2024. [Online]. Available: <a href="https://theintercept.com/2024/05/20/va-veterans-mdma-ptsd/">https://theintercept.com/2024/05/20/va-veterans-mdma-ptsd/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9697bb7" class="outline-3">
+<h3 id="org9697bb7"><span class="section-number-3">2.4.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgacf5a54" class="outline-4">
+<h4 id="orgacf5a54"><span class="section-number-4">2.4.1.</span> AI</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org411dda6"></a>Fair Tech<br />
+<div class="outline-text-5" id="text-2-4-1-1">
+<ul class="org-ul">
+<li>P. Eckersley, “How Militaries Should Plan for AI,” Electronic Frontier Foundation. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2018/08/eff-white-paper-how-militaries-should-use-ai">https://www.eff.org/deeplinks/2018/08/eff-white-paper-how-militaries-should-use-ai</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org36c31b2"></a>Misc<br />
+<div class="outline-text-5" id="text-2-4-1-2">
+<ul class="org-ul">
+<li>E. Lopatto, “Palantir partners with Microsoft to sell AI to the government,” The Verge. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.theverge.com/2024/8/8/24216215/palantir-microsoft-azure-ai-defense-partnership-surveillance">https://www.theverge.com/2024/8/8/24216215/palantir-microsoft-azure-ai-defense-partnership-surveillance</a></li>
+
+<li>G. Grill, “Military AI’s Next Frontier: Your Work Computer,” Wired. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.wired.com/story/military-ais-next-frontier-your-work-computer/">https://www.wired.com/story/military-ais-next-frontier-your-work-computer/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. Diaz-Maurin, “Humans should teach AI how to avoid nuclear war—while they still can,” Bulletin of the Atomic Scientists. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/07/humans-should-teach-ai-how-to-avoid-nuclear-war-while-they-still-can/">https://thebulletin.org/2024/07/humans-should-teach-ai-how-to-avoid-nuclear-war-while-they-still-can/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Graham-Shaw, “We Cannot Cede Control of Weapons to Artificial Intelligence,” Scientific American. Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/we-cannot-cede-control-of-weapons-to-artificial-intelligence/">https://www.scientificamerican.com/article/we-cannot-cede-control-of-weapons-to-artificial-intelligence/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“AI for Digital Warfare,” Routledge &amp; CRC Press. Accessed: May 24, 2024. [Online]. Available: <a href="https://www.routledge.com/AI-for-Digital-Warfare/Hageback-Hedblom/p/book/9781032048703">https://www.routledge.com/AI-for-Digital-Warfare/Hageback-Hedblom/p/book/9781032048703</a></li>
+
+<li>R. Geiß and H. Lahmann, Eds., Research Handbook on Warfare and Artificial Intelligence. Northampton: Edward Elgar Publishing Ltd, 2024.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Haskins, “‘I’m the new Oppenheimer!’: my soul-destroying day at Palantir’s first-ever AI warfare conference,” The Guardian, May 17, 2024. Accessed: May 18, 2024. [Online]. Available: <a href="https://www.theguardian.com/technology/article/2024/may/17/ai-weapons-palantir-war-technology">https://www.theguardian.com/technology/article/2024/may/17/ai-weapons-palantir-war-technology</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. Diaz-Maurin, “AI and the future of warfare: The troubling evidence from the US military,” Bulletin of the Atomic Scientists. Accessed: Nov. 30, 2023. [Online]. Available: <a href="https://thebulletin.org/2023/11/ai-and-the-future-of-warfare-the-troubling-evidence-from-the-us-military/">https://thebulletin.org/2023/11/ai-and-the-future-of-warfare-the-troubling-evidence-from-the-us-military/</a></li>
+<li>S. Goudarzi, “Wargames and AI: A dangerous mix that needs ethical oversight,” Bulletin of the Atomic Scientists. Accessed: Dec. 06, 2023. [Online]. Available: <a href="https://thebulletin.org/2023/12/wargames-and-ai-a-dangerous-mix-that-needs-ethical-oversight/">https://thebulletin.org/2023/12/wargames-and-ai-a-dangerous-mix-that-needs-ethical-oversight/</a></li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>H. Davies, B. McKernan, and D. Sabbagh, “‘The Gospel’: how Israel uses AI to select bombing targets in Gaza,” The Guardian, Dec. 01, 2023. Accessed: Dec. 05, 2023. [Online]. Available: <a href="https://www.theguardian.com/world/2023/dec/01/the-gospel-how-israel-uses-ai-to-select-bombing-targets">https://www.theguardian.com/world/2023/dec/01/the-gospel-how-israel-uses-ai-to-select-bombing-targets</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>M. Lamparth and J. Schneider, “Why the Military Can’t Trust AI,” Foreign Affairs, Apr. 29, 2024. Accessed: May 11, 2024. [Online]. Available: <a href="https://www.foreignaffairs.com/united-states/why-military-cant-trust-ai">https://www.foreignaffairs.com/united-states/why-military-cant-trust-ai</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org58cb7e6" class="outline-4">
+<h4 id="org58cb7e6"><span class="section-number-4">2.4.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li>A. Loewenstein, Palestine Laboratory: How Israel Exports the Technology of Occupation Around the World. London ; New York: Verso Books, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Barzashka, “Are Cyber-Weapons Effective?,” The RUSI Journal, vol. 158, no. 2, pp. 48–56, Apr. 2013, doi: 10.1080/03071847.2013.787735.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge9d37ac" class="outline-3">
+<h3 id="orge9d37ac"><span class="section-number-3">2.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“Evolution of Military Fitness Training with Grunt Proof | Starting Strength Radio #269,” Starting Strength. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://startingstrength.com/video/evolution-of-military-fitness-training-with-grunt-proof-starting-strength-radio-269">https://startingstrength.com/video/evolution-of-military-fitness-training-with-grunt-proof-starting-strength-radio-269</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“SIPRI delivers intensive online course on chemical and biological weapons | SIPRI.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.sipri.org/news/2024/sipri-delivers-intensive-online-course-chemical-and-biological-weapons">https://www.sipri.org/news/2024/sipri-delivers-intensive-online-course-chemical-and-biological-weapons</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9176df6" class="outline-2">
+<h2 id="org9176df6"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5b36256" class="outline-3">
+<h3 id="org5b36256"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org294dc0d" class="outline-4">
+<h4 id="org294dc0d"><span class="section-number-4">3.1.1.</span> USA</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“House Passes Record $839 Billion Military Budget in Bipartisan Vote,” Democracy Now! <a href="https://www.democracynow.org/2022/7/15/headlines/house_passes_record_839_billion_military_budget_in_bipartisan_vote">https://www.democracynow.org/2022/7/15/headlines/house_passes_record_839_billion_military_budget_in_bipartisan_vote</a> (accessed Jul. 17, 2022).</li>
+
+<li><i>“Opinion | Imagine: The US Military as the World’s Good Samaritan,”</i> Common Dreams. <a href="https://www.commondreams.org/views/2021/09/04/imagine-us-military-worlds-good-samaritan">https://www.commondreams.org/views/2021/09/04/imagine-us-military-worlds-good-samaritan</a> (accessed Sep. 09, 2021).</li>
+
+<li>“In bipartisan vote, US Congress authorizes record Pentagon budget: A blueprint for global war,” World Socialist Web Site. Accessed: Dec. 17, 2023. [Online]. Available: <a href="https://www.wsws.org/en/articles/2023/12/16/pqnx-d16.html">https://www.wsws.org/en/articles/2023/12/16/pqnx-d16.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. Whitney, “US Provides Military Assistance to 73 Percent of World’s Dictatorships,” Truthout. Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://truthout.org/articles/us-provides-military-assistance-to-73-percent-of-world-s-dictatorships/">https://truthout.org/articles/us-provides-military-assistance-to-73-percent-of-world-s-dictatorships/</a></li>
+
+<li>“The U.S. Has 750 Overseas Military Bases, and Continues to Build More to Encircle China,” Democracy Now! Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://www.democracynow.org/2023/2/14/david_vine_us_bases_china_philippines">https://www.democracynow.org/2023/2/14/david_vine_us_bases_china_philippines</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Mitchell and J. W. Dower, Poisoning the Pacific: The US Military’s Secret Dumping of Plutonium, Chemical Weapons, and Agent Orange. Rowman &amp; Littlefield Publishers, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org203031b" class="outline-4">
+<h4 id="org203031b"><span class="section-number-4">3.1.2.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgab62541"></a>General<br /></li>
+<li><a id="org4f29154"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org6b36ff2"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgd49d68c"></a>Core<br /></li>
+<li><a id="org6629fa5"></a>World<br />
+<ol class="org-ol">
+<li><a id="org26c26f7"></a>Space and Time<br />
+<ul class="org-ul">
+<li><a id="orgc7d68a4"></a>Biographies<br />
+<ul class="org-ul">
+<li><a id="orgc7d25e7"></a>Solo<br />
+<div class="outline-text-8" id="text-orgc7d25e7">
+<ul class="org-ul">
+<li>G. V. K. Singh, Courage and Conviction: An Autobiography, First Edition. Aleph Book Company, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Laxminarayan Ramdas,” Wikipedia. Mar. 17, 2024. Accessed: Mar. 18, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Laxminarayan_Ramdas&amp;oldid=1214114984">https://en.wikipedia.org/w/index.php?title=Laxminarayan_Ramdas&amp;oldid=1214114984</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7c66839"></a>Collections<br />
+<div class="outline-text-8" id="text-org7c66839">
+<ul class="org-ul">
+<li>S. Dua, <i>India’s Bravehearts: Untold Stories from the Indian Army.</i> Juggernaut, 2020.</li>
+
+<li>S. Aroor and R. Singh, <i>India’s Most Fearless: True Stories of Modern Military Heroes.</i> Penguin Random House India Private Limited, 2017.</li>
+<li>S. Aroor and R. Singh, <i>India’s Most Fearless 2: More Military Stories of Unimaginable Courage and Sacrifice.</i> Penguin Random House India Private Limited, 2019.</li>
+
+<li>M. G. V. K. Singh, Leadership In The Indian Army: Biographies Of Twelve Soldiers. Penguin Veer, 2023.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Pandey, <i>The Force Behind the Forces: Stories of Brave Indian Army Wives.</i> Penguin Random House India Private Limited, 2021.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org9d3b0a8"></a>Events<br />
+<div class="outline-text-6" id="text-3-1-2-4-2">
+<ul class="org-ul">
+<li>T. H. Bureau, “Indian Army Day 2023 | Here’s why it is celebrated on January 15 every year,” The Hindu, Jan. 15, 2023. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/indian-army-day-2023-heres-why-it-is-celebrated-on-january-15-every-year/article66380525.ece">https://www.thehindu.com/news/national/indian-army-day-2023-heres-why-it-is-celebrated-on-january-15-every-year/article66380525.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga134794"></a>Politics<br />
+<div class="outline-text-6" id="text-3-1-2-4-3">
+<ul class="org-ul">
+<li>S. Singh, “How the military fell in line with Modi’s political project,” The Caravan. Accessed: Feb. 02, 2024. [Online]. Available: <a href="https://caravanmagazine.in/security/military-modi-political-project">https://caravanmagazine.in/security/military-modi-political-project</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb912c2c"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-2-4-4">
+<ul class="org-ul">
+<li>S. Khan, “India’s arms export is growing, so must its scrutiny,” Deccan Herald. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.deccanherald.com/opinion/indias-arms-export-is-growing-so-must-its-scrutiny-3148240">https://www.deccanherald.com/opinion/indias-arms-export-is-growing-so-must-its-scrutiny-3148240</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org93b1b23"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org594b763"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-3-1-2-5-1">
+<ul class="org-ul">
+<li>J. K. Tur, “The Indian Army’s torture and murder of civilians in a restive Jammu,” The Caravan. Accessed: Feb. 13, 2024. [Online]. Available: <a href="https://caravanmagazine.in/crime/indian-army-torture-jammu-and-kashmir-poonch-bjp-gujjar-bakkerwal">https://caravanmagazine.in/crime/indian-army-torture-jammu-and-kashmir-poonch-bjp-gujjar-bakkerwal</a>
+<ul class="org-ul">
+<li>“The Indian Army’s torture and murder of civilians in a restive Jammu | The Caravan - YouTube.” Accessed: Feb. 13, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=sCmyPYf4zsQ">https://www.youtube.com/watch?v=sCmyPYf4zsQ</a></li>
+<li>“Union Govt Uses IT Act to Attack Press Freedom, Asks The Caravan to Take Down Report,” The Wire. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://thewire.in/media/union-govt-uses-it-act-to-attack-press-freedom-asks-caravan-to-take-down-report">https://thewire.in/media/union-govt-uses-it-act-to-attack-press-freedom-asks-caravan-to-take-down-report</a></li>
+<li>B. G. Rajendran Dhanya, “Govt asks Caravan to take down story on torture by army within 24 hours, uses IT Act,” The News Minute. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.thenewsminute.com/news/govt-asks-caravan-to-take-down-story-on-torture-by-army-within-24-hours-uses-it-act">https://www.thenewsminute.com/news/govt-asks-caravan-to-take-down-story-on-torture-by-army-within-24-hours-uses-it-act</a></li>
+<li>S. NT, “Govt Orders Takedown of The Caravan Article,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-gov-takedown-caravan-article-key-section-69a/">https://www.medianama.com/2024/02/223-gov-takedown-caravan-article-key-section-69a/</a></li>
+<li>T. H. Bureau, “Press Club urges government to revoke order against The Caravan magazine,” The Hindu, Feb. 14, 2024. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/pci-expresses-concern-over-ib-ministry-order-to-the-caravan-to-take-down-story/article67845849.ece">https://www.thehindu.com/news/national/pci-expresses-concern-over-ib-ministry-order-to-the-caravan-to-take-down-story/article67845849.ece</a></li>
+</ul></li>
+<li>“‘Violated Principles of Natural Justice’: Caravan Files Petition Against Govt Order On Army Story,” The Wire. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://thewire.in/media/violated-principles-of-natural-justice-caravan-files-petition-against-govt-order-on-army-story">https://thewire.in/media/violated-principles-of-natural-justice-caravan-files-petition-against-govt-order-on-army-story</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org290b0b7"></a>AgniPath<br />
+<div class="outline-text-6" id="text-3-1-2-5-2">
+<ul class="org-ul">
+<li>“The Message from Agnipath: India Can’t Afford the Military it Needs,” The India Forum, Jul. 13, 2022. <a href="https://www.theindiaforum.in/article/message-agnipath-india-cant-afford-military-it-needs">https://www.theindiaforum.in/article/message-agnipath-india-cant-afford-military-it-needs</a> (accessed Jul. 24, 2022).</li>
+
+<li>“The Agnipath Scheme May Be Designed to Ring the Death Knell of Indian Democracy,” The Wire. <a href="https://thewire.in/security/agnipath-scheme-death-knell-indian-democracy-hindu-rashtra">https://thewire.in/security/agnipath-scheme-death-knell-indian-democracy-hindu-rashtra</a> (accessed Jul. 24, 2022).</li>
+
+<li>T. I. F. Sushant Singh, “The armed forces needed reforms but Agnipath indicates that India has no funds for a modern military,” Scroll.in. <a href="https://scroll.in/article/1029115/the-armed-forces-needed-reforms-but-agnipath-indicates-that-india-has-no-funds-for-a-modern-military">https://scroll.in/article/1029115/the-armed-forces-needed-reforms-but-agnipath-indicates-that-india-has-no-funds-for-a-modern-military</a> (accessed Jul. 30, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgeefe32b"></a>Kargil War<br />
+<ul class="org-ul">
+<li><a id="orgabb0e69"></a>General<br />
+<div class="outline-text-7" id="text-orgabb0e69">
+<ul class="org-ul">
+<li>“Kargil War,” Wikipedia. Jul. 26, 2024. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kargil_War&amp;oldid=1236835670">https://en.wikipedia.org/w/index.php?title=Kargil_War&amp;oldid=1236835670</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge68d680"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="orga030c76"></a>The Caravan Magazine<br />
+<div class="outline-text-8" id="text-orga030c76">
+<ul class="org-ul">
+<li>“Kargil, a war in which accountability lost.” Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://caravanmagazine.in/security/kargil-war-army-lessons-learnt-vajpayee-fernandes">https://caravanmagazine.in/security/kargil-war-army-lessons-learnt-vajpayee-fernandes</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0a8a436"></a>Politics: Left<br />
+<div class="outline-text-8" id="text-org0a8a436">
+<ul class="org-ul">
+<li>P. Swami, The Kargil War: Signpost 2, Rev&amp;Expanded ed. edition. New Delhi: LeftWord Books, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd20ec78"></a>C1<br />
+<div class="outline-text-8" id="text-orgd20ec78">
+<ul class="org-ul">
+<li>M. Nayyar and H. S. Shekhawat, The Tiger of Drass: Anuj Nayyar, 23, Kargil Hero. Gurugram, Haryana: HarperCollins India, 2022.</li>
+<li>N. D. ; D. Dwivedi, Nimbu Saab: The Barefoot Naga Kargil Hero. HarperCollins India, 2024.</li>
+<li>NIL, Vijyant At Kargil The Biography Of A War Hero. New Delhi: Penguin eBury Press, 2020.</li>
+<li>M. V. P. General, Kargil from Surprise to VIctory. New Delhi: Harper India, 2020.</li>
+<li>C. M. B. Ravindranath and VrC, Kargil War: The Turning Point. Notion Press, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5e44220"></a>Misc<br />
+<div class="outline-text-8" id="text-org5e44220">
+<ul class="org-ul">
+<li>“Pilot fact-checks ‘Narendra Modi speech’ on Kargil: How did he get to 18,000 feet?” Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/pilot-fact-checks-narendra-modi-speech-on-kargil-how-did-he-get-to-18000-feet/cid/2036526">https://www.telegraphindia.com/india/pilot-fact-checks-narendra-modi-speech-on-kargil-how-did-he-get-to-18000-feet/cid/2036526</a></li>
+
+<li>“Kargil: The People Who Didn’t Do Their Job – and Those Who Did,” The Wire. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://thewire.in/security/kargil-war-manmohan-bahadur-1999-tipnis">https://thewire.in/security/kargil-war-manmohan-bahadur-1999-tipnis</a></li>
+
+<li>C. S. C. Tyagi, The Kargil Victory. New Delhi: Speaking Tiger Publishing Pvt Ltd, 2019.</li>
+
+<li>D. Dwivedi, Letters From Kargil: The Kargil war through our soldiers’ eyes. New Delhi, India: Juggernaut, 2017.</li>
+
+<li>R. B. Rawat, Kargil: Untold Stories from the War. Gurgaon, Haryana, India: Penguin eBury Press, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgb81bb74"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-2-6">
+<ul class="org-ul">
+<li>“Things Cannot Be Business as Usual in the Wake of the INS Brahmaputra Accident,” The Wire. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://thewire.in/security/things-cannot-be-business-as-usual-wake-of-ins-brahmaputra-accident">https://thewire.in/security/things-cannot-be-business-as-usual-wake-of-ins-brahmaputra-accident</a></li>
+
+<li>“Kargil, a war in which accountability lost.” Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://caravanmagazine.in/security/kargil-war-army-lessons-learnt-vajpayee-fernandes">https://caravanmagazine.in/security/kargil-war-army-lessons-learnt-vajpayee-fernandes</a></li>
+
+<li>“Defence lab builds temple chariot; Modi gov’t buries scandal.” Accessed: Jul. 15, 2024. [Online]. Available: <a href="https://www.reporters-collective.in/the-assurance-project/defence-lab-builds-temple-chariot-modi-govt-buries-scandal">https://www.reporters-collective.in/the-assurance-project/defence-lab-builds-temple-chariot-modi-govt-buries-scandal</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Param Vir Chakra,” Wikipedia. Jan. 14, 2024. Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Param_Vir_Chakra&amp;oldid=1195573005">https://en.wikipedia.org/w/index.php?title=Param_Vir_Chakra&amp;oldid=1195573005</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Peri, “Lt. Gen. Upendra Dwivedi to be next Army chief,” The Hindu, Jun. 11, 2024. Accessed: Jun. 12, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/lt-gen-upendra-dwivedi-to-be-next-army-chief/article68278808.ece">https://www.thehindu.com/news/national/lt-gen-upendra-dwivedi-to-be-next-army-chief/article68278808.ece</a></li>
+
+<li>“Rafale Deal: PM Modi cleared price over €2.5 billion higher than first benchmark.” Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://caravanmagazine.in/government/rafale-modi-approved-price-billions-higher-benchmark">https://caravanmagazine.in/government/rafale-modi-approved-price-billions-higher-benchmark</a></li>
+
+<li>S. P. Rosen, Societies and Military Power: India and Its Armies. Ithaca: Cornell University Press, 1996.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Wilkinson, <i>Army and Nation: The Military and Indian Democracy Since Independence.</i> Harvard University Press, 2015.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2f50798" class="outline-3">
+<h3 id="org2f50798"><span class="section-number-3">3.2.</span> Business</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Trends in World Military Expenditure, 2023,” SIPRI, Apr. 2024. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://www.sipri.org/publications/2024/sipri-fact-sheets/trends-world-military-expenditure-2023">https://www.sipri.org/publications/2024/sipri-fact-sheets/trends-world-military-expenditure-2023</a></li>
+
+<li>“The SIPRI Top 100 Arms-producing and Military Services Companies, 2022,” SIPRI, Dec. 2023. Accessed: Dec. 04, 2023. [Online]. Available: <a href="https://www.sipri.org/publications/2023/sipri-fact-sheets/sipri-top-100-arms-producing-and-military-services-companies-2022">https://www.sipri.org/publications/2023/sipri-fact-sheets/sipri-top-100-arms-producing-and-military-services-companies-2022</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org779aeed" class="outline-3">
+<h3 id="org779aeed"><span class="section-number-3">3.3.</span> Special Groups</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgefd5b08" class="outline-4">
+<h4 id="orgefd5b08"><span class="section-number-4">3.3.1.</span> Women</h4>
+</div>
+</div>
+<div id="outline-container-orged880f2" class="outline-3">
+<h3 id="orged880f2"><span class="section-number-3">3.4.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgc174fa2" class="outline-4">
+<h4 id="orgc174fa2"><span class="section-number-4">3.4.1.</span> Bad Sex</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>“Sexual harassment in the military,” Wikipedia. Nov. 27, 2022. Accessed: Jan. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sexual_harassment_in_the_military&amp;oldid=1124211098">https://en.wikipedia.org/w/index.php?title=Sexual_harassment_in_the_military&amp;oldid=1124211098</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53c360e" class="outline-3">
+<h3 id="org53c360e"><span class="section-number-3">3.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>D. FREEDMAN, “Defence correspondents: the journalistic wing of the military?,” Declassified Media Ltd. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://www.declassifieduk.org/defence-correspondents-the-journalistic-wing-of-the-military/">https://www.declassifieduk.org/defence-correspondents-the-journalistic-wing-of-the-military/</a></li>
+
+<li>“The Incompetence of Masters of War.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://jacobin.com/2024/08/military-industrial-complex-gaza-yemen">https://jacobin.com/2024/08/military-industrial-complex-gaza-yemen</a></li>
+
+<li>“Arms Trade Lobbying Portal - Powerbase.” Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://powerbase.info/index.php/Arms_Trade_Lobbying_Portal">https://powerbase.info/index.php/Arms_Trade_Lobbying_Portal</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org41f7d7b" class="outline-2">
+<h2 id="org41f7d7b"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbd5ca07" class="outline-3">
+<h3 id="orgbd5ca07"><span class="section-number-3">4.1.</span> Films</h3>
+</div>
+<div id="outline-container-org387011b" class="outline-3">
+<h3 id="org387011b"><span class="section-number-3">4.2.</span> Music</h3>
+</div>
+</div>
+<div id="outline-container-org69f953b" class="outline-2">
+<h2 id="org69f953b"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org441f378" class="outline-3">
+<h3 id="org441f378"><span class="section-number-3">5.1.</span> Fighter Jets</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orga4a6b7a" class="outline-4">
+<h4 id="orga4a6b7a"><span class="section-number-4">5.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Fighter aircraft,” Wikipedia. Jul. 15, 2022. Accessed: Jul. 22, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Fighter_aircraft&amp;oldid=1098356548">https://en.wikipedia.org/w/index.php?title=Fighter_aircraft&amp;oldid=1098356548</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3dbe44" class="outline-4">
+<h4 id="orgb3dbe44"><span class="section-number-4">5.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>“America Scrapped Plans for Its Secret Stealth Fighter—But Has Something Even More Fearsome in the Works,” Popular Mechanics. Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/military/aviation/a62302756/ngad-sixth-gen-fighter-program-scrapped/">https://www.popularmechanics.com/military/aviation/a62302756/ngad-sixth-gen-fighter-program-scrapped/</a></li>
+
+<li>“Why the F-15EX Is Such a Badass Plane,” Popular Mechanics. Accessed: Jul. 14, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/military/aviation/a45999684/f-15ex-fighter-jet-history/">https://www.popularmechanics.com/military/aviation/a45999684/f-15ex-fighter-jet-history/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org54d7405" class="outline-2">
+<h2 id="org54d7405"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Army special ops continues to grow, increase optempo,” www.army.mil. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.army.mil/article/52042/army_special_ops_continues_to_grow_increase_optempo">https://www.army.mil/article/52042/army_special_ops_continues_to_grow_increase_optempo</a></li>
+
+<li>“Israel’s New $1.2 Billion Laser Will Be Nearly Unstoppable—And America Wants One, Too,” Popular Mechanics. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/military/weapons/a61687698/israel-iron-beam-laser-system/">https://www.popularmechanics.com/military/weapons/a61687698/israel-iron-beam-laser-system/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“China Is Building a Terrifying, ‘Unsinkable’ Aircraft Carrier, and It’s a Clear Threat to the U.S.,” Popular Mechanics. Accessed: Jul. 14, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/military/a61016011/china-developing-floating-nuclear-reactors/">https://www.popularmechanics.com/military/a61016011/china-developing-floating-nuclear-reactors/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“SIPRI Yearbook 2024 | SIPRI.” Accessed: Jun. 12, 2024. [Online]. Available: <a href="https://www.sipri.org/yearbook/2024">https://www.sipri.org/yearbook/2024</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Y. Hakam, “The Atlas of Disarmament - RLS Geneva.” Accessed: May 13, 2024. [Online]. Available: <a href="https://rosalux-geneva.org/the-atlas-of-disarmament/">https://rosalux-geneva.org/the-atlas-of-disarmament/</a>, <a href="https://rosalux-geneva.org/the-atlas-of-disarmament/">https://rosalux-geneva.org/the-atlas-of-disarmament/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-25 Wed 09:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
