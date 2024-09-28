@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-28 Sat 11:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Real Estate</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Real Estate</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org54f98e9">1. General</a></li>
+<li><a href="#orgf59543f">2. STEMM</a>
+<ul>
+<li><a href="#org2afdfe5">2.1. Systems Sciences</a></li>
+<li><a href="#org5c3e5cb">2.2. Environment</a>
+<ul>
+<li><a href="#org28a1735">2.2.1. General</a></li>
+<li><a href="#org2d6d5a1">2.2.2. STEMM</a></li>
+<li><a href="#orgeec5c65">2.2.3. Core</a></li>
+<li><a href="#org99b804a">2.2.4. World</a></li>
+<li><a href="#org6e87964">2.2.5. Special Topics</a></li>
+<li><a href="#org90c7a4d">2.2.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org344e819">2.3. CSE</a>
+<ul>
+<li><a href="#orgb1f5141">2.3.1. Misc</a></li>
+<li><a href="#orgfdfcecb">2.3.2. Data Science</a></li>
+</ul>
+</li>
+<li><a href="#org83d0584">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org292ec54">3. World</a>
+<ul>
+<li><a href="#orgb337bb3">3.1. Orgs</a></li>
+<li><a href="#orgf4f82ee">3.2. Education</a>
+<ul>
+<li><a href="#org784c602">3.2.1. Courses</a></li>
+</ul>
+</li>
+<li><a href="#org952047e">3.3. India</a></li>
+</ul>
+</li>
+<li><a href="#orgb50e35e">4. Special Topics</a>
+<ul>
+<li><a href="#orgc2db814">4.1. Safety</a>
+<ul>
+<li><a href="#orge2d692f">4.1.1. Fire safety</a></li>
+<li><a href="#org8fc3250">4.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9e94c7d">4.2. Cultural</a></li>
+</ul>
+</li>
+<li><a href="#org93ad4fa">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org54f98e9" class="outline-2">
+<h2 id="org54f98e9"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>M. Cagan, <i>Real Estate Investing 101: From Finding Properties and Securing Mortgage Terms to REITs and Flipping Houses, an Essential Primer on How to Make Money with Real Estate.</i> Simon and Schuster, 2019.</li>
+
+<li>W. E. (Bill) Roark and W. R. (Ryan) Roark, <i>Concise Encyclopedia of Real Estate Business Terms.</i> Routledge, 2013.</li>
+
+<li>T. &amp; F. Group, <i>Routledge Companion to Real Estate Investment.</i> Taylor &amp; Francis Group, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf59543f" class="outline-2">
+<h2 id="orgf59543f"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2afdfe5" class="outline-3">
+<h3 id="org2afdfe5"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Mapping global rooftop growth for sustainable energy and urban planning,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jul-2024/mapping-global-rooftop-growth-for-sustainable-energy-and-urban-planning">https://iiasa.ac.at/news/jul-2024/mapping-global-rooftop-growth-for-sustainable-energy-and-urban-planning</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c3e5cb" class="outline-3">
+<h3 id="org5c3e5cb"><span class="section-number-3">2.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org28a1735" class="outline-4">
+<h4 id="org28a1735"><span class="section-number-4">2.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org2d6d5a1" class="outline-4">
+<h4 id="org2d6d5a1"><span class="section-number-4">2.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org76a8aff"></a>CSE<br />
+<div class="outline-text-5" id="text-2-2-2-1">
+<ul class="org-ul">
+<li>“Spatial Finance Initiative,” UK Centre for Greening Finance and Investment (CGFI). Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.cgfi.ac.uk/spatial-finance-initiative/">https://www.cgfi.ac.uk/spatial-finance-initiative/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“International Building Performance Simulation Association | Welcome.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://ibpsa.org/">https://ibpsa.org/</a>, <a href="https://ibpsa.org/">https://ibpsa.org/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgeec5c65" class="outline-4">
+<h4 id="orgeec5c65"><span class="section-number-4">2.2.3.</span> Core</h4>
+<div class="outline-text-4" id="text-2-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org522613a"></a>Texts<br />
+<div class="outline-text-5" id="text-2-2-3-1">
+<ul class="org-ul">
+<li>T. &amp; F. Group, <i>Routledge Handbook of Sustainable Real Estate.</i> Taylor &amp; Francis Group, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Walker, C. Krosinsky, L. N. Hasan, and S. D. Kibsey, <i>Sustainable Real Estate: Multidisciplinary Approaches to an Evolving System.</i> Springer International Publishing, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfdb9431"></a>Courses<br />
+<div class="outline-text-5" id="text-2-2-3-2">
+<ul class="org-ul">
+<li>“Sustainable Real Estate | Urban Studies and Planning,” MIT OpenCourseWare. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://ocw.mit.edu/courses/11-350-sustainable-real-estate-spring-2023/">https://ocw.mit.edu/courses/11-350-sustainable-real-estate-spring-2023/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org99b804a" class="outline-4">
+<h4 id="org99b804a"><span class="section-number-4">2.2.4.</span> World</h4>
+<div class="outline-text-4" id="text-2-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org2c850c3"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="orgdaa01c3"></a>India<br />
+<ul class="org-ul">
+<li><a id="orgdb493f5"></a>Orgs<br />
+<div class="outline-text-7" id="text-orgdb493f5">
+<ul class="org-ul">
+<li>“Center for infrastructure, Sustainable Transportation and Urban Planning.” <a href="https://cistup.iisc.ac.in/">https://cistup.iisc.ac.in/</a> (accessed Oct. 10, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org9e44ae1"></a>Misc<br />
+<div class="outline-text-7" id="text-org9e44ae1">
+<ul class="org-ul">
+<li>K. Pandey, “Brick kilns embrace zigzag design to cut pollution and boost efficiency,” Mongabay-India. Accessed: Aug. 30, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/brick-kilns-embrace-zigzag-design-to-cut-pollution-and-boost-efficiency/">https://india.mongabay.com/2024/08/brick-kilns-embrace-zigzag-design-to-cut-pollution-and-boost-efficiency/</a></li>
+
+<li>“Clean-Build Pathways to Decarbonize the Built Environment.” Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://www.cseindia.org/clean-build-pathways-to-decarbonize-the-built-environment-12087">https://www.cseindia.org/clean-build-pathways-to-decarbonize-the-built-environment-12087</a></li>
+
+<li>“New Government’s Agenda: Plan them cool.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/new-government-s-agenda-plan-them-cool-96573">https://www.downtoearth.org.in/news/governance/new-government-s-agenda-plan-them-cool-96573</a></li>
+
+<li>“The road to road resilience is paved with mindful construction and design say experts.” Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/the-road-to-road-resilience-is-paved-with-mindful-construction-and-design-say-experts/">https://india.mongabay.com/2024/08/the-road-to-road-resilience-is-paved-with-mindful-construction-and-design-say-experts/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6e87964" class="outline-4">
+<h4 id="org6e87964"><span class="section-number-4">2.2.5.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org90c7a4d" class="outline-4">
+<h4 id="org90c7a4d"><span class="section-number-4">2.2.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-2-6">
+<ul class="org-ul">
+<li>A. P. Rahman, “In Meghalaya, Traditional Knowledge Inspires A ‘Living’ Staircase.” Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://www.indiaspend.com/north-east/in-meghalaya-traditional-knowledge-inspires-a-living-staircase-923683">https://www.indiaspend.com/north-east/in-meghalaya-traditional-knowledge-inspires-a-living-staircase-923683</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Investigating Infrastructure: Ecology, Sustainability and Society - Webinar, (Jan. 27, 2022). Accessed: Jun. 02, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fmA1rIFKBGU">https://www.youtube.com/watch?v=fmA1rIFKBGU</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org344e819" class="outline-3">
+<h3 id="org344e819"><span class="section-number-3">2.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgb1f5141" class="outline-4">
+<h4 id="orgb1f5141"><span class="section-number-4">2.3.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>“With Shared Software, Landlords Are Teaming Up to Raise Rents.” Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://jacobin.com/2024/08/realpage-software-housing-landlords">https://jacobin.com/2024/08/realpage-software-housing-landlords</a></li>
+
+<li>“How a little-known tool is sweeping the real estate industry by giving instant access to vast amounts of homebuyer data.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://therecord.media/forewarn-app-real-estate-homebuyer-data">https://therecord.media/forewarn-app-real-estate-homebuyer-data</a></li>
+
+<li>“Spatial Finance Initiative,” UK Centre for Greening Finance and Investment (CGFI). Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.cgfi.ac.uk/spatial-finance-initiative/">https://www.cgfi.ac.uk/spatial-finance-initiative/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Gower, <i>Real Estate Crowdfunding: An Insider’s Guide to Investing Online.</i> CRC Press, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Reed and C. Pettit, <i>Real Estate and GIS: The Application of Mapping Technologies.</i> Routledge, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. W. S. Journal, “Smart Office Buildings Are Vulnerable to Hacks.” <a href="https://cacm.acm.org/news/260676-smart-office-buildings-are-vulnerable-to-hacks/fulltext">https://cacm.acm.org/news/260676-smart-office-buildings-are-vulnerable-to-hacks/fulltext</a> (accessed May 05, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfdfcecb" class="outline-4">
+<h4 id="orgfdfcecb"><span class="section-number-4">2.3.2.</span> Data Science</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>S. Tsolacos and M. Andrew, <i>Applied Quantitative Analysis for Real Estate.</i> Routledge, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Mourouzi-Sivitanidou, <i>Market Analysis for Real Estate.</i> Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org83d0584" class="outline-3">
+<h3 id="org83d0584"><span class="section-number-3">2.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org292ec54" class="outline-2">
+<h2 id="org292ec54"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb337bb3" class="outline-3">
+<h3 id="orgb337bb3"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><b>“Home Page - MIT,”</b> Center for Real Estate. <a href="https://mitcre.mit.edu/">https://mitcre.mit.edu/</a> (accessed May 20, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf4f82ee" class="outline-3">
+<h3 id="orgf4f82ee"><span class="section-number-3">3.2.</span> Education</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org784c602" class="outline-4">
+<h4 id="org784c602"><span class="section-number-4">3.2.1.</span> Courses</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li><b>“Real Estate Finance and Investment,”</b> MIT OpenCourseWare. <a href="https://ocw.mit.edu/courses/urban-studies-and-planning/11-431j-real-estate-finance-and-investment-fall-2006/">https://ocw.mit.edu/courses/urban-studies-and-planning/11-431j-real-estate-finance-and-investment-fall-2006/</a> (accessed May 20, 2021).</li>
+
+<li><b>“Real Estate Economics,”</b> MIT OpenCourseWare. <a href="https://ocw.mit.edu/courses/urban-studies-and-planning/11-433j-real-estate-economics-fall-2008/">https://ocw.mit.edu/courses/urban-studies-and-planning/11-433j-real-estate-economics-fall-2008/</a> (accessed May 20, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org952047e" class="outline-3">
+<h3 id="org952047e"><span class="section-number-3">3.3.</span> India</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>P. Das and D. Sharma, <i>Real Estate Finance in India.</i> SAGE Publications India, 2013.</li>
+
+<li>“Center for infrastructure, Sustainable Transportation and Urban Planning.” <a href="https://cistup.iisc.ac.in/">https://cistup.iisc.ac.in/</a> (accessed Oct. 10, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Lok Sabha Passes Bill Easing Long-Term Capital Gains Tax Policy For Real Estate Transactions,” The Wire. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://thewire.in/politics/ls-finance-bill-ltcg-real-estate-insurance-gst">https://thewire.in/politics/ls-finance-bill-ltcg-real-estate-insurance-gst</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“House Prices in India | Economic and Political Weekly.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/37/special-articles/house-prices-india.html">https://www.epw.in/journal/2024/37/special-articles/house-prices-india.html</a></li>
+<li>L. G. Searle, Landscapes of Accumulation: Real Estate and the Neoliberal Imagination in Contemporary India. University of Chicago Press, 2016.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb50e35e" class="outline-2">
+<h2 id="orgb50e35e"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgc2db814" class="outline-3">
+<h3 id="orgc2db814"><span class="section-number-3">4.1.</span> Safety</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orge2d692f" class="outline-4">
+<h4 id="orge2d692f"><span class="section-number-4">4.1.1.</span> Fire safety</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Best Fire Extinguisher Buying Guide,” Consumer Reports, May 04, 2016. <a href="https://www.consumerreports.org/home-garden/fire-extinguishers/buying-guide/">https://www.consumerreports.org/home-garden/fire-extinguishers/buying-guide/</a> (accessed Mar. 04, 2023).</li>
+<li>“What chemicals are used in a fire extinguisher? How do they work to put out fires?,” Scientific American. <a href="https://www.scientificamerican.com/article/what-chemicals-are-used-i/">https://www.scientificamerican.com/article/what-chemicals-are-used-i/</a> (accessed Mar. 04, 2023).</li>
+<li>“How to Use a Fire Extinguisher: 14 Steps (with Pictures),” wikiHow. <a href="https://www.wikihow.com/Use-a-Fire-Extinguisher">https://www.wikihow.com/Use-a-Fire-Extinguisher</a> (accessed Mar. 04, 2023).</li>
+<li>“Fire extinguisher,” Wikipedia. Feb. 22, 2023. Accessed: Mar. 04, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Fire_extinguisher&amp;oldid=1140862218">https://en.wikipedia.org/w/index.php?title=Fire_extinguisher&amp;oldid=1140862218</a></li>
+<li>“Choosing and using fire extinguishers,” U.S. Fire Administration, Aug. 22, 2022. <a href="https://www.usfa.fema.gov/prevention/outreach/extinguishers.html">https://www.usfa.fema.gov/prevention/outreach/extinguishers.html</a> (accessed Mar. 04, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. N. Wangchuk, “The Couple Behind ‘Trial by Fire’ &amp; Their Long Battle for Justice After Uphaar Fire,” The Better India, Jan. 16, 2023. <a href="https://www.thebetterindia.com/308771/neelam-and-shekhar-krishnamoorthy-real-couple-netflix-trial-by-fire-uphaar-cinema/">https://www.thebetterindia.com/308771/neelam-and-shekhar-krishnamoorthy-real-couple-netflix-trial-by-fire-uphaar-cinema/</a> (accessed Mar. 04, 2023).</li>
+<li>“Anatomy of a Tragedy: Remembering the Victims of the Uphaar Cinema Fire.” <a href="https://thewire.in/urban/victims-uphaar-cinema-fire">https://thewire.in/urban/victims-uphaar-cinema-fire</a> (accessed Mar. 04, 2023).</li>
+<li>“Uphaar Cinema fire,” Wikipedia. Feb. 21, 2023. Accessed: Mar. 04, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Uphaar_Cinema_fire&amp;oldid=1140663324">https://en.wikipedia.org/w/index.php?title=Uphaar_Cinema_fire&amp;oldid=1140663324</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8fc3250" class="outline-4">
+<h4 id="org8fc3250"><span class="section-number-4">4.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>R. Peachman, “Your Home Has Hidden Dangers. These Fixes Will Keep You Safe.,” Consumer Reports, Feb. 03, 2022. <a href="https://www.consumerreports.org/home-safety/your-home-has-hidden-dangers-these-fixes-will-keep-you-safe/">https://www.consumerreports.org/home-safety/your-home-has-hidden-dangers-these-fixes-will-keep-you-safe/</a> (accessed Mar. 04, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e94c7d" class="outline-3">
+<h3 id="org9e94c7d"><span class="section-number-3">4.2.</span> Cultural</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>K. Taylor and J. Lennon, Managing Cultural Landscapes. Routledge, 2012.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org93ad4fa" class="outline-2">
+<h2 id="org93ad4fa"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Pluralistic: Christopher Brown’s ‘A Natural History of Empty Lots’ (17 Sep 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/09/17/cyberpunk-pastoralism/">https://pluralistic.net/2024/09/17/cyberpunk-pastoralism/</a></li>
+
+<li>“A $1 Trillion Time Bomb Is Ticking in the Housing Market,” Bloomberg.com, Aug. 02, 2024. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.bloomberg.com/opinion/articles/2024-08-02/a-1-trillion-time-bomb-is-ticking-in-the-housing-market">https://www.bloomberg.com/opinion/articles/2024-08-02/a-1-trillion-time-bomb-is-ticking-in-the-housing-market</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ask a Scientist: What Happens When Sea Level Rise Comes for Public Housing?,” The Equation. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/guest-commentary/ask-a-scientist-what-happens-when-sea-level-rise-comes-for-public-housing/">https://blog.ucsusa.org/guest-commentary/ask-a-scientist-what-happens-when-sea-level-rise-comes-for-public-housing/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Al-Hamad, K. Metersky, and T. Conversation, “Homestays can help refugee women adapt to life in a new country.” Accessed: Jul. 01, 2024. [Online]. Available: <a href="https://phys.org/news/2024-06-homestays-refugee-women-life-country.html">https://phys.org/news/2024-06-homestays-refugee-women-life-country.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: How finfluencers destroyed the housing and lives of thousands of people (22 May 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 23, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/05/22/koteswar-jay-gajavelli/">https://pluralistic.net/2024/05/22/koteswar-jay-gajavelli/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Stein, Capital City: Gentrification and the Real Estate State. Verso, 2019.</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>W. Parker, K. Putzier, and S. Shifflett, “A Housing Bust Comes for Thousands of Small-Time Investors,” Wall Street Journal, May 23, 2023. Accessed: May 23, 2024. [Online]. Available: <a href="https://www.wsj.com/articles/a-housing-bust-comes-for-thousands-of-small-time-investors-3934beb3">https://www.wsj.com/articles/a-housing-bust-comes-for-thousands-of-small-time-investors-3934beb3</a></li>
+<li>M. Tkacik, “Hell Is an Underwater Landlord,” The American Prospect. Accessed: May 23, 2024. [Online]. Available: <a href="https://prospect.org/api/content/426776a2-17da-11ef-a0b6-12163087a831/">https://prospect.org/api/content/426776a2-17da-11ef-a0b6-12163087a831/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-28 Sat 11:09</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
