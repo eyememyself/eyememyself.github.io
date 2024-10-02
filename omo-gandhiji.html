@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-02 Wed 16:40 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GandhiJi</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">GandhiJi</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc899f99">1. General</a></li>
+<li><a href="#org4876d60">2. STEMM</a>
+<ul>
+<li><a href="#orgaed5d88">2.1. Environment</a></li>
+<li><a href="#orgae191d4">2.2. Health</a></li>
+<li><a href="#org2f32a30">2.3. Computer Science and Engineering</a></li>
+<li><a href="#org5fb299c">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9824e38">3. World</a>
+<ul>
+<li><a href="#orgf6fd94a">3.1. Space and Time</a>
+<ul>
+<li><a href="#org1c45f98">3.1.1. Biographical Works</a></li>
+<li><a href="#orgcedc132">3.1.2. Geography</a></li>
+</ul>
+</li>
+<li><a href="#org668ac24">3.2. Events</a>
+<ul>
+<li><a href="#org61521de">3.2.1. Gandhi Jayanti</a></li>
+</ul>
+</li>
+<li><a href="#orgd8b0258">3.3. Orgs</a></li>
+<li><a href="#org9c747da">3.4. Social Studies</a>
+<ul>
+<li><a href="#org939cb10">3.4.1. Women</a></li>
+<li><a href="#org2e0f8db">3.4.2. Sex</a></li>
+<li><a href="#org94c0e70">3.4.3. Race, Caste</a></li>
+<li><a href="#org03132fe">3.4.4. Economics</a></li>
+<li><a href="#org48a5b8a">3.4.5. Policy</a></li>
+<li><a href="#org294f15c">3.4.6. Violence</a></li>
+<li><a href="#org7e1529e">3.4.7. Current Affairs</a></li>
+</ul>
+</li>
+<li><a href="#org72302e7">3.5. Religions</a></li>
+<li><a href="#orge4e810b">3.6. Self Help</a></li>
+<li><a href="#orgf991d29">3.7. Transport</a></li>
+<li><a href="#orgf8ee86e">3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org79197f6">4. Core</a>
+<ul>
+<li><a href="#orgeda8942">4.1. Philosophy</a></li>
+<li><a href="#org497ca6a">4.2. Writings</a></li>
+</ul>
+</li>
+<li><a href="#org8fd6d71">5. Arts</a>
+<ul>
+<li><a href="#orgf2e3d38">5.1. Music</a>
+<ul>
+<li><a href="#orgb7a0010">5.1.1. Hindustani Classical Music</a></li>
+<li><a href="#org96d57d9">5.1.2. Karnatic Classical Music</a></li>
+<li><a href="#org75ef842">5.1.3. Western Classical Music</a></li>
+<li><a href="#org0bdfcef">5.1.4. Films</a></li>
+<li><a href="#org4bf0d65">5.1.5. Pop</a></li>
+<li><a href="#org001d021">5.1.6. Playlists</a></li>
+<li><a href="#org3fb91ca">5.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf4d70a5">5.2. Films</a></li>
+<li><a href="#orga480537">5.3. Opera</a></li>
+<li><a href="#org9430cb2">5.4. Apparel</a>
+<ul>
+<li><a href="#org41b2b07">5.4.1. Khadi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4feed94">6. Special Topics</a>
+<ul>
+<li><a href="#orgdda55d6">6.1. Critical Studies</a></li>
+<li><a href="#org5bbc1c2">6.2. Hindi</a></li>
+</ul>
+</li>
+<li><a href="#orgc5ed360">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgc899f99" class="outline-2">
+<h2 id="orgc899f99"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Mahatma Gandhi,” Wikipedia. Oct. 03, 2022. Accessed: Oct. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&amp;oldid=1113819027">https://en.wikipedia.org/w/index.php?title=Mahatma_Gandhi&amp;oldid=1113819027</a></li>
+
+<li>B. Parekh, Gandhi: A Very Short Introduction. OUP Oxford, 2001.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4876d60" class="outline-2">
+<h2 id="org4876d60"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgaed5d88" class="outline-3">
+<h3 id="orgaed5d88"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Gandhian Sanitation: Ariyanendal’s streets flooded regularly with grey water; here is how they got cleaned.” <a href="https://www.downtoearth.org.in/news/water/gandhian-sanitation-ariyanendal-s-streets-flooded-regularly-with-grey-water-here-is-how-they-got-cleaned-85198">https://www.downtoearth.org.in/news/water/gandhian-sanitation-ariyanendal-s-streets-flooded-regularly-with-grey-water-here-is-how-they-got-cleaned-85198</a> (accessed Oct. 03, 2022).</li>
+<li>“Gandhian Sanitation: Flood-prone Sahibganj uses height and bacteria to manage its waste.” <a href="https://www.downtoearth.org.in/news/water/gandhian-sanitation-flood-prone-sahibganj-uses-height-and-bacteria-to-manage-its-waste-85196">https://www.downtoearth.org.in/news/water/gandhian-sanitation-flood-prone-sahibganj-uses-height-and-bacteria-to-manage-its-waste-85196</a> (accessed Oct. 03, 2022).</li>
+<li>“Gandhian Sanitation: How Kolhapur combined toilet design, biogas to treat faecal sludge.” <a href="https://www.downtoearth.org.in/news/water/gandhian-sanitation-how-kolhapur-combined-toilet-design-biogas-to-treat-faecal-sludge-85194">https://www.downtoearth.org.in/news/water/gandhian-sanitation-how-kolhapur-combined-toilet-design-biogas-to-treat-faecal-sludge-85194</a> (accessed Oct. 03, 2022).</li>
+<li>“Gandhian Sanitation: Political will, proactive sarpanch changed the sanitation scene in Mariyapuram.” <a href="https://www.downtoearth.org.in/news/water/gandhian-sanitation-political-will-proactive-sarpanch-changed-the-sanitation-scene-in-mariyapuram-85201">https://www.downtoearth.org.in/news/water/gandhian-sanitation-political-will-proactive-sarpanch-changed-the-sanitation-scene-in-mariyapuram-85201</a> (accessed Oct. 03, 2022).</li>
+<li>“Gandhian sanitation simplified: Reusability, sustainability lead to cleanliness.” <a href="https://www.downtoearth.org.in/news/waste/gandhian-sanitation-simplified-reusability-sustainability-lead-to-cleanliness-85192">https://www.downtoearth.org.in/news/waste/gandhian-sanitation-simplified-reusability-sustainability-lead-to-cleanliness-85192</a> (accessed Oct. 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae191d4" class="outline-3">
+<h3 id="orgae191d4"><span class="section-number-3">2.2.</span> Health</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“What Gandhi teaches the millennials on food and fitness.” <a href="https://www.downtoearth.org.in/news/food/what-gandhi-teaches-the-millennials-on-food-and-fitness-79486">https://www.downtoearth.org.in/news/food/what-gandhi-teaches-the-millennials-on-food-and-fitness-79486</a> (accessed Oct. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f32a30" class="outline-3">
+<h3 id="org2f32a30"><span class="section-number-3">2.3.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>PTI, “IIT researchers to create ‘Gandhipedia,’” The Hindu, Nov. 29, 2019. Accessed: Jan. 27, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/iit-researchers-to-create-gandhipedia/article30113267.ece">https://www.thehindu.com/news/national/iit-researchers-to-create-gandhipedia/article30113267.ece</a></li>
+<li>S. Ghosh, “Gandhipedia,” The KGP Chronicle. Accessed: Jan. 27, 2024. [Online]. Available: <a href="https://kgpchronicle.iitkgp.ac.in/gandhipedia/">https://kgpchronicle.iitkgp.ac.in/gandhipedia/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5fb299c" class="outline-3">
+<h3 id="org5fb299c"><span class="section-number-3">2.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><b>“Mahatma Gandhi and sustainable science,”</b> Nature, vol. 574, no. 7777, pp. 150–150, Oct. 2019, doi: 10.1038/d41586-019-03010-8.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9824e38" class="outline-2">
+<h2 id="org9824e38"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf6fd94a" class="outline-3">
+<h3 id="orgf6fd94a"><span class="section-number-3">3.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org1c45f98" class="outline-4">
+<h4 id="org1c45f98"><span class="section-number-4">3.1.1.</span> Biographical Works</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0e972d7"></a>Autobiographical Works<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>M. K. Gandhi and T. Suhrud, <i>An Autobiography or The Story of My Experiments with Truth: Critical Edition.</i> Place of publication not identified: Penguin, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7e63b2e"></a>Politics: Left<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>A. Roy, <b>The Doctor and the Saint: The Ambedkar-Gandhi Debate: Caste, Race and Annihilation of Caste.</b> Penguin Random House India Private Limited, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="org38c2837"></a>Politics: Right<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<ul class="org-ul">
+<li>M. R. Paranjape, The Death and Afterlife of Mahatma Gandhi. Random House India, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="org58c6d9e"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-4">
+<ul class="org-ul">
+<li>R. Guha, <i>Gandhi before India.</i> Penguin UK, 2014.
+<ul class="org-ul">
+<li>R. रामचंद्र Guha, Gandhi/गांधी: Dakshin Africa Se Bharat Aagman Aur Golmez Sammelan Tak 1914-31, Khand-1/दक्षिण अफ्रीक़ा से भारत आगमन और गोलमेज़ सम्मेलन तक 1914-31 खंड-1. Penguin, 2021.</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hardiman, Gandhi in His Time and Ours: The Global Legacy of His Ideas. C. Hurst &amp; Co. Publishers, 2003.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Reflections on Gandhi,” Wikipedia. Aug. 10, 2022. Accessed: Oct. 02, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Reflections_on_Gandhi&amp;oldid=1103667271">https://en.wikipedia.org/w/index.php?title=Reflections_on_Gandhi&amp;oldid=1103667271</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgcedc132" class="outline-4">
+<h4 id="orgcedc132"><span class="section-number-4">3.1.2.</span> Geography</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“Inhabiting Drawings, Drawing Inhabitations,” The India Forum. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/inhabiting-drawings-drawing-inhabitations">https://www.theindiaforum.in/book-reviews/inhabiting-drawings-drawing-inhabitations</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org668ac24" class="outline-3">
+<h3 id="org668ac24"><span class="section-number-3">3.2.</span> Events</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org61521de" class="outline-4">
+<h4 id="org61521de"><span class="section-number-4">3.2.1.</span> Gandhi Jayanti</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga487849"></a>General<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>“Gandhi Jayanti,” Wikipedia. Oct. 02, 2022. Accessed: Oct. 02, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gandhi_Jayanti&amp;oldid=1113579537">https://en.wikipedia.org/w/index.php?title=Gandhi_Jayanti&amp;oldid=1113579537</a></li>
+<li>“International Day of Non-Violence,” Wikipedia. Apr. 29, 2022. Accessed: Oct. 02, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Day_of_Non-Violence&amp;oldid=1085313367">https://en.wikipedia.org/w/index.php?title=International_Day_of_Non-Violence&amp;oldid=1085313367</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgee69613"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-2">
+<ul class="org-ul">
+<li>“Towards a More Conscious Life Celebrating The Spirit of Gandhi Jayanti,” Organic India. <a href="https://organicindia.com/blogs/recent/towards-a-more-conscious-life-celebrating-the-spirit-of-gandhi-jayanti">https://organicindia.com/blogs/recent/towards-a-more-conscious-life-celebrating-the-spirit-of-gandhi-jayanti</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd8b0258" class="outline-3">
+<h3 id="orgd8b0258"><span class="section-number-3">3.3.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Gandhi Peace Foundation,” Wikipedia. Jan. 04, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gandhi_Peace_Foundation&amp;oldid=1063678965">https://en.wikipedia.org/w/index.php?title=Gandhi_Peace_Foundation&amp;oldid=1063678965</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9c747da" class="outline-3">
+<h3 id="org9c747da"><span class="section-number-3">3.4.</span> Social Studies</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org939cb10" class="outline-4">
+<h4 id="org939cb10"><span class="section-number-4">3.4.1.</span> Women</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>S. Kakar, <i>Mira and The Mahatma.</i> Penguin Random House India Private Limited, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2e0f8db" class="outline-4">
+<h4 id="org2e0f8db"><span class="section-number-4">3.4.2.</span> Sex</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>“The truth about Gandhi’s sex life,” The Independent, Sep. 01, 2021. <a href="https://www.independent.co.uk/arts-entertainment/books/features/thrill-of-the-chaste-the-truth-about-gandhi-s-sex-life-b1912595.html">https://www.independent.co.uk/arts-entertainment/books/features/thrill-of-the-chaste-the-truth-about-gandhi-s-sex-life-b1912595.html</a> (accessed Oct. 03, 2022).</li>
+<li>I. Jack, “How would Gandhi’s celibacy tests with naked women be seen today?,” The Guardian, Oct. 01, 2018. Accessed: Oct. 03, 2022. [Online]. Available: <a href="https://www.theguardian.com/commentisfree/2018/oct/01/gandhi-celibacy-test-naked-women">https://www.theguardian.com/commentisfree/2018/oct/01/gandhi-celibacy-test-naked-women</a></li>
+<li>T. Q&amp;A, “Gandhi was obsessed with sex – while preaching celibacy to others: Kusoom Vadgama,” The Times of India. Accessed: Oct. 03, 2022. [Online]. Available: <a href="https://timesofindia.indiatimes.com/blogs/the-interviews-blog/gandhi-was-obsessed-with-sex-while-preaching-celibacy-to-others-kusoom-vadgama/">https://timesofindia.indiatimes.com/blogs/the-interviews-blog/gandhi-was-obsessed-with-sex-while-preaching-celibacy-to-others-kusoom-vadgama/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94c0e70" class="outline-4">
+<h4 id="org94c0e70"><span class="section-number-4">3.4.3.</span> Race, Caste</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ul class="org-ul">
+<li>“Was Mahatma Gandhi a racist?,” BBC News, Sep. 17, 2015. Accessed: Oct. 03, 2022. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-34265882">https://www.bbc.com/news/world-asia-india-34265882</a></li>
+
+<li>T. Mountain, “The Reason India’s Dalits Hate Gandhi,” CounterPunch.org, Sep. 07, 2018. <a href="https://www.counterpunch.org/2018/09/07/the-reason-indias-dalits-hate-gandhi/">https://www.counterpunch.org/2018/09/07/the-reason-indias-dalits-hate-gandhi/</a> (accessed Oct. 02, 2022).</li>
+
+<li>D. N., “Gandhi, Ambedkar and Separate Electorates Issue,” Economic and Political Weekly, vol. 26, no. 21, pp. 1328–1330, 1991, Accessed: Oct. 02, 2022. [Online]. Available: <a href="https://www.jstor.org/stable/4398052">https://www.jstor.org/stable/4398052</a></li>
+
+<li>A. Roy, <b>The Doctor and the Saint: The Ambedkar-Gandhi Debate: Caste, Race and Annihilation of Caste.</b> Penguin Random House India Private Limited, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org03132fe" class="outline-4">
+<h4 id="org03132fe"><span class="section-number-4">3.4.4.</span> Economics</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<ul class="org-ul">
+<li>J. Rao, Economist Gandhi: The Roots and the Relevance of the Political Economy of the Mahatma. Penguin Random House India Private Limited, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org48a5b8a" class="outline-4">
+<h4 id="org48a5b8a"><span class="section-number-4">3.4.5.</span> Policy</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<ul class="org-ul">
+<li>“‘People often talk of the Gandhian model of development, but if such a model is genuinely Gandhian then it is not about development.’” <a href="https://www.downtoearth.org.in/interviews/people-often-talk-of-the-gandhian-model-of-development-but-if-such-a-model-is-genuinely-gandhian-then-it-is-not-about-development-40178">https://www.downtoearth.org.in/interviews/people-often-talk-of-the-gandhian-model-of-development-but-if-such-a-model-is-genuinely-gandhian-then-it-is-not-about-development-40178</a> (accessed Oct. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org294f15c" class="outline-4">
+<h4 id="org294f15c"><span class="section-number-4">3.4.6.</span> Violence</h4>
+<div class="outline-text-4" id="text-3-4-6">
+<ul class="org-ul">
+<li>R. Minor, “Sri Aurobindo’s Dismissal of Gandhi and His Nonviolence,” 2003, pp. 87–105.</li>
+
+<li>R. Jahanbegloo, <i>Mahatma Gandhi: A Nonviolent Perspective on Peace.</i> Taylor &amp; Francis, 2020.</li>
+
+<li>M. K. Gandhi, <i>Non-Violent Resistance.</i> Courier Corporation, 2012.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e1529e" class="outline-4">
+<h4 id="org7e1529e"><span class="section-number-4">3.4.7.</span> Current Affairs</h4>
+<div class="outline-text-4" id="text-3-4-7">
+<ul class="org-ul">
+<li>“At Hindu Mahasabha Durga Puja, a Mahishasur Which Looks ‘Similar to’ Mahatma Gandhi,” The Wire. <a href="https://thewire.in/rights/at-hindu-mahasabha-durga-puja-a-mahishasur-which-looks-similar-to-mahatma-gandhi">https://thewire.in/rights/at-hindu-mahasabha-durga-puja-a-mahishasur-which-looks-similar-to-mahatma-gandhi</a> (accessed Oct. 04, 2022).</li>
+<li>S. S. Chattopadhyay, “Controversy erupts over depiction of Mahatma Gandhi as demon in Kolkata puja pandal,” Oct. 03, 2022. <a href="https://frontline.thehindu.com/news/controversy-erupts-over-depiction-of-mahatma-gandhi-as-demon-in-kolkata-puja-pandal/article65966356.ece">https://frontline.thehindu.com/news/controversy-erupts-over-depiction-of-mahatma-gandhi-as-demon-in-kolkata-puja-pandal/article65966356.ece</a> (accessed Oct. 04, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Guha, “Ramachandra Guha: How Modi is trying to use Gandhi’s name to whitewash his dark record,” Scroll.in. <a href="https://scroll.in/article/1000459/ramachandra-guha-how-modi-is-trying-to-use-gandhis-name-to-whitewash-his-dark-record">https://scroll.in/article/1000459/ramachandra-guha-how-modi-is-trying-to-use-gandhis-name-to-whitewash-his-dark-record</a> (accessed Oct. 02, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org72302e7" class="outline-3">
+<h3 id="org72302e7"><span class="section-number-3">3.5.</span> Religions</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>R. Guha, “Ramachandra Guha: What the apparent defeat of Gandhi’s pursuit of religious pluralism could teach us,” Scroll.in. Accessed: Sep. 22, 2024. [Online]. Available: <a href="https://scroll.in/article/1073554/ramachandra-guha-what-the-apparent-defeat-of-gandhis-pursuit-of-religious-pluralism-could-teach-us">https://scroll.in/article/1073554/ramachandra-guha-what-the-apparent-defeat-of-gandhis-pursuit-of-religious-pluralism-could-teach-us</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4e810b" class="outline-3">
+<h3 id="orge4e810b"><span class="section-number-3">3.6.</span> Self Help</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>T. Sethia, The Living Gandhi: Lessons for Our Times. Penguin UK, 2013.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf991d29" class="outline-3">
+<h3 id="orgf991d29"><span class="section-number-3">3.7.</span> Transport</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li>“Gandhi at 150: He walked 18 kms a day and avoided using cars, rickshaws.” <a href="https://www.downtoearth.org.in/news/lifestyle/gandhi-at-150-he-walked-18-kms-a-day-and-avoided-using-cars-rickshaws-67036">https://www.downtoearth.org.in/news/lifestyle/gandhi-at-150-he-walked-18-kms-a-day-and-avoided-using-cars-rickshaws-67036</a> (accessed Oct. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf8ee86e" class="outline-3">
+<h3 id="orgf8ee86e"><span class="section-number-3">3.8.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org79197f6" class="outline-2">
+<h2 id="org79197f6"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgeda8942" class="outline-3">
+<h3 id="orgeda8942"><span class="section-number-3">4.1.</span> Philosophy</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>J.-L. Nancy, S. Mohan, And D. Dwivedi, Gandhi And Philosophy : On Theological Anti-Politics. Bloomsbury Academic India, 2019.</li>
+
+<li>“Book Review | Seeking Meaning in a Meaningless World: The Essence of the Gandhian Paradigm,” The Wire. <a href="https://thewire.in/books/book-review-gandhian-paradigm-living-in-truth">https://thewire.in/books/book-review-gandhian-paradigm-living-in-truth</a> (accessed Oct. 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org497ca6a" class="outline-3">
+<h3 id="org497ca6a"><span class="section-number-3">4.2.</span> Writings</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>M. Gandhi, Gandhi: <i>“Hind Swaraj” and Other Writings Centenary Edition.</i> Cambridge University Press, 2009.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8fd6d71" class="outline-2">
+<h2 id="org8fd6d71"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgf2e3d38" class="outline-3">
+<h3 id="orgf2e3d38"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgb7a0010" class="outline-4">
+<h4 id="orgb7a0010"><span class="section-number-4">5.1.1.</span> Hindustani Classical Music</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org90dae87"></a>Playlists<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<ul class="org-ul">
+<li>“ssGandhiHCM | Community Playlist on Prime Music.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://music.amazon.in/user-playlists/11271bb2de624e46a940fb5263007ceei8n0">https://music.amazon.in/user-playlists/11271bb2de624e46a940fb5263007ceei8n0</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge27d90e"></a>VJT<br />
+<div class="outline-text-5" id="text-5-1-1-2">
+<ul class="org-ul">
+<li>“‘Vashnav Jan’ by Shafqat Amanat Ali. #bapu@150 - YouTube.” Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=A8K5G3YbXFE">https://www.youtube.com/watch?v=A8K5G3YbXFE</a></li>
+
+<li>Vaishnav Janato I Bhajan I Pt. Ronu Majumdar, (Apr. 17, 2017). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=rQ1PpZudL-E">https://www.youtube.com/watch?v=rQ1PpZudL-E</a></li>
+
+<li>“Taj Mahal Tea presents Vaishnav Jana To - Tribute to Mahatma Gandhi by Ustad Shujaat Khan - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=t9L7JBdAobw&amp;list=WL&amp;index=10">https://www.youtube.com/watch?v=t9L7JBdAobw&amp;list=WL&amp;index=10</a></li>
+
+<li>Bhajan || Vaishnab Janato || Kaushiki Chakraborty || Kaushiki’s Home Jam || 2021, (Oct. 02, 2021). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=r77x2uySDBk">https://www.youtube.com/watch?v=r77x2uySDBk</a></li>
+
+<li>“Vaishnava Janato ( With Prof Vgjog ) | Ustad Bismillah Khan | Indian Classical Instrumental Music - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=0u2Ljk87wmg&amp;list=WL&amp;index=14">https://www.youtube.com/watch?v=0u2Ljk87wmg&amp;list=WL&amp;index=14</a></li>
+
+<li>“Vaishnav Jana Toh By Pt Hariprasad Chaurasia | Bhajan | Flute | Jalsa Videos | Art And Artistes - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=sg6dPTsLzqE&amp;list=WL&amp;index=13">https://www.youtube.com/watch?v=sg6dPTsLzqE&amp;list=WL&amp;index=13</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgad75b58"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-1-3">
+<ul class="org-ul">
+<li>A. Pradhan, “Listen: Mark Gandhi Jayanti with raags composed in his honour by Ravi Shankar and Kumar Gandharva,” Scroll.in. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://scroll.in/article/896204/listen-mark-gandhi-jayanti-with-raags-composed-in-his-honour-by-ravi-shankar-and-kumar-gandharva">https://scroll.in/article/896204/listen-mark-gandhi-jayanti-with-raags-composed-in-his-honour-by-ravi-shankar-and-kumar-gandharva</a></li>
+
+<li>Ustad Amjad Ali Khan - Topic, <i>Raga Baapu Kauns</i>, (May 18, 2018). Accessed: Oct. 04, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=AmSCFueynkQ">https://www.youtube.com/watch?v=AmSCFueynkQ</a></li>
+
+<li><i>“Gandhi (film),”</i> Wikipedia. Oct. 04, 2021. Accessed: Oct. 05, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gandhi_(film)&amp;oldid=1048195670">https://en.wikipedia.org/w/index.php?title=Gandhi_(film)&amp;oldid=1048195670</a>
+<ul class="org-ul">
+<li>Ravi Shankar - Topic, <b>Discovery Of India</b>, (Feb. 09, 2017). Accessed: Oct. 05, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=3RHumNODulc">https://www.youtube.com/watch?v=3RHumNODulc</a></li>
+</ul></li>
+
+<li>Homage To Mahatma Gandhi (Raga Mohan Kauns Alaap- Jor- Jhala Gat In Rupak Taal), (Sep. 15, 2018). Accessed: Oct. 02, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=HShyLb51QMI">https://www.youtube.com/watch?v=HShyLb51QMI</a></li>
+
+<li>Gandhi Malhar, K. Gandharva.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org96d57d9" class="outline-4">
+<h4 id="org96d57d9"><span class="section-number-4">5.1.2.</span> Karnatic Classical Music</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>L. Subramanian, <i>Singing Gandhi’s India - Music and Sonic Nationalism.</i> Roli Books Private Limited, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75ef842" class="outline-4">
+<h4 id="org75ef842"><span class="section-number-4">5.1.3.</span> Western Classical Music</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>KingsCollegeChoir, Abide with Me (Arr. Cleobury), (Jan. 15, 2017). Accessed: Jan. 24, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=_7k2R6jm8AA">https://www.youtube.com/watch?v=_7k2R6jm8AA</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0bdfcef" class="outline-4">
+<h4 id="org0bdfcef"><span class="section-number-4">5.1.4.</span> Films</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<ul class="org-ul">
+<li>“ssGandhiFilms | Community Playlist on Prime Music.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://music.amazon.in/user-playlists/ea2f6066736f46cda23b0ec1f8672686i8n0">https://music.amazon.in/user-playlists/ea2f6066736f46cda23b0ec1f8672686i8n0</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Ultra Bollywood, <i>Sabarmati Ke Sant Tune Kar diya Kamaal</i> - Asha Bhosle | Hemant Kumar | Jagriti | Patriotic Song, (Jul. 27, 2010). Accessed: Oct. 04, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=PIKLTEtntI8">https://www.youtube.com/watch?v=PIKLTEtntI8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4bf0d65" class="outline-4">
+<h4 id="org4bf0d65"><span class="section-number-4">5.1.5.</span> Pop</h4>
+</div>
+<div id="outline-container-org001d021" class="outline-4">
+<h4 id="org001d021"><span class="section-number-4">5.1.6.</span> Playlists</h4>
+<div class="outline-text-4" id="text-5-1-6">
+<ul class="org-ul">
+<li>“ssGandhiMisc | Community Playlist on Prime Music.” Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://music.amazon.in/user-playlists/c2a99f22337b46cda4ab1530ca75e81bi8n0">https://music.amazon.in/user-playlists/c2a99f22337b46cda4ab1530ca75e81bi8n0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3fb91ca" class="outline-4">
+<h4 id="org3fb91ca"><span class="section-number-4">5.1.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-7">
+<ul class="org-ul">
+<li>“Vaishnava Janato ( With Prof Vgjog ) | Ustad Bismillah Khan | Indian Classical Instrumental Music - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=0u2Ljk87wmg&amp;list=WL&amp;index=14">https://www.youtube.com/watch?v=0u2Ljk87wmg&amp;list=WL&amp;index=14</a></li>
+<li>“Vaishnav Jana Toh By Pt Hariprasad Chaurasia | Bhajan | Flute | Jalsa Videos | Art And Artistes - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=sg6dPTsLzqE&amp;list=WL&amp;index=13">https://www.youtube.com/watch?v=sg6dPTsLzqE&amp;list=WL&amp;index=13</a></li>
+<li>“Vaishnava Jana Toh by Chennai Children’s Choir | 150 Years of Gandhi - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=rOn6zFZ18Nc&amp;list=WL&amp;index=12">https://www.youtube.com/watch?v=rOn6zFZ18Nc&amp;list=WL&amp;index=12</a></li>
+<li>“Vaishnava Janatho | Bombay Jayashri | Narsinh Mehta | Bhajan | Vocal | Carnatic Classical Music - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=8V9KtUh6GSM&amp;list=WL&amp;index=11">https://www.youtube.com/watch?v=8V9KtUh6GSM&amp;list=WL&amp;index=11</a></li>
+<li>“Taj Mahal Tea presents Vaishnav Jana To - Tribute to Mahatma Gandhi by Ustad Shujaat Khan - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=t9L7JBdAobw&amp;list=WL&amp;index=10">https://www.youtube.com/watch?v=t9L7JBdAobw&amp;list=WL&amp;index=10</a></li>
+<li>“Dr N Rajam || Vaishnava Janato || Khamaj || Bhajan - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=HGf9Rx_6wRE&amp;list=WL&amp;index=9">https://www.youtube.com/watch?v=HGf9Rx_6wRE&amp;list=WL&amp;index=9</a></li>
+<li>“Gandhi150: Animation film on ’Vaishnav jan to&#x2026; - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=XZCSrfwI8N4&amp;list=WL&amp;index=8">https://www.youtube.com/watch?v=XZCSrfwI8N4&amp;list=WL&amp;index=8</a></li>
+<li>“Vaishnava Janato | Tribute to Mahatma Gandhi | Pandit Jasraj, Sultan Khan, Hariharan, Pankaj Udhas - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=2LW7ie9uhzQ&amp;list=WL&amp;index=7">https://www.youtube.com/watch?v=2LW7ie9uhzQ&amp;list=WL&amp;index=7</a></li>
+<li>“Vishnava Janato | वैष्णव जनतो | M. S. Subbulakshmi | Indian Classical Music | Classical Song - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=8I3-tR9-qys&amp;list=WL&amp;index=6">https://www.youtube.com/watch?v=8I3-tR9-qys&amp;list=WL&amp;index=6</a></li>
+<li>Bhajan || Vaishnab Janato || Kaushiki Chakraborty || Kaushiki’s Home Jam || 2021, (Oct. 02, 2021). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=r77x2uySDBk">https://www.youtube.com/watch?v=r77x2uySDBk</a></li>
+<li>Vaishnav Janato I Bhajan I Pt. Ronu Majumdar, (Apr. 17, 2017). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=rQ1PpZudL-E">https://www.youtube.com/watch?v=rQ1PpZudL-E</a></li>
+<li>Gandhi’s Favourite Bhajan ‘Vaishnava Jan to’ Recreated by Artists From 124 Countries, (Oct. 02, 2018). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=HvWologZHCM">https://www.youtube.com/watch?v=HvWologZHCM</a></li>
+<li>The Great Amjad Ali Khan I Raga Hari Priya Kanada I Sukhvinder Singh Namdhari Tabla - Sarod Records, (Jun. 04, 2018). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=7jAxynVLU2Q">https://www.youtube.com/watch?v=7jAxynVLU2Q</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Vaishnava Jana Toh by Chennai Children’s Choir | 150 Years of Gandhi - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=rOn6zFZ18Nc&amp;list=WL&amp;index=12">https://www.youtube.com/watch?v=rOn6zFZ18Nc&amp;list=WL&amp;index=12</a></li>
+
+<li>“Vaishnava Janatho | Bombay Jayashri | Narsinh Mehta | Bhajan | Vocal | Carnatic Classical Music - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=8V9KtUh6GSM&amp;list=WL&amp;index=11">https://www.youtube.com/watch?v=8V9KtUh6GSM&amp;list=WL&amp;index=11</a></li>
+
+<li>“Dr N Rajam || Vaishnava Janato || Khamaj || Bhajan - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=HGf9Rx_6wRE&amp;list=WL&amp;index=9">https://www.youtube.com/watch?v=HGf9Rx_6wRE&amp;list=WL&amp;index=9</a></li>
+
+<li>“Vaishnava Janato | Tribute to Mahatma Gandhi | Pandit Jasraj, Sultan Khan, Hariharan, Pankaj Udhas - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=2LW7ie9uhzQ&amp;list=WL&amp;index=7">https://www.youtube.com/watch?v=2LW7ie9uhzQ&amp;list=WL&amp;index=7</a></li>
+
+<li>“Gandhi150: Animation film on ’Vaishnav jan to&#x2026; - YouTube.” Accessed: Oct. 04, 2023. [Online]. Available: <a href="https://www.youtube.com/watch?v=XZCSrfwI8N4&amp;list=WL&amp;index=8">https://www.youtube.com/watch?v=XZCSrfwI8N4&amp;list=WL&amp;index=8</a></li>
+
+<li>Gandhi’s Favourite Bhajan ‘Vaishnava Jan to’ Recreated by Artists From 124 Countries, (Oct. 02, 2018). Accessed: Oct. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=HvWologZHCM">https://www.youtube.com/watch?v=HvWologZHCM</a></li>
+
+<li>Vaishnav Jan to&#x2026;, (Aug. 13, 2019). Accessed: Oct. 03, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=_Gc3ysO1AXo">https://www.youtube.com/watch?v=_Gc3ysO1AXo</a></li>
+
+<li>Vaishnav Jan To, (Oct. 02, 2018). Accessed: Oct. 03, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=DEXlPH0Y-BI">https://www.youtube.com/watch?v=DEXlPH0Y-BI</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4d70a5" class="outline-3">
+<h3 id="orgf4d70a5"><span class="section-number-3">5.2.</span> Films</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li><i>“Gandhi (film),”</i> Wikipedia. Oct. 04, 2021. Accessed: Oct. 05, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gandhi_(film)&amp;oldid=1048195670">https://en.wikipedia.org/w/index.php?title=Gandhi_(film)&amp;oldid=1048195670</a></li>
+
+<li>Kaun Se Bapu | Award Winning Short Film | Mehul Devkala, (Oct. 01, 2023). Accessed: Oct. 03, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=AOVB8JulDlU">https://www.youtube.com/watch?v=AOVB8JulDlU</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga480537" class="outline-3">
+<h3 id="orga480537"><span class="section-number-3">5.3.</span> Opera</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“Satyagraha (opera),” Wikipedia. Feb. 01, 2024. Accessed: Feb. 02, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Satyagraha_(opera)&amp;oldid=1201978408">https://en.wikipedia.org/w/index.php?title=Satyagraha_(opera)&amp;oldid=1201978408</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9430cb2" class="outline-3">
+<h3 id="org9430cb2"><span class="section-number-3">5.4.</span> Apparel</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org41b2b07" class="outline-4">
+<h4 id="org41b2b07"><span class="section-number-4">5.4.1.</span> Khadi</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<ul class="org-ul">
+<li>J. T.R, “Making khadi cool for the young,” The Hindu, Oct. 01, 2023. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/making-khadi-cool-for-the-young/article67362228.ece">https://www.thehindu.com/news/cities/bangalore/making-khadi-cool-for-the-young/article67362228.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4feed94" class="outline-2">
+<h2 id="org4feed94"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgdda55d6" class="outline-3">
+<h3 id="orgdda55d6"><span class="section-number-3">6.1.</span> Critical Studies</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>H. Coward, Ed., Indian Critiques of Gandhi. Albany: State University of New York Press, 2003.</li>
+
+<li>P. Friedrich, Gandhi: Racist or Revolutionary?</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Canada-India relations in turmoil after Ottawa accuses Modi regime of assassinating Sikh separatist in BC,” World Socialist Web Site. Accessed: Oct. 05, 2023. [Online]. Available: <a href="https://www.wsws.org/en/articles/2023/09/22/left-s22.html">https://www.wsws.org/en/articles/2023/09/22/left-s22.html</a></li>
+
+<li>P. Kapoor, 1946 Royal Indian Navy Mutiny: Last War of Independence, First Edition. New Delhi: Roli Books, 2022.</li>
+<li>P. Kapoor, “The Last Mutiny,” Open The Magazine. Accessed: Oct. 09, 2023. [Online]. Available: <a href="https://openthemagazine.com/cover-stories/the-last-mutiny/">https://openthemagazine.com/cover-stories/the-last-mutiny/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Dwivedi and S. Mohan, Indian Philosophy, Indian Revolution: On Caste and Politics. C Hurst &amp; Co Publishers Ltd, 2024.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5bbc1c2" class="outline-3">
+<h3 id="org5bbc1c2"><span class="section-number-3">6.2.</span> Hindi</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>R. रामचंद्र Guha, Gandhi/गांधी: Dakshin Africa Se Bharat Aagman Aur Golmez Sammelan Tak 1914-31, Khand-1/दक्षिण अफ्रीक़ा से भारत आगमन और गोलमेज़ सम्मेलन तक 1914-31 खंड-1. Penguin, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc5ed360" class="outline-2">
+<h2 id="orgc5ed360"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“On the varna system, Gandhi’s plan to empower the workers | Aeon Essays,” Aeon. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://aeon.co/essays/on-the-varna-system-gandhis-plan-to-empower-the-workers">https://aeon.co/essays/on-the-varna-system-gandhis-plan-to-empower-the-workers</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Shrivastava, “Gandhi at 150: He believed in natural self-rule,” Down To Earth. Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/gandhi-at-150-he-believed-in-natural-self-rule-67039">https://www.downtoearth.org.in/agriculture/gandhi-at-150-he-believed-in-natural-self-rule-67039</a></li>
+
+<li>“Marcus Garvey, Mao Tse-Tung and Gandhi,” NewsClick. Accessed: Jul. 12, 2024. [Online]. Available: <a href="https://www.newsclick.in/marcus-garvey-mao-tse-tung-and-gandhi">https://www.newsclick.in/marcus-garvey-mao-tse-tung-and-gandhi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Gandhi’s American Disciple,” The India Forum. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/gandhis-american-disciple">https://www.theindiaforum.in/book-reviews/gandhis-american-disciple</a></li>
+
+<li>A. Parel and J. Brown, Eds., The Cambridge Companion to Gandhi. Cambridge ; New York: Cambridge University Press, 2011.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Hardiman, Gandhi in His Time and Ours: The Global Legacy of His Ideas. Columbia University Press, 2004, p. 256 Pages.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Guha, “Ramachandra Guha: 40 years after Attenborough’s ‘Gandhi’, revisiting Indira Gandhi’s views about it,” Scroll.in. Accessed: May 30, 2024. [Online]. Available: <a href="https://scroll.in/article/1038921/ramachandra-guha-40-years-after-attenboroughs-gandhi-revisiting-indira-gandhis-views-about-it">https://scroll.in/article/1038921/ramachandra-guha-40-years-after-attenboroughs-gandhi-revisiting-indira-gandhis-views-about-it</a></li>
+
+<li>“Understanding Gandhi’s Vision of Swaraj.” Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://thewire.in/books/understanding-gandhis-vision-of-swaraj">https://thewire.in/books/understanding-gandhis-vision-of-swaraj</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. N. Service, “If Bapu lived in our times,” Tribuneindia News Service. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://www.tribuneindia.com/news/archive/features/if-bapu-lived-in-our-times-839562">https://www.tribuneindia.com/news/archive/features/if-bapu-lived-in-our-times-839562</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Kothari, “Mohandas Gandhi speaks to Abdullah Öcalan,” Meer. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan">https://www.meer.com/en/74957-mohandas-gandhi-speaks-to-abdullah-ocalan</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Poorna Swaraj,” Penguin Random House India. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://penguin.co.in/book/poorna-swaraj/">https://penguin.co.in/book/poorna-swaraj/</a></li>
+
+<li>“‘I Look Upon an Increase of the Power of the State With the Greatest Fear,’” The Wire. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://thewire.in/politics/i-look-upon-an-increase-of-the-power-of-the-state-with-the-greatest-fear">https://thewire.in/politics/i-look-upon-an-increase-of-the-power-of-the-state-with-the-greatest-fear</a></li>
+
+<li>“International Day of Non-Violence,” Wikipedia. Jan. 27, 2023. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Day_of_Non-Violence&amp;oldid=1135893446">https://en.wikipedia.org/w/index.php?title=International_Day_of_Non-Violence&amp;oldid=1135893446</a></li>
+
+<li>D. Dalton, “How Mahatma Gandhi used swaraj and satyagraha in India’s quest for freedom,” Frontline. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://frontline.thehindu.com/books/mahatma-gandhi-at-154-birth-anniversary-tribute-how-he-used-swaraj-and-satyagraha-in-india-quest-for-freedom-book-excerpt-indian-ideas-of-freedom-dennis-dalton/article67357240.ece">https://frontline.thehindu.com/books/mahatma-gandhi-at-154-birth-anniversary-tribute-how-he-used-swaraj-and-satyagraha-in-india-quest-for-freedom-book-excerpt-indian-ideas-of-freedom-dennis-dalton/article67357240.ece</a></li>
+
+<li>“Gandhi Jayanti 2023: How the rural Transvaal was a crucible for the Mahatma’s most cherished ideals.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/africa/gandhi-jayanti-2023-how-the-rural-transvaal-was-a-crucible-for-the-mahatma-s-most-cherished-ideals-92056">https://www.downtoearth.org.in/news/africa/gandhi-jayanti-2023-how-the-rural-transvaal-was-a-crucible-for-the-mahatma-s-most-cherished-ideals-92056</a></li>
+
+<li>A. Kumar, “Delhi sites commemorating Gandhi crowded with Modi’s posters, quotes,” Newslaundry. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.newslaundry.com/2023/10/02/mahatma-gandhi-museums-modi-propaganda-posters">https://www.newslaundry.com/2023/10/02/mahatma-gandhi-museums-modi-propaganda-posters</a></li>
+
+<li>“What Gandhi teaches the millennials on food and fitness.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/food/what-gandhi-teaches-the-millennials-on-food-and-fitness-79486">https://www.downtoearth.org.in/news/food/what-gandhi-teaches-the-millennials-on-food-and-fitness-79486</a></li>
+<li>“Gandhi at 150: His tryst with food.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/food/gandhi-at-150-his-tryst-with-food-67031">https://www.downtoearth.org.in/news/food/gandhi-at-150-his-tryst-with-food-67031</a></li>
+<li>“Gandhi: Fitness freak and champion of sustainable food.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/gandhi-fitness-freak-and-champion-of-sustainable-food-63749">https://www.downtoearth.org.in/news/health/gandhi-fitness-freak-and-champion-of-sustainable-food-63749</a></li>
+<li>“Gandhi at 150: He walked 18 kms a day and avoided using cars, rickshaws.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/lifestyle/gandhi-at-150-he-walked-18-kms-a-day-and-avoided-using-cars-rickshaws-67036">https://www.downtoearth.org.in/news/lifestyle/gandhi-at-150-he-walked-18-kms-a-day-and-avoided-using-cars-rickshaws-67036</a></li>
+
+<li>“Relevance of Gandhian environmentalism.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/coverage/environment/relevance-of-gandhian-environmentalism-56906">https://www.downtoearth.org.in/coverage/environment/relevance-of-gandhian-environmentalism-56906</a></li>
+
+<li>“Gandhi at 150: Green movements have Gandhian streak.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/environment/gandhi-at-150-green-movements-have-gandhian-streak-67038">https://www.downtoearth.org.in/blog/environment/gandhi-at-150-green-movements-have-gandhian-streak-67038</a></li>
+
+<li>“Need for revisiting Gandhi at this critical juncture.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/lifestyle/need-for-revisiting-gandhi-at-this-critical-juncture-73637">https://www.downtoearth.org.in/blog/lifestyle/need-for-revisiting-gandhi-at-this-critical-juncture-73637</a></li>
+
+<li>“An interview with Gandhi.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/an-interview-with-gandhi-67060">https://www.downtoearth.org.in/news/governance/an-interview-with-gandhi-67060</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Pradhan, “Listen: Mark Gandhi Jayanti with raags composed in his honour by Ravi Shankar and Kumar Gandharva,” Scroll.in. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://scroll.in/article/896204/listen-mark-gandhi-jayanti-with-raags-composed-in-his-honour-by-ravi-shankar-and-kumar-gandharva">https://scroll.in/article/896204/listen-mark-gandhi-jayanti-with-raags-composed-in-his-honour-by-ravi-shankar-and-kumar-gandharva</a></li>
+
+<li>M. K. Gandhi, “‘The revolution is easy, if the mind is made up’: In his own words, what ‘Swaraj’ meant to Gandhi,” Scroll.in. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://scroll.in/article/1056230/the-revolution-is-easy-if-the-mind-is-made-up-in-his-own-words-what-swaraj-meant-to-gandhi">https://scroll.in/article/1056230/the-revolution-is-easy-if-the-mind-is-made-up-in-his-own-words-what-swaraj-meant-to-gandhi</a></li>
+
+<li>“Gandhi Jayanti,” Wikipedia. Oct. 02, 2023. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gandhi_Jayanti&amp;oldid=1178200999">https://en.wikipedia.org/w/index.php?title=Gandhi_Jayanti&amp;oldid=1178200999</a></li>
+
+<li>F. Books, “Gandhi,” Five Books. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://fivebooks.com/best-books/gandhi-ramachandra-guha/">https://fivebooks.com/best-books/gandhi-ramachandra-guha/</a></li>
+
+<li>B. Puri, The Tagore-Gandhi Debate on Matters of Truth and Untruth. Springer India, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Puri, The Ambedkar–Gandhi Debate: On Identity, Community and Justice. Springer Nature, 2022.</li>
+<li>“Gandhi and Ambedkar: A Parallax Relation?,” The Wire. <a href="https://thewire.in/history/mahatma-gandhi-br-ambedkar-relation">https://thewire.in/history/mahatma-gandhi-br-ambedkar-relation</a> (accessed Oct. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Mukherjee, Penguin Gandhi Reader. Penguin UK, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Guha, <i>“Gandhi,”</i> Five Books. <a href="https://fivebooks.com/best-books/gandhi-ramachandra-guha/">https://fivebooks.com/best-books/gandhi-ramachandra-guha/</a> (accessed Oct. 11, 2021).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Need for revisiting Gandhi at this critical juncture.” <a href="https://www.downtoearth.org.in/blog/lifestyle/need-for-revisiting-gandhi-at-this-critical-juncture-73637">https://www.downtoearth.org.in/blog/lifestyle/need-for-revisiting-gandhi-at-this-critical-juncture-73637</a> (accessed Oct. 02, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Gandhi Jayanti 2022: DTE’s coverage over the years on various facets of the Mahatma.” <a href="https://www.downtoearth.org.in/coverage/food/gandhi-jayanti-2022-dte-s-coverage-over-the-years-on-various-facets-of-the-mahatma-85204">https://www.downtoearth.org.in/coverage/food/gandhi-jayanti-2022-dte-s-coverage-over-the-years-on-various-facets-of-the-mahatma-85204</a> (accessed Oct. 02, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘Revisiting Non-willing Freedom: How Gandhi Matters Today’ on Manifold @uminnpress,” Manifold @uminnpress. <a href="https://manifold.umn.edu/read/revisiting-non-willing-freedom-how-gandhi-matters-today/section/1001d732-0325-450f-a5c7-0728fef3e5ca">https://manifold.umn.edu/read/revisiting-non-willing-freedom-how-gandhi-matters-today/section/1001d732-0325-450f-a5c7-0728fef3e5ca</a> (accessed Oct. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Ramakrishnan, Reading Gandhi in the Twenty-First Century. Palgrave Macmillan US, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Is Gandhi Passé?,” The Wire. <a href="https://thewire.in/books/is-gandhi-passe">https://thewire.in/books/is-gandhi-passe</a> (accessed Oct. 03, 2022).</li>
+
+<li>J. Adams, Gandhi: Naked Ambition. Penguin Group, 2011.</li>
+
+<li>“Manu Gandhi: The girl who chronicled Gandhi’s troubled years,” BBC News, Sep. 30, 2019. Accessed: Oct. 03, 2022. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-49848645">https://www.bbc.com/news/world-asia-india-49848645</a></li>
+
+<li>“Mahamati, Mahatma and the Syncretism of the Pranamis, an Unknown Chapter in the Life of Gandhi,” The Wire. <a href="https://thewire.in/history/life-of-mahatma-gandhi-pranami-sect-mahamati">https://thewire.in/history/life-of-mahatma-gandhi-pranami-sect-mahamati</a> (accessed Oct. 02, 2022).</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-10-02 Wed 16:40</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
