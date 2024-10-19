@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-19 Sat 16:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Earth Science</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Earth Science</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd863fa9">1. General</a></li>
+<li><a href="#org62f7fc0">2. STEMM</a>
+<ul>
+<li><a href="#org0cf67c5">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org7c40a11">2.1.1. International Institute for Applied Systems Analysis</a></li>
+<li><a href="#org742f8d4">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org77c5fbe">2.2. Physics</a></li>
+<li><a href="#org876a732">2.3. Computer Science And Engineering</a></li>
+<li><a href="#org67ee045">2.4. Mathematics</a></li>
+<li><a href="#orged0bfc4">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org20c27bf">3. World</a>
+<ul>
+<li><a href="#org2251d7e">3.1. Events</a>
+<ul>
+<li><a href="#org44e65cf">3.1.1. Earth Day</a></li>
+</ul>
+</li>
+<li><a href="#org89668a6">3.2. Orgs</a></li>
+<li><a href="#orgcfc68b9">3.3. Contests, Awards</a>
+<ul>
+<li><a href="#org2d8fd5a">3.3.1. Olympiads</a></li>
+</ul>
+</li>
+<li><a href="#org6a11a9a">3.4. Nation States</a>
+<ul>
+<li><a href="#org7671768">3.4.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org80ca4f2">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4793f37">4. Core</a>
+<ul>
+<li><a href="#org55a44a5">4.1. Intro Texts</a></li>
+</ul>
+</li>
+<li><a href="#orgab75dbd">5. Special Topics</a>
+<ul>
+<li><a href="#orgab28f65">5.1. From Joe Brewer's Book</a></li>
+</ul>
+</li>
+<li><a href="#orgba912af">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgd863fa9" class="outline-2">
+<h2 id="orgd863fa9"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Earth science,” Wikipedia. Nov. 11, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earth_science&amp;oldid=1121213744">https://en.wikipedia.org/w/index.php?title=Earth_science&amp;oldid=1121213744</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Lenton, Earth System Science: A Very Short Introduction, 1st edition. Oxford ; New York, NY: Oxford University Press, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>DK, The Science of the Earth: The Secrets of Our Planet Revealed. London: DK, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org62f7fc0" class="outline-2">
+<h2 id="org62f7fc0"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0cf67c5" class="outline-3">
+<h3 id="org0cf67c5"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org7c40a11" class="outline-4">
+<h4 id="org7c40a11"><span class="section-number-4">2.1.1.</span> International Institute for Applied Systems Analysis</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Urgent action needed to ensure a safe and just planet for all,” IIASA - International Institute for Applied Systems Analysis. Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/sep-2024/urgent-action-needed-to-ensure-safe-and-just-planet-for-all">https://iiasa.ac.at/news/sep-2024/urgent-action-needed-to-ensure-safe-and-just-planet-for-all</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org742f8d4" class="outline-4">
+<h4 id="org742f8d4"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Design School for Regenerating Earth,” Design School for Regenerating Earth. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://design-school-for-regenerating-earth.mn.co/">https://design-school-for-regenerating-earth.mn.co/</a>
+<ul class="org-ul">
+<li>Book Trailer for “The Design Pathway for Regenerating Earth” by Joe Brewer, (Aug. 20, 2023). Accessed: Apr. 23, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Ugj_4MnOQk8">https://www.youtube.com/watch?v=Ugj_4MnOQk8</a></li>
+<li>“On-Ground Projects,” Earth Regenerators. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://earthregenerators.org/on-ground-projects/">https://earthregenerators.org/on-ground-projects/</a></li>
+<li>“Design School for Regenerating Earth,” Design School for Regenerating Earth. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://design-school-for-regenerating-earth.mn.co/">https://design-school-for-regenerating-earth.mn.co/</a></li>
+<li>“Earth Regenerators,” Earth Regenerators. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://earthregenerators.org/">https://earthregenerators.org/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org77c5fbe" class="outline-3">
+<h3 id="org77c5fbe"><span class="section-number-3">2.2.</span> Physics</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“ICTP Sections: Earth System Physics - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=8kk3UgJNtP8&amp;list=WL&amp;index=10">https://www.youtube.com/watch?v=8kk3UgJNtP8&amp;list=WL&amp;index=10</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org876a732" class="outline-3">
+<h3 id="org876a732"><span class="section-number-3">2.3.</span> Computer Science And Engineering</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Home.” Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://www.geo-wiki.org/">https://www.geo-wiki.org/</a></li>
+<li>W. S. Siegfried Tasha Snow, Joanna D. Millstein, James Colliander, Matthew R., “Democratizing Science in the Cloud,” Eos. Accessed: Sep. 07, 2024. [Online]. Available: <a href="http://eos.org/opinions/democratizing-science-in-the-cloud">http://eos.org/opinions/democratizing-science-in-the-cloud</a></li>
+<li>“Open-Earth-Monitor project – A cyberinfrastructure to accelerate uptake of environmental information.” Accessed: May 06, 2024. [Online]. Available: <a href="https://earthmonitor.org/">https://earthmonitor.org/</a></li>
+<li>D. Ryder, “The UK Space Agency is funding The Big Earth Data Project,” MEI. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://mei.org.uk/the-uk-space-agency-is-funding-the-big-earth-data-project/">https://mei.org.uk/the-uk-space-agency-is-funding-the-big-earth-data-project/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67ee045" class="outline-3">
+<h3 id="org67ee045"><span class="section-number-3">2.4.</span> Mathematics</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>“MPE24 Panel Explores Mathematical Careers in Earth Science and Sustainability | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/mpe24-panel-explores-mathematical-careers-in-earth-science-and-sustainability/">https://www.siam.org/publications/siam-news/articles/mpe24-panel-explores-mathematical-careers-in-earth-science-and-sustainability/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged0bfc4" class="outline-3">
+<h3 id="orged0bfc4"><span class="section-number-3">2.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“Avoiding a ‘Ghastly Future’: Hard Truths on the State of the Planet,” Yale E360. Accessed: May 29, 2024. [Online]. Available: <a href="https://e360.yale.edu/features/avoiding-a-ghastly-future-hard-truths-on-the-state-of-the-planet">https://e360.yale.edu/features/avoiding-a-ghastly-future-hard-truths-on-the-state-of-the-planet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org20c27bf" class="outline-2">
+<h2 id="org20c27bf"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2251d7e" class="outline-3">
+<h3 id="org2251d7e"><span class="section-number-3">3.1.</span> Events</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org44e65cf" class="outline-4">
+<h4 id="org44e65cf"><span class="section-number-4">3.1.1.</span> Earth Day</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“Mother Earth is Not for Sale!,” Navdanya International, Apr. 20, 2022. <a href="https://navdanyainternational.org/mother-earth-is-not-for-sale/">https://navdanyainternational.org/mother-earth-is-not-for-sale/</a> (accessed Apr. 22, 2023).</li>
+
+<li>“Earth Day Is a Day to Celebrate the Environmental Progress We’ve Made in Recent Years,” The Equation. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/chitra-kumar/earth-day-is-a-day-to-celebrate-the-environmental-progress-weve-made-in-recent-years/">https://blog.ucsusa.org/chitra-kumar/earth-day-is-a-day-to-celebrate-the-environmental-progress-weve-made-in-recent-years/</a></li>
+
+<li>“Oxford researchers comment on the plastic waste crisis for Earth Day 2024 | University of Oxford.” Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://www.ox.ac.uk/news/2024-04-22-oxford-researchers-comment-plastic-waste-crisis-earth-day-2024">https://www.ox.ac.uk/news/2024-04-22-oxford-researchers-comment-plastic-waste-crisis-earth-day-2024</a></li>
+
+<li>“10 Things You Can Do for the Earth on Earth Day Weekend - GMO / Toxin Free USA.” Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/10-things-you-can-do-for-the-earth-on-earth-day-weekend/">https://toxinfreeusa.org/10-things-you-can-do-for-the-earth-on-earth-day-weekend/</a></li>
+
+<li>J. McKenzie, “The heat is on: Earth Day 2024 puts spotlight on plastics,” Bulletin of the Atomic Scientists. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/04/the-heat-is-on-earth-day-2024-puts-spotlight-on-plastics/">https://thebulletin.org/2024/04/the-heat-is-on-earth-day-2024-puts-spotlight-on-plastics/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org89668a6" class="outline-3">
+<h3 id="org89668a6"><span class="section-number-3">3.2.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Home | MIT Earth Resources Laboratory.” Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://erlweb.mit.edu/">https://erlweb.mit.edu/</a></li>
+<li>“Global Earth Repair Foundation,” Global Earth Repair Foundation. Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://globalearthrepairfoundation.org/">https://globalearthrepairfoundation.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcfc68b9" class="outline-3">
+<h3 id="orgcfc68b9"><span class="section-number-3">3.3.</span> Contests, Awards</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org2d8fd5a" class="outline-4">
+<h4 id="org2d8fd5a"><span class="section-number-4">3.3.1.</span> Olympiads</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“International Earth Science Olympiad,” Wikipedia. Aug. 08, 2024. Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Earth_Science_Olympiad&amp;oldid=1239289831">https://en.wikipedia.org/w/index.php?title=International_Earth_Science_Olympiad&amp;oldid=1239289831</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a11a9a" class="outline-3">
+<h3 id="org6a11a9a"><span class="section-number-3">3.4.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org7671768" class="outline-4">
+<h4 id="org7671768"><span class="section-number-4">3.4.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgafa2d9a"></a>General<br /></li>
+<li><a id="org42200cb"></a>World<br />
+<ol class="org-ol">
+<li><a id="orgd4403e9"></a>Orgs<br />
+<div class="outline-text-6" id="text-3-4-1-2-1">
+<ul class="org-ul">
+<li><i>“Centre for Earth Sciences.”</i> <a href="http://ceas.iisc.ac.in/">http://ceas.iisc.ac.in/</a> (accessed Oct. 10, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgcef3151"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org80ca4f2" class="outline-3">
+<h3 id="org80ca4f2"><span class="section-number-3">3.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org4793f37" class="outline-2">
+<h2 id="org4793f37"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org55a44a5" class="outline-3">
+<h3 id="org55a44a5"><span class="section-number-3">4.1.</span> Intro Texts</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Kump/Kasting/Crane, Earth System, 3rd Edn, Third Edition. Pearson Education India, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. K. Lutgens, E. J. Tarbuck, And D. G. Tasa, Foundations Of Earth Science, 8th Edn, Eighth Edition. Pearson Education, 2016.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgab75dbd" class="outline-2">
+<h2 id="orgab75dbd"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgab28f65" class="outline-3">
+<h3 id="orgab28f65"><span class="section-number-3">5.1.</span> From Joe Brewer's Book</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>D. Abram, Becoming Animal. New York (N.Y.): Vintage, 2011.</li>
+<li>D. Abram, The Spell of the Sensuous: Perception and Language in a More-Than-Human World. New York: Vintage Books, 1997.</li>
+
+<li>M. Q. Patton, Blue Marble Evaluation: Premises and Principles, Illustrated edition. The Guilford Press, 2019.</li>
+
+<li>C. Glotfelty and E. Quesnel, Eds., The Biosphere and the Bioregion: Essential Writings of Peter Berg, 1st edition. London ; New York: Routledge, 2014.</li>
+
+<li>W. R. Catton, Overshoot: The Ecological Basis of Revolutionary Change. University of Illinois Press, 1980.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Chavez, AN Organizer’s Tale: Speeches (Penguin Classics) [Paperback] Chavez, Cesar and Stavans, Ilan. London: Penguin Classics, 2008.</li>
+<li>M. Pawel, The Crusades of Cesar Chavez: A Biography, 1st edition. Bloomsbury Press, 2014.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba912af" class="outline-2">
+<h2 id="orgba912af"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Boom, crackle, pop: Sounds of Earth’s crust,” MIT News | Massachusetts Institute of Technology. Accessed: Apr. 13, 2024. [Online]. Available: <a href="https://news.mit.edu/2023/boom-crackle-pop-earth-crust-sounds-1009">https://news.mit.edu/2023/boom-crackle-pop-earth-crust-sounds-1009</a></li>
+
+<li>“Whole Earth Field Guide,” MIT Press. Accessed: May 01, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262529280/whole-earth-field-guide/">https://mitpress.mit.edu/9780262529280/whole-earth-field-guide/</a></li>
+
+<li>“Mission: Protecting the Planet.” Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://alum.mit.edu/slice/mission-protecting-planet">https://alum.mit.edu/slice/mission-protecting-planet</a></li>
+
+<li>D. Grinspoon, “Why Most Planets Will Either Be Lush or Dead,” Nautilus. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://nautil.us/why-most-planets-will-either-be-lush-or-dead-236366/">https://nautil.us/why-most-planets-will-either-be-lush-or-dead-236366/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-10-19 Sat 16:03</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
