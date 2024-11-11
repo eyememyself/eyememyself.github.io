@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-11 Mon 10:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Space</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Space</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga390888">1. General</a></li>
+<li><a href="#orgbab1230">2. STEMM</a>
+<ul>
+<li><a href="#orgd4a9d97">2.1. CSE</a>
+<ul>
+<li><a href="#org4e1d9c2">2.1.1. AI</a></li>
+<li><a href="#org969f279">2.1.2. India</a></li>
+<li><a href="#org0a9f10d">2.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb37b9b6">2.2. Environment</a></li>
+<li><a href="#org7d2694b">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7260684">3. World</a>
+<ul>
+<li><a href="#orgab62545">3.1. Orgs</a>
+<ul>
+<li><a href="#org6882739">3.1.1. Boeing</a></li>
+<li><a href="#org56ad524">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org01ff237">3.2. Security</a></li>
+<li><a href="#org88a910a">3.3. Politics</a></li>
+<li><a href="#orgf637364">3.4. Nation States</a>
+<ul>
+<li><a href="#orgaf127db">3.4.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org154f6de">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbe5c099">4. Core</a>
+<ul>
+<li><a href="#org0f9e225">4.1. Moons</a></li>
+<li><a href="#org5feb9d0">4.2. Planets</a>
+<ul>
+<li><a href="#orgda12119">4.2.1. Mars</a></li>
+</ul>
+</li>
+<li><a href="#org37c219b">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7f89225">5. Arts</a>
+<ul>
+<li><a href="#orgb13e49f">5.1. Literature</a></li>
+<li><a href="#orgaf254f7">5.2. Music</a></li>
+<li><a href="#orgc895a7c">5.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3323a14">6. Special Topics</a>
+<ul>
+<li><a href="#org3ae0df3">6.1. Possibly MisInfo/DisInfo</a>
+<ul>
+<li><a href="#orgdebe5c8">6.1.1. Astrology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0188818">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orga390888" class="outline-2">
+<h2 id="orga390888"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgbab1230" class="outline-2">
+<h2 id="orgbab1230"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd4a9d97" class="outline-3">
+<h3 id="orgd4a9d97"><span class="section-number-3">2.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org4e1d9c2" class="outline-4">
+<h4 id="org4e1d9c2"><span class="section-number-4">2.1.1.</span> AI</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Space Exploration Blasts Off with AI – Communications of the ACM.” Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://cacm.acm.org/news/space-exploration-blasts-off-with-ai/">https://cacm.acm.org/news/space-exploration-blasts-off-with-ai/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Artificial Intelligence - NASA.” Accessed: May 15, 2024. [Online]. Available: <a href="https://www.nasa.gov/artificial-intelligence/">https://www.nasa.gov/artificial-intelligence/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>E. Emmerton, “AI in Aerospace,” IMA. Accessed: Jul. 22, 2024. [Online]. Available: <a href="https://ima.org.uk/24508/ai-in-aerospace/">https://ima.org.uk/24508/ai-in-aerospace/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org969f279" class="outline-4">
+<h4 id="org969f279"><span class="section-number-4">2.1.2.</span> India</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>K. Pandey, “Read: In-SPACe guidelines for implementing Indian Space Policy,” MEDIANAMA. Accessed: May 17, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/05/223-in-space-guidelines-implementing-indian-space-policy/">https://www.medianama.com/2024/05/223-in-space-guidelines-implementing-indian-space-policy/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a9f10d" class="outline-4">
+<h4 id="org0a9f10d"><span class="section-number-4">2.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>“Canonical deploys infrastructure solutions and managed IT services for critical space mission operations,” Ubuntu. Accessed: May 19, 2024. [Online]. Available: <a href="https://ubuntu.com/engage/European-space-agency-case-study">https://ubuntu.com/engage/European-space-agency-case-study</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb37b9b6" class="outline-3">
+<h3 id="orgb37b9b6"><span class="section-number-3">2.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“When rockets go wrong – protecting the environment from catastrophe.” Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.bbc.com/future/article/20240627-the-environmental-cost-of-rocket-launches">https://www.bbc.com/future/article/20240627-the-environmental-cost-of-rocket-launches</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7d2694b" class="outline-3">
+<h3 id="org7d2694b"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“What is the multi-drug-resistant pathogen found in the International Space Station?” Accessed: Jun. 12, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/what-is-the-multi-drug-resistant-pathogen-found-in-the-international-space-station--96635">https://www.downtoearth.org.in/news/health/what-is-the-multi-drug-resistant-pathogen-found-in-the-international-space-station--96635</a></li>
+
+<li>A. Mann, “With New Study, NASA Seeks the Science behind UFOs,” Scientific American. <a href="https://www.scientificamerican.com/article/with-new-study-nasa-seeks-the-science-behind-ufos/">https://www.scientificamerican.com/article/with-new-study-nasa-seeks-the-science-behind-ufos/</a> (accessed Aug. 04, 2022).</li>
+
+<li>“Aiming exascale at black holes - IAS News | Institute for Advanced Study.” Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.ias.edu/news/aiming-exascale-black-holes">https://www.ias.edu/news/aiming-exascale-black-holes</a></li>
+
+<li>#author.fullName}, “Dozens of stars show signs of hosting advanced alien civilisations,” New Scientist. Accessed: May 15, 2024. [Online]. Available: <a href="https://www.newscientist.com/article/2430601-dozens-of-stars-show-signs-of-hosting-advanced-alien-civilisations/">https://www.newscientist.com/article/2430601-dozens-of-stars-show-signs-of-hosting-advanced-alien-civilisations/</a></li>
+
+<li>T. M. P. Reader, “The Myths and Lore of the Milky Way,” The MIT Press Reader. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-myths-and-lore-of-the-milky-way/">https://thereader.mitpress.mit.edu/the-myths-and-lore-of-the-milky-way/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7260684" class="outline-2">
+<h2 id="org7260684"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgab62545" class="outline-3">
+<h3 id="orgab62545"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org6882739" class="outline-4">
+<h4 id="org6882739"><span class="section-number-4">3.1.1.</span> Boeing</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc305b0c"></a>General<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>“Boeing,” Wikipedia. May 06, 2024. Accessed: May 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Boeing&amp;oldid=1222580005">https://en.wikipedia.org/w/index.php?title=Boeing&amp;oldid=1222580005</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1ddd420"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orga9f3b1e"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-3-1-1-2-1">
+<ul class="org-ul">
+<li>“Pluralistic: Boeing’s deliberately defective fleet of flying sky-wreckage (01 May 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 07, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/05/01/boeing-boeing/">https://pluralistic.net/2024/05/01/boeing-boeing/</a></li>
+
+<li>“Failure of Boeing spacecraft strands 2 astronauts on the International Space Station,” World Socialist Web Site. Accessed: Sep. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html">https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org9346b56"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<ul class="org-ul">
+<li>“The role of the Biden administration in the Boeing sellout,” World Socialist Web Site. Accessed: Nov. 10, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/11/09/cngx-n09.html">https://www.wsws.org/en/articles/2024/11/09/cngx-n09.html</a></li>
+
+<li>A. Paul, “Boeing allegedly overcharged the military 8,000% for airplane soap dispensers,” Popular Science. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.popsci.com/technology/boeing-soap-dispensers-audit/">https://www.popsci.com/technology/boeing-soap-dispensers-audit/</a></li>
+
+<li>“Boeing Machinists Are on Strike.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://jacobin.com/2024/09/boeing-machinists-strike-washington-pensions">https://jacobin.com/2024/09/boeing-machinists-strike-washington-pensions</a></li>
+
+<li>“Vote ‘NO’ on the Boeing sellout contract! Organize the rank and file against the sellouts in the IAM bureaucracy!,” World Socialist Web Site. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/10/pers-s10.html">https://www.wsws.org/en/articles/2024/09/10/pers-s10.html</a></li>
+
+<li>M. E. Fossum, “The Boeing Starliner has returned to Earth without its crew – a former astronaut details what that means for NASA, Boeing and the astronauts still up in space,” The Conversation. Accessed: Sep. 08, 2024. [Online]. Available: <a href="http://theconversation.com/the-boeing-starliner-has-returned-to-earth-without-its-crew-a-former-astronaut-details-what-that-means-for-nasa-boeing-and-the-astronauts-still-up-in-space-238507">http://theconversation.com/the-boeing-starliner-has-returned-to-earth-without-its-crew-a-former-astronaut-details-what-that-means-for-nasa-boeing-and-the-astronauts-still-up-in-space-238507</a></li>
+
+<li>“Overriding strike vote by 33,000 Boeing workers, IAM bureaucrats schedule vote on non-existent contract,” World Socialist Web Site. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/04/zkss-s04.html">https://www.wsws.org/en/articles/2024/09/04/zkss-s04.html</a></li>
+
+<li>“Boeing locks out private firefighters after contract talks break down,” World Socialist Web Site. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/05/07/boei-m07.html">https://www.wsws.org/en/articles/2024/05/07/boei-m07.html</a></li>
+<li>“US officials probe allegations Boeing workers falsified inspection records,” Al Jazeera. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/5/7/us-officials-probe-claims-boeing-workers-falsified-inspection-records">https://www.aljazeera.com/economy/2024/5/7/us-officials-probe-claims-boeing-workers-falsified-inspection-records</a></li>
+
+<li>“Three Boeing Accidents over Past Two Days Draw More Scrutiny on Embattled Company,” Democracy Now! Accessed: May 11, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/5/10/headlines/three_boeing_accidents_over_past_two_days_draw_more_scrutiny_on_embattled_company">https://www.democracynow.org/2024/5/10/headlines/three_boeing_accidents_over_past_two_days_draw_more_scrutiny_on_embattled_company</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Astronaut Suni Williams Prepares for Crew Flight Test - NASA.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.nasa.gov/image-detail/afs-8-101-536/">https://www.nasa.gov/image-detail/afs-8-101-536/</a></li>
+<li>R. Tribou and O. Sentinel, “Boeing’s first Starliner mission with humans set for historic Space Coast launch tonight.” Accessed: May 07, 2024. [Online]. Available: <a href="https://phys.org/news/2024-05-boeing-starliner-mission-humans-historic.html">https://phys.org/news/2024-05-boeing-starliner-mission-humans-historic.html</a></li>
+<li>Reuters, “Sunita Williams-piloted Boeing Starliner test flight postponed over Atlas rocket glitch,” The Hindu, May 07, 2024. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/science/sunita-williams-piloted-boeing-starliner-test-flight-postponed-over-atlas-rocket-glitch/article68148122.ece">https://www.thehindu.com/sci-tech/science/sunita-williams-piloted-boeing-starliner-test-flight-postponed-over-atlas-rocket-glitch/article68148122.ece</a></li>
+<li>“Boeing postpones launch of Starliner space capsule after technical fault,” Al Jazeera. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/5/7/boeing-postpones-launch-of-starliner-spaceship-over-valve-issue">https://www.aljazeera.com/economy/2024/5/7/boeing-postpones-launch-of-starliner-spaceship-over-valve-issue</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Airline safety: nowhere to go?,” Royal Aeronautical Society. Accessed: May 13, 2024. [Online]. Available: <a href="https://www.aerosociety.com/news/airline-safety-nowhere-to-go/">https://www.aerosociety.com/news/airline-safety-nowhere-to-go/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org56ad524" class="outline-4">
+<h4 id="org56ad524"><span class="section-number-4">3.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“JAXA,” Wikipedia. Jul. 01, 2023. Accessed: Jul. 02, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=JAXA&amp;oldid=1162801560">https://en.wikipedia.org/w/index.php?title=JAXA&amp;oldid=1162801560</a></li>
+<li>“China National Space Administration - Wikipedia.” <a href="https://en.wikipedia.org/wiki/China_National_Space_Administration">https://en.wikipedia.org/wiki/China_National_Space_Administration</a> (accessed Jul. 02, 2023).</li>
+<li>“Roscosmos,” Wikipedia. Jun. 27, 2023. Accessed: Jul. 02, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Roscosmos&amp;oldid=1162187265">https://en.wikipedia.org/w/index.php?title=Roscosmos&amp;oldid=1162187265</a></li>
+<li>“European Space Agency.” <a href="https://www.esa.int/">https://www.esa.int/</a> (accessed Jul. 22, 2022).</li>
+<li>“NASA,” NASA. <a href="http://www.nasa.gov/index.html">http://www.nasa.gov/index.html</a> (accessed Jul. 22, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org01ff237" class="outline-3">
+<h3 id="org01ff237"><span class="section-number-3">3.2.</span> Security</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“7.22 - Space Security: Best Practices Guide - SW Engineering Handbook Ver D - Global Site.” Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://swehb.nasa.gov/display/SWEHBVD/7.22+-+Space+Security%3A+Best+Practices+Guide">https://swehb.nasa.gov/display/SWEHBVD/7.22+-+Space+Security%3A+Best+Practices+Guide</a></li>
+
+<li>“NASA Issues New Space Security Best Practices Guide - NASA.” Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://www.nasa.gov/general/nasa-issues-new-space-security-best-practices-guide/">https://www.nasa.gov/general/nasa-issues-new-space-security-best-practices-guide/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88a910a" class="outline-3">
+<h3 id="org88a910a"><span class="section-number-3">3.3.</span> Politics</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Space research and astronomy,” World Socialist Web Site. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.wsws.org/en/topics/scienceCategory/sc-astro">https://www.wsws.org/en/topics/scienceCategory/sc-astro</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf637364" class="outline-3">
+<h3 id="orgf637364"><span class="section-number-3">3.4.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgaf127db" class="outline-4">
+<h4 id="orgaf127db"><span class="section-number-4">3.4.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3d72f0d"></a>General<br />
+<div class="outline-text-5" id="text-3-4-1-1">
+<ul class="org-ul">
+<li>H. P. India, India in Space. Harper Collins, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgad3b477"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org12f467c"></a>Misc<br />
+<div class="outline-text-6" id="text-3-4-1-2-1">
+<ul class="org-ul">
+<li>S. K. A. Murthi, “At Event Co-Hosted by ISRO, Both Pseudoscience and Pseudo-Philosophy on Offer – The Wire Science.” <a href="https://science.thewire.in/the-sciences/isro-akash-tatva-conference-pseudoscience/">https://science.thewire.in/the-sciences/isro-akash-tatva-conference-pseudoscience/</a> (accessed Jan. 12, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf938bc2"></a>World<br />
+<ol class="org-ol">
+<li><a id="org410c38a"></a>Orgs<br />
+<ul class="org-ul">
+<li><a id="orgb7552da"></a>ISRO<br />
+<ul class="org-ul">
+<li><a id="orgf6f6338"></a>General<br />
+<div class="outline-text-8" id="text-orgf6f6338">
+<ul class="org-ul">
+<li>“Indian Space Research Organisation,” Wikipedia. Jul. 19, 2022. Accessed: Jul. 22, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Indian_Space_Research_Organisation&amp;oldid=1099140809">https://en.wikipedia.org/w/index.php?title=Indian_Space_Research_Organisation&amp;oldid=1099140809</a></li>
+
+<li>“ISRO - Government of India.” <a href="https://www.isro.gov.in/">https://www.isro.gov.in/</a> (accessed Jul. 22, 2022).</li>
+
+<li>V. P. Sandlas, The Leapfroggers: An Insider’s Account of ISRO. HarperCollins, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7ebe52a"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org30b060a"></a>Moon: Chandrayaan<br />
+<div class="outline-text-9" id="text-org30b060a">
+<ul class="org-ul">
+<li>A. Bhelari, “PSU engineers who build equipment for ISRO go without salary for 20 months,” The Hindu, Sep. 23, 2023. Accessed: Sep. 25, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/engineers-who-built-chandrayaan-3-launch-pad-await-pay-since-20-months/article67331950.ece">https://www.thehindu.com/news/national/engineers-who-built-chandrayaan-3-launch-pad-await-pay-since-20-months/article67331950.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Chandrayaan-3: Rover Begins Exploring Moon’s Surface,” The Wire. <a href="https://thewire.in/space/chandrayaan-3-rover-begins-exploring-moons-surface">https://thewire.in/space/chandrayaan-3-rover-begins-exploring-moons-surface</a> (accessed Aug. 25, 2023).</li>
+
+<li>D. Welle, “Chandrayaan-3 marks India’s emergence as a space power,” Frontline, Aug. 24, 2023. <a href="https://frontline.thehindu.com/news/chandrayaan-3-marks-india-emergence-as-pace-power/article67229678.ece">https://frontline.thehindu.com/news/chandrayaan-3-marks-india-emergence-as-pace-power/article67229678.ece</a> (accessed Aug. 25, 2023).</li>
+
+<li>“Chandrayaan-3 live: India’s Vikram lander makes historic Moon landing,” BBC News, Aug. 23, 2023. <a href="https://www.bbc.co.uk/news/live/world-asia-india-66576580">https://www.bbc.co.uk/news/live/world-asia-india-66576580</a> (accessed Aug. 25, 2023).</li>
+
+<li>“India Lands Spacecraft Near Moon’s South Pole in First for Humanity,” Democracy Now! <a href="https://www.democracynow.org/2023/8/24/headlines/india_lands_spacecraft_near_moons_south_pole_in_first_for_humanity">https://www.democracynow.org/2023/8/24/headlines/india_lands_spacecraft_near_moons_south_pole_in_first_for_humanity</a> (accessed Aug. 25, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Welle, “Chandrayaan-3 marks India’s emergence as a space power,” Frontline, Aug. 24, 2023. <a href="https://frontline.thehindu.com/news/chandrayaan-3-marks-india-emergence-as-pace-power/article67229678.ece">https://frontline.thehindu.com/news/chandrayaan-3-marks-india-emergence-as-pace-power/article67229678.ece</a> (accessed Aug. 24, 2023).</li>
+<li>T. H. Bureau, “Chandrayaan-3 | A testament to India’s progress in science: Russia,” The Hindu, Aug. 23, 2023. Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/president-putin-congratulates-pm-modi-and-president-murmu-on-chandrayaan-3s-success/article67228506.ece">https://www.thehindu.com/news/national/president-putin-congratulates-pm-modi-and-president-murmu-on-chandrayaan-3s-success/article67228506.ece</a></li>
+<li>K. Kornei, “India’s successful moon landing follows recent failures by other countries,” Aug. 23, 2023. <a href="https://www.sciencenews.org/article/india-chandrayaan-moon-landing">https://www.sciencenews.org/article/india-chandrayaan-moon-landing</a> (accessed Aug. 24, 2023).</li>
+<li>V. Srivastava, “Chandrayaan-3 lands on the Moon’s south pole,” Nature India, Aug. 2023, doi: 10.1038/d44151-023-00116-x.</li>
+<li>“India makes history by landing spacecraft near Moon’s south pole.” <a href="https://www.science.org/content/article/india-makes-history-landing-spacecraft-near-moon-s-south-pole">https://www.science.org/content/article/india-makes-history-landing-spacecraft-near-moon-s-south-pole</a> (accessed Aug. 24, 2023).</li>
+<li>“S. Somanath,” Wikipedia. Aug. 24, 2023. Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=S._Somanath&amp;oldid=1171950648">https://en.wikipedia.org/w/index.php?title=S._Somanath&amp;oldid=1171950648</a></li>
+<li>“Chandrayaan-3,” Wikipedia. Aug. 24, 2023. Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Chandrayaan-3&amp;oldid=1171952578">https://en.wikipedia.org/w/index.php?title=Chandrayaan-3&amp;oldid=1171952578</a></li>
+<li>“One small step for humankind as India becomes 1st nation to soft land on lunar south pole.” <a href="https://www.downtoearth.org.in/news/science-technology/one-small-step-for-humankind-as-india-becomes-1st-nation-to-soft-land-on-lunar-south-pole-91329">https://www.downtoearth.org.in/news/science-technology/one-small-step-for-humankind-as-india-becomes-1st-nation-to-soft-land-on-lunar-south-pole-91329</a> (accessed Aug. 24, 2023).</li>
+<li>“Chandrayaan-3 live: India’s Vikram lander makes historic Moon landing,” BBC News, Aug. 23, 2023. <a href="https://www.bbc.co.uk/news/live/world-asia-india-66576580">https://www.bbc.co.uk/news/live/world-asia-india-66576580</a> (accessed Aug. 24, 2023).</li>
+<li>“Into Deep Space,” Oct. 2008, Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://www.epw.in/journal/2008/43/editorials/deep-space.html">https://www.epw.in/journal/2008/43/editorials/deep-space.html</a></li>
+<li>“Indian Space Effort,” May 2007, Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://www.epw.in/journal/2007/19/book-reviews/indian-space-effort.html">https://www.epw.in/journal/2007/19/book-reviews/indian-space-effort.html</a></li>
+<li>“Leadership in Science and Technology,” Oct. 2001, Accessed: Aug. 24, 2023. [Online]. Available: <a href="https://www.epw.in/journal/2001/40/special-articles/leadership-science-and-technology.html">https://www.epw.in/journal/2001/40/special-articles/leadership-science-and-technology.html</a></li>
+<li>“Chandrayaan-3: Vikram Lander Successfully Achieves Soft Landing on Moon,” The Wire. <a href="https://thewire.in/space/chandrayaan-3-vikram-lander-successful-soft-landing-moon">https://thewire.in/space/chandrayaan-3-vikram-lander-successful-soft-landing-moon</a> (accessed Aug. 24, 2023).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“India launches Chandrayaan-3 mission to the lunar surface,” Physics World, Jul. 14, 2023. <a href="https://physicsworld.com/india-launches-chandrayaan-3-mission-to-the-lunar-surface/">https://physicsworld.com/india-launches-chandrayaan-3-mission-to-the-lunar-surface/</a> (accessed Jul. 18, 2023).</li>
+
+<li>“Chandrayaan-3 successfully launched but what is its purpose?” <a href="https://www.downtoearth.org.in/video/science-technology/chandrayaan-3-successfully-launched-but-what-is-its-purpose--90676">https://www.downtoearth.org.in/video/science-technology/chandrayaan-3-successfully-launched-but-what-is-its-purpose--90676</a> (accessed Jul. 19, 2023).</li>
+
+<li>V. Srivastava, “India launches third mission to the Moon,” Nature India, Jul. 2023, doi: 10.1038/d44151-023-00087-z.</li>
+
+<li>T. V. Padma, “India shoots for the Moon with Chandrayaan-3 lunar lander,” Nature, Jul. 2023, doi: 10.1038/d41586-023-02217-0.</li>
+
+<li>T. V. Padma, “India’s Moon lander successfully launches — but biggest challenge lies ahead,” Nature, Jul. 2023, doi: 10.1038/d41586-023-02329-7.</li>
+
+<li>India moon mission rocket blasts into space - BBC News, (Jul. 14, 2023). Accessed: Jul. 22, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=u5gx-WUXTP8">https://www.youtube.com/watch?v=u5gx-WUXTP8</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgfb65e27"></a>Misc<br />
+<div class="outline-text-6" id="text-3-4-1-3-2">
+<ul class="org-ul">
+<li>“Women find their feet in India’s space sector,” The Economic Times. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://economictimes.indiatimes.com/tech/technology/women-find-their-feet-in-indias-space-sector/articleshow/110826028.cms">https://economictimes.indiatimes.com/tech/technology/women-find-their-feet-in-indias-space-sector/articleshow/110826028.cms</a></li>
+<li>“Rakesh Sharma,” Wikipedia. Apr. 03, 2024. Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rakesh_Sharma&amp;oldid=1216986711">https://en.wikipedia.org/w/index.php?title=Rakesh_Sharma&amp;oldid=1216986711</a></li>
+<li>K. Pandey, “India Opens Up Space Sector to 100% foreign direct investment,” MediaNama. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-india-opens-up-space-sector-to-100-foreign-direct-investment/">https://www.medianama.com/2024/02/223-india-opens-up-space-sector-to-100-foreign-direct-investment/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgaec228f"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="orgd7a0e49"></a>Films<br />
+<ul class="org-ul">
+<li><a id="org55bf710"></a>Rocket Boys<br />
+<div class="outline-text-7" id="text-org55bf710">
+<ul class="org-ul">
+<li>“Rocket Boys (web series),” Wikipedia. Jul. 02, 2023. Accessed: Jul. 05, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rocket_Boys_(web_series)&amp;oldid=1162955865">https://en.wikipedia.org/w/index.php?title=Rocket_Boys_(web_series)&amp;oldid=1162955865</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Review: India’s ‘Rocket Boys’ series fetishizes science—and the atomic bomb—in a dangerous way,”</b> Bulletin of the Atomic Scientists, Jun. 14, 2022. <a href="https://thebulletin.org/2022/06/review-indias-rocket-boys-series-fetishizes-science-and-the-atomic-bomb-in-a-dangerous-way/">https://thebulletin.org/2022/06/review-indias-rocket-boys-series-fetishizes-science-and-the-atomic-bomb-in-a-dangerous-way/</a> (accessed Jun. 15, 2022).</li>
+<li><b>“As a Historian of the Nuclear Program, I Can Only Laugh at the Howlers in Rocket Boys,”</b> The Wire. <a href="https://thewire.in/culture/rocket-boys-science-absurd">https://thewire.in/culture/rocket-boys-science-absurd</a> (accessed Jul. 14, 2023).</li>
+<li>I. Abraham, South Asian Cultures of the Bomb: Atomic Publics and the State in India and Pakistan. Indiana University Press, 2009.</li>
+<li>I. Abraham, The Making of the Indian Atomic Bomb : Science, Secrecy and the Post-Colonial State. Orient BlackSwan, 1999.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“‘Rocket Boys’ Begins Well, Then Turns Into Hagiography With a Blatantly Communal Touch,” The Wire. <a href="https://thewire.in/culture/rocket-boys-review">https://thewire.in/culture/rocket-boys-review</a> (accessed Jul. 08, 2023).</li>
+<li>“‘Rocket Boys’ gets Vikram Sarabhai wrong,” The Indian Express, Mar. 02, 2022. <a href="https://indianexpress.com/article/opinion/columns/rocket-boys-vikram-sarabhai-sony-liv-7796604/">https://indianexpress.com/article/opinion/columns/rocket-boys-vikram-sarabhai-sony-liv-7796604/</a> (accessed Jul. 08, 2023).</li>
+<li>S. Gupta, “Rocket Boys’ crime on history: Inventing Muslim villain, stealing Meghnad Saha’s identity,” ThePrint, Feb. 19, 2022. <a href="https://theprint.in/national-interest/rocket-boys-crime-on-history-inventing-muslim-villain-stealing-meghnad-sahas-identity/837504/">https://theprint.in/national-interest/rocket-boys-crime-on-history-inventing-muslim-villain-stealing-meghnad-sahas-identity/837504/</a> (accessed Jul. 05, 2023).</li>
+<li>T. Das, “Rocket Boys charts India’s ‘tryst with destiny’ — one that Bhabha and Sarabhai took forward,” ThePrint, Feb. 04, 2022. <a href="https://theprint.in/feature/reel-take/rocket-boys-charts-indias-tryst-with-destiny-one-that-bhabha-and-sarabhai-took-forward/821540/">https://theprint.in/feature/reel-take/rocket-boys-charts-indias-tryst-with-destiny-one-that-bhabha-and-sarabhai-took-forward/821540/</a> (accessed Jul. 08, 2023).</li>
+<li>T. Das, “Rocket Boys creates a perfect Muslim ‘foe’ because every good story needs a villain,” ThePrint, Feb. 10, 2022. <a href="https://theprint.in/feature/rocket-boys-creates-a-perfect-muslim-foe-because-every-good-story-needs-a-villain/826690/">https://theprint.in/feature/rocket-boys-creates-a-perfect-muslim-foe-because-every-good-story-needs-a-villain/826690/</a> (accessed Jul. 05, 2023).</li>
+<li>T. N. Service, “Binging on Bhabha, Sarabhai and Bhai,” Tribuneindia News Service. <a href="https://www.tribuneindia.com/news/comment/binging-on-bhabha-sarabhai-and-bhai-368521">https://www.tribuneindia.com/news/comment/binging-on-bhabha-sarabhai-and-bhai-368521</a> (accessed Jul. 08, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3787058"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org6725733"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org9adcfba"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-3-4-1-5-1">
+<ul class="org-ul">
+<li>N. Chomsky, <b>Democracy and Power : The Delhi Lectures.</b> Cambridge: Open Book Publishers, 2016. Accessed: Mar. 11, 2022. [Online]. Available: <a href="http://books.openedition.org/obp/2159">http://books.openedition.org/obp/2159</a></li>
+
+<li>R. Ramachandran, “Shooting for the stars with feet of clay,” Frontline. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/science-and-technology/2023-in-space-success-of-chandrayaan-3-mission-makes-india-one-of-the-great-space-powers-of-the-world/article67653364.ece">https://frontline.thehindu.com/science-and-technology/2023-in-space-success-of-chandrayaan-3-mission-makes-india-one-of-the-great-space-powers-of-the-world/article67653364.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org523346e"></a>ISRO Espionage Case<br />
+<div class="outline-text-6" id="text-3-4-1-5-2">
+<ul class="org-ul">
+<li>K. V. Thomas, ISRO Misfired: The Espionage Case That Shook India. SAGE Publications India, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. MS, “How the CBI killed India’s biggest espionage case,” The Caravan. <a href="https://caravanmagazine.in/reportage/space-secrets">https://caravanmagazine.in/reportage/space-secrets</a> (accessed Dec. 09, 2021).</li>
+<li>N. MS, “Petition relating to ISRO case alleges ‘suspicious’ land deals between Nambi Narayanan and ex CBI officials,” The Caravan. <a href="https://caravanmagazine.in/news/petition-isro-land-deals-nambi-narayanan-cbi">https://caravanmagazine.in/news/petition-isro-land-deals-nambi-narayanan-cbi</a> (accessed Aug. 06, 2022).</li>
+<li>The 1994 ISRO espionage case | The Caravan, (Nov. 23, 2020). Accessed: Jul. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=kTOCg450sdU">https://www.youtube.com/watch?v=kTOCg450sdU</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Rocketry: The Nambi Effect,” Wikipedia. Aug. 05, 2022. Accessed: Aug. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rocketry:_The_Nambi_Effect&amp;oldid=1102575458">https://en.wikipedia.org/w/index.php?title=Rocketry:_The_Nambi_Effect&amp;oldid=1102575458</a></li>
+
+<li>“Nambi Narayanan,” Wikipedia. Aug. 06, 2022. Accessed: Aug. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nambi_Narayanan&amp;oldid=1102659247">https://en.wikipedia.org/w/index.php?title=Nambi_Narayanan&amp;oldid=1102659247</a></li>
+<li>S. N. Narayanan and A. Ram, Ready to Fire: How India and I Survived the ISRO Spy Case. Bloomsbury, 2018.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org59119ec"></a>Misc<br />
+<div class="outline-text-5" id="text-3-4-1-6">
+<ul class="org-ul">
+<li>“ISRO Press Release - SFA Signing.” Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.isro.gov.in/ISRO%20Press%20Release-SFA%20Signing.html">https://www.isro.gov.in/ISRO%20Press%20Release-SFA%20Signing.html</a></li>
+
+<li>S. Kandavel, “Rocketry team of IIT Madras gets recognition at Spaceport America Cup,” The Hindu, Jul. 09, 2024. Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/tamil-nadu/rocketry-team-of-iit-madras-gets-recognition-at-spaceport-america-cup/article68385717.ece">https://www.thehindu.com/news/national/tamil-nadu/rocketry-team-of-iit-madras-gets-recognition-at-spaceport-america-cup/article68385717.ece</a></li>
+
+<li>“The next frontier: On India’s space sector,” The Hindu, Feb. 22, 2024. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/the-next-frontier-on-indias-space-sector/article67874992.ece">https://www.thehindu.com/opinion/editorial/the-next-frontier-on-indias-space-sector/article67874992.ece</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org154f6de" class="outline-3">
+<h3 id="org154f6de"><span class="section-number-3">3.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>T. M. P. Reader, “A Brief History of the Astronomer’s Chair,” The MIT Press Reader. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/a-brief-history-of-the-astronomers-chair/">https://thereader.mitpress.mit.edu/a-brief-history-of-the-astronomers-chair/</a></li>
+<li>M. Harris, “Never mind the right stuff, here’s the red stuff: how Yuri Gagarin and the cosmonauts shaped Soviet space culture,” Physics World. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://physicsworld.com/a/never-mind-the-right-stuff-heres-the-red-stuff-how-yuri-gagarin-and-the-cosmonauts-shaped-soviet-space-culture/">https://physicsworld.com/a/never-mind-the-right-stuff-heres-the-red-stuff-how-yuri-gagarin-and-the-cosmonauts-shaped-soviet-space-culture/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. G. R. / T. Conversation, “How Harris and Trump differ on space policy,” Popular Science. Accessed: Oct. 26, 2024. [Online]. Available: <a href="https://theconversation.com/both-harris-and-trump-have-records-on-space-policy-an-international-affairs-expert-examines-where-they-differ-when-it-comes-to-the-final-frontier-238289">https://theconversation.com/both-harris-and-trump-have-records-on-space-policy-an-international-affairs-expert-examines-where-they-differ-when-it-comes-to-the-final-frontier-238289</a></li>
+
+<li>“New paper: Assessing benefits and risks between the space economies and the sustainable development goals.” Accessed: Mar. 20, 2024. [Online]. Available: <a href="https://www.cser.ac.uk/news/new-paper-assessing-benefits-and-risks-between-spa/">https://www.cser.ac.uk/news/new-paper-assessing-benefits-and-risks-between-spa/</a></li>
+
+<li>“Reporter’s Tipsheet for Acquiring Free Satellite Images.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://gijn.org/resource/guide-acquire-free-satellite-images/">https://gijn.org/resource/guide-acquire-free-satellite-images/</a></li>
+
+<li>R. F. Lim Allison Parshall, Fonda Mwangi, Alexa, “Satellites and Space Stations Beware—Nukes in Space Could Threaten the Skies,” Scientific American. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/podcast/episode/we-already-know-the-dangers-of-nukes-in-space/">https://www.scientificamerican.com/podcast/episode/we-already-know-the-dangers-of-nukes-in-space/</a></li>
+
+<li>“Failure of Boeing spacecraft strands 2 astronauts on the International Space Station,” World Socialist Web Site. Accessed: Sep. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html">https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html</a></li>
+
+<li>N. Author, “NASA suffering from ageing infrastructure and inefficient management practices, finds report,” Physics World. Accessed: Sep. 17, 2024. [Online]. Available: <a href="https://physicsworld.com/nasa-suffering-from-ageing-infrastructure-and-inefficient-management-practices-finds-report/">https://physicsworld.com/nasa-suffering-from-ageing-infrastructure-and-inefficient-management-practices-finds-report/</a></li>
+
+<li>R. Allen, “Even with astronauts stuck in space until next year, NASA’s pushing human flights harder than ever,” The Conversation. Accessed: Aug. 28, 2024. [Online]. Available: <a href="http://theconversation.com/even-with-astronauts-stuck-in-space-until-next-year-nasas-pushing-human-flights-harder-than-ever-237331">http://theconversation.com/even-with-astronauts-stuck-in-space-until-next-year-nasas-pushing-human-flights-harder-than-ever-237331</a></li>
+
+<li>M. Harris, “Never mind the right stuff, here’s the red stuff: how Yuri Gagarin and the cosmonauts shaped Soviet space culture,” Physics World. Accessed: Apr. 05, 2024. [Online]. Available: <a href="https://physicsworld.com/never-mind-the-right-stuff-heres-the-red-stuff-how-yuri-gagarin-and-the-cosmonauts-shaped-soviet-space-culture/">https://physicsworld.com/never-mind-the-right-stuff-heres-the-red-stuff-how-yuri-gagarin-and-the-cosmonauts-shaped-soviet-space-culture/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe5c099" class="outline-2">
+<h2 id="orgbe5c099"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0f9e225" class="outline-3">
+<h3 id="org0f9e225"><span class="section-number-3">4.1.</span> Moons</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>J. Dacey, “An orchestral trip through the moons of our solar system,” Physics World. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://physicsworld.com/an-orchestral-trip-through-the-moons-of-our-solar-system/">https://physicsworld.com/an-orchestral-trip-through-the-moons-of-our-solar-system/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Author, “US Odysseus mission becomes first private craft to successfully land on the Moon,” Physics World. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://physicsworld.com/us-odysseus-mission-becomes-first-private-craft-to-successfully-land-on-the-moon/">https://physicsworld.com/us-odysseus-mission-becomes-first-private-craft-to-successfully-land-on-the-moon/</a></li>
+<li>A. Witze, “Exclusive: How NASA astronauts are training to walk on the Moon in 2026,” Nature, May 2024, doi: 10.1038/d41586-024-01533-3.</li>
+<li>A. Witze, “Exclusive: How NASA astronauts are training to walk on the Moon in 2026,” Nature, May 2024, doi: 10.1038/d41586-024-01533-3.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5feb9d0" class="outline-3">
+<h3 id="org5feb9d0"><span class="section-number-3">4.2.</span> Planets</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgda12119" class="outline-4">
+<h4 id="orgda12119"><span class="section-number-4">4.2.1.</span> Mars</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org0a0e706"></a>General<br /></li>
+<li><a id="orgb345ab0"></a>Misc<br />
+<div class="outline-text-5" id="text-4-2-1-2">
+<ul class="org-ul">
+<li>T. M. P. Reader, “Sky Gazing on Mars,” The MIT Press Reader. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/sky-gazing-on-mars/">https://thereader.mitpress.mit.edu/sky-gazing-on-mars/</a></li>
+
+<li>“Mission: Protecting the Planet.” Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://alum.mit.edu/slice/mission-protecting-planet">https://alum.mit.edu/slice/mission-protecting-planet</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org37c219b" class="outline-3">
+<h3 id="org37c219b"><span class="section-number-3">4.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“The Next 500 Years,” MIT Press. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262543842/the-next-500-years/">https://mitpress.mit.edu/9780262543842/the-next-500-years/</a></li>
+<li>“Space: 2075 | Royal Society.” Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://royalsociety.org/news-resources/projects/space2075/">https://royalsociety.org/news-resources/projects/space2075/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f89225" class="outline-2">
+<h2 id="org7f89225"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb13e49f" class="outline-3">
+<h3 id="orgb13e49f"><span class="section-number-3">5.1.</span> Literature</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“The Poet Whose Writing Will Be Launched Into Space,” Time. Accessed: Feb. 22, 2024. [Online]. Available: <a href="https://time.com/collection/women-of-the-year/6694507/ada-limon/">https://time.com/collection/women-of-the-year/6694507/ada-limon/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaf254f7" class="outline-3">
+<h3 id="orgaf254f7"><span class="section-number-3">5.2.</span> Music</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Music Today, The Elements: Space | Audio Jukebox | Instrumental &amp; Vocal | Zakir Hussain, (Jul. 07, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=xQtswoNMeK8">https://www.youtube.com/watch?v=xQtswoNMeK8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc895a7c" class="outline-3">
+<h3 id="orgc895a7c"><span class="section-number-3">5.3.</span> Misc</h3>
+</div>
+</div>
+
+<div id="outline-container-org3323a14" class="outline-2">
+<h2 id="org3323a14"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org3ae0df3" class="outline-3">
+<h3 id="org3ae0df3"><span class="section-number-3">6.1.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgdebe5c8" class="outline-4">
+<h4 id="orgdebe5c8"><span class="section-number-4">6.1.1.</span> Astrology</h4>
+<div class="outline-text-4" id="text-6-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4af3a94"></a>General<br />
+<div class="outline-text-5" id="text-6-1-1-1">
+<ul class="org-ul">
+<li>“Astrology,” Wikipedia. Jun. 30, 2022. Accessed: Jul. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Astrology&amp;oldid=1095869678">https://en.wikipedia.org/w/index.php?title=Astrology&amp;oldid=1095869678</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org58be74a"></a>World<br />
+<ol class="org-ol">
+<li><a id="org6c1c3dc"></a>History<br />
+<div class="outline-text-6" id="text-6-1-1-2-1">
+<ul class="org-ul">
+<li>R. F. Mwangi Fonda, “In the Middle Ages, Your Zodiac Sign Decided Your Days,” Scientific American. Accessed: Nov. 07, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/podcast/episode/astrology-was-an-important-science-for-medieval-people/">https://www.scientificamerican.com/podcast/episode/astrology-was-an-important-science-for-medieval-people/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org81b37b5"></a>Core<br />
+<div class="outline-text-5" id="text-6-1-1-3">
+<ul class="org-ul">
+<li>L. Goodman, Linda Goodman’s Sun Signs: The Secret Codes of the Universe. Pan Macmillan, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6064ab9"></a>Misc<br />
+<div class="outline-text-5" id="text-6-1-1-4">
+<ul class="org-ul">
+<li>“Horoscope,” Wikipedia. Oct. 10, 2024. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Horoscope&amp;oldid=1250506748">https://en.wikipedia.org/w/index.php?title=Horoscope&amp;oldid=1250506748</a></li>
+
+<li>“Destined for clicks: YouTube is driving an astrology boom in Pakistan,” Rest of World. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://restofworld.org/2024/youtube-astrology-stars-pakistan/">https://restofworld.org/2024/youtube-astrology-stars-pakistan/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0188818" class="outline-2">
+<h2 id="org0188818"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>L. Billings, “Polaris Dawn Is the Most Ambitious—And Risky—Private Spaceflight Yet,” Scientific American. Accessed: Aug. 24, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/polaris-dawn-is-the-most-ambitious-and-risky-private-spaceflight-yet/">https://www.scientificamerican.com/article/polaris-dawn-is-the-most-ambitious-and-risky-private-spaceflight-yet/</a></li>
+
+<li>B. P. D. H.- AP, “NASA’s Earthbound Simulated Mars Habitat Crew Emerge,” TIME. Accessed: Jul. 08, 2024. [Online]. Available: <a href="https://time.com/6995548/nasa-crew-earthbound-simulated-mars-habitat-emerge-after-year/">https://time.com/6995548/nasa-crew-earthbound-simulated-mars-habitat-emerge-after-year/</a></li>
+
+<li>“TRUTHS,” NPLWebsite. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.npl.co.uk/earth-observation/truths">https://www.npl.co.uk/earth-observation/truths</a></li>
+
+<li>R. Prest, F-4 Phantom: A Pilot’s Story. Zaccheus Entertainment, 2017.</li>
+
+<li>T. M. P. Reader, “Could a Self-Sustaining Starship Carry Humanity to Distant Worlds?,” The MIT Press Reader. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/could-a-self-sustaining-starship-carry-humanity-to-distant-worlds/">https://thereader.mitpress.mit.edu/could-a-self-sustaining-starship-carry-humanity-to-distant-worlds/</a></li>
+
+<li>D. K. Weinersmith and Z. Weinersmith, A City on Mars: Can We Settle Space, Should We Settle Space, and Have We Really Thought This Through? Penguin, 2023.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-11-11 Mon 10:21</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
