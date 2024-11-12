@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-12 Tue 10:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bengal</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Bengal</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgabe1d1f">1. General</a></li>
+<li><a href="#org045f6c9">2. STEMM</a>
+<ul>
+<li><a href="#orgcadf627">2.1. Environment</a></li>
+<li><a href="#orga458a91">2.2. CSE</a></li>
+<li><a href="#orgdc03a2e">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org685dd1d">3. World</a>
+<ul>
+<li><a href="#orgffb36b4">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgaffac59">4. Arts</a>
+<ul>
+<li><a href="#orgd1c8d74">4.1. Literature</a></li>
+<li><a href="#org18ab4e3">4.2. Music</a>
+<ul>
+<li><a href="#orga31476e">4.2.1. Misc</a></li>
+<li><a href="#org1a7bace">4.2.2. Folk</a></li>
+</ul>
+</li>
+<li><a href="#org6a3a4c4">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgee4ef0a">5. Special Topics</a>
+<ul>
+<li><a href="#org4fadede">5.1. 2024 Kolkata Rape And Murder Incident</a>
+<ul>
+<li><a href="#org154e611">5.1.1. General</a></li>
+<li><a href="#orgf867741">5.1.2. Law</a></li>
+<li><a href="#org0d07f73">5.1.3. Politics: Left</a></li>
+<li><a href="#org77449bf">5.1.4. The Hindu</a></li>
+<li><a href="#orgd2e6dab">5.1.5. Frontline</a></li>
+<li><a href="#org1a2578e">5.1.6. Down To Earth</a></li>
+<li><a href="#orgffe21e5">5.1.7. People's Archive of Rural India</a></li>
+<li><a href="#orged716a4">5.1.8. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org83f4ae9">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgabe1d1f" class="outline-2">
+<h2 id="orgabe1d1f"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org045f6c9" class="outline-2">
+<h2 id="org045f6c9"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgcadf627" class="outline-3">
+<h3 id="orgcadf627"><span class="section-number-3">2.1.</span> Environment</h3>
+</div>
+<div id="outline-container-orga458a91" class="outline-3">
+<h3 id="orga458a91"><span class="section-number-3">2.2.</span> CSE</h3>
+</div>
+<div id="outline-container-orgdc03a2e" class="outline-3">
+<h3 id="orgdc03a2e"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Bengal: Intense Heat, Water Crisis Killing Paddy Seeds in Bankura, Purulia,” NewsClick. Accessed: Jul. 01, 2024. [Online]. Available: <a href="https://www.newsclick.in/bengal-intense-heat-water-crisis-killing-paddy-seeds-bankura-purulia">https://www.newsclick.in/bengal-intense-heat-water-crisis-killing-paddy-seeds-bankura-purulia</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org685dd1d" class="outline-2">
+<h2 id="org685dd1d"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgffb36b4" class="outline-3">
+<h3 id="orgffb36b4"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Former W.Bengal CM Budhhadeb Bhattacharya Passes Away,” NewsClick. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.newsclick.in/former-wbengal-cm-budhhadeb-bhattacharya-passes-away">https://www.newsclick.in/former-wbengal-cm-budhhadeb-bhattacharya-passes-away</a></li>
+<li>A. Deb, “Why are BJP leaders talking about partitioning Bengal?,” Scroll.in. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://scroll.in/article/1071481/why-are-bjp-leaders-talking-about-partitioning-bengal">https://scroll.in/article/1071481/why-are-bjp-leaders-talking-about-partitioning-bengal</a></li>
+<li>“Exhuming women’s narratives of decades of brutality in divided Bengal.” Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://caravanmagazine.in/history/exhuming-women-narratives-decades-brutality-divided-bengal">https://caravanmagazine.in/history/exhuming-women-narratives-decades-brutality-divided-bengal</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaffac59" class="outline-2">
+<h2 id="orgaffac59"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgd1c8d74" class="outline-3">
+<h3 id="orgd1c8d74"><span class="section-number-3">4.1.</span> Literature</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>A. Sinha, The Greatest Bengali Stories Ever Told. Aleph Book Company, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18ab4e3" class="outline-3">
+<h3 id="org18ab4e3"><span class="section-number-3">4.2.</span> Music</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orga31476e" class="outline-4">
+<h4 id="orga31476e"><span class="section-number-4">4.2.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>“Saregama Bengali - YouTube.” <a href="https://www.youtube.com/user/SaregamaBengali">https://www.youtube.com/user/SaregamaBengali</a> (accessed Jul. 22, 2022).</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org1a7bace" class="outline-4">
+<h4 id="org1a7bace"><span class="section-number-4">4.2.2.</span> Folk</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>Saregama Bengali, Top 50 Bengali Folk Songs | ৫০টি সেরা বাঙলা লোক সঙ্গীত  | Audio Jukebox, (Jun. 12, 2017). Accessed: Mar. 17, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=UEPEyhwW14I">https://www.youtube.com/watch?v=UEPEyhwW14I</a></li>
+
+<li>Saregama Bengali, Top 50 Bengali Folk Songs | ৫০টি সেরা বাঙলা লোক সঙ্গীত  | Audio Jukebox, (Jun. 12, 2017). Accessed: Mar. 21, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=UEPEyhwW14I">https://www.youtube.com/watch?v=UEPEyhwW14I</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a3a4c4" class="outline-3">
+<h3 id="org6a3a4c4"><span class="section-number-3">4.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgee4ef0a" class="outline-2">
+<h2 id="orgee4ef0a"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4fadede" class="outline-3">
+<h3 id="org4fadede"><span class="section-number-3">5.1.</span> 2024 Kolkata Rape And Murder Incident</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org154e611" class="outline-4">
+<h4 id="org154e611"><span class="section-number-4">5.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“2024 Kolkata rape and murder incident,” Wikipedia. Aug. 26, 2024. Accessed: Aug. 27, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2024_Kolkata_rape_and_murder_incident&amp;oldid=1242429220">https://en.wikipedia.org/w/index.php?title=2024_Kolkata_rape_and_murder_incident&amp;oldid=1242429220</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf867741" class="outline-4">
+<h4 id="orgf867741"><span class="section-number-4">5.1.2.</span> Law</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8788663"></a>Law: Human Rights<br />
+<ol class="org-ol">
+<li><a id="org84dc730"></a>Amnesty International<br />
+<div class="outline-text-6" id="text-5-1-2-1-1">
+<ul class="org-ul">
+<li>“India: Authorities must protect protesters demanding justice after gang-rape and murder of Kolkata doctor,” Amnesty International. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/latest/news/2024/08/india-authorities-must-protect-protesters-demanding-justice-after-gang-rape-and-murder-of-kolkata-doctor/">https://www.amnesty.org/en/latest/news/2024/08/india-authorities-must-protect-protesters-demanding-justice-after-gang-rape-and-murder-of-kolkata-doctor/</a></li>
+<li>“Protect protests demanding justice after gang-rape and murder of Indian doctor.” Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/latest/news/2024/08/india-authorities-must-protect-protesters-demanding-justice-after-gang-rape-and-murder-of-kolkata-doctor/">https://www.amnesty.org/en/latest/news/2024/08/india-authorities-must-protect-protesters-demanding-justice-after-gang-rape-and-murder-of-kolkata-doctor/</a></li>
+<li>“India: Death penalty never the solution to crime and violence against women India: Death penalty never the solution to crime and violence against women,” Amnesty International. Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://www.amnesty.org/en/latest/news/2024/09/india-death-penalty-never-the-solution-to-crime-and-violence-against-women/">https://www.amnesty.org/en/latest/news/2024/09/india-death-penalty-never-the-solution-to-crime-and-violence-against-women/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org909c668"></a>Human Rights Watch<br />
+<div class="outline-text-6" id="text-5-1-2-1-2">
+<ul class="org-ul">
+<li>“Doctor’s Rape, Murder in India Sparks Protests | Human Rights Watch.” Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.hrw.org/news/2024/08/15/doctors-rape-murder-india-sparks-protests">https://www.hrw.org/news/2024/08/15/doctors-rape-murder-india-sparks-protests</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="org7d74967"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-2-2">
+<ul class="org-ul">
+<li>sabrang, “India’s cry for justice: The brutal Kolkata rape-murder of a young doctor has ignited nationwide protests on the eve of the 78th Independence’s Day,” SabrangIndia. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://sabrangindia.in/indias-cry-for-justice-the-brutal-kolkata-rape-murder-of-a-young-doctor-has-ignited-nationwide-protests-on-the-eve-of-the-78th-independences-day/">https://sabrangindia.in/indias-cry-for-justice-the-brutal-kolkata-rape-murder-of-a-young-doctor-has-ignited-nationwide-protests-on-the-eve-of-the-78th-independences-day/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org0d07f73" class="outline-4">
+<h4 id="org0d07f73"><span class="section-number-4">5.1.3.</span> Politics: Left</h4>
+<div class="outline-text-4" id="text-5-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org1e82707"></a>NewsClick<br />
+<div class="outline-text-5" id="text-5-1-3-1">
+<ul class="org-ul">
+<li>“Kolkata Rape-Murder Case: Trading Freedom for Security,” NewsClick. Accessed: Sep. 05, 2024. [Online]. Available: <a href="https://www.newsclick.in/kolkata-rape-murder-case-trading-freedom-security">https://www.newsclick.in/kolkata-rape-murder-case-trading-freedom-security</a></li>
+<li>“Over 900 Groups, Individuals Speak up Against Brutal Rape, Sexual Violence Cases Across Country,” NewsClick. Accessed: Aug. 29, 2024. [Online]. Available: <a href="https://www.newsclick.in/over-900-groups-individuals-speak-against-brutal-rape-sexual-violence-cases-across-country">https://www.newsclick.in/over-900-groups-individuals-speak-against-brutal-rape-sexual-violence-cases-across-country</a></li>
+<li>“R G Kar Rape-Murder: Over 100 Former Civil Servants Write to Mamata Banerjee, Seek Answers,” NewsClick. Accessed: Aug. 26, 2024. [Online]. Available: <a href="https://www.newsclick.in/r-g-kar-rape-murder-over-100-former-civil-servants-write-mamata-banerjee-seek-answers">https://www.newsclick.in/r-g-kar-rape-murder-over-100-former-civil-servants-write-mamata-banerjee-seek-answers</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc64bd90"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-3-2">
+<ul class="org-ul">
+<li>“She Was Brutally Killed Before She Could Write Her Story for the World: The Thirty-Fifth Newsletter (2024),” Tricontinental: Institute for Social Research. Accessed: Aug. 30, 2024. [Online]. Available: <a href="https://thetricontinental.org/newsletterissue/gender-based-violence-health-workers-india/">https://thetricontinental.org/newsletterissue/gender-based-violence-health-workers-india/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org77449bf" class="outline-4">
+<h4 id="org77449bf"><span class="section-number-4">5.1.4.</span> The Hindu</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<ul class="org-ul">
+<li>S. S. Singh, “Kolkata ‘Reclaim the Night’ protest: Thousands hit streets in West Bengal to mark one month of RG Kar rape and murder,” The Hindu, Sep. 08, 2024. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/kolkata/reclaim-the-night-thousands-hit-streets-in-west-bengal-to-mark-one-month-of-rg-kar-rape-and-murder/article68619341.ece">https://www.thehindu.com/news/cities/kolkata/reclaim-the-night-thousands-hit-streets-in-west-bengal-to-mark-one-month-of-rg-kar-rape-and-murder/article68619341.ece</a></li>
+<li>M. Som, “Kolkata turns off lights to seek justice for R.G. Kar victim,” The Hindu, Sep. 04, 2024. Accessed: Sep. 05, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/west-bengal/junior-doctors-in-bengal-continue-cease-work-in-protest-against-rg-kar-rape-murder/article68604838.ece">https://www.thehindu.com/news/national/west-bengal/junior-doctors-in-bengal-continue-cease-work-in-protest-against-rg-kar-rape-murder/article68604838.ece</a></li>
+<li>B. S. P. &amp; K. Rajagopal, “Kolkata doctor rape-murder case: Supreme Court takes suo motu cognisance of the case, hearing on August 20,” The Hindu, Aug. 18, 2024. Accessed: Aug. 19, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/sc-takes-cognisance-of-kolkata-rape-murder-case-hearing-on-aug-20/article68539584.ece">https://www.thehindu.com/news/national/sc-takes-cognisance-of-kolkata-rape-murder-case-hearing-on-aug-20/article68539584.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2e6dab" class="outline-4">
+<h4 id="orgd2e6dab"><span class="section-number-4">5.1.5.</span> Frontline</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<ul class="org-ul">
+<li>S. S. Chattopadhyay, “Why the West Bengal Government’s Aparajita Bill is Regressive, Unconstitutional, and Anti-Feminist,” Frontline. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/west-bengal-aparajita-bill-mamata-banerjee-trinamool-government-r-g-kar-hospital-rape-murder-abhaya-case/article68638222.ece">https://frontline.thehindu.com/social-issues/gender/west-bengal-aparajita-bill-mamata-banerjee-trinamool-government-r-g-kar-hospital-rape-murder-abhaya-case/article68638222.ece</a></li>
+
+<li>S. Banerjee, “Bengal’s Women Rise: Mamata’s Façade Crumbles Under Weight of Systemic Failures,” Frontline. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/kolkata-r-g-kar-doctor-rape-mamata-banerjee-trinamool-congress/article68580911.ece">https://frontline.thehindu.com/social-issues/gender/kolkata-r-g-kar-doctor-rape-mamata-banerjee-trinamool-congress/article68580911.ece</a></li>
+<li>S. S. Chattopadhyay, “Kolkata Doctor’s Rape-Murder Case Evokes Larger Question: How Do We Stop Violence Against Women?,” Frontline. Accessed: Sep. 05, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/kolkata-doctor-rape-murder-reclaim-the-night-protests-women-safety-west-bengal-mamata-banerjee-violence-crimes/article68585641.ece">https://frontline.thehindu.com/social-issues/gender/kolkata-doctor-rape-murder-reclaim-the-night-protests-women-safety-west-bengal-mamata-banerjee-violence-crimes/article68585641.ece</a></li>
+<li>P. Baxi, “The Death Penalty: A False Solution to Sexual Violence,” Frontline. Accessed: Sep. 05, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/rape-and-murder-female-doctor-in-kolkata-rg-kar-medical-college-and-hospital-nirbhaya-rape-case/article68586202.ece">https://frontline.thehindu.com/social-issues/gender/rape-and-murder-female-doctor-in-kolkata-rg-kar-medical-college-and-hospital-nirbhaya-rape-case/article68586202.ece</a></li>
+<li>R. Taneja, “A Selection of the Comic Strip, Sanitary Panels on the Patriarchal Mindset that Normalises Rape in India,” Frontline. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/a-selection-of-sanitary-panels-by-rachita-taneja-womens-safety-sexual-violence-comic-strip/article68553433.ece">https://frontline.thehindu.com/social-issues/gender/a-selection-of-sanitary-panels-by-rachita-taneja-womens-safety-sexual-violence-comic-strip/article68553433.ece</a></li>
+<li>V. Roy, “Outrage Over Kolkata Doctor’s Rape-Murder Raises Question: Who Will Educate the Boy Child?,” Frontline. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/gender/editors-note-kolkata-doctor-rape-murder-women-safety-violence-crimes-patriarchy-educate-boy-child/article68589781.ece">https://frontline.thehindu.com/social-issues/gender/editors-note-kolkata-doctor-rape-murder-women-safety-violence-crimes-patriarchy-educate-boy-child/article68589781.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1a2578e" class="outline-4">
+<h4 id="org1a2578e"><span class="section-number-4">5.1.6.</span> Down To Earth</h4>
+<div class="outline-text-4" id="text-5-1-6">
+<ul class="org-ul">
+<li>L. V. Nayak Ashok Kumar, “RG Kar incident a call for system accountability and precedence for the future,” Down To Earth. Accessed: Sep. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/rg-kar-incident-a-call-for-system-accountability-and-precedence-for-the-future">https://www.downtoearth.org.in/governance/rg-kar-incident-a-call-for-system-accountability-and-precedence-for-the-future</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgffe21e5" class="outline-4">
+<h4 id="orgffe21e5"><span class="section-number-4">5.1.7.</span> People's Archive of Rural India</h4>
+<div class="outline-text-4" id="text-5-1-7">
+<ul class="org-ul">
+<li>“‘I have come here because I am a woman,’” People’s Archive of Rural India. Accessed: Sep. 28, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/i-have-come-here-because-i-am-a-woman/">https://ruralindiaonline.org/en/articles/i-have-come-here-because-i-am-a-woman/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged716a4" class="outline-4">
+<h4 id="orged716a4"><span class="section-number-4">5.1.8.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-8">
+<ul class="org-ul">
+<li>“Political Economy of India’s Health Sector: The RG Kar Hospital Tragedy,” NewsClick. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://www.newsclick.in/political-economy-indias-health-sector-rg-kar-hospital-tragedy">https://www.newsclick.in/political-economy-indias-health-sector-rg-kar-hospital-tragedy</a></li>
+
+<li>“Won’t Stop This Movement Until Trial is Over, Justice is Ensured: Subarna Goswami on RG Kar Case,” NewsClick. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.newsclick.in/wont-stop-movement-until-trial-over-justice-ensured-subarna-goswami-rg-kar-case">https://www.newsclick.in/wont-stop-movement-until-trial-over-justice-ensured-subarna-goswami-rg-kar-case</a></li>
+
+<li>“Protests by West Bengal junior doctors over rape and killing of colleague continues after state passes reactionary death penalty legislation,” World Socialist Web Site. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/25/wzku-s25.html">https://www.wsws.org/en/articles/2024/09/25/wzku-s25.html</a></li>
+
+<li>“RG Kar Hospital Murder Ignites Bengal’s Fight for Justice,” NewsClick. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.newsclick.in/rg-kar-hospital-murder-ignites-bengals-fight-justice">https://www.newsclick.in/rg-kar-hospital-murder-ignites-bengals-fight-justice</a></li>
+
+<li>“‘This Movement Can’t Be Erased From People’s Minds’, Parents Of Raped &amp; Murdered Kolkata Doctor Blame Mamata Banerjee Government For The Aftermath.” Accessed: Sep. 25, 2024. [Online]. Available: <a href="https://www.article-14.com/post/-this-movement-can-t-be-erased-from-people-s-minds-parents-of-raped-murdered-kolkata-doctor-blame-mamata-banerjee-government-for-the-aftermath--66f3844c6f019">https://www.article-14.com/post/-this-movement-can-t-be-erased-from-people-s-minds-parents-of-raped-murdered-kolkata-doctor-blame-mamata-banerjee-government-for-the-aftermath--66f3844c6f019</a></li>
+
+<li>“Protests by West Bengal junior doctors over rape and killing of colleague continues after state passes reactionary death penalty legislation,” World Socialist Web Site. Accessed: Sep. 25, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/25/wzku-s25.html">https://www.wsws.org/en/articles/2024/09/25/wzku-s25.html</a></li>
+
+<li>“RG Kar rape &amp; murder: Calcutta’s streets usher in I-Day with anthem sung in never-before chorus for justice.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/west-bengal/rg-kar-rape-murder-calcuttas-streets-usher-in-i-day-with-anthem-sung-in-never-before-chorus-for-justice/cid/2041054">https://www.telegraphindia.com/west-bengal/rg-kar-rape-murder-calcuttas-streets-usher-in-i-day-with-anthem-sung-in-never-before-chorus-for-justice/cid/2041054</a></li>
+
+<li>D. Banerjee, “Rape and murder of doctor sparks nationwide protests in India,” The Conversation. Accessed: Aug. 15, 2024. [Online]. Available: <a href="http://theconversation.com/rape-and-murder-of-doctor-sparks-nationwide-protests-in-india-236760">http://theconversation.com/rape-and-murder-of-doctor-sparks-nationwide-protests-in-india-236760</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org83f4ae9" class="outline-2">
+<h2 id="org83f4ae9"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-11-12 Tue 10:01</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
