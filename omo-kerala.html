@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-15 Fri 20:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kerala</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Kerala</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd98b757">1. General</a></li>
+<li><a href="#org0ea59c3">2. STEMM</a>
+<ul>
+<li><a href="#orgbfb1638">2.1. Environment</a></li>
+<li><a href="#orgbd30ac5">2.2. CSE</a></li>
+<li><a href="#orgde13289">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf575508">3. World</a>
+<ul>
+<li><a href="#org8f15f66">3.1. Orgs</a></li>
+<li><a href="#orge66e6fd">3.2. Caste</a></li>
+<li><a href="#org1beb75f">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org51c7590">4. Arts</a>
+<ul>
+<li><a href="#org48e5448">4.1. Films</a>
+<ul>
+<li><a href="#org7287ef1">4.1.1. 0</a></li>
+<li><a href="#org181e425">4.1.2. 1</a></li>
+<li><a href="#org1a5c341">4.1.3. 9</a></li>
+</ul>
+</li>
+<li><a href="#org8b5b4cd">4.2. Music</a></li>
+<li><a href="#orge4ed2a2">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org34cf52f">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+
+<div id="outline-container-orgd98b757" class="outline-2">
+<h2 id="orgd98b757"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org0ea59c3" class="outline-2">
+<h2 id="org0ea59c3"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgbfb1638" class="outline-3">
+<h3 id="orgbfb1638"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“A Landslide of Devastation | PDF to Flipbook.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://heyzine.com/flip-book/3f1a79e0b8.html">https://heyzine.com/flip-book/3f1a79e0b8.html</a></li>
+
+<li>S. G. Warrier, “[Commentary] Why the Wayanad landslide must not fade from memory,” Mongabay-India. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/commentary-why-the-wayanad-landslide-must-not-fade-from-memory/">https://india.mongabay.com/2024/08/commentary-why-the-wayanad-landslide-must-not-fade-from-memory/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. B. Staff, “Climate change made ‘monsoon downpour’ behind Kerala landslides 10% more intense,” Carbon Brief. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.carbonbrief.org/climate-change-made-monsoon-downpour-behind-kerala-landslides-10-more-intense/">https://www.carbonbrief.org/climate-change-made-monsoon-downpour-behind-kerala-landslides-10-more-intense/</a></li>
+
+<li>Shagun, “Come March and 199 district agromet units will wind up, as per Centre’s order,” Down To Earth. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/come-march-and-199-district-agromet-units-will-wind-up-as-per-centre-s-order-94175">https://www.downtoearth.org.in/agriculture/come-march-and-199-district-agromet-units-will-wind-up-as-per-centre-s-order-94175</a></li>
+
+<li>B. Dash, “Wayanad disaster highlights need for multi-hazard early warning systems,” Down To Earth. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/wayanad-disaster-highlights-need-for-multi-hazard-early-warning-systems">https://www.downtoearth.org.in/climate-change/wayanad-disaster-highlights-need-for-multi-hazard-early-warning-systems</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Kerala CM Contests Amit Shah’s Claim That His State Was Warned of Heavy Rain Week Before Landslides,” The Wire. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://thewire.in/environment/pinarayi-vijayan-amit-shah-kerala-landslide-warning">https://thewire.in/environment/pinarayi-vijayan-amit-shah-kerala-landslide-warning</a></li>
+<li>“Cong. Submits Privilege Notice Against Amit Shah For ‘Misleading’ Rajya Sabha on Wayanad Landslides,” The Wire. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://thewire.in/politics/congress-privilege-notice-amit-shah-wayanad-landslides">https://thewire.in/politics/congress-privilege-notice-amit-shah-wayanad-landslides</a></li>
+<li>People’s Archive of Rural India, Usha Uthup: Pralaya thaalam – Rhythm of the calamity | Kerala floods, (Sep. 03, 2018). Accessed: Aug. 03, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=aO27YTKddpQ">https://www.youtube.com/watch?v=aO27YTKddpQ</a></li>
+
+<li>adititandon, “Lesson from Wayanad: State needs disaster mitigation rather than a disaster management strategy,” Mongabay-India. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/lesson-from-wayanad-state-needs-disaster-mitigation-rather-than-disaster-management-strategy/">https://india.mongabay.com/2024/08/lesson-from-wayanad-state-needs-disaster-mitigation-rather-than-disaster-management-strategy/</a></li>
+<li>“Wayanad landslide: Kerala needs disaster mitigation rather than management.” Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/lesson-from-wayanad-state-needs-disaster-mitigation-rather-than-disaster-management-strategy/">https://india.mongabay.com/2024/08/lesson-from-wayanad-state-needs-disaster-mitigation-rather-than-disaster-management-strategy/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘Wayanad is proof govts have no interest in protecting nature,’” The Times of India. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/india/wayanad-is-proof-govts-have-no-interest-in-protecting-nature/articleshow/112174245.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst">https://timesofindia.indiatimes.com/india/wayanad-is-proof-govts-have-no-interest-in-protecting-nature/articleshow/112174245.cms?utm_source=contentofinterest&amp;utm_medium=text&amp;utm_campaign=cppst</a></li>
+<li>M. T. R. Sigamany Vidya, “‘The river reclaimed its course’: Geologist explains Wayanad landslide,” The News Minute. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.thenewsminute.com/kerala/the-river-reclaimed-its-course-geologist-explains-wayanad-landslide">https://www.thenewsminute.com/kerala/the-river-reclaimed-its-course-geologist-explains-wayanad-landslide</a></li>
+<li>R. Ghai, “Changing climate means Wayanad-like disasters to increase in frequency &amp; intensity: Expert,” Down To Earth. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/changing-climate-means-wayanad-like-disasters-to-increase-in-frequency-intensity-expert">https://www.downtoearth.org.in/natural-disasters/changing-climate-means-wayanad-like-disasters-to-increase-in-frequency-intensity-expert</a></li>
+<li>K. Pandey, “Wayanad district is highly vulnerable to disaster — Data and history are testament,” Down To Earth. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/wayanad-district-is-highly-vulnerable-to-disaster-data-and-history-are-testament">https://www.downtoearth.org.in/natural-disasters/wayanad-district-is-highly-vulnerable-to-disaster-data-and-history-are-testament</a></li>
+<li>K. A. Shaji, “Wayanad’s Hume Centre for Ecology &amp; Wildlife, which warned of landslides, urges separate weather warning system for Kerala’s Western Ghats region,” Down To Earth. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/wayanads-hume-centre-for-ecology-wildlife-which-warned-of-landslides-urges-separate-weather-warning-system-for-keralas-western-ghats-region">https://www.downtoearth.org.in/natural-disasters/wayanads-hume-centre-for-ecology-wildlife-which-warned-of-landslides-urges-separate-weather-warning-system-for-keralas-western-ghats-region</a></li>
+<li>D. T. E. Staff, “Massive landslides hit Kerala’s Wayanad district. What happened?,” Down To Earth. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/massive-landslides-hit-keralas-wayanad-district-what-happened">https://www.downtoearth.org.in/environment/massive-landslides-hit-keralas-wayanad-district-what-happened</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>R. Guha, “Ramachandra Guha: From a Kerala port, a citizens’ report provides proof of ‘destructive development,’” Scroll.in. Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://scroll.in/article/1061412/ramachandra-guha-from-a-kerala-port-a-citizens-report-provides-proof-of-destructive-development">https://scroll.in/article/1061412/ramachandra-guha-from-a-kerala-port-a-citizens-report-provides-proof-of-destructive-development</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbd30ac5" class="outline-3">
+<h3 id="orgbd30ac5"><span class="section-number-3">2.2.</span> CSE</h3>
+</div>
+<div id="outline-container-orgde13289" class="outline-3">
+<h3 id="orgde13289"><span class="section-number-3">2.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgf575508" class="outline-2">
+<h2 id="orgf575508"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8f15f66" class="outline-3">
+<h3 id="org8f15f66"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“vizhinjamtheeram.org.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.vizhinjamtheeram.org/">https://www.vizhinjamtheeram.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge66e6fd" class="outline-3">
+<h3 id="orge66e6fd"><span class="section-number-3">3.2.</span> Caste</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>A. V. Sakthidharan, Antigod’s Own Country: A Short History of Brahminical Colonisation of Kerala. New Delhi: Navayana, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1beb75f" class="outline-3">
+<h3 id="org1beb75f"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Sadya,” Wikipedia. Sep. 15, 2024. Accessed: Sep. 16, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sadya&amp;oldid=1245838457">https://en.wikipedia.org/w/index.php?title=Sadya&amp;oldid=1245838457</a></li>
+<li>“Onam,” Wikipedia. Sep. 15, 2024. Accessed: Sep. 16, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Onam&amp;oldid=1245920474">https://en.wikipedia.org/w/index.php?title=Onam&amp;oldid=1245920474</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>V. Kannampilly, The Essential Kerala Cookbook [Paperback] Kannampilly, Vijayan, 1st edition. New Delhi: PENGUIN INDIA, 2003.</li>
+<li>S. Radhakrishna, Paachakam: Heritage Cuisine of Kerala. New Delhi, India: Pramod Kapoor, 2022.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org51c7590" class="outline-2">
+<h2 id="org51c7590"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org48e5448" class="outline-3">
+<h3 id="org48e5448"><span class="section-number-3">4.1.</span> Films</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org7287ef1" class="outline-4">
+<h4 id="org7287ef1"><span class="section-number-4">4.1.1.</span> 0</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“The Kerala Story,” Wikipedia. Apr. 08, 2024. Accessed: Apr. 27, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Kerala_Story&amp;oldid=1217840169">https://en.wikipedia.org/w/index.php?title=The_Kerala_Story&amp;oldid=1217840169</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org181e425" class="outline-4">
+<h4 id="org181e425"><span class="section-number-4">4.1.2.</span> 1</h4>
+</div>
+<div id="outline-container-org1a5c341" class="outline-4">
+<h4 id="org1a5c341"><span class="section-number-4">4.1.3.</span> 9</h4>
+</div>
+</div>
+<div id="outline-container-org8b5b4cd" class="outline-3">
+<h3 id="org8b5b4cd"><span class="section-number-3">4.2.</span> Music</h3>
+</div>
+<div id="outline-container-orge4ed2a2" class="outline-3">
+<h3 id="orge4ed2a2"><span class="section-number-3">4.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org34cf52f" class="outline-2">
+<h2 id="org34cf52f"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Many Malayalams,” The India Forum. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/society/many-malayalams">https://www.theindiaforum.in/society/many-malayalams</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-11-15 Fri 20:28</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
