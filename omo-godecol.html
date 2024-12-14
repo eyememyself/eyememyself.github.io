@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-14 Sat 18:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Religions, Ecology</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Religions, Ecology</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org394f9d7">1. General</a></li>
+<li><a href="#org776f99a">2. World</a>
+<ul>
+<li><a href="#orgfdb11fd">2.1. Orgs</a></li>
+<li><a href="#org650985c">2.2. People</a></li>
+<li><a href="#org4262a01">2.3. Programmes</a></li>
+<li><a href="#org368ab3e">2.4. Nation States</a>
+<ul>
+<li><a href="#orgdee4793">2.4.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org85ab67a">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3bb8707">3. Core</a>
+<ul>
+<li><a href="#org637c58d">3.1. General</a>
+<ul>
+<li><a href="#org0f38356">3.1.1. Handbooks, Companions</a></li>
+<li><a href="#orgb0a9a96">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org693bcbf">3.2. Hinduism</a>
+<ul>
+<li><a href="#org773db52">3.2.1. General</a></li>
+<li><a href="#org582c159">3.2.2. Core</a></li>
+<li><a href="#org60bada0">3.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgea6592f">3.3. Religions Of The Book</a>
+<ul>
+<li><a href="#orgd2d634c">3.3.1. Christianity</a></li>
+<li><a href="#orge17cb3a">3.3.2. Islam</a></li>
+<li><a href="#orga0bbf7a">3.3.3. Judaism</a></li>
+<li><a href="#orgc30b235">3.3.4. Sikhism</a></li>
+</ul>
+</li>
+<li><a href="#orge0e3e5a">3.4. Buddhism</a>
+<ul>
+<li><a href="#orgc546bf3">3.4.1. General</a></li>
+<li><a href="#org7c933d3">3.4.2. People</a></li>
+<li><a href="#org3c9fee4">3.4.3. Orgs</a></li>
+<li><a href="#orgdfb6bd8">3.4.4. Special Topics</a></li>
+<li><a href="#orgb62bffa">3.4.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5f4bde7">3.5. Jainism</a></li>
+<li><a href="#org86a3044">3.6. Bahai</a></li>
+</ul>
+</li>
+<li><a href="#org21250db">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org394f9d7" class="outline-2">
+<h2 id="org394f9d7"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org776f99a" class="outline-2">
+<h2 id="org776f99a"><span class="section-number-2">2.</span> World</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgfdb11fd" class="outline-3">
+<h3 id="orgfdb11fd"><span class="section-number-3">2.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>“Welcome | Yale Forum on Religion and Ecology.”</b> <a href="https://fore.yale.edu/">https://fore.yale.edu/</a> (accessed May 14, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org650985c" class="outline-3">
+<h3 id="org650985c"><span class="section-number-3">2.2.</span> People</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Dr. Samsul Maarif – CRCS UGM.” Accessed: Nov. 10, 2023. [Online]. Available: <a href="https://crcs.ugm.ac.id/samsul-maarif/">https://crcs.ugm.ac.id/samsul-maarif/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4262a01" class="outline-3">
+<h3 id="org4262a01"><span class="section-number-3">2.3.</span> Programmes</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Faith for Earth Initiative,” UNEP - UN Environment Programme, Jun. 02, 2021. <a href="http://www.unep.org/about-un-environment/faith-earth-initiative">http://www.unep.org/about-un-environment/faith-earth-initiative</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org368ab3e" class="outline-3">
+<h3 id="org368ab3e"><span class="section-number-3">2.4.</span> Nation States</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgdee4793" class="outline-4">
+<h4 id="orgdee4793"><span class="section-number-4">2.4.1.</span> India</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>D. L. Gosling, Religion and Ecology in India and Southeast Asia. Psychology Press, 2001.</li>
+</ul>
+
+<ul class="org-ul">
+<li>“08 | Prof Nanditha Krishna | Sacred Ecology of India (1) | 12 February 2020 - YouTube.” <a href="https://www.youtube.com/watch?v=t4lnsmAr0oc&amp;list=WL&amp;index=7&amp;t=1468s">https://www.youtube.com/watch?v=t4lnsmAr0oc&amp;list=WL&amp;index=7&amp;t=1468s</a> (accessed May 26, 2023).</li>
+
+<li>D. L. Gosling, Religion and Ecology in India and Southeast Asia. Psychology Press, 2001.</li>
+
+<li>E. Luce, In Spite of the Gods: The Strange Rise of Modern India. Doubleday, 2007.</li>
+
+<li>M. Sharma, Green and Saffron: Hindu Nationalism and Indian Environmental Politics. Permanent Black, 2012.</li>
+
+<li>W. Doniger, <i>Winged Stallions and Wicked Mares: Horses in Indian Myth and History.</i> University of Virginia Press, 2021.</li>
+
+<li>N. Krishna, <i>Sacred Animals of India.</i> Penguin Books India, 2010.</li>
+<li>N. Krishna, <i>Sacred Plants of India.</i> Penguin UK, 2014.</li>
+
+<li>A. Ghose, S. Aurobindo, and S. Nahar, Out of the Ruins of the West &#x2013; India’s Rebirth: A Selection from Sri Aurobindo’s Writing, Talks and Speeches. Institut de Recherches Evolutives, 1993.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org85ab67a" class="outline-3">
+<h3 id="org85ab67a"><span class="section-number-3">2.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3bb8707" class="outline-2">
+<h2 id="org3bb8707"><span class="section-number-2">3.</span> Core</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org637c58d" class="outline-3">
+<h3 id="org637c58d"><span class="section-number-3">3.1.</span> General</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org0f38356" class="outline-4">
+<h4 id="org0f38356"><span class="section-number-4">3.1.1.</span> Handbooks, Companions</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>D. A. Crosby and J. A. Stone, The Routledge Handbook of Religious Naturalism. Routledge, 2018.</li>
+
+<li>L. Hobgood and W. Bauman, The Bloomsbury Handbook of Religion and Nature: The Elements. Bloomsbury Publishing, 2018.</li>
+
+<li>J. Hart, The Wiley Blackwell Companion to Religion and Ecology. John Wiley &amp; Sons, 2017.</li>
+
+<li>W. J. Jenkins, M. E. Tucker, and J. Grim, <b>Routledge Handbook of Religion and Ecology.</b> Routledge, 2016.
+<ul class="org-ul">
+<li>"A comprehensive, fairly recent, overview of religion and ecology."</li>
+</ul></li>
+
+<li>R. S. Gottlieb, The Oxford Handbook of Religion and Ecology. Oxford University Press, USA, 2006.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb0a9a96" class="outline-4">
+<h4 id="orgb0a9a96"><span class="section-number-4">3.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>J. Grim and M. E. Tucker, Ecology and Religion. Island Press, 2014.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org693bcbf" class="outline-3">
+<h3 id="org693bcbf"><span class="section-number-3">3.2.</span> Hinduism</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org773db52" class="outline-4">
+<h4 id="org773db52"><span class="section-number-4">3.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org582c159" class="outline-4">
+<h4 id="org582c159"><span class="section-number-4">3.2.2.</span> Core</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>C. K. Chapple and M. E. Tucker, <b>Hinduism and Ecology: The Intersection of Earth, Sky, and Water.</b> Harvard University Press, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Hinduism | Yale Forum on Religion and Ecology.”</b> <a href="https://fore.yale.edu/World-Religions/Hinduism">https://fore.yale.edu/World-Religions/Hinduism</a> (accessed May 20, 2023).
+<ul class="org-ul">
+<li>“Hinduism &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0q6GNNx65VLR8m2WXgZBPO">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0q6GNNx65VLR8m2WXgZBPO</a> (accessed May 26, 2023).</li>
+<li>D. L. Haberman, “Hinduism: Devotional love of the world,” in Routledge Handbook of Religion and Ecology, Routledge, 2016.</li>
+<li>“Overview Essay | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Hinduism/Overview-Essay">https://fore.yale.edu/World-Religions/Hinduism/Overview-Essay</a> (accessed May 20, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Prime, Hinduism and Ecology: Seeds of Truth. Motilal Banarsidass Publ., 1996.</li>
+
+<li>L. E. Nelson, Purifying the Earthly Body of God: Religion and Ecology in Hindu India. SUNY Press, 1998.</li>
+
+<li>C. G. Framarin, Hinduism and Environmental Ethics: Law, Literature, and Philosophy, 1st edition. London: Routledge, 2014.</li>
+
+<li>N. Krishna, Hinduism and Nature. Penguin Random House India Private Limited, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org60bada0" class="outline-4">
+<h4 id="org60bada0"><span class="section-number-4">3.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>“Phasi wood for Jagannath chariot this year entirely from private lands; forest loss, climate change affecting natural supply.” Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/phasi-wood-for-jagannath-chariot-this-year-entirely-from-private-lands-forest-loss-climate-change-affecting-natural-supply-81429">https://www.downtoearth.org.in/news/climate-change/phasi-wood-for-jagannath-chariot-this-year-entirely-from-private-lands-forest-loss-climate-change-affecting-natural-supply-81429</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgea6592f" class="outline-3">
+<h3 id="orgea6592f"><span class="section-number-3">3.3.</span> Religions Of The Book</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgd2d634c" class="outline-4">
+<h4 id="orgd2d634c"><span class="section-number-4">3.3.1.</span> Christianity</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org018f362"></a>Non Tech<br />
+<div class="outline-text-5" id="text-3-3-1-1">
+<ul class="org-ul">
+<li>J. Williams, <b>Time to Act: A Resource Book by the Christians in Extinction Rebellion.</b> SPCK Publishing, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org8066b15"></a>Orgs<br />
+<ol class="org-ol">
+<li><a id="org9a9cc3b"></a><b>Yale</b><br />
+<div class="outline-text-6" id="text-3-3-1-2-1">
+<ul class="org-ul">
+<li>“Christianity | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Christianity">https://fore.yale.edu/World-Religions/Christianity</a> (accessed May 26, 2023).</li>
+
+<li>“Christianity &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0DwnvpQcSNysAk2v_Y22op">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0DwnvpQcSNysAk2v_Y22op</a> (accessed May 26, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbbcd0ce"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-1-2-2">
+<ul class="org-ul">
+<li>“Christian Climate Action,” Christian Climate Action. <a href="https://christianclimateaction.org/">https://christianclimateaction.org/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgaeae071"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org4526b2c"></a>Encyclical<br />
+<div class="outline-text-6" id="text-3-3-1-3-1">
+<ul class="org-ul">
+<li>P. Francis and N. Oreskes, <b>Encyclical on Climate Change and Inequality: On Care for Our Common Home.</b> Melville House, 2015.</li>
+<li>“Pope Francis and the Environment: Why His New Climate Encyclical Matters | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/event/Pope-Francis-and-Environment-Why-His-New-Climate-Encyclical-Matters">https://fore.yale.edu/event/Pope-Francis-and-Environment-Why-His-New-Climate-Encyclical-Matters</a> (accessed May 14, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7a916d2"></a>Laudato Si<br />
+<div class="outline-text-6" id="text-3-3-1-3-2">
+<ul class="org-ul">
+<li>“Laudato Si’ Movement,” Wikipedia. Dec. 04, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Laudato_Si%27_Movement&amp;oldid=1125483052">https://en.wikipedia.org/w/index.php?title=Laudato_Si%27_Movement&amp;oldid=1125483052</a></li>
+
+<li>“Laudato Si’ - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM3qfyTt8eXAL5HPwxCaE1hN">https://www.youtube.com/playlist?list=PLfoNnUIQBvM3qfyTt8eXAL5HPwxCaE1hN</a> (accessed Jun. 15, 2023).</li>
+
+<li>“Laudato Si’ Movement,” Laudato Si’ Movement. <a href="https://laudatosimovement.org/">https://laudatosimovement.org/</a> (accessed Dec. 20, 2022).</li>
+
+<li>“Laudato si’ (24 May 2015) | Francis.” <a href="https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html">https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html</a> (accessed May 14, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org9cdacde"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-1-4">
+<ul class="org-ul">
+<li>“‘Earth4All and the world of the Pope’: documentary premiere - Earth4All.” Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://earth4all.life/news/earth4all-and-the-world-of-the-pope-documentary-premiere/">https://earth4all.life/news/earth4all-and-the-world-of-the-pope-documentary-premiere/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Church Forests of Ethiopia,” Emergence Magazine. Accessed: May 20, 2024. [Online]. Available: <a href="https://emergencemagazine.org/film/the-church-forests-of-ethiopia/">https://emergencemagazine.org/film/the-church-forests-of-ethiopia/</a></li>
+
+<li>“The Letter: A Message for our Earth,” Wikipedia. Oct. 27, 2022. Accessed: Dec. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Letter:_A_Message_for_our_Earth&amp;oldid=1118541585">https://en.wikipedia.org/w/index.php?title=The_Letter:_A_Message_for_our_Earth&amp;oldid=1118541585</a></li>
+<li>“Home,” The Letter. <a href="https://www.theletterfilm.org/">https://www.theletterfilm.org/</a> (accessed Dec. 20, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pope Benedict XVI, who has passed away, was dubbed ‘Green Pontiff’; here is why.” <a href="https://www.downtoearth.org.in/news/world/pope-benedict-xvi-who-has-passed-away-was-dubbed-green-pontiff-here-is-why-86867">https://www.downtoearth.org.in/news/world/pope-benedict-xvi-who-has-passed-away-was-dubbed-green-pontiff-here-is-why-86867</a> (accessed Jan. 02, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. Hessel and R. R. Ruether, Christianity and Ecology: Seeking the Well-being of Earth and Humans. Harvard University Press, 2000.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. E. Tucker and J. Grim, <b>Living Cosmology: Christian Responses to Journey of the Universe.</b> ORBIS, 2016.</li>
+<li>Living Cosmology: The Influence of Teilhard de Chardin, (Feb. 09, 2015). Accessed: May 26, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=XCJgB7-jXmg">https://www.youtube.com/watch?v=XCJgB7-jXmg</a></li>
+<li>“Living Cosmology: Christian Responses to Journey of the Universe (2014 Conference) - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM37wwys3gHQ-XUdEp75PyYg">https://www.youtube.com/playlist?list=PLfoNnUIQBvM37wwys3gHQ-XUdEp75PyYg</a> (accessed Jun. 15, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge17cb3a" class="outline-4">
+<h4 id="orge17cb3a"><span class="section-number-4">3.3.2.</span> Islam</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org3125394"></a>Orgs<br />
+<div class="outline-text-5" id="text-3-3-2-1">
+<ul class="org-ul">
+<li>“Home,” Al Mizan. Accessed: Apr. 14, 2024. [Online]. Available: <a href="https://www.almizan.earth">https://www.almizan.earth</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Islam | Yale Forum on Religion and Ecology.”</b> <a href="https://fore.yale.edu/World-Religions/Islam">https://fore.yale.edu/World-Religions/Islam</a> (accessed May 26, 2023).
+<ul class="org-ul">
+<li>“Islam &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM3nQjzcDT0Fpmg7u2V4xPj">https://www.youtube.com/playlist?list=PLfoNnUIQBvM3nQjzcDT0Fpmg7u2V4xPj</a>_ (accessed May 26, 2023).</li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Ummah for Earth,” Ummah for Earth. <a href="https://ummah4earth.org/en/">https://ummah4earth.org/en/</a> (accessed Mar. 23, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org05aa0e3"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-2-2">
+<ul class="org-ul">
+<li>“Your Voice Can Transform Islamic Finance: Demand Clean Energy Investment for Our Future,” Ummah for Earth. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://ummah4earth.org/en/islamic-finance-report/">https://ummah4earth.org/en/islamic-finance-report/</a></li>
+
+<li>“A Green Hajj: We commit to our role as stewards on Earth,” Ummah for Earth. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://ummah4earth.org/en/hajj2024/">https://ummah4earth.org/en/hajj2024/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. C. Foltz, F. M. Denny, and A. H. Baharuddin, Islam and Ecology: A Bestowed Trust. Center for the Study of World Religions, Harvard Divinity School, 2003.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ummah for Earth,” Ummah for Earth. <a href="https://ummah4earth.org/en/">https://ummah4earth.org/en/</a> (accessed Mar. 23, 2023).
+<ul class="org-ul">
+<li>“Green Mosques Initiative,” Ummah for Earth. <a href="https://ummah4earth.org/en/green-mosques-initiative/">https://ummah4earth.org/en/green-mosques-initiative/</a> (accessed Aug. 25, 2023).</li>
+<li>“Ummah Stories,” Ummah for Earth. <a href="https://ummah4earth.org/en/story-map/">https://ummah4earth.org/en/story-map/</a> (accessed Aug. 25, 2023).</li>
+<li>“Protect 2 Progress series,” Ummah for Earth. <a href="https://ummah4earth.org/en/ummah-for-earth/protect-to-progress-list/">https://ummah4earth.org/en/ummah-for-earth/protect-to-progress-list/</a> (accessed Aug. 25, 2023).</li>
+<li>“The Green Hajj and Umrah Guide,” Ummah for Earth. <a href="https://ummah4earth.org/en/greenguide/">https://ummah4earth.org/en/greenguide/</a> (accessed Aug. 25, 2023).</li>
+<li>“Ummah for Earth,” Ummah for Earth. <a href="https://ummah4earth.org/en/">https://ummah4earth.org/en/</a> (accessed Aug. 25, 2023).</li>
+<li>“Fasting through Nature: A Lesson from an Elder and a Peach Tree,” Ummah for Earth. <a href="https://ummah4earth.org/en/story/9816/fasting-through-nature-a-lesson-from-an-elder-and-a-peach-tree/">https://ummah4earth.org/en/story/9816/fasting-through-nature-a-lesson-from-an-elder-and-a-peach-tree/</a> (accessed Aug. 25, 2023).</li>
+<li>“Greening the Ummah: How Can Muslims Embrace Technology for Environmental Solutions?,” Ummah for Earth. <a href="https://ummah4earth.org/en/story/9933/technology4green/">https://ummah4earth.org/en/story/9933/technology4green/</a> (accessed Aug. 25, 2023).</li>
+<li>“A Summer Guide for Eco-Friendly Holidays,” Ummah for Earth. <a href="https://ummah4earth.org/en/story/9975/a-summer-guide-for-eco-friendly-holidays/">https://ummah4earth.org/en/story/9975/a-summer-guide-for-eco-friendly-holidays/</a> (accessed Aug. 25, 2023).</li>
+<li>“The Last Generation (Generasi Terakhir) &amp;#8211; A book by Dr. Fachruddin M. Mangunjaya,” Ummah for Earth. Accessed: Apr. 09, 2024. [Online]. Available: <a href="https://ummah4earth.org/en/the-last-generation-book/">https://ummah4earth.org/en/the-last-generation-book/</a></li>
+<li>“Harnessing Islamic Finance for a Green Future,” Ummah for Earth. Accessed: Apr. 09, 2024. [Online]. Available: <a href="https://ummah4earth.org/en/story/9542/harnessing-islamic-finance-for-a-green-future/">https://ummah4earth.org/en/story/9542/harnessing-islamic-finance-for-a-green-future/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga0bbf7a" class="outline-4">
+<h4 id="orga0bbf7a"><span class="section-number-4">3.3.3.</span> Judaism</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>“Judaism | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Judaism">https://fore.yale.edu/World-Religions/Judaism</a> (accessed Jun. 02, 2023).</li>
+<li>“Judaism &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM1kLsZiIWnLb0Ct-Vq4howz">https://www.youtube.com/playlist?list=PLfoNnUIQBvM1kLsZiIWnLb0Ct-Vq4howz</a> (accessed Jun. 15, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Tirosh-Samuelson, Judaism and Ecology: Created World and Revealed Word. Harvard University Press, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc30b235" class="outline-4">
+<h4 id="orgc30b235"><span class="section-number-4">3.3.4.</span> Sikhism</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>“Sarsa: Rivulet associated with pivotal moment in Guru Gobind Singh’s life, is dying.” <a href="https://www.downtoearth.org.in/news/water/sarsa-rivulet-associated-with-pivotal-moment-in-guru-gobind-singh-s-life-is-dying-86834">https://www.downtoearth.org.in/news/water/sarsa-rivulet-associated-with-pivotal-moment-in-guru-gobind-singh-s-life-is-dying-86834</a> (accessed Dec. 29, 2022).</li>
+
+<li>“How Nanak used nature in his verses to drive home his point.” <a href="https://www.downtoearth.org.in/interviews/environment/how-nanak-used-nature-in-his-verses-to-drive-home-his-point-67792">https://www.downtoearth.org.in/interviews/environment/how-nanak-used-nature-in-his-verses-to-drive-home-his-point-67792</a> (accessed Nov. 08, 2022).</li>
+
+<li><b>“Sikhism &amp; Ecology - YouTube.”</b> <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0bHlUIDjnkr2l-qksBFdP4">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0bHlUIDjnkr2l-qksBFdP4</a> (accessed Jun. 15, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0e3e5a" class="outline-3">
+<h3 id="orge0e3e5a"><span class="section-number-3">3.4.</span> Buddhism</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgc546bf3" class="outline-4">
+<h4 id="orgc546bf3"><span class="section-number-4">3.4.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>“Buddhism | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Buddhism">https://fore.yale.edu/World-Religions/Buddhism</a> (accessed May 29, 2023).
+<ul class="org-ul">
+<li>“Buddhism &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0oQLsHJ3xw01A3TEeBc-k3">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0oQLsHJ3xw01A3TEeBc-k3</a> (accessed Jun. 15, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. E. Tucker, D. R. Williams, and W. D. Ryuken, Buddhism and Ecology: The Interconnection of Dharma and Deeds. Harvard University Center for the Study of World Religions, 1997.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c933d3" class="outline-4">
+<h4 id="org7c933d3"><span class="section-number-4">3.4.2.</span> People</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>“Sulak Sivaraksa,” Wikipedia. Oct. 31, 2021. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sulak_Sivaraksa&amp;oldid=1052806306">https://en.wikipedia.org/w/index.php?title=Sulak_Sivaraksa&amp;oldid=1052806306</a>
+<ul class="org-ul">
+<li>B. C. for R. Affairs Peace and World, “Sulak Sivaraksa.” <a href="https://berkleycenter.georgetown.edu/people/sulak-sivaraksa">https://berkleycenter.georgetown.edu/people/sulak-sivaraksa</a> (accessed Jun. 04, 2022).</li>
+<li>“Sulak Sivaraksa,” Right Livelihood. <a href="https://rightlivelihood.org/the-change-makers/find-a-laureate/sulak-sivaraksa/">https://rightlivelihood.org/the-change-makers/find-a-laureate/sulak-sivaraksa/</a> (accessed Jun. 04, 2022).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Preah Maha Ghosananda,” Wikipedia. Jan. 07, 2022. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Preah_Maha_Ghosananda&amp;oldid=1064247866">https://en.wikipedia.org/w/index.php?title=Preah_Maha_Ghosananda&amp;oldid=1064247866</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3c9fee4" class="outline-4">
+<h4 id="org3c9fee4"><span class="section-number-4">3.4.3.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ul class="org-ul">
+<li>“International Network of Engaged Buddhists,” Wikipedia. May 23, 2021. Accessed: Jun. 04, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Network_of_Engaged_Buddhists&amp;oldid=1024722533">https://en.wikipedia.org/w/index.php?title=International_Network_of_Engaged_Buddhists&amp;oldid=1024722533</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdfb6bd8" class="outline-4">
+<h4 id="orgdfb6bd8"><span class="section-number-4">3.4.4.</span> Special Topics</h4>
+</div>
+<div id="outline-container-orgb62bffa" class="outline-4">
+<h4 id="orgb62bffa"><span class="section-number-4">3.4.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<ul class="org-ul">
+<li>M. Batchelor and K. Brown, Buddhism and Ecology. Motilal Banarsidass Publishe, 1994.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kaza, Green Buddhism: Practice and Compassionate Action in Uncertain Times. Shambhala Publications, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. D. Lama and F. Alt, Our Only Home: A Climate Appeal to the World. Bloomsbury Publishing, 2020.</li>
+<li>D. L. X. Bstan-ʼdzin-rgya-mtsho, The Sheltering Tree of Interdependence: A Buddhist Monk’s Reflections on Ecological Responsibility. Tibet House, 2007.</li>
+
+<li>“Earth as Koan, Earth as Self – with Susan Murphy Roshi,” Emergence Magazine. Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://emergencemagazine.org/interview/earth-as-koan-earth-as-self/">https://emergencemagazine.org/interview/earth-as-koan-earth-as-self/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f4bde7" class="outline-3">
+<h3 id="org5f4bde7"><span class="section-number-3">3.5.</span> Jainism</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>C. K. Chapple, <b>Jainism &amp; Ecology – Nonviolence in this Web of Life.</b> Cambridge, MA: Harvard University Press, 2002.</li>
+<li>“Jainism &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM1YiG6CZJDJSKItq9H0VoBk">https://www.youtube.com/playlist?list=PLfoNnUIQBvM1YiG6CZJDJSKItq9H0VoBk</a> (accessed Jun. 15, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Rankin, Jainism and Environmental Philosophy: Karma and the Web of Life, 1st edition. Routledge, 2019.</li>
+<li>A. Rankin, Jainism and Environmental Politics, 1st edition. Taylor &amp; Francis Ltd, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org86a3044" class="outline-3">
+<h3 id="org86a3044"><span class="section-number-3">3.6.</span> Bahai</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>“Overview Essay | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Bahai-Faith/Overview-Essay">https://fore.yale.edu/World-Religions/Bahai-Faith/Overview-Essay</a> (accessed Jun. 13, 2023).</li>
+<li>“Baha’i Faith | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions/Bahai-Faith">https://fore.yale.edu/World-Religions/Bahai-Faith</a> (accessed Jun. 13, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Baha’i Faith &amp; Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM3j1TyWpBZbdvTkfYY7OzcA">https://www.youtube.com/playlist?list=PLfoNnUIQBvM3j1TyWpBZbdvTkfYY7OzcA</a> (accessed Jun. 15, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org21250db" class="outline-2">
+<h2 id="org21250db"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>“Your Voice Can Transform Islamic Finance: Demand Clean Energy Investment for Our Future,” Ummah for Earth. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://ummah4earth.org/en/islamic-finance-report/">https://ummah4earth.org/en/islamic-finance-report/</a></li>
+
+<li>K. Armstrong, Sacred Nature. Vintage, 2023.</li>
+
+<li>U. N. Environment, “Faith for Earth Coalition | UNEP - UN Environment Programme.” Accessed: Aug. 14, 2024. [Online]. Available: <a href="https://www.unep.org/about-un-environment/faith-earth-initiative">https://www.unep.org/about-un-environment/faith-earth-initiative</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“5 reasons why people of faith are a powerful force in the fight against climate change and environmental crises,” Greenpeace International. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/65861/5-reasons-why-people-of-faith-are-a-powerful-force-in-the-fight-against-climate-change-and-environmental-crises/">https://www.greenpeace.org/international/story/65861/5-reasons-why-people-of-faith-are-a-powerful-force-in-the-fight-against-climate-change-and-environmental-crises/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. T. Swimme and M. E. Tucker, Journey of the Universe. Yale University Press, 2011.</li>
+
+<li>K. Wilber, Sex, Ecology, Spirituality: The Spirit of Evolution, Second Edition, Revised edition. Shambhala, 2001.</li>
+
+<li>“Earth Talk: Science and Spiritual Practices - Dr Rupert Sheldrake - YouTube.” <a href="https://www.youtube.com/watch?v=mJckSxlX3_c&amp;list=WL&amp;index=2">https://www.youtube.com/watch?v=mJckSxlX3_c&amp;list=WL&amp;index=2</a> (accessed Apr. 12, 2023).</li>
+
+<li>“FORE Spotlights Series - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM2DfHmBp5_X4NFfaI6Yss4S">https://www.youtube.com/playlist?list=PLfoNnUIQBvM2DfHmBp5_X4NFfaI6Yss4S</a> (accessed Jun. 15, 2023).</li>
+
+<li>“Religions and Ecology: Restoring the Earth Community, Yale/Coursera Specialization - YouTube.” <a href="https://www.youtube.com/watch?v=NKXNou_DdsA&amp;list=WL&amp;index=3&amp;t=13s">https://www.youtube.com/watch?v=NKXNou_DdsA&amp;list=WL&amp;index=3&amp;t=13s</a> (accessed May 26, 2023).</li>
+
+<li>“Religion and Ecology - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0PJkDcLBq9TQQ_RylKqhqI">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0PJkDcLBq9TQQ_RylKqhqI</a> (accessed Jun. 15, 2023).</li>
+
+<li>“World Religions | Yale Forum on Religion and Ecology.” <a href="https://fore.yale.edu/World-Religions">https://fore.yale.edu/World-Religions</a> (accessed Jun. 14, 2023).</li>
+
+<li>“Graham Harvey Interview - YouTube.” <a href="https://www.youtube.com/playlist?list=PL77311891373E297B">https://www.youtube.com/playlist?list=PL77311891373E297B</a> (accessed Jun. 15, 2023).</li>
+
+<li>“Ecojustice - YouTube.” <a href="https://www.youtube.com/playlist?list=PLfoNnUIQBvM0BR9ampehyDHIs9qc2XKe">https://www.youtube.com/playlist?list=PLfoNnUIQBvM0BR9ampehyDHIs9qc2XKe</a>- (accessed Jun. 15, 2023).</li>
+
+<li>B. T. Swimme and M. E. Tucker, Journey of the Universe. Yale University Press, 2011.</li>
+
+<li>B. Swimme, The Universe Story: From the Primordial Flaring Forth to the Ecozoic Era&#x2013;A Celebration of the Unfol, Reprint edition. HarperOne, 1994.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2024-12-14 Sat 18:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
