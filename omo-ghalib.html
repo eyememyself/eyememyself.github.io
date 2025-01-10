@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-10 Fri 15:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ghalib</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ghalib</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org23a3499">1. General</a></li>
+<li><a href="#org8ed32a3">2. World</a>
+<ul>
+<li><a href="#orga7cb64d">2.1. Biographies</a></li>
+<li><a href="#org3e61712">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3aeb50c">3. Core</a></li>
+<li><a href="#org31e92a0">4. Arts</a>
+<ul>
+<li><a href="#orgdd19f56">4.1. Literature</a></li>
+<li><a href="#orga760415">4.2. Music</a>
+<ul>
+<li><a href="#orgd0ff5ad">4.2.1. Jagjit Singh</a></li>
+<li><a href="#orge557788">4.2.2. Lata Mangeshkar</a></li>
+<li><a href="#org7629dfc">4.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4181be4">4.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3afaeb6">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org23a3499" class="outline-2">
+<h2 id="org23a3499"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Ghalib,” Wikipedia. Jan. 05, 2025. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ghalib&amp;oldid=1267543756">https://en.wikipedia.org/w/index.php?title=Ghalib&amp;oldid=1267543756</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ed32a3" class="outline-2">
+<h2 id="org8ed32a3"><span class="section-number-2">2.</span> World</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga7cb64d" class="outline-3">
+<h3 id="orga7cb64d"><span class="section-number-3">2.1.</span> Biographies</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Prasar Bharati Archives, Mirza Ghalib | Urdu Poet | Life Journey, (Aug. 26, 2021). Accessed: Aug. 05, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=2cESTYL-ZHQ">https://www.youtube.com/watch?v=2cESTYL-ZHQ</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. A. Farooqi, Ghalib: A Wilderness At My Doorstep: A Critical Biography. Penguin Random House India Private Limited, 2021.</li>
+<li>M. A. K. Ghalib, <i>The Oxford India Ghalib: Life, Letters and Ghazals.</i> Oxford University Press, 2007.</li>
+
+<li>G. C. Narang, Ghalib: Innovative Meanings and the Ingenious Mind. Oxford University Press, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e61712" class="outline-3">
+<h3 id="org3e61712"><span class="section-number-3">2.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3aeb50c" class="outline-2">
+<h2 id="org3aeb50c"><span class="section-number-2">3.</span> Core</h2>
+</div>
+<div id="outline-container-org31e92a0" class="outline-2">
+<h2 id="org31e92a0"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgdd19f56" class="outline-3">
+<h3 id="orgdd19f56"><span class="section-number-3">4.1.</span> Literature</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>A. Ahmad, Ghazals of Ghalib: Versions from the Urdu by Aijaz, Ahmed, W.S. Merwin, Adrienne Rich, William Stafford, David Ray, Thomas Fitzsimmons, Mark Strand, and William Hunt. OUP India, 1995.</li>
+<li>M. A. K. Ghalib, <i>The Oxford India Ghalib: Life, Letters and Ghazals.</i> Oxford University Press, 2007.</li>
+<li>G. C. Narang, Ghalib: Innovative Meanings and the Ingenious Mind. Oxford University Press, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. A. K. Ghalib, Ghalib: Selected Poems and Letters. Columbia University Press, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Bal, Dozakhnama: Conversation in Hell. Random House India, 2012.</li>
+<li>A. Raza and S. S. Goodyear, A Tribute to Ghalib: Twenty-One Ghazals Reinterpreted. Penguin Random House India Private Limited, 2017.</li>
+<li>R. Mir, Ghalib: A Thousand Desires. Penguin Random House India Private Limited, 2019.</li>
+<li>M. A. K. Ghalib, Love Sonnets of Ġhālib. Rupa, 2002.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Rekhta, Unconventional “Ghalib” with Farhat Ehsas | Rekhta Studio, (Dec. 29, 2018). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lZJTYzj8lHc">https://www.youtube.com/watch?v=lZJTYzj8lHc</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why We Must Read Ghalib’s Rejected Verses.” Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://thewire.in/books/why-we-must-read-ghalibs-rejected-verses">https://thewire.in/books/why-we-must-read-ghalibs-rejected-verses</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga760415" class="outline-3">
+<h3 id="orga760415"><span class="section-number-3">4.2.</span> Music</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgd0ff5ad" class="outline-4">
+<h4 id="orgd0ff5ad"><span class="section-number-4">4.2.1.</span> Jagjit Singh</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Jagjit Singh, Tere Bayaan Ghalib (part 1), (Feb. 16, 2019). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=nHzg8Tnqilo">https://www.youtube.com/watch?v=nHzg8Tnqilo</a></li>
+<li>Jagjit Singh, Tere Bayaan Ghalib (part 2), (Feb. 16, 2019). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=rUB3dJHXrK0">https://www.youtube.com/watch?v=rUB3dJHXrK0</a></li>
+
+<li>Saregama Ghazal, Best of Mirza Ghalib Ghazals by Jagjit Singh - Vol 1 | Ghazal Hits | Audio Jukebox | Dil-E-Nadan, (Aug. 03, 2015). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=G4fyG5_uWlk">https://www.youtube.com/watch?v=G4fyG5_uWlk</a></li>
+<li>Saregama Ghazal, Mirza Ghalib Ghazals by Jagjit Singh - Vol 2 | Ghazal Hits | Audio Jukebox, (Sep. 02, 2015). Accessed: Mar. 22, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=_6sP-aXpDW8">https://www.youtube.com/watch?v=_6sP-aXpDW8</a></li>
+
+<li>Saregama Ghazal, Collection Of Jagjit Singh &amp; Mirza Ghalib | Chitthi Aai Hai | Kisi Ne Bhi To Na Dekha | Ghazal Hits, (Nov. 25, 2023). Accessed: Aug. 05, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0ICkd5y41Lg">https://www.youtube.com/watch?v=0ICkd5y41Lg</a></li>
+
+<li>Saregama Ghazal, Gulzar’s Mirza Ghalib | Hazaron Khwahishen Aisi | Jagjit Singh Ghazal | Mirza Ghalib | Sad Ghazal, (Sep. 06, 2023). Accessed: Aug. 05, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=m56HxVs2FGs">https://www.youtube.com/watch?v=m56HxVs2FGs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge557788" class="outline-4">
+<h4 id="orge557788"><span class="section-number-4">4.2.2.</span> Lata Mangeshkar</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>“Lata Mangeshkar Sings for Ghalib | Ghazal Songs Audio Jukebox | Lata Mangeshkar Songs - YouTube.” <a href="https://www.youtube.com/watch?v=9nNjMLX4koE&amp;list=WL&amp;index=3">https://www.youtube.com/watch?v=9nNjMLX4koE&amp;list=WL&amp;index=3</a> (accessed Feb. 09, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7629dfc" class="outline-4">
+<h4 id="org7629dfc"><span class="section-number-4">4.2.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org4181be4" class="outline-3">
+<h3 id="org4181be4"><span class="section-number-3">4.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3afaeb6" class="outline-2">
+<h2 id="org3afaeb6"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-01-10 Fri 15:32</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
