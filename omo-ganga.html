@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-19 Sun 12:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ganga</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ganga</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org98b8948">1. General</a></li>
+<li><a href="#org128a62a">2. STEMM</a>
+<ul>
+<li><a href="#orgee0a0b9">2.1. Environment</a>
+<ul>
+<li><a href="#orgab561cf">2.1.1. History</a></li>
+<li><a href="#org3bc5846">2.1.2. MahaKumbh</a></li>
+<li><a href="#orgeca6ae0">2.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf3c4c24">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org031a302">3. World</a>
+<ul>
+<li><a href="#org40522a7">3.1. Religions, Spirituality, Misc</a></li>
+<li><a href="#org107557b">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga225424">4. Arts</a>
+<ul>
+<li><a href="#org4aeeccd">4.1. Music</a>
+<ul>
+<li><a href="#orgb93e04d">4.1.1. Hindustani Classical Music</a></li>
+<li><a href="#org17a2e93">4.1.2. Pop</a></li>
+<li><a href="#org3a3e5fa">4.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgeafae3d">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org76cee25">5. Special Topics</a>
+<ul>
+<li><a href="#org8d48d33">5.1. Vandana Shiva</a></li>
+<li><a href="#orgfee7176">5.2. Texts</a></li>
+<li><a href="#org77fa387">5.3. Articles, Essays</a></li>
+</ul>
+</li>
+<li><a href="#org03c55a7">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org98b8948" class="outline-2">
+<h2 id="org98b8948"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org128a62a" class="outline-2">
+<h2 id="org128a62a"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgee0a0b9" class="outline-3">
+<h3 id="orgee0a0b9"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgab561cf" class="outline-4">
+<h4 id="orgab561cf"><span class="section-number-4">2.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Powerful ancient earthquake likely rerouted the Ganga 2,500 years ago — and there are risks of another such event in future.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740">https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3bc5846" class="outline-4">
+<h4 id="org3bc5846"><span class="section-number-4">2.1.2.</span> MahaKumbh</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>V. Mishra, “Mahakumbh 2025: Unaware of water quality at Prayagraj, 25 million devotees took holy dip in Ganga,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga">https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga</a></li>
+<li>V. Mishra, “Approaching Mahakumbh raises an important question: How would pilgrims take holy dip in sewage-infused Ganga river,” Down To Earth. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river">https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeca6ae0" class="outline-4">
+<h4 id="orgeca6ae0"><span class="section-number-4">2.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>J. Basu, “Gangasagar: Several ghats swallowed by sea due to climate change, state decries lack of central support,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support">https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support</a></li>
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+
+<li>R. Kochhar, “The virus in the rivers: histories and antibiotic afterlives of the bacteriophage at the sangam in Allahabad,” Notes and Records: the Royal Society Journal of the History of Science, vol. 74, no. 4, pp. 625–651, Dec. 2020, doi: 10.1098/rsnr.2020.0019.</li>
+<li>“Is Ganga losing its resilience?” <a href="https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045">https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045</a> (accessed Apr. 20, 2022).</li>
+<li>K. Khairnar, “Ganges: special at its origin,” J Biol Res (Thessalon), vol. 23, p. 16, Jul. 2016, doi: 10.1186/s40709-016-0055-6.</li>
+<li>“A British scientist’s quest to scientifically explain the ‘mythical powers of the Ganges,’” ThePrint, Nov. 03, 2021. <a href="https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/">https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/</a> (accessed Apr. 20, 2022).</li>
+<li>“Water pollution in rivers: A long pathway to a better tomorrow.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987">https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987</a></li>
+<li>“Namami Gange: Ten Years On, The Ganga Still Runs Dirty, Its Water Undrinkable,” The Wire. Accessed: May 19, 2024. [Online]. Available: <a href="https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable">https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf3c4c24" class="outline-3">
+<h3 id="orgf3c4c24"><span class="section-number-3">2.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org031a302" class="outline-2">
+<h2 id="org031a302"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org40522a7" class="outline-3">
+<h3 id="org40522a7"><span class="section-number-3">3.1.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Slowly Along the Ganges, on an Exploration of Personal Faith,” The Wire. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://thewire.in/books/slowly-along-the-ganges-on-an-exploration-of-personal-faith">https://thewire.in/books/slowly-along-the-ganges-on-an-exploration-of-personal-faith</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org107557b" class="outline-3">
+<h3 id="org107557b"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga225424" class="outline-2">
+<h2 id="orga225424"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4aeeccd" class="outline-3">
+<h3 id="org4aeeccd"><span class="section-number-3">4.1.</span> Music</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgb93e04d" class="outline-4">
+<h4 id="orgb93e04d"><span class="section-number-4">4.1.1.</span> Hindustani Classical Music</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org509dc5f"></a>Jasraj<br />
+<div class="outline-text-5" id="text-4-1-1-1">
+<ul class="org-ul">
+<li>Music Today, Maa Ganga | Audio Jukebox | Vocal | Devotional | Pandit Jasraj | Music Today, (Aug. 28, 2015). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=EnJqJHKlm5Y">https://www.youtube.com/watch?v=EnJqJHKlm5Y</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd3f0aee"></a>Easy Listening<br />
+<div class="outline-text-5" id="text-4-1-1-2">
+<ul class="org-ul">
+<li>Music Today, Ode To Ganga I Audio Jukebox I Instrumental I World Music | Hariprasad Chaurasia | Music Today, (Aug. 31, 2015). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=MwqcHuPbezg">https://www.youtube.com/watch?v=MwqcHuPbezg</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org17a2e93" class="outline-4">
+<h4 id="org17a2e93"><span class="section-number-4">4.1.2.</span> Pop</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Play The Holy Ganga by Anuradha Paudwal &amp; Pandit Sanjeev Abhyankar on Prime Music.” Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B074XNT9CH">https://music.amazon.com/albums/B074XNT9CH</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a3e5fa" class="outline-4">
+<h4 id="org3a3e5fa"><span class="section-number-4">4.1.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgeafae3d" class="outline-3">
+<h3 id="orgeafae3d"><span class="section-number-3">4.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org76cee25" class="outline-2">
+<h2 id="org76cee25"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8d48d33" class="outline-3">
+<h3 id="org8d48d33"><span class="section-number-3">5.1.</span> Vandana Shiva</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>V. Shiva, <b>Water Wars: Privatization, Pollution and Profit.</b> Pluto Press, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfee7176" class="outline-3">
+<h3 id="orgfee7176"><span class="section-number-3">5.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>R. Sanghi, Ed., Our National River Ganga: Lifeline of Millions, Softcover reprint of the original 1st ed. 2014 edition. Springer, 2016.</li>
+
+<li>B. Banerjee, Superhuman River: Stories of the Ganga. New Delhi: Aleph Book Company, 2020.</li>
+
+<li>V. Mallet, River of Life, River of Death: The Ganges and India’s Future. OUP UK, 2017.
+<ul class="org-ul">
+<li>V. Mallet, “How the Ganga Is Contributing to Increasing Antibiotic Resistance Worldwide,” The Caravan. <a href="https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide">https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide</a> (accessed Apr. 20, 2022).</li>
+</ul></li>
+
+<li>S. Sen, Ganga: The Many Pasts of a River. Gurgaon, Haryana, India: Penguin Viking, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org77fa387" class="outline-3">
+<h3 id="org77fa387"><span class="section-number-3">5.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>J. Basu, “Gangasagar: Several ghats swallowed by sea due to climate change, state decries lack of central support,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support">https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org03c55a7" class="outline-2">
+<h2 id="org03c55a7"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-01-19 Sun 12:13</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
