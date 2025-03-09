@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-09 Sun 15:52 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Local Futures</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Local Futures</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3855841">1. General</a></li>
+<li><a href="#orgae537ee">2. STEMM</a>
+<ul>
+<li><a href="#orgc9ea6ca">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org10ff47c">3. World</a>
+<ul>
+<li><a href="#org027b384">3.1. People</a></li>
+<li><a href="#orgb5fbd87">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge87a3e6">4. Core</a>
+<ul>
+<li><a href="#org2cf84d8">4.1. Readings</a></li>
+<li><a href="#org6a0f41d">4.2. Videos</a>
+<ul>
+<li><a href="#org0d4e0ed">4.2.1. General</a></li>
+<li><a href="#org00018f8">4.2.2. Planet Local</a></li>
+<li><a href="#orga1ebe60">4.2.3. Hindi</a></li>
+</ul>
+</li>
+<li><a href="#orgba87016">4.3. Podcasts</a></li>
+</ul>
+</li>
+<li><a href="#org1baacb4">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org3855841" class="outline-2">
+<h2 id="org3855841"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Local Futures is a pioneer of the worldwide localization movement.,” Local Futures. <a href="https://www.localfutures.org/">https://www.localfutures.org/</a> (accessed Mar. 11, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae537ee" class="outline-2">
+<h2 id="orgae537ee"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc9ea6ca" class="outline-3">
+<h3 id="orgc9ea6ca"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org10ff47c" class="outline-2">
+<h2 id="org10ff47c"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org027b384" class="outline-3">
+<h3 id="org027b384"><span class="section-number-3">3.1.</span> People</h3>
+</div>
+
+<div id="outline-container-orgb5fbd87" class="outline-3">
+<h3 id="orgb5fbd87"><span class="section-number-3">3.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orge87a3e6" class="outline-2">
+<h2 id="orge87a3e6"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2cf84d8" class="outline-3">
+<h3 id="org2cf84d8"><span class="section-number-3">4.1.</span> Readings</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Recommended readings,” Local Futures. <a href="https://www.localfutures.org/action-resources/recommended-readings/">https://www.localfutures.org/action-resources/recommended-readings/</a> (accessed Mar. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Norberg-Hodge, <b>Ancient Futures.</b> Local Futures, 2016.</li>
+
+<li>H. Norberg-Hodge, <b>Local Is Our Future: Steps to an Economics of Happiness.</b> Local Futures, 2019.
+<ul class="org-ul">
+<li>“Local is Our Future - audiobook - Store,” Local Futures. Accessed: Dec. 02, 2023. [Online]. Available: <a href="https://www.localfutures.org/store/Local-is-Our-Future-audiobook-p552299528">https://www.localfutures.org/store/Local-is-Our-Future-audiobook-p552299528</a></li>
+</ul></li>
+
+<li>“Translations of our books and films,” Local Futures. <a href="https://www.localfutures.org/publications/translations-of-materials/">https://www.localfutures.org/publications/translations-of-materials/</a> (accessed Mar. 06, 2023).</li>
+
+<li>“Free reading materials,” Local Futures. <a href="https://www.localfutures.org/publications/free-downloads/">https://www.localfutures.org/publications/free-downloads/</a> (accessed Mar. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6a0f41d" class="outline-3">
+<h3 id="org6a0f41d"><span class="section-number-3">4.2.</span> Videos</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org0d4e0ed" class="outline-4">
+<h4 id="org0d4e0ed"><span class="section-number-4">4.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>“Explore films and short videos by Local Futures,” Local Futures. <a href="https://www.localfutures.org/films/">https://www.localfutures.org/films/</a> (accessed Mar. 06, 2023).</li>
+
+<li>“Films for change,” Local Futures. <a href="https://www.localfutures.org/action-resources/films-for-change/">https://www.localfutures.org/action-resources/films-for-change/</a> (accessed Mar. 06, 2023).</li>
+
+<li>“Translations of our books and films,” Local Futures. <a href="https://www.localfutures.org/publications/translations-of-materials/">https://www.localfutures.org/publications/translations-of-materials/</a> (accessed Mar. 06, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org00018f8" class="outline-4">
+<h4 id="org00018f8"><span class="section-number-4">4.2.2.</span> Planet Local</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>“PLANET LOCAL : A Quiet Revolution - produced by Local Futures,” Local Futures. <a href="https://www.localfutures.org/films/planet-local-a-quiet-revolution/">https://www.localfutures.org/films/planet-local-a-quiet-revolution/</a> (accessed Mar. 06, 2023).
+<ul class="org-ul">
+<li>“PLANET LOCAL: A Quiet Revolution TRAILER - YouTube.” <a href="https://www.youtube.com/watch?v=3VKoisJfADM">https://www.youtube.com/watch?v=3VKoisJfADM</a> (accessed Jun. 27, 2022).</li>
+<li>Local Futures, Planet Local: A Quiet Revolution (English), (Jun. 21, 2022). Accessed: Jun. 27, 2022. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=EHAXdrLagwY">https://www.youtube.com/watch?v=EHAXdrLagwY</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga1ebe60" class="outline-4">
+<h4 id="orga1ebe60"><span class="section-number-4">4.2.3.</span> Hindi</h4>
+<div class="outline-text-4" id="text-4-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgfe7f990"></a>Texts<br />
+<div class="outline-text-5" id="text-4-2-3-1">
+<ul class="org-ul">
+<li>Helena Norberg-Hodge, <b>Ancient Futures - Hindi - Pracheenta Ka Bhavishya (प्रचीनता का भविष्य).</b> Accessed: Dec. 31, 2023. [Online]. Available: <a href="http://archive.org/details/AncientFutures-Hindi-PracheentaKaBhavishya">http://archive.org/details/AncientFutures-Hindi-PracheentaKaBhavishya</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Helena Norberg-Hodge, <b>स्थानीय ही है – हमारा भविष्य.</b> Accessed: Dec. 31, 2023. Available: <a href="https://www.localfutures.org/wp-content/uploads/Excerpt-Local-is-Our-Future-by-Helena-Norberg-Hodge-Hindi-Translation-1.pdf">https://www.localfutures.org/wp-content/uploads/Excerpt-Local-is-Our-Future-by-Helena-Norberg-Hodge-Hindi-Translation-1.pdf</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org053212f"></a>Videos<br />
+<div class="outline-text-5" id="text-4-2-3-2">
+<ul class="org-ul">
+<li>उन्मत्त व्यापार!, (May 02, 2019). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://vimeo.com/333753545">https://vimeo.com/333753545</a></li>
+
+<li>स्थानिक अन्न जगाला वाचवू शकतं!, (Dec. 23, 2021). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=2XW-4msAryQ">https://www.youtube.com/watch?v=2XW-4msAryQ</a></li>
+
+<li>स्थानीय भविष्य प्रस्तुत करता है: स्थानीय जा रहे हैं: समाधान - गुणक, (Mar. 07, 2017). Accessed: Mar. 06, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zLwGgpguxJk">https://www.youtube.com/watch?v=zLwGgpguxJk</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgba87016" class="outline-3">
+<h3 id="orgba87016"><span class="section-number-3">4.3.</span> Podcasts</h3>
+</div>
+</div>
+<div id="outline-container-org1baacb4" class="outline-2">
+<h2 id="org1baacb4"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Localization and direct democracy in Forest Row, UK,” Local Futures. Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://www.localfutures.org/programs/global-to-local/local-futures-podcast/localization-and-direct-democracy-in-forest-row-uk/">https://www.localfutures.org/programs/global-to-local/local-futures-podcast/localization-and-direct-democracy-in-forest-row-uk/</a></li>
+
+<li>Local Futures (Economics of Happiness), Paradise With Side Effects, (Jan. 02, 2025). Accessed: Jan. 25, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=KFnUV389vXg">https://www.youtube.com/watch?v=KFnUV389vXg</a></li>
+
+<li>“Living simply, slowly and more intentionally – Bill Powers,” Local Futures. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.localfutures.org/programs/global-to-local/local-futures-podcast/living-simply-slowly-and-more-intentionally-bill-powers/">https://www.localfutures.org/programs/global-to-local/local-futures-podcast/living-simply-slowly-and-more-intentionally-bill-powers/</a></li>
+
+<li>“Trade Gone Mad animation,” Local Futures. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.localfutures.org/films/trade-gone-mad/">https://www.localfutures.org/films/trade-gone-mad/</a></li>
+
+<li>L. M. Sacasas, “Embracing Sub-Optimal Relationships by L. M. Sacasas,” Local Futures. Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://www.localfutures.org/embracing-sub-optimal-relationships/">https://www.localfutures.org/embracing-sub-optimal-relationships/</a></li>
+
+<li>“Go Local! How to beat the economists at their own game I Michael Shuman - YouTube.” Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=pqbz0t9dJYE">https://www.youtube.com/watch?v=pqbz0t9dJYE</a></li>
+<li>Local Futures (Economics of Happiness), Go Local! How to beat the economists at their own game I Michael Shuman, (Nov. 18, 2024). Accessed: Dec. 05, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pqbz0t9dJYE">https://www.youtube.com/watch?v=pqbz0t9dJYE</a></li>
+
+<li>Local Futures (Economics of Happiness), Closer to Home - Voices of Hope in a Time of Crisis, (Jun. 17, 2024). Accessed: Oct. 13, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=OJBWvUEZ-50">https://www.youtube.com/watch?v=OJBWvUEZ-50</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Sordi, “It’s not the end, we have several possible futures: Interview with indigenous author Ailton Krenak,” Local Futures. Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://www.localfutures.org/its-not-the-end-we-have-several-possible-futures-interview-with-indigenous-author-ailton-krenak/">https://www.localfutures.org/its-not-the-end-we-have-several-possible-futures-interview-with-indigenous-author-ailton-krenak/</a></li>
+
+<li>H. Coleman, “Go Back and Fetch It: Sankofa and the Cult of Progress,” Local Futures. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://www.localfutures.org/go-back-and-fetch-it-sankofa-and-the-cult-of-progress/">https://www.localfutures.org/go-back-and-fetch-it-sankofa-and-the-cult-of-progress/</a></li>
+
+<li>“Finding meaning in a world gone mad – Iain McGilchrist,” Local Futures. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://www.localfutures.org/programs/global-to-local/local-futures-podcast/finding-meaning-in-a-world-gone-mad-iain-mcgilchrist/">https://www.localfutures.org/programs/global-to-local/local-futures-podcast/finding-meaning-in-a-world-gone-mad-iain-mcgilchrist/</a></li>
+
+<li>Local Futures, The Power of Local, (Jun. 20, 2024). Accessed: Aug. 04, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IQ7Qtrndfok">https://www.youtube.com/watch?v=IQ7Qtrndfok</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Closer to Home by Local Futures and Cyrus Sutton,” Local Futures. Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.localfutures.org/films/closer-to-home/">https://www.localfutures.org/films/closer-to-home/</a>
+<ul class="org-ul">
+<li>Closer to Home Trailer, (Jun. 17, 2024). Accessed: Jun. 22, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=nQ4zwTJKYOg">https://www.youtube.com/watch?v=nQ4zwTJKYOg</a></li>
+</ul></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“The Global Society for Good Leadership.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://leadershipsociety.world/">https://leadershipsociety.world/</a></li>
+<li>“Business for Humanity.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://leadershipsociety.world/knowledgehub/BusinessforHumanity/">https://leadershipsociety.world/knowledgehub/BusinessforHumanity/</a></li>
+<li>“REINVENTING CAPITALISM: Local Futures - Economics of Happiness with Helena Norberg-Hodge,” Google Docs. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://docs.google.com/forms/d/e/1FAIpQLSckMsmB014ixLr6p5QCsIrY2VGK11BZo7_os-ycz1Ekf4sVWg/viewform?usp=embed_facebook">https://docs.google.com/forms/d/e/1FAIpQLSckMsmB014ixLr6p5QCsIrY2VGK11BZo7_os-ycz1Ekf4sVWg/viewform?usp=embed_facebook</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Helena Norberg-Hodge on the Thom Hartmann Show, (Apr. 15, 2012). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=uetxoLSk6zE">https://www.youtube.com/watch?v=uetxoLSk6zE</a></li>
+<li>TEDxEQCHCH - Helena Norberg-Hodge - The Economics of Happiness, (Jul. 01, 2011). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4r06_F2FIKM">https://www.youtube.com/watch?v=4r06_F2FIKM</a></li>
+<li>“Medicine Festival,” YouTube. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UC7tAtlqjhUw_riRjvwU_DOA">https://www.youtube.com/channel/UC7tAtlqjhUw_riRjvwU_DOA</a></li>
+<li>Helena Norberg-Hodge | Medicine Festival 2023, (Apr. 03, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=2BavbGNZO7A">https://www.youtube.com/watch?v=2BavbGNZO7A</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Kulturhof Hinter Musegg Luzern,” hinter-musegg. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.hinter-musegg.ch">https://www.hinter-musegg.ch</a></li>
+<li>“NAPILI FARMERS MARKET,” NAPILI FARMERS MARKET. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.napilifarmersmarket.com">https://www.napilifarmersmarket.com</a></li>
+<li>Creating the future our hearts know is possible I Rupert Read, (May 31, 2024). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=AqA9h6h43U4">https://www.youtube.com/watch?v=AqA9h6h43U4</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Centralized Resistance, Decentralized Economics - Helena Norberg-Hodge (Local Futures), (May 31, 2024). Accessed: Jun. 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=p4l02SCi-f0">https://www.youtube.com/watch?v=p4l02SCi-f0</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Re-embedding ourselves in the community of life – Liz Hosken,” Local Futures. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.localfutures.org/programs/global-to-local/local-futures-podcast/re-embedding-ourselves-in-the-community-of-life-liz-hosken/">https://www.localfutures.org/programs/global-to-local/local-futures-podcast/re-embedding-ourselves-in-the-community-of-life-liz-hosken/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Efroymson, “A Tale of Localization in Two Cities by Debra Efroymson,” Local Futures. Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://www.localfutures.org/a-tale-of-localization-in-two-cities/">https://www.localfutures.org/a-tale-of-localization-in-two-cities/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Localization: learning from indigenous communities I Thais Mantovani, (Mar. 19, 2024). Accessed: Apr. 08, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=JQ0YnFkFav4">https://www.youtube.com/watch?v=JQ0YnFkFav4</a></li>
+<li>“Illusions of progress and their countertrends in Japan - Keibo Oiwa,” Local Futures. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.localfutures.org/programs/global-to-local/local-futures-podcast/illusions-of-progress-and-their-countertrends-in-japan-keibo-oiwa/">https://www.localfutures.org/programs/global-to-local/local-futures-podcast/illusions-of-progress-and-their-countertrends-in-japan-keibo-oiwa/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Helena Norberg-Hodge: Local Solutions for a Connected World,” Greenpeace International. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/podcasts/66094/systemshift-helena-norberg-hodge-local-solutions-for-a-connected-world/">https://www.greenpeace.org/international/podcasts/66094/systemshift-helena-norberg-hodge-local-solutions-for-a-connected-world/</a></li>
+
+<li>“Planet Local Voices video and podcast series by Local Futures,” Local Futures. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.localfutures.org/programs/planet-local-voices/">https://www.localfutures.org/programs/planet-local-voices/</a></li>
+
+<li>H. Coleman, “Active networks for a rapid global-to-local transition by Henry Coleman,” Local Futures, Jul. 13, 2023. <a href="https://www.localfutures.org/active-networks-for-a-rapid-global-to-local-transition/">https://www.localfutures.org/active-networks-for-a-rapid-global-to-local-transition/</a> (accessed Aug. 27, 2023).</li>
+
+<li>H. Coleman, “Local Food for Rapid Transition,” Local Futures, Jun. 29, 2023. <a href="https://www.localfutures.org/local-food-for-rapid-transition/">https://www.localfutures.org/local-food-for-rapid-transition/</a> (accessed Aug. 27, 2023).</li>
+
+<li>“Voices from the Field,” Local Futures. <a href="https://www.localfutures.org/programs/global-to-local/voices-from-the-field/">https://www.localfutures.org/programs/global-to-local/voices-from-the-field/</a> (accessed Mar. 11, 2023).</li>
+
+<li>“Action tools,” Local Futures. <a href="https://www.localfutures.org/action-resources/">https://www.localfutures.org/action-resources/</a> (accessed Mar. 06, 2023).</li>
+<li>L. Futures, “Home,” A new project from Local Futures: <a href="https://actionguide.localfutures.org">https://actionguide.localfutures.org</a> (accessed Mar. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Norberg-Hodge and S. Gorelick, Eds., Life After Progress: Technology, Community and the New Economy. Local Futures, 2023.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-03-09 Sun 15:52</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
