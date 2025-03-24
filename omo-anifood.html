@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-24 Mon 10:39 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animal Food</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Animal Food</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgda81f3f">1. General</a></li>
+<li><a href="#orge30bf14">2. Dairy</a>
+<ul>
+<li><a href="#orgba2c689">2.1. General</a></li>
+<li><a href="#orgd22125f">2.2. STEMM</a>
+<ul>
+<li><a href="#org785499f">2.2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2857f3a">2.3. World</a>
+<ul>
+<li><a href="#org9414f1b">2.3.1. Products</a></li>
+<li><a href="#org15ed4e1">2.3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org990e9cf">2.4. Core</a>
+<ul>
+<li><a href="#orgffd6b52">2.4.1. 0</a></li>
+<li><a href="#org6b2be85">2.4.2. Documentaries</a></li>
+</ul>
+</li>
+<li><a href="#org35e6985">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org20e9780">3. Eggs</a>
+<ul>
+<li><a href="#org21ac557">3.1. General</a></li>
+<li><a href="#org6bfc8a9">3.2. STEMM</a>
+<ul>
+<li><a href="#orgceaf4fa">3.2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgca0efee">3.3. Worldly Matters</a>
+<ul>
+<li><a href="#orgb97699a">3.3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org49938d4">3.4. Core</a></li>
+<li><a href="#orga94a1e1">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org13fe490">4. Meats</a>
+<ul>
+<li><a href="#org9971050">4.1. General</a></li>
+<li><a href="#orgc099558">4.2. Philosophy</a>
+<ul>
+<li><a href="#org3280b5e">4.2.1. Ethics</a></li>
+</ul>
+</li>
+<li><a href="#org1ca7466">4.3. STEMM</a>
+<ul>
+<li><a href="#org944bee1">4.3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbf970c1">4.4. World</a>
+<ul>
+<li><a href="#orgb81f2e1">4.4.1. Orgs</a></li>
+<li><a href="#org37bbeb3">4.4.2. Products</a></li>
+<li><a href="#orgca4e50e">4.4.3. Nation States</a></li>
+<li><a href="#org8168da4">4.4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org09191fe">4.5. Core</a>
+<ul>
+<li><a href="#orgc4d527b">4.5.1. 0</a></li>
+<li><a href="#org338d19f">4.5.2. Documentaries</a></li>
+</ul>
+</li>
+<li><a href="#org693366c">4.6. Special Topics</a></li>
+<li><a href="#orgba4592f">4.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc1d0b05">5. Special Topics</a>
+<ul>
+<li><a href="#org5064750">5.1. Free Range</a></li>
+</ul>
+</li>
+<li><a href="#org06ff015">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgda81f3f" class="outline-2">
+<h2 id="orgda81f3f"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orge30bf14" class="outline-2">
+<h2 id="orge30bf14"><span class="section-number-2">2.</span> Dairy</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgba2c689" class="outline-3">
+<h3 id="orgba2c689"><span class="section-number-3">2.1.</span> General</h3>
+</div>
+<div id="outline-container-orgd22125f" class="outline-3">
+<h3 id="orgd22125f"><span class="section-number-3">2.2.</span> STEMM</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org785499f" class="outline-4">
+<h4 id="org785499f"><span class="section-number-4">2.2.1.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org2857f3a" class="outline-3">
+<h3 id="org2857f3a"><span class="section-number-3">2.3.</span> World</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org9414f1b" class="outline-4">
+<h4 id="org9414f1b"><span class="section-number-4">2.3.1.</span> Products</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org7628aaa"></a><b>Organic</b><br />
+<div class="outline-text-5" id="text-2-3-1-1">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org15ed4e1" class="outline-4">
+<h4 id="org15ed4e1"><span class="section-number-4">2.3.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>officialPETAIndia, Horrors in India’s Dairy Industry  (Hindi), (Apr. 30, 2020). Accessed: Mar. 20, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=OWeu5EW8GNA">https://www.youtube.com/watch?v=OWeu5EW8GNA</a></li>
+
+<li>“Dairy giant Arla’s climate ‘fairytale.’” Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/17/dairy-giant-arlas-climate-fairytale">https://theecologist.org/2025/mar/17/dairy-giant-arlas-climate-fairytale</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org990e9cf" class="outline-3">
+<h3 id="org990e9cf"><span class="section-number-3">2.4.</span> Core</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-orgffd6b52" class="outline-4">
+<h4 id="orgffd6b52"><span class="section-number-4">2.4.1.</span> 0</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgca82a76"></a>Milk<br />
+<ol class="org-ol">
+<li><a id="org324697c"></a>General<br /></li>
+<li><a id="org32e91e3"></a><b>Organic</b><br />
+<div class="outline-text-6" id="text-2-4-1-1-2">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd3ac8bf"></a>Breast Milk<br />
+<ul class="org-ul">
+<li><a id="org11ad4b7"></a>General<br /></li>
+<li><a id="orgb12bb92"></a>Safety<br />
+<div class="outline-text-7" id="text-orgb12bb92">
+<ul class="org-ul">
+<li>OCA, “Greens Warn: German Breast Milk Unsafe after Glyphosate Findings,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/greens-warn-german-breast-milk-unsafe-after-glyphosate-findings/">https://organicconsumers.org/greens-warn-german-breast-milk-unsafe-after-glyphosate-findings/</a></li>
+
+<li>OCA, “‘Detection of Messenger RNA COVID-19 Vaccines in Human Breast Milk,’” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/detection-of-messenger-rna-covid-19-vaccines-in-human-breast-milk/">https://organicconsumers.org/detection-of-messenger-rna-covid-19-vaccines-in-human-breast-milk/</a></li>
+
+<li>OCA, “Non-Stick Chemicals Contaminate Breast Milk,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/non-stick-chemicals-contaminate-breast-milk/">https://organicconsumers.org/non-stick-chemicals-contaminate-breast-milk/</a></li>
+
+<li>OCA, “Got MilQ? Gene Engineers Move to Replace Dairy and Breast Milk,” Organic Consumers. Accessed: May 31, 2024. [Online]. Available: <a href="https://organicconsumers.org/got-milq-gene-engineers-move-to-replace-dairy-and-breast-milk-2/">https://organicconsumers.org/got-milq-gene-engineers-move-to-replace-dairy-and-breast-milk-2/</a></li>
+
+<li>“Does Mother’s Milk Transfer Environmental Toxins to Breast-Feeding Babies?,” Scientific American. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/earth-talks-breast-feeding/">https://www.scientificamerican.com/article/earth-talks-breast-feeding/</a></li>
+
+<li>“Traces of pesticides found in breastmilk. Is this the reason behind the death of infants in UP?,” India Today. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.indiatoday.in/newsmo/video/traces-of-pesticides-found-in-breastmilk-is-this-the-reason-behind-the-death-of-infants-in-up-2329708-2023-02-02">https://www.indiatoday.in/newsmo/video/traces-of-pesticides-found-in-breastmilk-is-this-the-reason-behind-the-death-of-infants-in-up-2329708-2023-02-02</a></li>
+
+<li>J. R. Schroeder, “Pesticides found in mothers’ breast milk – so what?,” The Conversation. Accessed: May 31, 2024. [Online]. Available: <a href="http://theconversation.com/pesticides-found-in-mothers-breast-milk-so-what-26427">http://theconversation.com/pesticides-found-in-mothers-breast-milk-so-what-26427</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3c8ab05"></a>Misc<br />
+<div class="outline-text-7" id="text-org3c8ab05">
+<ul class="org-ul">
+<li>“Molecular Pharma in Breast Milk: The Path Ahead,” NewsClick. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.newsclick.in/molecular-pharma-breast-milk-path-ahead">https://www.newsclick.in/molecular-pharma-breast-milk-path-ahead</a></li>
+
+<li>H. Devlin and H. D. S. correspondent, “Tobacco-like plant engineered to pump out nutrients found in breast milk,” The Guardian, Jun. 16, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.theguardian.com/science/article/2024/jun/16/tobacco-like-plant-engineered-to-pump-out-nutrients-found-in-breast-milk">https://www.theguardian.com/science/article/2024/jun/16/tobacco-like-plant-engineered-to-pump-out-nutrients-found-in-breast-milk</a></li>
+
+<li>“Sale of breast milk raises eyebrows,” The Times of India, Jul. 03, 2022. Accessed: May 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/home/sunday-times/sale-of-breast-milk-raises-eyebrows/articleshow/92623732.cms">https://timesofindia.indiatimes.com/home/sunday-times/sale-of-breast-milk-raises-eyebrows/articleshow/92623732.cms</a></li>
+
+<li>S. Steele, “Why Aren’t Governments Acting Against Breast Milk Cos in India and Elsewhere? – The Wire Science.” Accessed: Jul. 05, 2022. [Online]. Available: <a href="https://science.thewire.in/health/breast-milk-india-profitable/">https://science.thewire.in/health/breast-milk-india-profitable/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orged01bea"></a>Camel Milk<br />
+<ul class="org-ul">
+<li><a id="org44c7f50"></a>General<br />
+<div class="outline-text-7" id="text-org44c7f50">
+<ul class="org-ul">
+<li>“Camel milk,” Wikipedia. Nov. 01, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187">https://en.wikipedia.org/w/index.php?title=Camel_milk&amp;oldid=1119440187</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org115304e"></a>Environment<br />
+<div class="outline-text-7" id="text-org115304e">
+<ul class="org-ul">
+<li>“Would you drink camel milk?,” BBC News, Jul. 10, 2019. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.bbc.com/news/business-48935371">https://www.bbc.com/news/business-48935371</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdb6c6f6"></a>Health<br />
+<div class="outline-text-7" id="text-orgdb6c6f6">
+<ul class="org-ul">
+<li>S. Zibaee, S. M. al-reza Hosseini, M. Yousefi, A. Taghipour, M. A. Kiani, and M. R. Noras, “Nutritional and Therapeutic Characteristics of Camel Milk in Children: A Systematic Review,” Electron Physician, vol. 7, no. 7, pp. 1523–1528, Nov. 2015, doi: 10.19082/1523.</li>
+
+<li>“Camel Milk: Are There Health Benefits?,” WebMD. <a href="https://www.webmd.com/diet/health-benefits-camel-milk">https://www.webmd.com/diet/health-benefits-camel-milk</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org80d6e73"></a>Products<br />
+<div class="outline-text-7" id="text-org80d6e73">
+<ul class="org-ul">
+<li>“Amazon.com: Organic Fresh Frozen Camel Milk - Fresh Flavor with Health Benefits - Raw &amp; Natural Grade A -Allergen Free Milk from Healthy Camels in Midwest - Made In The USA [6 Pack] : Grocery &amp; Gourmet Food.” <a href="https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU">https://www.amazon.com/Desert-Farms-Camel-Milk-Frozen/dp/B00IH4J7FU</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org8c0cd48"></a>Misc<br />
+<div class="outline-text-7" id="text-org8c0cd48">
+<ul class="org-ul">
+<li>K. Dsouza, “‘Camel Charisma’: A German Vet, A Rajasthan Man, &amp; Camel Milk Are Helping The Raika Community Earn,” The Better India. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://thebetterindia.com/364022/camel-charisma-milk-sadri-rajasthan-kumbalgarh-dairy-paper-wool-cheese/">https://thebetterindia.com/364022/camel-charisma-milk-sadri-rajasthan-kumbalgarh-dairy-paper-wool-cheese/</a></li>
+<li>R. Lebeter, “‘Happy milk’: the dairy family that sustains a fair shake of the bottle,” The Guardian, Oct. 28, 2022. Accessed: Nov. 18, 2022. [Online]. Available: <a href="https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle">https://www.theguardian.com/global/2022/oct/29/happy-milk-the-dairy-family-that-sustains-a-fair-shake-of-the-bottle</a></li>
+
+<li>“Godwar Camel Cheese Fest,” League for Pastoral Peoples, Nov. 06, 2022. <a href="http://www.pastoralpeoples.org/godwar-camel-cheese-fest/">http://www.pastoralpeoples.org/godwar-camel-cheese-fest/</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0e8afce"></a>Milk Powder<br />
+<ul class="org-ul">
+<li><a id="org8026796"></a>General<br />
+<div class="outline-text-7" id="text-org8026796">
+<ul class="org-ul">
+<li>“Powdered milk,” Wikipedia. Jan. 06, 2023. Accessed: Feb. 13, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463">https://en.wikipedia.org/w/index.php?title=Powdered_milk&amp;oldid=1131850463</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9fdcee4"></a>Products<br />
+<div class="outline-text-7" id="text-org9fdcee4">
+<ul class="org-ul">
+<li>“Nestle Everyday Milk Powder - 400g Pouch : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010">https://www.amazon.in/Nestle-Everyday-Milk-Powder-Pouch/dp/B012VH3010</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org63531d9"></a>Misc<br />
+<div class="outline-text-7" id="text-org63531d9">
+<ul class="org-ul">
+<li>“Pros and Cons of Powdered Milk,” LIVESTRONG.COM. <a href="https://www.livestrong.com/article/68702-pros-cons-powdered-milk/">https://www.livestrong.com/article/68702-pros-cons-powdered-milk/</a> (accessed Feb. 13, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Main, “US baby formulas often contain contaminants, study finds,” The New Lede. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/03/us-baby-formula-contaminants/">https://www.thenewlede.org/2025/03/us-baby-formula-contaminants/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc36bc93"></a>Misc<br />
+<div class="outline-text-6" id="text-2-4-1-1-6">
+<ul class="org-ul">
+<li>“Cow’s Milk: A Cruel and Unhealthy Product,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/issues/animals-used-for-food/animals-used-food-factsheets/cows-milk-cruel-unhealthy-product/">https://www.peta.org/issues/animals-used-for-food/animals-used-food-factsheets/cows-milk-cruel-unhealthy-product/</a></li>
+
+<li>“The milk of human cruelty.” Accessed: Mar. 14, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/13/milk-human-cruelty">https://theecologist.org/2025/mar/13/milk-human-cruelty</a></li>
+
+<li>L. Leffer, “Is raw milk safe? Science has a clear answer.,” Popular Science. Accessed: Nov. 19, 2024. [Online]. Available: <a href="https://www.popsci.com/health/is-raw-milk-safe/">https://www.popsci.com/health/is-raw-milk-safe/</a></li>
+
+<li>“Pasteurization Kills Bird Flu Virus in Milk, New Studies Confirm | Scientific American.” Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/pasteurization-kills-bird-flu-virus-in-milk-new-studies-confirm/">https://www.scientificamerican.com/article/pasteurization-kills-bird-flu-virus-in-milk-new-studies-confirm/</a></li>
+
+<li>C. Gillam, “Baby bottle makers deceived parents over dangers of plastic products, lawsuits allege,” The New Lede. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/06/baby-bottle-makers-deceived-parents-over-dangers-of-plastic-products-lawsuits-allege/">https://www.thenewlede.org/2024/06/baby-bottle-makers-deceived-parents-over-dangers-of-plastic-products-lawsuits-allege/</a></li>
+
+<li>“Warrior skeletons reveal Bronze Age Europeans couldn’t drink milk.” Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.science.org/content/article/warrior-skeletons-reveal-bronze-age-europeans-couldn-t-drink-milk">https://www.science.org/content/article/warrior-skeletons-reveal-bronze-age-europeans-couldn-t-drink-milk</a></li>
+
+<li>S. Strogatz, “What Does Milk Do for Babies?,” Quanta Magazine. Accessed: Apr. 28, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/">https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/</a></li>
+<li>“What Does Milk Do for Babies? | Quanta Magazine.” Accessed: Apr. 28, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/">https://www.quantamagazine.org/what-does-milk-do-for-babies-20240425/</a></li>
+
+<li>“Opinion: There is no longer any justification for drinking cow’s milk,” The Independent, Feb. 15, 2022. <a href="https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html">https://www.independent.co.uk/voices/dairy-farming-cows-panorama-animal-cruelty-b2015628.html</a> (accessed Feb. 17, 2022).</li>
+
+<li>J. G. Sperling, Roman Charity: Queer Lactations in Early Modern Visual Culture. transcript publishing, 2016, p. 430 Pages.</li>
+<li>“On Roman Charity, or a woman’s filial debt to the patriarchy | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy">https://aeon.co/essays/on-roman-charity-or-a-womans-filial-debt-to-the-patriarchy</a> (accessed Mar. 24, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga771e50"></a>Cheese<br />
+<ol class="org-ol">
+<li><a id="org639a792"></a>General<br />
+<div class="outline-text-6" id="text-2-4-1-2-1">
+<ul class="org-ul">
+<li>“Cheese,” Wikipedia. Sep. 28, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cheese&amp;oldid=1248335838">https://en.wikipedia.org/w/index.php?title=Cheese&amp;oldid=1248335838</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc8b42f3"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org3cef825"></a>Misc<br />
+<div class="outline-text-7" id="text-org3cef825">
+<ul class="org-ul">
+<li>A. E. November 2013, “Blessed are the cheesemakers,” Chemistry World. Accessed: Dec. 17, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/blessed-are-the-cheesemakers/6848.article">https://www.chemistryworld.com/features/blessed-are-the-cheesemakers/6848.article</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org71044b8"></a>World<br />
+<ul class="org-ul">
+<li><a id="orgaa99ad9"></a>Orgs<br />
+<ul class="org-ul">
+<li><a id="org0a6b89d"></a><b>Organic</b><br />
+<div class="outline-text-8" id="text-org0a6b89d">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb220732"></a>Misc<br />
+<div class="outline-text-8" id="text-orgb220732">
+<ul class="org-ul">
+<li><i>ISayOrganic</i></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org467aa89"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org370e00b"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org1f7d63a"></a>Variants<br />
+<ul class="org-ul">
+<li><a id="org2d20817"></a>Artisanal Cheese<br />
+<div class="outline-text-8" id="text-org2d20817">
+<ul class="org-ul">
+<li>arathimenon, “Say cheese! Traditional pastoralists embrace innovation with artisanal cheese,” Mongabay-India. Accessed: Dec. 26, 2023. [Online]. Available: <a href="https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/">https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3c39a84"></a>Cottage Cheese, Paneer<br />
+<div class="outline-text-8" id="text-org3c39a84">
+<ul class="org-ul">
+<li>“Cottage cheese,” Wikipedia. Sep. 19, 2024. Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cottage_cheese&amp;oldid=1246558429">https://en.wikipedia.org/w/index.php?title=Cottage_cheese&amp;oldid=1246558429</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org171f3ea"></a>Gouda<br />
+<div class="outline-text-8" id="text-org171f3ea">
+<ul class="org-ul">
+<li>“Gouda cheese,” Wikipedia. Sep. 01, 2024. Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gouda_cheese&amp;oldid=1243390553">https://en.wikipedia.org/w/index.php?title=Gouda_cheese&amp;oldid=1243390553</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org09b0b78"></a>Parmesan<br />
+<div class="outline-text-8" id="text-org09b0b78">
+<ul class="org-ul">
+<li>“Parmesan,” Wikipedia. Oct. 03, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Parmesan&amp;oldid=1249123401">https://en.wikipedia.org/w/index.php?title=Parmesan&amp;oldid=1249123401</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org289fd26"></a>Mozzarella<br />
+<div class="outline-text-8" id="text-org289fd26">
+<ul class="org-ul">
+<li>“Mozzarella,” Wikipedia. Sep. 27, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mozzarella&amp;oldid=1247987404">https://en.wikipedia.org/w/index.php?title=Mozzarella&amp;oldid=1247987404</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdfcf930"></a>Feta<br />
+<div class="outline-text-8" id="text-orgdfcf930">
+<ul class="org-ul">
+<li>“Feta - Wikipedia.” Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Feta">https://en.wikipedia.org/wiki/Feta</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf25d033"></a>Cheddar<br />
+<div class="outline-text-8" id="text-orgf25d033">
+<ul class="org-ul">
+<li>“Cheddar cheese,” Wikipedia. Sep. 11, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cheddar_cheese&amp;oldid=1245178044">https://en.wikipedia.org/w/index.php?title=Cheddar_cheese&amp;oldid=1245178044</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org75ea636"></a>Ricotta<br />
+<div class="outline-text-8" id="text-org75ea636">
+<ul class="org-ul">
+<li>“Ricotta,” Wikipedia. Sep. 29, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ricotta&amp;oldid=1248460049">https://en.wikipedia.org/w/index.php?title=Ricotta&amp;oldid=1248460049</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge9f96bc"></a>Edam<br />
+<div class="outline-text-8" id="text-orge9f96bc">
+<ul class="org-ul">
+<li>“Edam cheese,” Wikipedia. Sep. 27, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Edam_cheese&amp;oldid=1248004200">https://en.wikipedia.org/w/index.php?title=Edam_cheese&amp;oldid=1248004200</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaa89470"></a>Brie<br />
+<div class="outline-text-8" id="text-orgaa89470">
+<ul class="org-ul">
+<li>“Brie,” Wikipedia. Oct. 03, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Brie&amp;oldid=1249126263">https://en.wikipedia.org/w/index.php?title=Brie&amp;oldid=1249126263</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orga90ded0"></a>Misc<br />
+<div class="outline-text-6" id="text-2-4-1-2-5">
+<ul class="org-ul">
+<li>J. Narzary, “The Last Cheesemakers of the Eastern Himalayas,” Atlas Obscura, 00:00 400AD. <a href="http://www.atlasobscura.com/articles/yak-cheese-india-bhutan">http://www.atlasobscura.com/articles/yak-cheese-india-bhutan</a> (accessed Nov. 18, 2022).</li>
+
+<li>“Godwar Camel Cheese Fest,” League for Pastoral Peoples, Nov. 06, 2022. <a href="http://www.pastoralpeoples.org/godwar-camel-cheese-fest/">http://www.pastoralpeoples.org/godwar-camel-cheese-fest/</a> (accessed Nov. 18, 2022).</li>
+
+<li>M. Bartels, “Why Do Cheeses Melt Differently?,” Scientific American. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/why-cheeses-such-as-mozzarella-and-cheddar-melt-differently-than-ricotta/">https://www.scientificamerican.com/article/why-cheeses-such-as-mozzarella-and-cheddar-melt-differently-than-ricotta/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org6e2dabd"></a>Cream<br /></li>
+<li><a id="org0bbd0f9"></a>Butter<br />
+<ol class="org-ol">
+<li><a id="orga954704"></a>General<br /></li>
+<li><a id="org666ad46"></a><b>Organic</b><br />
+<div class="outline-text-6" id="text-2-4-1-4-2">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>Organic India Cow Ghee</i></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfcc0650"></a>Misc<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6b2be85" class="outline-4">
+<h4 id="org6b2be85"><span class="section-number-4">2.4.2.</span> Documentaries</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Cowspiracy,” Wikipedia. Nov. 03, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122">https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org35e6985" class="outline-3">
+<h3 id="org35e6985"><span class="section-number-3">2.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>G. Monbiot, “Think dairy farming is benign? Our rivers tell a different story,” The Guardian, Oct. 05, 2015. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.theguardian.com/environment/2015/oct/05/think-dairy-farming-is-benign-our-rivers-tell-a-different-story">https://www.theguardian.com/environment/2015/oct/05/think-dairy-farming-is-benign-our-rivers-tell-a-different-story</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Waddell, “What Is Animal-Free Dairy? - The Non-GMO Project.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/what-is-animal-free-dairy/">https://www.nongmoproject.org/blog/what-is-animal-free-dairy/</a></li>
+
+<li>H. V. Tri-yasakda June Watsamon, “The U.S. Government Defended the Overseas Business Interests of Baby Formula Makers. Kids Paid the Price.,” ProPublica. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://www.propublica.org/article/how-america-waged-global-campaign-against-baby-formula-regulation-thailand">https://www.propublica.org/article/how-america-waged-global-campaign-against-baby-formula-regulation-thailand</a></li>
+
+<li>“Holy Terroir: Finding Taste in an Edge-Place - by Lily Kelting,” Emergence Magazine. Accessed: Mar. 24, 2024. [Online]. Available: <a href="https://emergencemagazine.org/essay/holy-terroir/">https://emergencemagazine.org/essay/holy-terroir/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mad Max: Fury Road,” Wikipedia. Mar. 13, 2023. Accessed: Mar. 24, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014">https://en.wikipedia.org/w/index.php?title=Mad_Max:_Fury_Road&amp;oldid=1144472014</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org20e9780" class="outline-2">
+<h2 id="org20e9780"><span class="section-number-2">3.</span> Eggs</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org21ac557" class="outline-3">
+<h3 id="org21ac557"><span class="section-number-3">3.1.</span> General</h3>
+</div>
+<div id="outline-container-org6bfc8a9" class="outline-3">
+<h3 id="org6bfc8a9"><span class="section-number-3">3.2.</span> STEMM</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgceaf4fa" class="outline-4">
+<h4 id="orgceaf4fa"><span class="section-number-4">3.2.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>“Free range egg warning.” Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://theecologist.org/2022/mar/28/free-range-egg-warning">https://theecologist.org/2022/mar/28/free-range-egg-warning</a></li>
+<li>T. Lewis, “Can You Get Bird Flu from Eggs? Your Egg Safety Questions Answered,” Scientific American. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/bird-flu-salmonella-and-other-health-risks-from-raw-eggs-explained/">https://www.scientificamerican.com/article/bird-flu-salmonella-and-other-health-risks-from-raw-eggs-explained/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgca0efee" class="outline-3">
+<h3 id="orgca0efee"><span class="section-number-3">3.3.</span> Worldly Matters</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgb97699a" class="outline-4">
+<h4 id="orgb97699a"><span class="section-number-4">3.3.1.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org49938d4" class="outline-3">
+<h3 id="org49938d4"><span class="section-number-3">3.4.</span> Core</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>“How to make the perfect boiled egg—if you have the patience.” Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://www.science.org/content/article/how-make-perfect-boiled-egg-if-you-have-patience">https://www.science.org/content/article/how-make-perfect-boiled-egg-if-you-have-patience</a></li>
+<li>A. Paul, “Science says this is the perfect way to boil eggs,” Popular Science. Accessed: Feb. 07, 2025. [Online]. Available: <a href="https://www.popsci.com/science/perfect-boiled-egg/">https://www.popsci.com/science/perfect-boiled-egg/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga94a1e1" class="outline-3">
+<h3 id="orga94a1e1"><span class="section-number-3">3.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org13fe490" class="outline-2">
+<h2 id="org13fe490"><span class="section-number-2">4.</span> Meats</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org9971050" class="outline-3">
+<h3 id="org9971050"><span class="section-number-3">4.1.</span> General</h3>
+</div>
+<div id="outline-container-orgc099558" class="outline-3">
+<h3 id="orgc099558"><span class="section-number-3">4.2.</span> Philosophy</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org3280b5e" class="outline-4">
+<h4 id="org3280b5e"><span class="section-number-4">4.2.1.</span> Ethics</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>T. C. &amp; M. Z. Sarah Gradidge, “How animal lovers get around the moral dilemma of eating meat,” Scroll.in. <a href="https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat">https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat</a> (accessed Feb. 17, 2022).</li>
+
+<li>“If you care about animals, it is your moral duty to eat them | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them">https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1ca7466" class="outline-3">
+<h3 id="org1ca7466"><span class="section-number-3">4.3.</span> STEMM</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org944bee1" class="outline-4">
+<h4 id="org944bee1"><span class="section-number-4">4.3.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>“Meat-eating creates risk of new pandemic that ‘would make Covid look like a dress rehearsal,’” The Independent. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.independent.co.uk/climate-change/news/meat-coronavirus-pandemic-science-animals-b1794996.html">https://www.independent.co.uk/climate-change/news/meat-coronavirus-pandemic-science-animals-b1794996.html</a></li>
+
+<li>N. Gilbert, “Blood, body parts and bacteria pollute wastewater from meatpacking plants. New rules could help clean it up,” U.S. Right to Know. Accessed: Mar. 04, 2025. [Online]. Available: <a href="https://usrtk.org/factory-farming/wastewater-from-meatpacking-plants/">https://usrtk.org/factory-farming/wastewater-from-meatpacking-plants/</a></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf970c1" class="outline-3">
+<h3 id="orgbf970c1"><span class="section-number-3">4.4.</span> World</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgb81f2e1" class="outline-4">
+<h4 id="orgb81f2e1"><span class="section-number-4">4.4.1.</span> Orgs</h4>
+</div>
+<div id="outline-container-org37bbeb3" class="outline-4">
+<h4 id="org37bbeb3"><span class="section-number-4">4.4.2.</span> Products</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li><a href="https://www.licious.in/">Licious</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgca4e50e" class="outline-4">
+<h4 id="orgca4e50e"><span class="section-number-4">4.4.3.</span> Nation States</h4>
+<div class="outline-text-4" id="text-4-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org031ca0e"></a>India<br />
+<ol class="org-ol">
+<li><a id="org9e92e49"></a>General<br /></li>
+<li><a id="orgfc87828"></a>Misc<br />
+<div class="outline-text-6" id="text-4-4-3-1-2">
+<ul class="org-ul">
+<li>“‘Non-veg food should be banned in India’: TMC MP Shatrughan Sinha,” The Indian Express. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://indianexpress.com/article/cities/kolkata/non-veg-food-banned-india-tmc-mp-shatrughan-sinha-9820720/">https://indianexpress.com/article/cities/kolkata/non-veg-food-banned-india-tmc-mp-shatrughan-sinha-9820720/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8168da4" class="outline-4">
+<h4 id="org8168da4"><span class="section-number-4">4.4.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ul class="org-ul">
+<li>“Animal rights activists flock to KFC protests.” Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests">https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests</a></li>
+
+<li>“Greenpeace challenges JBS&amp;#8217; New York Stock Exchange listing and Netherlands move over links to corruption, deforestation and emissions,” Greenpeace International. Accessed: Feb. 12, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/72773/greenpeace-challenges-jbs-new-york-stock-exchange-listing-and-netherlands-move-over-links-to-corruption-deforestation-and-emissions/">https://www.greenpeace.org/international/press-release/72773/greenpeace-challenges-jbs-new-york-stock-exchange-listing-and-netherlands-move-over-links-to-corruption-deforestation-and-emissions/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>U. Sinclair and K. Gehrmann, The Jungle: California: Ten Speed Press, 2019.</li>
+<li>U. Sinclair and M. Dickstein, The Jungle. Westminster: Bantam Classics, 1981.</li>
+<li>C. Voigt, L. Hundscheid, C. Plank, and M. Pichler, “Meat politics. Analysing actors, strategies and power relations governing the meat regime in Austria,” Geoforum, vol. 154, p. 104048, Aug. 2024, doi: 10.1016/j.geoforum.2024.104048.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org09191fe" class="outline-3">
+<h3 id="org09191fe"><span class="section-number-3">4.5.</span> Core</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-orgc4d527b" class="outline-4">
+<h4 id="orgc4d527b"><span class="section-number-4">4.5.1.</span> 0</h4>
+<div class="outline-text-4" id="text-4-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="org8d007c8"></a>Pigs, Pork<br />
+<ol class="org-ol">
+<li><a id="org941bf4c"></a>General<br /></li>
+<li><a id="org65ded00"></a>Environment<br />
+<div class="outline-text-6" id="text-4-5-1-1-2">
+<ul class="org-ul">
+<li>“Save dogs, eat pigs?” Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://theecologist.org/2024/mar/18/save-dogs-eat-pigs">https://theecologist.org/2024/mar/18/save-dogs-eat-pigs</a></li>
+<li>“‘This farm is the epitome of squalor.’” Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://theecologist.org/2023/mar/18/farm-epitome-squalor">https://theecologist.org/2023/mar/18/farm-epitome-squalor</a></li>
+<li>“‘Horror’ at RSPCA Assured farms revealed.” Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://theecologist.org/2024/mar/28/horror-rspca-assured-farms-revealed">https://theecologist.org/2024/mar/28/horror-rspca-assured-farms-revealed</a></li>
+<li>“Pigs suffer ‘physical abuse, distress and neglect.’” Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://theecologist.org/2024/aug/29/pigs-suffer-physical-abuse-distress-and-neglect">https://theecologist.org/2024/aug/29/pigs-suffer-physical-abuse-distress-and-neglect</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc8a47f8"></a>Core<br />
+<div class="outline-text-6" id="text-4-5-1-1-3">
+<ul class="org-ul">
+<li>“Pork Butt | Contemporary Texas Kitchen,” Starting Strength. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://startingstrength.com/video/pork-butt-contemporary-texas-kitchen">https://startingstrength.com/video/pork-butt-contemporary-texas-kitchen</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org87246bc"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org50d5129"></a>Beef<br />
+<ol class="org-ol">
+<li><a id="orgb11608b"></a>General<br /></li>
+<li><a id="org4a237ca"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org6bb4a79"></a>Environment<br />
+<div class="outline-text-7" id="text-org6bb4a79">
+<ul class="org-ul">
+<li><b>“Grass-Fed Beef for a Post-Pandemic World - Chelsea Green Publishing,”</b> Jul. 22, 2022. <a href="https://www.chelseagreen.com/product/grass-fed-beef-for-a-post-pandemic-world/">https://www.chelseagreen.com/product/grass-fed-beef-for-a-post-pandemic-world/</a> (accessed Nov. 17, 2022).</li>
+
+<li>G. Monbiot, “The most damaging farm products? Organic, pasture-fed beef and lamb,” The Guardian, Aug. 16, 2022. Accessed: Aug. 17, 2022. [Online]. Available: <a href="https://www.theguardian.com/environment/2022/aug/16/most-damaging-farm-products-organic-pasture-fed-beef-lamb">https://www.theguardian.com/environment/2022/aug/16/most-damaging-farm-products-organic-pasture-fed-beef-lamb</a></li>
+
+<li>“Treating beef like coal would make a big dent in greenhouse-gas emissions,” The Economist. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.economist.com/graphic-detail/2021/10/02/treating-beef-like-coal-would-make-a-big-dent-in-greenhouse-gas-emissions">https://www.economist.com/graphic-detail/2021/10/02/treating-beef-like-coal-would-make-a-big-dent-in-greenhouse-gas-emissions</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org14873cb"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org759feff"></a>World<br />
+<ul class="org-ul">
+<li><a id="org56707ee"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org0f6fff9"></a>India<br />
+<ul class="org-ul">
+<li><a id="org9abda81"></a>General<br /></li>
+<li><a id="orgd438386"></a>World<br />
+<ul class="org-ul">
+<li><a id="org4efd40c"></a>Business<br />
+<div class="outline-text-10" id="text-org4efd40c">
+<ul class="org-ul">
+<li>A. Kamalakaran, “How India helped build Brazil’s enormous beef industry,” Scroll.in. <a href="https://scroll.in/magazine/1026159/how-india-helped-build-brazils-enormous-beef-industry">https://scroll.in/magazine/1026159/how-india-helped-build-brazils-enormous-beef-industry</a> (accessed Jul. 02, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org89e122e"></a>Texts<br />
+<div class="outline-text-10" id="text-org89e122e">
+<ul class="org-ul">
+<li>D. N. Jha, The Myth of the Holy Cow: With Additional Material: B. R. Ambedkar On Beef-Eating And Untouchability. New Delhi: Navayana, 2010.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. R. Ambedkar, Beef, Brahmins, and Broken Men: An Annotated Critical Selection from the Untouchables. Columbia University Press, 2020.
+<ul class="org-ul">
+<li>Beef, Brahmins &amp; Broken Men: An Annotated Critical Selection from The Untouchables (Launch Video), (Oct. 16, 2019). Accessed: Apr. 13, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pEqomTGFOFg">https://www.youtube.com/watch?v=pEqomTGFOFg</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org782e1d6"></a>Misc<br />
+<div class="outline-text-10" id="text-org782e1d6">
+<ul class="org-ul">
+<li>A. Tirodkar, “Goa Beef Ban Protests: Catholic, Muslim Communities Fight Cow Vigilante Groups,” Frontline. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/politics/goa-beef-ban-protests-catholic-muslim-communities-clash-cow-vigilante-groups/article69072206.ece">https://frontline.thehindu.com/politics/goa-beef-ban-protests-catholic-muslim-communities-clash-cow-vigilante-groups/article69072206.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge88d25c"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org21ef6c4"></a>Misc<br />
+<div class="outline-text-7" id="text-org21ef6c4">
+<ul class="org-ul">
+<li>“After New Beef Ban In One Of India’s Poorest States, Cow Herders, Meat Merchants &amp; Hotels Plunge Into Distress.” Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.article-14.com/post/after-new-beef-ban-in-one-of-india-s-poorest-states-cow-herders-meat-merchants-hotels-plunge-into-distress-677fff2785792">https://www.article-14.com/post/after-new-beef-ban-in-one-of-india-s-poorest-states-cow-herders-meat-merchants-hotels-plunge-into-distress-677fff2785792</a></li>
+
+<li>H. C.-J. Conversation The, “Settler colonialism, bison slaughter: How beef came to mark American identity,” Scroll.in. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://scroll.in/article/1074875/settler-colonialism-bison-slaughter-how-beef-came-to-mark-american-identity">https://scroll.in/article/1074875/settler-colonialism-bison-slaughter-how-beef-came-to-mark-american-identity</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7d1837b"></a>Special Topics<br /></li>
+
+<li><a id="orge6cdeb7"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-1-2-5">
+<ul class="org-ul">
+<li>C. Gillam, “In Amish country, an unlikely partnership with beef giant JBS roils community,” The New Lede. Accessed: Nov. 09, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/11/in-amis-country-an-unlikely-partnership-with-beef-giant-jbs-roils-community/">https://www.thenewlede.org/2024/11/in-amis-country-an-unlikely-partnership-with-beef-giant-jbs-roils-community/</a></li>
+
+<li>“Grass-Fed Beef for a Post-Pandemic World - Chelsea Green Publishing,” Jul. 22, 2022. <a href="https://www.chelseagreen.com/product/grass-fed-beef-for-a-post-pandemic-world/">https://www.chelseagreen.com/product/grass-fed-beef-for-a-post-pandemic-world/</a> (accessed Nov. 17, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org2bf076d"></a>Seafood<br />
+<ol class="org-ol">
+<li><a id="org97a1223"></a>General<br /></li>
+<li><a id="org0fd9a03"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org8551cec"></a>Environment<br />
+<ul class="org-ul">
+<li><a id="org1d27b0f"></a>The Ecologist<br />
+<div class="outline-text-8" id="text-org1d27b0f">
+<ul class="org-ul">
+<li>“Sustainable fishing rules ‘scientifically obsolete.’” Accessed: Sep. 25, 2024. [Online]. Available: <a href="https://theecologist.org/2024/sep/24/sustainable-fishing-rules-scientifically-obsolete">https://theecologist.org/2024/sep/24/sustainable-fishing-rules-scientifically-obsolete</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org943f818"></a>Misc<br />
+<div class="outline-text-8" id="text-org943f818">
+<ul class="org-ul">
+<li>S. Magazine and W. Sullivan, “Freshwater Fish Contain Harmful ‘Forever Chemicals,’” Smithsonian Magazine. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.smithsonianmag.com/smart-news/freshwater-fish-contain-harmful-forever-chemicals-180981467/">https://www.smithsonianmag.com/smart-news/freshwater-fish-contain-harmful-forever-chemicals-180981467/</a></li>
+
+<li>“Little Labels, Big Impact - The Non-GMO Project.” Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/little-labels-big-impact/">https://www.nongmoproject.org/little-labels-big-impact/</a>
+<ul class="org-ul">
+<li>“What does the MSC label mean,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean">https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean</a></li>
+</ul></li>
+
+<li>“Sustainable Fishing | MSC,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org">https://www.msc.org</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6b9b063"></a>Misc<br />
+<div class="outline-text-7" id="text-org6b9b063">
+<ul class="org-ul">
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+
+<li>P. Ferdinand, “From ocean to table, researchers discover microplastics, other pollutant particles in popular fish,” U.S. Right to Know. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/microplastics-pollutant-particles-in-popular-fish/">https://usrtk.org/healthwire/microplastics-pollutant-particles-in-popular-fish/</a></li>
+
+<li>P. S. University, “Microplastics are widespread in seafood that people eat, study suggests.” Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-microplastics-widespread-seafood-people.html">https://phys.org/news/2025-01-microplastics-widespread-seafood-people.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8d958e6"></a>World<br />
+<ul class="org-ul">
+<li><a id="org2cebbb2"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="orgbac8621"></a>India<br />
+<div class="outline-text-8" id="text-orgbac8621">
+<ul class="org-ul">
+<li>South First, Honnavar Protests: Fisherfolk face police brutality over controversial port project, (Feb. 28, 2025). Accessed: Mar. 10, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=NCuawVJKIPU">https://www.youtube.com/watch?v=NCuawVJKIPU</a></li>
+
+<li>T. Gupta et al., “Identifying leverage points for sustainability in India’s shark supply chains,” Marine Policy, vol. 173, p. 106580, Mar. 2025, doi: 10.1016/j.marpol.2024.106580.</li>
+
+<li>T. H. Bureau, “Centre launches country’s first organic fish cluster in Sikkim,” The Hindu, Jan. 06, 2025. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/sikkim/centre-launches-countrys-first-organic-fish-cluster-in-sikkim/article69069666.ece">https://www.thehindu.com/news/national/sikkim/centre-launches-countrys-first-organic-fish-cluster-in-sikkim/article69069666.ece</a></li>
+
+<li>“Breaking the Nets: An Oral History of India’s Fisherwomen,” The Wire. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://thewire.in/special/breaking-the-nets-an-oral-history">https://thewire.in/special/breaking-the-nets-an-oral-history</a></li>
+
+<li>“A fishy catch-22 in the Bay of Bengal,” People’s Archive of Rural India. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/a-fishy-catch-22-in-the-bay-of-bengal/">https://ruralindiaonline.org/en/articles/a-fishy-catch-22-in-the-bay-of-bengal/</a></li>
+
+<li>J. Rahul, “Deep-Sea Fishermen of Kerala and Tamil Nadu: Life, Risk and Survival in the Arabian Sea,” Frontline. Accessed: Nov. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/photo-essay/indian-deep-sea-fishing-communities-kerala-tamil-nadu-arabian-sea-long-distance-fishing-maritime-life/article68739582.ece">https://frontline.thehindu.com/photo-essay/indian-deep-sea-fishing-communities-kerala-tamil-nadu-arabian-sea-long-distance-fishing-maritime-life/article68739582.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Pandey, “Oil spill in Ennore brings fishing to a standstill,” Mongabay-India. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://india.mongabay.com/2023/12/oil-spill-in-ennore-brings-fishing-to-a-standstill/">https://india.mongabay.com/2023/12/oil-spill-in-ennore-brings-fishing-to-a-standstill/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org76f68fd"></a>Misc<br />
+<div class="outline-text-7" id="text-org76f68fd">
+<ul class="org-ul">
+<li>“Indonesian fishers file historic human trafficking lawsuit against major US seafood company,” Greenpeace International. Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/73401/indonesian-fishers-file-historic-human-trafficking-lawsuit-against-major-us-seafood-company/">https://www.greenpeace.org/international/press-release/73401/indonesian-fishers-file-historic-human-trafficking-lawsuit-against-major-us-seafood-company/</a></li>
+
+<li>“On Chennai’s Besant Nagar Coast, A Fisherman Makes Sense of the Sea,” Vikalp Sangam. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://thelocavore.in/2024/08/20/on-chennais-besant-nagar-coast-a-fisherman-makes-sense-of-the-sea/">https://thelocavore.in/2024/08/20/on-chennais-besant-nagar-coast-a-fisherman-makes-sense-of-the-sea/</a></li>
+
+<li>“MSC in the USA and Canada,” United States - English. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://www.msc.org/en-us">https://www.msc.org/en-us</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+
+<li>“Raising the Blue Flag: Solidarity on World Fisherpeoples’ Day,” Voices from FoE Asia Pacific. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://foeasiapacific.org/2024/11/21/raising-the-blue-flag-solidarity-on-world-fisher-peoples-day/">https://foeasiapacific.org/2024/11/21/raising-the-blue-flag-solidarity-on-world-fisher-peoples-day/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4ab19ef"></a>Core<br />
+<ul class="org-ul">
+<li><a id="orgd3ab5c1"></a>General<br />
+<div class="outline-text-7" id="text-orgd3ab5c1">
+<ul class="org-ul">
+<li>“Home | Good Fish Guide.” <a href="https://www.mcsuk.org/goodfishguide/">https://www.mcsuk.org/goodfishguide/</a> (accessed Sep. 26, 2021).</li>
+<li>“What does the MSC label mean,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean">https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org12b2ad9"></a>Salmon<br />
+<div class="outline-text-7" id="text-org12b2ad9">
+<ul class="org-ul">
+<li>L. Wainwright and N. Lutz, “How to buy sustainable salmon: an expert guide to navigating the nuance of eco-labels,” The Conversation. Accessed: Feb. 14, 2024. [Online]. Available: <a href="http://theconversation.com/how-to-buy-sustainable-salmon-an-expert-guide-to-navigating-the-nuance-of-eco-labels-222669">http://theconversation.com/how-to-buy-sustainable-salmon-an-expert-guide-to-navigating-the-nuance-of-eco-labels-222669</a></li>
+<li>J. Dyke, “Mass salmon deaths are a warning: no one should be eating this fish,” inews.co.uk. Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://inews.co.uk/opinion/mass-salmon-deaths-warning-eating-fish-2947867">https://inews.co.uk/opinion/mass-salmon-deaths-warning-eating-fish-2947867</a></li>
+<li>“The World’s Hunger for Salmon Is Linked to an Ecological Disaster,” Yahoo Finance. Accessed: May 06, 2024. [Online]. Available: <a href="https://finance.yahoo.com/news/world-hunger-salmon-linked-ecological-040029279.html">https://finance.yahoo.com/news/world-hunger-salmon-linked-ecological-040029279.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org89953db"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-1-3-5">
+<ul class="org-ul">
+<li>“Pfiesteria,” Wikipedia. Jan. 29, 2024. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pfiesteria&amp;oldid=1200243154">https://en.wikipedia.org/w/index.php?title=Pfiesteria&amp;oldid=1200243154</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org6bc3bcc"></a>Chicken, Poultry<br />
+<ol class="org-ol">
+<li><a id="orgf0fb2fb"></a>General<br /></li>
+<li><a id="orgd161da5"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org0c66b54"></a>The Ecologist<br />
+<div class="outline-text-7" id="text-org0c66b54">
+<ul class="org-ul">
+<li>“Ban new intensive poultry farming.” Accessed: Nov. 07, 2024. [Online]. Available: <a href="https://theecologist.org/2024/nov/07/ban-new-intensive-poultry-farming">https://theecologist.org/2024/nov/07/ban-new-intensive-poultry-farming</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc2734ef"></a>Misc<br />
+<div class="outline-text-7" id="text-orgc2734ef">
+<ul class="org-ul">
+<li>K. Bertran, C. Balzli, Y.-K. Kwon, T. M. Tumpey, A. Clark, and D. E. Swayne, “Airborne Transmission of Highly Pathogenic Influenza Virus during Processing of Infected Poultry,” Emerg Infect Dis, vol. 23, no. 11, pp. 1806–1814, Nov. 2017, doi: 10.3201/eid2311.170672.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org409c2a9"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgd711742"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org6117710"></a>India<br />
+<div class="outline-text-8" id="text-org6117710">
+<ul class="org-ul">
+<li>F. Harvey, “India’s farmed chickens dosed with world’s strongest antibiotics, study finds,” The Guardian, Feb. 01, 2018. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.theguardian.com/environment/2018/feb/01/indias-farmed-chickens-dosed-with-worlds-strongest-antibiotics-study-finds">https://www.theguardian.com/environment/2018/feb/01/indias-farmed-chickens-dosed-with-worlds-strongest-antibiotics-study-finds</a></li>
+
+<li>“A game of chicken: how Indian poultry farming is creating global…,” TBIJ. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.thebureauinvestigates.com/stories/2018-01-30/a-game-of-chicken-how-indian-poultry-farming-is-creating-global-superbugs">https://www.thebureauinvestigates.com/stories/2018-01-30/a-game-of-chicken-how-indian-poultry-farming-is-creating-global-superbugs</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7cecb7b"></a>Misc<br />
+<div class="outline-text-7" id="text-org7cecb7b">
+<ul class="org-ul">
+<li>S. Pappas, “RFK, Jr. Wants to Let Bird Flu Spread on Poultry Farms. Why Experts Are Concerned,” Scientific American. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/rfk-jr-wants-to-let-bird-flu-spread-on-poultry-farms-why-experts-are/">https://www.scientificamerican.com/article/rfk-jr-wants-to-let-bird-flu-spread-on-poultry-farms-why-experts-are/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org5d368d9"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-1-4-4">
+<ul class="org-ul">
+<li>“The blunder that changed chickens forever.” Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://www.bbc.com/reel/video/p0hgl0lh/the-blunder-that-changed-chickens-forever">https://www.bbc.com/reel/video/p0hgl0lh/the-blunder-that-changed-chickens-forever</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgfbf1f51"></a>Lamb, Goat<br /></li>
+
+<li><a id="orga40a4d8"></a>Lab-Grown Meat<br />
+<ol class="org-ol">
+<li><a id="orgb492fd6"></a>Environment<br />
+<div class="outline-text-6" id="text-4-5-1-6-1">
+<ul class="org-ul">
+<li>D. Risner, Y. Kim, C. Nguyen, J. B. Siegel, and E. S. Spang, “Environmental impacts of cultured meat: A cradle-to-gate life cycle assessment,” Apr. 21, 2023, bioRxiv. doi: 10.1101/2023.04.21.537778.</li>
+<li>A. M. Quinton, “Lab-Grown Meat’s Carbon Footprint Potentially Worse Than Retail Beef,” UC Davis. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.ucdavis.edu/food/news/lab-grown-meat-carbon-footprint-worse-beef">https://www.ucdavis.edu/food/news/lab-grown-meat-carbon-footprint-worse-beef</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org75224b6"></a>Health<br />
+<div class="outline-text-6" id="text-4-5-1-6-2">
+<ul class="org-ul">
+<li>“Is Lab-Grown Meat Healthy and Safe to Consume?,” Center for Food Safety. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.centerforfoodsafety.org/blog/6458/is-lab-grown-meat-healthy-and-safe-to-consume">https://www.centerforfoodsafety.org/blog/6458/is-lab-grown-meat-healthy-and-safe-to-consume</a></li>
+<li>N. Thieme, “The Gruesome Truth About Lab-Grown Meat,” Slate, Jul. 11, 2017. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://slate.com/technology/2017/07/the-gruesome-truth-about-lab-grown-meat.html">https://slate.com/technology/2017/07/the-gruesome-truth-about-lab-grown-meat.html</a></li>
+<li>T. Philpott, “The bloody secret behind lab-grown meat,” Mother Jones. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.motherjones.com/environment/2022/03/lab-meat-fetal-bovine-serum-blood-slaughter-cultured/">https://www.motherjones.com/environment/2022/03/lab-meat-fetal-bovine-serum-blood-slaughter-cultured/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org338d19f" class="outline-4">
+<h4 id="org338d19f"><span class="section-number-4">4.5.2.</span> Documentaries</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org693366c" class="outline-3">
+<h3 id="org693366c"><span class="section-number-3">4.6.</span> Special Topics</h3>
+</div>
+<div id="outline-container-orgba4592f" class="outline-3">
+<h3 id="orgba4592f"><span class="section-number-3">4.7.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-7">
+<ul class="org-ul">
+<li>S. Baker, Carnivore Diet. Victory Belt Publishing, 2019.</li>
+
+<li>OCA, “Organic Bytes Newsletter #882: Fake Meat Linked to Depression,” Organic Consumers. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/">https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/</a></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Hussain, “Food history: How nihari went from being the humble food of the poor to a dish for the high table,” Scroll.in. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://scroll.in/article/1077553/food-history-how-nihari-went-from-being-the-humble-food-of-the-poor-to-a-dish-for-the-high-table">https://scroll.in/article/1077553/food-history-how-nihari-went-from-being-the-humble-food-of-the-poor-to-a-dish-for-the-high-table</a></li>
+
+<li>U. of Surrey, “Processed plant-based meat alternatives linked to depression risk in vegetarians.” Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html">https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1d0b05" class="outline-2">
+<h2 id="orgc1d0b05"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org5064750" class="outline-3">
+<h3 id="org5064750"><span class="section-number-3">5.1.</span> Free Range</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Animals Used for Free-Range and Organic Meat,” PETA, Jun. 22, 2010. <a href="https://www.peta.org/issues/animals-used-for-food/organic-free-range-meat/">https://www.peta.org/issues/animals-used-for-food/organic-free-range-meat/</a> (accessed Nov. 06, 2022).</li>
+
+<li>“Free range,” Wikipedia. Nov. 02, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Free_range&amp;oldid=1119622285">https://en.wikipedia.org/w/index.php?title=Free_range&amp;oldid=1119622285</a></li>
+
+<li>“Free-Range Eggs Aren’t All They’re Cracked Up to Be,” PETA, Oct. 15, 2010. <a href="https://www.peta.org/living/food/free-range-eggs/">https://www.peta.org/living/food/free-range-eggs/</a> (accessed Nov. 06, 2022).</li>
+
+<li>“The Organic and ‘Free-Range’ Myths,” PETA, Jun. 22, 2010. <a href="https://www.peta.org/issues/animals-used-for-food/free-range-organic-meat-myths/">https://www.peta.org/issues/animals-used-for-food/free-range-organic-meat-myths/</a> (accessed Nov. 06, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org06ff015" class="outline-2">
+<h2 id="org06ff015"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-03-24 Mon 10:39</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-24 Mon 10:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animal Well Being</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Animal Well Being</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org940ce86">1. General</a></li>
+<li><a href="#org53f201f">2. STEMM</a>
+<ul>
+<li><a href="#org6a538a9">2.1. Environment</a></li>
+<li><a href="#org094d06b">2.2. Health</a>
+<ul>
+<li><a href="#orgd8a20b1">2.2.1. CAM</a></li>
+<li><a href="#orga96abc4">2.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga1f3761">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc90edd7">3. World</a>
+<ul>
+<li><a href="#orgff752da">3.1. Orgs</a>
+<ul>
+<li><a href="#orgdd88329">3.1.1. Global</a></li>
+<li><a href="#orgfaf088e">3.1.2. India</a></li>
+</ul>
+</li>
+<li><a href="#org4705544">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7ad0d36">4. Core</a>
+<ul>
+<li><a href="#org138f3f4">4.1. Documentaries</a></li>
+</ul>
+</li>
+<li><a href="#org3353bfb">5. Arts</a>
+<ul>
+<li><a href="#org637aa4e">5.1. Films</a></li>
+<li><a href="#org88bcd3d">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org25a1f0e">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org940ce86" class="outline-2">
+<h2 id="org940ce86"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org53f201f" class="outline-2">
+<h2 id="org53f201f"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6a538a9" class="outline-3">
+<h3 id="org6a538a9"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>R. Castagnino, “Why is this endangered dolphin being killed to make ‘love perfumes’? | Wild Targets,” Mongabay Environmental News. Accessed: Feb. 06, 2025. [Online]. Available: <a href="https://news.mongabay.com/video/2025/02/why-is-this-endangered-dolphin-being-killed-to-make-love-perfumes-wild-targets/">https://news.mongabay.com/video/2025/02/why-is-this-endangered-dolphin-being-killed-to-make-love-perfumes-wild-targets/</a></li>
+
+<li>T. Gaulkin, “What happens if the world gets too hot for animals to survive?,” Bulletin of the Atomic Scientists, Jul. 20, 2022. <a href="https://thebulletin.org/2022/07/extreme-heat-animals-livestock-wildlife/">https://thebulletin.org/2022/07/extreme-heat-animals-livestock-wildlife/</a> (accessed Jul. 21, 2022).</li>
+<li>C. Nast, “What’s the Most Sustainable Meat?,” Bon Appétit, Jan. 25, 2017. <a href="https://www.bonappetit.com/story/most-sustainable-meat">https://www.bonappetit.com/story/most-sustainable-meat</a> (accessed Nov. 04, 2022).</li>
+<li>“sustainable fishing | National Geographic Society.” <a href="https://education.nationalgeographic.org/resource/sustainable-fishing">https://education.nationalgeographic.org/resource/sustainable-fishing</a> (accessed Nov. 04, 2022).</li>
+
+<li>“How livestock farming affects the environment.” <a href="https://www.downtoearth.org.in/factsheet/how-livestock-farming-affects-the-environment-64218">https://www.downtoearth.org.in/factsheet/how-livestock-farming-affects-the-environment-64218</a> (accessed Nov. 04, 2022).</li>
+<li>“Switzerland Could Be the First Country to Ban Factory Farming,” Time. <a href="https://time.com/6215645/switzerland-factory-farming-protect-animals/">https://time.com/6215645/switzerland-factory-farming-protect-animals/</a> (accessed Sep. 26, 2022).</li>
+
+<li>“Human exceptionalism imposes horrible costs on other animals | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/human-exceptionalism-imposes-horrible-costs-on-other-animals">https://psyche.co/ideas/human-exceptionalism-imposes-horrible-costs-on-other-animals</a> (accessed Nov. 02, 2022).</li>
+<li>“Pitting People against Nature,” The India Forum, Dec. 08, 2021. <a href="https://www.theindiaforum.in/article/pitting-people-against-nature">https://www.theindiaforum.in/article/pitting-people-against-nature</a> (accessed Nov. 04, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “What are the trade-offs between animal welfare and the environmental impact of meat?,” Our World in Data, May 2024, Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://ourworldindata.org/what-are-the-trade-offs-between-animal-welfare-and-the-environmental-impact-of-meat">https://ourworldindata.org/what-are-the-trade-offs-between-animal-welfare-and-the-environmental-impact-of-meat</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org094d06b" class="outline-3">
+<h3 id="org094d06b"><span class="section-number-3">2.2.</span> Health</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgd8a20b1" class="outline-4">
+<h4 id="orgd8a20b1"><span class="section-number-4">2.2.1.</span> CAM</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Homeopathy at Wellie Level, Homeopathy on the Farm and Smallholdings,” Hawl. Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://www.hawl.co.uk">https://www.hawl.co.uk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga96abc4" class="outline-4">
+<h4 id="orga96abc4"><span class="section-number-4">2.2.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orga1f3761" class="outline-3">
+<h3 id="orga1f3761"><span class="section-number-3">2.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgc90edd7" class="outline-2">
+<h2 id="orgc90edd7"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgff752da" class="outline-3">
+<h3 id="orgff752da"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgdd88329" class="outline-4">
+<h4 id="orgdd88329"><span class="section-number-4">3.1.1.</span> Global</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“People for the Ethical Treatment of Animals,” Wikipedia. Oct. 17, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=People_for_the_Ethical_Treatment_of_Animals&amp;oldid=1116518353">https://en.wikipedia.org/w/index.php?title=People_for_the_Ethical_Treatment_of_Animals&amp;oldid=1116518353</a>
+<ul class="org-ul">
+<li>“People for the Ethical Treatment of Animals (PETA),” PETA. <a href="https://www.peta.org/">https://www.peta.org/</a> (accessed Nov. 02, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfaf088e" class="outline-4">
+<h4 id="orgfaf088e"><span class="section-number-4">3.1.2.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“PETA India: India’s Animal Rights Organisation,” PETA India. <a href="https://www.petaindia.com/">https://www.petaindia.com/</a> (accessed Nov. 02, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4705544" class="outline-3">
+<h3 id="org4705544"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>P. Joshipura, Survival at Stake : How Our Treatment of Animals Is Key to Human Existence. Noida, Uttar Pradesh, India: HarperCollins India, 2023.</li>
+
+<li>“Animal rights activists flock to KFC protests.” Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests">https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests</a></li>
+
+<li>G. Moran, “The FBI’s Weapons of Mass Destruction Program Has a New Target: Animal Rights Activists,” The Intercept. Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://theintercept.com/2024/10/19/fbi-meat-industry-animal-rights-activists-weapons-mass-destruction/">https://theintercept.com/2024/10/19/fbi-meat-industry-animal-rights-activists-weapons-mass-destruction/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7ad0d36" class="outline-2">
+<h2 id="org7ad0d36"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org138f3f4" class="outline-3">
+<h3 id="org138f3f4"><span class="section-number-3">4.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3353bfb" class="outline-2">
+<h2 id="org3353bfb"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org637aa4e" class="outline-3">
+<h3 id="org637aa4e"><span class="section-number-3">5.1.</span> Films</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Okja,” Wikipedia. Sep. 26, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497">https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88bcd3d" class="outline-3">
+<h3 id="org88bcd3d"><span class="section-number-3">5.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org25a1f0e" class="outline-2">
+<h2 id="org25a1f0e"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>E. Goyal, “‘I’m ME, Not Mutton!’ Proclaims Goat on PETA India Billboard Amid ‘Malhar Certification’ Controversy - Blog,” PETA India. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/im-me-not-mutton-proclaims-goat-on-peta-india-billboard-amid-malhar-certification-controversy/">https://www.petaindia.com/blog/im-me-not-mutton-proclaims-goat-on-peta-india-billboard-amid-malhar-certification-controversy/</a></li>
+<li>“K–12 Lesson Plans and Classroom Tips for Compassionate Teachers,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/teachkind/">https://www.peta.org/teachkind/</a></li>
+<li>“The PETA Shop | peta2.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://shop.peta.org/trending/peta2.html">https://shop.peta.org/trending/peta2.html</a></li>
+<li>E. on March 20 and 2025, “What the Egg Industry Doesn’t Want You to See,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/what-the-egg-industry-doesnt-want-you-to-see/">https://www.peta2.com/learn/what-the-egg-industry-doesnt-want-you-to-see/</a></li>
+<li>C. on January 27 and 2025, “Snake Facts That’ll Blow Your Mind,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/snake-facts/">https://www.peta2.com/learn/snake-facts/</a></li>
+<li>“Why Eating Local Isn’t a Climate Solution.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://sentientmedia.org/eating-local-isnt-a-climate-solution/">https://sentientmedia.org/eating-local-isnt-a-climate-solution/</a></li>
+<li>“Sentient | Stories + solutions for a changing world.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://sentientmedia.org/">https://sentientmedia.org/</a></li>
+<li>“Reproductive Exploitation of Male Livestock Is an Overlooked Cornerstone of Factory Farming.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://sentientmedia.org/reproductive-exploitation-male-livestock/">https://sentientmedia.org/reproductive-exploitation-male-livestock/</a></li>
+<li>C. on February 06 and 2025, “Male Animals Face Severe Exploitation—Here’s How,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/male-animals/">https://www.peta2.com/learn/male-animals/</a></li>
+<li>“Wear Your Own Skin | peta2,” Wear Your Own Skin. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://wearyourownskin.peta2.com/">https://wearyourownskin.peta2.com/</a></li>
+<li>C. on March 04 and 2025, “Female Animals Are Exploited for Food,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/female-animals/">https://www.peta2.com/learn/female-animals/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>M. Ricard, A Plea for the Animals: The Moral, Philosophical, and Evolutionary Imperative to Treat All Beings with Compassion. Boulder: Shambhala, 2016.</li>
+<li>B. Michelson and I. Newkirk, Voices for Animal Liberation: Inspirational Accounts by Animal Rights Activists. New York: Skyhorse, 2020.</li>
+<li>M. C. Nussbaum, Justice for Animals: Our Collective Responsibility. New York (N.Y.) London: Simon &amp; Schuster, 2023.</li>
+<li>D. Prater, “Free the Animals 30th Anniversary Edition—Order It Now,” PETA. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.peta.org/blog/free-the-animals-30th-anniversary-edition/">https://www.peta.org/blog/free-the-animals-30th-anniversary-edition/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Boar mistreatment revealed.” Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://theecologist.org/2024/dec/05/boar-mistreatment-revealed">https://theecologist.org/2024/dec/05/boar-mistreatment-revealed</a></li>
+
+<li>I. Newkirk and G. Stone, Animalkind: Remarkable Discoveries about Animals and Revolutionary New Ways to Show Them Compassion. Simon and Schuster, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Welfare insights on slaughter of pregnant animals | EFSA.” Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.efsa.europa.eu/en/press/news/170530">https://www.efsa.europa.eu/en/press/news/170530</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-03-24 Mon 10:35</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
