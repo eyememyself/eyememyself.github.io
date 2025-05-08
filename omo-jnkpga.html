@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-05-08 Thu 10:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2025 Pahalgam Attack</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">2025 Pahalgam Attack</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8f9a9f4">1. General</a></li>
+<li><a href="#org901d7f5">2. STEMM</a>
+<ul>
+<li><a href="#orgccd3c0a">2.1. Google Gemini</a></li>
+<li><a href="#org5b7cff2">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org925c147">3. Worldly Matters</a>
+<ul>
+<li><a href="#org5cf516e">3.1. Global Sources</a>
+<ul>
+<li><a href="#orge6e40e5">3.1.1. Human Rights Watch</a></li>
+<li><a href="#org32f61cd">3.1.2. Committee to Protect Journalists</a></li>
+<li><a href="#orgafb7b6b">3.1.3. The Conversation</a></li>
+<li><a href="#orgd11b390">3.1.4. Democracy Now</a></li>
+<li><a href="#orge86b1d3">3.1.5. World Socialist Web Site</a></li>
+<li><a href="#orge7ace71">3.1.6. Middle East Eye</a></li>
+</ul>
+</li>
+<li><a href="#orgc32c3e1">3.2. Indian Sources</a>
+<ul>
+<li><a href="#orgdca2b3e">3.2.1. JNU</a></li>
+<li><a href="#org49e8351">3.2.2. Economic and Political Weekly</a></li>
+<li><a href="#orgd27c974">3.2.3. The Caravan Magazine</a></li>
+<li><a href="#orgab73962">3.2.4. The Hindu, The Frontline</a></li>
+<li><a href="#orgf52105a">3.2.5. NewsClick</a></li>
+<li><a href="#org766e989">3.2.6. A. Bhasin</a></li>
+<li><a href="#orgbe03fbc">3.2.7. Bhanu Pratap Mehta</a></li>
+<li><a href="#orge01ba14">3.2.8. Ramachandra Guha</a></li>
+</ul>
+</li>
+<li><a href="#orgf085c20">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org03939c5">4. Arts</a>
+<ul>
+<li><a href="#orgcb2be1c">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orged452d8">5. Special Topics</a>
+<ul>
+<li><a href="#org2b9124c">5.1. War - India Pakistan</a>
+<ul>
+<li><a href="#org37c829d">5.1.1. General</a></li>
+<li><a href="#org542b964">5.1.2. X's AI, Google Gemini</a></li>
+<li><a href="#org1725b33">5.1.3. World Socialist Web Site</a></li>
+<li><a href="#org79ca2b8">5.1.4. Special Topics</a></li>
+<li><a href="#org129438a">5.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1fe5c68">5.2. Affected Regions, Neighbors</a></li>
+</ul>
+</li>
+<li><a href="#org534702a">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org8f9a9f4" class="outline-2">
+<h2 id="org8f9a9f4"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“2025 Pahalgam attack,” Wikipedia. Apr. 24, 2025. Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2025_Pahalgam_attack&amp;oldid=1287127403">https://en.wikipedia.org/w/index.php?title=2025_Pahalgam_attack&amp;oldid=1287127403</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org901d7f5" class="outline-2">
+<h2 id="org901d7f5"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgccd3c0a" class="outline-3">
+<h3 id="orgccd3c0a"><span class="section-number-3">2.1.</span> Google Gemini</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Pahalgam Attack: India-Pakistan Conflict,” Google Docs. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1seAZeQ_vOwOoInlspA1x_7_WBbJT0OhoPaaWJIsVakw/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1seAZeQ_vOwOoInlspA1x_7_WBbJT0OhoPaaWJIsVakw/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5b7cff2" class="outline-3">
+<h3 id="org5b7cff2"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>K. Pandey, “India Blocks 16 Pakistani YouTube Channels Post Pahalgam Attack,” MEDIANAMA. Accessed: May 04, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/05/223-pahalgam-attack-social-media-ban-list/">https://www.medianama.com/2025/05/223-pahalgam-attack-social-media-ban-list/</a></li>
+<li>H. Joshi, “Pahalgam attack: What suspension of Indus Waters Treaty means for Pakistan?,” Down To Earth. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/pahalgam-attack-what-suspension-of-indus-waters-treaty-means-for-pakistan">https://www.downtoearth.org.in/water/pahalgam-attack-what-suspension-of-indus-waters-treaty-means-for-pakistan</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org925c147" class="outline-2">
+<h2 id="org925c147"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5cf516e" class="outline-3">
+<h3 id="org5cf516e"><span class="section-number-3">3.1.</span> Global Sources</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orge6e40e5" class="outline-4">
+<h4 id="orge6e40e5"><span class="section-number-4">3.1.1.</span> Human Rights Watch</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“Deadly Attack on Tourists in Jammu and Kashmir | Human Rights Watch.” Accessed: May 01, 2025. [Online]. Available: <a href="https://www.hrw.org/news/2025/04/30/deadly-attack-tourists-jammu-and-kashmir">https://www.hrw.org/news/2025/04/30/deadly-attack-tourists-jammu-and-kashmir</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org32f61cd" class="outline-4">
+<h4 id="org32f61cd"><span class="section-number-4">3.1.2.</span> Committee to Protect Journalists</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“YouTube channel blocked, journalist assaulted, commentators charged after Kashmir attack in India,” Committee to Protect Journalists. Accessed: May 07, 2025. [Online]. Available: <a href="https://cpj.org/2025/05/youtube-channel-blocked-journalist-assaulted-commentators-charged-after-kashmir-attack-in-india/">https://cpj.org/2025/05/youtube-channel-blocked-journalist-assaulted-commentators-charged-after-kashmir-attack-in-india/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgafb7b6b" class="outline-4">
+<h4 id="orgafb7b6b"><span class="section-number-4">3.1.3.</span> The Conversation</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>N. J. Wheeler and S. A. Z. Jaffery, “Why a hotline is needed to help bring India and Pakistan back from the brink of a disastrous war,” The Conversation. Accessed: May 08, 2025. [Online]. Available: <a href="http://theconversation.com/why-a-hotline-is-needed-to-help-bring-india-and-pakistan-back-from-the-brink-of-a-disastrous-war-255727">http://theconversation.com/why-a-hotline-is-needed-to-help-bring-india-and-pakistan-back-from-the-brink-of-a-disastrous-war-255727</a></li>
+<li>N. Lindstaedt, “Why are India and Pakistan on the brink of war and how dangerous is the situation? An expert explains,” The Conversation. Accessed: May 08, 2025. [Online]. Available: <a href="http://theconversation.com/why-are-india-and-pakistan-on-the-brink-of-war-and-how-dangerous-is-the-situation-an-expert-explains-256125">http://theconversation.com/why-are-india-and-pakistan-on-the-brink-of-war-and-how-dangerous-is-the-situation-an-expert-explains-256125</a></li>
+<li>M. Williams, “India-Pakistan strikes: 5 essential reads on decades of rivalry and tensions over Kashmir,” The Conversation. Accessed: May 08, 2025. [Online]. Available: <a href="http://theconversation.com/india-pakistan-strikes-5-essential-reads-on-decades-of-rivalry-and-tensions-over-kashmir-256157">http://theconversation.com/india-pakistan-strikes-5-essential-reads-on-decades-of-rivalry-and-tensions-over-kashmir-256157</a></li>
+<li>M. R. Jahan, “Indian airstrikes in Kashmir following tourist attack raises fears of a regional conflict,” The Conversation. Accessed: May 08, 2025. [Online]. Available: <a href="http://theconversation.com/indian-airstrikes-in-kashmir-following-tourist-attack-raises-fears-of-a-regional-conflict-256166">http://theconversation.com/indian-airstrikes-in-kashmir-following-tourist-attack-raises-fears-of-a-regional-conflict-256166</a></li>
+
+<li>F. Haq, “Tensions over Kashmir and a warming planet have placed the Indus Waters Treaty on life support,” The Conversation. Accessed: Apr. 26, 2025. [Online]. Available: <a href="http://theconversation.com/tensions-over-kashmir-and-a-warming-planet-have-placed-the-indus-waters-treaty-on-life-support-244699">http://theconversation.com/tensions-over-kashmir-and-a-warming-planet-have-placed-the-indus-waters-treaty-on-life-support-244699</a></li>
+<li>M. S. Selvaraj, “What is the Resistance Front? An expert explains the terror group that carried out the latest Kashmir attack?,” The Conversation. Accessed: Apr. 25, 2025. [Online]. Available: <a href="http://theconversation.com/what-is-the-resistance-front-an-expert-explains-the-terror-group-that-carried-out-the-latest-kashmir-attack-250663">http://theconversation.com/what-is-the-resistance-front-an-expert-explains-the-terror-group-that-carried-out-the-latest-kashmir-attack-250663</a></li>
+<li>N. Kaul, “Kashmir attacks: Kashmiris trapped between tourism and terrorism as an insecure nation looks to Modi for accountability,” The Conversation. Accessed: Apr. 25, 2025. [Online]. Available: <a href="http://theconversation.com/kashmir-attacks-kashmiris-trapped-between-tourism-and-terrorism-as-an-insecure-nation-looks-to-modi-for-accountability-255148">http://theconversation.com/kashmir-attacks-kashmiris-trapped-between-tourism-and-terrorism-as-an-insecure-nation-looks-to-modi-for-accountability-255148</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd11b390" class="outline-4">
+<h4 id="orgd11b390"><span class="section-number-4">3.1.4.</span> Democracy Now</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>“‘A Dangerous Escalation’: India Bombs Pakistan in Intensification of ‘Forever War’ over Kashmir,” Democracy Now! Accessed: May 08, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/5/7/kashmir">https://www.democracynow.org/2025/5/7/kashmir</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge86b1d3" class="outline-4">
+<h4 id="orge86b1d3"><span class="section-number-4">3.1.5.</span> World Socialist Web Site</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<ul class="org-ul">
+<li>“War tensions between India and Pakistan mount following terrorist attack in Indian-held Kashmir,” World Socialist Web Site. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/04/27/ohkq-a27.html">https://www.wsws.org/en/articles/2025/04/27/ohkq-a27.html</a></li>
+<li>“India and Pakistan cascading toward war, after New Delhi blames Islamabad for terrorist attack,” World Socialist Web Site. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/04/25/adhp-a25.html">https://www.wsws.org/en/articles/2025/04/25/adhp-a25.html</a></li>
+<li>“Pakistan warns Indian military strike ‘imminent,’ as tensions between South Asia’s rival nuclear-armed powers flare,” World Socialist Web Site. Accessed: May 01, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/04/30/nlsi-a30.html">https://www.wsws.org/en/articles/2025/04/30/nlsi-a30.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7ace71" class="outline-4">
+<h4 id="orge7ace71"><span class="section-number-4">3.1.6.</span> Middle East Eye</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<ul class="org-ul">
+<li>“‘Better if they kill us’: Indian deportation notices tear Kashmiri families apart,” Middle East Eye. Accessed: May 03, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/better-if-they-kill-us-indian-deportation-notices-split-kashmiri-families-apart">https://www.middleeasteye.net/news/better-if-they-kill-us-indian-deportation-notices-split-kashmiri-families-apart</a></li>
+<li>“'What was our fault?’: India razes homes, sparking anger and despair in Kashmir,” Middle East Eye. Accessed: May 02, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/what-was-our-fault-india-razes-homes-sparking-anger-despair-kashmir">https://www.middleeasteye.net/news/what-was-our-fault-india-razes-homes-sparking-anger-despair-kashmir</a></li>
+<li>“Pakistan says ‘credible intelligence’ shows Indian military incursion ‘imminent,’” Middle East Eye. Accessed: May 01, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/pakistan-says-credible-intelligence-shows-indian-military-incursion-imminent">https://www.middleeasteye.net/news/pakistan-says-credible-intelligence-shows-indian-military-incursion-imminent</a></li>
+<li>“Are India and Pakistan headed for war?,” Middle East Eye. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/opinion/india-and-pakistan-headed-war-are">https://www.middleeasteye.net/opinion/india-and-pakistan-headed-war-are</a></li>
+<li>“Experts warn of ‘impunity’ amidst Indian calls to implement ‘Israel playbook’ in Kashmir,” Middle East Eye. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/kashmir-experts-warn-impunity-amidst-calls-india-implement-israel-playbook">https://www.middleeasteye.net/news/kashmir-experts-warn-impunity-amidst-calls-india-implement-israel-playbook</a></li>
+<li>“Muslims fear potential ‘Israel-like’ retaliation after Kashmir attack,” Middle East Eye. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/trending/muslims-fear-potential-israel-like-retaliation-following-attacks-kashmir">https://www.middleeasteye.net/trending/muslims-fear-potential-israel-like-retaliation-following-attacks-kashmir</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc32c3e1" class="outline-3">
+<h3 id="orgc32c3e1"><span class="section-number-3">3.2.</span> Indian Sources</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgdca2b3e" class="outline-4">
+<h4 id="orgdca2b3e"><span class="section-number-4">3.2.1.</span> JNU</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>A. Mattoo, “Responding to the terror attack in Pahalgam,” The Hindu, Apr. 23, 2025. Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/lead/responding-to-the-terror-attack-in-pahalgam/article69481973.ece">https://www.thehindu.com/opinion/lead/responding-to-the-terror-attack-in-pahalgam/article69481973.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49e8351" class="outline-4">
+<h4 id="org49e8351"><span class="section-number-4">3.2.2.</span> Economic and Political Weekly</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>“Pahalgam Attack and Strategic Response | Economic and Political Weekly.” Accessed: May 04, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/18/editorials/pahalgam-attack-and-strategic-response.html">https://www.epw.in/journal/2025/18/editorials/pahalgam-attack-and-strategic-response.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd27c974" class="outline-4">
+<h4 id="orgd27c974"><span class="section-number-4">3.2.3.</span> The Caravan Magazine</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>“Was the Pahalgam Attack a Pakistan Conspiracy or an Indian Security Lapse?” Accessed: May 01, 2025. [Online]. Available: <a href="https://caravanmagazine.in/security/pahalgam-attack-pakistani-conspiracy-or-indian-security-lapse">https://caravanmagazine.in/security/pahalgam-attack-pakistani-conspiracy-or-indian-security-lapse</a></li>
+<li>“After Pahalgam, Modi has a chance to win over Kashmiris. Will he use it?” Accessed: May 03, 2025. [Online]. Available: <a href="https://caravanmagazine.in/politics/pahalgam-modi-kashmiris-win-over">https://caravanmagazine.in/politics/pahalgam-modi-kashmiris-win-over</a></li>
+<li>“Modiʼs war: Dispatches from a seething Kashmir.” Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://caravanmagazine.in/conflict/modi-war-dispatches-from-seething-kashmir">https://caravanmagazine.in/conflict/modi-war-dispatches-from-seething-kashmir</a></li>
+<li>“The Pahalgam attack calls for sober accountability not blood-thirsty revenge.” Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://caravanmagazine.in/security/pahalgam-attack-accountability">https://caravanmagazine.in/security/pahalgam-attack-accountability</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab73962" class="outline-4">
+<h4 id="orgab73962"><span class="section-number-4">3.2.4.</span> The Hindu, The Frontline</h4>
+<div class="outline-text-4" id="text-3-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org0be7878"></a>Live Updates<br />
+<div class="outline-text-5" id="text-3-2-4-1">
+<ul class="org-ul">
+<li>T. H. Bureau, “Pahalgam terror attack LIVE: Indian, Pakistan forces exchange fire at LoC,” The Hindu, Apr. 25, 2025. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/pahalgam-terror-attack-jammu-kashmir-tourists-victims-live-updates-april-25-2025/article69489279.ece">https://www.thehindu.com/news/national/pahalgam-terror-attack-jammu-kashmir-tourists-victims-live-updates-april-25-2025/article69489279.ece</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf52105a" class="outline-4">
+<h4 id="orgf52105a"><span class="section-number-4">3.2.5.</span> NewsClick</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<ul class="org-ul">
+<li>“Pahalgam Tragedy: What’s the Way Ahead for Peace?,” NewsClick. Accessed: May 01, 2025. [Online]. Available: <a href="https://www.newsclick.in/pahalgam-tragedy-whats-way-ahead-peace">https://www.newsclick.in/pahalgam-tragedy-whats-way-ahead-peace</a></li>
+<li>“Kashmir: Terror Attack Strikes at Tourism’s Heart; Dastardly Killings Condemned Widely,” NewsClick. Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://www.newsclick.in/kashmir-terror-attack-strikes-tourisms-heart-dastardly-killings-condemned-widely">https://www.newsclick.in/kashmir-terror-attack-strikes-tourisms-heart-dastardly-killings-condemned-widely</a></li>
+<li>“Indian Muslim Groups Decry ‘Heinous Massacre’ of Tourists in Near Pahalgam,” NewsClick. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.newsclick.in/indian-muslim-groups-decry-heinous-massacre-tourists-near-pahalgam">https://www.newsclick.in/indian-muslim-groups-decry-heinous-massacre-tourists-near-pahalgam</a></li>
+<li>“Muslims in Kashmir &amp; Across India Strongly Condemn Pahalgam Terror Attack,” NewsClick. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.newsclick.in/muslims-kashmir-across-india-strongly-condemn-pahalgam-terror-attack">https://www.newsclick.in/muslims-kashmir-across-india-strongly-condemn-pahalgam-terror-attack</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org766e989" class="outline-4">
+<h4 id="org766e989"><span class="section-number-4">3.2.6.</span> A. Bhasin</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<ul class="org-ul">
+<li>A. Bhasin, “Modi govt touted tourism as normalcy. Pahalgam proved it was a mirage,” Newslaundry. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://www.newslaundry.com/2025/04/23/modi-govt-touted-tourism-as-normalcy-pahalgam-proved-it-was-a-mirage">https://www.newslaundry.com/2025/04/23/modi-govt-touted-tourism-as-normalcy-pahalgam-proved-it-was-a-mirage</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe03fbc" class="outline-4">
+<h4 id="orgbe03fbc"><span class="section-number-4">3.2.7.</span> Bhanu Pratap Mehta</h4>
+<div class="outline-text-4" id="text-3-2-7">
+<ul class="org-ul">
+<li>“The Pahalgam abyss,” The Indian Express. Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://indianexpress.com/article/opinion/columns/pahalgam-terror-attack-jammu-and-kashmir-9963428/">https://indianexpress.com/article/opinion/columns/pahalgam-terror-attack-jammu-and-kashmir-9963428/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge01ba14" class="outline-4">
+<h4 id="orge01ba14"><span class="section-number-4">3.2.8.</span> Ramachandra Guha</h4>
+<div class="outline-text-4" id="text-3-2-8">
+<ul class="org-ul">
+<li>R. Guha, “Ramachandra Guha: In wake of Pahalgam, recalling Nehru’s advice on resisting Pakistan’s provocations,” Scroll.in. Accessed: May 04, 2025. [Online]. Available: <a href="https://scroll.in/article/1081957/ramachandra-guha-in-wake-of-pahalgam-recalling-nehrus-advice-on-resisting-pakistans-provocations">https://scroll.in/article/1081957/ramachandra-guha-in-wake-of-pahalgam-recalling-nehrus-advice-on-resisting-pakistans-provocations</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf085c20" class="outline-3">
+<h3 id="orgf085c20"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>N. Subramanian, “‘Pahalgam Was a Policy Failure, a Propaganda Failure, and a Political Failure’: Ajai Sahni,” Frontline. Accessed: May 08, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/world-affairs/pahalgam-terror-attack-modi-government-failure-ajai-sahni-interview-indus-waters-treaty/article69509245.ece">https://frontline.thehindu.com/world-affairs/pahalgam-terror-attack-modi-government-failure-ajai-sahni-interview-indus-waters-treaty/article69509245.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org03939c5" class="outline-2">
+<h2 id="org03939c5"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgcb2be1c" class="outline-3">
+<h3 id="orgcb2be1c"><span class="section-number-3">4.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>K. Purohit, “‘Traitors’: Hate-filled songs target Indian Muslims after Kashmir attack,” Al Jazeera. Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://www.aljazeera.com/news/2025/4/29/traitors-hate-filled-songs-target-indian-muslims-after-kashmir-attack">https://www.aljazeera.com/news/2025/4/29/traitors-hate-filled-songs-target-indian-muslims-after-kashmir-attack</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orged452d8" class="outline-2">
+<h2 id="orged452d8"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org2b9124c" class="outline-3">
+<h3 id="org2b9124c"><span class="section-number-3">5.1.</span> War - India Pakistan</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org37c829d" class="outline-4">
+<h4 id="org37c829d"><span class="section-number-4">5.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org542b964" class="outline-4">
+<h4 id="org542b964"><span class="section-number-4">5.1.2.</span> X's AI, Google Gemini</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgbd96079"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org50eba69"></a>Space, Earth, Life Sciences, Environment, Health, Misc<br />
+<div class="outline-text-6" id="text-5-1-2-1-1">
+<ul class="org-ul">
+<li>“India-Pakistan War: Environmental Impacts,” Google Docs. Accessed: May 08, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1M4qQ_b9DunKF7eqg_Z9BWFRdnKee0V0nPV4OQFW1c1g/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1M4qQ_b9DunKF7eqg_Z9BWFRdnKee0V0nPV4OQFW1c1g/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org140dd0b"></a>Misc<br />
+<div class="outline-text-6" id="text-5-1-2-1-2">
+<ul class="org-ul">
+<li>“War Impact on India’s S&amp;T Development | Shared Grok Conversation.” Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://grok.com/share/c2hhcmQtMg%3D%3D_878304cd-59f3-4cb8-b9ff-1df5634d9d50">https://grok.com/share/c2hhcmQtMg%3D%3D_878304cd-59f3-4cb8-b9ff-1df5634d9d50</a></li>
+<li>“War’s Impact on Indian Science,” Google Docs. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/151gs0K2m21RzOgfow3OdXpGQe5g5Vy7BkvPKoSvbwBQ/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/151gs0K2m21RzOgfow3OdXpGQe5g5Vy7BkvPKoSvbwBQ/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org5145b4d"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="orgb091317"></a>Misc<br />
+<div class="outline-text-6" id="text-5-1-2-2-1">
+<ul class="org-ul">
+<li>“What will be the impact of India Pakistan war on Indian, global economy. How will it impact the financial interests of the richest 1 and the richest 10 percent,” X (formerly Twitter). Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://x.com/i/grok/share/wzbe1huynqvztflsm2ynl1n6q">https://x.com/i/grok/share/wzbe1huynqvztflsm2ynl1n6q</a></li>
+<li>“India-Pakistan War Economic Impact,” Google Docs. Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1q647aaKiZ_G0Gn0a5gjWNHuJe7lwqRppzBQtEu_icJ0/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1q647aaKiZ_G0Gn0a5gjWNHuJe7lwqRppzBQtEu_icJ0/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+
+<li>“India-Pakistan War: Military Impact,” Google Docs. Accessed: May 08, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1li_U75i58oJDd7hbkorki13pnwc0_PIVHrAKIdSYxKU/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1li_U75i58oJDd7hbkorki13pnwc0_PIVHrAKIdSYxKU/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org1725b33" class="outline-4">
+<h4 id="org1725b33"><span class="section-number-4">5.1.3.</span> World Socialist Web Site</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>“South Asian confrontation escalates as Indian airstrikes hit inside Pakistan,” World Socialist Web Site. Accessed: May 07, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/05/07/lwhd-m07.html">https://www.wsws.org/en/articles/2025/05/07/lwhd-m07.html</a></li>
+<li>“Pakistan warns Indian military strike ‘imminent,’ as tensions between South Asia’s rival nuclear-armed powers flare,” World Socialist Web Site. Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/04/30/nlsi-a30.html">https://www.wsws.org/en/articles/2025/04/30/nlsi-a30.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79ca2b8" class="outline-4">
+<h4 id="org79ca2b8"><span class="section-number-4">5.1.4.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-5-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orge021555"></a>The Conversation<br />
+<div class="outline-text-5" id="text-5-1-4-1">
+<ul class="org-ul">
+<li>A. Saikal, “India and Pakistan are on war footing. Can they be brought back from the brink?,” The Conversation. Accessed: Apr. 30, 2025. [Online]. Available: <a href="http://theconversation.com/india-and-pakistan-are-on-war-footing-can-they-be-brought-back-from-the-brink-255504">http://theconversation.com/india-and-pakistan-are-on-war-footing-can-they-be-brought-back-from-the-brink-255504</a></li>
+<li>I. Hall, “India and Pakistan have fought many wars in the past. Are we on the precipice of a new one?,” The Conversation. Accessed: May 07, 2025. [Online]. Available: <a href="http://theconversation.com/india-and-pakistan-have-fought-many-wars-in-the-past-are-we-on-the-precipice-of-a-new-one-256080">http://theconversation.com/india-and-pakistan-have-fought-many-wars-in-the-past-are-we-on-the-precipice-of-a-new-one-256080</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org00ae9ee"></a>Wikipedia<br />
+<div class="outline-text-5" id="text-5-1-4-2">
+<ul class="org-ul">
+<li>“2025 India–Pakistan strikes,” Wikipedia. May 07, 2025. Accessed: May 07, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2025_India%E2%80%93Pakistan_strikes&amp;oldid=1289211557">https://en.wikipedia.org/w/index.php?title=2025_India%E2%80%93Pakistan_strikes&amp;oldid=1289211557</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org129438a" class="outline-4">
+<h4 id="org129438a"><span class="section-number-4">5.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<ul class="org-ul">
+<li>“India launches military strikes on Pakistan,” Middle East Eye. Accessed: May 07, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/india-launches-military-strikes-pakistan">https://www.middleeasteye.net/news/india-launches-military-strikes-pakistan</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1fe5c68" class="outline-3">
+<h3 id="org1fe5c68"><span class="section-number-3">5.2.</span> Affected Regions, Neighbors</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Ladakh: <a href="https://tinyurl.com/mr47m2v9">https://tinyurl.com/mr47m2v9</a></li>
+<li>Jammu and Kashmir: <a href="https://tinyurl.com/3nxedbz7">https://tinyurl.com/3nxedbz7</a></li>
+<li>Pakistan: <a href="https://tinyurl.com/yckfc8p6">https://tinyurl.com/yckfc8p6</a></li>
+<li>Afghanistan: <a href="https://tinyurl.com/yanb9raz">https://tinyurl.com/yanb9raz</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org534702a" class="outline-2">
+<h2 id="org534702a"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“India-Pakistan War: Environmental Impacts,” Google Docs. Accessed: May 08, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1M4qQ_b9DunKF7eqg_Z9BWFRdnKee0V0nPV4OQFW1c1g/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1M4qQ_b9DunKF7eqg_Z9BWFRdnKee0V0nPV4OQFW1c1g/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+<li>“India-Pakistan War: Military Impact,” Google Docs. Accessed: May 08, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1li_U75i58oJDd7hbkorki13pnwc0_PIVHrAKIdSYxKU/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/1li_U75i58oJDd7hbkorki13pnwc0_PIVHrAKIdSYxKU/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+
+<li>B. Chellaney, “India’s Warning to Pakistan | by Brahma Chellaney,” Project Syndicate. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/india-decision-to-suspend-the-indus-waters-treaty-is-justified-by-brahma-chellaney-2025-05">https://www.project-syndicate.org/commentary/india-decision-to-suspend-the-indus-waters-treaty-is-justified-by-brahma-chellaney-2025-05</a></li>
+
+<li>M. Jameela, “India duplicates Israel’s playbook with missile attacks under Operation Sindoor,” Canary. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.thecanary.co/global/world-analysis/2025/05/07/india-israel-operation-sindoor/">https://www.thecanary.co/global/world-analysis/2025/05/07/india-israel-operation-sindoor/</a></li>
+
+<li>“Pahalgam Terror Attack: ‘Targeted’ Strike by India in Pakistan, PoK,” NewsClick. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.newsclick.in/pahalgam-terror-attack-targeted-strike-india-pakistan-pok">https://www.newsclick.in/pahalgam-terror-attack-targeted-strike-india-pakistan-pok</a></li>
+
+<li>“South Asian confrontation escalates as Indian airstrikes hit inside Pakistan,” World Socialist Web Site. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/05/07/lwhd-m07.html">https://www.wsws.org/en/articles/2025/05/07/lwhd-m07.html</a></li>
+
+<li>M. Mukherjee, “Operation Sindoor: Before the Missiles Fly, Someone Should Check the Budget,” Frontline. Accessed: May 08, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/columns/operation-sindoor-india-pakistan-tensions-2025-war-costs-inequality/article69548600.ece">https://frontline.thehindu.com/columns/operation-sindoor-india-pakistan-tensions-2025-war-costs-inequality/article69548600.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Kashmiris experience night of terror as India-Pakistan fighting escalates,” Middle East Eye. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/kashmiris-experience-night-terror-pakistan-india-fighting-escalates">https://www.middleeasteye.net/news/kashmiris-experience-night-terror-pakistan-india-fighting-escalates</a></li>
+<li>“Social media users say Israel’s war on Gaza ‘greenlit’ India’s assault on Pakistan,” Middle East Eye. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/trending/social-media-says-israels-war-gaza-greenlit-indias-assault-pakistan">https://www.middleeasteye.net/trending/social-media-says-israels-war-gaza-greenlit-indias-assault-pakistan</a></li>
+<li>“British MP shares posts celebrating Indian strikes that killed civilians in Pakistan,” Middle East Eye. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.middleeasteye.net/news/british-mp-shares-posts-celebrating-indian-strikes-killed-civilians-pakistan">https://www.middleeasteye.net/news/british-mp-shares-posts-celebrating-indian-strikes-killed-civilians-pakistan</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Pahalgam attack raises tensions between India and Pakistan amid disinformation surge,” Global Voices. Accessed: May 07, 2025. [Online]. Available: <a href="https://globalvoices.org/2025/05/02/pahalgam-attack-raises-tensions-between-india-and-pakistan-amid-disinformation-surge/">https://globalvoices.org/2025/05/02/pahalgam-attack-raises-tensions-between-india-and-pakistan-amid-disinformation-surge/</a></li>
+
+<li>“The Pahalgam test.” Accessed: May 04, 2025. [Online]. Available: <a href="https://www.telegraphindia.com/opinion/the-pahalgam-test-the-republic-must-pledge-to-secure-its-pluralist-heart-prnt/cid/2097223">https://www.telegraphindia.com/opinion/the-pahalgam-test-the-republic-must-pledge-to-secure-its-pluralist-heart-prnt/cid/2097223</a></li>
+
+<li>“Has India’s Suspension of Indus Waters Treaty Caused a New Faultline in South Asia?,” The Wire. Accessed: May 03, 2025. [Online]. Available: <a href="https://thewire.in/south-asia/has-indias-suspension-of-indus-waters-treaty-caused-a-new-faultline-in-south-asia">https://thewire.in/south-asia/has-indias-suspension-of-indus-waters-treaty-caused-a-new-faultline-in-south-asia</a></li>
+
+<li>S. Choudhury, “India’s Pakistan dilemma: Caught between public outrage and perilous escalation,” 360. Accessed: May 01, 2025. [Online]. Available: <a href="https://360info.org/indias-pakistan-dilemma-caught-between-public-outrage-and-perilous-escalation/">https://360info.org/indias-pakistan-dilemma-caught-between-public-outrage-and-perilous-escalation/</a></li>
+
+<li>“Opinion: After Pahalgam: India’s Options - By Shashi Tharoor,” www.ndtv.com. Accessed: May 01, 2025. [Online]. Available: <a href="https://www.ndtv.com/opinion/after-pahalgam-indias-options-8270265">https://www.ndtv.com/opinion/after-pahalgam-indias-options-8270265</a></li>
+
+<li>“India’s Knee-jerk Responses In Kashmir Against Pakistan Are Dangerous,” The Wire. Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://thewire.in/security/indias-knee-jerk-responses-in-kashmir-against-pakistan-are-dangerous">https://thewire.in/security/indias-knee-jerk-responses-in-kashmir-against-pakistan-are-dangerous</a></li>
+
+<li>ANI, “Javed Akhtar calls for ‘definitive steps’ against terror attack in Pahalgam,” The Hindu, Apr. 30, 2025. Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://www.thehindu.com/entertainment/movies/javed-akhtar-pahalgam-terror-attack-pakistan-india-jammu-and-kashmir/article69507912.ece">https://www.thehindu.com/entertainment/movies/javed-akhtar-pahalgam-terror-attack-pakistan-india-jammu-and-kashmir/article69507912.ece</a></li>
+
+<li>“Not strong enough: On Pahalgam terror attack and the UNSC statement,” The Hindu, Apr. 28, 2025. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/not-strong-enough-on-pahalgam-and-unsc-statement/article69501705.ece">https://www.thehindu.com/opinion/editorial/not-strong-enough-on-pahalgam-and-unsc-statement/article69501705.ece</a></li>
+
+<li>“Interview: ‘Pahalgam shows Balakot did not create deterrence,’” The India Fix by Scroll. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://indiafix.stck.me/post/974050/Interview-Pahalgam-shows-Balakot-did-not-create-deterrence">https://indiafix.stck.me/post/974050/Interview-Pahalgam-shows-Balakot-did-not-create-deterrence</a></li>
+
+<li>T. H. Bureau, “Pahalgam terror attack LIVE: Govt bans 16 Pakistani YouTube channels over ‘misinformation against India, Army,’” The Hindu, Apr. 28, 2025. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/pahalgam-terror-attack-live-updates-jammu-kashmir-pakistan-loc-tension-april-28-2025/article69499872.ece">https://www.thehindu.com/news/national/pahalgam-terror-attack-live-updates-jammu-kashmir-pakistan-loc-tension-april-28-2025/article69499872.ece</a></li>
+<li>PTI, “Pahalgam tragedy: Are unresolved questions of Partition reflected in attack, asks Mani Shankar Aiyar,” The Hindu, Apr. 27, 2025. Accessed: Apr. 28, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/pahalgam-tragedy-are-unresolved-questions-of-partition-reflected-in-attack-asks-mani-shankar-aiyar/article69496912.ece">https://www.thehindu.com/news/national/pahalgam-tragedy-are-unresolved-questions-of-partition-reflected-in-attack-asks-mani-shankar-aiyar/article69496912.ece</a></li>
+<li>“Pahalgam terror attack: A tribute to the victims,” The Hindu. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://www.thehindu.com/infographics/2025-04-24/pahalgam-terror-attack-victims-tribute/index.html">https://www.thehindu.com/infographics/2025-04-24/pahalgam-terror-attack-victims-tribute/index.html</a></li>
+<li>T. H. Bureau, “Auroville holds candlelight vigil for victims of Pahalgam terror strike,” The Hindu, Apr. 24, 2025. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/puducherry/auroville-holds-candlelight-vigil-for-victims-of-pahalgam-terror-strike/article69487315.ece">https://www.thehindu.com/news/cities/puducherry/auroville-holds-candlelight-vigil-for-victims-of-pahalgam-terror-strike/article69487315.ece</a></li>
+
+<li>“Asim Munir, You Got that Wrong,” The Wire. Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://thewire.in/security/asim-munir-you-got-that-wrong">https://thewire.in/security/asim-munir-you-got-that-wrong</a></li>
+
+<li>S. Zargar, “Pahalgam attack: Why the buck stops with the Modi government,” Scroll.in. Accessed: Apr. 24, 2025. [Online]. Available: <a href="https://scroll.in/article/1081628/pahalgam-attack-why-the-buck-does-not-stop-with-the-elected-j-k-government">https://scroll.in/article/1081628/pahalgam-attack-why-the-buck-does-not-stop-with-the-elected-j-k-government</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-05-08 Thu 10:35</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
