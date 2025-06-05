@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-06-05 Thu 14:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICT Law</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">ICT Law</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1d31c2e">1. General</a></li>
+<li><a href="#orgf5a253d">2. STEMM</a>
+<ul>
+<li><a href="#orgd32f1d1">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orge5eb4fd">2.1.1. Complexity Science</a></li>
+<li><a href="#org1d6fc42">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org835b9f4">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4e5a823">3. Worldly Matters</a>
+<ul>
+<li><a href="#org253be81">3.1. Nation States</a>
+<ul>
+<li><a href="#org93553ca">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org926181b">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf4bfbea">4. Core</a>
+<ul>
+<li><a href="#org4a80c37">4.1. Patents</a></li>
+<li><a href="#org44e80f0">4.2. DRM</a></li>
+<li><a href="#org0140725">4.3. Licensing</a>
+<ul>
+<li><a href="#org775cc7c">4.3.1. Free Software Foundation</a></li>
+<li><a href="#org2f36eb1">4.3.2. GNU</a></li>
+<li><a href="#org51286fe">4.3.3. Creative Commons</a></li>
+<li><a href="#org4dafcd8">4.3.4. Open Source Initiative</a></li>
+<li><a href="#org3504544">4.3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbf3f35f">4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org97cec5e">5. Special Topics</a></li>
+<li><a href="#org4e1e479">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org1d31c2e" class="outline-2">
+<h2 id="org1d31c2e"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgf5a253d" class="outline-2">
+<h2 id="orgf5a253d"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd32f1d1" class="outline-3">
+<h3 id="orgd32f1d1"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orge5eb4fd" class="outline-4">
+<h4 id="orge5eb4fd"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Can algorithms bend toward justice? | Santa Fe Institute.” <a href="https://www.santafe.edu/news-center/news/can-algorithms-bend-toward-justice">https://www.santafe.edu/news-center/news/can-algorithms-bend-toward-justice</a> (accessed Apr. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d6fc42" class="outline-4">
+<h4 id="org1d6fc42"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org835b9f4" class="outline-3">
+<h3 id="org835b9f4"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>T. Noble, “Copyright and AI: the Cases and the Consequences,” Electronic Frontier Foundation. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/copyright-and-ai-cases-and-consequences">https://www.eff.org/deeplinks/2025/02/copyright-and-ai-cases-and-consequences</a></li>
+<li>T. Noble, “AI and Copyright: Expanding Copyright Hurts Everyone—Here’s What to Do Instead,” Electronic Frontier Foundation. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/ai-and-copyright-expanding-copyright-hurts-everyone-heres-what-do-instead">https://www.eff.org/deeplinks/2025/02/ai-and-copyright-expanding-copyright-hurts-everyone-heres-what-do-instead</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e5a823" class="outline-2">
+<h2 id="org4e5a823"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org253be81" class="outline-3">
+<h3 id="org253be81"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org93553ca" class="outline-4">
+<h4 id="org93553ca"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ul class="org-ul">
+<li><a id="org6ea534a"></a>General<br /></li>
+<li><a id="orge602793"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org34659f0"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org85185d2"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org8274fcf"></a>Orgs<br />
+<div class="outline-text-6" id="text-org8274fcf">
+<ul class="org-ul">
+<li>“Internet Freedom Foundation,” Internet Freedom Foundation. <a href="https://internetfreedom.in/">https://internetfreedom.in/</a> (accessed Jul. 31, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org19dfaed"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org5114a06"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgbe0bcd3"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org625af65"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org2fdfe4d"></a>Telecom Bill<br />
+<div class="outline-text-6" id="text-org2fdfe4d">
+<ul class="org-ul">
+<li>“First Read: The Telecom Bill, 2023 is on Santa’s evil list,” Internet Freedom Foundation. Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://internetfreedom.in/first-read-telecom-bill-2023/">https://internetfreedom.in/first-read-telecom-bill-2023/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Benjamin, “International coalition calls for withdrawal of Draft Indian Telco Bill: provisions threaten end-to-end encryption,” Access Now, Oct. 27, 2022. <a href="https://www.accessnow.org/india-telecommunications-bill-encryption/">https://www.accessnow.org/india-telecommunications-bill-encryption/</a> (accessed Dec. 03, 2022).</li>
+<li>G. Benjamin, “India’s Draft Teleco Bill empowers governments to impose internet shutdowns,” Access Now, Oct. 27, 2022. <a href="https://www.accessnow.org/india-telecommunications-bill-shutdowns/">https://www.accessnow.org/india-telecommunications-bill-shutdowns/</a> (accessed Dec. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Draft Indian Telecommunication Bill 2022,” Internet Society. <a href="https://www.internetsociety.org/resources/2022/internet-impact-brief-draft-indian-telecommunication-bill-2022/">https://www.internetsociety.org/resources/2022/internet-impact-brief-draft-indian-telecommunication-bill-2022/</a> (accessed Dec. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Comments on the Draft Telecommunication Bill, 2022 | Responsible Technology Initiative.” <a href="https://www.responsibletech.in/post/comments-on-the-draft-telecom-bill-2022">https://www.responsibletech.in/post/comments-on-the-draft-telecom-bill-2022</a> (accessed Nov. 16, 2022).</li>
+
+<li>“India’s New Telecom Bill Not Only Preserves 137-Year-Old Colonial Powers But Gives Govt Sweeping New Ones — Article 14.” <a href="https://article-14.com/post/india-s-new-telecom-bill-not-only-preserves-137-year-old-colonial-powers-but-gives-govt-sweeping-new-ones-6376ed1755796">https://article-14.com/post/india-s-new-telecom-bill-not-only-preserves-137-year-old-colonial-powers-but-gives-govt-sweeping-new-ones-6376ed1755796</a> (accessed Nov. 20, 2022).</li>
+
+<li>“How the Draft Telecom Bill Institutionalises Big Brother’s ‘Saffron Tick,’” The Wire. <a href="https://thewire.in/government/draft-telecom-bill-institutionalises-big-brother-saffron-tick">https://thewire.in/government/draft-telecom-bill-institutionalises-big-brother-saffron-tick</a> (accessed Oct. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org9e4a484"></a>DPDP Bill<br />
+<div class="outline-text-6" id="text-org9e4a484">
+<ul class="org-ul">
+<li>“India’s Privacy Bill (DPDP, 2023): A Detailed Analysis - Deepstrat,” Aug. 03, 2023. <a href="https://deepstrat.in/2023/08/03/indias-privacy-bill-dpdp-2023-a-detailed-analysis/">https://deepstrat.in/2023/08/03/indias-privacy-bill-dpdp-2023-a-detailed-analysis/</a> (accessed Aug. 04, 2023).</li>
+<li>“India’s Data Protection Bill a threat to privacy,” Access Now. <a href="https://www.accessnow.org/press-release/indias-data-protection-bill/">https://www.accessnow.org/press-release/indias-data-protection-bill/</a> (accessed Aug. 04, 2023).</li>
+<li>“India’s Data Protection Bill a threat to privacy,” Access Now. <a href="https://www.accessnow.org/press-release/indias-data-protection-bill/">https://www.accessnow.org/press-release/indias-data-protection-bill/</a> (accessed Aug. 04, 2023).</li>
+<li>“Right to Privacy not a fundamental right, cannot be invoked to scrap Aadhar: Centre tells Supreme Court,” The Economic Times, Jul. 23, 2015. Accessed: Aug. 04, 2023. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/politics-and-nation/right-to-privacy-not-a-fundamental-right-cannot-be-invoked-to-scrap-aadhar-centre-tells-supreme-court/articleshow/48178526.cms?from=mdr">https://economictimes.indiatimes.com/news/politics-and-nation/right-to-privacy-not-a-fundamental-right-cannot-be-invoked-to-scrap-aadhar-centre-tells-supreme-court/articleshow/48178526.cms?from=mdr</a></li>
+<li>“Opposition MPs on Data Protection Bill Panel Refuse to Back ‘Report’, Accuse Govt of Breaking Rules,” The Wire. <a href="https://thewire.in/government/john-brittas-data-protection-bill-panel-opposition-parliament">https://thewire.in/government/john-brittas-data-protection-bill-panel-opposition-parliament</a> (accessed Aug. 04, 2023).</li>
+<li>V. Bhalla, “How Modi government is using data privacy as an excuse to cripple the Right to Information,” Scroll.in, Aug. 02, 2023. <a href="https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information">https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information</a> (accessed Aug. 04, 2023).</li>
+<li>“What India’s Prime Minister Did Not Say About the Hate Crime on a Moving Train,” The Wire. <a href="https://thewire.in/communalism/what-indias-prime-minister-did-not-say-about-the-hate-crime-on-a-moving-train">https://thewire.in/communalism/what-indias-prime-minister-did-not-say-about-the-hate-crime-on-a-moving-train</a> (accessed Aug. 04, 2023).</li>
+<li>“India’s Privacy Bill (DPDP, 2023): A Detailed Analysis - Deepstrat,” Aug. 03, 2023. <a href="https://deepstrat.in/2023/08/03/indias-privacy-bill-dpdp-2023-a-detailed-analysis/">https://deepstrat.in/2023/08/03/indias-privacy-bill-dpdp-2023-a-detailed-analysis/</a> (accessed Aug. 04, 2023).</li>
+<li>“India’s Data Protection Bill a threat to privacy,” Access Now. <a href="https://www.accessnow.org/press-release/indias-data-protection-bill/">https://www.accessnow.org/press-release/indias-data-protection-bill/</a> (accessed Aug. 04, 2023).</li>
+<li>“India’s Data Protection Bill a threat to privacy,” Access Now. <a href="https://www.accessnow.org/press-release/indias-data-protection-bill/">https://www.accessnow.org/press-release/indias-data-protection-bill/</a> (accessed Aug. 04, 2023).</li>
+<li>“Right to Privacy not a fundamental right, cannot be invoked to scrap Aadhar: Centre tells Supreme Court,” The Economic Times, Jul. 23, 2015. Accessed: Aug. 04, 2023. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/politics-and-nation/right-to-privacy-not-a-fundamental-right-cannot-be-invoked-to-scrap-aadhar-centre-tells-supreme-court/articleshow/48178526.cms?from=mdr">https://economictimes.indiatimes.com/news/politics-and-nation/right-to-privacy-not-a-fundamental-right-cannot-be-invoked-to-scrap-aadhar-centre-tells-supreme-court/articleshow/48178526.cms?from=mdr</a></li>
+<li>“Opposition, Activists Raise Alarm as Modi Govt Gets Ready to Pass Data Protection Bill,” The Wire. <a href="https://thewire.in/government/opposition-activists-raise-alarm-as-modi-govt-gets-ready-to-pass-data-protection-bill">https://thewire.in/government/opposition-activists-raise-alarm-as-modi-govt-gets-ready-to-pass-data-protection-bill</a> (accessed Aug. 04, 2023).</li>
+<li>“Data Protection Bill Controversy Widens: Congress MP, JPC Member says Classified ‘as Money Bill,’” The Wire. <a href="https://thewire.in/government/data-protection-bill-controversy-widens-congress-mp-jpc-member-says-classified-as-money-bill">https://thewire.in/government/data-protection-bill-controversy-widens-congress-mp-jpc-member-says-classified-as-money-bill</a> (accessed Aug. 04, 2023).</li>
+<li>“Opposition MPs on Data Protection Bill Panel Refuse to Back ‘Report’, Accuse Govt of Breaking Rules,” The Wire. <a href="https://thewire.in/government/john-brittas-data-protection-bill-panel-opposition-parliament">https://thewire.in/government/john-brittas-data-protection-bill-panel-opposition-parliament</a> (accessed Aug. 04, 2023).</li>
+<li>V. Bhalla, “How Modi government is using data privacy as an excuse to cripple the Right to Information,” Scroll.in, Aug. 02, 2023. <a href="https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information">https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information</a> (accessed Aug. 04, 2023).</li>
+<li>“Changes to RTI Act, Rs 500 Crore Fine: Five Pitfalls to Watch Out for in the Data Protection Law,” The Wire. <a href="https://thewire.in/rights/changes-to-rti-act-rs-500-crore-fine-five-pitfalls-to-watch-out-for-in-the-data-protection-law">https://thewire.in/rights/changes-to-rti-act-rs-500-crore-fine-five-pitfalls-to-watch-out-for-in-the-data-protection-law</a> (accessed Jul. 29, 2023).</li>
+<li>“Opp members walk out of IT panel meet on data Bill report; BJP says provisions discussed,” The Indian Express, Jul. 27, 2023. <a href="https://indianexpress.com/article/india/opp-members-walk-out-of-it-panel-meet-on-data-bill-report-bjp-says-provisions-discussed-8862232/">https://indianexpress.com/article/india/opp-members-walk-out-of-it-panel-meet-on-data-bill-report-bjp-says-provisions-discussed-8862232/</a> (accessed Jul. 29, 2023).</li>
+<li>V. Bhalla, “‘A censorship tool in disguise’: How the Data Protection Bill will hurt journalists,” Scroll.in, Aug. 12, 2023. <a href="https://scroll.in/article/1054094/a-censorship-tool-in-disguise-how-the-data-protection-bill-will-hurt-journalists">https://scroll.in/article/1054094/a-censorship-tool-in-disguise-how-the-data-protection-bill-will-hurt-journalists</a> (accessed Aug. 12, 2023).</li>
+<li>V. Bhalla, “‘A censorship tool in disguise’: How the Data Protection Bill will hurt journalists,” Scroll.in, Aug. 12, 2023. <a href="https://scroll.in/article/1054094/a-censorship-tool-in-disguise-how-the-data-protection-bill-will-hurt-journalists">https://scroll.in/article/1054094/a-censorship-tool-in-disguise-how-the-data-protection-bill-will-hurt-journalists</a> (accessed Aug. 12, 2023).</li>
+<li>“How India’s Data Protection Law Weakens Citizens’ Right to Information.” <a href="https://thediplomat.com/2023/08/how-indias-data-protection-law-weakens-citizens-right-to-information/">https://thediplomat.com/2023/08/how-indias-data-protection-law-weakens-citizens-right-to-information/</a> (accessed Aug. 12, 2023).</li>
+<li>G. Sampath, “Decoding the Digital Personal Data Protection Bill 2023 | In Focus podcast,” The Hindu, Aug. 10, 2023. Accessed: Aug. 12, 2023. [Online]. Available: <a href="https://www.thehindu.com/podcast/decoding-the-digital-personal-data-protection-bill-2023-in-focus-podcast/article67180583.ece">https://www.thehindu.com/podcast/decoding-the-digital-personal-data-protection-bill-2023-in-focus-podcast/article67180583.ece</a></li>
+<li>“MoS IT on concerns around Digital Personal Data Protection Act: There will be checks &amp; balances to ensure personal data is not misused,” The Indian Express, Aug. 13, 2023. <a href="https://indianexpress.com/article/business/economy/concerns-around-contentious-provisions-of-data-protection-law-mos-it-8889933/">https://indianexpress.com/article/business/economy/concerns-around-contentious-provisions-of-data-protection-law-mos-it-8889933/</a> (accessed Aug. 14, 2023).</li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Derek O’Brien writes on Data Protection Act: A systematic wreckage of democratic procedure,” The Indian Express, Aug. 17, 2023. <a href="https://indianexpress.com/article/opinion/columns/data-protection-act-derek-o-brien-8897135/">https://indianexpress.com/article/opinion/columns/data-protection-act-derek-o-brien-8897135/</a> (accessed Aug. 18, 2023).</li>
+
+<li>A. Gupta, “An Act to cement digital authoritarianism,” The Hindu, Aug. 16, 2023. Accessed: Aug. 18, 2023. [Online]. Available: <a href="https://www.thehindu.com/opinion/lead/an-act-to-cement-digital-authoritarianism/article67202493.ece">https://www.thehindu.com/opinion/lead/an-act-to-cement-digital-authoritarianism/article67202493.ece</a></li>
+
+<li>“Personal Data Protection Bill: Sorely needed, but what of ground reality?,” HT Tech, Aug. 03, 2023. <a href="https://tech.hindustantimes.com/opinion/personal-data-protection-bill-sorely-needed-but-what-of-ground-reality-71691033994485.html">https://tech.hindustantimes.com/opinion/personal-data-protection-bill-sorely-needed-but-what-of-ground-reality-71691033994485.html</a> (accessed Aug. 17, 2023).</li>
+
+<li>“New data protection law dilutes RTI, will impact marginalised and poor: Experts.” <a href="https://www.downtoearth.org.in/news/governance/new-data-protection-law-dilutes-rti-will-impact-marginalised-and-poor-experts-91183">https://www.downtoearth.org.in/news/governance/new-data-protection-law-dilutes-rti-will-impact-marginalised-and-poor-experts-91183</a> (accessed Aug. 17, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India Passes Digital Personal Data Protection Bill,” EPIC - Electronic Privacy Information Center. <a href="https://epic.org/india-passes-digital-personal-data-protection-bill/">https://epic.org/india-passes-digital-personal-data-protection-bill/</a> (accessed Aug. 10, 2023).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. S, “Digital Personal Data Protection Bill, 2023: Here Are The Top 8 Changes,” BQ Prime, Aug. 03, 2023. <a href="https://www.bqprime.com/law-and-policy/digital-personal-data-protection-bill-2023-here-are-the-top-8-changes">https://www.bqprime.com/law-and-policy/digital-personal-data-protection-bill-2023-here-are-the-top-8-changes</a> (accessed Aug. 10, 2023).</li>
+<li>“The Data Protection bill will enable privacy violation, not guard against it,” The Indian Express, Aug. 09, 2023. <a href="https://indianexpress.com/article/opinion/data-protection-bill-enable-privacy-violation-not-guard-against-8883820/">https://indianexpress.com/article/opinion/data-protection-bill-enable-privacy-violation-not-guard-against-8883820/</a> (accessed Aug. 10, 2023).</li>
+<li>V. Sanzgiri, “Digital Personal Data Protection Bill 2023 passed in Rajya Sabha,” MediaNama, Aug. 10, 2023. <a href="https://www.medianama.com/2023/08/223-data-protection-bill-passed-rajya-sabha/">https://www.medianama.com/2023/08/223-data-protection-bill-passed-rajya-sabha/</a> (accessed Aug. 10, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“India’s Data Protection Bill a threat to privacy,”</b> Access Now. <a href="https://www.accessnow.org/press-release/indias-data-protection-bill/">https://www.accessnow.org/press-release/indias-data-protection-bill/</a> (accessed Aug. 05, 2023).
+<ul class="org-ul">
+<li>“Another blow for privacy,” Access Now. <a href="https://www.accessnow.org/press-release/another-blow-for-privacy-indias-data-protection/">https://www.accessnow.org/press-release/another-blow-for-privacy-indias-data-protection/</a> (accessed Aug. 09, 2023).</li>
+</ul></li>
+
+<li>S. Mathi, “A Complete Guide to India’s Digital Personal Data Protection Bill, 2023,” MediaNama, Aug. 03, 2023. <a href="https://www.medianama.com/2023/08/223-complete-guide-indias-digital-personal-data-protection-bill-2023/">https://www.medianama.com/2023/08/223-complete-guide-indias-digital-personal-data-protection-bill-2023/</a> (accessed Aug. 04, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Opposition Demands Data Protection Bill Be Sent to Parliamentary Committee,” The Wire. <a href="https://thewire.in/politics/data-protection-bill-opposition-parliamentary-committee">https://thewire.in/politics/data-protection-bill-opposition-parliamentary-committee</a> (accessed Aug. 05, 2023).</li>
+<li>“‘Regressive Amendments to RTI Act’: NCPRI Flags Concerns Over Digital Personal Data Protection Bill,” The Wire. <a href="https://thewire.in/rights/regressive-amendments-to-rti-act-ncpri-flags-concerns-over-digital-personal-data-protection-bill">https://thewire.in/rights/regressive-amendments-to-rti-act-ncpri-flags-concerns-over-digital-personal-data-protection-bill</a> (accessed Aug. 05, 2023).</li>
+<li>V. Bhalla, “How Modi government is using data privacy as an excuse to cripple the Right to Information,” Scroll.in, Aug. 02, 2023. <a href="https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information">https://scroll.in/article/1053514/how-modi-government-is-using-privacy-as-an-excuse-to-cripple-the-right-to-information</a> (accessed Aug. 03, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Nikhil Dey and Aruna Roy write: Data Protection Bill does not protect us — it attacks our rights,” The Indian Express, Aug. 07, 2023. <a href="https://indianexpress.com/article/opinion/columns/nikhil-dey-and-aruna-roy-write-data-protection-bill-does-not-protect-us-it-attacks-our-rights-8880902/">https://indianexpress.com/article/opinion/columns/nikhil-dey-and-aruna-roy-write-data-protection-bill-does-not-protect-us-it-attacks-our-rights-8880902/</a> (accessed Aug. 08, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Ten Reasons Why The Digital Personal Data Protection Law Doesn’t Empower Citizens,” The Wire. <a href="https://thewire.in/government/will-the-data-protection-law-empower-the-public">https://thewire.in/government/will-the-data-protection-law-empower-the-public</a> (accessed Aug. 08, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Digital India Act: Here’s how it should fix India’s cybersecurity weaknesses,” Moneycontrol, Jul. 27, 2023. <a href="https://www.moneycontrol.com/news/opinion/digital-india-act-heres-how-it-should-fix-indias-cybersecurity-weaknesses-11038701.html">https://www.moneycontrol.com/news/opinion/digital-india-act-heres-how-it-should-fix-indias-cybersecurity-weaknesses-11038701.html</a> (accessed Jul. 29, 2023).</li>
+
+<li>“Digital Personal Data Protection Bill 2023: What are the Opposition’s main objections?,” The News Minute, Jul. 27, 2023. <a href="https://www.thenewsminute.com/article/digital-personal-data-protection-bill-2023-what-are-opposition-s-main-objections-180288">https://www.thenewsminute.com/article/digital-personal-data-protection-bill-2023-what-are-opposition-s-main-objections-180288</a> (accessed Jul. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Summary: India’s Digital Personal Data Protection Bill, 2022.” <a href="https://www.medianama.com/2022/11/223-summary-digital-personal-data-protection-bill-2022/">https://www.medianama.com/2022/11/223-summary-digital-personal-data-protection-bill-2022/</a> (accessed Nov. 20, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. B. &amp; A. Johri, “The problems with the Data Protection Bill,” The Hindu, Feb. 20, 2023. Accessed: Feb. 21, 2023. [Online]. Available: <a href="https://www.thehindu.com/opinion/op-ed/the-problems-with-the-data-protection-bill/article66531928.ece">https://www.thehindu.com/opinion/op-ed/the-problems-with-the-data-protection-bill/article66531928.ece</a></li>
+<li>“Changes to RTI Act, Rs 500 Crore Fine: Five Pitfalls to Watch Out for in the Data Protection Law,” The Wire. <a href="https://thewire.in/rights/changes-to-rti-act-rs-500-crore-fine-five-pitfalls-to-watch-out-for-in-the-data-protection-law">https://thewire.in/rights/changes-to-rti-act-rs-500-crore-fine-five-pitfalls-to-watch-out-for-in-the-data-protection-law</a> (accessed Jul. 29, 2023).</li>
+<li>“Digital Personal Data Protection Bill 2023: What are the Opposition’s main objections?,” The News Minute, Jul. 27, 2023. <a href="https://www.thenewsminute.com/article/digital-personal-data-protection-bill-2023-what-are-opposition-s-main-objections-180288">https://www.thenewsminute.com/article/digital-personal-data-protection-bill-2023-what-are-opposition-s-main-objections-180288</a> (accessed Jul. 29, 2023).</li>
+<li>“New Data Protection Law: It cements the power imbalances in the data economy,” The Indian Express, Dec. 28, 2022. <a href="https://indianexpress.com/article/opinion/columns/shashank-mohan-writes-new-data-protection-law-power-imbalances-economy-8348308/">https://indianexpress.com/article/opinion/columns/shashank-mohan-writes-new-data-protection-law-power-imbalances-economy-8348308/</a> (accessed Dec. 30, 2022).</li>
+<li>“Personal Data Protection Bill Will ‘Severely Restrict Scope of RTI Act’: Activists Write to MPs,” The Wire. <a href="https://thewire.in/rights/personal-data-protection-bill-will-severely-restrict-scope-of-rti-act-activists-write-to-mps">https://thewire.in/rights/personal-data-protection-bill-will-severely-restrict-scope-of-rti-act-activists-write-to-mps</a> (accessed Jul. 20, 2023).</li>
+<li>S. Gandhi, “How the proposed Data Protection Bill will undermine India’s Right to Information,” Scroll.in. <a href="https://scroll.in/article/1037879/how-the-proposed-data-protection-bill-will-undermine-indias-right-to-information">https://scroll.in/article/1037879/how-the-proposed-data-protection-bill-will-undermine-indias-right-to-information</a> (accessed Nov. 21, 2022).</li>
+<li>“‘Vague Wording, Unguided Powers’: Experts on New Draft Digital Data Protection Bill,” The Wire. <a href="https://thewire.in/tech/experts-comment-on-new-data-protection-bill">https://thewire.in/tech/experts-comment-on-new-data-protection-bill</a> (accessed Nov. 21, 2022).</li>
+<li>“Why India’s Data Protection Bill Should Follow the EU Model, Not the China-Russia One,” The Wire. <a href="https://thewire.in/rights/data-protection-bill-localisation-eu-china-russia">https://thewire.in/rights/data-protection-bill-localisation-eu-china-russia</a> (accessed Sep. 11, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org2dcf3f8"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="orgeef4acc"></a>eff<br />
+<div class="outline-text-6" id="text-orgeef4acc">
+<ul class="org-ul">
+<li>K. R. and K. Opsahl, “India’s Draconian Rules for Internet Platforms Threaten User Privacy and Undermine Encryption,” Electronic Frontier Foundation, Jul. 20, 2021. <a href="https://www.eff.org/deeplinks/2021/07/indias-draconian-rules-internet-platforms-threaten-user-privacy-and-undermine">https://www.eff.org/deeplinks/2021/07/indias-draconian-rules-internet-platforms-threaten-user-privacy-and-undermine</a> (accessed Dec. 03, 2022).</li>
+<li>K. Rodriguez, “Why Indian Courts Should Reject Traceability Obligations,” Electronic Frontier Foundation, Jun. 02, 2021. <a href="https://www.eff.org/deeplinks/2021/06/why-indian-courts-should-reject-traceability-obligations">https://www.eff.org/deeplinks/2021/06/why-indian-courts-should-reject-traceability-obligations</a> (accessed Dec. 03, 2022).</li>
+<li>M. Baghdasaryan, “EFF and Partners Urge the Indian Government to Keep End-to-End Encryption Alive,” Electronic Frontier Foundation, Jul. 18, 2022. <a href="https://www.eff.org/deeplinks/2022/07/eff-and-partners-urge-indian-government-keep-end-end-encryption-alive">https://www.eff.org/deeplinks/2022/07/eff-and-partners-urge-indian-government-keep-end-end-encryption-alive</a> (accessed Dec. 03, 2022).</li>
+<li>K. Gullo, “India Requires Internet Services to Collect and Store Vast Amount of Customer Data, Building a Path to Mass Surveillance,” Electronic Frontier Foundation, Dec. 02, 2022. <a href="https://www.eff.org/deeplinks/2022/12/india-requires-internet-services-collect-and-store-vast-amount-customer-data">https://www.eff.org/deeplinks/2022/12/india-requires-internet-services-collect-and-store-vast-amount-customer-data</a> (accessed Dec. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7287434"></a>iff<br />
+<div class="outline-text-6" id="text-org7287434">
+<ul class="org-ul">
+<li>“IFF Joins RTI Campaign: Ensuring Privacy Protections don’t weaken Transparency,” Internet Freedom Foundation. Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://internetfreedom.in/iff-joins-rti-campaign-ensuring-privacy-protections-dont-weaken-transparency/">https://internetfreedom.in/iff-joins-rti-campaign-ensuring-privacy-protections-dont-weaken-transparency/</a></li>
+<li>“Section 44(3) and the Systematic Dismantling of the RTI Act: A Fact Check to Ashwini Vaishnaw,” Internet Freedom Foundation. Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://internetfreedom.in/section-44-3-and-the-systematic-dismantling-of-the-rti-act-a-fact-check-to-ashwini-vaishnaw/">https://internetfreedom.in/section-44-3-and-the-systematic-dismantling-of-the-rti-act-a-fact-check-to-ashwini-vaishnaw/</a></li>
+<li>“A Guide to Data Protection Compliance for Civil Society Organisations in India,” Internet Freedom Foundation. Accessed: Jan. 31, 2025. [Online]. Available: <a href="https://internetfreedom.in/a-guidata-protection-compliance-for-civil-society-organisations-in-india/">https://internetfreedom.in/a-guidata-protection-compliance-for-civil-society-organisations-in-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf7f8208"></a>tpp<br />
+<div class="outline-text-6" id="text-orgf7f8208">
+<ul class="org-ul">
+<li>K. Rajmohan, “Data Localization: India’s Tryst with Data Sovereignty | TechPolicy.Press,” Tech Policy Press. Accessed: Feb. 03, 2025. [Online]. Available: <a href="https://techpolicy.press/data-localization-indias-tryst-with-data-sovereignty">https://techpolicy.press/data-localization-indias-tryst-with-data-sovereignty</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf34e588"></a>ifex<br />
+<div class="outline-text-6" id="text-orgf34e588">
+<ul class="org-ul">
+<li>M. Tzabiras, “India: Snapshot of the Draft Digital Personal Data Protection Rules 2025,” IFEX. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://ifex.org/india-snapshot-of-the-draft-digital-personal-data-protection-rules-2025/">https://ifex.org/india-snapshot-of-the-draft-digital-personal-data-protection-rules-2025/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd1fab10"></a>cfa<br />
+<div class="outline-text-6" id="text-orgd1fab10">
+<ul class="org-ul">
+<li>T. Franco, “Secrecy is protecting defaulters under the RBI Act and the proposed DPDP Act.,” Centre for Financial Accountability. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.cenfa.org/secrecy-is-protecting-defaulters-under-the-rbi-act-and-the-proposed-dpdp-act/">https://www.cenfa.org/secrecy-is-protecting-defaulters-under-the-rbi-act-and-the-proposed-dpdp-act/</a></li>
+<li>CFA, “Nothing Personal? The DPDP Act and the End of RTI,” Centre for Financial Accountability. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.cenfa.org/nothing-personal-the-dpdp-act-and-the-end-of-rti/">https://www.cenfa.org/nothing-personal-the-dpdp-act-and-the-end-of-rti/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga9b3f32"></a>sflc<br />
+<div class="outline-text-6" id="text-orga9b3f32">
+<ul class="org-ul">
+<li>“SFLC.in’s Comments on Draft Digital Competition Bill.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://sflc.in/sflc-ins-comments-on-the-draft-digital-competition-bill-2024/">https://sflc.in/sflc-ins-comments-on-the-draft-digital-competition-bill-2024/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org89b3aeb"></a>mn<br />
+<div class="outline-text-6" id="text-org89b3aeb">
+<ul class="org-ul">
+<li>S. Mathi, “First draft of India’s Digital Competition Bill ready: Report,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-first-draft-digital-competition-bill/">https://www.medianama.com/2024/02/223-first-draft-digital-competition-bill/</a></li>
+<li>Mimansa, “Guide: Draft Digital Personal Data Protection Act Rules,” MEDIANAMA. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/01/223-guide-draft-digital-personal-data-protection-act-rules/">https://www.medianama.com/2025/01/223-guide-draft-digital-personal-data-protection-act-rules/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7b7f004"></a>Misc<br />
+<div class="outline-text-6" id="text-org7b7f004">
+<ul class="org-ul">
+<li>‘Attack on Media Freedom’: Journalists Protest Data Protection Act | NewsClick, (Apr. 25, 2025). Accessed: Apr. 25, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lrij5vnehzk">https://www.youtube.com/watch?v=lrij5vnehzk</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Wire, ‘Data Protection’ or Scuttling RTI? | Jaanne Bhi Do Yaaro, (Apr. 14, 2025). Accessed: Apr. 18, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IJRf79s5rD8">https://www.youtube.com/watch?v=IJRf79s5rD8</a></li>
+
+<li>T. H. Bureau, “Pause, review, repeal ‘RTI-destroying amendment’: Jairam Ramesh to Ashwini Vaishnaw,” The Hindu, Apr. 13, 2025. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/jairam-ramesh-writes-to-vaishnaw-to-repeal-rti-destroying-amendment/article69446080.ece">https://www.thehindu.com/news/national/jairam-ramesh-writes-to-vaishnaw-to-repeal-rti-destroying-amendment/article69446080.ece</a></li>
+<li>“RTI: Ashwini Vaishnaw’s Defence of Section 44(3) is Wrong on a Reading of Law and Facts,” The Wire. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://thewire.in/law/fact-check-ashwini-vaishnaw-section-44-3-dpdpa-rti-act">https://thewire.in/law/fact-check-ashwini-vaishnaw-section-44-3-dpdpa-rti-act</a></li>
+
+<li>Digital Personal Data Protection Act:Its effect on Democracy &amp; Us. Accessed: Apr. 08, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pRg19eoCay0">https://www.youtube.com/watch?v=pRg19eoCay0</a></li>
+
+<li>K. Pant, “Video: Does India’s data protection law undermine citizens’ right to know?,” Scroll.in. Accessed: Apr. 01, 2025. [Online]. Available: <a href="https://scroll.in/video/1080832/video-does-indias-data-protection-law-undermine-citizens-right-to-know">https://scroll.in/video/1080832/video-does-indias-data-protection-law-undermine-citizens-right-to-know</a></li>
+
+<li>“Civil society seeks rollback of DPDP changes to RTI Act,” The Economic Times. Accessed: Mar. 23, 2025. [Online]. Available: <a href="https://economictimes.indiatimes.com/tech/technology/civil-society-seeks-rollback-of-dpdp-changes-to-rti-act/articleshow/119313948.cms">https://economictimes.indiatimes.com/tech/technology/civil-society-seeks-rollback-of-dpdp-changes-to-rti-act/articleshow/119313948.cms</a></li>
+
+<li>“The Draft Digital Personal Data Protection Rules: Surveillance For Surveillance’s Sake,” The Wire. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://thewire.in/rights/draft-dpdp-rules-surveillance-for-surveillances-sake">https://thewire.in/rights/draft-dpdp-rules-surveillance-for-surveillances-sake</a></li>
+
+<li>R. Krishnamurthy, “Draft Digital Personal Data Protection Rules 2025 will only be a nominal checkbox: Apar Gupta,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/draft-digital-personal-data-protection-rules-2025-will-only-be-a-nominal-checkbox-apar-gupta">https://www.downtoearth.org.in/science-technology/draft-digital-personal-data-protection-rules-2025-will-only-be-a-nominal-checkbox-apar-gupta</a></li>
+
+<li>“SC Directs DoPT, States To Appoint Information Commissioners Within Specified Timeline,” The Wire. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://thewire.in/government/sc-directs-dopt-states-to-appoint-information-commissioners-within-specified-timeline">https://thewire.in/government/sc-directs-dopt-states-to-appoint-information-commissioners-within-specified-timeline</a></li>
+
+<li>J. M. K. &amp; S. Mohan, “How the draft rules for implementing data protection falls short,” The Hindu, Jan. 13, 2025. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/how-the-draft-rules-for-implementing-data-protection-falls-short/article69092017.ece">https://www.thehindu.com/sci-tech/technology/how-the-draft-rules-for-implementing-data-protection-falls-short/article69092017.ece</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Gupta, “The draft digital data protection rules will advance authoritarianism,” The Hindu, Jan. 12, 2025. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/op-ed/the-draft-digital-data-protection-rules-will-advance-authoritarianism/article69092725.ece">https://www.thehindu.com/opinion/op-ed/the-draft-digital-data-protection-rules-will-advance-authoritarianism/article69092725.ece</a></li>
+
+<li>“No secret affair: on the draft Digital Personal Data Protection Rules, 2025,” The Hindu, Jan. 05, 2025. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/no-secret-affair-on-the-draft-digital-personal-data-protection-rules-2025/article69064313.ece">https://www.thehindu.com/opinion/editorial/no-secret-affair-on-the-draft-digital-personal-data-protection-rules-2025/article69064313.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Women in Governance: Mahima Kaul and Mishi Choudhary | Asia Society.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://asiasociety.org/india/events/women-governance-mahima-kaul-and-mishi-choudhary">https://asiasociety.org/india/events/women-governance-mahima-kaul-and-mishi-choudhary</a></li>
+
+<li>kavya pradeep, “The Digital Competition Bill, 2024: What’s the fuss about?,” Frontline. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/science-and-technology/digital-competition-bill-2024-big-tech-google-amazon-facebook-reliance-digital-advertising/article68330828.ece">https://frontline.thehindu.com/science-and-technology/digital-competition-bill-2024-big-tech-google-amazon-facebook-reliance-digital-advertising/article68330828.ece</a></li>
+
+<li>“India’s Sudden Reversal on Privacy Will Affect the Global Internet,” The Wire. <a href="https://thewire.in/rights/india-privacy-data-protection-global-internet-effect">https://thewire.in/rights/india-privacy-data-protection-global-internet-effect</a> (accessed Sep. 10, 2022).</li>
+
+<li>“CERT-In Directions on Cybersecurity: An Explainer,” Internet Freedom Foundation, May 05, 2022. <a href="https://internetfreedom.in/cert-in-guidelines-on-cybersecurity-an-explainer/">https://internetfreedom.in/cert-in-guidelines-on-cybersecurity-an-explainer/</a> (accessed Dec. 03, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org926181b" class="outline-3">
+<h3 id="org926181b"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Software Freedom Law Center,” Wikipedia. Aug. 29, 2024. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Software_Freedom_Law_Center&amp;oldid=1242850906">https://en.wikipedia.org/w/index.php?title=Software_Freedom_Law_Center&amp;oldid=1242850906</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4bfbea" class="outline-2">
+<h2 id="orgf4bfbea"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4a80c37" class="outline-3">
+<h3 id="org4a80c37"><span class="section-number-3">4.1.</span> Patents</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“End Software Patents.” <a href="https://endsoftwarepatents.org/">https://endsoftwarepatents.org/</a> (accessed Nov. 20, 2021).</li>
+
+<li>A. Kamdar, <i>“Defend Innovation: How to Fix Our Broken Patent System,”</i> Electronic Frontier Foundation, Feb. 23, 2015. <a href="https://www.eff.org/wp/defend-innovation-how-fix-our-broken-patent-system">https://www.eff.org/wp/defend-innovation-how-fix-our-broken-patent-system</a> (accessed Jan. 25, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44e80f0" class="outline-3">
+<h3 id="org44e80f0"><span class="section-number-3">4.2.</span> DRM</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b>“We oppose DRM. | Defective by Design.”</b> <a href="https://www.defectivebydesign.org/">https://www.defectivebydesign.org/</a> (accessed Jul. 02, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0140725" class="outline-3">
+<h3 id="org0140725"><span class="section-number-3">4.3.</span> Licensing</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org775cc7c" class="outline-4">
+<h4 id="org775cc7c"><span class="section-number-4">4.3.1.</span> Free Software Foundation</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li><b>“FSF Licensing &amp; Compliance Team — Free Software Foundation — Working together for free software.”</b> <a href="https://www.fsf.org/licensing?pk_campaign=fsfredesign">https://www.fsf.org/licensing?pk_campaign=fsfredesign</a> (accessed Jul. 03, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f36eb1" class="outline-4">
+<h4 id="org2f36eb1"><span class="section-number-4">4.3.2.</span> GNU</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>“Frequently Asked Questions about the GNU Licenses - GNU Project - Free Software Foundation.” <a href="https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic">https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic</a> (accessed Apr. 13, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51286fe" class="outline-4">
+<h4 id="org51286fe"><span class="section-number-4">4.3.3.</span> Creative Commons</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>“When we share, everyone wins,” Creative Commons. <a href="https://creativecommons.org/">https://creativecommons.org/</a> (accessed Mar. 14, 2022).</li>
+<li>C. Doctorow, “A Bug in Early Creative Commons Licenses Has Enabled a New Breed of Superpredator,” Medium, Jan. 25, 2022. <a href="https://doctorow.medium.com/a-bug-in-early-creative-commons-licenses-has-enabled-a-new-breed-of-superpredator-5f6360713299">https://doctorow.medium.com/a-bug-in-early-creative-commons-licenses-has-enabled-a-new-breed-of-superpredator-5f6360713299</a> (accessed Jan. 26, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4dafcd8" class="outline-4">
+<h4 id="org4dafcd8"><span class="section-number-4">4.3.4.</span> Open Source Initiative</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<ul class="org-ul">
+<li>“ClearlyDefined.” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://clearlydefined.io/about">https://clearlydefined.io/about</a></li>
+<li>“Licenses,” Open Source Initiative. Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://opensource.org/licenses/">https://opensource.org/licenses/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3504544" class="outline-4">
+<h4 id="org3504544"><span class="section-number-4">4.3.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ul class="org-ul">
+<li>“‘I Question Copyright’ – Question Copyright.” <a href="https://questioncopyright.org/i-question-copyright">https://questioncopyright.org/i-question-copyright</a> (accessed Nov. 12, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf3f35f" class="outline-3">
+<h3 id="orgbf3f35f"><span class="section-number-3">4.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>M. Hildebrandt, <b>Law for Computer Scientists and Other Folk.</b> Oxford University Press, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org97cec5e" class="outline-2">
+<h2 id="org97cec5e"><span class="section-number-2">5.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org4e1e479" class="outline-2">
+<h2 id="org4e1e479"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“The IP Laws That Stop Disenshittification.” Accessed: Apr. 12, 2025. [Online]. Available: <a href="https://jacobin.com/2025/04/ip-anticircumvention-tech-trump-tariffs">https://jacobin.com/2025/04/ip-anticircumvention-tech-trump-tariffs</a></li>
+
+<li>M. Stoltz, “Open Licensing Promotes Culture and Learning. That’s Why EFF Is Upgrading its Creative Commons Licenses.,” Electronic Frontier Foundation. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/open-licensing-promotes-culture-and-learning-thats-why-eff-upgrading-its-creative">https://www.eff.org/deeplinks/2025/02/open-licensing-promotes-culture-and-learning-thats-why-eff-upgrading-its-creative</a></li>
+
+<li>“Computational Attorneys: Opportunities and Challenges | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/computational-attorneys-opportunities-and-challenges/">https://www.siam.org/publications/siam-news/articles/computational-attorneys-opportunities-and-challenges/</a></li>
+
+<li>M. Stoltz, “Don’t Make Copyright Law in Smoke-Filled Rooms,” Electronic Frontier Foundation. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/dont-make-copyright-law-smoke-filled-rooms">https://www.eff.org/deeplinks/2025/01/dont-make-copyright-law-smoke-filled-rooms</a></li>
+<li>C. McSherry, “What Proponents of Digital Replica Laws Can Learn from the Digital Millennium Copyright Act,” Electronic Frontier Foundation. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/what-proponents-digital-replica-laws-can-learn-digital-millennium-copyright-act">https://www.eff.org/deeplinks/2025/01/what-proponents-digital-replica-laws-can-learn-digital-millennium-copyright-act</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Top Open Source licenses in 2024,” Open Source Initiative. Accessed: Jan. 05, 2025. [Online]. Available: <a href="https://opensource.org/blog/top-open-source-licenses-in-2024">https://opensource.org/blog/top-open-source-licenses-in-2024</a></li>
+
+<li>“Pluralistic: The US Copyright Office frees the McFlurry (28 Oct 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/10/28/mcbroken/">https://pluralistic.net/2024/10/28/mcbroken/</a></li>
+
+<li>“PRESS RELEASE: EPIC Partners with the Heising-Simons Foundation to Promote a Human Rights-First Approach to Emerging Technology,” EPIC - Electronic Privacy Information Center. Accessed: Oct. 22, 2024. [Online]. Available: <a href="https://epic.org/press-release-epic-partners-with-the-heising-simons-foundation-to-promote-a-human-rights-first-approach-to-emerging-technology/">https://epic.org/press-release-epic-partners-with-the-heising-simons-foundation-to-promote-a-human-rights-first-approach-to-emerging-technology/</a></li>
+
+<li>S. Dibble, GDPR For Dummies, 1st edition. For Dummies, 2019.</li>
+
+<li>M. S. and T. Noble, “Copyright Is Not a Tool to Silence Critics of Religious Education,” Electronic Frontier Foundation. Accessed: Aug. 29, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/08/copyright-not-tool-silence-critics-religious-education">https://www.eff.org/deeplinks/2024/08/copyright-not-tool-silence-critics-religious-education</a></li>
+
+<li>“Coders’ Rights Project,” Electronic Frontier Foundation. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.eff.org/issues/coders">https://www.eff.org/issues/coders</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Sukriti, “A Primer on the NetChoice and Murthy cases before SCOTUS and why they matter for India — The Digital Constitutionalist.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://digi-con.org/a-primer-on-the-netchoice-and-murthy-cases-before-scotus-and-why-they-matter-for-india/">https://digi-con.org/a-primer-on-the-netchoice-and-murthy-cases-before-scotus-and-why-they-matter-for-india/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: An open copyright casebook, featuring AI, Warhol and more (30 Jul 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/07/30/open-and-shut-casebook/">https://pluralistic.net/2024/07/30/open-and-shut-casebook/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Beyond SPDX: expanding licenses identified by ClearlyDefined,” Open Source Initiative. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://opensource.org/blog/beyond-spdx-expanding-licenses-identified-by-clearlydefined">https://opensource.org/blog/beyond-spdx-expanding-licenses-identified-by-clearlydefined</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Solomon, “A pathway forward for digital rights,” Access Now. Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.accessnow.org/a-pathway-forward-for-digital-rights/">https://www.accessnow.org/a-pathway-forward-for-digital-rights/</a></li>
+<li>“Brett Solomon on Digital Rights - Schneier on Security.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/07/brett-solomon-on-digital-rights.html">https://www.schneier.com/blog/archives/2024/07/brett-solomon-on-digital-rights.html</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Copyright and public records don’t mix,” Freedom of the Press. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://freedom.press/news/copyright-and-public-records-dont-mix/">https://freedom.press/news/copyright-and-public-records-dont-mix/</a></li>
+
+<li>“Smart Technologies and the End(s) of Law.” Accessed: May 09, 2024. [Online]. Available: <a href="https://www.e-elgar.com/shop/gbp/smart-technologies-and-the-end-s-of-law-9781786430229.html">https://www.e-elgar.com/shop/gbp/smart-technologies-and-the-end-s-of-law-9781786430229.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: 2024’s public domain is a banger (20 Dec 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 21, 2023. [Online]. Available: <a href="https://pluralistic.net/2023/12/20/em-oh-you-ess-ee/">https://pluralistic.net/2023/12/20/em-oh-you-ess-ee/</a></li>
+
+<li>C. Doctorow, “20 Years Of Copyright Wars,” Gizmodo, Aug. 08, 2022. <a href="https://gizmodo.com/cory-doctorow-copyright-laws-tech-antitrust-1849376858">https://gizmodo.com/cory-doctorow-copyright-laws-tech-antitrust-1849376858</a> (accessed Aug. 09, 2022).</li>
+
+<li>R. Giblin and C. Doctorow, Chokepoint Capitalism: How Big Tech and Big Content Captured Creative Labor Markets and How We’ll Win Them Back. Beacon Press, 2023.</li>
+
+<li>“Software Freedom Conservancy Launches Self-Service Copyright Assignment Process,” Software Freedom Conservancy. <a href="https://sfconservancy.org/news/2022/may/02/conservancy-launches-copyright-assignment-system/">https://sfconservancy.org/news/2022/may/02/conservancy-launches-copyright-assignment-system/</a> (accessed May 03, 2022).</li>
+
+<li><b>“Creativity &amp; Innovation,”</b> Electronic Frontier Foundation. <a href="https://www.eff.org/issues/innovation">https://www.eff.org/issues/innovation</a> (accessed Jul. 03, 2021).</li>
+
+<li>J. Zittrain, <b>The Future of the Internet&#x2013;And How to Stop It.</b> Yale University Press, 2008.</li>
+
+<li>L. Lessig, <i>Free Culture.</i> Lulu.com, 2015.</li>
+
+<li>L. Lessig, <i>Code: And Other Laws of Cyberspace, Version 2.0.</i> Lawrence Lessig, 2006.</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-06-05 Thu 14:43</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
