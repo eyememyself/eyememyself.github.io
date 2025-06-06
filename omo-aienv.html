@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-06-06 Fri 14:50 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI, Environment, Ecology</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AI, Environment, Ecology</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaabf2e4">1. General</a></li>
+<li><a href="#orga97de11">2. STEMM</a>
+<ul>
+<li><a href="#org85c8a88">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org3e8dccf">2.1.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7bc3dec">2.2. Biological Sciences, Misc</a>
+<ul>
+<li><a href="#org1985c23">2.2.1. GreenPeace</a></li>
+<li><a href="#org79490ad">2.2.2. Nature</a></li>
+<li><a href="#org1d125b7">2.2.3. Mongabay</a></li>
+<li><a href="#orgc6897a2">2.2.4. Water</a></li>
+</ul>
+</li>
+<li><a href="#orgc822a90">2.3. Basic Sciences, Misc</a>
+<ul>
+<li><a href="#org26c11d0">2.3.1. Physics</a></li>
+</ul>
+</li>
+<li><a href="#orgae4a6a9">2.4. Computer Science and Engineering</a>
+<ul>
+<li><a href="#org00b5622">2.4.1. ACM</a></li>
+<li><a href="#orgec7855c">2.4.2. IEEE</a></li>
+<li><a href="#orgdf75ac0">2.4.3. OII</a></li>
+<li><a href="#org0b3c947">2.4.4. Mozilla Foundation</a></li>
+</ul>
+</li>
+<li><a href="#org3b75ddb">2.5. MIT</a></li>
+<li><a href="#org2909e20">2.6. Tech Policy Press</a></li>
+<li><a href="#orgc4bba03">2.7. Popular Science</a>
+<ul>
+<li><a href="#orgaa8c014">2.7.1. Popular Science</a></li>
+<li><a href="#orgf732ea0">2.7.2. Scientific American</a></li>
+<li><a href="#org1d0ffb8">2.7.3. Quanta Magazine</a></li>
+</ul>
+</li>
+<li><a href="#org538f256">2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga7dbc4c">3. Worldly Matters</a>
+<ul>
+<li><a href="#org560ccb5">3.1. M. Mazzucato</a></li>
+<li><a href="#org4913391">3.2. Jacobin</a></li>
+<li><a href="#org08b76e6">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc8a0931">4. Arts</a>
+<ul>
+<li><a href="#org182ddb3">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf77f3cf">5. Special Topics</a>
+<ul>
+<li><a href="#org69bb200">5.1. The Conversation</a></li>
+<li><a href="#orgc1ec673">5.2. Leverhulme Centre for the Future of Intelligence</a></li>
+<li><a href="#org43db083">5.3. K. Hao</a></li>
+<li><a href="#org7b7bc57">5.4. CEPR</a></li>
+</ul>
+</li>
+<li><a href="#org472a152">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgaabf2e4" class="outline-2">
+<h2 id="orgaabf2e4"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga97de11" class="outline-2">
+<h2 id="orga97de11"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org85c8a88" class="outline-3">
+<h3 id="org85c8a88"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org3e8dccf" class="outline-4">
+<h4 id="org3e8dccf"><span class="section-number-4">2.1.1.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org7bc3dec" class="outline-3">
+<h3 id="org7bc3dec"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org1985c23" class="outline-4">
+<h4 id="org1985c23"><span class="section-number-4">2.2.1.</span> GreenPeace</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Artificial Intelligence Supply Chain Threatens Climate Progress in East Asia,” Greenpeace East Asia. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://www.greenpeace.org/eastasia/press/68006/artificial-intelligence-supply-chain-threatens-climate-progress-in-east-asia/">https://www.greenpeace.org/eastasia/press/68006/artificial-intelligence-supply-chain-threatens-climate-progress-in-east-asia/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79490ad" class="outline-4">
+<h4 id="org79490ad"><span class="section-number-4">2.2.2.</span> Nature</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>K. Crawford, “Generative AI’s environmental costs are soaring — and mostly secret,” Nature, vol. 626, no. 8000, pp. 693–693, Feb. 2024, doi: 10.1038/d41586-024-00478-x.</li>
+<li>B. Thompson and E. Gibney, “How light-based computers could cut AI’s energy needs,” Nature, Jul. 2024, doi: 10.1038/d41586-024-02517-z.</li>
+<li>P. Dhar, “The carbon impact of artificial intelligence,” Nature Machine Intelligence, vol. 2, no. 8, Art. no. 8, Aug. 2020, doi: 10.1038/s42256-020-0219-9.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d125b7" class="outline-4">
+<h4 id="org1d125b7"><span class="section-number-4">2.2.3.</span> Mongabay</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>“Critics fear catastrophic energy crisis as AI is outsourced to Latin America,” Mongabay Environmental News. Accessed: Mar. 22, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/03/critics-fear-catastrophic-energy-crisis-as-ai-is-outsourced-to-latin-america/">https://news.mongabay.com/2024/03/critics-fear-catastrophic-energy-crisis-as-ai-is-outsourced-to-latin-america/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc6897a2" class="outline-4">
+<h4 id="orgc6897a2"><span class="section-number-4">2.2.4.</span> Water</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ul class="org-ul">
+<li>K. Hao, “AI Is Taking Water From the Desert,” The Atlantic. Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://www.theatlantic.com/technology/archive/2024/03/ai-water-climate-microsoft/677602/">https://www.theatlantic.com/technology/archive/2024/03/ai-water-climate-microsoft/677602/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc822a90" class="outline-3">
+<h3 id="orgc822a90"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org26c11d0" class="outline-4">
+<h4 id="org26c11d0"><span class="section-number-4">2.3.1.</span> Physics</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ul class="org-ul">
+<li><a id="org0cb1e85"></a>Physics World<br />
+<div class="outline-text-5" id="text-org0cb1e85">
+<ul class="org-ul">
+<li>I. Dumé, “Generative AI has an electronic waste problem, researchers warn,” Physics World. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://physicsworld.com/generative-ai-has-an-electronic-waste-problem-researchers-warn/">https://physicsworld.com/generative-ai-has-an-electronic-waste-problem-researchers-warn/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae4a6a9" class="outline-3">
+<h3 id="orgae4a6a9"><span class="section-number-3">2.4.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org00b5622" class="outline-4">
+<h4 id="org00b5622"><span class="section-number-4">2.4.1.</span> ACM</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>“AI’s Increasing Power Needs – Communications of the ACM.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://cacm.acm.org/news/ais-increasing-power-needs/">https://cacm.acm.org/news/ais-increasing-power-needs/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgec7855c" class="outline-4">
+<h4 id="orgec7855c"><span class="section-number-4">2.4.2.</span> IEEE</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li>“1-bit LLMs Could Solve AI’s Energy Demands - IEEE Spectrum.” Accessed: May 31, 2024. [Online]. Available: <a href="https://spectrum.ieee.org/1-bit-llm">https://spectrum.ieee.org/1-bit-llm</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf75ac0" class="outline-4">
+<h4 id="orgdf75ac0"><span class="section-number-4">2.4.3.</span> OII</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<ul class="org-ul">
+<li>Oxford Internet Institute, University of Oxford, Behind the Algorithmic Code: The Environmental Footprint of AI’s Supply Chains, (Nov. 27, 2024). Accessed: Dec. 07, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VcXsSdXL7C0">https://www.youtube.com/watch?v=VcXsSdXL7C0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b3c947" class="outline-4">
+<h4 id="org0b3c947"><span class="section-number-4">2.4.4.</span> Mozilla Foundation</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<ul class="org-ul">
+<li>“AI’s Carbon Footprint Transparency Problem,” Mozilla Foundation. Accessed: Apr. 10, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/ai-carbon-footprint/">https://foundation.mozilla.org/en/blog/ai-carbon-footprint/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3b75ddb" class="outline-3">
+<h3 id="org3b75ddb"><span class="section-number-3">2.5.</span> MIT</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“The multi-faceted challenge of powering AI,” Main. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://energy.mit.edu/news/the-multi-faceted-challenge-of-powering-ai/">https://energy.mit.edu/news/the-multi-faceted-challenge-of-powering-ai/</a></li>
+<li>“Explained: Generative AI’s environmental impact,” MIT News | Massachusetts Institute of Technology. Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117">https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2909e20" class="outline-3">
+<h3 id="org2909e20"><span class="section-number-3">2.6.</span> Tech Policy Press</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>T. Kneese, “Measuring AI’s Environmental Impacts Requires Empirical Research and Standards | TechPolicy.Press,” Tech Policy Press. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://techpolicy.press/measuring-ais-environmental-impacts-requires-empirical-research-and-standards">https://techpolicy.press/measuring-ais-environmental-impacts-requires-empirical-research-and-standards</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc4bba03" class="outline-3">
+<h3 id="orgc4bba03"><span class="section-number-3">2.7.</span> Popular Science</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-orgaa8c014" class="outline-4">
+<h4 id="orgaa8c014"><span class="section-number-4">2.7.1.</span> Popular Science</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<ul class="org-ul">
+<li>M. DeGeurin, “AI will require even more energy than we thought,” Popular Science. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.popsci.com/technology/ai-more-energy/">https://www.popsci.com/technology/ai-more-energy/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf732ea0" class="outline-4">
+<h4 id="orgf732ea0"><span class="section-number-4">2.7.2.</span> Scientific American</h4>
+<div class="outline-text-4" id="text-2-7-2">
+<ul class="org-ul">
+<li>M. G. magazine Nature, “Power-Thirsty AI Turns to Mothballed Nuclear Plants. Is That Safe?,” Scientific American. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/power-thirsty-ai-turns-to-mothballed-nuclear-plants-is-that-safe/">https://www.scientificamerican.com/article/power-thirsty-ai-turns-to-mothballed-nuclear-plants-is-that-safe/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d0ffb8" class="outline-4">
+<h4 id="org1d0ffb8"><span class="section-number-4">2.7.3.</span> Quanta Magazine</h4>
+<div class="outline-text-4" id="text-2-7-3">
+<ul class="org-ul">
+<li>A. Zeeberg, “AI Needs Enormous Computing Power. Could Light-Based Chips Help?,” Quanta Magazine. Accessed: May 21, 2024. [Online]. Available: <a href="https://www.quantamagazine.org/ai-needs-enormous-computing-power-could-light-based-chips-help-20240520/">https://www.quantamagazine.org/ai-needs-enormous-computing-power-could-light-based-chips-help-20240520/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org538f256" class="outline-3">
+<h3 id="org538f256"><span class="section-number-3">2.8.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orga7dbc4c" class="outline-2">
+<h2 id="orga7dbc4c"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org560ccb5" class="outline-3">
+<h3 id="org560ccb5"><span class="section-number-3">3.1.</span> M. Mazzucato</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>M. Mazzucato, “The ugly truth behind ChatGPT: AI is guzzling resources at planet-eating rates,” The Guardian, May 30, 2024. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.theguardian.com/commentisfree/article/2024/may/30/ugly-truth-ai-chatgpt-guzzling-resources-environment">https://www.theguardian.com/commentisfree/article/2024/may/30/ugly-truth-ai-chatgpt-guzzling-resources-environment</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4913391" class="outline-3">
+<h3 id="org4913391"><span class="section-number-3">3.2.</span> Jacobin</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“The Hidden Environmental Impact of AI.” Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://jacobin.com/2024/06/ai-data-center-energy-usage-environment">https://jacobin.com/2024/06/ai-data-center-energy-usage-environment</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org08b76e6" class="outline-3">
+<h3 id="org08b76e6"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>P. Dauvergne, “The globalization of artificial intelligence: consequences for the politics of environmentalism,” Globalizations, vol. 18, no. 2, pp. 285–299, Feb. 2021, doi: 10.1080/14747731.2020.1785670.</li>
+<li>P. Dauvergne, “Is artificial intelligence greening global supply chains? Exposing the political economy of environmental costs,” Review of International Political Economy, vol. 0, no. 0, pp. 1–23, Sep. 2020, doi: 10.1080/09692290.2020.1814381.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc8a0931" class="outline-2">
+<h2 id="orgc8a0931"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org182ddb3" class="outline-3">
+<h3 id="org182ddb3"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgf77f3cf" class="outline-2">
+<h2 id="orgf77f3cf"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org69bb200" class="outline-3">
+<h3 id="org69bb200"><span class="section-number-3">5.1.</span> The Conversation</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>H. van der Ven and T. Conversation, “AI is bad for the environment, and the problem is bigger than energy consumption.” Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-ai-bad-environment-problem-bigger.html">https://phys.org/news/2025-01-ai-bad-environment-problem-bigger.html</a></li>
+<li>S. Cogan, “Tech bosses think nuclear fusion is the solution to AI’s energy demands – here’s what they’re missing,” The Conversation. Accessed: Oct. 18, 2024. [Online]. Available: <a href="http://theconversation.com/tech-bosses-think-nuclear-fusion-is-the-solution-to-ais-energy-demands-heres-what-theyre-missing-240580">http://theconversation.com/tech-bosses-think-nuclear-fusion-is-the-solution-to-ais-energy-demands-heres-what-theyre-missing-240580</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc1ec673" class="outline-3">
+<h3 id="orgc1ec673"><span class="section-number-3">5.2.</span> Leverhulme Centre for the Future of Intelligence</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“Reflections on the Importance of Environmental AI Ethics for Earth Day - LCFI,” LCFI - Leverhulme Centre for the Future of Intelligence. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://www.lcfi.ac.uk/news-events/blog/post/earth-day-and-ai">https://www.lcfi.ac.uk/news-events/blog/post/earth-day-and-ai</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org43db083" class="outline-3">
+<h3 id="org43db083"><span class="section-number-3">5.3.</span> K. Hao</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>K. Hao, “The real cost of AI is being paid in deserts far from Silicon Valley,” Rest of World. Accessed: May 27, 2025. [Online]. Available: <a href="https://restofworld.org/2025/ai-resource-extraction-chile-indigenous-communities/">https://restofworld.org/2025/ai-resource-extraction-chile-indigenous-communities/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b7bc57" class="outline-3">
+<h3 id="org7b7bc57"><span class="section-number-3">5.4.</span> CEPR</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>“An eco-political economy of AI to understand the complexities of its environmental costs,” CEPR. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://cepr.org/voxeu/columns/eco-political-economy-ai-understand-complexities-its-environmental-costs">https://cepr.org/voxeu/columns/eco-political-economy-ai-understand-complexities-its-environmental-costs</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org472a152" class="outline-2">
+<h2 id="org472a152"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>maya richman@ariadne-network eu G. S. Coalition, “Within Bounds: Limiting AI’s environmental impact.” Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://greenscreen.network/en/blog/within-bounds-limiting-ai-environmental-impact/">https://greenscreen.network/en/blog/within-bounds-limiting-ai-environmental-impact/</a></li>
+
+<li>writer | T. W. | E., “AI pollution could cost billions,” San Francisco Examiner. Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://www.sfexaminer.com/news/technology/ai-induced-pollution-could-kill-hundreds-cost-billions-researchers-say/article_6449a044-e811-11ef-88d2-473a3ec5a724.html">https://www.sfexaminer.com/news/technology/ai-induced-pollution-could-kill-hundreds-cost-billions-researchers-say/article_6449a044-e811-11ef-88d2-473a3ec5a724.html</a></li>
+
+<li>AI UK, The environmental implications of AI, (Apr. 01, 2025). Accessed: Apr. 23, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Et_R2Yi3QBs">https://www.youtube.com/watch?v=Et_R2Yi3QBs</a></li>
+
+<li>D. Welle, “E-Waste from AI Computers to Rise 1,000-fold by 2030. How Can We Limit its Environmental Impact?,” Frontline. Accessed: Nov. 01, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/e-waste-ai-computers-artificial-intelligence-escalate-by-2030-environmental-damage/article68814329.ece">https://frontline.thehindu.com/news/e-waste-ai-computers-artificial-intelligence-escalate-by-2030-environmental-damage/article68814329.ece</a></li>
+
+<li>“AI Is Wreaking Havoc on Global Power Systems,” Bloomberg.com, Jun. 21, 2024. Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://www.bloomberg.com/graphics/2024-ai-data-centers-power-grids/">https://www.bloomberg.com/graphics/2024-ai-data-centers-power-grids/</a></li>
+<li>S. Kimball, “AI could drive a natural gas boom as power companies face surging electricity demand,” CNBC. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.cnbc.com/2024/05/05/ai-could-drive-natural-gas-boom-as-utilities-face-surging-electric-demand.html">https://www.cnbc.com/2024/05/05/ai-could-drive-natural-gas-boom-as-utilities-face-surging-electric-demand.html</a></li>
+<li>“Microsoft’s AI Push Imperils Climate Goal as Carbon Emissions Jump 30%,” Bloomberg.com, May 15, 2024. Accessed: May 18, 2024. [Online]. Available: <a href="https://www.bloomberg.com/news/articles/2024-05-15/microsoft-s-ai-investment-imperils-climate-goal-as-emissions-jump-30">https://www.bloomberg.com/news/articles/2024-05-15/microsoft-s-ai-investment-imperils-climate-goal-as-emissions-jump-30</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-06-06 Fri 14:50</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
