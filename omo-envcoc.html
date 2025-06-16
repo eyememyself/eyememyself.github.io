@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-06-16 Mon 19:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chemicals Of Concern</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Chemicals Of Concern</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org32d2ef0">1. General</a></li>
+<li><a href="#org8749eaf">2. STEMM</a>
+<ul>
+<li><a href="#org1bdfb95">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb2c98d5">3. Worldly Matters</a>
+<ul>
+<li><a href="#orga199a92">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org63f0c7c">4. Core</a>
+<ul>
+<li><a href="#org0bbbbe9">4.1. 0</a>
+<ul>
+<li><a href="#orgdc23c1b">4.1.1. Pesticides</a></li>
+<li><a href="#org8750b74">4.1.2. Insecticide</a></li>
+<li><a href="#orgc7f57c1">4.1.3. Glyphosate</a></li>
+<li><a href="#org9b7efc0">4.1.4. PFAS</a></li>
+</ul>
+</li>
+<li><a href="#org6c51e4d">4.2. 1</a>
+<ul>
+<li><a href="#org3dbd845">4.2.1. Nitrogen</a></li>
+<li><a href="#org4fa7eff">4.2.2. Phosphorus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org84349fe">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org32d2ef0" class="outline-2">
+<h2 id="org32d2ef0"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Understand the Effects of Toxics - Toxic Chemicals | EWG.” Accessed: Nov. 16, 2023. [Online]. Available: <a href="https://www.ewg.org/areas-focus/toxic-chemicals">https://www.ewg.org/areas-focus/toxic-chemicals</a></li>
+<li>“Chemicals of Concern,” U.S. Right to Know. Accessed: Nov. 16, 2023. [Online]. Available: <a href="https://usrtk.org/category/chemicals/">https://usrtk.org/category/chemicals/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8749eaf" class="outline-2">
+<h2 id="org8749eaf"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1bdfb95" class="outline-3">
+<h3 id="org1bdfb95"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>X. Lim, “How to get rid of toxic ‘forever chemical’ pollution,” Nature, vol. 640, no. 8057, pp. 22–24, Apr. 2025, doi: 10.1038/d41586-025-00932-4.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb2c98d5" class="outline-2">
+<h2 id="orgb2c98d5"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orga199a92" class="outline-3">
+<h3 id="orga199a92"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>C. Gillam, “10 ways the Trump administration is ‘making America toxic again,’” The New Lede. Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/03/10-ways-the-trump-administration-is-making-america-toxic-again/">https://www.thenewlede.org/2025/03/10-ways-the-trump-administration-is-making-america-toxic-again/</a></li>
+<li>P. Ferdinand, “Governments must act to protect women, girls from toxic chemicals, UN expert warns,” U.S. Right to Know. Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/governments-must-act-to-protect-women-girls-from-toxic-chemicals/">https://usrtk.org/healthwire/governments-must-act-to-protect-women-girls-from-toxic-chemicals/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org63f0c7c" class="outline-2">
+<h2 id="org63f0c7c"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0bbbbe9" class="outline-3">
+<h3 id="org0bbbbe9"><span class="section-number-3">4.1.</span> 0</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgdc23c1b" class="outline-4">
+<h4 id="orgdc23c1b"><span class="section-number-4">4.1.1.</span> Pesticides</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1a0a7bf"></a>General<br /></li>
+<li><a id="org1133e3d"></a>Orgs<br />
+<div class="outline-text-5" id="text-4-1-1-2">
+<ul class="org-ul">
+<li>“PAN Europe,” PAN Europe. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://www.pan-europe.info/">https://www.pan-europe.info/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Reporting on Pesticides,” U.S. Right to Know. Accessed: Nov. 16, 2023. [Online]. Available: <a href="https://usrtk.org/category/pesticides/">https://usrtk.org/category/pesticides/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5bdb02f"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-1-3">
+<ul class="org-ul">
+<li>M. D. Ambrosio, “RNA as a replacement for chemical pesticides,” Chemistry World. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/rna-as-a-replacement-for-chemical-pesticides/4021654.article">https://www.chemistryworld.com/news/rna-as-a-replacement-for-chemical-pesticides/4021654.article</a></li>
+
+<li>“World Premiere of Toxic Harvest: The Hidden Truth about Pesticides - Rosa-Luxemburg-Stiftung.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.rosalux.de/en/event/es_detail/SMF2M/world-premiere-of-toxic-harvest-the-hidden-truth-about-pesticides?cHash=e5362a48dacba7416a37cddb558d305e">https://www.rosalux.de/en/event/es_detail/SMF2M/world-premiere-of-toxic-harvest-the-hidden-truth-about-pesticides?cHash=e5362a48dacba7416a37cddb558d305e</a></li>
+
+<li>C. Gillam, “Pesticide makers continue quest for immunity from lawsuits by sick farmers,” The New Lede. Accessed: May 22, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/pesticide-makers-continue-quest-for-immunity-from-lawsuits-by-sick-farmers/">https://www.thenewlede.org/2025/05/pesticide-makers-continue-quest-for-immunity-from-lawsuits-by-sick-farmers/</a></li>
+
+<li>Editor2, “‘Definitive historical account’ of Monsanto provides motherlode of valuable material.” Accessed: Mar. 27, 2025. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material</a></li>
+
+<li>C. Gillam, “‘Out of time’ - Short film documents tragic saga of pesticide-poisoned Nebraska town,” The New Lede. Accessed: Mar. 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/02/running-out-of-time-short-film-documents-tragic-saga-of-pesticide-poisoned-nebraska-town/">https://www.thenewlede.org/2025/02/running-out-of-time-short-film-documents-tragic-saga-of-pesticide-poisoned-nebraska-town/</a></li>
+
+<li>C. Gillam, “‘Out of time’ - Short film documents tragic saga of pesticide-poisoned Nebraska town,” The New Lede. Accessed: Feb. 18, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/02/running-out-of-time-short-film-documents-tragic-saga-of-pesticide-poisoned-nebraska-town/">https://www.thenewlede.org/2025/02/running-out-of-time-short-film-documents-tragic-saga-of-pesticide-poisoned-nebraska-town/</a></li>
+
+<li>P. Ferdinand, “Agricultural pesticide exposure linked to childhood cancers, study says,” U.S. Right to Know. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/pesticide-exposure-linked-to-childhood-cancers/">https://usrtk.org/healthwire/pesticide-exposure-linked-to-childhood-cancers/</a></li>
+
+<li>B. Pesticides, “Beyond Pesticides Calls on EPA To Ensure Comprehensive Review of ‘Biopesticides,’” Beyond Pesticides Daily News Blog. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://beyondpesticides.org/dailynewsblog/2025/01/beyond-pesticides-calls-on-epa-to-ensure-comprehensive-review-of-biopesticides/">https://beyondpesticides.org/dailynewsblog/2025/01/beyond-pesticides-calls-on-epa-to-ensure-comprehensive-review-of-biopesticides/</a></li>
+
+<li>D. Main, “EPA proposal for pesticide tied to reproductive harm lands back with Trump,” The New Lede. Accessed: Jan. 27, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/epa-proposal-loosens-atrazine-weedkiller-limits/">https://www.thenewlede.org/2025/01/epa-proposal-loosens-atrazine-weedkiller-limits/</a></li>
+
+<li>Paco, “A Shadowy Campaign Is Targeting Pesticide Opponents. I’m One of Them,” Organic Consumers. Accessed: Dec. 30, 2024. [Online]. Available: <a href="https://organicconsumers.org/a-shadowy-campaign-is-targeting-pesticide-opponents-im-one-of-them/">https://organicconsumers.org/a-shadowy-campaign-is-targeting-pesticide-opponents-im-one-of-them/</a></li>
+
+<li>“New report: U.S. food retail sector faces $219 billion risk from pesticides,” Friends of the Earth. Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://foe.org/news/food-retail-sector-face-219-billion-risk-pesticides/">https://foe.org/news/food-retail-sector-face-219-billion-risk-pesticides/</a></li>
+<li>“Economic Risks of Pesticides,” Friends of the Earth. Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://foe.org/resources/economic-risks-of-pesticides/">https://foe.org/resources/economic-risks-of-pesticides/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Licence to Kill: EU guideline to protect insects failed to block harmful pesticides,” PAN Europe. Accessed: Nov. 29, 2024. [Online]. Available: <a href="https://www.pan-europe.info/press-releases/2024/11/licence-kill-eu-guideline-protect-insects-failed-block-harmful-pesticides">https://www.pan-europe.info/press-releases/2024/11/licence-kill-eu-guideline-protect-insects-failed-block-harmful-pesticides</a></li>
+
+<li>S. Malkan, “Chlorpyrifos: Pesticide tied to brain damage in children,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/chlorpyrifos/">https://usrtk.org/pesticides/chlorpyrifos/</a></li>
+<li>S. Malkan, “Chlorpyrifos: Pesticide tied to brain damage in children,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/chlorpyrifos/">https://usrtk.org/pesticides/chlorpyrifos/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Malkan, “Tracking the pesticide industry propaganda network,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/tracking-the-agrichemical-industry-propaganda-network/">https://usrtk.org/pesticides/tracking-the-agrichemical-industry-propaganda-network/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>C. Gillam, “Court deals setback to efforts to regulate pesticide-coated seeds,” The New Lede. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/11/court-deals-setback-to-efforts-to-regulate-pesticide-coated-seeds/">https://www.thenewlede.org/2024/11/court-deals-setback-to-efforts-to-regulate-pesticide-coated-seeds/</a></li>
+
+<li>C. Gillam, “‘Defend or be damned’ – How a US company uses government funds to suppress pesticide opposition around the world,” The New Lede. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/09/defend-or-be-damned-a-look-inside-the-missouri-company-that-helps-companies-hide-the-risks-of-pesticides-and-influence-policies-around-the-world/">https://www.thenewlede.org/2024/09/defend-or-be-damned-a-look-inside-the-missouri-company-that-helps-companies-hide-the-risks-of-pesticides-and-influence-policies-around-the-world/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kelleher, “PFAS increasingly added to pesticides, study finds,” The New Lede. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/">https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/</a></li>
+<li>S. Kelleher, “Pesticide exposure as risky as smoking, study finds,” The New Lede. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/pesticide-exposure-as-risky-as-smoking-study-finds/">https://www.thenewlede.org/2024/07/pesticide-exposure-as-risky-as-smoking-study-finds/</a></li>
+<li>S. Kelleher, “EPA has failed to protect consumers from PFAS-laced containers, lawsuit alleges,” The New Lede. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/epa-has-failed-to-protect-consumers-from-pfas-laced-containers-lawsuit-alleges/">https://www.thenewlede.org/2024/07/epa-has-failed-to-protect-consumers-from-pfas-laced-containers-lawsuit-alleges/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“The Pesticide Industry’s Toxic Lobby.” Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://jacobin.com/2024/07/pesticide-cancer-lobbying-lawsuits">https://jacobin.com/2024/07/pesticide-cancer-lobbying-lawsuits</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>J. Gerken, G. T. Vincent, D. Zapata, I. G. Barron, and I. Zapata, “Comprehensive assessment of pesticide use patterns and increased cancer risk,” Front. Cancer Control Soc., vol. 2, Jul. 2024, doi: 10.3389/fcacs.2024.1368086.</li>
+<li>S. Kelleher, “PFAS increasingly added to pesticides, study finds,” The New Lede. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/">https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/</a></li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>R. Raney, “Anatomy of a science meeting: How controversial pesticide research all but vanished from a major conference,” U.S. Right to Know. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://usrtk.org/bees-neonics/entomological-society-america-corporate-partners/">https://usrtk.org/bees-neonics/entomological-society-america-corporate-partners/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Patton, “Launch of the US Edition of the Pesticide Atlas,” Real Food Media. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://realfoodmedia.org/us-edition-of-the-pesticide-atlas/">https://realfoodmedia.org/us-edition-of-the-pesticide-atlas/</a></li>
+<li>“Pesticide Atlas 2022 | Heinrich Böll Stiftung | Brussels office - European Union.” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://eu.boell.org/en/PesticideAtlas">https://eu.boell.org/en/PesticideAtlas</a></li>
+<li>“Pesticide-free regions: good examples | Heinrich Böll Stiftung | Brussels office - European Union.” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://eu.boell.org/en/2022/10/18/pesticide-free-regions-good-examples">https://eu.boell.org/en/2022/10/18/pesticide-free-regions-good-examples</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“EU citizens asked for less pesticides. Find out which politicians listened. Make your vote count!,” PAN Europe. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.pan-europe.info/blog/eu-citizens-asked-less-pesticides-find-out-which-politicians-listened-make-your-vote-count">https://www.pan-europe.info/blog/eu-citizens-asked-less-pesticides-find-out-which-politicians-listened-make-your-vote-count</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Gillam, “US regulator accused of ‘egregious’ misconduct in PFAS testing of pesticides,” The New Lede. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/05/us-regulator-accused-of-engaged-in-egregious-misconduct-in-pfas-testing-of-pesticides/">https://www.thenewlede.org/2024/05/us-regulator-accused-of-engaged-in-egregious-misconduct-in-pfas-testing-of-pesticides/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Carrington and D. C. E. editor, “Sticky trick: new glue spray kills plant pests without chemicals,” The Guardian, May 18, 2024. Accessed: May 25, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/may/18/sticky-trick-new-glue-spray-kills-plant-pests-without-chemicals">https://www.theguardian.com/environment/article/2024/may/18/sticky-trick-new-glue-spray-kills-plant-pests-without-chemicals</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Pesticide Residues in Food Do Not Tell the Full Story on Hazards and the Importance of Organic,” Organic Consumers. Accessed: May 15, 2024. [Online]. Available: <a href="https://organicconsumers.org/pesticide-residues-in-food-do-not-tell-the-full-story-on-hazards-and-the-importance-of-organic/">https://organicconsumers.org/pesticide-residues-in-food-do-not-tell-the-full-story-on-hazards-and-the-importance-of-organic/</a></li>
+
+<li>#author.fullName}, “Sticky oil sprayed onto plants offers alternative to pesticides,” New Scientist. Accessed: May 15, 2024. [Online]. Available: <a href="https://www.newscientist.com/article/2430801-sticky-oil-sprayed-onto-plants-offers-alternative-to-pesticides/">https://www.newscientist.com/article/2430801-sticky-oil-sprayed-onto-plants-offers-alternative-to-pesticides/</a></li>
+
+<li>“Rose essential oil: A safe pesticide for organic agriculture,” EurekAlert! Accessed: May 06, 2024. [Online]. Available: <a href="https://www.eurekalert.org/news-releases/1038360">https://www.eurekalert.org/news-releases/1038360</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Silencing the Scientist: Tyrone Hayes on Being Targeted by Herbicide Firm Syngenta,” Democracy Now! Accessed: Apr. 21, 2024. [Online]. Available: <a href="http://www.democracynow.org/2014/2/21/silencing_the_scientist_tyrone_hayes_on">http://www.democracynow.org/2014/2/21/silencing_the_scientist_tyrone_hayes_on</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pesticide linked to reproductive issues found in Cheerios, Quaker Oats and other oat-based foods - CBS News.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.cbsnews.com/news/cheerios-quaker-oats-infertility-chemicals-in-cereal-ewg/">https://www.cbsnews.com/news/cheerios-quaker-oats-infertility-chemicals-in-cereal-ewg/</a></li>
+
+<li>“Let states and communities protect their citizens from pesticides | Environmental Working Group.” Accessed: Feb. 20, 2024. [Online]. Available: <a href="https://www.ewg.org/news-insights/news/2024/02/let-states-and-communities-protect-their-citizens-pesticides">https://www.ewg.org/news-insights/news/2024/02/let-states-and-communities-protect-their-citizens-pesticides</a></li>
+
+<li>“What are natural pesticides? – DW – 02/27/2024,” dw.com. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.dw.com/en/do-natural-pesticides-actually-work/a-68367700">https://www.dw.com/en/do-natural-pesticides-actually-work/a-68367700</a></li>
+
+<li>“Merchants of Poison: How Monsanto Sold the World on a Toxic Pesticide,” Friends of the Earth. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://foe.org/resources/merchants-of-poison/">https://foe.org/resources/merchants-of-poison/</a></li>
+<li>S. Malkan, “Merchants of Poison reveals pesticide industry disinformation, science denial playbook,” U.S. Right to Know. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://usrtk.org/news-releases/new-report-reveals-pesticide-industrys-disinformation-and-science-denial-playbook/">https://usrtk.org/news-releases/new-report-reveals-pesticide-industrys-disinformation-and-science-denial-playbook/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Furuno, The Power of Duck, First Edition. Tagari Publications, 2001.</li>
+<li>P. Mesmer, “Ducks replace paddy-field pesticides,” The Guardian, Jan. 24, 2012. Accessed: Feb. 27, 2024. [Online]. Available: <a href="https://www.theguardian.com/science/2012/jan/24/japan-farming-technique-duck-pesticide">https://www.theguardian.com/science/2012/jan/24/japan-farming-technique-duck-pesticide</a></li>
+<li>“Takao Furuno,” Wikipedia. Nov. 11, 2023. Accessed: Feb. 27, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Takao_Furuno&amp;oldid=1184676394">https://en.wikipedia.org/w/index.php?title=Takao_Furuno&amp;oldid=1184676394</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8750b74" class="outline-4">
+<h4 id="org8750b74"><span class="section-number-4">4.1.2.</span> Insecticide</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Red nets signal ‘stop’ to insect pests, reduce need for insecticides,” EurekAlert! Accessed: Mar. 12, 2024. [Online]. Available: <a href="https://www.eurekalert.org/news-releases/1033980">https://www.eurekalert.org/news-releases/1033980</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc7f57c1" class="outline-4">
+<h4 id="orgc7f57c1"><span class="section-number-4">4.1.3.</span> Glyphosate</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgb8e93c9"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-3-1">
+<ul class="org-ul">
+<li>C. Gillam, “New study adds to evidence that glyphosate weed killer can cause cancer,” The New Lede. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/06/new-study-adds-to-evidence-that-glyphosate-weed-killer-can-cause-cancer/">https://www.thenewlede.org/2025/06/new-study-adds-to-evidence-that-glyphosate-weed-killer-can-cause-cancer/</a></li>
+
+<li>S. Klátyik et al., “Toxicological concerns regarding glyphosate, its formulations, and co-formulants as environmental pollutants: a review of published studies from 2010 to 2025,” Arch Toxicol, May 2025, doi: 10.1007/s00204-025-04076-2.</li>
+<li>B. Xiao et al., “Glyphosate exposure impairs glucose and lipid metabolism by disturbing the circadian clock system in mice liver,” Food and Chemical Toxicology, p. 115436, Apr. 2025, doi: 10.1016/j.fct.2025.115436.</li>
+<li>“Glyphosate on trial - EHN.” Accessed: May 24, 2024. [Online]. Available: <a href="https://www.ehn.org/bayer-glyphosate-lawsuit-2668257512.html">https://www.ehn.org/bayer-glyphosate-lawsuit-2668257512.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8b81a7f"></a>General<br /></li>
+<li><a id="orgcb79e5b"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org615b103"></a>S. Seneff<br />
+<div class="outline-text-6" id="text-4-1-3-3-1">
+<ul class="org-ul">
+<li>A. Samsel and <b>S. Seneff</b>, “Glyphosate’s Suppression of Cytochrome P450 Enzymes and Amino Acid Biosynthesis by the Gut Microbiome: Pathways to Modern Diseases,” Entropy, vol. 15, no. 4, Art. no. 4, Apr. 2013, doi: 10.3390/e15041416.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf3cd31b"></a>Chemistry World<br />
+<div class="outline-text-6" id="text-4-1-3-3-2">
+<ul class="org-ul">
+<li>B. P. March 2025, “The glyphosate debate,” Chemistry World. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/features/the-glyphosate-debate/4021094.article">https://www.chemistryworld.com/features/the-glyphosate-debate/4021094.article</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0fb3eaa"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-3-3-3">
+<ul class="org-ul">
+<li>S. Panzacchi et al., “Carcinogenic effects of long-term exposure from prenatal life to glyphosate and glyphosate-based herbicides in Sprague–Dawley rats,” Environ Health, vol. 24, no. 1, Art. no. 1, Dec. 2025, doi: 10.1186/s12940-025-01187-2.</li>
+
+<li>X. Feng, M. Wang, Y. Wang, R. Liang, and C. Yan, “Associations between environmental glyphosate exposure and glucose homeostasis indices in US general adults: a national population-based cross-sectional study,” Sci Rep, vol. 15, no. 1, p. 1627, Jan. 2025, doi: 10.1038/s41598-024-84694-5.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1acd6b3"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org214e2e5"></a>US Right To Know<br />
+<div class="outline-text-6" id="text-4-1-3-4-1">
+<ul class="org-ul">
+<li>P. Ferdinand, “Common weedkiller glyphosate may be linked to liver disease epidemic, study warns,” U.S. Right to Know. Accessed: May 10, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/glyphosate-linked-to-liver-disease-epidemic/">https://usrtk.org/healthwire/glyphosate-linked-to-liver-disease-epidemic/</a></li>
+<li>P. Ferdinand, “Glyphosate poses widespread risks to female fertility and reproductive health, researchers say,” U.S. Right to Know. Accessed: Mar. 16, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/glyphosate-risks-to-female-fertility-reproductive-health/">https://usrtk.org/healthwire/glyphosate-risks-to-female-fertility-reproductive-health/</a></li>
+<li>S. Malkan, “Glyphosate: Cancer and other health concerns,” U.S. Right to Know. Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/glyphosate-health-concerns/">https://usrtk.org/pesticides/glyphosate-health-concerns/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org64c04f6"></a>Products<br />
+<div class="outline-text-6" id="text-4-1-3-4-2">
+<ul class="org-ul">
+<li>“FireHawk Bioherbicide | Natural, Soil Friendly Weed Control Solutions,” FireHawk Bioherbicide USA. Accessed: Jun. 01, 2025. [Online]. Available: <a href="https://www.firehawkbioherbicide.com/">https://www.firehawkbioherbicide.com/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc47fb41"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgc85ac0e"></a>PAN Europe<br />
+<div class="outline-text-6" id="text-4-1-3-5-1">
+<ul class="org-ul">
+<li>“Glyphosate’s ‘Hidden’ Report,” PAN Europe. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://www.pan-europe.info/blog/glyphosate%E2%80%99s-%E2%80%9Chidden%E2%80%9D-report">https://www.pan-europe.info/blog/glyphosate%E2%80%99s-%E2%80%9Chidden%E2%80%9D-report</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9b7efc0" class="outline-4">
+<h4 id="org9b7efc0"><span class="section-number-4">4.1.4.</span> PFAS</h4>
+<div class="outline-text-4" id="text-4-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgdac0cbc"></a>General<br /></li>
+<li><a id="orgf695891"></a>MIT<br />
+<div class="outline-text-5" id="text-4-1-4-2">
+<ul class="org-ul">
+<li>“A new sensor detects harmful ‘forever chemicals’ in drinking water – MIT Department of Chemistry.” Accessed: Mar. 13, 2024. [Online]. Available: <a href="https://chemistry.mit.edu/chemistry-news/a-new-sensor-detects-harmful-forever-chemicals-in-drinking-water/">https://chemistry.mit.edu/chemistry-news/a-new-sensor-detects-harmful-forever-chemicals-in-drinking-water/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1a336b4"></a>Chemistry World<br />
+<div class="outline-text-5" id="text-4-1-4-3">
+<ul class="org-ul">
+<li>R. T. October 2024, “The scale of the problem of replacing ‘forever chemicals’ PFAS,” Chemistry World. Accessed: Oct. 11, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/the-scale-of-the-problem-of-replacing-forever-chemicals-pfas/4020175.article">https://www.chemistryworld.com/news/the-scale-of-the-problem-of-replacing-forever-chemicals-pfas/4020175.article</a></li>
+<li>J. R. February 2024, “New Zealand set to be first country to ban PFAS in cosmetic products,” Chemistry World. Accessed: Feb. 11, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/new-zealand-set-to-be-first-country-to-ban-pfas-in-cosmetic-products/4018893.article">https://www.chemistryworld.com/news/new-zealand-set-to-be-first-country-to-ban-pfas-in-cosmetic-products/4018893.article</a></li>
+<li>T. W. July 2024, “PFAS from rechargeable batteries pose environmental threat,” Chemistry World. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/pfas-from-rechargeable-batteries-pose-environmental-threat/4019820.article">https://www.chemistryworld.com/news/pfas-from-rechargeable-batteries-pose-environmental-threat/4019820.article</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org665a8fa"></a>Phys.org<br />
+<div class="outline-text-5" id="text-4-1-4-4">
+<ul class="org-ul">
+<li>T. University, “Breaking down the indestructible: New technologies target PFAS environmental menace.” Accessed: Aug. 24, 2024. [Online]. Available: <a href="https://phys.org/news/2024-08-indestructible-technologies-pfas-environmental-menace.html">https://phys.org/news/2024-08-indestructible-technologies-pfas-environmental-menace.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge17f72c"></a>SA<br />
+<div class="outline-text-5" id="text-4-1-4-5">
+<ul class="org-ul">
+<li>N. D. Bennett Kyla, “‘Forever’ Pesticides Threaten Worse Environmental Harms Than DDT,” Scientific American. Accessed: Sep. 12, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/pfas-in-pesticides-could-pose-a-greater-multigenerational-threat-than-ddt/">https://www.scientificamerican.com/article/pfas-in-pesticides-could-pose-a-greater-multigenerational-threat-than-ddt/</a></li>
+<li>S. S. Iqbal, “Enlisting Microbes to Break Down ‘Forever Chemicals,’” Scientific American. Accessed: Oct. 11, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/enlisting-microbes-to-break-down-forever-chemicals/">https://www.scientificamerican.com/article/enlisting-microbes-to-break-down-forever-chemicals/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd5d96f"></a>USRTK<br />
+<div class="outline-text-5" id="text-4-1-4-6">
+<ul class="org-ul">
+<li>S. Malkan, “PFAS ‘forever chemicals’ tied to cancer, birth defects,” U.S. Right to Know. Accessed: Aug. 14, 2024. [Online]. Available: <a href="https://usrtk.org/chemicals/pfas-health-concerns-and-efforts-to-regulate-forever-chemicals/">https://usrtk.org/chemicals/pfas-health-concerns-and-efforts-to-regulate-forever-chemicals/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org45abf54"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org5c5a2ee"></a>Possibly MisInfo/DisInfo<br />
+<ul class="org-ul">
+<li><a id="orgf27c176"></a>Organic Consumers Association<br />
+<div class="outline-text-7" id="text-orgf27c176">
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #867: Find out if Your Community Is Contaminated With PFAS!,” Organic Consumers. Accessed: Oct. 06, 2024. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-867-find-out-if-your-community-is-contaminated-with-pfas/">https://organicconsumers.org/organic-bytes-newsletter-867-find-out-if-your-community-is-contaminated-with-pfas/</a></li>
+<li>OCA, “Organic Bytes Newsletter #869: PFAS Are Putting Our Drinking Water Under Threat!,” Organic Consumers. Accessed: Oct. 13, 2024. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-869-pfas-are-putting-our-drinking-water-under-threat/">https://organicconsumers.org/organic-bytes-newsletter-869-pfas-are-putting-our-drinking-water-under-threat/</a></li>
+<li>OCA, “Are PFAS in Everything? What You Need To Know About ‘Forever Chemicals,’” Organic Consumers. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://organicconsumers.org/are-pfas-in-everything-what-you-need-to-know-about-forever-chemicals/">https://organicconsumers.org/are-pfas-in-everything-what-you-need-to-know-about-forever-chemicals/</a></li>
+<li>OCA, “Organic Bytes Newsletter #878: PFAS Linked To Serious Health Problems,” Organic Consumers. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-878-pfas-linked-to-serious-health-problems/">https://organicconsumers.org/organic-bytes-newsletter-878-pfas-linked-to-serious-health-problems/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org9094ad1"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-4-8">
+<ul class="org-ul">
+<li>R. Trager, “Iupac project to redefine PFAS comes under fire,” Chemistry World. Accessed: Jun. 15, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/iupac-project-to-redefine-pfas-comes-under-fire/4021653.article">https://www.chemistryworld.com/news/iupac-project-to-redefine-pfas-comes-under-fire/4021653.article</a></li>
+
+<li>S. Kelleher, “Alarm sounded over effort to redefine PFAS chemicals,” The New Lede. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/06/alarm-sounded-over-effort-to-redefine-pfas-chemicals/">https://www.thenewlede.org/2025/06/alarm-sounded-over-effort-to-redefine-pfas-chemicals/</a></li>
+
+<li>S. Kelleher, “PFAS found in household dust near North Carolina chemical plant,” The New Lede. Accessed: Apr. 01, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/03/pfas-found-in-household-dust-near-north-carolina-chemical-plant/">https://www.thenewlede.org/2025/03/pfas-found-in-household-dust-near-north-carolina-chemical-plant/</a></li>
+
+<li>S. Kelleher, “FDA must set limits on PFAS in food, lawsuit says,” The New Lede. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/fda-must-set-limits-on-pfas-in-food-lawsuit-says/">https://www.thenewlede.org/2025/01/fda-must-set-limits-on-pfas-in-food-lawsuit-says/</a></li>
+
+<li>OCA, “Can Hemp Fix Agriculture’s PFAS Problem?,” Organic Consumers. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://organicconsumers.org/can-hemp-fix-agricultures-pfas-problem/">https://organicconsumers.org/can-hemp-fix-agricultures-pfas-problem/</a></li>
+
+<li>“First-ever survey of UK public attitudes to PFAS ‘forever chemicals,’” Royal Society of Chemistry. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.rsc.org/news-events/articles/2025/01-january/first-ever-survey-of-uk-public-attitudes-to-pfas-forever-chemicals/">https://www.rsc.org/news-events/articles/2025/01-january/first-ever-survey-of-uk-public-attitudes-to-pfas-forever-chemicals/</a></li>
+
+<li>N. Author, “Sustainability spotlight: PFAS unveiled,” Physics World. Accessed: Jan. 21, 2025. [Online]. Available: <a href="https://physicsworld.com/sustainability-spotlight-pfas-unveiled/">https://physicsworld.com/sustainability-spotlight-pfas-unveiled/</a></li>
+
+<li>S. Choudhury, “Where do we get exposed to PFAS and how can we remove them?,” 360. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://360info.org/where-do-we-get-exposed-to-pfas-and-how-can-we-remove-them/">https://360info.org/where-do-we-get-exposed-to-pfas-and-how-can-we-remove-them/</a></li>
+
+<li>L. Hosea and R. Salvidge, “Cost to clean up toxic PFAS pollution could top £1.6tn in UK and Europe,” The Guardian, Jan. 14, 2025. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://www.theguardian.com/environment/2025/jan/14/cost-clean-up-toxic-pfas-pollution-forever-chemicals">https://www.theguardian.com/environment/2025/jan/14/cost-clean-up-toxic-pfas-pollution-forever-chemicals</a></li>
+
+<li>S. Kelleher, “PFAS in sludge spread on farmland poses health risks, EPA report says,” The New Lede. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/pfas-in-sludge-spread-on-farmland-poses-health-risks-epa-report-says/">https://www.thenewlede.org/2025/01/pfas-in-sludge-spread-on-farmland-poses-health-risks-epa-report-says/</a></li>
+
+<li>D. Main, “Fluorinated drugs, a type of PFAS, widely contaminating US drinking water,” The New Lede. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/fluorinated-drugs-pfas-contaminating-us-drinking-water/">https://www.thenewlede.org/2025/01/fluorinated-drugs-pfas-contaminating-us-drinking-water/</a></li>
+<li>S. Kelleher, “Microbes to the rescue? Companies probe PFAS cleanup solutions,” The New Lede. Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/09/microbes-to-the-rescue-companies-probe-pfas-cleanup-solutions/">https://www.thenewlede.org/2024/09/microbes-to-the-rescue-companies-probe-pfas-cleanup-solutions/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. H. Jaynes, “It’s Raining PFAS ‘Forever Chemicals’ in Miami, Study Finds,” EcoWatch. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.ecowatch.com/pfas-rainwater-miami-forever-chemicals.html">https://www.ecowatch.com/pfas-rainwater-miami-forever-chemicals.html</a></li>
+<li>P. Bennett, “Scientists Detect PFAS in Bottled and Tap Water Around the World,” EcoWatch. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.ecowatch.com/pfas-water-bottled-tap-global-study.html">https://www.ecowatch.com/pfas-water-bottled-tap-global-study.html</a></li>
+
+<li>S. Shackle, “They’re in pans, fruit, dust – and even tap water. But can I eradicate toxic forever chemicals from my home?,” The Guardian, May 25, 2024. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.theguardian.com/lifeandstyle/article/2024/may/25/can-i-eradicate-toxic-forever-chemicals-from-my-home">https://www.theguardian.com/lifeandstyle/article/2024/may/25/can-i-eradicate-toxic-forever-chemicals-from-my-home</a></li>
+
+<li>M. Shaffer, “EPA Must Retract Fraudulent PFAS Report,” PEER.org. Accessed: May 29, 2024. [Online]. Available: <a href="https://peer.org/epa-must-retract-fraudulent-pfas-report/">https://peer.org/epa-must-retract-fraudulent-pfas-report/</a></li>
+
+<li>PFAS Cover-Up: How 3M Hid Risks of Forever Chemicals &amp; “Gaslit” Scientist Who Tried to Sound Alarm, (May 30, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=17746aqnCr4">https://www.youtube.com/watch?v=17746aqnCr4</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6c51e4d" class="outline-3">
+<h3 id="org6c51e4d"><span class="section-number-3">4.2.</span> 1</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org3dbd845" class="outline-4">
+<h4 id="org3dbd845"><span class="section-number-4">4.2.1.</span> Nitrogen</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>“Nitrogen interventions as a key to better health and robust ecosystems,” IIASA - International Institute for Applied Systems Analysis. Accessed: Aug. 20, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/aug-2024/nitrogen-interventions-as-key-to-better-health-and-robust-ecosystems">https://iiasa.ac.at/news/aug-2024/nitrogen-interventions-as-key-to-better-health-and-robust-ecosystems</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fa7eff" class="outline-4">
+<h4 id="org4fa7eff"><span class="section-number-4">4.2.2.</span> Phosphorus</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>“Exploring options for the sustainable management of phosphorus,” IIASA - International Institute for Applied Systems Analysis. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/aug-2024/exploring-options-for-sustainable-management-of-phosphorus">https://iiasa.ac.at/news/aug-2024/exploring-options-for-sustainable-management-of-phosphorus</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org84349fe" class="outline-2">
+<h2 id="org84349fe"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Common U.S. herbicide may damage gut health and spark organ failure, scientists warn - EHN.” Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/diquat-herbicide-poisons-the-gut-may-severely-damage-other-organs/">https://usrtk.org/healthwire/diquat-herbicide-poisons-the-gut-may-severely-damage-other-organs/</a></li>
+
+<li>P. Ferdinand, “Diquat herbicide poisons the gut, may severely damage other organs, research shows,” U.S. Right to Know. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/diquat-herbicide-poisons-the-gut-may-severely-damage-other-organs/">https://usrtk.org/healthwire/diquat-herbicide-poisons-the-gut-may-severely-damage-other-organs/</a></li>
+
+<li>M. Conley, “Titanium Dioxide, banned in Europe, is one of the most common food additives in the U.S.,” U.S. Right to Know. Accessed: May 28, 2025. [Online]. Available: <a href="https://usrtk.org/chemicals/titanium-dioxide/">https://usrtk.org/chemicals/titanium-dioxide/</a></li>
+
+<li>C. Gillam, “Health advocates applaud MAHA report for calling out chemical harms, but say it falls short,” The New Lede. Accessed: May 23, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/health-advocates-applaud-maha-report-for-calling-out-chemical-harms-but-say-it-falls-short/">https://www.thenewlede.org/2025/05/health-advocates-applaud-maha-report-for-calling-out-chemical-harms-but-say-it-falls-short/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Trager, “US approves natural food dyes while pushing to phase out synthetic colours,” Chemistry World. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/us-approves-natural-food-dyes-while-pushing-to-phase-out-synthetic-colours/4021491.article">https://www.chemistryworld.com/news/us-approves-natural-food-dyes-while-pushing-to-phase-out-synthetic-colours/4021491.article</a></li>
+<li>S. Kelleher, “EPA dropping drinking water limits on four toxic PFAS,” The New Lede. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/epa-dropping-drinking-water-limits-on-four-toxic-pfas/">https://www.thenewlede.org/2025/05/epa-dropping-drinking-water-limits-on-four-toxic-pfas/</a></li>
+<li>S. Kelleher, “Chemical exposure from ultra-processed foods may contribute to health issues,” The New Lede. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/chemical-exposure-from-ultra-processed-foods-may-contribute-to-health-issues/">https://www.thenewlede.org/2025/05/chemical-exposure-from-ultra-processed-foods-may-contribute-to-health-issues/</a></li>
+<li>B. Bienkowski, “WOTUS: A narrowing EPA definition is reshaping the Clean Water Act,” The New Lede. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/epa-clean-water-act-wotus/">https://www.thenewlede.org/2025/05/epa-clean-water-act-wotus/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #893: Costco, Stop Pushing Toxic Roundup!,” Organic Consumers. Accessed: May 11, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-893-costco-stop-pushing-toxic-roundup/">https://organicconsumers.org/organic-bytes-newsletter-893-costco-stop-pushing-toxic-roundup/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Roundup Lawsuits &amp; SNAP Cuts,” KPFA. Accessed: May 11, 2025. [Online]. Available: <a href="https://kpfa.org/episode/roundup-lawsuits-snap-cuts/">https://kpfa.org/episode/roundup-lawsuits-snap-cuts/</a></li>
+<li>S. Kelleher, “Maryland residents demand Perdue stop discharging PFAS that pollutes their water,” The New Lede. Accessed: May 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/maryland-residents-demand-perdue-stop-discharging-pfas-that-pollutes-their-water/">https://www.thenewlede.org/2025/05/maryland-residents-demand-perdue-stop-discharging-pfas-that-pollutes-their-water/</a></li>
+<li>C. Gillam, “Even long after close of polluting paper mill, study finds area residents with high levels of toxins in their blood,” The New Lede. Accessed: May 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/even-long-after-close-of-polluting-paper-mill-study-finds-area-residents-with-high-levels-of-toxins-in-their-blood/">https://www.thenewlede.org/2025/05/even-long-after-close-of-polluting-paper-mill-study-finds-area-residents-with-high-levels-of-toxins-in-their-blood/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Bienkowski, “Another PFAS-containing pesticide headed for US registration,” The New Lede. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/pfas-in-pesticide-epa/">https://www.thenewlede.org/2025/05/pfas-in-pesticide-epa/</a></li>
+<li>S. Kelleher, “Formaldehyde lurks in lotions, other products popular with Black and Latina women,” The New Lede. Accessed: May 08, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/formaldehyde-lurks-in-lotions-other-products-popular-with-black-and-latina-women/">https://www.thenewlede.org/2025/05/formaldehyde-lurks-in-lotions-other-products-popular-with-black-and-latina-women/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Mongabay India, Drugging the environment with pharmaceuticals | Lesser-known pollutants, (Sep. 29, 2023). Accessed: Apr. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=vfDqDEv9wQM">https://www.youtube.com/watch?v=vfDqDEv9wQM</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>C. Gillam, “Unsafe sleeping? Mattresses may expose children to toxins as they sleep, studies find,” The New Lede. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/04/mattress-may-expose-children-to-toxins/">https://www.thenewlede.org/2025/04/mattress-may-expose-children-to-toxins/</a></li>
+<li>C. Gillam, “Syngenta moving to settle thousands of lawsuits claiming paraquat causes Parkinson’s disease,” The New Lede. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/04/syngenta-moving-to-settle-thousands-of-lawsuits-claiming-paraquat-causes-parkinsons-disease/">https://www.thenewlede.org/2025/04/syngenta-moving-to-settle-thousands-of-lawsuits-claiming-paraquat-causes-parkinsons-disease/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>M. Conley, “Titanium Dioxide, banned in Europe, is one of the most common food additives in the U.S.,” U.S. Right to Know. Accessed: Apr. 03, 2025. [Online]. Available: <a href="https://usrtk.org/chemicals/titanium-dioxide/">https://usrtk.org/chemicals/titanium-dioxide/</a></li>
+<li>M. Conley, “Potassium bromate: 50 years of research shows serious health risks,” U.S. Right to Know. Accessed: Apr. 03, 2025. [Online]. Available: <a href="https://usrtk.org/chemicals/potassium-bromate/">https://usrtk.org/chemicals/potassium-bromate/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Exposing Industrial Pollution and Creating the ‘Forever Chemicals’ Beat.” Accessed: Feb. 25, 2025. [Online]. Available: <a href="https://gijn.org/stories/exposing-industrial-pollution-and-creating-the-forever-chemicals-beat/">https://gijn.org/stories/exposing-industrial-pollution-and-creating-the-forever-chemicals-beat/</a></li>
+
+<li>D. L. February 2025, “Fluorine makes you an offer you can’t refuse,” Chemistry World. Accessed: Feb. 21, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/fluorine-makes-you-an-offer-you-cant-refuse/4021019.article">https://www.chemistryworld.com/opinion/fluorine-makes-you-an-offer-you-cant-refuse/4021019.article</a></li>
+
+<li>C. Gillam, “‘We need it’ - Debate over dicamba herbicide in hands of Trump’s EPA,” The New Lede. Accessed: Feb. 11, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/02/we-need-it-debate-over-dicamba-herbicide-in-hands-of-trumps-epa/">https://www.thenewlede.org/2025/02/we-need-it-debate-over-dicamba-herbicide-in-hands-of-trumps-epa/</a></li>
+
+<li>X. Feng, M. Wang, Y. Wang, R. Liang, and C. Yan, “Associations between environmental glyphosate exposure and glucose homeostasis indices in US general adults: a national population-based cross-sectional study,” Sci Rep, vol. 15, no. 1, p. 1627, Jan. 2025, doi: 10.1038/s41598-024-84694-5.</li>
+
+<li>“Poison PR,” Lighthouse Reports. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.lighthousereports.com/investigation/poison-pr/">https://www.lighthousereports.com/investigation/poison-pr/</a></li>
+
+<li>“Tell the EPA: Toxic Atrazine Herbicide Must Be Banned.” Accessed: Jan. 29, 2025. [Online]. Available: <a href="https://gmofreeusa.salsalabs.org/epa-hq-opp-2013-0266-2134_0/index.html">https://gmofreeusa.salsalabs.org/epa-hq-opp-2013-0266-2134_0/index.html</a></li>
+
+<li>A. K. January 2025, “Low concentration chemicals spur toxicological debate,” Chemistry World. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/features/low-concentration-chemicals-spur-toxicological-debate/4020828.article">https://www.chemistryworld.com/features/low-concentration-chemicals-spur-toxicological-debate/4020828.article</a></li>
+
+<li>“EU bans Bisphenol A from contact with food,” euronews. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://www.euronews.com/my-europe/2025/01/20/after-years-of-concerns-raised-by-scientists-the-eu-has-banned-bisphenol-a-from-contact-wi">https://www.euronews.com/my-europe/2025/01/20/after-years-of-concerns-raised-by-scientists-the-eu-has-banned-bisphenol-a-from-contact-wi</a></li>
+
+<li>P. Ferdinand, “‘Forever chemicals’ (PFAS) may weaken immune function in children, leading to more frequent infections,” U.S. Right to Know. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/forever-chemicals-pfas-infections-children/">https://usrtk.org/healthwire/forever-chemicals-pfas-infections-children/</a></li>
+
+<li>R. Raney, “Pesticide-related PAC money surges into state legislatures as companies seek to limit damage awards in court,” U.S. Right to Know. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://usrtk.org/pesticides/pesticide-related-pac-money-surges-into-state-legislatures/">https://usrtk.org/pesticides/pesticide-related-pac-money-surges-into-state-legislatures/</a></li>
+
+<li>C. Gillam, “Scientists cite disease ‘epidemic’ in launch of new ‘Center to End Corporate Harm,’” The New Lede. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/scientists-cite-disease-epidemic-in-launch-of-new-center-to-end-corporate-harm/">https://www.thenewlede.org/2025/01/scientists-cite-disease-epidemic-in-launch-of-new-center-to-end-corporate-harm/</a></li>
+
+<li>P. Bennett, “Higher Fertilizer Use Reduces Pollinators by Half and Plants Suffer in Response, Study Finds,” EcoWatch. Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.ecowatch.com/fertilizers-pollinators-impact.html">https://www.ecowatch.com/fertilizers-pollinators-impact.html</a></li>
+<li>R.-P. T. U. Kaiserslautern-Landau, “Pesticide mixtures shown to be present in soil and plants all year round, not just during application times.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-pesticide-mixtures-shown-soil-year.html">https://phys.org/news/2025-01-pesticide-mixtures-shown-soil-year.html</a></li>
+<li>Editor2, “Glyphosate herbicides contain toxic heavy metals, including arsenic.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/archive/96-2018/18061-glyphosate-herbicides-contain-toxic-heavy-metals-including-arsenic">https://gmwatch.org/en/main-menu/news-menu-title/archive/96-2018/18061-glyphosate-herbicides-contain-toxic-heavy-metals-including-arsenic</a></li>
+<li>Q. Mary and U. of London, “Pesticide impacts on bees more complex than expected—effects akin to aging and cancer.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-pesticide-impacts-bees-complex-effects.html">https://phys.org/news/2025-01-pesticide-impacts-bees-complex-effects.html</a></li>
+<li>“Common weed killer may be harming infants.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.science.org/content/article/common-weed-killer-may-be-harming-infants">https://www.science.org/content/article/common-weed-killer-may-be-harming-infants</a></li>
+
+<li>C. Gillam, “EPA moves to withdraw decision on paraquat, delays report on risks,” The New Lede. Accessed: Jan. 21, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/epa-moves-to-withdraw-decision-on-paraquat-delays-report-on-risks/">https://www.thenewlede.org/2025/01/epa-moves-to-withdraw-decision-on-paraquat-delays-report-on-risks/</a></li>
+
+<li>L. Hosea and R. Salvidge, “Bloodletting recommended for Jersey residents after PFAS contamination,” The Guardian, Jan. 16, 2025. Accessed: Jan. 20, 2025. [Online]. Available: <a href="https://www.theguardian.com/uk-news/2025/jan/16/bloodletting-recommended-for-jersey-residents-after-pfas-contamination">https://www.theguardian.com/uk-news/2025/jan/16/bloodletting-recommended-for-jersey-residents-after-pfas-contamination</a></li>
+
+<li>Paco, “Titanium Dioxide, Banned in Europe, Is One of the Most Common Food Additives in the U.S.,” Organic Consumers. Accessed: Jan. 20, 2025. [Online]. Available: <a href="https://organicconsumers.org/titanium-dioxide-banned-in-europe-is-one-of-the-most-common-food-additives-in-the-u-s/">https://organicconsumers.org/titanium-dioxide-banned-in-europe-is-one-of-the-most-common-food-additives-in-the-u-s/</a></li>
+
+<li>C. Gillam, “FDA announces long-awaited ban on Red Dye 3,” The New Lede. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/fda-announces-long-awaited-ban-on-red-dye-3/">https://www.thenewlede.org/2025/01/fda-announces-long-awaited-ban-on-red-dye-3/</a></li>
+
+<li>C. Gillam, “Scientists issue ‘call to arms’ to protect children’s health from chemicals causing disease,” The New Lede. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/scientists-issue-call-to-arms-to-protect-childrens-health-from-chemicals-causing-disease/">https://www.thenewlede.org/2025/01/scientists-issue-call-to-arms-to-protect-childrens-health-from-chemicals-causing-disease/</a></li>
+
+<li>C. Gillam, “Scientists issue ‘call to arms’ to protect children’s health from chemicals causing disease,” The New Lede. Accessed: Jan. 09, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/scientists-issue-call-to-arms-to-protect-childrens-health-from-chemicals-causing-disease/">https://www.thenewlede.org/2025/01/scientists-issue-call-to-arms-to-protect-childrens-health-from-chemicals-causing-disease/</a></li>
+
+<li>M. Conley, “Titanium Dioxide, banned in Europe, is one of the most common food additives in the U.S.,” U.S. Right to Know. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://usrtk.org/chemicals/titanium-dioxide/">https://usrtk.org/chemicals/titanium-dioxide/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #877: Ban Carcinogenic &amp; Neurotoxic Artificial Food Dyes!,” Organic Consumers. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-877-ban-carcinogenic-and-neurotoxic-artificial-food-dyes/">https://organicconsumers.org/organic-bytes-newsletter-877-ban-carcinogenic-and-neurotoxic-artificial-food-dyes/</a></li>
+
+<li>D. Main, “Landmark study affirms fluoride’s link to lowered IQ, adds to debate,” The New Lede. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/study-fluoride-linked-to-lower-iq-debate/">https://www.thenewlede.org/2025/01/study-fluoride-linked-to-lower-iq-debate/</a></li>
+
+<li>S. Lerner, “EPA Report Finds That Formaldehyde Presents an ‘Unreasonable Risk’ to Public Health,” ProPublica. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://www.propublica.org/article/formaldehyde-epa-report-public-health">https://www.propublica.org/article/formaldehyde-epa-report-public-health</a></li>
+
+<li>P. Ferdinand, “Widespread pesticide atrazine ages brain cells, boosts risk of neurodegenerative disease,” U.S. Right to Know. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/atrazine-brain-neurodegenerative-disease/">https://usrtk.org/healthwire/atrazine-brain-neurodegenerative-disease/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. Ferdinand, “Prenatal exposure to chemicals in food packaging, plastics may increase young children’s body fat, raise obesity risk,” U.S. Right to Know. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/phenols-phthalates-obesity/">https://usrtk.org/healthwire/phenols-phthalates-obesity/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>R. Krishnamurthy, “‘Chemicals being invented, released too rapidly for scientists to track,’” Down To Earth. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/chemicals-being-invented-released-too-rapidly-for-scientists-to-track">https://www.downtoearth.org.in/environment/chemicals-being-invented-released-too-rapidly-for-scientists-to-track</a></li>
+
+<li>D. T. E. Staff, “Surrounded by poisons,” Down To Earth. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/pollution/surrounded-by-poisons">https://www.downtoearth.org.in/pollution/surrounded-by-poisons</a></li>
+
+<li>R. T. December 2024, “EPA bans two solvents used in dry cleaning and battery manufacture,” Chemistry World. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/epa-bans-two-solvents-used-in-dry-cleaning-and-battery-manufacture/4020678.article">https://www.chemistryworld.com/news/epa-bans-two-solvents-used-in-dry-cleaning-and-battery-manufacture/4020678.article</a></li>
+
+<li>T. S. Shaw Sharon Lerner,Al, “How Much Formaldehyde Is in Your Car, Your Kitchen or Your Furniture? Here’s What Our Testing Found.,” ProPublica. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.propublica.org/article/formaldehyde-levels-in-your-home-car-furniture">https://www.propublica.org/article/formaldehyde-levels-in-your-home-car-furniture</a></li>
+<li>T. Sanders, “How to Reduce Formaldehyde Exposure in Your Home,” ProPublica. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.propublica.org/article/how-to-reduce-formaldehyde-home-exposure">https://www.propublica.org/article/how-to-reduce-formaldehyde-home-exposure</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Conley, “Atrazine, an endocrine-disrupting herbicide banned in Europe, is widely used in the U.S.,” U.S. Right to Know. Accessed: Dec. 08, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/atrazine/">https://usrtk.org/pesticides/atrazine/</a></li>
+
+<li>S. Kelleher, “Spotlight on cancer-causing food additive as advocates demand FDA ban Red Dye 3,” The New Lede. Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/12/spotlight-on-cancer-causing-food-additive-as-advocates-demand-fda-ban-red-dye-3/">https://www.thenewlede.org/2024/12/spotlight-on-cancer-causing-food-additive-as-advocates-demand-fda-ban-red-dye-3/</a></li>
+
+<li>S. L. Shaw Al, “Formaldehyde Increases Your Cancer Risk No Matter Where you Live,” ProPublica. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.propublica.org/article/formaldehyde-epa-trump-public-health-danger">https://www.propublica.org/article/formaldehyde-epa-trump-public-health-danger</a></li>
+
+<li>C. Gillam, “EPA takes partial step to ban chlorpyrifos in a move called ‘unconscionable,’” The New Lede. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/12/epa-takes-partial-step-to-ban-chlorpyrifos-in-a-move-called-unconscionable/">https://www.thenewlede.org/2024/12/epa-takes-partial-step-to-ban-chlorpyrifos-in-a-move-called-unconscionable/</a></li>
+
+<li>N. Gilbert, “The FDA says it’s winning the battle to cut farm antibiotics. The data tells a different story,” U.S. Right to Know. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://usrtk.org/factory-farming/is-fda-winning-the-battle-to-cut-farm-antibiotics/">https://usrtk.org/factory-farming/is-fda-winning-the-battle-to-cut-farm-antibiotics/</a></li>
+
+<li>S. S. Iqbal, “What the Evidence Says About Fluoride in Drinking Water,” Scientific American. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/fluoride-in-drinking-water-is-safe-heres-the-evidence/">https://www.scientificamerican.com/article/fluoride-in-drinking-water-is-safe-heres-the-evidence/</a></li>
+
+<li>“Eliminating Herbicides on College Campuses,” Earth Island Journal. Accessed: Nov. 25, 2024. [Online]. Available: <a href="https://www.earthisland.org/journal/index.php/podcast/entry/eliminating-pesticides-on-uc-berkeleys-campus/">https://www.earthisland.org/journal/index.php/podcast/entry/eliminating-pesticides-on-uc-berkeleys-campus/</a></li>
+<li>S. Lerner, “EPA Scientists Said They Were Pressured to Downplay Harms From Chemicals. A Watchdog Found They Were Retaliated Against.,” ProPublica. Accessed: Nov. 25, 2024. [Online]. Available: <a href="https://www.propublica.org/article/epa-scientists-faced-retaliation-after-finding-harm-from-chemicals">https://www.propublica.org/article/epa-scientists-faced-retaliation-after-finding-harm-from-chemicals</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>M. Conley, “Potassium bromate: 50 years of research shows serious health risks,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/chemicals/potassium-bromate/">https://usrtk.org/chemicals/potassium-bromate/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Conley, “Atrazine, an endocrine-disrupting herbicide banned in Europe, is widely used in the U.S.,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/pesticides/atrazine/">https://usrtk.org/pesticides/atrazine/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. Ferdinand, “Even at low levels, early bisphenol A (BPA) exposure is hazardous to later health, study shows,” U.S. Right to Know. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/early-bisphenol-a-bpa-exposure-is-hazardous-to-health/">https://usrtk.org/healthwire/early-bisphenol-a-bpa-exposure-is-hazardous-to-health/</a></li>
+
+<li>“The Secret Toxins Left Behind After Hurricane Helene.” Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://jacobin.com/2024/10/chemical-industry-helene-toxins-regulations">https://jacobin.com/2024/10/chemical-industry-helene-toxins-regulations</a></li>
+
+<li>“Poison PR Media Library,” The New Lede. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.thenewlede.org/poison-pr/">https://www.thenewlede.org/poison-pr/</a></li>
+<li>“Paraquat Papers Media Library,” The New Lede. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.thenewlede.org/paraquat-papers-media-library/">https://www.thenewlede.org/paraquat-papers-media-library/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Toxic Terrain,” The New Lede. Accessed: Sep. 14, 2024. [Online]. Available: <a href="https://www.thenewlede.org/toxic-terrain/">https://www.thenewlede.org/toxic-terrain/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kelleher, “Early exposure to toxic TCDF messes with gut bacteria later in life, finds study in mice,” The New Lede. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/08/early-exposure-to-toxic-tcdf-messes-with-gut-bacteria-for-life-finds-study-in-mice/">https://www.thenewlede.org/2024/08/early-exposure-to-toxic-tcdf-messes-with-gut-bacteria-for-life-finds-study-in-mice/</a></li>
+<li>S. Kelleher, “PFAS increasingly added to pesticides, study finds,” The New Lede. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/">https://www.thenewlede.org/2024/07/pfas-increasingly-added-to-pesticides-study-finds-2/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “Remnants of the present: ‘Forever chemicals’ can now be tracked and managed from source to destination,” Down To Earth. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/remnants-of-the-present-forever-chemicals-can-now-be-tracked-and-managed-from-source-to-destination">https://www.downtoearth.org.in/science-technology/remnants-of-the-present-forever-chemicals-can-now-be-tracked-and-managed-from-source-to-destination</a></li>
+
+<li>“Wall Street Is Profiting From Deadly Asbestos Exposure.” Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://jacobin.com/2024/07/wall-street-investment-asbestos-liabilities">https://jacobin.com/2024/07/wall-street-investment-asbestos-liabilities</a></li>
+
+<li>C. Gillam, “New test finds more than 50 common chemicals may be linked to infertility,” The New Lede. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/06/new-test-finds-more-than-50-common-chemicals-may-be-linked-to-infertility/">https://www.thenewlede.org/2024/06/new-test-finds-more-than-50-common-chemicals-may-be-linked-to-infertility/</a></li>
+
+<li>“Forever chemicals ‘absorbed through skin.’” Accessed: Jul. 03, 2024. [Online]. Available: <a href="https://theecologist.org/2024/jun/27/forever-chemicals-absorbed-through-skin">https://theecologist.org/2024/jun/27/forever-chemicals-absorbed-through-skin</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Main, “Utah becomes first state to ban water fluoridation,” The New Lede. Accessed: Mar. 29, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/03/utah-first-state-to-ban-water-fluoridation/">https://www.thenewlede.org/2025/03/utah-first-state-to-ban-water-fluoridation/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-06-16 Mon 19:06</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
