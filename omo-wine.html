@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-06-23 Mon 16:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wine</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Wine</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgffb6e86">1. General</a></li>
+<li><a href="#orgf014d60">2. STEMM</a>
+<ul>
+<li><a href="#org562b2eb">2.1. Chemsitry</a></li>
+<li><a href="#org0b3a545">2.2. Ecology, Environment</a></li>
+<li><a href="#org640d669">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org40ad41f">3. Worldly Matters</a>
+<ul>
+<li><a href="#orga3fe409">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7a08d60">4. Core</a>
+<ul>
+<li><a href="#orgbc90c16">4.1. Buying Guides, Misc</a></li>
+<li><a href="#orga8a03a0">4.2. Organic Wine</a>
+<ul>
+<li><a href="#org8c6e59f">4.2.1. Buying Guides, Misc</a></li>
+<li><a href="#orga67ee6f">4.2.2. Products</a></li>
+<li><a href="#org9f7acc8">4.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8e716bf">4.3. Non Alcoholic Wine</a>
+<ul>
+<li><a href="#orgf96832a">4.3.1. Buying Guides, Misc</a></li>
+<li><a href="#org641289e">4.3.2. Products</a></li>
+</ul>
+</li>
+<li><a href="#org076122c">4.4. Products</a></li>
+<li><a href="#orgfcc8eae">4.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3c429a5">5. Arts</a>
+<ul>
+<li><a href="#org66f5804">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7bf8cf6">6. Special Topics</a>
+<ul>
+<li><a href="#orgef4bfc2">6.1. Grapes</a>
+<ul>
+<li><a href="#org231a454">6.1.1. General</a></li>
+<li><a href="#org444be91">6.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgaeadab5">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgffb6e86" class="outline-2">
+<h2 id="orgffb6e86"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Wine,” Wikipedia. Nov. 19, 2024. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wine&amp;oldid=1258380021">https://en.wikipedia.org/w/index.php?title=Wine&amp;oldid=1258380021</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf014d60" class="outline-2">
+<h2 id="orgf014d60"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org562b2eb" class="outline-3">
+<h3 id="org562b2eb"><span class="section-number-3">2.1.</span> Chemsitry</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>N. N. November 2018, “A taste of wine chemistry,” Chemistry World. Accessed: Dec. 25, 2023. [Online]. Available: <a href="https://www.chemistryworld.com/features/a-taste-of-wine-chemistry/3009718.article">https://www.chemistryworld.com/features/a-taste-of-wine-chemistry/3009718.article</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b3a545" class="outline-3">
+<h3 id="org0b3a545"><span class="section-number-3">2.2.</span> Ecology, Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Wines tainted with ‘pesticide cocktail.’” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://theecologist.org/2023/dec/14/wines-tainted-pesticide-cocktail">https://theecologist.org/2023/dec/14/wines-tainted-pesticide-cocktail</a></li>
+
+<li>J. McKenzie, “A glass of wine with your climate crisis?,” Bulletin of the Atomic Scientists. Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://thebulletin.org/2023/09/a-glass-of-wine-with-your-climate-crisis/">https://thebulletin.org/2023/09/a-glass-of-wine-with-your-climate-crisis/</a></li>
+<li>“How climate change could affect the microbes that ferment grapes and give wine its specific flavours.” Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/how-climate-change-could-affect-the-microbes-that-ferment-grapes-and-give-wine-its-specific-flavours-95219">https://www.downtoearth.org.in/blog/climate-change/how-climate-change-could-affect-the-microbes-that-ferment-grapes-and-give-wine-its-specific-flavours-95219</a></li>
+
+<li>L. Edmonds, “There’s a simple solution to make wine more sustainable: sheep,” Business Insider. Accessed: May 14, 2024. [Online]. Available: <a href="https://www.businessinsider.com/wine-environment-sustainability-sheep-pesticides-soil-health-biodiversity-2024-5">https://www.businessinsider.com/wine-environment-sustainability-sheep-pesticides-soil-health-biodiversity-2024-5</a></li>
+
+<li>“Wine harvest failure is sobering.” Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://theecologist.org/2024/nov/01/wine-harvest-failure-sobering">https://theecologist.org/2024/nov/01/wine-harvest-failure-sobering</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org640d669" class="outline-3">
+<h3 id="org640d669"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>A. W. US Apramita Devi, The Conversation, “Untangling Why Red Wine Causes Headaches,” Scientific American. Accessed: Dec. 25, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/untangling-why-red-wine-causes-headaches/">https://www.scientificamerican.com/article/untangling-why-red-wine-causes-headaches/</a></li>
+
+<li>“Feeling wine: The science behind our perception of tannins.” <a href="https://caltechletters.org/science/feeling-wine">https://caltechletters.org/science/feeling-wine</a> (accessed Jan. 26, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org40ad41f" class="outline-2">
+<h2 id="org40ad41f"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orga3fe409" class="outline-3">
+<h3 id="orga3fe409"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>A. Paul, “Trojans of all classes enjoyed a nice jug of wine,” Popular Science. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.popsci.com/science/troy-wine-drinking/">https://www.popsci.com/science/troy-wine-drinking/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a08d60" class="outline-2">
+<h2 id="org7a08d60"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbc90c16" class="outline-3">
+<h3 id="orgbc90c16"><span class="section-number-3">4.1.</span> Buying Guides, Misc</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><i>“How to choose a bottle of wine | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/how-do-you-select-a-bottle-of-wine-that-youll-enjoy">https://psyche.co/guides/how-do-you-select-a-bottle-of-wine-that-youll-enjoy</a> (accessed Mar. 28, 2021).</li>
+<li>“Best Wine Buying Guide,” Consumer Reports. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.consumerreports.org/health/wine/buying-guide/">https://www.consumerreports.org/health/wine/buying-guide/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Good Housekeeping Wine Awards 2023: The Winners,” Good Housekeeping. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.goodhousekeeping.com/uk/wine/a44815961/wine-awards/">https://www.goodhousekeeping.com/uk/wine/a44815961/wine-awards/</a></li>
+<li>“30 best white wines for every occasion,” Good Housekeeping. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.goodhousekeeping.com/uk/wine/g25344110/white-wine/">https://www.goodhousekeeping.com/uk/wine/g25344110/white-wine/</a></li>
+<li>“The best red wine to enjoy this Autumn,” Good Housekeeping. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.goodhousekeeping.com/uk/wine/g25342563/red-wine/">https://www.goodhousekeeping.com/uk/wine/g25342563/red-wine/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga8a03a0" class="outline-3">
+<h3 id="orga8a03a0"><span class="section-number-3">4.2.</span> Organic Wine</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org8c6e59f" class="outline-4">
+<h4 id="org8c6e59f"><span class="section-number-4">4.2.1.</span> Buying Guides, Misc</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>D. Shapley and A. Garrity, <b>“12 Best Organic Wines for Every Occassion,”</b> Good Housekeeping, Oct. 10, 2017. <a href="https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines">https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines</a> (accessed Mar. 14, 2022).</li>
+<li>“Why you should be drinking organic wine and where to find it,” the Guardian, Feb. 07, 2015. <a href="http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it">http://www.theguardian.com/lifeandstyle/australia-food-blog/2015/feb/07/why-you-should-be-drinking-organic-wine-and-where-to-find-it</a> (accessed Aug. 14, 2020).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga67ee6f" class="outline-4">
+<h4 id="orga67ee6f"><span class="section-number-4">4.2.2.</span> Products</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>D. Shapley and A. Garrity, <b>“12 Best Organic Wines for Every Occassion,”</b> Good Housekeeping, Oct. 10, 2017. <a href="https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines">https://www.goodhousekeeping.com/recipes/entertaining/best-organic-wines</a> (accessed Mar. 14, 2022).
+<ul class="org-ul">
+<li>Badger Mountain Riesling</li>
+<li>Nativa Terra Reserva Carmenère</li>
+<li>Paul Dolan Vineyards Chardonnay</li>
+<li>Parducci Sustainable Red Wine</li>
+<li>The Vegan Vine Red Wine</li>
+<li>Lapostolle Casa Merlot</li>
+<li>Bonterra Vineyards Cabernet Sauvignon</li>
+<li>Tikal Natural Organic Red Blend</li>
+<li>CalNaturale Cabernet Sauvignon</li>
+<li>CalNaturale Chardonnay</li>
+<li>Domaine Carneros Pinot Noir</li>
+<li>Hall Wines Cabernet Sauvignon</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f7acc8" class="outline-4">
+<h4 id="org9f7acc8"><span class="section-number-4">4.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>G. C. Network The Human Journalism, “Running with bulls: South African vineyard incorporates cattle, other animals for chemical-free wine,” Scroll.in. Accessed: Sep. 01, 2024. [Online]. Available: <a href="https://scroll.in/article/1072552/running-with-bulls-south-african-vineyard-incorporates-cattle-other-animals-for-chemical-free-wine">https://scroll.in/article/1072552/running-with-bulls-south-african-vineyard-incorporates-cattle-other-animals-for-chemical-free-wine</a></li>
+
+<li>“Organic Wine | Biodynamic Wine,” Vintage Roots: Organic Wine | Biodynamic Wines. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://www.vintageroots.co.uk/">https://www.vintageroots.co.uk/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e716bf" class="outline-3">
+<h3 id="org8e716bf"><span class="section-number-3">4.3.</span> Non Alcoholic Wine</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgf96832a" class="outline-4">
+<h4 id="orgf96832a"><span class="section-number-4">4.3.1.</span> Buying Guides, Misc</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>“Best Nonalcoholic Sparkling Wines,” Consumer Reports. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.consumerreports.org/health/wine/best-non-alcoholic-sparkling-wines-a2986524981/">https://www.consumerreports.org/health/wine/best-non-alcoholic-sparkling-wines-a2986524981/</a></li>
+
+<li>“We tested over 60 bottles of non-alcoholic wine and these are the best,” Good Housekeeping. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.goodhousekeeping.com/uk/wine/g38895441/non-alcoholic-wines/">https://www.goodhousekeeping.com/uk/wine/g38895441/non-alcoholic-wines/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org641289e" class="outline-4">
+<h4 id="org641289e"><span class="section-number-4">4.3.2.</span> Products</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>“Jacob’s Creek Unvined Shiraz Non Alcoholic Red Grape Still Wine 750Ml (Pack Of 2 Bottles) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://www.amazon.in/Jacobs-Creek-UNVINED-Alcoholic-Bottles/dp/B09V1LLZLP">https://www.amazon.in/Jacobs-Creek-UNVINED-Alcoholic-Bottles/dp/B09V1LLZLP</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org076122c" class="outline-3">
+<h3 id="org076122c"><span class="section-number-3">4.4.</span> Products</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“Orlando Wines,” Wikipedia. Mar. 19, 2024. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Orlando_Wines&amp;oldid=1214492100">https://en.wikipedia.org/w/index.php?title=Orlando_Wines&amp;oldid=1214492100</a>
+<ul class="org-ul">
+<li>Jacob's Creek</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfcc8eae" class="outline-3">
+<h3 id="orgfcc8eae"><span class="section-number-3">4.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3c429a5" class="outline-2">
+<h2 id="org3c429a5"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org66f5804" class="outline-3">
+<h3 id="org66f5804"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org7bf8cf6" class="outline-2">
+<h2 id="org7bf8cf6"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgef4bfc2" class="outline-3">
+<h3 id="orgef4bfc2"><span class="section-number-3">6.1.</span> Grapes</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org231a454" class="outline-4">
+<h4 id="org231a454"><span class="section-number-4">6.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>“Grape,” Wikipedia. Nov. 11, 2024. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Grape&amp;oldid=1256734651">https://en.wikipedia.org/w/index.php?title=Grape&amp;oldid=1256734651</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org444be91" class="outline-4">
+<h4 id="org444be91"><span class="section-number-4">6.1.2.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaeadab5" class="outline-2">
+<h2 id="orgaeadab5"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Is wine vegan?,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/about-peta/faq/is-wine-vegan/">https://www.peta.org/about-peta/faq/is-wine-vegan/</a></li>
+
+<li>L. Fischer, “This 2000-Year-Old Wine Is Still Pourable. But You Don’t Want to Drink It,” Scientific American. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/the-oldest-wine-in-the-world-title-goes-to-a-2-000-year-old-white-found-in/">https://www.scientificamerican.com/article/the-oldest-wine-in-the-world-title-goes-to-a-2-000-year-old-white-found-in/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-06-23 Mon 16:03</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
