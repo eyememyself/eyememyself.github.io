@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-07-03 Thu 17:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Films - Music</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Films - Music</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org5625f0d">1. General</a></li>
+<li><a href="#org9e7f082">2. STEMM</a>
+<ul>
+<li><a href="#org4b4bf53">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org96386e5">3. Worldly Matters</a>
+<ul>
+<li><a href="#org8bcd326">3.1. Nation States</a>
+<ul>
+<li><a href="#org4eee56d">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org0a899d4">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf08386c">4. Arts</a>
+<ul>
+<li><a href="#org3bb8bc2">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4b6404b">5. Special Topics</a></li>
+<li><a href="#org033f997">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org5625f0d" class="outline-2">
+<h2 id="org5625f0d"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org9e7f082" class="outline-2">
+<h2 id="org9e7f082"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4b4bf53" class="outline-3">
+<h3 id="org4b4bf53"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org96386e5" class="outline-2">
+<h2 id="org96386e5"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8bcd326" class="outline-3">
+<h3 id="org8bcd326"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4eee56d" class="outline-4">
+<h4 id="org4eee56d"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc8ac9be"></a>General<br /></li>
+<li><a id="orgda1fa5a"></a>Internet Resources<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>“Film and Pop Music,” chandrakantha.com. <a href="https://chandrakantha.com/music-and-dance/film-and-pop/">https://chandrakantha.com/music-and-dance/film-and-pop/</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org00c1891"></a>Core<br />
+<ol class="org-ol">
+<li><a id="orgbf3ecd9"></a>Texts<br />
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>A. Morcom, Hindi Film Songs and the Cinema. Routledge, 2017.</li>
+<li>G. Anantharaman, Bollywood Melodies: A History of the Hindi Film Song. Penguin Books India, 2008.</li>
+<li>A. D. Ranade, Hindi Film Song: Music Beyond Boundaries. Bibliophile South Asia, 2006.</li>
+<li>A. Bhardwaj, S. Chishti, and S. Singh, Note by Note: The India Story 1947-2017. Harper Collins, 2018.</li>
+<li>J. Beaster-Jones and N. Sarrazin, Music in Contemporary Indian Film: Memory, Voice, Identity. Taylor &amp; Francis, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org176b0fc"></a>Indian Classical Music in Indian Films<br />
+<ul class="org-ul">
+<li><a id="org7bd64af"></a>General<br /></li>
+<li><a id="org0edf2cb"></a>Internet Resources<br />
+<div class="outline-text-7" id="text-org0edf2cb">
+<ul class="org-ul">
+<li>“Classical Film Songs (Rag),” chandrakantha.com. <a href="https://chandrakantha.com/music-and-dance/film-and-pop/film-songs-rags/">https://chandrakantha.com/music-and-dance/film-and-pop/film-songs-rags/</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org61d3790"></a>Misc<br />
+<div class="outline-text-7" id="text-org61d3790">
+<ul class="org-ul">
+<li>Shemaroo Vintage HD, <i>Raag Darbari Sargam | Baiju Bawra (1952) Songs | Bharat Bhushan | Ustad Amir Khan | Old Classics</i>, (Oct. 02, 2018). Accessed: Oct. 06, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=cIUoh_Y47iw">https://www.youtube.com/watch?v=cIUoh_Y47iw</a></li>
+
+<li>Saregama Music, <i>Ketaki Gulab Juhi | Video Song | Basant Bahar | Bharat Bhushan | Nimmi | Manna Dey, Pt Bhimsen Joshi</i>, (May 31, 2020). Accessed: Oct. 06, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=wJJ9Ji8qZyA">https://www.youtube.com/watch?v=wJJ9Ji8qZyA</a></li>
+
+<li>Ghulam Mustafa Khan, <i>Pratham Dhar Dhyan - Raagmala</i>, Umrao Jaan, (Feb. 27, 2019). Accessed: Oct. 23, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=jbFHcNo3u6M">https://www.youtube.com/watch?v=jbFHcNo3u6M</a></li>
+
+<li>Kishori Amonkar - Topic, <i>Geet Gaaya Patharon Ne</i>, (Nov. 07, 2014). Accessed: Oct. 06, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=OBfkGe4W-8g">https://www.youtube.com/watch?v=OBfkGe4W-8g</a></li>
+<li>Kishori Amonkar - Topic, <i>Meha Jhar Jhar</i>, (Apr. 13, 2017). Accessed: Oct. 06, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=OkCoTSSDoLs">https://www.youtube.com/watch?v=OkCoTSSDoLs</a></li>
+
+<li>Ustad Amjad Ali Khan - Topic, <i>Concert Sarod</i>, (Aug. 25, 2014). Accessed: Oct. 06, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=mQElSdEQ9Fs">https://www.youtube.com/watch?v=mQElSdEQ9Fs</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org436c210"></a>Artists<br />
+<ul class="org-ul">
+<li><a id="orgc8963fe"></a>Composers, Directors<br />
+<ul class="org-ul">
+<li><a id="org3ad7be8"></a>Vanraj Bhatia<br /></li>
+<li><a id="org476413a"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org42848c4"></a>Vocalists<br />
+<ul class="org-ul">
+<li><a id="org731dda5"></a>K L Saigal<br />
+<ul class="org-ul">
+<li><a id="orgcd90a9f"></a>General<br />
+<div class="outline-text-9" id="text-orgcd90a9f">
+<ul class="org-ul">
+<li>“K. L. Saigal,” Wikipedia. Apr. 04, 2025. Accessed: May 02, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=K._L._Saigal&amp;oldid=1283942917">https://en.wikipedia.org/w/index.php?title=K._L._Saigal&amp;oldid=1283942917</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdbd9d91"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org620b4f0"></a>Biographies<br />
+<div class="outline-text-10" id="text-org620b4f0">
+<ul class="org-ul">
+<li>R. R. Menon, <b>KL Saigal The Pilgrim of the Swara</b>, 1988.</li>
+<li>P. Nevile, K. L. Saigal: The Definitive Biography. Penguin, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7b36f97"></a>Commentaries, Opinions<br /></li>
+<li><a id="org05663b6"></a>Interviews<br /></li>
+<li><a id="org5d40ff9"></a>Contact Info<br /></li>
+<li><a id="org23dfe7f"></a>Orgs<br /></li>
+<li><a id="org6de6ce3"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge33e7c2"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org1ae76a2"></a>Discography<br />
+<div class="outline-text-10" id="text-org1ae76a2">
+<ul class="org-ul">
+<li>“K. L. Saigal,” Discogs. Accessed: May 02, 2025. [Online]. Available: <a href="https://www.discogs.com/artist/2950103-K-L-Saigal">https://www.discogs.com/artist/2950103-K-L-Saigal</a></li>
+
+<li>inreco<sub>admin</sub>, “K.L. Saigal’s Musical Odyssey: The Best Songs That Define His Artistry,” Inreco - Hindusthan. Accessed: May 02, 2025. [Online]. Available: <a href="https://inreco.in/k-l-saigals-musical-odyssey-the-best-songs-that-define-his-artistry/">https://inreco.in/k-l-saigals-musical-odyssey-the-best-songs-that-define-his-artistry/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd1e0e5"></a>Recordings<br />
+<ul class="org-ul">
+<li><a id="orgbb9cab7"></a>Collections<br />
+<ul class="org-ul">
+<li><a id="org05f1f26"></a>Raag Gao Raag<br />
+<div class="outline-text-12" id="text-org05f1f26">
+<ul class="org-ul">
+<li>“Play Raag Gao Raag Vol. 1 And 2 by K.L.Saigal on Amazon Prime Music.” Accessed: May 02, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B075ZFWFDV">https://music.amazon.com/albums/B075ZFWFDV</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org314ca9a"></a>Ghazals<br />
+<div class="outline-text-12" id="text-org314ca9a">
+<ul class="org-ul">
+<li>“Play Ghazals Of K.L.Saigal Vol. 5 by K L Saigal on Amazon Prime Music.” Accessed: May 02, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B075ZGZLNL">https://music.amazon.com/albums/B075ZGZLNL</a></li>
+<li>INRECO Marathi, Ghazals of K.L. Saigal || Har Ek Baat Pe || Urdu Ghazal || K.L. Saigal, (Oct. 04, 2020). Accessed: May 02, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=e073Phgw56A">https://www.youtube.com/watch?v=e073Phgw56A</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3302fdb"></a>Misc<br />
+<div class="outline-text-12" id="text-org3302fdb">
+<ul class="org-ul">
+<li>“Play Hits Of K.l.saigal Vol. 1 by K.L.Saigal on Amazon Prime Music.” Accessed: May 02, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B075ZBSDFY">https://music.amazon.com/albums/B075ZBSDFY</a></li>
+<li>K. L. Saigal - Best Of K. L. Saigal. 1981. Accessed: May 02, 2025. [Online]. Available: <a href="https://www.discogs.com/release/29562463-K-L-Saigal-Best-Of-K-L-Saigal">https://www.discogs.com/release/29562463-K-L-Saigal-Best-Of-K-L-Saigal</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org298ab97"></a>Religions, Spirituality, Misc<br />
+<div class="outline-text-11" id="text-org298ab97">
+<ul class="org-ul">
+<li>“Play Bhajo Man Bhav Se by K.L.Saigal on Amazon Prime Music.” Accessed: May 02, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B075ZFG32R">https://music.amazon.com/albums/B075ZFG32R</a></li>
+<li>KL Saigal | SD Burman | Devotional Songs | Bhajo Man Bhav Se | Old Hindi Film Songs, (Dec. 02, 2014). Accessed: Jul. 21, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=d3fZpFEivI0">https://www.youtube.com/watch?v=d3fZpFEivI0</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaaa82c7"></a>Misc<br />
+<div class="outline-text-11" id="text-orgaaa82c7">
+<ul class="org-ul">
+<li>K. L. Saigal | Singer &amp; Actor - आय बसो मोरे मन में &#x2026;, (Jan. 18, 2023). Accessed: Jul. 24, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=vTOh16GQ97I">https://www.youtube.com/watch?v=vTOh16GQ97I</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orge9d5811"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org6f30014"></a>Art<br />
+<ul class="org-ul">
+<li><a id="orgeb5aacf"></a>Pictures<br /></li>
+</ul>
+</li>
+<li><a id="org5ebd694"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgad64d98"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge5b6180"></a>Manna Dey<br />
+<ul class="org-ul">
+<li><a id="orga4c538d"></a>General<br />
+<div class="outline-text-9" id="text-orga4c538d">
+<ul class="org-ul">
+<li>“Manna Dey,” Wikipedia. Feb. 24, 2024. Accessed: Mar. 06, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Manna_Dey&amp;oldid=1210060931">https://en.wikipedia.org/w/index.php?title=Manna_Dey&amp;oldid=1210060931</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8d84222"></a>Discography<br />
+<div class="outline-text-9" id="text-org8d84222">
+<ul class="org-ul">
+<li>“Manna Dey,” Discogs. Accessed: Mar. 06, 2024. [Online]. Available: <a href="https://www.discogs.com/artist/621203-Manna-Dey">https://www.discogs.com/artist/621203-Manna-Dey</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge5eb9ed"></a>Recordings<br />
+<div class="outline-text-9" id="text-orge5eb9ed">
+<ul class="org-ul">
+<li>Top 100 Songs Of Manna Dey | मन्ना डे 100 के गाने | HD Songs | One Stop Jukebox, (Mar. 15, 2017). Accessed: Mar. 06, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=fUjS-uZq0Bg">https://www.youtube.com/watch?v=fUjS-uZq0Bg</a></li>
+<li>Best Of Manna Dey | Zindagi Kaisi Hai Paheli | Chalat Musafir | Yari Hai Imaan Mera | Old Hindi Song, (Nov. 17, 2023). Accessed: Mar. 06, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Qf7xs4l2rWg">https://www.youtube.com/watch?v=Qf7xs4l2rWg</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>30 Bhajans By Manna Dey | भक्ति गीत | Yashomati Maiya Se Bole Nandlala | Shree Radha Mohan, (Apr. 26, 2020). Accessed: Mar. 06, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=eWGoYOtezrg">https://www.youtube.com/watch?v=eWGoYOtezrg</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org046d0f8"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgbbde62d"></a>S D Burman<br />
+<ul class="org-ul">
+<li><a id="orge0b5a1d"></a>Recordings<br />
+<div class="outline-text-9" id="text-orge0b5a1d">
+<ul class="org-ul">
+<li>Top Ten Songs of SD Burman | Golden Collection | Audio Jukebox, (Sep. 29, 2015). Accessed: Mar. 18, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=_GEpKWAUe8M">https://www.youtube.com/watch?v=_GEpKWAUe8M</a></li>
+
+<li>Best Of S D Burman - Old Hindi Songs - S D Burman Hits - Music Box - Vol 2, (Sep. 30, 2013). Accessed: Mar. 18, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=630KDUs8tfo">https://www.youtube.com/watch?v=630KDUs8tfo</a></li>
+
+<li>Top 100 songs of S.D.Burman | स डी बर्मन के 100 गाने | HD Songs | One Stop Jukebox, (Feb. 10, 2017). Accessed: Mar. 18, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=q21zbX-NHy0">https://www.youtube.com/watch?v=q21zbX-NHy0</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4fb92ac"></a>Lata Mangeshkar<br />
+<ul class="org-ul">
+<li><a id="orga535049"></a>General<br />
+<div class="outline-text-9" id="text-orga535049">
+<ul class="org-ul">
+<li>“Lata Mangeshkar,” Wikipedia. Feb. 06, 2022. Accessed: Feb. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Lata_Mangeshkar&amp;oldid=1070222618">https://en.wikipedia.org/w/index.php?title=Lata_Mangeshkar&amp;oldid=1070222618</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org26f4a5c"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org697f50b"></a>Biographies<br />
+<div class="outline-text-10" id="text-org697f50b">
+<ul class="org-ul">
+<li>L. Mangeshkar, Lata Mangeshkar. Prabhat Prakashan, 2021.</li>
+<li>M. Deora, R. Shah, and N. M. Kabir, On Stage with Lata. HarperCollins Publishers India, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6ce97e0"></a>Ajoy Chakrabarty<br />
+<div class="outline-text-10" id="text-org6ce97e0">
+<ul class="org-ul">
+<li>Ajoy Chakrabarty, Panditji expresses his grief on passing away of India’s Nightingale Lata Mangeshkar., (Feb. 06, 2022). Accessed: Feb. 11, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=jnQEIVesohY">https://www.youtube.com/watch?v=jnQEIVesohY</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6811adf"></a>TOI<br />
+<div class="outline-text-10" id="text-org6811adf">
+<ul class="org-ul">
+<li><b>“Lata Mangeshkar: A lavish South Mumbai home, a fleet of fancy cars – Take a look at Lata Mangeshkar’s worldly possessions.”</b> <a href="https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/a-lavish-south-mumbai-home-a-fleet-of-fancy-cars-take-a-look-at-lata-mangeshkars-worldly-possessions/articleshow/89443957.cms">https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/a-lavish-south-mumbai-home-a-fleet-of-fancy-cars-take-a-look-at-lata-mangeshkars-worldly-possessions/articleshow/89443957.cms</a> (accessed Feb. 12, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge22402e"></a>BBC<br />
+<div class="outline-text-10" id="text-orge22402e">
+<ul class="org-ul">
+<li>“The unfinished love story of Lata Mangeshkar and Ustad Salamat Ali Khan - BBC URDU - YouTube.” <a href="https://www.youtube.com/watch?v=9Fd8FlFTW0U&amp;list=WL&amp;index=5">https://www.youtube.com/watch?v=9Fd8FlFTW0U&amp;list=WL&amp;index=5</a> (accessed Feb. 09, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgce89820"></a>The Hindu, The Frontline<br />
+<div class="outline-text-10" id="text-orgce89820">
+<ul class="org-ul">
+<li>Z. U. Salam, “Lata Mangeshkar: Lingering melody,” Frontline. <a href="https://frontline.thehindu.com/other/obituary/tribute-lata-mangeshkar-lingering-melody-obituary/article38430939.ece">https://frontline.thehindu.com/other/obituary/tribute-lata-mangeshkar-lingering-melody-obituary/article38430939.ece</a> (accessed Mar. 01, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org63f6e6c"></a>The Wire, The Reporters-Collective<br />
+<div class="outline-text-10" id="text-org63f6e6c">
+<ul class="org-ul">
+<li>“Understanding the Many Complexities of Lata Mangeshkar and Reconciling Them.” <a href="https://thewire.in/politics/understanding-the-many-complexities-of-lata-mangeshkar-and-reconciling-them">https://thewire.in/politics/understanding-the-many-complexities-of-lata-mangeshkar-and-reconciling-them</a> (accessed Feb. 17, 2022).</li>
+<li>V. R. Dhara, “Lata Mangeshkar’s Vocal Health Was Key to Her Long Singing Career – The Wire Science.” <a href="https://science.thewire.in/health/lata-mangeshkar-vocal-training-performance-medicine/">https://science.thewire.in/health/lata-mangeshkar-vocal-training-performance-medicine/</a> (accessed Feb. 13, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgaa66dff"></a>The Scroll<br />
+<div class="outline-text-10" id="text-orgaa66dff">
+<ul class="org-ul">
+<li>A. Deshpande, “Tribute: Lata Mangeshkar’s songs of harmony and love united India across divides,” Scroll.in. <a href="https://scroll.in/reel/1018038/tribute-lata-mangeshkars-songs-of-harmony-and-love-united-india-across-divides">https://scroll.in/reel/1018038/tribute-lata-mangeshkars-songs-of-harmony-and-love-united-india-across-divides</a> (accessed Feb. 27, 2022).</li>
+<li>S. Staff, “Lata Mangeshkar, in whose voice ‘India’s heart throbbed’, dies at 92,” Scroll.in. <a href="https://scroll.in/latest/943466/legendary-singer-lata-mangeshkar-dies-at-92-in-mumbai">https://scroll.in/latest/943466/legendary-singer-lata-mangeshkar-dies-at-92-in-mumbai</a> (accessed Feb. 09, 2022).</li>
+<li>N. M. Kabir, “How Lata Mangeshkar learnt to read and write (despite having gone to school for only a day),” Scroll.in. <a href="https://scroll.in/reel/943364/how-lata-mangeshkar-learnt-to-read-and-write-despite-having-gone-to-school-for-only-a-day">https://scroll.in/reel/943364/how-lata-mangeshkar-learnt-to-read-and-write-despite-having-gone-to-school-for-only-a-day</a> (accessed Feb. 09, 2022).</li>
+<li>R. Naik, “Lata Mangeshkar (1929-2022): Her voice was divine and matchless, warm and familiar,” Scroll.in. <a href="https://scroll.in/reel/960727/lata-mangeshkar-1929-2022-her-voice-was-divine-and-matchless-warm-and-familiar">https://scroll.in/reel/960727/lata-mangeshkar-1929-2022-her-voice-was-divine-and-matchless-warm-and-familiar</a> (accessed Feb. 09, 2022).</li>
+<li>N. M. Kabir, “How Lata Mangeshkar learnt to read and write (despite having gone to school for only a day),” Scroll.in. <a href="https://scroll.in/reel/943364/how-lata-mangeshkar-learnt-to-read-and-write-despite-having-gone-to-school-for-only-a-day">https://scroll.in/reel/943364/how-lata-mangeshkar-learnt-to-read-and-write-despite-having-gone-to-school-for-only-a-day</a> (accessed Feb. 09, 2022).</li>
+<li>R. Naik, “Audio master: Gulzar’s ‘Lekin’ is a mystery in an enigma wrapped in raag Maand,” Scroll.in. <a href="https://scroll.in/reel/820775/audio-master-gulzars-lekin-is-a-mystery-in-an-enigma-wrapped-in-raag-maand">https://scroll.in/reel/820775/audio-master-gulzars-lekin-is-a-mystery-in-an-enigma-wrapped-in-raag-maand</a> (accessed Feb. 09, 2022).</li>
+<li>G. Anantharaman, “‘Close to the sublime’: Why no book on Hindi film music is complete without Lata Mangeshkar,” Scroll.in. <a href="https://scroll.in/reel/943471/close-to-the-sublime-why-no-book-on-hindi-film-music-can-be-written-without-lata-mangeshkar">https://scroll.in/reel/943471/close-to-the-sublime-why-no-book-on-hindi-film-music-can-be-written-without-lata-mangeshkar</a> (accessed Feb. 09, 2022).</li>
+<li>S. Staff, “‘I woke up to her songs, her face’: AR Rahman’s heartfelt tribute to Lata Mangeshkar,” Scroll.in. <a href="https://scroll.in/video/1017052/i-woke-up-to-her-songs-her-face-ar-rahmans-heartfelt-tribute-to-lata-mangeshkar">https://scroll.in/video/1017052/i-woke-up-to-her-songs-her-face-ar-rahmans-heartfelt-tribute-to-lata-mangeshkar</a> (accessed Feb. 11, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4f3a8e6"></a>Global Voices<br />
+<div class="outline-text-10" id="text-org4f3a8e6">
+<ul class="org-ul">
+<li>“South Asia mourns the demise of the nightingale of India,” Global Voices, Feb. 14, 2022. <a href="https://globalvoices.org/2022/02/14/south-asia-mourns-the-demise-of-the-nightingale-of-india/">https://globalvoices.org/2022/02/14/south-asia-mourns-the-demise-of-the-nightingale-of-india/</a> (accessed Feb. 14, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org509c748"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org1f88c84"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org65dd792"></a>Discography<br />
+<div class="outline-text-10" id="text-org65dd792">
+<ul class="org-ul">
+<li>“Lata Mangeshkar,” Discogs. <a href="https://www.discogs.com/artist/342906-Lata-Mangeshkar">https://www.discogs.com/artist/342906-Lata-Mangeshkar</a> (accessed Feb. 11, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0b6a183"></a>Recordings<br />
+<ul class="org-ul">
+<li><a id="orgd402162"></a>Humanities, Misc<br />
+<ul class="org-ul">
+<li><a id="org2e4734b"></a>Romance<br />
+<div class="outline-text-12" id="text-org2e4734b">
+<ul class="org-ul">
+<li>Saregama Music, Top 5 Lata Mangeshkar 80’s Romantic Songs | Are Jane Kaie Kab Kahan | Tune O Rangeele | Ye Kahan Aa, (Jan. 12, 2022). Accessed: Feb. 11, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=U1wSS5EPxwU">https://www.youtube.com/watch?v=U1wSS5EPxwU</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgdce5e9c"></a>Religions, Spirituality, Misc<br />
+<ul class="org-ul">
+<li><a id="org041ee00"></a>Gurbani<br />
+<div class="outline-text-12" id="text-org041ee00">
+<ul class="org-ul">
+<li>Mannat Kaur, Satguru Nanak Pargatya || Lata Mangeshkar || Shabad Gurbani || Gurbani Jukebox, (Dec. 27, 2017). Accessed: Feb. 09, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=TjLpXDaIjYc">https://www.youtube.com/watch?v=TjLpXDaIjYc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf15cab5"></a>DeshBhakti<br />
+<div class="outline-text-12" id="text-orgf15cab5">
+<ul class="org-ul">
+<li>Saregama Music, Ae Mere Watan Ke Logon with Lyrics | Lata Mangeshkar | Live in Concert, (Feb. 21, 2019). Accessed: Feb. 06, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=Wvr8sX5-T_8">https://www.youtube.com/watch?v=Wvr8sX5-T_8</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6690faa"></a>Top X<br />
+<div class="outline-text-12" id="text-org6690faa">
+<ul class="org-ul">
+<li>Saregama Bhakti, Top 100 Bhajans By Lata Mangeshkar | लता मंगेशकर के 100 भजन | Devotional Jukebox | Bhajans | Aartis, (Nov. 06, 2019). Accessed: Feb. 06, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=SQwrUpEcDz8">https://www.youtube.com/watch?v=SQwrUpEcDz8</a></li>
+<li>Saregama Bhakti, #Bhajans | Top 50 Bhajans By Lata Mangeshkar | भजन संग्रह | #Jukebox, (Apr. 14, 2017). Accessed: Feb. 06, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=neKKcNGO8Hk">https://www.youtube.com/watch?v=neKKcNGO8Hk</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgeb73bd2"></a>Misc<br />
+<div class="outline-text-12" id="text-orgeb73bd2">
+<ul class="org-ul">
+<li><b>“Lata Mangeshkar: A lavish South Mumbai home, a fleet of fancy cars – Take a look at Lata Mangeshkar’s worldly possessions.”</b> <a href="https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/a-lavish-south-mumbai-home-a-fleet-of-fancy-cars-take-a-look-at-lata-mangeshkars-worldly-possessions/articleshow/89443957.cms">https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/a-lavish-south-mumbai-home-a-fleet-of-fancy-cars-take-a-look-at-lata-mangeshkars-worldly-possessions/articleshow/89443957.cms</a> (accessed Feb. 12, 2022).</li>
+<li>Saregama Bhakti, Remembering Lata Mangeshkar | लता जी के भजन | सत्यम शिवम सुंदरम | ऐ मालिक | Lata Mangeshkar Playlist, (Feb. 07, 2022). Accessed: Feb. 11, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=65g1ccCSIhk">https://www.youtube.com/watch?v=65g1ccCSIhk</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org311bb53"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org23be02b"></a>Rajan Parrikar Music Archive<br />
+<div class="outline-text-12" id="text-org23be02b">
+<ul class="org-ul">
+<li>“Jeevan dore tumhi sang bandhi…,” Rajan Parrikar Music Archive, Feb. 06, 2022. <a href="https://www.parrikar.org/nibbles/2022/02/06/jeevan-dore-tumhi-sang-bandhi/">https://www.parrikar.org/nibbles/2022/02/06/jeevan-dore-tumhi-sang-bandhi/</a> (accessed Feb. 13, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org679a0fd"></a>Top X<br />
+<div class="outline-text-12" id="text-org679a0fd">
+<ul class="org-ul">
+<li>Saregama Music, Top 100 songs of Lata Mangeshkar | लाता जी के 100 गाने | HD Songs | One Stop Jukebox | #StayHome, (Jul. 19, 2016). Accessed: Feb. 06, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=TLcY1HvnMnU">https://www.youtube.com/watch?v=TLcY1HvnMnU</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org1387e96"></a>Misc<br />
+<div class="outline-text-11" id="text-org1387e96">
+<ul class="org-ul">
+<li>Saregama Music, Remembering Lata Mangeshkar With Her Rare Images | लता जी की ख़ास तस्वीरें और गाने | श्रद्धांजलि, (Feb. 07, 2022). Accessed: Feb. 11, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=HY6973pstTg">https://www.youtube.com/watch?v=HY6973pstTg</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org3931a53"></a>Misc<br />
+<div class="outline-text-9" id="text-org3931a53">
+<ul class="org-ul">
+<li>Rag Mangresh - Alap, Jor and Gat In Jhaptal by Ustad Amjad Ali Khan &amp; Subhash Nirwan on Apple Music. 1992. Accessed: Jan. 03, 2025. [Online]. Available: <a href="https://music.apple.com/in/album/arpan/398155520">https://music.apple.com/in/album/arpan/398155520</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgbfc7852"></a>Misc<br />
+<div class="outline-text-7" id="text-orgbfc7852">
+<ul class="org-ul">
+<li>“Hridaynath Mangeshkar,” Discogs. <a href="https://www.discogs.com/artist/2412504-Hridaynath-Mangeshkar">https://www.discogs.com/artist/2412504-Hridaynath-Mangeshkar</a> (accessed Feb. 11, 2022).</li>
+<li>“Deenanath Mangeshkar,” Discogs. <a href="https://www.discogs.com/artist/4788871-Deenanath-Mangeshkar">https://www.discogs.com/artist/4788871-Deenanath-Mangeshkar</a> (accessed Feb. 11, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgadf776b"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org24f8ece"></a>Actors<br />
+<ul class="org-ul">
+<li><a id="org7958e4c"></a>Male<br />
+<ul class="org-ul">
+<li><a id="org0d8fc9b"></a>Raj Babbar<br />
+<div class="outline-text-8" id="text-org0d8fc9b">
+<ul class="org-ul">
+<li>Top 15 Songs Of Raj Babbar | Hits Of Raj Babbar | Hindi Hit Songs, (Jun. 22, 2021). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=VEvTLs9n0zs">https://www.youtube.com/watch?v=VEvTLs9n0zs</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>होठों से छूलो तुम&#x2026;| Hothon Se Chhulo Tum | Prem Geet | Jagjit Singh | Ghazal | Best Romantic Songs, (Mar. 22, 2016). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=dDO9ZRSNB9s">https://www.youtube.com/watch?v=dDO9ZRSNB9s</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mere Pyaar Ki Umar Ho Itni Sanam” Full Video | Waaris | Lata Mangeshkar | Amrita Singh, Raj Babbar, (Jun. 09, 2020). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=60U-LwYARMg">https://www.youtube.com/watch?v=60U-LwYARMg</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Tu Iss Tarah Se Meri Zindagi Mein (HD) - Aap To Aise Na The Song - Ranjeeta Kaur - Raj Babbar, (Apr. 13, 2018). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=WJVrKhMbh1Q">https://www.youtube.com/watch?v=WJVrKhMbh1Q</a></li>
+<li>Dil Ki Ye Aarazu Thi Koi | Nikaah (1982) | Mahendra Kapoor, Salma Agha | Kishore Kumar, Asha Bhosle, (Sep. 18, 2021). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=hUcs3QMYuNA">https://www.youtube.com/watch?v=hUcs3QMYuNA</a></li>
+<li>Beete Hue Lamhon Ki  | Nikaah (1982) | Mahendra Kapoor | Raj Babbar, Salma Agha, (May 04, 2022). Accessed: May 01, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=oewxBEs8jGo">https://www.youtube.com/watch?v=oewxBEs8jGo</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org08b2eb1"></a>N. Shah<br /></li>
+</ul>
+</li>
+<li><a id="org06b4c1b"></a>Female<br /></li>
+</ul>
+</li>
+<li><a id="org279b632"></a>Fun Songs<br />
+<div class="outline-text-6" id="text-3-1-1-4-2">
+<ul class="org-ul">
+<li>Shemaroo Filmi Gaane, Lapak Jhapak Tu Aa Re Badarwa - David - Boot Polish - Manna Dey - Evergreen Hindi Songs, (Dec. 07, 2011). Accessed: Oct. 07, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yDr9g_x2nYk">https://www.youtube.com/watch?v=yDr9g_x2nYk</a></li>
+<li>Rajshri, Ek Chatur Naar - Padosan - Saira Banu, Sunil Dutt &amp; Kishore Kumar - Classic Old Hindi Songs, (Jan. 12, 2008). Accessed: Oct. 07, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=9HwrMGpFaik">https://www.youtube.com/watch?v=9HwrMGpFaik</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org7ca947b"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-5">
+<ul class="org-ul">
+<li>A. Morcom, Hindi Film Songs and the Cinema, 1st edition. London New York: Routledge, 2015.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kumar, “On a different wavelength: Why Vanraj Bhatia is the foremost composer of Hindi New Wave cinema,” Scroll.in. Accessed: May 08, 2024. [Online]. Available: <a href="https://scroll.in/reel/973549/on-a-different-wavelength-why-vanraj-bhatia-is-the-foremost-composer-of-hindi-new-wave-cinema">https://scroll.in/reel/973549/on-a-different-wavelength-why-vanraj-bhatia-is-the-foremost-composer-of-hindi-new-wave-cinema</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0a899d4" class="outline-3">
+<h3 id="org0a899d4"><span class="section-number-3">3.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgf08386c" class="outline-2">
+<h2 id="orgf08386c"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3bb8bc2" class="outline-3">
+<h3 id="org3bb8bc2"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org4b6404b" class="outline-2">
+<h2 id="org4b6404b"><span class="section-number-2">5.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org033f997" class="outline-2">
+<h2 id="org033f997"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-07-03 Thu 17:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
