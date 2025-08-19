@@ -1,0 +1,2337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-08-19 Tue 14:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The World Wide Web, Internet, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">The World Wide Web, Internet, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org66671dc">1. General</a></li>
+<li><a href="#orgbff5f9e">2. Fair Tech</a>
+<ul>
+<li><a href="#orgddd88f0">2.1. Access Now</a></li>
+<li><a href="#org0f1378c">2.2. Electronic Frontier Foundation</a></li>
+</ul>
+</li>
+<li><a href="#orgec41369">3. STEMM</a>
+<ul>
+<li><a href="#org6e4f1be">3.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org0c9dd14">3.1.1. Complexity Science</a></li>
+<li><a href="#orgee54083">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb98850a">3.2. Biological Sciences, Misc</a></li>
+<li><a href="#org7f661e0">3.3. Basic Sciences, Misc</a></li>
+<li><a href="#org2a271ea">3.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org815b04c">3.4.1. Data Science</a></li>
+<li><a href="#org8a2445f">3.4.2. ACM</a></li>
+<li><a href="#org57ff36e">3.4.3. Heidelberg Laureate Forum</a></li>
+<li><a href="#orgc4f5f90">3.4.4. AI</a></li>
+</ul>
+</li>
+<li><a href="#org8883d65">3.5. Advanced Sciences, Misc</a></li>
+<li><a href="#org1fb88fc">3.6. Technology, Misc</a></li>
+<li><a href="#org440349a">3.7. Special Topics</a></li>
+<li><a href="#org524ec3f">3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgaa1f40e">4. Worldly Matters</a>
+<ul>
+<li><a href="#orgc75373a">4.1. Space and Time</a>
+<ul>
+<li><a href="#org0be8bdc">4.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#org03396b0">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org511262f">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org469131e">4.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org5148483">4.4.1. Orgs</a></li>
+<li><a href="#orgcaaed96">4.4.2. Events</a></li>
+<li><a href="#org094b131">4.4.3. Center for Democracy and Technology</a></li>
+</ul>
+</li>
+<li><a href="#org3c524f2">4.5. Business Studies, Misc</a></li>
+<li><a href="#org38d0916">4.6. Humanities, Misc</a></li>
+<li><a href="#org48e0e56">4.7. Security Studies, Misc</a></li>
+<li><a href="#org52ff73e">4.8. Communication, Misc</a></li>
+<li><a href="#orgc36b570">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1836981">5. Core</a>
+<ul>
+<li><a href="#orgb55dcc8">5.1. Education</a></li>
+<li><a href="#org76e49df">5.2. Tasks</a>
+<ul>
+<li><a href="#org04421a5">5.2.1. Web Design</a></li>
+<li><a href="#orgbc9444c">5.2.2. Web Coding</a></li>
+</ul>
+</li>
+<li><a href="#org020f916">5.3. Tools</a>
+<ul>
+<li><a href="#org74cf524">5.3.1. URLs</a></li>
+<li><a href="#org9079050">5.3.2. Web3</a></li>
+<li><a href="#org7abe918">5.3.3. Wiki</a></li>
+<li><a href="#org6df27fb">5.3.4. Social Media</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfb6a197">6. Special Topics</a>
+<ul>
+<li><a href="#orgb9ef9c3">6.1. Everyday Computing - Internet</a>
+<ul>
+<li><a href="#orgd0c8700">6.1.1. General</a></li>
+<li><a href="#org374a904">6.1.2. Fair Tech</a></li>
+<li><a href="#org2571abd">6.1.3. STEMM</a></li>
+<li><a href="#org7ed4abb">6.1.4. Worldly Matters</a></li>
+<li><a href="#orgbdffdc0">6.1.5. Core</a></li>
+<li><a href="#orgc3e6e98">6.1.6. Arts</a></li>
+<li><a href="#org1ff9598">6.1.7. Special Topics</a></li>
+<li><a href="#org18147ce">6.1.8. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb11f501">7. Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org66671dc" class="outline-2">
+<h2 id="org66671dc"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgbff5f9e" class="outline-2">
+<h2 id="orgbff5f9e"><span class="section-number-2">2.</span> Fair Tech</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgddd88f0" class="outline-3">
+<h3 id="orgddd88f0"><span class="section-number-3">2.1.</span> Access Now</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“#KeepItOn: fighting internet shutdowns around the world,” Access Now. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://www.accessnow.org/campaign/keepiton/">https://www.accessnow.org/campaign/keepiton/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f1378c" class="outline-3">
+<h3 id="org0f1378c"><span class="section-number-3">2.2.</span> Electronic Frontier Foundation</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>J. Malcolm, <i>“Which Internet Registries Offer the Best Protection for Domain Owners?,”</i> Electronic Frontier Foundation, Jul. 28, 2017. <a href="https://www.eff.org/wp/which-internet-registries-offer-best-protection-domain-owners">https://www.eff.org/wp/which-internet-registries-offer-best-protection-domain-owners</a> (accessed Jan. 25, 2021).</li>
+
+<li>K. Gullo, “NETMundial+10 Multistakeholder Statement Pushes for Greater Inclusiveness in Internet Governance Processes,” Electronic Frontier Foundation. Accessed: May 24, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/05/netmundial10-multistakeholder-statement-pushes-greater-inclusiveness-internet">https://www.eff.org/deeplinks/2024/05/netmundial10-multistakeholder-statement-pushes-greater-inclusiveness-internet</a></li>
+<li>K. Trendacosta, “A Flourishing Internet Depends on Competition,” Electronic Frontier Foundation. Accessed: Oct. 19, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/10/flourishing-internet-depends-competition">https://www.eff.org/deeplinks/2024/10/flourishing-internet-depends-competition</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgec41369" class="outline-2">
+<h2 id="orgec41369"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org6e4f1be" class="outline-3">
+<h3 id="org6e4f1be"><span class="section-number-3">3.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org0c9dd14" class="outline-4">
+<h4 id="org0c9dd14"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-orgee54083" class="outline-4">
+<h4 id="orgee54083"><span class="section-number-4">3.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgb98850a" class="outline-3">
+<h3 id="orgb98850a"><span class="section-number-3">3.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-org7f661e0" class="outline-3">
+<h3 id="org7f661e0"><span class="section-number-3">3.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-org2a271ea" class="outline-3">
+<h3 id="org2a271ea"><span class="section-number-3">3.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org815b04c" class="outline-4">
+<h4 id="org815b04c"><span class="section-number-4">3.4.1.</span> Data Science</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>H. Ritchie, E. Mathieu, M. Roser, and E. Ortiz-Ospina, “Internet,” Our World in Data, Apr. 2023, Accessed: Apr. 15, 2023. [Online]. Available: <a href="https://ourworldindata.org/internet">https://ourworldindata.org/internet</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a2445f" class="outline-4">
+<h4 id="org8a2445f"><span class="section-number-4">3.4.2.</span> ACM</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>“The Boundary Hunters – Communications of the ACM.” Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://cacm.acm.org/opinion/the-boundary-hunters/">https://cacm.acm.org/opinion/the-boundary-hunters/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org57ff36e" class="outline-4">
+<h4 id="org57ff36e"><span class="section-number-4">3.4.3.</span> Heidelberg Laureate Forum</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ul class="org-ul">
+<li>A. Mihai, “The Internet Chronicles – Part 2 of 12: Packet Switching and the First Message,” Heidelberg Laureate Forum. Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://scilogs.spektrum.de/hlf/the-internet-chronicles-part-2-of-12-packet-switching-and-the-first-message/">https://scilogs.spektrum.de/hlf/the-internet-chronicles-part-2-of-12-packet-switching-and-the-first-message/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc4f5f90" class="outline-4">
+<h4 id="orgc4f5f90"><span class="section-number-4">3.4.4.</span> AI</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<ul class="org-ul">
+<li>S. Grant, “Keeping the Web Up Under the Weight of AI Crawlers,” Electronic Frontier Foundation. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/06/keeping-web-under-weight-ai-crawlers">https://www.eff.org/deeplinks/2025/06/keeping-web-under-weight-ai-crawlers</a></li>
+
+<li>“An Open-Source AI Agent for Doing Tasks on the Web | Stanford HAI.” Accessed: May 10, 2025. [Online]. Available: <a href="https://hai.stanford.edu/news/an-open-source-ai-agent-for-doing-tasks-on-the-web">https://hai.stanford.edu/news/an-open-source-ai-agent-for-doing-tasks-on-the-web</a></li>
+
+<li>“Will AI Destroy the World Wide Web? – Communications of the ACM.” Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://cacm.acm.org/opinion/will-ai-destroy-the-world-wide-web/">https://cacm.acm.org/opinion/will-ai-destroy-the-world-wide-web/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8883d65" class="outline-3">
+<h3 id="org8883d65"><span class="section-number-3">3.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-org1fb88fc" class="outline-3">
+<h3 id="org1fb88fc"><span class="section-number-3">3.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org440349a" class="outline-3">
+<h3 id="org440349a"><span class="section-number-3">3.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org524ec3f" class="outline-3">
+<h3 id="org524ec3f"><span class="section-number-3">3.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>“Quantum Internet Is (Slowly) Becoming a Reality – Communications of the ACM.” Accessed: Jul. 11, 2025. [Online]. Available: <a href="https://cacm.acm.org/news/quantum-internet-is-slowly-becoming-a-reality/">https://cacm.acm.org/news/quantum-internet-is-slowly-becoming-a-reality/</a></li>
+
+<li>“Spotlight: The National Internet Observatory welcomes its first external researchers | News.” Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://www.networkscienceinstitute.org/news/spotlight-the-national-internet-observatory-welcomes-its-first-external-researchers">https://www.networkscienceinstitute.org/news/spotlight-the-national-internet-observatory-welcomes-its-first-external-researchers</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa1f40e" class="outline-2">
+<h2 id="orgaa1f40e"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgc75373a" class="outline-3">
+<h3 id="orgc75373a"><span class="section-number-3">4.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org0be8bdc" class="outline-4">
+<h4 id="org0be8bdc"><span class="section-number-4">4.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“The birth of our system for describing web content | Aeon Essays,” Aeon. Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://aeon.co/essays/the-birth-of-our-system-for-describing-web-content">https://aeon.co/essays/the-birth-of-our-system-for-describing-web-content</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org03396b0" class="outline-3">
+<h3 id="org03396b0"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org511262f" class="outline-3">
+<h3 id="org511262f"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org469131e" class="outline-3">
+<h3 id="org469131e"><span class="section-number-3">4.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org5148483" class="outline-4">
+<h4 id="org5148483"><span class="section-number-4">4.4.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>“Homepage.” <a href="https://www.oii.ox.ac.uk">https://www.oii.ox.ac.uk</a> (accessed May 18, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcaaed96" class="outline-4">
+<h4 id="orgcaaed96"><span class="section-number-4">4.4.2.</span> Events</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li>The Royal Society, Celebrating the 50th Anniversary of the Internet, (Jul. 15, 2024). Accessed: Aug. 02, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ltF5uWB9Wg0">https://www.youtube.com/watch?v=ltF5uWB9Wg0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org094b131" class="outline-4">
+<h4 id="org094b131"><span class="section-number-4">4.4.3.</span> Center for Democracy and Technology</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li>“Why Teen Perspectives are Crucial for Shaping Online Safety Policies,” Center for Democracy and Technology. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://cdt.org/insights/why-teen-perspectives-are-crucial-for-shaping-online-safety-policies/">https://cdt.org/insights/why-teen-perspectives-are-crucial-for-shaping-online-safety-policies/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c524f2" class="outline-3">
+<h3 id="org3c524f2"><span class="section-number-3">4.5.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-org38d0916" class="outline-3">
+<h3 id="org38d0916"><span class="section-number-3">4.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-org48e0e56" class="outline-3">
+<h3 id="org48e0e56"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org52ff73e" class="outline-3">
+<h3 id="org52ff73e"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgc36b570" class="outline-3">
+<h3 id="orgc36b570"><span class="section-number-3">4.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-9">
+<ul class="org-ul">
+<li>K. Alam, “Out of space: Picturing the big, crowded business of satellite internet,” Rest of World. Accessed: Jun. 30, 2025. [Online]. Available: <a href="https://restofworld.org/2025/satellites-space-based-internet/">https://restofworld.org/2025/satellites-space-based-internet/</a></li>
+
+<li>J. C. Y. and P. Collings, “Access to Internet Infrastructure is Essential, in Wartime and Peacetime,” Electronic Frontier Foundation. Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/access-internet-infrastructure-essential-wartime-and-peacetime">https://www.eff.org/deeplinks/2024/03/access-internet-infrastructure-essential-wartime-and-peacetime</a></li>
+
+<li>“Pluralistic: Who Broke the Internet? Part III (19 May 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 20, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/05/19/khan-thought/">https://pluralistic.net/2025/05/19/khan-thought/</a></li>
+
+<li>“Internet Society Foundation | The Internet transforms lives,” Internet Society Foundation. Accessed: May 16, 2025. [Online]. Available: <a href="https://www.isocfoundation.org/">https://www.isocfoundation.org/</a></li>
+
+<li>“Open Future – Open Future Foundation,” Open Future. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://openfuture.eu">https://openfuture.eu</a></li>
+
+<li>“Brewster Kahle, the internet’s librarian,” California Sun. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.californiasun.co/podcast/brewster-kahle-the-internets-librarian/">https://www.californiasun.co/podcast/brewster-kahle-the-internets-librarian/</a></li>
+
+<li>“Implementing recommendations for supporting human rights in web standards,” Center for Democracy and Technology. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://cdt.org/insights/implementing-recommendations-for-supporting-human-rights-in-web-standards/">https://cdt.org/insights/implementing-recommendations-for-supporting-human-rights-in-web-standards/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1836981" class="outline-2">
+<h2 id="org1836981"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb55dcc8" class="outline-3">
+<h3 id="orgb55dcc8"><span class="section-number-3">5.1.</span> Education</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Software Engineering for Web Applications | Electrical Engineering and Computer Science,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/6-171-software-engineering-for-web-applications-fall-2003/">https://ocw.mit.edu/courses/6-171-software-engineering-for-web-applications-fall-2003/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76e49df" class="outline-3">
+<h3 id="org76e49df"><span class="section-number-3">5.2.</span> Tasks</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org04421a5" class="outline-4">
+<h4 id="org04421a5"><span class="section-number-4">5.2.1.</span> Web Design</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgd382c8f"></a>Head First Series<br />
+<div class="outline-text-5" id="text-orgd382c8f">
+<ul class="org-ul">
+<li>E. Watrall And J. Siarto, <i>Head First Web Design.</i> O’Reilly Media, Inc., 2009.</li>
+</ul>
+</div>
+</li>
+<li><a id="org490eac5"></a>Misc<br />
+<div class="outline-text-5" id="text-org490eac5">
+<ul class="org-ul">
+<li>S. Krug, <i>Don’t Make Me Think, Revisited: A Common Sense Approach To Web Usability.</i> New Riders, 2013.</li>
+<li>P. J. L. Horton S. And S. Horton, <i>Web Style Guide: Basic Design Principles For Creating Web Sites.</i> Universities Press, 1999.</li>
+<li>S. Mcmanus, <i>Web Design In Easy Steps, 6th Edition.</i> In Easy Steps, 2014.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgbc9444c" class="outline-4">
+<h4 id="orgbc9444c"><span class="section-number-4">5.2.2.</span> Web Coding</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="org826669a"></a>General<br /></li>
+<li><a id="orge968f7a"></a>Tasks<br />
+<ul class="org-ul">
+<li><a id="orgecdab14"></a>Web Scraping<br />
+<ul class="org-ul">
+<li><a id="orgddedce5"></a>General<br />
+<div class="outline-text-7" id="text-orgddedce5">
+<ul class="org-ul">
+<li>“Web scraping,” Wikipedia. Jun. 24, 2025. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Web_scraping&amp;oldid=1297146564">https://en.wikipedia.org/w/index.php?title=Web_scraping&amp;oldid=1297146564</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbd74388"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="org7cd8df6"></a>Python<br />
+<div class="outline-text-8" id="text-org7cd8df6">
+<ul class="org-ul">
+<li>R. Mitchell, Web Scraping with Python: Data Extraction from the Modern Web. Beijing ; Boston: O’Reilly Media, 2024.</li>
+<li>G. L. Hajba, Website Scraping with Python: Using BeautifulSoup and Scrapy. Berkeley, CA: Apress, 2018.</li>
+<li>S. vanden Broucke and B. Baesens, Practical Web Scraping for Data Science: Best Practices and Examples with Python. Place of publication not identified: Apress, 2018.</li>
+<li>K. Jarmul and R. Lawson, <i>Python Web Scraping.</i> Packt Publishing Ltd, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge6c7540"></a>R<br />
+<div class="outline-text-8" id="text-orge6c7540">
+<ul class="org-ul">
+<li>S. Munzert, C. Rubba, P. Meißner, and D. Nyhuis, Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. Chichester, England: Wiley, 2015.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3b634e6"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org95cdf9e"></a>Tools<br />
+<ul class="org-ul">
+<li><a id="orgcc48f24"></a>JavaScript<br />
+<ul class="org-ul">
+<li><a id="orgb0405b5"></a>General<br />
+<div class="outline-text-7" id="text-orgb0405b5">
+<ul class="org-ul">
+<li>“JavaScript,” Wikipedia. Aug. 13, 2025. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=JavaScript&amp;oldid=1305754752">https://en.wikipedia.org/w/index.php?title=JavaScript&amp;oldid=1305754752</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5bf3305"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="org9ba46b6"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org2f7fd83"></a>Computer Science And Engineering<br />
+<ul class="org-ul">
+<li><a id="org2167a1f"></a>DSnA<br />
+<div class="outline-text-10" id="text-org2167a1f">
+<ul class="org-ul">
+<li>F. Kereki, Data Structures and Algorithms in JavaScript. San Francisco: No Starch Press, 2025.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf5c7a9"></a><b>SICP</b><br />
+<div class="outline-text-10" id="text-orgdf5c7a9">
+<ul class="org-ul">
+<li>“Structure and Interpretation of Computer Programs,” MIT Press. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262543231/structure-and-interpretation-of-computer-programs/">https://mitpress.mit.edu/9780262543231/structure-and-interpretation-of-computer-programs/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga0cbf1c"></a>SD<br />
+<ul class="org-ul">
+<li><a id="orgd845387"></a>Vue<br />
+<div class="outline-text-11" id="text-orgd845387">
+<ul class="org-ul">
+<li>M. Shavin, Learning Vue: Core Concepts and Practical Patterns for Reusable, Composable, and Scalable User Interfaces. S.l.: O’Reilly Media, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7b520c8"></a>DP<br />
+<div class="outline-text-11" id="text-org7b520c8">
+<ul class="org-ul">
+<li>A. Osmani, Learning JavaScript Design Patterns: A JavaScript and jQuery Developer’s Guide. Sebastopol, CA: O’Reilly Media, 2012.</li>
+<li>A. Osmani, Learning JavaScript Design Patterns: A JavaScript and React Developer’s Guide. Beijing: O’Reilly Media, 2023.</li>
+<li>S. Timms, Mastering JavaScript Design Patterns - Essential Solutions for Effective JavaScript Web Design. Place of publication not identified: Packt Publishing, 2014.</li>
+<li>S. Stefanov, JavaScript Patterns: Build Better Applications with Coding and Design Patterns. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga9eb236"></a>GUI<br />
+<div class="outline-text-11" id="text-orga9eb236">
+<ul class="org-ul">
+<li>L. Carter, Modern GUI Design with JavaScript (2025): Complete Guide to Interface Development | Build 12 Desktop Applications | Electron &amp; Node.js Projects.</li>
+</ul>
+</div>
+</li>
+<li><a id="org38708bc"></a>OO<br />
+<div class="outline-text-11" id="text-org38708bc">
+<ul class="org-ul">
+<li>N. C. Zakas, The Principles of Object-Oriented JavaScript. San Francisco: No Starch Press, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgba7dd37"></a>Projects<br />
+<div class="outline-text-11" id="text-orgba7dd37">
+<ul class="org-ul">
+<li>N. Morgan, JavaScript Crash Course: A Hands-On, Project-Based Introduction to Programming. New York: No Starch Press, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgbc15674"></a>Concurrency<br />
+<div class="outline-text-10" id="text-orgbc15674">
+<ul class="org-ul">
+<li>I. T. Hunter and B. English, Multithreaded Javascript: Concurrency Beyond the Event Loop. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgabee1d5"></a>Asynchronous<br />
+<div class="outline-text-10" id="text-orgabee1d5">
+<ul class="org-ul">
+<li>D. Parker, JavaScript with Promises: Managing Asynchronous Code. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc331560"></a>Functional Programming<br />
+<div class="outline-text-10" id="text-orgc331560">
+<ul class="org-ul">
+<li>M. Fogus, Functional JavaScript: Introducing Functional Programming with Underscore.js. Sebastopol, CA: O’Reilly Media, 2013.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org67505ee"></a>Misc<br />
+<div class="outline-text-9" id="text-org67505ee">
+<ul class="org-ul">
+<li>D. Shiffman, <b>The Nature of Code: Simulating Natural Systems with JavaScript.</b> San Francisco: No Starch Press, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge0aa2a4"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org97d5730"></a>Head First Series<br />
+<div class="outline-text-9" id="text-org97d5730">
+<ul class="org-ul">
+<li>E. T. Freeman and E. Robson, <i>Head First JavaScript Programming: A Brain-Friendly Guide.</i> O’Reilly Media, Inc., 2014.</li>
+<li>M. Morrison, <i>Head First JavaScript.</i> O’Reilly Media, Inc., 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge6d4199"></a>Dummies<br />
+<div class="outline-text-9" id="text-orge6d4199">
+<ul class="org-ul">
+<li>C. Minnick, JavaScript All-in-One For Dummies. Hoboken, NJ: For Dummies, 2023.</li>
+<li>P. McFedries, JavaScript Essentials For Dummies. Hoboken, NJ: For Dummies, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2c56085"></a>Pocket Reference<br />
+<div class="outline-text-9" id="text-org2c56085">
+<ul class="org-ul">
+<li>D. Flanagan, JavaScript Pocket Reference: Activate Your Web Pages. Beijing ; Sebastopol: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="org761a93b"></a>Misc<br />
+<div class="outline-text-9" id="text-org761a93b">
+<ul class="org-ul">
+<li>D. Crockford, <b>JavaScript: The Good Parts: The Good Parts.</b> Haryana: O’Reilly Media, 2017.</li>
+<li>D. Flanagan, <b>JavaScript: The Definitive Guide: Master the World’s Most-Used Programming Language.</b> Beijing China ; Sebastopol, CA: O’Reilly Media, 2020.</li>
+<li><b>C. Horstmann</b>, Modern JavaScript for the Impatient. Hoboken: Addison-Wesley Professional, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. D. Scott, M. MacDonald, and S. Powers, JavaScript Cookbook: Programming the Web. O’Reilly Media.</li>
+<li>M. McGregor, Full Stack JavaScript Strategies: The Hidden Parts Every Mid-Level Developer Needs to Know. Sebastopol, CA: O’Reilly Media, 2025.</li>
+<li>“Eloquent JavaScript, 4th Edition.” Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://nostarch.com/eloquent-javascript-4th-edition">https://nostarch.com/eloquent-javascript-4th-edition</a></li>
+<li>A. Rauschmayer, Speaking JavaScript: An In-Depth Guide for Programmers. Sebastopol, CA: O’Reilly Media, 2014.</li>
+<li>E. Brown, Learning JavaScript: JavaScript Essentials for Modern Application Development. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2016.</li>
+<li>D. Herman, Effective JavaScript. Hoboken: Addison-Wesley Professional, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org92ee3d3"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org3f851bb"></a>JSON<br />
+<div class="outline-text-8" id="text-org3f851bb">
+<ul class="org-ul">
+<li>L. Bassett, Introduction to JavaScript Object Notation: A To-the-Point Guide to JSON. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2015.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga6745c5"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org68c88cc"></a>HTML<br />
+<ul class="org-ul">
+<li><a id="org0fb5a76"></a>General<br />
+<div class="outline-text-7" id="text-org0fb5a76">
+<ul class="org-ul">
+<li>“HTML,” Wikipedia. Aug. 13, 2025. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=HTML&amp;oldid=1305754533">https://en.wikipedia.org/w/index.php?title=HTML&amp;oldid=1305754533</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org294dbe6"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="orgad53cc3"></a>Core<br />
+<ul class="org-ul">
+<li><a id="orgd487fbe"></a>Head First Series<br />
+<div class="outline-text-9" id="text-orgd487fbe">
+<ul class="org-ul">
+<li>E. Freeman and E. Robson, <i>Head First HTML5 Programming: Building Web Apps with JavaScript.</i> O’Reilly Media, Inc., 2011.</li>
+<li>E. Freeman, E. Robson, and E. Freeman, <i>Head First HTML with CSS &amp; XHTML.</i> O’Reilly Media, Inc., 2006.</li>
+<li>E. Robson and E. Freeman, <i>Head First HTML and CSS.</i> O’Reilly Media, Inc., 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc70b803"></a>Easy Steps<br />
+<div class="outline-text-9" id="text-orgc70b803">
+<ul class="org-ul">
+<li>M. McGrath, HTML5 in easy steps, 2nd Edition. Leamington Spa: In Easy Steps Limited, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga413ab0"></a>JD<br />
+<div class="outline-text-9" id="text-orga413ab0">
+<ul class="org-ul">
+<li>J. Duckett, HTML and CSS: Design and Build Websites. Indianapolis, IN: John Wiley &amp; Sons, 2011.</li>
+<li>J. Duckett, Web Design with HTML, CSS, JavaScript and jQuery Set. Indianapolis, Ind.: Wiley, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org66026c9"></a>Learning WD<br />
+<div class="outline-text-9" id="text-org66026c9">
+<ul class="org-ul">
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Images. Sebastopol, CA: O’Reilly Media, 2025.</li>
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics. Beijing ; Sebastopol, CA: O’Reilly Media, 2018.</li>
+<li>J. Robbins, HTML5 Pocket Reference: Quick, Comprehensive, Indispensable. Beijing: O’Reilly Media, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd081ca6"></a>Definitive Guide<br />
+<div class="outline-text-9" id="text-orgd081ca6">
+<ul class="org-ul">
+<li>C. Musciano and B. Kennedy, HTML &amp; XHTML: The Definitive Guide. Beijing Sebastopol, CA: O’Reilly Media, 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc69a8c7"></a>Pocket Reference<br />
+<div class="outline-text-9" id="text-orgc69a8c7">
+<ul class="org-ul">
+<li>J. N. Robbins, HTML and XHTML Pocket Reference. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="org218f2b4"></a>Pocket Guide<br /></li>
+<li><a id="orgc2e54f6"></a>Misc<br />
+<div class="outline-text-9" id="text-orgc2e54f6">
+<ul class="org-ul">
+<li>B. Henick, HTML &amp; CSS: The Good Parts: Better Ways to Build Websites That Work. O’Reilly Media.</li>
+<li>M. Pilgrim, HTML5: Up and Running: Dive into the Future of Web Development. O’Reilly Media.</li>
+<li>E. Castro, HTML, XHTML, and CSS, Sixth Edition. Berkeley, CA: Peachpit Pr, 2007.</li>
+<li>C. Schmitt and K. Simpson, HTML5 Cookbook: Solutions &amp; Examples for HTML5 Developers. Sebastopol, Calif: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge62edb1"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orga538f70"></a>Media<br />
+<div class="outline-text-9" id="text-orga538f70">
+<ul class="org-ul">
+<li>S. Fulton and J. Fulton, HTML5 Canvas: Native Interactivity and Animation for the Web. O’Reilly Media.</li>
+<li>S. Fulton and J. Fulton, HTML5 Canvas: Native Interactivity and Animation for the Web. O’Reilly Media.</li>
+<li>S. Powers, HTML5 Media: Integrating Audio and Video with the Web. Sebastopol, CA: O’Reilly Media, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga658b90"></a>Multi-Device<br />
+<div class="outline-text-9" id="text-orga658b90">
+<ul class="org-ul">
+<li>P. Gasston, The Modern Web: Multi-Device Web Development with HTML5, CSS3, and JavaScript. San Francisco: No Starch Press, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org22bcea4"></a>Mobile<br />
+<div class="outline-text-9" id="text-org22bcea4">
+<ul class="org-ul">
+<li>E. Weyl, Mobile HTML5: Using the Latest Today. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgb13a02d"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge67b70d"></a>CSS<br />
+<ul class="org-ul">
+<li><a id="orge1e6927"></a>General<br />
+<div class="outline-text-7" id="text-orge1e6927">
+<ul class="org-ul">
+<li>“CSS - Wikipedia.” Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/wiki/CSS">https://en.wikipedia.org/wiki/CSS</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6a10800"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="org8e3fc64"></a>1<br />
+<ul class="org-ul">
+<li><a id="org0b335c6"></a>The Missing Manual<br />
+<div class="outline-text-9" id="text-org0b335c6">
+<ul class="org-ul">
+<li>D. S. McFarland, CSS: The Missing Manual. Sebastopol, CA: O’Reilly Media, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1c3feeb"></a>Head First Series<br />
+<div class="outline-text-9" id="text-org1c3feeb">
+<ul class="org-ul">
+<li>E. Robson and E. Freeman, Head First HTML and CSS: A Learner’s Guide to Creating Standards-Based Web Pages. Sebastopol, CA: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3268250"></a>Dummies<br />
+<div class="outline-text-9" id="text-org3268250">
+<ul class="org-ul">
+<li>P. McFedries, HTML, CSS, &amp; JavaScript All-in-One For Dummies. Hoboken, NJ: For Dummies, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbb8380b"></a>Easy Steps<br />
+<div class="outline-text-9" id="text-orgbb8380b">
+<ul class="org-ul">
+<li>M. McGrath, CSS in easy steps. Leamington Spa: In Easy Steps Limited, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga69fead"></a>2<br />
+<ul class="org-ul">
+<li><a id="orgf8a72f0"></a>Learning Series<br />
+<div class="outline-text-9" id="text-orgf8a72f0">
+<ul class="org-ul">
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics. Beijing ; Sebastopol, CA: O’Reilly Media, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org01be4fa"></a>JD<br />
+<div class="outline-text-9" id="text-org01be4fa">
+<ul class="org-ul">
+<li>J. Duckett, HTML and CSS: Design and Build Websites. Indianapolis, IN: John Wiley &amp; Sons, 2011.</li>
+<li>J. Duckett, Web Design with HTML, CSS, JavaScript and jQuery Set. Indianapolis, Ind.: Wiley, 2014.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org33c679c"></a>3<br />
+<ul class="org-ul">
+<li><a id="org0b5aedb"></a>Definitive Guide<br />
+<div class="outline-text-9" id="text-org0b5aedb">
+<ul class="org-ul">
+<li>E. Meyer and E. Weyl, CSS: The Definitive Guide: Visual Presentation for the Web. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2018.</li>
+<li>E. Meyer and E. Weyl, CSS: The Definitive Guide: Web Layout and Presentation. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3835009"></a>Pocket Reference<br />
+<div class="outline-text-8" id="text-org3835009">
+<ul class="org-ul">
+<li>E. Meyer, CSS Pocket Reference: Visual Presentation for the Web. Sebastopol: O’Reilly Media, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org52345c1"></a>Special Topics<br />
+<div class="outline-text-8" id="text-org52345c1">
+<ul class="org-ul">
+<li>E. Meyer, Padding, Borders, Outlines, and Margins in CSS: CSS Box Model Details. Beijing: O’Reilly Media, 2016.</li>
+<li>E. Weyl, Transitions and Animations in CSS: Adding Motion with CSS. Sebastopol, CA: O’Reilly Media, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org33de8be"></a>Misc<br />
+<div class="outline-text-8" id="text-org33de8be">
+<ul class="org-ul">
+<li>T. Felke-Morris, Basics of Web Design: HTML5 &amp; CSS. NY, NY: Pearson, 2020.</li>
+<li>A. Budd and E. Björklund, CSS Mastery. Berkeley, CA: Apress, 2016.</li>
+<li>S. Howe, Learn To Code Html And Css. Berkeley: Adams Media, 2014.</li>
+<li>J. Attardi, Modern CSS: Master the Key Concepts of CSS for Modern Web Development. Berkeley, CA: Apress, 2020.</li>
+<li>L. Verou, CSS Secrets: Better Solutions to Everyday Web Design Problems. Heidelberg: O’Reilly Media, 2016.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org2c473cc"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org08637a9"></a>Texts<br />
+<div class="outline-text-5" id="text-org08637a9">
+<ul class="org-ul">
+<li>U. K. Roy, <i>Web Technologies.</i> Oxford University Press, 2010.</li>
+<li>H. M. D.-D. &amp; A. Inc, <i>Internet &amp; World Wide Web: How To Program: Fourth Edition.</i> Pearson Education India, 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcd370d7"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgdfce86f"></a>Digital Privacy and Security<br />
+<div class="outline-text-6" id="text-orgdfce86f">
+<ul class="org-ul">
+<li>M. McDonald, Grokking Web Application Security. Shelter Island, NY: Manning, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgafab0fb"></a>Misc<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org020f916" class="outline-3">
+<h3 id="org020f916"><span class="section-number-3">5.3.</span> Tools</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org74cf524" class="outline-4">
+<h4 id="org74cf524"><span class="section-number-4">5.3.1.</span> URLs</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div>
+<ul class="org-ul">
+<li><a id="org5794492"></a>General<br /></li>
+<li><a id="org7738c0b"></a>URL Shortening<br />
+<ul class="org-ul">
+<li><a id="org17e7793"></a>General<br />
+<div class="outline-text-6" id="text-org17e7793">
+<ul class="org-ul">
+<li>“URL shortening,” Wikipedia. Nov. 10, 2023. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=URL_shortening&amp;oldid=1184505153">https://en.wikipedia.org/w/index.php?title=URL_shortening&amp;oldid=1184505153</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org018d9ad"></a>Tech Support<br />
+<div class="outline-text-6" id="text-org018d9ad">
+<ul class="org-ul">
+<li>“What’s a URL shortening and how to use it?” Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://tiny.cc/about-tiny-urls">https://tiny.cc/about-tiny-urls</a></li>
+<li>“12 Best URL Shorteners for 2023,” GeeksforGeeks. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://www.geeksforgeeks.org/what-are-url-shorteners/">https://www.geeksforgeeks.org/what-are-url-shorteners/</a></li>
+<li>J. Ryan, “The 6 Best URL Shorteners,” MUO. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://www.makeuseof.com/best-url-shorteners/">https://www.makeuseof.com/best-url-shorteners/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Godwin, “5 of the Best Self-Hosted URL-Shortener Scripts,” Make Tech Easier. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://www.maketecheasier.com/best-self-hosted-url-shortener-scripts/">https://www.maketecheasier.com/best-self-hosted-url-shortener-scripts/</a></li>
+<li>“Open Source TinyURL Alternatives: 25+ URL Shorteners &amp; Similar Websites,” AlternativeTo. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://alternativeto.net/software/tinyurl/?license=opensource">https://alternativeto.net/software/tinyurl/?license=opensource</a></li>
+<li>J. Baker, “3 open source link shorteners | Opensource.com.” Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://opensource.com/article/17/3/url-link-shortener">https://opensource.com/article/17/3/url-link-shortener</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf622328"></a>Products<br />
+<div class="outline-text-6" id="text-orgf622328">
+<ul class="org-ul">
+<li>“Google URL Shortener - Wikipedia.” Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Google_URL_Shortener">https://en.wikipedia.org/wiki/Google_URL_Shortener</a></li>
+<li>“TinyURL,” Wikipedia. Oct. 08, 2023. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=TinyURL&amp;oldid=1179198202">https://en.wikipedia.org/w/index.php?title=TinyURL&amp;oldid=1179198202</a></li>
+<li>“URL Shortener - Short URLs &amp; Custom Free Link Shortener,” Bitly. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://bitly.com/">https://bitly.com/</a></li>
+<li>H. Inc, “Ow.ly - Shorten urls, share files and track visits.,” Ow.ly - Shorten urls, share files and track visits. Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://www.hootsuite.com">https://www.hootsuite.com</a></li>
+<li>“Polr.” Accessed: Nov. 14, 2023. [Online]. Available: <a href="https://polrproject.org/">https://polrproject.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbf0f4cc"></a>ACM<br />
+<div class="outline-text-6" id="text-orgbf0f4cc">
+<ul class="org-ul">
+<li>“The Hidden Risks of URL-Shortening in Scientific Review – Communications of the ACM.” Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/the-hidden-risks-of-url-shortening-in-scientific-review/">https://cacm.acm.org/blogcacm/the-hidden-risks-of-url-shortening-in-scientific-review/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge657d29"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-org9079050" class="outline-4">
+<h4 id="org9079050"><span class="section-number-4">5.3.2.</span> Web3</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div>
+<ul class="org-ul">
+<li><a id="org74972c8"></a>General<br />
+<div class="outline-text-5" id="text-org74972c8">
+<ul class="org-ul">
+<li>“Web3,” Wikipedia. Aug. 18, 2025. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Web3&amp;oldid=1306548220">https://en.wikipedia.org/w/index.php?title=Web3&amp;oldid=1306548220</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org273df6e"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="org3a5f306"></a>Introductions<br />
+<div class="outline-text-6" id="text-org3a5f306">
+<ul class="org-ul">
+<li>M. Litman, Getting Started with web3 and NFTs: An introduction to virtual goods and tokenisation. Swindon: BCS, The Chartered Institute for IT, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org679da4b"></a>Data Science<br />
+<div class="outline-text-6" id="text-org679da4b">
+<ul class="org-ul">
+<li>G. C. Areco and J. Dahlquist, Data Science for Web3: A comprehensive guide to decoding blockchain data with data analysis basics and machine learning cases. Birmingham: Packt Publishing, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdfd190c"></a>Popular Resources<br />
+<div class="outline-text-6" id="text-orgdfd190c">
+<ul class="org-ul">
+<li>A. Tapscott and  unknown author, Web3: Charting the Internet’s Next Economic and Cultural Frontier.</li>
+<li>S. Kaczynski and S. D. Kominers, The Everything Token: How NFTs and Web3 Will Transform the Way We Buy, Sell, and Create. New York, New York: Portfolio, 2024.</li>
+<li>C. Dixon, Read Write Own: Building the Next Era of the Internet. New York: Random House Trade Paperbacks, 2025.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org28672ec"></a>Articles, Essays<br />
+<ul class="org-ul">
+<li><a id="org1104afb"></a>Freedom To Tinker, Center for Information Technology Policy, Princeton University<br />
+<div class="outline-text-6" id="text-org1104afb">
+<ul class="org-ul">
+<li>“Will Web3 Follow in the Footsteps of the AI Hype Cycle?” <a href="https://freedom-to-tinker.com/2022/05/04/will-web3-follow-in-the-footsteps-of-the-ai-hype-cycle/">https://freedom-to-tinker.com/2022/05/04/will-web3-follow-in-the-footsteps-of-the-ai-hype-cycle/</a> (accessed May 05, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org8717ca5"></a>The Crypto Syllabus<br />
+<div class="outline-text-6" id="text-org8717ca5">
+<ul class="org-ul">
+<li>“Web3: A Map in Search of Territory,” The Crypto Syllabus, Jan. 13, 2022. <a href="https://the-crypto-syllabus.com/web3-a-map-in-search-of-territory/">https://the-crypto-syllabus.com/web3-a-map-in-search-of-territory/</a> (accessed Jan. 17, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgafb6a98"></a>Bitwarden<br />
+<div class="outline-text-6" id="text-orgafb6a98">
+<ul class="org-ul">
+<li>“What the future of web3 means for credentials | Bitwarden Blog,” Bitwarden. <a href="https://bitwarden.com/blog/what-the-future-of-web3-means-for-credentials/">https://bitwarden.com/blog/what-the-future-of-web3-means-for-credentials/</a> (accessed Jan. 25, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4106069"></a>Misc<br />
+<div class="outline-text-6" id="text-org4106069">
+<ul class="org-ul">
+<li>Coinbase, “A simple guide to the Web3 stack,” Medium, Jan. 13, 2022. <a href="https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0">https://blog.coinbase.com/a-simple-guide-to-the-web3-stack-785240e557f0</a> (accessed Jan. 17, 2022).</li>
+
+<li>“The Potential for Democratic Governance in web3,” a16z crypto, Jun. 29, 2022. <a href="https://a16zcrypto.com/lightspeed-democracy-what-web3-organizations-can-learn-from-the-history-of-governance/">https://a16zcrypto.com/lightspeed-democracy-what-web3-organizations-can-learn-from-the-history-of-governance/</a> (accessed Jul. 04, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org92ea0d0"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-org7abe918" class="outline-4">
+<h4 id="org7abe918"><span class="section-number-4">5.3.3.</span> Wiki</h4>
+<div class="outline-text-4" id="text-5-3-3">
+</div>
+<ul class="org-ul">
+<li><a id="org2afb001"></a>Missing Manual<br />
+<div class="outline-text-5" id="text-org2afb001">
+<ul class="org-ul">
+<li>J. Broughton, Wikipedia: The Missing Manual: The Missing Manual. O’Reilly Media, Inc., 2008.</li>
+</ul>
+</div>
+</li>
+<li><a id="org86d8149"></a>Misc<br />
+<div class="outline-text-5" id="text-org86d8149">
+<ul class="org-ul">
+<li>D. Jemielniak and A. Przegalinska, Collaborative Society. MIT Press, 2020.</li>
+
+<li>B. Leuf and W. Cunningham, The Wiki Way: Quick Collaboration on the Web. Addison-Wesley, 2001.</li>
+
+<li>A. Ebersbach, M. Glaser, R. Heigl, and A. Warta, Wiki: Web Collaboration. Springer Science &amp; Business Media, 2008.</li>
+
+<li>A. D. Williams and D. Tapscott, Wikinomics. Atlantic Books Ltd, 2011.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org6df27fb" class="outline-4">
+<h4 id="org6df27fb"><span class="section-number-4">5.3.4.</span> Social Media</h4>
+<div class="outline-text-4" id="text-5-3-4">
+</div>
+<ul class="org-ul">
+<li><a id="org3dc6d4a"></a>General<br /></li>
+<li><a id="org5e23292"></a>Fair Tech<br />
+<div class="outline-text-5" id="text-org5e23292">
+<ul class="org-ul">
+<li>C. Doctorow, “To Make Social Media Work Better, Make It Fail Better,” Electronic Frontier Foundation, Mar. 21, 2022. <a href="https://www.eff.org/deeplinks/2022/03/make-social-media-work-better-make-it-fail-better-0">https://www.eff.org/deeplinks/2022/03/make-social-media-work-better-make-it-fail-better-0</a> (accessed Mar. 22, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf91961e"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org0a0eb44"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org5bfcd11"></a>Complexity Science<br />
+<div class="outline-text-7" id="text-org5bfcd11">
+<ul class="org-ul">
+<li><b>The Transition from Search to Social Media: The future of information networks</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/the-transition-from-search-to-social-media">https://necsi.edu/the-transition-from-search-to-social-media</a>. [Accessed: 13-Sep-2019].</li>
+</ul>
+</div>
+</li>
+<li><a id="org2906ea6"></a>Network Science<br />
+<div class="outline-text-7" id="text-org2906ea6">
+<ul class="org-ul">
+<li>S. J. Jackson, M. Bailey, and B. Foucault Welles, “#HashtagActivism: Networks of Race and Gender Justice,” Mar. 2020, doi: 10.7551/mitpress/10858.001.0001.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5ce5ad4"></a>Misc<br />
+<div class="outline-text-7" id="text-org5ce5ad4">
+<ul class="org-ul">
+<li>A. Gangadhar and H. Sayama, “Why We Experience Society Differently: Intrinsic Dispositions as Drivers of Ideological Complexity in Adaptive Social Networks,” Jul. 21, 2025, arXiv: arXiv:2504.07848. doi: 10.48550/arXiv.2504.07848.</li>
+
+<li>“Unearthing the gold: the art and science of social intelligence mining,” IIASA - International Institute for Applied Systems Analysis. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog/feb-2024/unearthing-gold-art-and-science-of-social-intelligence-mining">https://iiasa.ac.at/blog/feb-2024/unearthing-gold-art-and-science-of-social-intelligence-mining</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0bdbefd"></a>Biological Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org45a7437"></a>Neuroscience<br />
+<div class="outline-text-7" id="text-org45a7437">
+<ul class="org-ul">
+<li>“Social media and the neuroscience of predictive processing | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/social-media-and-the-neuroscience-of-predictive-processing">https://aeon.co/essays/social-media-and-the-neuroscience-of-predictive-processing</a> (accessed Jul. 18, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0ebbbd7"></a>Basic Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org456d40a"></a>Physics<br />
+<div class="outline-text-7" id="text-org456d40a">
+<ul class="org-ul">
+<li>“Turbulence to harmony: can physics help detoxify social media?,” Physics World. Accessed: Jan. 01, 2024. [Online]. Available: <a href="https://physicsworld.com/turbulence-to-harmony-can-physics-help-detoxify-social-media/">https://physicsworld.com/turbulence-to-harmony-can-physics-help-detoxify-social-media/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgec0213a"></a>Mathematical, Computational Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org8b4247f"></a>CSE<br />
+<div class="outline-text-7" id="text-org8b4247f">
+<ul class="org-ul">
+<li>R. Zafarani, M. A. Abbasi, and H. Liu, <i>Social Media Mining: An Introduction.</i> Cambridge University Press, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org598c697"></a>Misc<br />
+<div class="outline-text-7" id="text-org598c697">
+<ul class="org-ul">
+<li>“Opinion Dynamics in Social Networks: Kinetic and Data-driven Modeling | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/opinion-dynamics-in-social-networks-kinetic-and-data-driven-modeling/">https://www.siam.org/publications/siam-news/articles/opinion-dynamics-in-social-networks-kinetic-and-data-driven-modeling/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org2efc16b"></a>Advanced Sciences, Misc<br /></li>
+<li><a id="orgb8b5693"></a>Technology, Misc<br /></li>
+<li><a id="org1313e3b"></a>Special Topics<br /></li>
+<li><a id="org5d964c3"></a>Misc<br />
+<div class="outline-text-6" id="text-org5d964c3">
+<ul class="org-ul">
+<li>K. Ali, K. Zain-ul-abdin, C. Li, L. Johns, A. A. Ali, and N. Carcioppolo, “Viruses Going Viral: Impact of Fear-Arousing Sensationalist Social Media Messages on User Engagement,” Science Communication, vol. 41, no. 3, pp. 314–338, Jun. 2019, doi: 10.1177/1075547019846124.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The case for inefficiency in social media | Santa Fe Institute.” Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/the-case-for-inefficiency-in-social-media">https://www.santafe.edu/news-center/news/the-case-for-inefficiency-in-social-media</a></li>
+<li>C. T. B. Ogbunu C. Brandon, “Social Media Is Junk Food for Information Foragers,” Scientific American. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/social-media-exploits-our-evolutionary-desire-for-information/">https://www.scientificamerican.com/article/social-media-exploits-our-evolutionary-desire-for-information/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org5369bff"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org9ea408c"></a>Space and Time<br /></li>
+<li><a id="org49a576b"></a>Space, Earth, Life Sciences, Environment, Health, Misc<br /></li>
+<li><a id="org2610590"></a>Religions, Spirituality, Misc<br /></li>
+<li><a id="orgf37ff7d"></a>Humanities, Misc<br /></li>
+<li><a id="org7190111"></a>SocioPolitical Studies, Law, Misc<br />
+<ul class="org-ul">
+<li><a id="orgcab039e"></a>Orgs<br />
+<div class="outline-text-7" id="text-orgcab039e">
+<ul class="org-ul">
+<li>“Observatory on Social Media.” Accessed: Mar. 09, 2024. [Online]. Available: <a href="https://osome.iu.edu/">https://osome.iu.edu/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org82df410"></a>Special Groups<br />
+<ul class="org-ul">
+<li><a id="org08e31ca"></a>Kids<br />
+<div class="outline-text-8" id="text-org08e31ca">
+<ul class="org-ul">
+<li>M. Luria and A. Bhatia, “Opinion: Restricting and monitoring social media won’t protect kids — here’s what will,” CNN. Accessed: May 17, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/05/15/opinions/social-media-monitoring-restriction-legislation-mediation-luria-bhatia/index.html">https://www.cnn.com/2024/05/15/opinions/social-media-monitoring-restriction-legislation-mediation-luria-bhatia/index.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge9e8666"></a>Law<br />
+<div class="outline-text-7" id="text-orge9e8666">
+<ul class="org-ul">
+<li>“Social Media Regulation and the Rule of Law: Key Trends in Sri Lanka, India and Bangladesh - CCGDELHI.” Accessed: May 23, 2024. [Online]. Available: <a href="https://ccgdelhi.org/research-reports/social-media-regulation-and-the-rule-of-law-key-trends-in-sri-lanka-india-and-bangladesh">https://ccgdelhi.org/research-reports/social-media-regulation-and-the-rule-of-law-key-trends-in-sri-lanka-india-and-bangladesh</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb27ecd3"></a>Politics<br />
+<div class="outline-text-7" id="text-orgb27ecd3">
+<ul class="org-ul">
+<li>“The Algorithmic Management of Polarization and Violence on Social Media.” <a href="http://knightcolumbia.org/content/the-algorithmic-management-of-polarization-and-violence-on-social-media">http://knightcolumbia.org/content/the-algorithmic-management-of-polarization-and-violence-on-social-media</a> (accessed Aug. 25, 2023).</li>
+<li>“How Social Media Platforms Work Hand-in-Hand With The Modi Govt To Censor News &amp; Videos Online.” Accessed: Aug. 26, 2024. [Online]. Available: <a href="https://www.article-14.com/post/how-social-media-platforms-work-hand-in-hand-with-the-modi-govt-to-censor-news-videos-online-66cb996114b02">https://www.article-14.com/post/how-social-media-platforms-work-hand-in-hand-with-the-modi-govt-to-censor-news-videos-online-66cb996114b02</a></li>
+<li>“Social media monitoring in the UK: the invisible surveillance tool increasingly deployed by government | Privacy International.” Accessed: Aug. 22, 2024. [Online]. Available: <a href="http://privacyinternational.org/long-read/5337/social-media-monitoring-uk-invisible-surveillance-tool-increasingly-deployed">http://privacyinternational.org/long-read/5337/social-media-monitoring-uk-invisible-surveillance-tool-increasingly-deployed</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge7ba390"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org0cd6d69"></a>India<br />
+<div class="outline-text-8" id="text-org0cd6d69">
+<ul class="org-ul">
+<li>A. Lal, India Social: How Social Media Is Leading The Charge And Changing The Country. Hachette UK, 2017.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6d42350"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org2f8e324"></a>Business Studies, Misc<br /></li>
+<li><a id="org07cf573"></a>Security Studies, Misc<br /></li>
+<li><a id="org85683a5"></a>Communication, Misc<br /></li>
+<li><a id="orga8eabbb"></a>Misc<br />
+<div class="outline-text-6" id="text-orga8eabbb">
+<ul class="org-ul">
+<li>S. Aral, <i>The Hype Machine: How Social Media Disrupts Our Elections, Our Economy, and Our Health&#x2013;and How We Must Adapt.</i> Crown, 2020.</li>
+
+<li>N. T. L. and E. Forbush, “Can social media help build communities?,” Brookings, Oct. 01, 2018. <a href="https://www.brookings.edu/blog/techtank/2018/10/01/can-social-media-help-build-communities/">https://www.brookings.edu/blog/techtank/2018/10/01/can-social-media-help-build-communities/</a> (accessed Jan. 27, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgab7d883"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org3a6d5c4"></a>Tasks<br />
+<ul class="org-ul">
+<li><a id="org1c2c7ba"></a>Fact Checking<br />
+<div class="outline-text-7" id="text-org1c2c7ba">
+<ul class="org-ul">
+<li>T. Tech, “Busting the Viral: Fact-checking on social media.” <a href="https://exposingtheinvisible.org/en/articles/fact-checking-social-media/">https://exposingtheinvisible.org/en/articles/fact-checking-social-media/</a> (accessed Mar. 31, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge2ccebd"></a>Tools<br />
+<ul class="org-ul">
+<li><a id="org416ba3f"></a>TikTok<br />
+<ul class="org-ul">
+<li><a id="org4f35bf0"></a>General<br /></li>
+<li><a id="orgc0deb71"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="orgcbb1af7"></a>Mozilla Foundation<br />
+<div class="outline-text-9" id="text-orgcbb1af7">
+<ul class="org-ul">
+<li>“Is it safe to shop on Instagram? TikTok? Facebook?,” Mozilla Foundation. Accessed: Dec. 18, 2022. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/is-it-safe-to-shop-on-instagram-tiktok-facebook/">https://foundation.mozilla.org/en/blog/is-it-safe-to-shop-on-instagram-tiktok-facebook/</a></li>
+<li>“Mozilla Research: TikTok Lite Lacks Critical Safety Features, Neglects Global Majority Users,” Mozilla Foundation. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/mozilla-research-tiktok-lite-lacks-critical-safety-features-neglects-global-majority-users/">https://foundation.mozilla.org/en/blog/mozilla-research-tiktok-lite-lacks-critical-safety-features-neglects-global-majority-users/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org101fc61"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-9" id="text-org101fc61">
+<ul class="org-ul">
+<li>J. K. and P. Collings, “Congress Should Give Up on Unconstitutional TikTok Bans,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/congress-should-give-unconstitutional-tiktok-bans">https://www.eff.org/deeplinks/2024/03/congress-should-give-unconstitutional-tiktok-bans</a></li>
+<li>J. Richman, “Why U.S. House Members Opposed the TikTok Ban Bill,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/why-us-house-members-opposed-tiktok-ban-bill">https://www.eff.org/deeplinks/2024/03/why-us-house-members-opposed-tiktok-ban-bill</a></li>
+<li>H. H. and D. Greene, “5 Questions to Ask Before Backing the TikTok Ban,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/5-big-unanswered-questions-about-tiktok-bill">https://www.eff.org/deeplinks/2024/03/5-big-unanswered-questions-about-tiktok-bill</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd30f45"></a>Bruce Schneier<br />
+<div class="outline-text-9" id="text-orgdd30f45">
+<ul class="org-ul">
+<li>“Banning TikTok - Schneier on Security.” Accessed: Feb. 28, 2023. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2023/02/banning-tiktok.html">https://www.schneier.com/blog/archives/2023/02/banning-tiktok.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7d7beee"></a>Misc<br />
+<div class="outline-text-9" id="text-org7d7beee">
+<ul class="org-ul">
+<li>“TikTok ban would weaken press freedom,” Freedom of the Press. Accessed: Apr. 27, 2024. [Online]. Available: <a href="https://freedom.press/news/tiktok-ban-would-weaken-press-freedom/">https://freedom.press/news/tiktok-ban-would-weaken-press-freedom/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org50d7ee9"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org4f779f6"></a>Misc<br />
+<div class="outline-text-9" id="text-org4f779f6">
+<ul class="org-ul">
+<li>“TikTok’s Secret Sauce.” Accessed: Feb. 07, 2024. [Online]. Available: <a href="http://knightcolumbia.org/blog/tiktoks-secret-sauce">http://knightcolumbia.org/blog/tiktoks-secret-sauce</a></li>
+
+<li>N. Mazurov, “Forget a Ban — Why Are Journalists Using TikTok in the First Place?,” The Intercept. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://theintercept.com/2024/04/07/tiktok-ban-journalists-safety/">https://theintercept.com/2024/04/07/tiktok-ban-journalists-safety/</a></li>
+
+<li>“How a TikTok ban in the U.S. could violate 1st Amendment rights,” PBS NewsHour. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://www.pbs.org/newshour/show/how-a-tiktok-ban-in-the-u-s-could-violate-1st-amendment-rights">https://www.pbs.org/newshour/show/how-a-tiktok-ban-in-the-u-s-could-violate-1st-amendment-rights</a></li>
+
+<li>“TikTok’s Secret Sauce.” Accessed: Feb. 07, 2024. [Online]. Available: <a href="http://knightcolumbia.org/blog/tiktoks-secret-sauce">http://knightcolumbia.org/blog/tiktoks-secret-sauce</a></li>
+
+<li>“Why we’re hopeful about mental health videos on TikTok | Psyche Ideas,” Psyche. Accessed: Nov. 13, 2023. [Online]. Available: <a href="https://psyche.co/ideas/why-were-hopeful-about-mental-health-videos-on-tiktok">https://psyche.co/ideas/why-were-hopeful-about-mental-health-videos-on-tiktok</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7b5f66a"></a>Misc<br />
+<div class="outline-text-8" id="text-org7b5f66a">
+<ul class="org-ul">
+<li>M. Suresh, “Labubu, Stanley Cups And The Aesthetic Chaos: Gendered And Environmental Costs Of Tiktok Trends,” Feminism in India. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/08/05/labubu-stanley-cups-and-the-aesthetic-chaos-gendered-and-environmental-costs-of-tiktok-trends/">https://feminisminindia.com/2025/08/05/labubu-stanley-cups-and-the-aesthetic-chaos-gendered-and-environmental-costs-of-tiktok-trends/</a></li>
+
+<li>“Berlin’s Striking TikTok Workers Stand Up to a Tech Giant.” Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://jacobin.com/2025/08/berlin-tiktok-tech-ai-strike">https://jacobin.com/2025/08/berlin-tiktok-tech-ai-strike</a></li>
+
+<li>M. Anindya, “TikTok’s messy merger in Indonesia could be a preview of what’s to come in the U.S.,” Rest of World. Accessed: Jul. 15, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tiktok-indonesia-tokopedia-merger-problems/">https://restofworld.org/2025/tiktok-indonesia-tokopedia-merger-problems/</a></li>
+
+<li>“TikTok bathroom ritual leads to police investigation at Russian cadet school,” Meduza. Accessed: May 28, 2025. [Online]. Available: <a href="https://meduza.io/en/feature/2025/05/27/tiktok-bathroom-ritual-leads-to-police-investigation-at-russian-cadet-school">https://meduza.io/en/feature/2025/05/27/tiktok-bathroom-ritual-leads-to-police-investigation-at-russian-cadet-school</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Everyone is asking the wrong questions about TikTok,” Software Freedom Conservancy. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://sfconservancy.org/blog/2025/jan/18/usa-should-require-bytedance-to-open-source-tiktok/">https://sfconservancy.org/blog/2025/jan/18/usa-should-require-bytedance-to-open-source-tiktok/</a></li>
+<li>D. Greene, “EFF Statement on U.S. Supreme Court’s Decision to Uphold TikTok Ban,” Electronic Frontier Foundation. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/eff-statement-us-supreme-courts-decision-uphold-tiktok-ban">https://www.eff.org/deeplinks/2025/01/eff-statement-us-supreme-courts-decision-uphold-tiktok-ban</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Misinformation on TikTok: How Documented Examined Hundreds of Videos in Different Languages.” Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://gijn.org/stories/tiktok-misinformation-how-documented-translated-hundreds-videos/">https://gijn.org/stories/tiktok-misinformation-how-documented-translated-hundreds-videos/</a></li>
+
+<li>“‘Who are we to judge,’ ask … judges, upholding TikTok ban,” Freedom of the Press. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://freedom.press/issues/who-are-we-to-judge-ask-judges-upholding-tiktok-ban/">https://freedom.press/issues/who-are-we-to-judge-ask-judges-upholding-tiktok-ban/</a></li>
+
+<li>“Why teenagers are deliberately seeking brain rot on TikTok | Psyche Ideas,” Psyche. Accessed: Oct. 09, 2024. [Online]. Available: <a href="https://psyche.co/ideas/why-teenagers-are-deliberately-seeking-brain-rot-on-tiktok">https://psyche.co/ideas/why-teenagers-are-deliberately-seeking-brain-rot-on-tiktok</a></li>
+
+<li>D. Stover, “Who needs a government ban? TikTok users are already defending themselves,” Bulletin of the Atomic Scientists. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/08/who-needs-a-government-ban-tiktok-users-are-already-defending-themselves/">https://thebulletin.org/2024/08/who-needs-a-government-ban-tiktok-users-are-already-defending-themselves/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Despite international hires, TikTok is Chinese at its core,” Rest of World. Accessed: May 08, 2024. [Online]. Available: <a href="https://restofworld.org/2024/tiktok-chinese-us-ban/">https://restofworld.org/2024/tiktok-chinese-us-ban/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org064bd22"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org24652f6"></a>Everyday Computing - Social Networking<br />
+<ul class="org-ul">
+<li><a id="org81dc384"></a>General<br /></li>
+<li><a id="orgda71ece"></a>Fair Tech<br />
+<div class="outline-text-7" id="text-orgda71ece">
+<ul class="org-ul">
+<li>EFF, “Protecting Yourself on Social Networks,” Surveillance Self-Defense, Sep. 29, 2014. <a href="https://ssd.eff.org/en/module/protecting-yourself-social-networks">https://ssd.eff.org/en/module/protecting-yourself-social-networks</a> (accessed Mar. 31, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4551195"></a>Big Tech<br />
+<ul class="org-ul">
+<li><a id="orge135b80"></a>Facebook<br />
+<ul class="org-ul">
+<li><a id="orgff850f1"></a>Fair Tech<br />
+<div class="outline-text-9" id="text-orgff850f1">
+<ul class="org-ul">
+<li>“Facebook,” Electronic Frontier Foundation. <a href="https://www.eff.org/tags/facebook">https://www.eff.org/tags/facebook</a> (accessed Apr. 03, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>EFF, “Facebook Groups: Reducing Risks,” Surveillance Self-Defense, Jan. 26, 2017. <a href="https://ssd.eff.org/en/module/facebook-groups-reducing-risks">https://ssd.eff.org/en/module/facebook-groups-reducing-risks</a> (accessed Mar. 31, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7a83e0b"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgc7bcf1d"></a>Humor<br />
+<div class="outline-text-10" id="text-orgc7bcf1d">
+<ul class="org-ul">
+<li>6-Year-Old Explains How Messed Up It Is That Her Entire Life Has Been Put On Facebook, (Jun. 15, 2018). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ziltBdyFxDo">https://www.youtube.com/watch?v=ziltBdyFxDo</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb331e83"></a>Misc<br />
+<div class="outline-text-9" id="text-orgb331e83">
+<ul class="org-ul">
+<li>S. Biddle, “She Joined Facebook to Fight Terror. Now She’s Convinced We Need to Fight Facebook.,” The Intercept. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://theintercept.com/2024/12/04/meta-facebook-terrorism-censorship-speech/">https://theintercept.com/2024/12/04/meta-facebook-terrorism-censorship-speech/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org172a54d"></a>Instagram<br />
+<ul class="org-ul">
+<li><a id="orgdaf2eac"></a>Privacy And Security<br />
+<ul class="org-ul">
+<li><a id="org18c2a1b"></a>Fair Tech<br />
+<div class="outline-text-10" id="text-org18c2a1b">
+<ul class="org-ul">
+<li>F. L. Defenders, “Protect yourself and your data when using Instagram.” Accessed: Jan. 03, 2024. [Online]. Available: <a href="https://securityinabox.org">https://securityinabox.org</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org470cff5"></a>Big Tech<br />
+<div class="outline-text-10" id="text-org470cff5">
+<ul class="org-ul">
+<li>“How to Stay Safe and Secure on Instagram,” PCMAG. Accessed: Jan. 03, 2024. [Online]. Available: <a href="https://www.pcmag.com/how-to/how-to-stay-safe-and-secure-on-instagram">https://www.pcmag.com/how-to/how-to-stay-safe-and-secure-on-instagram</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org40b08e3"></a>Dummies<br />
+<ul class="org-ul">
+<li><a id="orgb20823d"></a>General<br />
+<div class="outline-text-10" id="text-orgb20823d">
+<ul class="org-ul">
+<li>J. Herman, C. Walker, and E. Butow, Instagram For Dummies, 2nd edition. For Dummies, 2022.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9933d15"></a>Misc<br /></li>
+<li><a id="orga73bb1a"></a>Seniors<br />
+<div class="outline-text-10" id="text-orga73bb1a">
+<ul class="org-ul">
+<li>M. Collier, Facebook, Twitter, &amp; Instagram For Seniors For Dummies, 3rd edition. For Dummies, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org9e8a791"></a>Misc<br />
+<div class="outline-text-9" id="text-org9e8a791">
+<ul class="org-ul">
+<li>“Instagram’s new ‘Friend Map’ puts your privacy at risk,” Proton. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://proton.me/blog/instagram-maps-privacy-concern">https://proton.me/blog/instagram-maps-privacy-concern</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org04582e7"></a>MicroBlogging<br />
+<ul class="org-ul">
+<li><a id="orge8f8883"></a>Big Tech<br />
+<ul class="org-ul">
+<li><a id="orgb3f62c0"></a>X (formerly Twitter)<br />
+<ul class="org-ul">
+<li><a id="orgae36727"></a>General<br />
+<div class="outline-text-10" id="text-orgae36727">
+<ul class="org-ul">
+<li>“Twitter,” Wikipedia. Nov. 07, 2022. Accessed: Nov. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Twitter&amp;oldid=1120456102">https://en.wikipedia.org/w/index.php?title=Twitter&amp;oldid=1120456102</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9de76a5"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgd1a1d2a"></a>Systems Sciences<br />
+<div class="outline-text-11" id="text-orgd1a1d2a">
+<ul class="org-ul">
+<li>Z. Tufekci, <b>Twitter and Tear Gas: The Power and Fragility of Networked Protest.</b> Yale University Press, 2018.</li>
+
+<li>“Twitter transformed science communication during the pandemic. Will it last?” <a href="https://www.science.org/content/article/twitter-transformed-science-communication-pandemic-will-last">https://www.science.org/content/article/twitter-transformed-science-communication-pandemic-will-last</a> (accessed Mar. 25, 2022).</li>
+
+<li>“As Musk reshapes Twitter, academics ponder taking flight.” <a href="https://www.science.org/content/article/musk-reshapes-twitter-academics-ponder-taking-flight">https://www.science.org/content/article/musk-reshapes-twitter-academics-ponder-taking-flight</a> (accessed Nov. 05, 2022).</li>
+
+<li>L. Tarrade, J.-P. Chevrot, and J.-P. Magué, “How position in the network determines the fate of lexical innovations on Twitter,” PLOS Complex Systems, vol. 1, no. 1, p. e0000005, Sep. 2024, doi: 10.1371/journal.pcsy.0000005.</li>
+</ul>
+</div>
+</li>
+<li><a id="org460fa40"></a>Computer Science and Engineering<br />
+<ul class="org-ul">
+<li><a id="orgc902b24"></a>Tech Support<br />
+<div class="outline-text-12" id="text-orgc902b24">
+<ul class="org-ul">
+<li>“How to Hide Twitter’s ‘What’s happening’&amp; ‘Who to Follow’ Suggestions,” Techdows, Aug. 07, 2019. <a href="https://techdows.com/2019/08/how-to-block-twitters-trends-and-who-to-follow-suggestions.html">https://techdows.com/2019/08/how-to-block-twitters-trends-and-who-to-follow-suggestions.html</a> (accessed Oct. 03, 2022).</li>
+
+<li>“Find Fediverse accounts of your Twitter followings.” <a href="https://fedifinder.glitch.me/">https://fedifinder.glitch.me/</a> (accessed Nov. 07, 2022).</li>
+
+<li>“Why Twitter still has those terrible Trends,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/07/28/1056535/twitter-trending-misinformation-conspiracies/">https://www.technologyreview.com/2022/07/28/1056535/twitter-trending-misinformation-conspiracies/</a> (accessed Jul. 29, 2022).</li>
+
+<li>A. Press, “Twitter Unveils Version of Site That Can Bypass Russia Block.” <a href="https://cacm.acm.org/news/259304-twitter-unveils-version-of-site-that-can-bypass-russia-block/fulltext">https://cacm.acm.org/news/259304-twitter-unveils-version-of-site-that-can-bypass-russia-block/fulltext</a> (accessed Mar. 16, 2022).</li>
+
+<li>“Failures in Twitter’s Two-Factor Authentication System - Schneier on Security.” <a href="https://www.schneier.com/blog/archives/2022/11/failures-in-twitters-two-factor-authentication-system.html">https://www.schneier.com/blog/archives/2022/11/failures-in-twitters-two-factor-authentication-system.html</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org74ffcfa"></a>RnD<br />
+<div class="outline-text-12" id="text-org74ffcfa">
+<ul class="org-ul">
+<li>M. Mattei, M. Pratelli, G. Caldarelli, M. Petrocchi, and F. Saracco, “Bow-Tie Structures of Twitter Discursive Communities,” arXiv:2202.03316 [physics], Feb. 2022, Accessed: Mar. 19, 2022. [Online]. Available: <a href="http://arxiv.org/abs/2202.03316">http://arxiv.org/abs/2202.03316</a></li>
+
+<li>G. Corsi, “Evaluating Twitter’s algorithmic amplification of low-credibility content: an observational study,” EPJ Data Sci., vol. 13, no. 1, Art. no. 1, Dec. 2024, doi: 10.1140/epjds/s13688-024-00456-3.</li>
+
+<li>M. Mattei, M. Pratelli, G. Caldarelli, M. Petrocchi, and F. Saracco, “Bow-Tie Structures of Twitter Discursive Communities,” arXiv:2202.03316 [physics], Feb. 2022, Accessed: Mar. 19, 2022. [Online]. Available: <a href="http://arxiv.org/abs/2202.03316">http://arxiv.org/abs/2202.03316</a></li>
+
+<li><b>“Viral news – true and untrue – moves equally through Twitter,”</b> Cornell Chronicle. <a href="https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter">https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter</a> (accessed Nov. 13, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org74b0531"></a>Data Science<br />
+<div class="outline-text-12" id="text-org74b0531">
+<ul class="org-ul">
+<li>M. Russell, Mining the Social Web: Analyzing Data from Facebook, Twitter, LinkedIn, and Other Social Media Sites. O’Reilly Media, Inc., 2011.</li>
+
+<li>M. Russell, 21 Recipes for Mining Twitter. O’Reilly Media, Inc., 2011.</li>
+
+<li>K. Makice, Twitter API – Up and Running: Learn How to Build Applications with the Twitter API, 1st edition. Sebastopol, Calif: O′Reilly, 2009.</li>
+
+<li>J. Leibiusky, G. Eisbruch, and D. Simonassi, Getting Started with Storm: Continuous Streaming Computation with Twitter’s Cluster Technology, 1st edition. O’Reilly Media, 2012.</li>
+
+<li>K. Makice, Twitter API: Up and Running: Learn How to Build Applications with the Twitter API. O’Reilly Media, Inc., 2009.</li>
+
+<li>Z. C. Steinert-Threlkeld, <b>Twitter as Data.</b> Cambridge University Press, 2017.</li>
+
+<li>S. Kumar, F. Morstatter, and H. Liu, <b>Twitter Data Analytics.</b> Springer Science &amp; Business Media, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org39f1726"></a>AI<br />
+<div class="outline-text-12" id="text-org39f1726">
+<ul class="org-ul">
+<li>D. Eadline, “Colossus AI Hits 200,000 GPUs as Musk Ramps Up AI Ambitions,” HPCwire. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.hpcwire.com/2025/05/13/colossus-ai-hits-200000-gpus-as-musk-ramps-up-ai-ambitions/">https://www.hpcwire.com/2025/05/13/colossus-ai-hits-200000-gpus-as-musk-ramps-up-ai-ambitions/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc252476"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org510cd24"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org585f751"></a>SocioPolitical Studies, Law, Misc<br />
+<ul class="org-ul">
+<li><a id="org292e4a7"></a>Current Affairs<br />
+<div class="outline-text-12" id="text-org292e4a7">
+<ul class="org-ul">
+<li>“Why Elon Musk’s 2 Weeks at Twitter Heralds India’s Brush With Digital Demonetisation,” The Wire. <a href="https://thewire.in/tech/elon-musk-twitter-digital-demonetisation">https://thewire.in/tech/elon-musk-twitter-digital-demonetisation</a> (accessed Nov. 10, 2022).</li>
+
+<li>T. C. Timothy Graham, “Verified bots and fake accounts? Twitter’s paid blue tick verification service has a fatal flaw,” Scroll.in. <a href="https://scroll.in/article/1036819/verified-bots-and-fake-accounts-twitters-paid-blue-tick-verification-service-has-a-fatal-flaw">https://scroll.in/article/1036819/verified-bots-and-fake-accounts-twitters-paid-blue-tick-verification-service-has-a-fatal-flaw</a> (accessed Nov. 08, 2022).</li>
+
+<li>“Here’s how a Twitter engineer says it will break in the coming weeks,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/11/08/1062886/heres-how-a-twitter-engineer-says-it-will-break-in-the-coming-weeks/">https://www.technologyreview.com/2022/11/08/1062886/heres-how-a-twitter-engineer-says-it-will-break-in-the-coming-weeks/</a> (accessed Nov. 10, 2022).</li>
+
+<li>Tweet and WhatsApp, “Mass Migration From Twitter Is Likely To Be an Uphill Battle – Just Ask Ex-tumblr Users,” Live Wire, Nov. 05, 2022. <a href="https://livewire.thewire.in/out-and-about/mass-migration-from-twitter-is-likely-to-be-an-uphill-battle-just-ask-ex-tumblr-users/">https://livewire.thewire.in/out-and-about/mass-migration-from-twitter-is-likely-to-be-an-uphill-battle-just-ask-ex-tumblr-users/</a> (accessed Nov. 06, 2022).</li>
+
+<li>T. C. Casey Fiesler, “For those planning to leave Twitter because of Elon Musk, a word of caution,” Scroll.in. <a href="https://scroll.in/article/1036613/a-word-of-advice-for-those-planning-to-leave-twitter-because-of-elon-musk">https://scroll.in/article/1036613/a-word-of-advice-for-those-planning-to-leave-twitter-because-of-elon-musk</a> (accessed Nov. 06, 2022).</li>
+
+<li>“Is Elon Musk the best or the worst for Twitter? | Scheer Intelligence,” KCRW, Nov. 03, 2022. <a href="https://www.kcrw.com/culture/shows/scheer-intelligence/is-elon-musk-the-best-or-the-worst-for-twitter">https://www.kcrw.com/culture/shows/scheer-intelligence/is-elon-musk-the-best-or-the-worst-for-twitter</a> (accessed Nov. 05, 2022).</li>
+
+<li>R. Farrow, “The Search for Dirt on the Twitter Whistle-Blower,” The New Yorker, Sep. 13, 2022. Accessed: Sep. 15, 2022. [Online]. Available: <a href="https://www.newyorker.com/news/news-desk/the-search-for-dirt-on-the-twitter-whistle-blower">https://www.newyorker.com/news/news-desk/the-search-for-dirt-on-the-twitter-whistle-blower</a></li>
+
+<li>“India Versus Twitter Versus Elon Musk Versus Society,” The Wire. <a href="https://thewire.in/tech/india-versus-twitter-versus-elon-musk-versus-society">https://thewire.in/tech/india-versus-twitter-versus-elon-musk-versus-society</a> (accessed Jul. 29, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org13e3eae"></a>Special Groups<br />
+<ul class="org-ul">
+<li><a id="org912d661"></a>Seniors<br />
+<div class="outline-text-13" id="text-org912d661">
+<ul class="org-ul">
+<li>M. Collier, <b>Facebook, Twitter, &amp; Instagram For Seniors For Dummies.</b> John Wiley &amp; Sons, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6c28830"></a>Journalism<br />
+<div class="outline-text-12" id="text-org6c28830">
+<ul class="org-ul">
+<li>“Journalism’s Hostage Relationship With Twitter,” The Wire. <a href="https://thewire.in/media/journalisms-hostage-relationship-with-twitter">https://thewire.in/media/journalisms-hostage-relationship-with-twitter</a> (accessed May 03, 2022).</li>
+
+<li>Tweet and WhatsApp, “Elon Musk Is Wrong: Research Shows Content Rules on Twitter Help Preserve Free Speech From Bots and Other Manipulation,” Live Wire, Nov. 02, 2022. <a href="https://livewire.thewire.in/out-and-about/elon-musk-is-wrong-research-shows-content-rules-on-twitter-help-preserve-free-speech-from-bots-and-other-manipulation/">https://livewire.thewire.in/out-and-about/elon-musk-is-wrong-research-shows-content-rules-on-twitter-help-preserve-free-speech-from-bots-and-other-manipulation/</a> (accessed Nov. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbfb66eb"></a>Politics<br />
+<div class="outline-text-12" id="text-orgbfb66eb">
+<ul class="org-ul">
+<li>Y. Ouyang and R. W. Waterman, Trump, Twitter, and the American Democracy: Political Communication in the Digital Age. Springer Nature, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfb01a14"></a>Social Studies<br />
+<div class="outline-text-12" id="text-orgfb01a14">
+<ul class="org-ul">
+<li>M. W. Macy, Y. Mejova, and I. Weber, Twitter: A Digital Socioscope. Cambridge University Press, 2015.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org959ed0c"></a>Business Studies, Misc<br />
+<ul class="org-ul">
+<li><a id="org0dd16df"></a>Management<br />
+<ul class="org-ul">
+<li><a id="org8a8f7bc"></a>Marketing<br />
+<div class="outline-text-13" id="text-org8a8f7bc">
+<ul class="org-ul">
+<li>K. Lacy, Twitter Marketing For Dummies. John Wiley &amp; Sons, 2011.</li>
+<li>B. Petersel and E. Schindler, The Complete Idiot’s Guide to Twitter Marketing. Penguin, 2012.</li>
+<li>H. Thomases, Twitter Marketing: An Hour a Day. John Wiley &amp; Sons, 2009.</li>
+<li>J. Comm, Twitter Power 2.0: How to Dominate Your Market One Tweet at a Time. John Wiley &amp; Sons, 2010.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgebd8dbc"></a>Communication, Misc<br />
+<div class="outline-text-11" id="text-orgebd8dbc">
+<ul class="org-ul">
+<li>M. Zappavigna, Discourse of Twitter and Social Media: How We Use Language to Create Affiliation on the Web. A&amp;C Black, 2012.</li>
+<li>A. Hodgkin, Following Searle on Twitter: How Words Create Digital Institutions. University of Chicago Press, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org960f401"></a>Misc<br />
+<div class="outline-text-11" id="text-org960f401">
+<ul class="org-ul">
+<li>L. McGaughy, “Elon Musk’s Long Game to Influence the Texas Legislature,” ProPublica. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.propublica.org/article/elon-musk-texas-legislature-laws-spacex-tesla">https://www.propublica.org/article/elon-musk-texas-legislature-laws-spacex-tesla</a></li>
+
+<li>“NAACP to Sue over Elon Musk’s xAI Data Center in Memphis,” Democracy Now! Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/6/18/headlines/naacp_to_sue_over_elon_musks_xai_data_center_in_memphis">https://www.democracynow.org/2025/6/18/headlines/naacp_to_sue_over_elon_musks_xai_data_center_in_memphis</a></li>
+
+<li>R. Cooper, “Elon Musk Declares Himself President, Shuts Down Government,” The American Prospect. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://prospect.org/api/content/02516f1e-be4c-11ef-8a88-12163087a831/">https://prospect.org/api/content/02516f1e-be4c-11ef-8a88-12163087a831/</a></li>
+<li>“Elon Musk Is Inaugurating a New Era of Billionaire Rule.” Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://jacobin.com/2024/12/trump-musk-republicans-billionaire-rule">https://jacobin.com/2024/12/trump-musk-republicans-billionaire-rule</a></li>
+<li>“Elon Musk promotes the global fascist right,” World Socialist Web Site. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/21/pers-d21.html">https://www.wsws.org/en/articles/2024/12/21/pers-d21.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“X goes ‘thermonuclear’ against media donors,” Freedom of the Press. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://freedom.press/issues/x-goes-thermonuclear-against-media-donors/">https://freedom.press/issues/x-goes-thermonuclear-against-media-donors/</a></li>
+
+<li>A. Mackey, “EFF to Court: Reject X’s Effort to Revive a Speech-Chilling Lawsuit Against a Nonprofit,” Electronic Frontier Foundation. Accessed: Nov. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/11/eff-court-reject-xs-effort-revive-speech-chilling-lawsuit-against-nonprofit">https://www.eff.org/deeplinks/2024/11/eff-court-reject-xs-effort-revive-speech-chilling-lawsuit-against-nonprofit</a></li>
+
+<li>“The banning of X/Twitter in Brazil and the authoritarian drive of the capitalist state,” World Socialist Web Site. Accessed: Sep. 08, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/07/wtll-s07.html">https://www.wsws.org/en/articles/2024/09/07/wtll-s07.html</a></li>
+<li>“Twitter to Begin Layoffs Today, Internal Email Reveals,” The Wire. <a href="https://thewire.in/tech/twitter-layoffs-internal-email">https://thewire.in/tech/twitter-layoffs-internal-email</a> (accessed Nov. 06, 2022).</li>
+<li>“Twitter: Musk defends deep cuts to company’s workforce,” BBC News, Nov. 05, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://www.bbc.com/news/business-63524219">https://www.bbc.com/news/business-63524219</a></li>
+<li>“Elon Musk Moves Closer to Twitter Takeover As Employees Fear Mass Firings,” Democracy Now! <a href="https://www.democracynow.org/2022/10/27/headlines/elon_musk_moves_closer_to_twitter_takeover_as_employees_fear_mass_firings">https://www.democracynow.org/2022/10/27/headlines/elon_musk_moves_closer_to_twitter_takeover_as_employees_fear_mass_firings</a> (accessed Oct. 28, 2022).</li>
+<li>“The Download: The Money Issue, and the problems with open sourcing Twitter’s algorithms,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/04/27/1051508/download-money-issue-crypto-dollar-problems-open-sourcing-twitters-algorithms-elon-musk/">https://www.technologyreview.com/2022/04/27/1051508/download-money-issue-crypto-dollar-problems-open-sourcing-twitters-algorithms-elon-musk/</a> (accessed Apr. 28, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org40cb223"></a>Core<br />
+<ul class="org-ul">
+<li><a id="orgb796fc7"></a>Texts<br />
+<div class="outline-text-11" id="text-orgb796fc7">
+<ul class="org-ul">
+<li>D. Murthy, Twitter: Social Communication in the Twitter Age. Wiley, 2013.</li>
+<li>D. Murthy, <b>Twitter.</b> John Wiley &amp; Sons, 2018.</li>
+<li>McFedries, Twitter Tips, Tricks, and Tweets. Wiley, 2010.</li>
+<li>L. Fitton, M. Gruen, and L. Poston, Twitter For Dummies. John Wiley &amp; Sons, 2010.</li>
+<li>T. O’Reilly and S. Milstein, <b>The Twitter Book.</b> O’Reilly Media, Inc., 2011.</li>
+<li>J. S. McDougall, #tweetsmart: 25 Twitter Projects to Help You Build Your Community, 1st edition. O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org55cbf86"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org3fb86e6"></a>Literature<br />
+<div class="outline-text-11" id="text-org3fb86e6">
+<ul class="org-ul">
+<li>A. Aciman and E. Rensin, Twitterature: The World’s Greatest Books in Twenty Tweets or Less. Penguin Publishing Group, 2009.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org84122cc"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org1a832ae"></a>Critical Studies<br /></li>
+</ul>
+</li>
+<li><a id="org6e06026"></a>Misc<br />
+<div class="outline-text-10" id="text-org6e06026">
+<ul class="org-ul">
+<li>F. Diaz-Maurin, “When Grok is wrong: The risks of AI chatbots spreading misinformation in a crisis,” Bulletin of the Atomic Scientists. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/06/when-grok-is-wrong-the-risks-of-ai-chatbots-spreading-misinformation-in-a-crisis/">https://thebulletin.org/2025/06/when-grok-is-wrong-the-risks-of-ai-chatbots-spreading-misinformation-in-a-crisis/</a></li>
+
+<li>“House Republicans Pass Bill Letting Musk ‘Fleece Consumers’ With His X Money Scheme | Common Dreams.” Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.commondreams.org/news/elon-musk-x-money">https://www.commondreams.org/news/elon-musk-x-money</a></li>
+
+<li>S. Engelberg, “An Open Letter to Elon Musk,” ProPublica. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.propublica.org/article/elon-musk-open-letter-doge">https://www.propublica.org/article/elon-musk-open-letter-doge</a></li>
+
+<li>“It’s time for eXit.” Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jan/07/its-time-exit">https://theecologist.org/2025/jan/07/its-time-exit</a></li>
+
+<li>“How Billionaire Elon Musk’s Extremism Is Shaping Global Politics,” Democracy Now! Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/1/6/quinn_slobodian_musk_global_far_right">https://www.democracynow.org/2025/1/6/quinn_slobodian_musk_global_far_right</a></li>
+
+<li>J. K. and M. Buckley, “X’s Last-Minute Update to the Kids Online Safety Act Still Fails to Protect Kids—or Adults—Online,” Electronic Frontier Foundation. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/12/xs-last-minute-update-kids-online-safety-act-still-fails-protect-kids-or-adults">https://www.eff.org/deeplinks/2024/12/xs-last-minute-update-kids-online-safety-act-still-fails-protect-kids-or-adults</a></li>
+
+<li>“Complexity Science Hub * News * Why CSH Will No Longer Be Active On X.” Accessed: Nov. 29, 2024. [Online]. Available: <a href="https://csh.ac.at/news/why-csh-will-no-longer-be-active-on-x/">https://csh.ac.at/news/why-csh-will-no-longer-be-active-on-x/</a></li>
+
+<li>“Like ‘old Twitter’: The scientific community finds a new home on Bluesky.” Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://www.science.org/content/article/old-twitter-scientific-community-finds-new-home-bluesky">https://www.science.org/content/article/old-twitter-scientific-community-finds-new-home-bluesky</a></li>
+
+<li>J. Koebler ·, “The Great Migration to Bluesky Gives Me Hope for the Future of the Internet,” 404 Media. Accessed: Nov. 16, 2024. [Online]. Available: <a href="https://www.404media.co/the-great-migration-to-bluesky-gives-me-hope-for-the-future-of-the-internet/">https://www.404media.co/the-great-migration-to-bluesky-gives-me-hope-for-the-future-of-the-internet/</a></li>
+
+<li>“Nostr public keys of Twitter Accounts,” nostr.directory. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://nostr.directory/">https://nostr.directory/</a></li>
+
+<li>D. Nield, “How to leave Twitter for Bluesky,” Popular Science. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/how-to-leave-twitter-for-bluesky/">https://www.popsci.com/diy/how-to-leave-twitter-for-bluesky/</a></li>
+
+<li>G. Corsi, B. Marino, and W. Wong, “The spread of synthetic media on X,” Harvard Kennedy School Misinformation Review, Jun. 2024, doi: 10.37016/mr-2020-140.</li>
+
+<li>S. Baribi-Bartov, B. Swire-Thompson, and N. Grinberg, “Supersharers of fake news on Twitter,” Science, vol. 384, no. 6699, pp. 979–982, May 2024, doi: 10.1126/science.adl4435.</li>
+
+<li>V. Sanzgiri, “The biggest challenge X’s Community Notes will likely face in India,” MediaNama. Accessed: Apr. 05, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/04/223-x-community-notes-challenge-india/">https://www.medianama.com/2024/04/223-x-community-notes-challenge-india/</a></li>
+
+<li>“For Online Disinformation and Hate, X Marks the Spot,” The Equation. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/kate-cell/for-online-disinformation-and-hate-x-marks-the-spot/">https://blog.ucsusa.org/kate-cell/for-online-disinformation-and-hate-x-marks-the-spot/</a></li>
+
+<li>B. Haggart, “What Elon Musk’s destruction of Twitter tells us about the future of social media,” The Conversation. <a href="http://theconversation.com/what-elon-musks-destruction-of-twitter-tells-us-about-the-future-of-social-media-194895">http://theconversation.com/what-elon-musks-destruction-of-twitter-tells-us-about-the-future-of-social-media-194895</a> (accessed Nov. 22, 2022).</li>
+
+<li>D. Angus and T. Graham, “Thinking of breaking up with Twitter? Here’s the right way to do it,” The Conversation. <a href="http://theconversation.com/thinking-of-breaking-up-with-twitter-heres-the-right-way-to-do-it-195002">http://theconversation.com/thinking-of-breaking-up-with-twitter-heres-the-right-way-to-do-it-195002</a> (accessed Nov. 22, 2022).</li>
+
+<li>K. Gullo, “Monetization, Not Human Rights or Vulnerable Communities, Matter Most at Twitter Under Musk,” Electronic Frontier Foundation, Nov. 21, 2022. <a href="https://www.eff.org/deeplinks/2022/11/twitters-monetizable-users-not-human-rights-matter-most-under-musks-rein-leaving">https://www.eff.org/deeplinks/2022/11/twitters-monetizable-users-not-human-rights-matter-most-under-musks-rein-leaving</a> (accessed Nov. 22, 2022).</li>
+
+<li>M. Schreiber, “‘Verified’ anti-vax accounts proliferate as Twitter struggles to police content,” The Guardian, Nov. 21, 2022. Accessed: Nov. 22, 2022. [Online]. Available: <a href="https://www.theguardian.com/technology/2022/nov/21/twitter-anti-vax-health-misinformation">https://www.theguardian.com/technology/2022/nov/21/twitter-anti-vax-health-misinformation</a></li>
+
+<li>Q. Wong, “Twitter’s Fake-Account Problem Got Messier With Musk. It May Get Worse,” CNET. <a href="https://www.cnet.com/news/social-media/twitters-fake-account-problem-got-messier-with-musk-it-may-get-worse/">https://www.cnet.com/news/social-media/twitters-fake-account-problem-got-messier-with-musk-it-may-get-worse/</a> (accessed Nov. 18, 2022).</li>
+<li>J. Cox ·, “‘Elon Musk’ Was a Prolific Money Launderer for Hackers and Drug Traffickers. It Was Secretly the FBI,” 404 Media. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://www.404media.co/elon-musk-was-a-prolific-money-launderer-for-hackers-and-drug-traffickers-it-was-secretly-the-fbi/">https://www.404media.co/elon-musk-was-a-prolific-money-launderer-for-hackers-and-drug-traffickers-it-was-secretly-the-fbi/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgd584768"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="org712868b"></a>Mastodon<br />
+<ul class="org-ul">
+<li><a id="orgb62df67"></a>General<br />
+<div class="outline-text-10" id="text-orgb62df67">
+<ul class="org-ul">
+<li><b>“Mastodon.”</b> <a href="https://joinmastodon.org/">https://joinmastodon.org/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7369b25"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="org36e6b1a"></a>EFF<br />
+<div class="outline-text-11" id="text-org36e6b1a">
+<ul class="org-ul">
+<li>R. Mir, “How to Make a Mastodon Account and Join the Fediverse,” Electronic Frontier Foundation, Dec. 01, 2022. <a href="https://www.eff.org/deeplinks/2022/12/how-make-mastodon-account-and-join-fediverse">https://www.eff.org/deeplinks/2022/12/how-make-mastodon-account-and-join-fediverse</a> (accessed Dec. 02, 2022).</li>
+
+<li>B. Budington, “Is Mastodon Private and Secure? Let’s Take a Look,” Electronic Frontier Foundation, Nov. 16, 2022. <a href="https://www.eff.org/deeplinks/2022/11/mastodon-private-and-secure-lets-take-look">https://www.eff.org/deeplinks/2022/11/mastodon-private-and-secure-lets-take-look</a> (accessed Nov. 17, 2022).</li>
+
+<li>C. C. and R. Mir, “The Fediverse Could Be Awesome (if we don’t screw it up),” Electronic Frontier Foundation, Nov. 16, 2022. <a href="https://www.eff.org/deeplinks/2022/11/fediverse-could-be-awesome-if-we-dont-screw-it">https://www.eff.org/deeplinks/2022/11/fediverse-could-be-awesome-if-we-dont-screw-it</a> (accessed Nov. 20, 2022).</li>
+
+<li>R. S. and J. Callas, “Leaving Twitter’s Walled Garden,” Electronic Frontier Foundation, Nov. 18, 2022. <a href="https://www.eff.org/deeplinks/2022/11/leaving-twitters-walled-garden">https://www.eff.org/deeplinks/2022/11/leaving-twitters-walled-garden</a> (accessed Nov. 20, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org5a10cbd"></a>STEMM<br />
+<div class="outline-text-10" id="text-org5a10cbd">
+<ul class="org-ul">
+<li>C. Stokel-Walker, “Should I join Mastodon? A scientists’ guide to Twitter’s rival,” Nature, Nov. 2022, doi: 10.1038/d41586-022-03668-7.</li>
+
+<li>“Former Twitter employees fear the platform might only last weeks,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/11/18/1063467/former-twitter-employees-fear-the-platform-might-only-last-weeks/">https://www.technologyreview.com/2022/11/18/1063467/former-twitter-employees-fear-the-platform-might-only-last-weeks/</a> (accessed Nov. 19, 2022).</li>
+
+<li>“5 key lessons after a week on Mastodon,” Popular Science, Nov. 20, 2022. <a href="https://www.popsci.com/diy/mastodon-tips/">https://www.popsci.com/diy/mastodon-tips/</a> (accessed Nov. 21, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org6990062"></a>Misc<br />
+<div class="outline-text-10" id="text-org6990062">
+<ul class="org-ul">
+<li>R. Singh, “Mastodon’s New Terms Block AI Scraping, But Gaps Still Remain,” MEDIANAMA. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/06/223-mastodon-new-terms-ai-scraping-gaps/">https://www.medianama.com/2025/06/223-mastodon-new-terms-ai-scraping-gaps/</a></li>
+
+<li>“ActivityPub,” Wikipedia. Nov. 10, 2022. Accessed: Nov. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=ActivityPub&amp;oldid=1121053719">https://en.wikipedia.org/w/index.php?title=ActivityPub&amp;oldid=1121053719</a></li>
+
+<li>T. C. Nataliya Ilyushina, “Mastodon is not a decentralised replica of Twitter. Here’s what it really is,” Scroll.in. <a href="https://scroll.in/article/1036941/mastodon-is-not-a-decentralised-replica-of-twitter-heres-what-it-really-is">https://scroll.in/article/1036941/mastodon-is-not-a-decentralised-replica-of-twitter-heres-what-it-really-is</a> (accessed Nov. 10, 2022).</li>
+
+<li>“Why Mastodon Can’t Be a Replacement for Twitter,” The Wire. <a href="https://thewire.in/tech/why-mastodon-cant-be-a-replacement-for-twitter">https://thewire.in/tech/why-mastodon-cant-be-a-replacement-for-twitter</a> (accessed Nov. 16, 2022).</li>
+
+<li>B. C. Keegan, “What is Mastodon? A social media expert explains how the ‘federated’ network works and why it won’t be a new Twitter,” The Conversation. <a href="http://theconversation.com/what-is-mastodon-a-social-media-expert-explains-how-the-federated-network-works-and-why-it-wont-be-a-new-twitter-194329">http://theconversation.com/what-is-mastodon-a-social-media-expert-explains-how-the-federated-network-works-and-why-it-wont-be-a-new-twitter-194329</a> (accessed Nov. 19, 2022).</li>
+
+<li>G. A. Gow, “People are leaving Twitter for Mastodon, but are they ready for democratic social media?,” The Conversation. <a href="http://theconversation.com/people-are-leaving-twitter-for-mastodon-but-are-they-ready-for-democratic-social-media-194220">http://theconversation.com/people-are-leaving-twitter-for-mastodon-but-are-they-ready-for-democratic-social-media-194220</a> (accessed Nov. 19, 2022).</li>
+
+<li>N. Ilyushina, “What is Mastodon, the ‘Twitter alternative’ people are flocking to? Here’s everything you need to know,” The Conversation. <a href="http://theconversation.com/what-is-mastodon-the-twitter-alternative-people-are-flocking-to-heres-everything-you-need-to-know-194059">http://theconversation.com/what-is-mastodon-the-twitter-alternative-people-are-flocking-to-heres-everything-you-need-to-know-194059</a> (accessed Nov. 19, 2022).</li>
+
+<li>E. J. Godwin, R. Mota, and S. Glozer, “Twitter and Elon Musk: why free speech absolutism threatens human rights,” The Conversation. <a href="http://theconversation.com/twitter-and-elon-musk-why-free-speech-absolutism-threatens-human-rights-193877">http://theconversation.com/twitter-and-elon-musk-why-free-speech-absolutism-threatens-human-rights-193877</a> (accessed Nov. 19, 2022).</li>
+
+<li>A. Susarla, “What the world would lose with the demise of Twitter: Valuable eyewitness accounts and raw data on human behavior, as well as a habitat for trolls,” The Conversation. <a href="http://theconversation.com/what-the-world-would-lose-with-the-demise-of-twitter-valuable-eyewitness-accounts-and-raw-data-on-human-behavior-as-well-as-a-habitat-for-trolls-194601">http://theconversation.com/what-the-world-would-lose-with-the-demise-of-twitter-valuable-eyewitness-accounts-and-raw-data-on-human-behavior-as-well-as-a-habitat-for-trolls-194601</a> (accessed Nov. 19, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3fc31ad"></a>Bluesky<br />
+<ul class="org-ul">
+<li><a id="orga40b228"></a>General<br />
+<div class="outline-text-10" id="text-orga40b228">
+<ul class="org-ul">
+<li>“Bluesky,” Wikipedia. Nov. 28, 2024. Accessed: Nov. 29, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bluesky&amp;oldid=1260092625">https://en.wikipedia.org/w/index.php?title=Bluesky&amp;oldid=1260092625</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgced9238"></a>Fair Tech<br />
+<div class="outline-text-10" id="text-orgced9238">
+<ul class="org-ul">
+<li>R. M. and R. Schulman, “What’s the Difference Between Mastodon, Bluesky, and Threads?,” Electronic Frontier Foundation. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/06/whats-difference-between-mastodon-bluesky-and-threads">https://www.eff.org/deeplinks/2024/06/whats-difference-between-mastodon-bluesky-and-threads</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf76fbf"></a>Core<br /></li>
+<li><a id="org14a6e45"></a>Misc<br />
+<div class="outline-text-10" id="text-org14a6e45">
+<ul class="org-ul">
+<li>“As academic Bluesky grows, researchers find strengths—and shortcomings.” Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://www.science.org/content/article/academic-bluesky-grows-researchers-find-strengths-and-shortcomings">https://www.science.org/content/article/academic-bluesky-grows-researchers-find-strengths-and-shortcomings</a></li>
+
+<li>T. Klosowski, “How to Clean Up Your Bluesky Feed,” Electronic Frontier Foundation. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/06/how-clean-your-bluesky-feed">https://www.eff.org/deeplinks/2024/06/how-clean-your-bluesky-feed</a></li>
+
+<li>K. Pandey, “Bluesky Says No to Training AI on User Data—But Is That Enough?,” MEDIANAMA. Accessed: Nov. 30, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/11/223-bluesky-no-generative-ai-training-from-user-data-external-use-may-persist/">https://www.medianama.com/2024/11/223-bluesky-no-generative-ai-training-from-user-data-external-use-may-persist/</a></li>
+<li>“Pluralistic: Bluesky creates the world’s weirdest, hardest-to-understand binding arbitration clause (15 Aug 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/08/15/dogs-breakfast/">https://pluralistic.net/2025/08/15/dogs-breakfast/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3744958"></a>Misc<br />
+<div class="outline-text-9" id="text-org3744958">
+<ul class="org-ul">
+<li>“Find Fediverse accounts of your Twitter followings.” <a href="https://fedifinder.glitch.me/">https://fedifinder.glitch.me/</a> (accessed Nov. 07, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga7bd558"></a>Misc<br />
+<div class="outline-text-8" id="text-orga7bd558">
+<ul class="org-ul">
+<li>S. S. K, “Bluesky imposes rules to tackle impersonation of accounts,” MEDIANAMA. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/12/223-bluesky-imposes-rules-crack-down-account-impersonation/">https://www.medianama.com/2024/12/223-bluesky-imposes-rules-crack-down-account-impersonation/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org908b56a"></a>VideoConf<br />
+<div class="outline-text-7" id="text-org908b56a">
+<ul class="org-ul">
+<li>“Missing Skype? Choose freedom and switch to GNU Jami — Free Software Foundation — Working together for free software.” Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://www.fsf.org/blogs/community/skype-shutdown-try-jami">https://www.fsf.org/blogs/community/skype-shutdown-try-jami</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9ac593e"></a>Misc<br />
+<div class="outline-text-7" id="text-org9ac593e">
+<ul class="org-ul">
+<li>“Don’t blame the algorithm: Polarization may be inherent in social media.” Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://www.science.org/content/article/don-t-blame-algorithm-polarization-may-be-inherent-social-media">https://www.science.org/content/article/don-t-blame-algorithm-polarization-may-be-inherent-social-media</a></li>
+
+<li>J. C. Carrasco, “Brazil rules that social media platforms are responsible for users’ posts,” Rest of World. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://restofworld.org/2025/brazil-social-media-content-ruling/">https://restofworld.org/2025/brazil-social-media-content-ruling/</a></li>
+
+<li>L. Guo, Y. Fu, X. Lin, X. Xu, Y.-J. Chang, and A. Hiniker, “What Social Media Use Do People Regret? An Analysis of 34K Smartphone Screenshots with Multimodal LLM,” in Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems, in CHI ’25. New York, NY, USA: Association for Computing Machinery, Apr. 2025, pp. 1–23. doi: 10.1145/3706598.3713724.</li>
+
+<li>A. Bhatia and M. Elswah, “Moderating Tamil Content on Social Media,” Center for Democracy and Technology. Accessed: May 16, 2025. [Online]. Available: <a href="https://cdt.org/insights/moderating-tamil-content-on-social-media/">https://cdt.org/insights/moderating-tamil-content-on-social-media/</a></li>
+
+<li>A. B. Elswah Mona, “Social Media Companies Now Work for Governments—Not Users,” Foreign Policy. Accessed: May 16, 2025. [Online]. Available: <a href="https://foreignpolicy.com/2025/05/14/content-moderation-social-media-government-censorship/">https://foreignpolicy.com/2025/05/14/content-moderation-social-media-government-censorship/</a></li>
+
+<li>P. Daly, “From politics to sports, Reddit conversations narrow and intensify before major events, new research finds,” Northeastern Global News. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://news.northeastern.edu/2025/04/07/reddit-conversation-research/">https://news.northeastern.edu/2025/04/07/reddit-conversation-research/</a></li>
+
+<li>H. Pearson, “Do smartphones and social media really harm teens’ mental health?,” Nature, vol. 640, no. 8057, pp. 26–28, Apr. 2025, doi: 10.1038/d41586-025-00933-3.</li>
+
+<li>“‘Can’t Look Away’: Film Examines How Social Media Addiction Harms Kids,” Democracy Now! Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/4/4/can_t_look_away_social_media">https://www.democracynow.org/2025/4/4/can_t_look_away_social_media</a></li>
+
+<li>“As Social Platforms Withdraw Support, Professional Fact Checkers Fight Disinformation and ‘Systemic Assault’ on Facts.” Accessed: Apr. 02, 2025. [Online]. Available: <a href="https://gijn.org/stories/meta-social-networks-abandon-fact-checking-spread-disinformation/">https://gijn.org/stories/meta-social-networks-abandon-fact-checking-spread-disinformation/</a></li>
+
+<li>J. Koebler ·, “Decentralized Social Media Is the Only Alternative to the Tech Oligarchy,” 404 Media. Accessed: Mar. 06, 2025. [Online]. Available: <a href="https://www.404media.co/decentralized-social-media-is-the-only-alternative-to-the-tech-oligarchy/">https://www.404media.co/decentralized-social-media-is-the-only-alternative-to-the-tech-oligarchy/</a></li>
+
+<li>“The secret sauce of Chinese social media apps,” Rest of World. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tiktok-algorithm-shopping-china/">https://restofworld.org/2025/tiktok-algorithm-shopping-china/</a></li>
+
+<li>R. Mir, “What You Should Know When Joining Bluesky,” Electronic Frontier Foundation. Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/12/what-you-should-know-when-joining-bluesky">https://www.eff.org/deeplinks/2024/12/what-you-should-know-when-joining-bluesky</a></li>
+
+<li>“Pluralistic: Social media needs (dumpster) fire exits (14 Dec 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 15, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/12/14/fire-exits/">https://pluralistic.net/2024/12/14/fire-exits/</a></li>
+
+<li>C. Fiesler, “Bluesky isn’t the ‘new Twitter,’ but its resemblance to the old one is drawing millions of new users,” Down To Earth. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/bluesky-isnt-the-new-twitter-but-its-resemblance-to-the-old-one-is-drawing-millions-of-new-users">https://www.downtoearth.org.in/science-technology/bluesky-isnt-the-new-twitter-but-its-resemblance-to-the-old-one-is-drawing-millions-of-new-users</a></li>
+
+<li>“Moderating Kiswahili Content on Social Media,” Center for Democracy and Technology. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://cdt.org/insights/moderating-kiswahili-content-on-social-media/">https://cdt.org/insights/moderating-kiswahili-content-on-social-media/</a></li>
+
+<li>“How to Prepare for the Deluge of Generative AI on Social Media,” Knight First Amendment Institute. Accessed: Dec. 11, 2024. [Online]. Available: <a href="http://knightcolumbia.org/content/how-to-prepare-for-the-deluge-of-generative-ai-on-social-media">http://knightcolumbia.org/content/how-to-prepare-for-the-deluge-of-generative-ai-on-social-media</a></li>
+
+<li>P. G. Kirchschläger, “Protecting Children from Anti-Social Media | by Peter G. Kirchschläger,” Project Syndicate. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/australia-ban-on-children-using-social-media-should-be-emulated-by-peter-g-kirchschlager-2024-12">https://www.project-syndicate.org/commentary/australia-ban-on-children-using-social-media-should-be-emulated-by-peter-g-kirchschlager-2024-12</a></li>
+
+<li>“Widespread opposition to Australia’s social media ban for under 16s,” World Socialist Web Site. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/03/zbgs-d03.html">https://www.wsws.org/en/articles/2024/12/03/zbgs-d03.html</a></li>
+
+<li>“A psychologist’s tips for getting a grip on your social media use | Psyche Ideas,” Psyche. Accessed: Sep. 12, 2024. [Online]. Available: <a href="https://psyche.co/ideas/a-psychologists-tips-for-getting-a-grip-on-your-social-media-use">https://psyche.co/ideas/a-psychologists-tips-for-getting-a-grip-on-your-social-media-use</a></li>
+
+<li>A. M. and J. Kelley, “The Surgeon General’s Fear-Mongering, Unconstitutional Effort to Label Social Media,” Electronic Frontier Foundation. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/06/no-online-speech-should-not-have-warning-labels">https://www.eff.org/deeplinks/2024/06/no-online-speech-should-not-have-warning-labels</a></li>
+<li>S. Shah, “U.S. Surgeon General Wants a Warning Label for Social Media,” TIME. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://time.com/6989369/us-surgeon-general-warning-label-social-media">https://time.com/6989369/us-surgeon-general-warning-label-social-media</a></li>
+<li>E. Barry and C. Kang, “Surgeon General Calls for Warning Labels on Social Media Platforms,” The New York Times, Jun. 17, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.nytimes.com/2024/06/17/health/surgeon-general-social-media-warning-label.html">https://www.nytimes.com/2024/06/17/health/surgeon-general-social-media-warning-label.html</a></li>
+<li>A. Paul, “Like cigarettes and alcohol, Surgeon General says social media needs warning labels,” Popular Science. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.popsci.com/technology/warning-labels-social-media/">https://www.popsci.com/technology/warning-labels-social-media/</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>L. S. Lee, “The Antisocial Network: Memes to Mayhem - Film Screening + Q&amp;A,” MIT Events. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://calendar.mit.edu/event/the-antisocial-network-film-screening">https://calendar.mit.edu/event/the-antisocial-network-film-screening</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc746b91"></a>Safety<br />
+<div class="outline-text-6" id="text-orgc746b91">
+<ul class="org-ul">
+<li>“US Surgeon General and Democrats launch campaign against youth access to social media and smartphones,” World Socialist Web Site. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/06/21/uxwq-j21.html">https://www.wsws.org/en/articles/2024/06/21/uxwq-j21.html</a></li>
+<li>T. Jones, “Could social media soon have warning labels?,” Poynter. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.poynter.org/commentary/2024/surgeon-general-warning-label-tiktok-instagram-facebook-x-twitter/">https://www.poynter.org/commentary/2024/surgeon-general-warning-label-tiktok-instagram-facebook-x-twitter/</a></li>
+<li>“2024 Social Media Safety Index | GLAAD.” Accessed: May 22, 2024. [Online]. Available: <a href="https://glaad.org/smsi/social-media-safety-index-2024/">https://glaad.org/smsi/social-media-safety-index-2024/</a></li>
+<li>M. Luria and A. Bhatia, “Opinion: Restricting and monitoring social media won’t protect kids — here’s what will,” CNN. Accessed: May 17, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/05/15/opinions/social-media-monitoring-restriction-legislation-mediation-luria-bhatia/index.html">https://www.cnn.com/2024/05/15/opinions/social-media-monitoring-restriction-legislation-mediation-luria-bhatia/index.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org397400e"></a>Critical Studies<br />
+<div class="outline-text-6" id="text-org397400e">
+<ul class="org-ul">
+<li>J. Lanier, <i>Ten Arguments For Deleting Your Social Media Accounts Right Now.</i> Random House, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org453b0f7"></a>Misc<br />
+<div class="outline-text-5" id="text-org453b0f7">
+<ul class="org-ul">
+<li>T. Tech, “Verification Handbook.” <a href="https://exposingtheinvisible.org/en/guides/verification-handbook/">https://exposingtheinvisible.org/en/guides/verification-handbook/</a> (accessed Mar. 31, 2022).</li>
+
+<li>M. A. Russell and M. Klassen, Mining the Social Web: Data Mining Facebook, Twitter, LinkedIn, Instagram, GitHub, and More. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2019.</li>
+<li>L. T. Vo, Mining Social Media: Finding Stories in Internet Data. San Francisco: No Starch Press, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfb6a197" class="outline-2">
+<h2 id="orgfb6a197"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgb9ef9c3" class="outline-3">
+<h3 id="orgb9ef9c3"><span class="section-number-3">6.1.</span> Everyday Computing - Internet</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgd0c8700" class="outline-4">
+<h4 id="orgd0c8700"><span class="section-number-4">6.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org374a904" class="outline-4">
+<h4 id="org374a904"><span class="section-number-4">6.1.2.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<ul class="org-ul">
+<li>J. Mullin, “Site-Blocking Legislation Is Back. It’s Still a Terrible Idea.,” Electronic Frontier Foundation. Accessed: Jun. 02, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/04/congress-reviving-site-blocking-and-its-just-dangerous-ever">https://www.eff.org/deeplinks/2025/04/congress-reviving-site-blocking-and-its-just-dangerous-ever</a></li>
+<li>“Shedding Light on Shadowbanning,” Center for Democracy and Technology. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://cdt.org/insights/shedding-light-on-shadowbanning/">https://cdt.org/insights/shedding-light-on-shadowbanning/</a></li>
+<li>A. Placitelli, S. Larsen, and U. Tiwari, “Documenting outages to seek transparency and accountability,” Data@Mozilla. <a href="https://blog.mozilla.org/data/2022/03/09/mozilla-opens-access-to-dataset-on-network-outages">https://blog.mozilla.org/data/2022/03/09/mozilla-opens-access-to-dataset-on-network-outages</a> (accessed Mar. 20, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2571abd" class="outline-4">
+<h4 id="org2571abd"><span class="section-number-4">6.1.3.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-1-3">
+</div>
+<ul class="org-ul">
+<li><a id="orgf8a288a"></a>Misc<br />
+<div class="outline-text-5" id="text-orgf8a288a">
+<ul class="org-ul">
+<li>S. Parasnis, “MotherHost Implements KYC for .in Domain Registration,” MEDIANAMA. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/07/223-motherhost-kyc-in-domain-registration/">https://www.medianama.com/2025/07/223-motherhost-kyc-in-domain-registration/</a></li>
+
+<li>“Self Hosted,” PrivacyTools. <a href="https://www.privacytools.io/software/cloud/">https://www.privacytools.io/software/cloud/</a> (accessed Sep. 22, 2021).</li>
+<li>“Self-Contained Networks,” PrivacyTools. <a href="https://www.privacytools.io/software/networks/">https://www.privacytools.io/software/networks/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org7ed4abb" class="outline-4">
+<h4 id="org7ed4abb"><span class="section-number-4">6.1.4.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-1-4">
+</div>
+<ul class="org-ul">
+<li><a id="orgbe5d815"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgbdffdc0" class="outline-4">
+<h4 id="orgbdffdc0"><span class="section-number-4">6.1.5.</span> Core</h4>
+<div class="outline-text-4" id="text-6-1-5">
+</div>
+<ul class="org-ul">
+<li><a id="org58ed8fb"></a>World Wide Web<br />
+<ul class="org-ul">
+<li><a id="org8516151"></a>Tests<br />
+<div class="outline-text-6" id="text-org8516151">
+<ul class="org-ul">
+<li>“Blacklight - The Markup.” <a href="https://themarkup.org/series/blacklight">https://themarkup.org/series/blacklight</a> (accessed Oct. 02, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc3457bf"></a>Browser<br />
+<ul class="org-ul">
+<li><a id="orgbe8c312"></a>General<br />
+<div class="outline-text-6" id="text-orgbe8c312">
+<ul class="org-ul">
+<li>“Web Browsers,” PrivacyTools. <a href="https://www.privacytools.io/browsers/">https://www.privacytools.io/browsers/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org067ca86"></a>Privacy Tests<br />
+<div class="outline-text-6" id="text-org067ca86">
+<ul class="org-ul">
+<li>“Which browsers are best for privacy?” <a href="https://privacytests.org/">https://privacytests.org/</a> (accessed Oct. 15, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Budington, <b>“Introducing Cover Your Tracks!,”</b> Electronic Frontier Foundation, Nov. 19, 2020. <a href="https://www.eff.org/deeplinks/2020/11/introducing-cover-your-tracks">https://www.eff.org/deeplinks/2020/11/introducing-cover-your-tracks</a> (accessed Jan. 25, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“AmIUnique.” <a href="https://amiunique.org/">https://amiunique.org/</a> (accessed Mar. 20, 2022).</li>
+<li>“DNS leak test.” <a href="https://dnsleaktest.com/">https://dnsleaktest.com/</a> (accessed Sep. 29, 2021).</li>
+<li>“IP/DNS Detect.” <a href="https://ipleak.net/">https://ipleak.net/</a> (accessed Sep. 29, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org22e172b"></a>Privacy Friendly<br />
+<ul class="org-ul">
+<li><a id="orgffdf551"></a>Tor Browser<br />
+<div class="outline-text-7" id="text-orgffdf551">
+<ul class="org-ul">
+<li>“The Tor Project | Privacy &amp; Freedom Online.” <a href="https://torproject.org">https://torproject.org</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbfccc83"></a>Brave Browser<br />
+<div class="outline-text-7" id="text-orgbfccc83">
+<ul class="org-ul">
+<li>“Secure, Fast &amp; Private Web Browser with Adblocker,” Brave Browser. <a href="https://brave.com/">https://brave.com/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbf55923"></a>Mozilla Firefox<br />
+<ul class="org-ul">
+<li><a id="orga258ee7"></a>General<br />
+<div class="outline-text-8" id="text-orga258ee7">
+<ul class="org-ul">
+<li>“Firefox | The Mozilla Blog.” <a href="https://blog.mozilla.org/en/category/products/firefox/">https://blog.mozilla.org/en/category/products/firefox/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb177e86"></a>Variants<br />
+<div class="outline-text-8" id="text-orgb177e86">
+<ul class="org-ul">
+<li><b>“Download the fastest Firefox ever,”</b> Mozilla. <a href="https://www.mozilla.org/en-US/firefox/new/">https://www.mozilla.org/en-US/firefox/new/</a> (accessed Sep. 22, 2021).</li>
+
+<li>“Firefox Focus: The privacy browser,” Mozilla. <a href="https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/">https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Firefox Browser Android,” Mozilla. <a href="https://www.mozilla.org/en-US/firefox/browsers/mobile/android/">https://www.mozilla.org/en-US/firefox/browsers/mobile/android/</a> (accessed Sep. 22, 2021).</li>
+<li>“Firefox Browser iOS (iPhone &amp; iPad),” Mozilla. <a href="https://www.mozilla.org/en-US/firefox/browsers/mobile/ios/">https://www.mozilla.org/en-US/firefox/browsers/mobile/ios/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc7efb4"></a>Add-Ons<br />
+<div class="outline-text-8" id="text-orgfc7efb4">
+<ul class="org-ul">
+<li>R. Hill, uBlock Origin. 2021. Accessed: Sep. 24, 2021. [Online]. Available: <a href="https://github.com/gorhill/uBlock">https://github.com/gorhill/uBlock</a></li>
+
+<li><b>“JShelter: Home.”</b> <a href="https://jshelter.org/">https://jshelter.org/</a> (accessed Mar. 21, 2022).</li>
+<li><b>“LibreJS - GNU Project - Free Software Foundation.”</b> <a href="https://www.gnu.org/software/librejs/">https://www.gnu.org/software/librejs/</a> (accessed Mar. 21, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb19ab98"></a>Misc<br />
+<div class="outline-text-8" id="text-orgb19ab98">
+<ul class="org-ul">
+<li>“The Firefox I loved is gone - how to protect your privacy on it now.” Accessed: Mar. 06, 2025. [Online]. Available: <a href="https://www.zdnet.com/article/the-firefox-i-loved-is-gone-how-to-protect-your-privacy-on-it-now/">https://www.zdnet.com/article/the-firefox-i-loved-is-gone-how-to-protect-your-privacy-on-it-now/</a></li>
+
+<li>K. Pandey, “Mozilla Clarifies Firefox Terms: No Ownership of User Data,” MEDIANAMA. Accessed: Mar. 01, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/02/223-mozilla-says-it-does-not-own-user-data-after-backlash-over-privacy-concerns/">https://www.medianama.com/2025/02/223-mozilla-says-it-does-not-own-user-data-after-backlash-over-privacy-concerns/</a></li>
+<li>Mimansa, “Mozilla Firefox Removes ‘Do Not Track’ Feature,” MEDIANAMA. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/12/223-mozilla-firefox-removes-do-not-track-feature/">https://www.medianama.com/2024/12/223-mozilla-firefox-removes-do-not-track-feature/</a></li>
+
+<li>N. Mazurov, “Firefox Browser Blocks Anti-Censorship Add-Ons at Russia’s Request,” The Intercept. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://theintercept.com/2024/06/12/mozilla-firefox-russia-censorship-blocked/">https://theintercept.com/2024/06/12/mozilla-firefox-russia-censorship-blocked/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7ee0cff"></a>Misc<br />
+<div class="outline-text-7" id="text-org7ee0cff">
+<ul class="org-ul">
+<li>“Privacy, simplified. — DuckDuckGo Browser Extension &amp; Mobile App,” DuckDuckGo. <a href="https://duckduckgo.com/app">https://duckduckgo.com/app</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org690dd6a"></a>Extensions<br />
+<div class="outline-text-6" id="text-org690dd6a">
+<ul class="org-ul">
+<li>“Best Privacy Browser Extensions in 2024 - Anti Tracking.” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://www.privacytools.io/privacy-browser-addons">https://www.privacytools.io/privacy-browser-addons</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org853a84a"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org9d1dd96"></a>Search<br />
+<ul class="org-ul">
+<li><a id="org7b3811d"></a>Mainstream<br />
+<div class="outline-text-6" id="text-org7b3811d">
+<ul class="org-ul">
+<li>Microsoft Bing. <a href="https://www.bing.com/">https://www.bing.com/</a> (accessed Sep. 22, 2021).
+<ul class="org-ul">
+<li>“‎Bing: Chat with AI &amp; GPT-4,” App Store, Jun. 25, 2023. <a href="https://apps.apple.com/us/app/bing-chat-with-ai-gpt-4/id345323231">https://apps.apple.com/us/app/bing-chat-with-ai-gpt-4/id345323231</a> (accessed Jul. 03, 2023).</li>
+</ul></li>
+
+<li>Google. <a href="https://www.google.com/">https://www.google.com/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgabab88b"></a>Privacy Friendly<br />
+<div class="outline-text-6" id="text-orgabab88b">
+<ul class="org-ul">
+<li><b>“Brave Search.”</b> <a href="https://search.brave.com/">https://search.brave.com/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“DuckDuckGo — Privacy, simplified.,” DuckDuckGo. <a href="https://duckduckgo.com/">https://duckduckgo.com/</a> (accessed Sep. 22, 2021).
+<ul class="org-ul">
+<li>DuckDuckGo Lite. <a href="https://lite.duckduckgo.com/lite/">https://lite.duckduckgo.com/lite/</a> (accessed Sep. 22, 2021).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf579b5"></a>Eco Friendly<br />
+<div class="outline-text-6" id="text-orgdf579b5">
+<ul class="org-ul">
+<li>“Ecosia - the search engine that plants trees.” <a href="https://www.ecosia.org/">https://www.ecosia.org/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4bc4507"></a>Misc<br />
+<div class="outline-text-6" id="text-org4bc4507">
+<ul class="org-ul">
+<li>“Brave search engine adds privacy-focused AI - no Google or Bing needed,” ZDNET. Accessed: Apr. 21, 2024. [Online]. Available: <a href="https://www.zdnet.com/article/brave-search-engine-adds-privacy-focused-ai-no-google-or-bing-needed/">https://www.zdnet.com/article/brave-search-engine-adds-privacy-focused-ai-no-google-or-bing-needed/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Nield, “Goodbye Google? How to use ChatGPT’s new web search.,” Popular Science. Accessed: Nov. 07, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/how-chatgpt-search-works/">https://www.popsci.com/diy/how-chatgpt-search-works/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org592860e"></a>Texts<br />
+<div class="outline-text-5" id="text-org592860e">
+<ul class="org-ul">
+<li>F. Ankit, <i>How to Unblock Everything on the Internet, 2nd Edition.</i> Vikas Publishing House, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgc3e6e98" class="outline-4">
+<h4 id="orgc3e6e98"><span class="section-number-4">6.1.6.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-1-6">
+</div>
+<ul class="org-ul">
+<li><a id="orgba839ee"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-org1ff9598" class="outline-4">
+<h4 id="org1ff9598"><span class="section-number-4">6.1.7.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org18147ce" class="outline-4">
+<h4 id="org18147ce"><span class="section-number-4">6.1.8.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb11f501" class="outline-2">
+<h2 id="orgb11f501"><span class="section-number-2">7.</span> Miscellaneous</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Spatial Web: Transforming Device Interactions - IEEE Spectrum.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://spectrum.ieee.org/spatial-web-standard">https://spectrum.ieee.org/spatial-web-standard</a></li>
+
+<li>E. Maiberg ·, “The Open-Source Software Saving the Internet From AI Bot Scrapers,” 404 Media. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.404media.co/the-open-source-software-saving-the-internet-from-ai-bot-scrapers/">https://www.404media.co/the-open-source-software-saving-the-internet-from-ai-bot-scrapers/</a></li>
+
+<li>“Pluralistic: What’s a ‘public internet?’ (25 Jun 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/06/25/eurostack/">https://pluralistic.net/2025/06/25/eurostack/</a></li>
+
+<li>“How the Grateful Dead built the internet.” Accessed: Jun. 23, 2025. [Online]. Available: <a href="https://www.bbc.com/future/article/20250618-how-the-grateful-dead-shaped-social-media">https://www.bbc.com/future/article/20250618-how-the-grateful-dead-shaped-social-media</a></li>
+
+<li>J. Richman, “Podcast Episode: Love the Internet Before You Hate On It,” Electronic Frontier Foundation. Accessed: May 27, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/05/podcast-episode-love-internet-you-hate-it">https://www.eff.org/deeplinks/2025/05/podcast-episode-love-internet-you-hate-it</a></li>
+
+<li>“Pluralistic: Who Broke the Internet, Part IV (26 May 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 27, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/05/26/babyish-radical-extremists/">https://pluralistic.net/2025/05/26/babyish-radical-extremists/</a></li>
+
+<li>“Pluralistic: Who broke the internet? (08 May 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 09, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/05/08/who-broke-the-internet/">https://pluralistic.net/2025/05/08/who-broke-the-internet/</a></li>
+
+<li>“Our predictions for the internet in 2025,” Proton. Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://proton.me/blog/2025-internet-predictions">https://proton.me/blog/2025-internet-predictions</a></li>
+
+<li>“Powering the best of the internet | Fastly.” Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://www.fastly.com">https://www.fastly.com</a></li>
+
+<li>“Deflect - Get Protected, Stay Connected,” Deflect. Accessed: Sep. 20, 2024. [Online]. Available: <a href="https://deflect.ca/">https://deflect.ca/</a></li>
+
+<li>“Digital-First Publishing Technology Platform.” Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://www.quintype.com/">https://www.quintype.com/</a></li>
+
+<li>“Bulma: Free, open source, and modern CSS framework based on Flexbox.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://bulma.io">https://bulma.io</a></li>
+<li>“Craft CMS,” Craft CMS. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://craftcms.com/">https://craftcms.com/</a></li>
+<li>“Search Engine Etiquette: Never, Ever Ask for a Backlink,” Tedium: The Dull Side of the Internet. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://tedium.co/2020/05/15/search-engine-etiquette-backlinks/">https://tedium.co/2020/05/15/search-engine-etiquette-backlinks/</a></li>
+<li>“What Is Tedium? Definition, Meaning, and Explanation,” Tedium. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://tedium.co/what-is-tedium">https://tedium.co/what-is-tedium</a></li>
+
+<li>“UK Web Hosting that’s fair to you &amp; the planet | Krystal Hosting.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://krystal.io/">https://krystal.io/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Internet use statistically associated with higher wellbeing, finds new global Oxford study.” Accessed: May 19, 2024. [Online]. Available: <a href="https://www.medsci.ox.ac.uk/news/internet-use-statistically-associated-with-higher-wellbeing-finds-new-global-oxford-study">https://www.medsci.ox.ac.uk/news/internet-use-statistically-associated-with-higher-wellbeing-finds-new-global-oxford-study</a></li>
+
+<li>“Web archiving,” The British Library. <a href="https://www.bl.uk/legal-deposit/web-archiving">https://www.bl.uk/legal-deposit/web-archiving</a> (accessed Apr. 19, 2022).</li>
+
+<li>J. Zittrain, <i>“The Internet Is Rotting,”</i> The Atlantic, Jun. 30, 2021. <a href="https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-a-collective-hallucination/619320/">https://www.theatlantic.com/technology/archive/2021/06/the-internet-is-a-collective-hallucination/619320/</a> (accessed Jul. 19, 2021).</li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-08-19 Tue 14:36</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
