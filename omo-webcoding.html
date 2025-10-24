@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-10-23 Thu 15:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web Coding</title>
+<meta name="author" content="Staff Member(s), [[https://eyememyself.github.io][OurManyOrgs]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Web Coding</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org94b6034">1. General</a></li>
+<li><a href="#org1a9b2c8">2. Tasks</a>
+<ul>
+<li><a href="#org13c79ad">2.1. Web Scraping</a>
+<ul>
+<li><a href="#org45588cd">2.1.1. General</a></li>
+<li><a href="#orge6173e9">2.1.2. Texts</a></li>
+<li><a href="#org0d2051d">2.1.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1bfce03">3. Tools</a>
+<ul>
+<li><a href="#orgd8409b5">3.1. JavaScript</a>
+<ul>
+<li><a href="#org651da01">3.1.1. General</a></li>
+<li><a href="#org392cd5b">3.1.2. Texts</a></li>
+<li><a href="#org09fbe66">3.1.3. Special Topics</a></li>
+<li><a href="#org7c65d64">3.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org27b30f6">3.2. HTML</a>
+<ul>
+<li><a href="#org8557cf1">3.2.1. General</a></li>
+<li><a href="#org4b5789b">3.2.2. Texts</a></li>
+<li><a href="#org2ca556f">3.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org61b7e24">3.3. CSS</a>
+<ul>
+<li><a href="#org6ece9a6">3.3.1. General</a></li>
+<li><a href="#orge5e934e">3.3.2. Texts</a></li>
+<li><a href="#org2825a5a">3.3.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org537edf3">4. Texts</a></li>
+<li><a href="#orgaf501a1">5. Special Topics</a>
+<ul>
+<li><a href="#org5cf4a34">5.1. Digital Privacy and Security</a></li>
+</ul>
+</li>
+<li><a href="#orgf741d87">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org94b6034" class="outline-2">
+<h2 id="org94b6034"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org1a9b2c8" class="outline-2">
+<h2 id="org1a9b2c8"><span class="section-number-2">2.</span> Tasks</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org13c79ad" class="outline-3">
+<h3 id="org13c79ad"><span class="section-number-3">2.1.</span> Web Scraping</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org45588cd" class="outline-4">
+<h4 id="org45588cd"><span class="section-number-4">2.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Web scraping,” Wikipedia. Jun. 24, 2025. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Web_scraping&amp;oldid=1297146564">https://en.wikipedia.org/w/index.php?title=Web_scraping&amp;oldid=1297146564</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge6173e9" class="outline-4">
+<h4 id="orge6173e9"><span class="section-number-4">2.1.2.</span> Texts</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="org2b6749c"></a>Python<br />
+<div class="outline-text-5" id="text-org2b6749c">
+<ul class="org-ul">
+<li>R. Mitchell, Web Scraping with Python: Data Extraction from the Modern Web. Beijing ; Boston: O’Reilly Media, 2024.</li>
+<li>G. L. Hajba, Website Scraping with Python: Using BeautifulSoup and Scrapy. Berkeley, CA: Apress, 2018.</li>
+<li>S. vanden Broucke and B. Baesens, Practical Web Scraping for Data Science: Best Practices and Examples with Python. Place of publication not identified: Apress, 2018.</li>
+<li>K. Jarmul and R. Lawson, <i>Python Web Scraping.</i> Packt Publishing Ltd, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org37c072e"></a>R<br />
+<div class="outline-text-5" id="text-org37c072e">
+<ul class="org-ul">
+<li>S. Munzert, C. Rubba, P. Meißner, and D. Nyhuis, Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. Chichester, England: Wiley, 2015.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org0d2051d" class="outline-4">
+<h4 id="org0d2051d"><span class="section-number-4">2.1.3.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org1bfce03" class="outline-2">
+<h2 id="org1bfce03"><span class="section-number-2">3.</span> Tools</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd8409b5" class="outline-3">
+<h3 id="orgd8409b5"><span class="section-number-3">3.1.</span> JavaScript</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org651da01" class="outline-4">
+<h4 id="org651da01"><span class="section-number-4">3.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“JavaScript,” Wikipedia. Aug. 13, 2025. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=JavaScript&amp;oldid=1305754752">https://en.wikipedia.org/w/index.php?title=JavaScript&amp;oldid=1305754752</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org392cd5b" class="outline-4">
+<h4 id="org392cd5b"><span class="section-number-4">3.1.2.</span> Texts</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="orga1e316e"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orge91888e"></a>Computer Science And Engineering<br />
+<ul class="org-ul">
+<li><a id="orgc59e5e3"></a>DSnA<br />
+<div class="outline-text-7" id="text-orgc59e5e3">
+<ul class="org-ul">
+<li>F. Kereki, Data Structures and Algorithms in JavaScript. San Francisco: No Starch Press, 2025.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf51a7f0"></a><b>SICP</b><br />
+<div class="outline-text-7" id="text-orgf51a7f0">
+<ul class="org-ul">
+<li>“Structure and Interpretation of Computer Programs,” MIT Press. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262543231/structure-and-interpretation-of-computer-programs/">https://mitpress.mit.edu/9780262543231/structure-and-interpretation-of-computer-programs/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf49dae9"></a>SD<br />
+<ul class="org-ul">
+<li><a id="org0693c7e"></a>Vue<br />
+<div class="outline-text-8" id="text-org0693c7e">
+<ul class="org-ul">
+<li>M. Shavin, Learning Vue: Core Concepts and Practical Patterns for Reusable, Composable, and Scalable User Interfaces. S.l.: O’Reilly Media, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org236257c"></a>DP<br />
+<div class="outline-text-8" id="text-org236257c">
+<ul class="org-ul">
+<li>A. Osmani, Learning JavaScript Design Patterns: A JavaScript and jQuery Developer’s Guide. Sebastopol, CA: O’Reilly Media, 2012.</li>
+<li>A. Osmani, Learning JavaScript Design Patterns: A JavaScript and React Developer’s Guide. Beijing: O’Reilly Media, 2023.</li>
+<li>S. Timms, Mastering JavaScript Design Patterns - Essential Solutions for Effective JavaScript Web Design. Place of publication not identified: Packt Publishing, 2014.</li>
+<li>S. Stefanov, JavaScript Patterns: Build Better Applications with Coding and Design Patterns. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1af18d2"></a>GUI<br />
+<div class="outline-text-8" id="text-org1af18d2">
+<ul class="org-ul">
+<li>L. Carter, Modern GUI Design with JavaScript (2025): Complete Guide to Interface Development | Build 12 Desktop Applications | Electron &amp; Node.js Projects.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5fbf2cb"></a>OO<br />
+<div class="outline-text-8" id="text-org5fbf2cb">
+<ul class="org-ul">
+<li>N. C. Zakas, The Principles of Object-Oriented JavaScript. San Francisco: No Starch Press, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd8e9973"></a>Projects<br />
+<div class="outline-text-8" id="text-orgd8e9973">
+<ul class="org-ul">
+<li>N. Morgan, JavaScript Crash Course: A Hands-On, Project-Based Introduction to Programming. New York: No Starch Press, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgdf0a05f"></a>Concurrency<br />
+<div class="outline-text-7" id="text-orgdf0a05f">
+<ul class="org-ul">
+<li>I. T. Hunter and B. English, Multithreaded Javascript: Concurrency Beyond the Event Loop. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4429bbc"></a>Asynchronous<br />
+<div class="outline-text-7" id="text-org4429bbc">
+<ul class="org-ul">
+<li>D. Parker, JavaScript with Promises: Managing Asynchronous Code. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf5b80e8"></a>Functional Programming<br />
+<div class="outline-text-7" id="text-orgf5b80e8">
+<ul class="org-ul">
+<li>M. Fogus, Functional JavaScript: Introducing Functional Programming with Underscore.js. Sebastopol, CA: O’Reilly Media, 2013.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org776aa8f"></a>Misc<br />
+<div class="outline-text-6" id="text-org776aa8f">
+<ul class="org-ul">
+<li>D. Shiffman, <b>The Nature of Code: Simulating Natural Systems with JavaScript.</b> San Francisco: No Starch Press, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org32eb804"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org281ac88"></a>Head First Series<br />
+<div class="outline-text-6" id="text-org281ac88">
+<ul class="org-ul">
+<li>E. T. Freeman and E. Robson, <i>Head First JavaScript Programming: A Brain-Friendly Guide.</i> O’Reilly Media, Inc., 2014.</li>
+<li>M. Morrison, <i>Head First JavaScript.</i> O’Reilly Media, Inc., 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfbac6d2"></a>Dummies<br />
+<div class="outline-text-6" id="text-orgfbac6d2">
+<ul class="org-ul">
+<li>C. Minnick, JavaScript All-in-One For Dummies. Hoboken, NJ: For Dummies, 2023.</li>
+<li>P. McFedries, JavaScript Essentials For Dummies. Hoboken, NJ: For Dummies, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2dcfa3c"></a>Pocket Reference<br />
+<div class="outline-text-6" id="text-org2dcfa3c">
+<ul class="org-ul">
+<li>D. Flanagan, JavaScript Pocket Reference: Activate Your Web Pages. Beijing ; Sebastopol: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9cd328d"></a>Misc<br />
+<div class="outline-text-6" id="text-org9cd328d">
+<ul class="org-ul">
+<li>D. Crockford, <b>JavaScript: The Good Parts: The Good Parts.</b> Haryana: O’Reilly Media, 2017.</li>
+<li>D. Flanagan, <b>JavaScript: The Definitive Guide: Master the World’s Most-Used Programming Language.</b> Beijing China ; Sebastopol, CA: O’Reilly Media, 2020.</li>
+<li><b>C. Horstmann</b>, Modern JavaScript for the Impatient. Hoboken: Addison-Wesley Professional, 2020.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. D. Scott, M. MacDonald, and S. Powers, JavaScript Cookbook: Programming the Web. O’Reilly Media.</li>
+<li>M. McGregor, Full Stack JavaScript Strategies: The Hidden Parts Every Mid-Level Developer Needs to Know. Sebastopol, CA: O’Reilly Media, 2025.</li>
+<li>“Eloquent JavaScript, 4th Edition.” Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://nostarch.com/eloquent-javascript-4th-edition">https://nostarch.com/eloquent-javascript-4th-edition</a></li>
+<li>A. Rauschmayer, Speaking JavaScript: An In-Depth Guide for Programmers. Sebastopol, CA: O’Reilly Media, 2014.</li>
+<li>E. Brown, Learning JavaScript: JavaScript Essentials for Modern Application Development. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2016.</li>
+<li>D. Herman, Effective JavaScript. Hoboken: Addison-Wesley Professional, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org09fbe66" class="outline-4">
+<h4 id="org09fbe66"><span class="section-number-4">3.1.3.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<ul class="org-ul">
+<li><a id="org9696616"></a>JSON<br />
+<div class="outline-text-5" id="text-org9696616">
+<ul class="org-ul">
+<li>L. Bassett, Introduction to JavaScript Object Notation: A To-the-Point Guide to JSON. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfd44a65"></a>Digital Privacy and Security<br />
+<div class="outline-text-5" id="text-orgfd44a65">
+<ul class="org-ul">
+<li>“Introduction to JavaScript Security (LFS184) | Linux Foundation Education,” Linux Foundation - Education. Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://training.linuxfoundation.org/training/introduction-to-javascript-security-lfs184/">https://training.linuxfoundation.org/training/introduction-to-javascript-security-lfs184/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org7c65d64" class="outline-4">
+<h4 id="org7c65d64"><span class="section-number-4">3.1.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org27b30f6" class="outline-3">
+<h3 id="org27b30f6"><span class="section-number-3">3.2.</span> HTML</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org8557cf1" class="outline-4">
+<h4 id="org8557cf1"><span class="section-number-4">3.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>“HTML,” Wikipedia. Aug. 13, 2025. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=HTML&amp;oldid=1305754533">https://en.wikipedia.org/w/index.php?title=HTML&amp;oldid=1305754533</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b5789b" class="outline-4">
+<h4 id="org4b5789b"><span class="section-number-4">3.2.2.</span> Texts</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="org3c8797c"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org0659903"></a>Head First Series<br />
+<div class="outline-text-6" id="text-org0659903">
+<ul class="org-ul">
+<li>E. Freeman and E. Robson, <i>Head First HTML5 Programming: Building Web Apps with JavaScript.</i> O’Reilly Media, Inc., 2011.</li>
+<li>E. Freeman, E. Robson, and E. Freeman, <i>Head First HTML with CSS &amp; XHTML.</i> O’Reilly Media, Inc., 2006.</li>
+<li>E. Robson and E. Freeman, <i>Head First HTML and CSS.</i> O’Reilly Media, Inc., 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb990e36"></a>Easy Steps<br />
+<div class="outline-text-6" id="text-orgb990e36">
+<ul class="org-ul">
+<li>M. McGrath, HTML5 in easy steps, 2nd Edition. Leamington Spa: In Easy Steps Limited, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc26e78a"></a>JD<br />
+<div class="outline-text-6" id="text-orgc26e78a">
+<ul class="org-ul">
+<li>J. Duckett, HTML and CSS: Design and Build Websites. Indianapolis, IN: John Wiley &amp; Sons, 2011.</li>
+<li>J. Duckett, Web Design with HTML, CSS, JavaScript and jQuery Set. Indianapolis, Ind.: Wiley, 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9f83c51"></a>Learning WD<br />
+<div class="outline-text-6" id="text-org9f83c51">
+<ul class="org-ul">
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Images. Sebastopol, CA: O’Reilly Media, 2025.</li>
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics. Beijing ; Sebastopol, CA: O’Reilly Media, 2018.</li>
+<li>J. Robbins, HTML5 Pocket Reference: Quick, Comprehensive, Indispensable. Beijing: O’Reilly Media, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc74bbaa"></a>Definitive Guide<br />
+<div class="outline-text-6" id="text-orgc74bbaa">
+<ul class="org-ul">
+<li>C. Musciano and B. Kennedy, HTML &amp; XHTML: The Definitive Guide. Beijing Sebastopol, CA: O’Reilly Media, 2007.</li>
+</ul>
+</div>
+</li>
+<li><a id="org529abd9"></a>Pocket Reference<br />
+<div class="outline-text-6" id="text-org529abd9">
+<ul class="org-ul">
+<li>J. N. Robbins, HTML and XHTML Pocket Reference. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+<li><a id="org9b9c802"></a>Pocket Guide<br /></li>
+<li><a id="org9a40655"></a>Misc<br />
+<div class="outline-text-6" id="text-org9a40655">
+<ul class="org-ul">
+<li>B. Henick, HTML &amp; CSS: The Good Parts: Better Ways to Build Websites That Work. O’Reilly Media.</li>
+<li>M. Pilgrim, HTML5: Up and Running: Dive into the Future of Web Development. O’Reilly Media.</li>
+<li>E. Castro, HTML, XHTML, and CSS, Sixth Edition. Berkeley, CA: Peachpit Pr, 2007.</li>
+<li>C. Schmitt and K. Simpson, HTML5 Cookbook: Solutions &amp; Examples for HTML5 Developers. Sebastopol, Calif: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc28c575"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orge4b0166"></a>Media<br />
+<div class="outline-text-6" id="text-orge4b0166">
+<ul class="org-ul">
+<li>S. Fulton and J. Fulton, HTML5 Canvas: Native Interactivity and Animation for the Web. O’Reilly Media.</li>
+<li>S. Fulton and J. Fulton, HTML5 Canvas: Native Interactivity and Animation for the Web. O’Reilly Media.</li>
+<li>S. Powers, HTML5 Media: Integrating Audio and Video with the Web. Sebastopol, CA: O’Reilly Media, 2011.</li>
+</ul>
+</div>
+</li>
+<li><a id="org67653af"></a>Multi-Device<br />
+<div class="outline-text-6" id="text-org67653af">
+<ul class="org-ul">
+<li>P. Gasston, The Modern Web: Multi-Device Web Development with HTML5, CSS3, and JavaScript. San Francisco: No Starch Press, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org78dc6be"></a>Mobile<br />
+<div class="outline-text-6" id="text-org78dc6be">
+<ul class="org-ul">
+<li>E. Weyl, Mobile HTML5: Using the Latest Today. O’Reilly Media.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2ca556f" class="outline-4">
+<h4 id="org2ca556f"><span class="section-number-4">3.2.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org61b7e24" class="outline-3">
+<h3 id="org61b7e24"><span class="section-number-3">3.3.</span> CSS</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org6ece9a6" class="outline-4">
+<h4 id="org6ece9a6"><span class="section-number-4">3.3.1.</span> General</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“CSS - Wikipedia.” Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/wiki/CSS">https://en.wikipedia.org/wiki/CSS</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge5e934e" class="outline-4">
+<h4 id="orge5e934e"><span class="section-number-4">3.3.2.</span> Texts</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ul class="org-ul">
+<li><a id="org6e81ace"></a>1<br />
+<ul class="org-ul">
+<li><a id="orga268ca7"></a>The Missing Manual<br />
+<div class="outline-text-6" id="text-orga268ca7">
+<ul class="org-ul">
+<li>D. S. McFarland, CSS: The Missing Manual. Sebastopol, CA: O’Reilly Media, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="org0df16fc"></a>Head First Series<br />
+<div class="outline-text-6" id="text-org0df16fc">
+<ul class="org-ul">
+<li>E. Robson and E. Freeman, Head First HTML and CSS: A Learner’s Guide to Creating Standards-Based Web Pages. Sebastopol, CA: O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc711215"></a>Dummies<br />
+<div class="outline-text-6" id="text-orgc711215">
+<ul class="org-ul">
+<li>P. McFedries, HTML, CSS, &amp; JavaScript All-in-One For Dummies. Hoboken, NJ: For Dummies, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5fc31b7"></a>Easy Steps<br />
+<div class="outline-text-6" id="text-org5fc31b7">
+<ul class="org-ul">
+<li>M. McGrath, CSS in easy steps. Leamington Spa: In Easy Steps Limited, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8e2f302"></a>2<br />
+<ul class="org-ul">
+<li><a id="org89d3111"></a>Learning Series<br />
+<div class="outline-text-6" id="text-org89d3111">
+<ul class="org-ul">
+<li>J. Robbins, Learning Web Design: A Beginner’s Guide to HTML, CSS, JavaScript, and Web Graphics. Beijing ; Sebastopol, CA: O’Reilly Media, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgea8ff64"></a>JD<br />
+<div class="outline-text-6" id="text-orgea8ff64">
+<ul class="org-ul">
+<li>J. Duckett, HTML and CSS: Design and Build Websites. Indianapolis, IN: John Wiley &amp; Sons, 2011.</li>
+<li>J. Duckett, Web Design with HTML, CSS, JavaScript and jQuery Set. Indianapolis, Ind.: Wiley, 2014.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf6bde35"></a>3<br />
+<ul class="org-ul">
+<li><a id="org6123c72"></a>Definitive Guide<br />
+<div class="outline-text-6" id="text-org6123c72">
+<ul class="org-ul">
+<li>E. Meyer and E. Weyl, CSS: The Definitive Guide: Visual Presentation for the Web. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2018.</li>
+<li>E. Meyer and E. Weyl, CSS: The Definitive Guide: Web Layout and Presentation. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6dc9b8d"></a>Pocket Reference<br />
+<div class="outline-text-5" id="text-org6dc9b8d">
+<ul class="org-ul">
+<li>E. Meyer, CSS Pocket Reference: Visual Presentation for the Web. Sebastopol: O’Reilly Media, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd732d8a"></a>Special Topics<br />
+<div class="outline-text-5" id="text-orgd732d8a">
+<ul class="org-ul">
+<li>E. Meyer, Padding, Borders, Outlines, and Margins in CSS: CSS Box Model Details. Beijing: O’Reilly Media, 2016.</li>
+<li>E. Weyl, Transitions and Animations in CSS: Adding Motion with CSS. Sebastopol, CA: O’Reilly Media, 2016.</li>
+</ul>
+</div>
+</li>
+<li><a id="org03ecb6b"></a>Misc<br />
+<div class="outline-text-5" id="text-org03ecb6b">
+<ul class="org-ul">
+<li>T. Felke-Morris, Basics of Web Design: HTML5 &amp; CSS. NY, NY: Pearson, 2020.</li>
+<li>A. Budd and E. Björklund, CSS Mastery. Berkeley, CA: Apress, 2016.</li>
+<li>S. Howe, Learn To Code Html And Css. Berkeley: Adams Media, 2014.</li>
+<li>J. Attardi, Modern CSS: Master the Key Concepts of CSS for Modern Web Development. Berkeley, CA: Apress, 2020.</li>
+<li>L. Verou, CSS Secrets: Better Solutions to Everyday Web Design Problems. Heidelberg: O’Reilly Media, 2016.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2825a5a" class="outline-4">
+<h4 id="org2825a5a"><span class="section-number-4">3.3.3.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org537edf3" class="outline-2">
+<h2 id="org537edf3"><span class="section-number-2">4.</span> Texts</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>U. K. Roy, <i>Web Technologies.</i> Oxford University Press, 2010.</li>
+<li>H. M. D.-D. &amp; A. Inc, <i>Internet &amp; World Wide Web: How To Program: Fourth Edition.</i> Pearson Education India, 2007.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaf501a1" class="outline-2">
+<h2 id="orgaf501a1"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org5cf4a34" class="outline-3">
+<h3 id="org5cf4a34"><span class="section-number-3">5.1.</span> Digital Privacy and Security</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>M. McDonald, Grokking Web Application Security. Shelter Island, NY: Manning, 2024.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf741d87" class="outline-2">
+<h2 id="orgf741d87"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“React Is Dead. Long Live Prompt-Generated React – Communications of the ACM.” Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/react-is-dead-long-live-prompt-generated-react/">https://cacm.acm.org/blogcacm/react-is-dead-long-live-prompt-generated-react/</a></li>
+</ul>
+
+<hr />
+
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/bigpic.html">Big Picture</a> <b>|</b>
+<b><a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/cv19top.html">COVID-19</a></b>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/eyememyself/eyememyself.github.io/blob/main/disclaimer.html">Disclaimer</a>
+</p>
+
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://eyememyself.github.io">OurManyOrgs</a></p>
+<p class="date">Created: 2025-10-23 Thu 15:10</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
